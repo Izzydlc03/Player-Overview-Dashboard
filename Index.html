@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Big West WBB Analytics — Coach's Dashboard</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" style="position:relative;">
+    <div class="brand">
+      <div class="brand-mark"><img src="triton_logo.jpg" alt="UC San Diego Tritons logo"></div>
+      <div class="brand-text"><b>Big West WBB</b><span>Analytics — mock data</span></div>
+    </div>
+    <button class="sidebar-toggle" id="sidebar-toggle" title="Collapse sidebar" aria-label="Collapse sidebar">
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4l-6 6 6 6"/></svg>
+    </button>
+    <nav class="views" id="nav"></nav>
+  </aside>
+  <main class="main">
+    <header class="topbar" id="topbar"></header>
+    <section class="view" id="view"></section>
+  </main>
+</div>
+<div class="tooltip" id="tooltip"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
