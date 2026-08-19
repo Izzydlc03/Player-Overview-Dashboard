@@ -1,8 +1,10 @@
-/* ============================= MOCK DATA =============================
-   Real team names / mascots (Big West Conference). Player names and
-   per-game numbers below are placeholders for layout review only —
-   shaped exactly like the scraped schema (fgm-fga, 3pm-3pa, ftm-fta,
-   oreb/dreb, ast, stl, blk, to, pts) so real rows drop straight in.
+/* ============================= REAL DATA LOADER =============================
+   Season data is pre-aggregated from the scraped CSVs by build_data.py into
+   data/<season>.json — one file per season, shaped as:
+     { teamKey: { name, short, mascot, players:[...], games:[...] } }
+   TEAMS/TEAM_KEYS are populated by loadSeason() before the first render and
+   whenever the season picker changes; every view function below just reads
+   them as plain globals.
 */
 const ICONS = {
   overview: '<svg class="ic" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="10.5" width="3.4" height="7"/><rect x="8.3" y="5.5" width="3.4" height="12"/><rect x="14.1" y="2.5" width="3.4" height="15"/></svg>',
@@ -12,144 +14,31 @@ const ICONS = {
   cteams: '<svg class="ic" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 2.3l2.2 4.4 4.9.7-3.5 3.4.8 4.9L10 13.3l-4.4 2.4.8-4.9-3.5-3.4 4.9-.7z"/></svg>',
 };
 
-function makePlayers(rows){
-  // row: [num,name,pos,gp,min,fgm,fga,tpm,tpa,ftm,fta,oreb,dreb,ast,stl,blk,pts]
-  // NOTE: fixed — original mock rows only carried 17 fields (no separate
-  // per-player "to" column), so pts is read from the last slot and "to"
-  // is estimated from usage until real per-player turnover data is wired in.
-  return rows.map(r=>{
-    const pts = r[16];
-    const ast = r[13], fga = r[6], fta = r[10];
-    const to = Math.round((ast*0.35 + fga*0.08 + fta*0.05));
-    return {
-      num:r[0], name:r[1], pos:r[2], gp:r[3], min:r[4],
-      fgm:r[5], fga:r[6], tpm:r[7], tpa:r[8], ftm:r[9], fta:r[10],
-      oreb:r[11], dreb:r[12], ast:r[13], stl:r[14], blk:r[15], to, pts,
-    };
-  });
-}
-function makeGames(rows){
-  // row: [date,opp,home(1/0),ptsFor,ptsAgainst,fgm,fga,reb,ast,to]
-  return rows.map(r=>({
-    date:r[0], opp:r[1], home:!!r[2], pf:r[3], pa:r[4],
-    fgm:r[5], fga:r[6], reb:r[7], ast:r[8], to:r[9], win:r[3]>r[4],
-  }));
-}
+let TEAMS = {};
+let TEAM_KEYS = [];
+const SEASON_CACHE = {};
 
-const TEAMS = {
-  ucsd:{ name:"UC San Diego", short:"UCSD", mascot:"Tritons",
-    players:makePlayers([
-      [4,"Maya Whitfield","G",24,32.1, 158,349, 61,168, 88,101, 14,86, 121, 41,10, 465],
-      [12,"Jordyn Castillo","G",24,29.4, 121,276, 44,121, 62,74, 9,71, 158, 29,4, 348],
-      [23,"Simone Baptiste","F",23,27.8, 132,241, 2,9, 74,99, 68,142, 33, 22,31, 340],
-      [5,"Ava Nakamura","G",24,25.0, 96,229, 52,143, 30,36, 8,54, 96, 33,3, 274],
-      [34,"Reese Okafor","F",22,24.6, 101,188, 0,2, 55,84, 79,131, 19, 14,38, 257],
-      [21,"Taylor Brandt","F",24,21.3, 84,171, 20,63, 33,44, 41,88, 27, 19,17, 221],
-      [0,"Camille Duarte","G",24,18.9, 61,152, 28,84, 18,22, 6,38, 88, 24,2, 168],
-      [15,"Nia Fontaine","C",21,16.2, 58,101, 0,1, 22,37, 51,79, 11, 6,29, 138],
-      [3,"Ellie Sørensen","G",20,12.4, 34,93, 15,49, 8,10, 5,26, 41, 11,1, 91],
-      [42,"Priya Chandrasekaran","F",19,10.8, 28,74, 0,3, 12,19, 34,49, 8, 5,15, 68],
-      [7,"Hana Fujimoto","G",18,9.6, 22,61, 9,31, 6,8, 3,17, 29, 9,1, 59],
-      [50,"Delphine Marchetti","C",15,7.2, 15,38, 0,0, 5,9, 22,31, 4, 2,17, 35],
-    ]),
-    games:makeGames([
-      ["2025-11-04","Jessup",1, 88,52, 33,68, 44,19,12],
-      ["2025-11-09","San Diego",0, 71,64, 26,60, 38,15,14],
-      ["2025-11-15","Utah Valley",1, 79,58, 29,64, 41,20,10],
-      ["2025-11-22","Fresno State",0, 66,73, 24,61, 34,12,17],
-      ["2025-11-28","Portland",1, 74,55, 27,59, 39,18,11],
-      ["2025-12-06","Loyola Marymount",0, 69,71, 25,63, 36,14,15],
-      ["2025-12-13","Grand Canyon",1, 82,60, 31,66, 45,21,9],
-      ["2026-01-03","UC Irvine",1, 77,68, 28,62, 40,17,12],
-      ["2026-01-08","Cal State Fullerton",0, 73,66, 27,58, 37,16,13],
-      ["2026-01-15","UC Davis",0, 62,66, 22,57, 33,13,16],
-      ["2026-01-22","Cal Poly",1, 85,70, 32,65, 43,22,10],
-      ["2026-01-29","Long Beach State",0, 70,72, 25,60, 35,15,14],
-      ["2026-02-05","Hawai'i",1, 68,74, 24,59, 32,12,15],
-      ["2026-02-12","UC Santa Barbara",0, 75,61, 28,57, 41,19,11],
-    ]),
-  },
-  ucdavis:{ name:"UC Davis", short:"UCD", mascot:"Aggies",
-    players:makePlayers([
-      [10,"Brooke Sandoval","G",23,31.5, 149,331, 58,159, 71,84, 12,66, 133, 33,6, 427],
-      [22,"Harper Lindqvist","F",23,28.9, 138,255, 4,14, 66,89, 82,138, 24, 18,34, 346],
-      [7,"Isabela Cortez","G",23,26.2, 104,238, 40,118, 44,55, 10,49, 141, 27,5, 292],
-      [33,"Grace Odom","C",22,22.7, 96,163, 0,0, 40,61, 71,109, 14, 31,40, 232],
-      [14,"Peyton Marsh","F",23,20.4, 78,167, 14,46, 28,38, 44,77, 22, 11,20, 198],
-      [2,"Sofia Delgado","G",21,17.8, 55,140, 24,74, 16,20, 7,33, 66, 19,3, 150],
-      [44,"Ruth Adeyemi","F",20,14.1, 47,92, 0,1, 19,29, 38,64, 9, 8,22, 113],
-      [19,"Winnie Larsen","G",18,11.0, 26,70, 10,34, 9,12, 4,22, 33, 10,2, 71],
-      [8,"Camryn Boatwright","F",16,8.4, 19,49, 0,2, 10,16, 27,40, 6, 4,18, 48],
-      [1,"Mei Tanaka","G",14,6.1, 12,33, 5,17, 4,6, 2,11, 18, 6,1, 33],
-      [55,"Odalys Reyes","C",12,5.0, 9,22, 0,0, 3,6, 16,22, 3, 1,10, 21],
-      [3,"Kiana Poutasi","G",10,4.2, 6,17, 2,8, 2,3, 1,7, 11, 3,0, 16],
-    ]),
-    games:makeGames([
-      ["2025-11-04","Simpson",1, 93,36, 34,58, 41,20,7],
-      ["2025-11-13","Stanford",0, 56,69, 21,55, 30,10,15],
-      ["2025-11-24","Sacramento State",1, 70,67, 26,63, 37,14,13],
-      ["2025-12-04","Hawai'i",1, 68,63, 25,59, 34,16,11],
-      ["2025-12-20","Northern Colorado",1, 47,57, 18,52, 27,9,17],
-      ["2026-01-01","CSUN",0, 85,66, 30,60, 39,18,9],
-      ["2026-01-08","UC Santa Barbara",1, 47,55, 17,50, 25,8,16],
-      ["2026-01-15","UC San Diego",1, 66,62, 24,58, 33,13,12],
-      ["2026-01-24","UC Riverside",0, 81,68, 29,61, 40,19,10],
-      ["2026-02-05","UC Santa Barbara",0, 61,69, 22,56, 31,11,15],
-      ["2026-02-14","Long Beach State",0, 77,66, 28,60, 38,17,11],
-      ["2026-02-21","UC Riverside",1, 65,56, 24,55, 34,15,13],
-    ]),
-  },
-  ucirvine:{ name:"UC Irvine", short:"UCI", mascot:"Anteaters",
-    players:makePlayers([
-      [1,"Kayla Bristow","G",22,30.8, 140,318, 55,151, 60,72, 11,58, 122, 30,5, 395],
-      [20,"Amara Osei","F",22,27.1, 124,229, 1,6, 58,80, 76,124, 21, 15,29, 307],
-      [11,"Devyn Holt","G",22,24.5, 92,214, 38,109, 34,42, 8,44, 118, 21,2, 256],
-      [40,"Lucia Ferreira","C",20,19.6, 71,124, 0,0, 26,41, 55,90, 10, 22,31, 168],
-      [24,"Zoe Pemberton","F",21,17.9, 63,141, 12,40, 20,27, 33,58, 17, 9,19, 158],
-      [6,"Bianca Souza","G",19,13.2, 40,101, 16,52, 12,15, 6,29, 55, 14,2, 108],
-      [33,"Freya Lindholm","F",17,10.5, 30,71, 0,1, 12,18, 26,42, 8, 6,16, 72],
-      [9,"Aaliyah Frost","G",15,7.8, 18,48, 7,25, 5,7, 3,14, 24, 7,1, 48],
-    ]),
-    games:makeGames([
-      ["2025-11-05","New Mexico State",1, 74,55, 27,60, 38,16,10],
-      ["2025-11-27","Pepperdine",0, 63,70, 23,58, 31,12,16],
-      ["2025-12-10","San Diego State",1, 69,64, 25,57, 35,14,12],
-      ["2026-01-03","UC San Diego",0, 68,77, 24,59, 33,13,15],
-      ["2026-01-11","Hawai'i",1, 71,60, 27,56, 37,17,9],
-      ["2026-01-17","UC Davis",1, 73,42, 28,55, 39,19,8],
-      ["2026-01-24","CSUN",0, 60,64, 21,53, 29,10,17],
-      ["2026-02-24","Cal State Fullerton",1, 66,55, 24,52, 34,15,11],
-      ["2026-03-07","UC Davis",1, 70,58, 26,54, 36,16,10],
-    ]),
-  },
-  hawaii:{ name:"Hawai'i", short:"HAW", mascot:"Rainbow Wahine",
-    players:makePlayers([
-      [3,"Malia Kahale","G",25,29.6, 135,301, 49,140, 65,79, 10,60, 128, 36,6, 384],
-      [25,"Sienna Vaughn","F",25,26.3, 118,222, 3,11, 55,73, 71,119, 19, 13,26, 294],
-      [8,"Noa Kealoha","G",25,23.8, 87,203, 33,101, 28,36, 9,42, 103, 24,3, 235],
-      [31,"Talia Reyes","C",23,20.1, 74,131, 0,0, 24,38, 58,96, 12, 27,33, 172],
-      [4,"Emere Tuilagi","F",20,15.3, 52,120, 6,22, 18,26, 30,52, 14, 10,21, 128],
-      [14,"Leilani Ah Sam","G",17,10.1, 30,79, 12,40, 9,12, 5,21, 40, 11,2, 81],
-      [21,"Puanani Kimura","F",13,6.5, 14,35, 0,0, 6,10, 18,26, 5, 3,12, 34],
-    ]),
-    games:makeGames([
-      ["2025-10-21","Chaminade",1, 90,33, 34,60, 42,20,8],
-      ["2025-11-13","Saint Martin's",0, 71,68, 26,60, 35,15,14],
-      ["2025-12-04","UC Davis",0, 63,68, 23,57, 32,12,16],
-      ["2026-01-01","Cal State Bakersfield",1, 78,60, 29,58, 40,18,9],
-      ["2026-01-11","UC Irvine",0, 60,71, 21,55, 29,11,17],
-      ["2026-02-05","UC San Diego",0, 74,68, 27,59, 38,16,11],
-      ["2026-02-26","UC Davis",1, 67,46, 25,56, 36,17,9],
-      ["2026-03-04","UC Santa Barbara",1, 71,60, 26,57, 37,15,10],
-    ]),
-  },
-};
-
-const TEAM_KEYS = Object.keys(TEAMS);
+async function loadSeason(season){
+  if(!SEASON_CACHE[season]){
+    const res = await fetch(`data/${season}.json`);
+    if(!res.ok) throw new Error(`Failed to load data/${season}.json (${res.status})`);
+    SEASON_CACHE[season] = await res.json();
+  }
+  TEAMS = SEASON_CACHE[season];
+  TEAM_KEYS = Object.keys(TEAMS);
+  // A team can be missing from a given season (e.g. CSUN sat out 2020-21) —
+  // fall back to the first available team for any state pointing at one
+  // that doesn't exist in the season we just loaded.
+  const fallback = TEAM_KEYS[0];
+  if(!TEAMS[state.team]) state.team = fallback;
+  if(!TEAMS[state.t1]) state.t1 = fallback;
+  if(!TEAMS[state.t2]) state.t2 = TEAM_KEYS[1] || fallback;
+  if(!TEAMS[state.p1.team]) state.p1 = {team:fallback, idx:0};
+  if(!TEAMS[state.p2.team]) state.p2 = {team:TEAM_KEYS[1] || fallback, idx:0};
+}
 
 /* Team logo filenames, sitting alongside index.html/style.css/script.js.
-   Only ucsd/ucdavis/ucirvine/hawaii currently have matching entries in TEAMS —
-   the rest are here ready to go if those teams get built out later. */
+   Keys match every Big West team build_data.py aggregates into TEAMS. */
 const TEAM_LOGOS = {
   ucsd: 'Team_Logos/ucsdLogo.jpg',
   ucdavis: 'Team_Logos/UCdavisLogo.jpg',
@@ -372,9 +261,10 @@ function renderTopbar(){
   });
 
   const sp = document.getElementById('season-picker');
-  if(sp) sp.addEventListener('change', e=>{
+  if(sp) sp.addEventListener('change', async e=>{
     state.season = e.target.value;
     state.selectedPlayer = null;
+    await loadSeason(state.season);
     render();
   });
 }
@@ -1186,4 +1076,7 @@ function wireSidebarToggle(){
   });
 }
 wireSidebarToggle();
-render();
+loadSeason(state.season).then(render).catch(err=>{
+  console.error(err);
+  document.getElementById('view').innerHTML = `<div class="card">Couldn't load season data: ${err.message}</div>`;
+});
