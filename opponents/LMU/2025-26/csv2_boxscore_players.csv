@@ -1,0 +1,670 @@
+game_id,team,jersey,player,started,min,fg_m,fg_a,fg_pct,3p_m,3p_a,3p_pct,ft_m,ft_a,ft_pct,oreb,dreb,reb,pf,ast,to,blk,stl,pts
+2025-11-05_lmu_ca_utah_valley,Utah Valley,34,"Chaney, Tessa",True,28,6,12,0.5,0,0,,1,2,0.5,2,1,3,1,0,4,1,1,13
+2025-11-05_lmu_ca_utah_valley,Utah Valley,03,"Barcello, Amanda",True,37,4,11,0.364,2,6,0.333,2,2,1.0,0,3,3,1,4,1,0,2,12
+2025-11-05_lmu_ca_utah_valley,Utah Valley,01,"Mabry, Kylee",True,33,4,11,0.364,2,5,0.4,0,1,0.0,1,1,2,2,3,3,0,3,10
+2025-11-05_lmu_ca_utah_valley,Utah Valley,05,"Blackham, Cambree",True,36,3,9,0.333,0,3,0.0,2,4,0.5,0,1,1,2,7,6,1,6,8
+2025-11-05_lmu_ca_utah_valley,Utah Valley,25,"Nelson, Halle",True,34,3,7,0.429,1,2,0.5,1,2,0.5,0,5,5,3,4,0,0,3,8
+2025-11-05_lmu_ca_utah_valley,Utah Valley,10,"Gibb, Saige",False,16,3,3,1.0,1,1,1.0,0,0,,1,1,2,2,0,1,1,0,7
+2025-11-05_lmu_ca_utah_valley,Utah Valley,14,"Headrick, Kaylee",False,14,2,5,0.4,1,2,0.5,1,2,0.5,0,5,5,1,0,1,1,0,6
+2025-11-05_lmu_ca_utah_valley,Utah Valley,21,"Tanuvasa, Naia",False,2,0,0,,0,0,,0,0,,0,1,1,1,0,1,0,0,0
+2025-11-05_lmu_ca_utah_valley,Utah Valley,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,0,3,0,0,0,0,0,0
+2025-11-05_lmu_ca_utah_valley,LMU (CA),13,"Krajina, Ivana",True,37,5,11,0.455,4,7,0.571,1,2,0.5,0,4,4,4,4,4,1,3,15
+2025-11-05_lmu_ca_utah_valley,LMU (CA),05,"Heidger, Carly",True,28,3,5,0.6,1,3,0.333,5,5,1.0,0,2,2,1,4,3,0,2,12
+2025-11-05_lmu_ca_utah_valley,LMU (CA),55,"Hernandez, Maya",True,31,5,9,0.556,0,0,,1,2,0.5,1,7,8,2,1,2,1,0,11
+2025-11-05_lmu_ca_utah_valley,LMU (CA),28,"Matic, Andjela",True,39,3,10,0.3,1,7,0.143,0,2,0.0,0,6,6,1,4,7,0,0,7
+2025-11-05_lmu_ca_utah_valley,LMU (CA),00,"Lawson, Jess",True,29,2,8,0.25,0,1,0.0,1,2,0.5,2,6,8,3,1,2,0,1,5
+2025-11-05_lmu_ca_utah_valley,LMU (CA),24,"Jones, Kayla",False,21,3,3,1.0,0,0,,2,2,1.0,2,0,2,2,3,4,0,0,8
+2025-11-05_lmu_ca_utah_valley,LMU (CA),54,"Ogot, Zawadi",False,11,1,4,0.25,0,0,,0,0,,1,1,2,3,0,2,0,0,2
+2025-11-05_lmu_ca_utah_valley,LMU (CA),02,"Somvichian, Mari",False,4,0,0,,0,0,,0,0,,0,0,0,1,0,2,0,0,0
+2025-11-05_lmu_ca_utah_valley,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,2,2,4,0,0,0,0,0,0
+2025-11-09_lmu_ca_denver,Denver,10,"Watts, Coryn",True,38,9,19,0.474,2,8,0.25,3,5,0.6,1,4,5,2,2,4,0,1,23
+2025-11-09_lmu_ca_denver,Denver,03,"Baker, Victoria",True,24,2,4,0.5,0,1,0.0,2,2,1.0,1,0,1,1,0,2,0,0,6
+2025-11-09_lmu_ca_denver,Denver,13,"Conde, Ana",True,17,2,4,0.5,0,0,,2,2,1.0,2,3,5,3,1,0,0,0,6
+2025-11-09_lmu_ca_denver,Denver,12,"Monclova, Laia",True,28,2,6,0.333,0,1,0.0,0,0,,0,2,2,3,2,4,0,2,4
+2025-11-09_lmu_ca_denver,Denver,00,"Murrell, Brooke",True,21,1,3,0.333,0,0,,1,2,0.5,3,3,6,4,2,1,0,1,3
+2025-11-09_lmu_ca_denver,Denver,15,"Medina, Jocelyn",False,24,4,9,0.444,2,4,0.5,2,2,1.0,2,2,4,3,1,4,1,1,12
+2025-11-09_lmu_ca_denver,Denver,11,"Padilla, Karolina",False,21,1,5,0.2,1,2,0.5,0,0,,3,1,4,1,1,2,0,0,3
+2025-11-09_lmu_ca_denver,Denver,32,"Esparza, Lily",False,17,0,2,0.0,0,0,,0,0,,0,0,0,1,1,0,0,0,0
+2025-11-09_lmu_ca_denver,Denver,01,"McLeod, Laila",False,6,0,2,0.0,0,1,0.0,0,0,,0,1,1,1,0,1,1,0,0
+2025-11-09_lmu_ca_denver,Denver,09,"Simoncevic, Teodora",False,4,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-09_lmu_ca_denver,Denver,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,2,3,0,0,1,0,0,0
+2025-11-09_lmu_ca_denver,LMU (CA),55,"Hernandez, Maya",True,34,11,19,0.579,0,1,0.0,3,4,0.75,5,5,10,1,3,2,3,4,25
+2025-11-09_lmu_ca_denver,LMU (CA),05,"Heidger, Carly",True,31,3,7,0.429,1,2,0.5,1,1,1.0,2,3,5,3,3,1,0,1,8
+2025-11-09_lmu_ca_denver,LMU (CA),00,"Lawson, Jess",True,30,2,8,0.25,1,3,0.333,3,4,0.75,2,4,6,4,2,0,0,1,8
+2025-11-09_lmu_ca_denver,LMU (CA),13,"Krajina, Ivana",True,25,2,4,0.5,2,3,0.667,0,0,,0,0,0,4,1,3,0,2,6
+2025-11-09_lmu_ca_denver,LMU (CA),28,"Matic, Andjela",True,36,1,6,0.167,0,2,0.0,3,5,0.6,2,2,4,2,6,0,0,1,5
+2025-11-09_lmu_ca_denver,LMU (CA),02,"Somvichian, Mari",False,18,2,4,0.5,2,4,0.5,0,0,,0,0,0,4,0,1,0,1,6
+2025-11-09_lmu_ca_denver,LMU (CA),54,"Ogot, Zawadi",False,11,2,4,0.5,0,0,,0,0,,1,2,3,1,1,1,0,0,4
+2025-11-09_lmu_ca_denver,LMU (CA),24,"Jones, Kayla",False,15,1,6,0.167,0,1,0.0,0,0,,0,2,2,2,2,2,0,0,2
+2025-11-09_lmu_ca_denver,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2025-11-13_nevada_lmu_ca,LMU (CA),55,"Hernandez, Maya",True,29,7,14,0.5,0,1,0.0,2,6,0.333,1,0,1,3,2,3,0,1,16
+2025-11-13_nevada_lmu_ca,LMU (CA),28,"Matic, Andjela",True,36,4,9,0.444,3,7,0.429,1,1,1.0,0,4,4,0,3,3,0,0,12
+2025-11-13_nevada_lmu_ca,LMU (CA),13,"Krajina, Ivana",True,34,5,8,0.625,2,3,0.667,0,0,,0,3,3,1,5,7,0,1,12
+2025-11-13_nevada_lmu_ca,LMU (CA),00,"Lawson, Jess",True,29,3,6,0.5,0,0,,1,2,0.5,1,3,4,3,0,1,0,3,7
+2025-11-13_nevada_lmu_ca,LMU (CA),05,"Heidger, Carly",True,36,0,6,0.0,0,4,0.0,1,2,0.5,2,2,4,1,0,1,0,2,1
+2025-11-13_nevada_lmu_ca,LMU (CA),24,"Jones, Kayla",False,16,2,4,0.5,0,0,,0,0,,1,2,3,0,0,0,0,0,4
+2025-11-13_nevada_lmu_ca,LMU (CA),54,"Ogot, Zawadi",False,11,0,0,,0,0,,0,0,,1,0,1,1,0,0,0,0,0
+2025-11-13_nevada_lmu_ca,LMU (CA),02,"Somvichian, Mari",False,9,0,2,0.0,0,1,0.0,0,0,,0,0,0,1,0,0,0,0,0
+2025-11-13_nevada_lmu_ca,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,4,3,7,0,0,3,0,0,0
+2025-11-13_nevada_lmu_ca,Nevada,02,"Sullivan, Izzy",True,33,7,12,0.583,1,1,1.0,0,0,,0,3,3,0,2,2,1,1,15
+2025-11-13_nevada_lmu_ca,Nevada,01,"Young, Ahrray",True,29,5,8,0.625,0,1,0.0,0,0,,1,4,5,2,2,4,0,0,10
+2025-11-13_nevada_lmu_ca,Nevada,24,"Durley, Skylar",True,31,2,9,0.222,0,1,0.0,1,2,0.5,1,5,6,3,5,2,0,0,5
+2025-11-13_nevada_lmu_ca,Nevada,23,"Carter, Makayla",True,18,0,1,0.0,0,0,,4,4,1.0,0,0,0,5,1,2,0,1,4
+2025-11-13_nevada_lmu_ca,Nevada,34,"Hicks, Kendra",True,17,1,2,0.5,0,0,,0,0,,1,3,4,1,1,1,0,0,2
+2025-11-13_nevada_lmu_ca,Nevada,11,"Backus, Britain",False,12,3,4,0.75,2,3,0.667,0,0,,0,0,0,2,0,2,0,2,8
+2025-11-13_nevada_lmu_ca,Nevada,04,"Ramos, Gabby",False,12,2,3,0.667,1,1,1.0,1,1,1.0,0,0,0,0,1,0,0,0,6
+2025-11-13_nevada_lmu_ca,Nevada,10,"Williams, Chloe",False,20,2,2,1.0,0,0,,0,0,,0,1,1,1,0,1,0,2,4
+2025-11-13_nevada_lmu_ca,Nevada,00,"Bloom, Tahj-Monet",False,9,1,3,0.333,0,1,0.0,0,0,,2,1,3,0,0,1,0,1,2
+2025-11-13_nevada_lmu_ca,Nevada,03,"Jones, Imbie",False,17,0,0,,0,0,,0,0,,0,0,0,2,0,1,0,0,0
+2025-11-13_nevada_lmu_ca,Nevada,13,"Raidaveta, Amelia",False,1,0,1,0.0,0,0,,0,0,,0,0,0,1,1,0,0,0,0
+2025-11-13_nevada_lmu_ca,Nevada,14,"Rosarion, Maia",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2025-11-13_nevada_lmu_ca,Nevada,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,2,3,0,0,2,0,0,0
+2025-11-21_hawaii_lmu_ca,LMU (CA),00,"Lawson, Jess",True,29,5,9,0.556,0,1,0.0,5,6,0.833,3,3,6,3,2,0,0,2,15
+2025-11-21_hawaii_lmu_ca,LMU (CA),55,"Hernandez, Maya",True,27,5,14,0.357,0,0,,2,2,1.0,3,2,5,5,1,4,1,0,12
+2025-11-21_hawaii_lmu_ca,LMU (CA),28,"Matic, Andjela",True,38,3,11,0.273,2,5,0.4,1,2,0.5,0,4,4,1,2,1,0,4,9
+2025-11-21_hawaii_lmu_ca,LMU (CA),13,"Krajina, Ivana",True,35,2,8,0.25,1,5,0.2,0,0,,0,2,2,4,2,1,0,0,5
+2025-11-21_hawaii_lmu_ca,LMU (CA),05,"Heidger, Carly",True,16,1,4,0.25,1,3,0.333,1,3,0.333,1,2,3,4,0,0,0,1,4
+2025-11-21_hawaii_lmu_ca,LMU (CA),24,"Jones, Kayla",False,22,2,4,0.5,1,2,0.5,1,4,0.25,0,3,3,2,0,0,0,0,6
+2025-11-21_hawaii_lmu_ca,LMU (CA),10,"Lagerlid, Lova",False,15,0,3,0.0,0,2,0.0,0,2,0.0,2,3,5,0,0,0,0,0,0
+2025-11-21_hawaii_lmu_ca,LMU (CA),02,"Somvichian, Mari",False,9,0,2,0.0,0,2,0.0,0,0,,1,0,1,1,1,0,0,0,0
+2025-11-21_hawaii_lmu_ca,LMU (CA),54,"Ogot, Zawadi",False,9,0,0,,0,0,,0,0,,0,2,2,2,0,0,0,0,0
+2025-11-21_hawaii_lmu_ca,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,2,0,2,0,0,7,0,0,0
+2025-11-21_hawaii_lmu_ca,Hawaii,33,"Neverson, Saniyah",True,25,4,7,0.571,1,2,0.5,1,4,0.25,1,4,5,3,3,0,0,0,10
+2025-11-21_hawaii_lmu_ca,Hawaii,03,"Flavell, Bailey",True,24,2,6,0.333,1,1,1.0,4,6,0.667,0,2,2,4,0,0,0,0,9
+2025-11-21_hawaii_lmu_ca,Hawaii,02,"Bond, Teyahna",True,25,3,7,0.429,0,1,0.0,0,0,,2,1,3,2,4,4,0,0,6
+2025-11-21_hawaii_lmu_ca,Hawaii,08,"Moors, Rebecca",True,16,1,1,1.0,0,0,,0,1,0.0,0,4,4,0,1,2,0,1,2
+2025-11-21_hawaii_lmu_ca,Hawaii,12,"Perez, Imani",True,16,0,0,,0,0,,2,2,1.0,1,2,3,0,0,0,0,0,2
+2025-11-21_hawaii_lmu_ca,Hawaii,06,"Webb, Kyra",False,18,4,6,0.667,0,1,0.0,0,1,0.0,1,3,4,2,0,0,0,1,8
+2025-11-21_hawaii_lmu_ca,Hawaii,11,"Curtis, Keiara",False,23,2,4,0.5,2,3,0.667,0,0,,0,1,1,5,1,3,0,0,6
+2025-11-21_hawaii_lmu_ca,Hawaii,01,"Filemu, Kira-May",False,14,2,5,0.4,1,3,0.333,0,0,,0,0,0,1,0,1,0,0,5
+2025-11-21_hawaii_lmu_ca,Hawaii,10,"Kujovic, Danijela",False,17,1,3,0.333,1,2,0.5,1,2,0.5,0,4,4,2,1,1,0,0,4
+2025-11-21_hawaii_lmu_ca,Hawaii,24,"Tamilo, Ritorya",False,12,1,7,0.143,0,0,,1,2,0.5,0,0,0,2,0,1,1,0,3
+2025-11-21_hawaii_lmu_ca,Hawaii,22,"Peacock, Jade",False,6,0,1,0.0,0,1,0.0,0,0,,0,0,0,1,1,0,0,0,0
+2025-11-21_hawaii_lmu_ca,Hawaii,20,"Forsyth, Izzy",False,4,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2025-11-21_hawaii_lmu_ca,Hawaii,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,1,3,0,0,0,0,0,0
+2025-11-23_lmu_ca_idaho_st,Idaho St.,01,"Spink, Kacey",True,36,4,8,0.5,0,0,,0,0,,2,4,6,4,0,5,1,2,8
+2025-11-23_lmu_ca_idaho_st,Idaho St.,05,"Jordan, Tasia",True,20,3,6,0.5,0,0,,1,2,0.5,1,5,6,2,0,5,0,0,7
+2025-11-23_lmu_ca_idaho_st,Idaho St.,14,"Carlson, Piper",True,29,2,7,0.286,0,0,,2,8,0.25,3,3,6,4,2,2,0,0,6
+2025-11-23_lmu_ca_idaho_st,Idaho St.,04,"Aby, Alyse",True,23,3,5,0.6,0,1,0.0,0,0,,1,1,2,4,0,4,0,0,6
+2025-11-23_lmu_ca_idaho_st,Idaho St.,22,"Covello, Sophia",True,33,2,10,0.2,0,3,0.0,0,0,,0,3,3,3,0,1,0,1,4
+2025-11-23_lmu_ca_idaho_st,Idaho St.,02,"Caldwell, Aspen",False,12,2,3,0.667,0,0,,2,2,1.0,1,2,3,3,0,1,0,0,6
+2025-11-23_lmu_ca_idaho_st,Idaho St.,13,"Wolfram, Asa",False,11,3,4,0.75,0,0,,0,0,,0,2,2,0,1,0,0,0,6
+2025-11-23_lmu_ca_idaho_st,Idaho St.,18,"GAUFFRENET, Maeva",False,19,2,4,0.5,1,1,1.0,0,0,,0,0,0,1,1,2,0,1,5
+2025-11-23_lmu_ca_idaho_st,Idaho St.,24,"Wright, Halle",False,17,1,3,0.333,0,2,0.0,2,2,1.0,0,0,0,2,1,0,0,1,4
+2025-11-23_lmu_ca_idaho_st,Idaho St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,4,4,0,0,1,0,0,0
+2025-11-23_lmu_ca_idaho_st,LMU (CA),00,"Lawson, Jess",True,31,7,13,0.538,1,3,0.333,8,12,0.667,1,8,9,2,3,1,0,3,23
+2025-11-23_lmu_ca_idaho_st,LMU (CA),55,"Hernandez, Maya",True,32,7,13,0.538,0,1,0.0,3,4,0.75,4,1,5,4,1,3,0,3,17
+2025-11-23_lmu_ca_idaho_st,LMU (CA),05,"Heidger, Carly",True,36,2,5,0.4,1,3,0.333,9,9,1.0,1,4,5,2,1,3,0,3,14
+2025-11-23_lmu_ca_idaho_st,LMU (CA),28,"Matic, Andjela",True,37,3,12,0.25,1,5,0.2,3,3,1.0,0,4,4,2,1,2,0,1,10
+2025-11-23_lmu_ca_idaho_st,LMU (CA),13,"Krajina, Ivana",True,36,1,9,0.111,1,7,0.143,2,5,0.4,0,1,1,2,3,3,0,0,5
+2025-11-23_lmu_ca_idaho_st,LMU (CA),24,"Jones, Kayla",False,8,1,1,1.0,0,0,,0,0,,1,0,1,2,0,0,0,1,2
+2025-11-23_lmu_ca_idaho_st,LMU (CA),54,"Ogot, Zawadi",False,10,0,0,,0,0,,0,0,,0,0,0,3,1,1,0,0,0
+2025-11-23_lmu_ca_idaho_st,LMU (CA),02,"Somvichian, Mari",False,6,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2025-11-23_lmu_ca_idaho_st,LMU (CA),10,"Lagerlid, Lova",False,4,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-23_lmu_ca_idaho_st,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,1,1,2,0,0,0,0,0,0
+2025-11-29_cal_st_fullerton_lmu_ca,LMU (CA),00,"Lawson, Jess",True,29,7,11,0.636,0,0,,10,11,0.909,3,4,7,2,3,2,0,1,24
+2025-11-29_cal_st_fullerton_lmu_ca,LMU (CA),05,"Heidger, Carly",True,29,5,10,0.5,3,5,0.6,2,2,1.0,1,2,3,0,1,0,0,0,15
+2025-11-29_cal_st_fullerton_lmu_ca,LMU (CA),28,"Matic, Andjela",True,36,4,5,0.8,3,4,0.75,3,4,0.75,0,3,3,3,1,3,0,1,14
+2025-11-29_cal_st_fullerton_lmu_ca,LMU (CA),55,"Hernandez, Maya",True,25,5,12,0.417,0,0,,0,0,,2,6,8,4,3,4,1,1,10
+2025-11-29_cal_st_fullerton_lmu_ca,LMU (CA),13,"Krajina, Ivana",True,29,1,2,0.5,0,0,,0,0,,0,2,2,1,1,6,0,1,2
+2025-11-29_cal_st_fullerton_lmu_ca,LMU (CA),54,"Ogot, Zawadi",False,20,1,4,0.25,0,0,,1,2,0.5,2,1,3,0,0,1,0,0,3
+2025-11-29_cal_st_fullerton_lmu_ca,LMU (CA),07,"Milanovic, Ana",False,10,0,2,0.0,0,1,0.0,3,4,0.75,1,2,3,0,1,1,0,1,3
+2025-11-29_cal_st_fullerton_lmu_ca,LMU (CA),24,"Jones, Kayla",False,15,1,6,0.167,0,1,0.0,0,0,,0,2,2,1,2,0,0,1,2
+2025-11-29_cal_st_fullerton_lmu_ca,LMU (CA),02,"Somvichian, Mari",False,7,0,2,0.0,0,1,0.0,0,0,,0,0,0,2,0,0,0,1,0
+2025-11-29_cal_st_fullerton_lmu_ca,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,0,4,4,0,0,0,0,0,0
+2025-11-29_cal_st_fullerton_lmu_ca,Cal St. Fullerton,55,"Jones, Cristina",True,33,7,12,0.583,0,0,,6,10,0.6,3,4,7,4,2,2,0,1,20
+2025-11-29_cal_st_fullerton_lmu_ca,Cal St. Fullerton,10,"Swindle, Dylan",True,38,4,9,0.444,1,2,0.5,0,1,0.0,0,0,0,4,3,4,0,1,9
+2025-11-29_cal_st_fullerton_lmu_ca,Cal St. Fullerton,00,"Steiner, Nicole",True,26,4,11,0.364,0,0,,0,0,,1,2,3,1,2,2,1,2,8
+2025-11-29_cal_st_fullerton_lmu_ca,Cal St. Fullerton,33,"Pearson, Kya",True,21,1,4,0.25,0,0,,2,2,1.0,0,2,2,3,2,4,0,0,4
+2025-11-29_cal_st_fullerton_lmu_ca,Cal St. Fullerton,04,"Falsdottir, Jana",True,21,1,2,0.5,0,0,,0,0,,1,3,4,1,1,1,0,0,2
+2025-11-29_cal_st_fullerton_lmu_ca,Cal St. Fullerton,05,"Sutisna, Maxine",False,21,5,13,0.385,1,4,0.25,0,1,0.0,1,3,4,3,0,3,0,3,11
+2025-11-29_cal_st_fullerton_lmu_ca,Cal St. Fullerton,22,"Muniz, Madelynn",False,24,2,4,0.5,1,2,0.5,0,0,,0,1,1,2,2,1,0,1,5
+2025-11-29_cal_st_fullerton_lmu_ca,Cal St. Fullerton,23,"Maxwell, Talia",False,13,1,2,0.5,0,0,,1,1,1.0,1,4,5,0,0,0,0,0,3
+2025-11-29_cal_st_fullerton_lmu_ca,Cal St. Fullerton,13,"Petersen, Lilliana",False,3,0,0,,0,0,,0,0,,0,1,1,1,0,0,0,0,0
+2025-11-29_cal_st_fullerton_lmu_ca,Cal St. Fullerton,01,"Moon, Mimi",False,,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2025-11-29_cal_st_fullerton_lmu_ca,Cal St. Fullerton,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,2,3,0,0,2,0,0,0
+2025-12-05_lmu_ca_utah_st,Utah St.,54,"Asensio, Marina",True,35,5,11,0.455,2,7,0.286,2,2,1.0,0,2,2,3,3,3,0,1,14
+2025-12-05_lmu_ca_utah_st,Utah St.,03,"Gayles, Aaliyah",True,35,2,9,0.222,2,6,0.333,6,9,0.667,0,3,3,4,2,5,1,2,12
+2025-12-05_lmu_ca_utah_st,Utah St.,23,"Livingston, Elise",True,28,4,6,0.667,1,3,0.333,0,0,,0,1,1,3,0,4,0,0,9
+2025-12-05_lmu_ca_utah_st,Utah St.,55,"Sene, Sophie",True,11,1,4,0.25,0,0,,0,0,,2,2,4,1,2,1,0,0,2
+2025-12-05_lmu_ca_utah_st,Utah St.,15,"Sanford, Karyn",True,17,0,1,0.0,0,1,0.0,0,0,,1,1,2,1,2,1,0,0,0
+2025-12-05_lmu_ca_utah_st,Utah St.,32,"Heaton, Jamisyn",False,20,3,4,0.75,0,0,,2,3,0.667,1,3,4,5,0,1,1,5,8
+2025-12-05_lmu_ca_utah_st,Utah St.,08,"Rosello Lopez, Aitana",False,20,3,4,0.75,0,1,0.0,0,1,0.0,0,2,2,1,2,1,1,0,6
+2025-12-05_lmu_ca_utah_st,Utah St.,00,"Wilson, Rachel",False,15,1,3,0.333,0,0,,2,2,1.0,1,2,3,2,0,2,0,0,4
+2025-12-05_lmu_ca_utah_st,Utah St.,09,"Munoz Herreros, Paloma",False,13,1,1,1.0,0,0,,1,2,0.5,0,1,1,2,0,1,0,0,3
+2025-12-05_lmu_ca_utah_st,Utah St.,12,"Cosme, Bella",False,6,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2025-12-05_lmu_ca_utah_st,Utah St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,2,2,0,0,1,0,0,0
+2025-12-05_lmu_ca_utah_st,LMU (CA),55,"Hernandez, Maya",True,24,6,8,0.75,0,0,,3,6,0.5,1,2,3,3,1,4,0,1,15
+2025-12-05_lmu_ca_utah_st,LMU (CA),00,"Lawson, Jess",True,28,4,14,0.286,0,3,0.0,5,10,0.5,5,8,13,2,4,1,0,4,13
+2025-12-05_lmu_ca_utah_st,LMU (CA),28,"Matic, Andjela",True,38,4,10,0.4,2,4,0.5,0,2,0.0,0,3,3,0,4,1,0,2,10
+2025-12-05_lmu_ca_utah_st,LMU (CA),13,"Krajina, Ivana",True,35,3,3,1.0,1,1,1.0,0,0,,0,2,2,2,1,3,0,1,7
+2025-12-05_lmu_ca_utah_st,LMU (CA),05,"Heidger, Carly",True,31,0,7,0.0,0,2,0.0,1,2,0.5,5,1,6,2,3,1,0,0,1
+2025-12-05_lmu_ca_utah_st,LMU (CA),54,"Ogot, Zawadi",False,19,4,5,0.8,0,0,,0,0,,2,3,5,2,1,2,0,2,8
+2025-12-05_lmu_ca_utah_st,LMU (CA),30,"Reus Piza, Paula",False,13,2,6,0.333,0,0,,3,4,0.75,3,0,3,1,2,2,0,1,7
+2025-12-05_lmu_ca_utah_st,LMU (CA),24,"Jones, Kayla",False,6,1,1,1.0,0,0,,0,0,,0,0,0,1,1,0,0,0,2
+2025-12-05_lmu_ca_utah_st,LMU (CA),07,"Milanovic, Ana",False,6,0,2,0.0,0,1,0.0,0,0,,0,0,0,2,0,0,0,0,0
+2025-12-05_lmu_ca_utah_st,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,0,1,1,0,0,1,0,0,0
+2025-12-13_wichita_st_lmu_ca,LMU (CA),00,"Lawson, Jess",True,30,11,24,0.458,1,2,0.5,4,5,0.8,6,6,12,3,2,1,0,2,27
+2025-12-13_wichita_st_lmu_ca,LMU (CA),55,"Hernandez, Maya",True,27,4,16,0.25,0,0,,2,3,0.667,1,4,5,4,1,1,2,2,10
+2025-12-13_wichita_st_lmu_ca,LMU (CA),05,"Heidger, Carly",True,35,4,11,0.364,0,4,0.0,1,2,0.5,1,2,3,0,0,0,0,1,9
+2025-12-13_wichita_st_lmu_ca,LMU (CA),13,"Krajina, Ivana",True,26,0,2,0.0,0,0,,0,0,,1,2,3,2,2,3,0,0,0
+2025-12-13_wichita_st_lmu_ca,LMU (CA),28,"Matic, Andjela",True,16,0,3,0.0,0,3,0.0,0,0,,0,1,1,1,0,0,0,1,0
+2025-12-13_wichita_st_lmu_ca,LMU (CA),54,"Ogot, Zawadi",False,22,5,7,0.714,0,0,,1,5,0.2,3,0,3,2,2,4,0,3,11
+2025-12-13_wichita_st_lmu_ca,LMU (CA),04,"Clarke, Allison",False,26,2,5,0.4,2,5,0.4,1,2,0.5,0,0,0,0,0,0,0,0,7
+2025-12-13_wichita_st_lmu_ca,LMU (CA),24,"Jones, Kayla",False,10,0,3,0.0,0,0,,0,2,0.0,1,0,1,0,1,0,0,1,0
+2025-12-13_wichita_st_lmu_ca,LMU (CA),30,"Reus Piza, Paula",False,8,0,2,0.0,0,0,,0,0,,1,2,3,1,0,2,0,1,0
+2025-12-13_wichita_st_lmu_ca,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,7,0,7,0,0,1,0,0,0
+2025-12-13_wichita_st_lmu_ca,Wichita St.,04,"Harding, Jaila",True,37,4,11,0.364,4,10,0.4,1,2,0.5,0,1,1,0,2,1,1,0,13
+2025-12-13_wichita_st_lmu_ca,Wichita St.,11,"Mcdonald, Jaida",True,26,4,6,0.667,0,0,,4,8,0.5,1,7,8,4,1,2,1,1,12
+2025-12-13_wichita_st_lmu_ca,Wichita St.,24,"Sissoko, Maimouna",True,10,3,6,0.5,0,0,,0,0,,3,1,4,5,0,2,1,0,6
+2025-12-13_wichita_st_lmu_ca,Wichita St.,14,"Davis, Taya",True,29,0,2,0.0,0,1,0.0,2,2,1.0,0,6,6,1,4,0,0,0,2
+2025-12-13_wichita_st_lmu_ca,Wichita St.,05,"Richardson, Diamond",True,9,0,2,0.0,0,1,0.0,0,0,,0,1,1,2,0,3,0,1,0
+2025-12-13_wichita_st_lmu_ca,Wichita St.,02,"Cater, Abby",False,32,7,13,0.538,1,4,0.25,8,8,1.0,1,3,4,3,2,1,0,1,23
+2025-12-13_wichita_st_lmu_ca,Wichita St.,01,"Ortiz, Kyleigh",False,14,2,3,0.667,2,3,0.667,0,0,,0,2,2,0,0,1,0,0,6
+2025-12-13_wichita_st_lmu_ca,Wichita St.,77,"Benharouga, Sophie",False,8,2,3,0.667,1,1,1.0,0,0,,2,2,4,1,1,1,1,0,5
+2025-12-13_wichita_st_lmu_ca,Wichita St.,21,"Thompson, Treasure",False,25,2,3,0.667,0,0,,0,0,,1,5,6,3,2,8,2,1,4
+2025-12-13_wichita_st_lmu_ca,Wichita St.,12,"White, Bre'Yon",False,7,0,0,,0,0,,0,0,,0,2,2,0,1,1,1,0,0
+2025-12-13_wichita_st_lmu_ca,Wichita St.,42,"Banks, Cheyenne",False,3,0,0,,0,0,,0,0,,0,0,0,0,1,0,0,0,0
+2025-12-13_wichita_st_lmu_ca,Wichita St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,3,4,0,0,1,0,0,0
+2025-12-16_lmu_ca_chapman,Chapman,14,"Sherfey, Aidan",True,28,2,5,0.4,1,2,0.5,0,0,,0,0,0,2,1,0,0,1,5
+2025-12-16_lmu_ca_chapman,Chapman,25,"Woods, Layla",True,19,2,8,0.25,0,0,,0,0,,0,2,2,4,0,1,0,0,4
+2025-12-16_lmu_ca_chapman,Chapman,11,"Watanabe, Kira",True,16,1,7,0.143,1,5,0.2,0,0,,0,2,2,2,1,4,0,2,3
+2025-12-16_lmu_ca_chapman,Chapman,21,"Cajala, Kali",True,19,1,2,0.5,0,0,,0,0,,0,0,0,0,0,1,0,0,2
+2025-12-16_lmu_ca_chapman,Chapman,20,"Barretto, Trinity",True,18,0,3,0.0,0,0,,0,0,,1,1,2,0,1,2,0,1,0
+2025-12-16_lmu_ca_chapman,Chapman,23,"Nakaji, Maile",False,17,2,9,0.222,1,6,0.167,1,1,1.0,3,1,4,1,1,2,0,0,6
+2025-12-16_lmu_ca_chapman,Chapman,08,"Teoh, Sydney",False,16,1,4,0.25,0,2,0.0,1,1,1.0,0,1,1,1,1,3,0,1,3
+2025-12-16_lmu_ca_chapman,Chapman,33,"Nitao, Makena",False,19,1,3,0.333,0,2,0.0,0,0,,0,0,0,0,1,3,0,1,2
+2025-12-16_lmu_ca_chapman,Chapman,04,"Martinez, Andi",False,13,0,0,,0,0,,1,2,0.5,1,0,1,1,0,3,0,0,1
+2025-12-16_lmu_ca_chapman,Chapman,03,"Lu, Ciara",False,5,0,0,,0,0,,1,2,0.5,0,0,0,0,0,1,0,1,1
+2025-12-16_lmu_ca_chapman,Chapman,05,"Ludwick, Emerson",False,14,0,2,0.0,0,0,,0,0,,0,2,2,4,0,1,0,0,0
+2025-12-16_lmu_ca_chapman,Chapman,24,"Lacap, Jemma",False,11,0,1,0.0,0,0,,0,0,,0,0,0,1,1,2,0,0,0
+2025-12-16_lmu_ca_chapman,Chapman,22,"McCoy, Darcy",False,5,0,1,0.0,0,1,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-16_lmu_ca_chapman,Chapman,TM,TEAM,False,0,0,0,,0,0,,0,0,,5,3,8,0,0,6,0,0,0
+2025-12-16_lmu_ca_chapman,LMU (CA),28,"Matic, Andjela",True,23,7,9,0.778,3,5,0.6,0,0,,0,2,2,0,2,2,0,3,17
+2025-12-16_lmu_ca_chapman,LMU (CA),00,"Lawson, Jess",True,18,3,5,0.6,0,0,,5,6,0.833,4,4,8,1,2,2,0,1,11
+2025-12-16_lmu_ca_chapman,LMU (CA),13,"Krajina, Ivana",True,18,3,7,0.429,1,5,0.2,0,0,,2,0,2,4,4,1,0,1,7
+2025-12-16_lmu_ca_chapman,LMU (CA),55,"Hernandez, Maya",True,17,3,5,0.6,0,0,,1,1,1.0,4,3,7,1,4,1,1,1,7
+2025-12-16_lmu_ca_chapman,LMU (CA),05,"Heidger, Carly",True,17,3,7,0.429,0,3,0.0,0,0,,1,2,3,1,0,0,0,1,6
+2025-12-16_lmu_ca_chapman,LMU (CA),24,"Jones, Kayla",False,17,6,7,0.857,0,0,,1,2,0.5,5,1,6,3,1,1,0,0,13
+2025-12-16_lmu_ca_chapman,LMU (CA),54,"Ogot, Zawadi",False,23,5,13,0.385,0,0,,0,1,0.0,2,3,5,2,0,2,2,2,10
+2025-12-16_lmu_ca_chapman,LMU (CA),07,"Milanovic, Ana",False,13,3,3,1.0,0,0,,1,1,1.0,0,1,1,2,2,2,0,1,7
+2025-12-16_lmu_ca_chapman,LMU (CA),30,"Reus Piza, Paula",False,14,1,3,0.333,0,0,,1,2,0.5,1,4,5,0,2,1,0,0,3
+2025-12-16_lmu_ca_chapman,LMU (CA),04,"Clarke, Allison",False,25,0,6,0.0,0,6,0.0,0,0,,0,1,1,0,3,3,0,0,0
+2025-12-16_lmu_ca_chapman,LMU (CA),02,"Somvichian, Mari",False,13,0,1,0.0,0,1,0.0,0,0,,1,0,1,1,1,1,0,1,0
+2025-12-16_lmu_ca_chapman,LMU (CA),10,"Lagerlid, Lova",False,2,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2025-12-16_lmu_ca_chapman,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,1,2,3,0,0,0,0,0,0
+2025-12-20_lmu_ca_weber_st,Weber St.,08,"Robbins, Hannah",True,36,5,10,0.5,2,4,0.5,3,4,0.75,0,1,1,2,2,2,0,4,15
+2025-12-20_lmu_ca_weber_st,Weber St.,32,"Billy, Lanae",True,35,3,7,0.429,2,6,0.333,6,8,0.75,0,8,8,1,2,3,0,0,14
+2025-12-20_lmu_ca_weber_st,Weber St.,07,"Emma-Nnopu, Antoniette",True,27,6,12,0.5,0,0,,2,4,0.5,5,4,9,4,3,4,1,2,14
+2025-12-20_lmu_ca_weber_st,Weber St.,22,"White, Sydney",True,32,3,6,0.5,0,0,,3,5,0.6,0,0,0,1,2,4,0,1,9
+2025-12-20_lmu_ca_weber_st,Weber St.,13,"Shaffer, Makenna",True,33,2,6,0.333,1,2,0.5,2,2,1.0,1,1,2,4,1,2,0,0,7
+2025-12-20_lmu_ca_weber_st,Weber St.,12,"Niumeitolu, Fui",False,17,3,3,1.0,0,0,,1,1,1.0,0,1,1,1,2,0,0,0,7
+2025-12-20_lmu_ca_weber_st,Weber St.,10,"Lauro, Paris",False,7,1,1,1.0,0,0,,0,0,,0,3,3,1,0,1,1,0,2
+2025-12-20_lmu_ca_weber_st,Weber St.,25,"Willardson, Nicole",False,13,0,0,,0,0,,0,2,0.0,0,2,2,1,3,0,2,0,0
+2025-12-20_lmu_ca_weber_st,Weber St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,4,4,0,0,1,0,0,0
+2025-12-20_lmu_ca_weber_st,LMU (CA),55,"Hernandez, Maya",True,35,7,14,0.5,0,0,,2,4,0.5,3,2,5,4,1,4,2,1,16
+2025-12-20_lmu_ca_weber_st,LMU (CA),28,"Matic, Andjela",True,30,4,9,0.444,2,4,0.5,0,0,,1,2,3,0,4,1,0,0,10
+2025-12-20_lmu_ca_weber_st,LMU (CA),05,"Heidger, Carly",True,29,3,6,0.5,2,4,0.5,0,0,,1,3,4,4,0,1,0,2,8
+2025-12-20_lmu_ca_weber_st,LMU (CA),00,"Lawson, Jess",True,24,3,7,0.429,0,1,0.0,2,3,0.667,3,5,8,4,2,2,0,1,8
+2025-12-20_lmu_ca_weber_st,LMU (CA),13,"Krajina, Ivana",True,16,0,3,0.0,0,2,0.0,0,0,,0,0,0,4,2,1,0,1,0
+2025-12-20_lmu_ca_weber_st,LMU (CA),54,"Ogot, Zawadi",False,23,5,9,0.556,0,0,,3,3,1.0,1,0,1,2,0,0,0,0,13
+2025-12-20_lmu_ca_weber_st,LMU (CA),04,"Clarke, Allison",False,23,0,6,0.0,0,5,0.0,3,3,1.0,0,2,2,1,3,1,0,0,3
+2025-12-20_lmu_ca_weber_st,LMU (CA),30,"Reus Piza, Paula",False,11,1,2,0.5,0,1,0.0,0,0,,0,4,4,0,1,2,1,0,2
+2025-12-20_lmu_ca_weber_st,LMU (CA),02,"Somvichian, Mari",False,4,0,1,0.0,0,0,,0,0,,0,0,0,2,0,0,0,0,0
+2025-12-20_lmu_ca_weber_st,LMU (CA),24,"Jones, Kayla",False,4,0,0,,0,0,,0,0,,0,0,0,3,0,1,0,0,0
+2025-12-20_lmu_ca_weber_st,LMU (CA),07,"Milanovic, Ana",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-20_lmu_ca_weber_st,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,2,1,3,0,0,0,0,0,0
+2025-12-21_lmu_ca_southern_utah,Southern Utah,44,"Uhrich, Ava",True,33,10,15,0.667,2,4,0.5,4,5,0.8,1,7,8,3,6,2,1,0,26
+2025-12-21_lmu_ca_southern_utah,Southern Utah,03,"Chambers, Sierra",True,37,7,14,0.5,4,7,0.571,2,4,0.5,0,1,1,1,2,4,1,0,20
+2025-12-21_lmu_ca_southern_utah,Southern Utah,22,"Kiernan, Devyn",True,36,2,7,0.286,2,5,0.4,0,0,,0,0,0,2,3,3,0,0,6
+2025-12-21_lmu_ca_southern_utah,Southern Utah,13,"Banks, Ashley",True,26,3,5,0.6,0,0,,0,0,,2,7,9,4,2,3,2,0,6
+2025-12-21_lmu_ca_southern_utah,Southern Utah,01,"Doman, Kortney",True,37,1,5,0.2,0,2,0.0,1,3,0.333,2,3,5,5,3,2,0,0,3
+2025-12-21_lmu_ca_southern_utah,Southern Utah,35,"Malafu, Olivia",False,10,3,4,0.75,0,0,,1,2,0.5,0,0,0,0,0,0,0,0,7
+2025-12-21_lmu_ca_southern_utah,Southern Utah,34,"Anderson, Denver",False,11,0,2,0.0,0,2,0.0,0,0,,0,2,2,3,1,0,0,0,0
+2025-12-21_lmu_ca_southern_utah,Southern Utah,02,"Hasan, Bella",False,6,0,2,0.0,0,0,,0,0,,0,0,0,1,0,1,0,0,0
+2025-12-21_lmu_ca_southern_utah,Southern Utah,11,"Trigueiro, Morgan",False,4,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2025-12-21_lmu_ca_southern_utah,Southern Utah,33,"Kuelker, Vallory",False,,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-21_lmu_ca_southern_utah,Southern Utah,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,2,2,0,0,1,0,0,0
+2025-12-21_lmu_ca_southern_utah,LMU (CA),55,"Hernandez, Maya",True,27,4,11,0.364,0,1,0.0,3,5,0.6,0,5,5,3,1,1,0,1,11
+2025-12-21_lmu_ca_southern_utah,LMU (CA),13,"Krajina, Ivana",True,32,2,7,0.286,0,1,0.0,5,6,0.833,0,2,2,3,0,1,0,2,9
+2025-12-21_lmu_ca_southern_utah,LMU (CA),05,"Heidger, Carly",True,27,3,6,0.5,0,3,0.0,0,0,,1,0,1,3,0,0,0,0,6
+2025-12-21_lmu_ca_southern_utah,LMU (CA),54,"Ogot, Zawadi",True,11,2,3,0.667,0,0,,0,0,,1,1,2,3,2,0,0,2,4
+2025-12-21_lmu_ca_southern_utah,LMU (CA),04,"Clarke, Allison",True,20,1,4,0.25,0,1,0.0,0,0,,0,1,1,1,1,1,0,3,2
+2025-12-21_lmu_ca_southern_utah,LMU (CA),00,"Lawson, Jess",False,25,3,6,0.5,0,0,,11,12,0.917,2,5,7,3,2,1,0,0,17
+2025-12-21_lmu_ca_southern_utah,LMU (CA),30,"Reus Piza, Paula",False,17,3,7,0.429,1,3,0.333,4,4,1.0,1,5,6,0,0,1,0,2,11
+2025-12-21_lmu_ca_southern_utah,LMU (CA),28,"Matic, Andjela",False,31,3,7,0.429,1,3,0.333,3,3,1.0,0,3,3,1,7,2,0,0,10
+2025-12-21_lmu_ca_southern_utah,LMU (CA),24,"Jones, Kayla",False,9,3,3,1.0,0,0,,0,0,,1,0,1,0,2,1,0,1,6
+2025-12-21_lmu_ca_southern_utah,LMU (CA),02,"Somvichian, Mari",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-21_lmu_ca_southern_utah,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,1,1,2,0,0,0,0,0,0
+2025-12-28_gonzaga_lmu_ca,LMU (CA),55,"Hernandez, Maya",True,31,8,12,0.667,0,0,,2,4,0.5,4,1,5,5,2,2,0,0,18
+2025-12-28_gonzaga_lmu_ca,LMU (CA),00,"Lawson, Jess",True,23,4,10,0.4,0,0,,4,7,0.571,2,2,4,5,0,2,0,2,12
+2025-12-28_gonzaga_lmu_ca,LMU (CA),05,"Heidger, Carly",True,37,3,9,0.333,1,5,0.2,4,4,1.0,2,3,5,2,0,0,0,1,11
+2025-12-28_gonzaga_lmu_ca,LMU (CA),28,"Matic, Andjela",True,49,2,11,0.182,1,7,0.143,0,0,,0,6,6,1,5,3,0,0,5
+2025-12-28_gonzaga_lmu_ca,LMU (CA),13,"Krajina, Ivana",True,14,0,1,0.0,0,0,,0,0,,0,1,1,1,2,2,0,0,0
+2025-12-28_gonzaga_lmu_ca,LMU (CA),04,"Clarke, Allison",False,31,4,12,0.333,4,12,0.333,5,5,1.0,0,0,0,0,2,1,0,1,17
+2025-12-28_gonzaga_lmu_ca,LMU (CA),54,"Ogot, Zawadi",False,30,4,7,0.571,0,0,,0,0,,1,2,3,3,1,1,0,1,8
+2025-12-28_gonzaga_lmu_ca,LMU (CA),30,"Reus Piza, Paula",False,27,3,7,0.429,1,2,0.5,0,0,,0,3,3,0,1,0,0,0,7
+2025-12-28_gonzaga_lmu_ca,LMU (CA),24,"Jones, Kayla",False,8,1,1,1.0,0,0,,0,0,,1,0,1,1,0,0,0,1,2
+2025-12-28_gonzaga_lmu_ca,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,1,2,3,0,0,1,0,0,0
+2025-12-28_gonzaga_lmu_ca,Gonzaga,11,"Turner, Allie",True,46,7,13,0.538,2,3,0.667,4,4,1.0,0,2,2,2,6,1,0,1,20
+2025-12-28_gonzaga_lmu_ca,Gonzaga,33,"Whittaker, Lauren",True,38,8,18,0.444,0,2,0.0,2,2,1.0,6,10,16,4,2,3,0,2,18
+2025-12-28_gonzaga_lmu_ca,Gonzaga,20,"Smith, Taylor",True,32,4,9,0.444,0,1,0.0,0,0,,1,5,6,1,3,0,1,0,8
+2025-12-28_gonzaga_lmu_ca,Gonzaga,55,"Aokuso, Zeryhia",True,30,3,8,0.375,0,1,0.0,2,2,1.0,0,2,2,1,1,4,0,0,8
+2025-12-28_gonzaga_lmu_ca,Gonzaga,08,"Bettencourt, Ines",True,39,3,6,0.5,1,1,1.0,0,0,,2,4,6,3,3,3,0,2,7
+2025-12-28_gonzaga_lmu_ca,Gonzaga,23,"Haile, Jaiden",False,26,6,10,0.6,0,0,,0,1,0.0,1,1,2,2,0,2,0,0,12
+2025-12-28_gonzaga_lmu_ca,Gonzaga,24,"Gardner, Teryn",False,28,2,3,0.667,1,1,1.0,4,4,1.0,2,3,5,1,1,1,0,2,9
+2025-12-28_gonzaga_lmu_ca,Gonzaga,01,"Lofing, Paige",False,1,0,0,,0,0,,3,4,0.75,0,0,0,0,0,0,0,0,3
+2025-12-28_gonzaga_lmu_ca,Gonzaga,12,"Osarobo, Christabel",False,2,1,2,0.5,0,0,,0,0,,0,0,0,1,0,0,0,0,2
+2025-12-28_gonzaga_lmu_ca,Gonzaga,03,"Wilson, Julia",False,8,0,1,0.0,0,0,,0,0,,0,0,0,0,1,0,0,0,0
+2025-12-28_gonzaga_lmu_ca,Gonzaga,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,4,7,0,0,2,0,0,0
+2025-12-30_washington_st_lmu_ca,LMU (CA),00,"Lawson, Jess",True,27,5,9,0.556,0,1,0.0,6,7,0.857,4,7,11,3,1,1,1,1,16
+2025-12-30_washington_st_lmu_ca,LMU (CA),28,"Matic, Andjela",True,35,3,9,0.333,3,6,0.5,3,4,0.75,0,4,4,0,5,0,0,1,12
+2025-12-30_washington_st_lmu_ca,LMU (CA),55,"Hernandez, Maya",True,27,4,13,0.308,0,0,,0,0,,3,0,3,3,2,2,2,1,8
+2025-12-30_washington_st_lmu_ca,LMU (CA),13,"Krajina, Ivana",True,27,3,9,0.333,1,4,0.25,0,0,,0,0,0,2,0,1,0,1,7
+2025-12-30_washington_st_lmu_ca,LMU (CA),05,"Heidger, Carly",True,31,2,6,0.333,0,3,0.0,1,1,1.0,1,3,4,0,0,0,0,2,5
+2025-12-30_washington_st_lmu_ca,LMU (CA),30,"Reus Piza, Paula",False,16,2,4,0.5,0,0,,4,5,0.8,2,4,6,0,0,0,0,0,8
+2025-12-30_washington_st_lmu_ca,LMU (CA),04,"Clarke, Allison",False,19,1,1,1.0,0,0,,3,5,0.6,0,1,1,2,1,2,0,3,5
+2025-12-30_washington_st_lmu_ca,LMU (CA),54,"Ogot, Zawadi",False,12,2,3,0.667,0,0,,0,0,,0,3,3,3,0,0,0,0,4
+2025-12-30_washington_st_lmu_ca,LMU (CA),24,"Jones, Kayla",False,6,1,2,0.5,0,0,,0,0,,0,0,0,0,0,0,1,0,2
+2025-12-30_washington_st_lmu_ca,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,3,0,3,0,0,1,0,0,0
+2025-12-30_washington_st_lmu_ca,Washington St.,02,"Villa, Eleonora",True,40,8,21,0.381,2,8,0.25,3,5,0.6,0,4,4,1,3,2,0,2,21
+2025-12-30_washington_st_lmu_ca,Washington St.,10,"Abraham, Charlotte",True,38,6,13,0.462,3,7,0.429,0,0,,2,9,11,3,4,4,1,0,15
+2025-12-30_washington_st_lmu_ca,Washington St.,55,"Ruud, Malia",True,36,6,9,0.667,1,2,0.5,0,0,,1,2,3,0,3,2,0,0,13
+2025-12-30_washington_st_lmu_ca,Washington St.,09,"Valancic, Tanja",True,20,1,2,0.5,0,1,0.0,0,0,,1,2,3,3,3,2,0,0,2
+2025-12-30_washington_st_lmu_ca,Washington St.,12,"Alsina, Marta",True,11,0,0,,0,0,,0,2,0.0,0,1,1,2,0,2,0,0,0
+2025-12-30_washington_st_lmu_ca,Washington St.,15,"Koorits, Keandra",False,12,2,4,0.5,1,1,1.0,0,0,,3,0,3,3,0,1,0,0,5
+2025-12-30_washington_st_lmu_ca,Washington St.,08,"Chatfield, Mackenzie",False,26,1,4,0.25,0,0,,0,0,,2,0,2,5,2,0,0,0,2
+2025-12-30_washington_st_lmu_ca,Washington St.,05,"Chiu, Jean",False,12,0,1,0.0,0,1,0.0,0,0,,0,0,0,0,2,0,0,1,0
+2025-12-30_washington_st_lmu_ca,Washington St.,01,"Haziri, Malvina",False,3,0,3,0.0,0,3,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-30_washington_st_lmu_ca,Washington St.,25,"Glazier, Lauren",False,2,0,1,0.0,0,1,0.0,0,0,,1,0,1,0,0,1,0,0,0
+2025-12-30_washington_st_lmu_ca,Washington St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,5,4,9,0,0,1,0,0,0
+2026-01-02_lmu_ca_santa_clara,Santa Clara,12,"Glancey, Sophie",True,22,9,11,0.818,0,0,,2,2,1.0,1,1,2,2,1,1,1,0,20
+2026-01-02_lmu_ca_santa_clara,Santa Clara,00,"Jones, Maia",True,28,6,13,0.462,3,8,0.375,1,2,0.5,4,1,5,5,5,2,0,0,16
+2026-01-02_lmu_ca_santa_clara,Santa Clara,23,"Hawkins, Ashley",True,33,6,9,0.667,0,2,0.0,2,4,0.5,0,3,3,3,6,5,0,2,14
+2026-01-02_lmu_ca_santa_clara,Santa Clara,30,"Fox, Kylee",True,35,3,9,0.333,2,6,0.333,2,2,1.0,0,4,4,1,1,1,0,1,10
+2026-01-02_lmu_ca_santa_clara,Santa Clara,13,"Schmidt, Ava",True,26,3,8,0.375,0,5,0.0,0,0,,0,3,3,3,3,2,4,3,6
+2026-01-02_lmu_ca_santa_clara,Santa Clara,02,"Hooker, Aniya",False,27,5,10,0.5,1,5,0.2,0,1,0.0,2,1,3,2,1,2,1,2,11
+2026-01-02_lmu_ca_santa_clara,Santa Clara,20,"Miller, Delainey",False,16,3,8,0.375,0,2,0.0,1,2,0.5,1,2,3,1,1,2,0,0,7
+2026-01-02_lmu_ca_santa_clara,Santa Clara,34,"Gildersleeve-Stiles, Tyler",False,13,0,0,,0,0,,1,2,0.5,1,3,4,2,1,3,0,4,1
+2026-01-02_lmu_ca_santa_clara,Santa Clara,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,1,5,0,0,0,0,0,0
+2026-01-02_lmu_ca_santa_clara,LMU (CA),55,"Hernandez, Maya",True,31,11,17,0.647,0,0,,3,6,0.5,2,3,5,3,2,0,0,7,25
+2026-01-02_lmu_ca_santa_clara,LMU (CA),00,"Lawson, Jess",True,32,5,18,0.278,0,2,0.0,11,11,1.0,4,3,7,3,2,2,0,1,21
+2026-01-02_lmu_ca_santa_clara,LMU (CA),28,"Matic, Andjela",True,31,2,6,0.333,2,5,0.4,5,5,1.0,0,3,3,2,5,3,0,0,11
+2026-01-02_lmu_ca_santa_clara,LMU (CA),05,"Heidger, Carly",True,24,3,7,0.429,0,0,,0,0,,3,2,5,0,0,2,0,1,6
+2026-01-02_lmu_ca_santa_clara,LMU (CA),13,"Krajina, Ivana",True,21,1,1,1.0,0,0,,4,4,1.0,1,2,3,4,2,4,0,3,6
+2026-01-02_lmu_ca_santa_clara,LMU (CA),30,"Reus Piza, Paula",False,16,5,6,0.833,1,2,0.5,2,2,1.0,1,3,4,1,2,1,0,1,13
+2026-01-02_lmu_ca_santa_clara,LMU (CA),54,"Ogot, Zawadi",False,15,3,4,0.75,0,0,,0,0,,0,1,1,0,1,2,1,1,6
+2026-01-02_lmu_ca_santa_clara,LMU (CA),24,"Jones, Kayla",False,8,2,7,0.286,0,0,,0,0,,4,1,5,2,1,0,0,0,4
+2026-01-02_lmu_ca_santa_clara,LMU (CA),04,"Clarke, Allison",False,22,0,5,0.0,0,5,0.0,0,0,,0,0,0,2,1,2,0,1,0
+2026-01-02_lmu_ca_santa_clara,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,3,2,5,0,0,0,0,0,0
+2026-01-04_lmu_ca_san_francisco,San Francisco,02,"Neira, Mara",True,32,8,15,0.533,3,7,0.429,0,0,,0,5,5,3,2,4,0,0,19
+2026-01-04_lmu_ca_san_francisco,San Francisco,09,"Cargol, Aina",True,39,4,10,0.4,1,3,0.333,8,10,0.8,0,3,3,2,8,2,0,1,17
+2026-01-04_lmu_ca_san_francisco,San Francisco,23,"Edokpaigbe, Candy",True,31,6,10,0.6,0,1,0.0,5,6,0.833,0,2,2,4,2,2,2,1,17
+2026-01-04_lmu_ca_san_francisco,San Francisco,03,"Mourino, Noelia",True,29,2,6,0.333,0,0,,2,2,1.0,3,4,7,5,4,2,1,0,6
+2026-01-04_lmu_ca_san_francisco,San Francisco,12,"Tausova, Natasa",True,27,3,6,0.5,0,0,,0,0,,0,4,4,2,1,1,1,2,6
+2026-01-04_lmu_ca_san_francisco,San Francisco,22,"Tirado, Paula",False,24,4,6,0.667,1,2,0.5,2,2,1.0,1,3,4,1,1,0,0,1,11
+2026-01-04_lmu_ca_san_francisco,San Francisco,04,"McIntyre, Meghan",False,15,2,3,0.667,0,1,0.0,1,1,1.0,0,1,1,1,0,0,0,0,5
+2026-01-04_lmu_ca_san_francisco,San Francisco,24,"Castro, Sol",False,16,2,3,0.667,0,0,,0,0,,3,1,4,1,1,1,0,0,4
+2026-01-04_lmu_ca_san_francisco,San Francisco,07,"Ferrara Horne, Nevaeh",False,12,0,0,,0,0,,0,0,,0,0,0,1,0,1,2,0,0
+2026-01-04_lmu_ca_san_francisco,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,1,2,0,0,1,0,0,0
+2026-01-04_lmu_ca_san_francisco,LMU (CA),00,"Lawson, Jess",True,31,11,24,0.458,0,0,,10,13,0.769,6,3,9,3,2,1,0,0,32
+2026-01-04_lmu_ca_san_francisco,LMU (CA),55,"Hernandez, Maya",True,38,7,16,0.438,0,1,0.0,5,8,0.625,4,6,10,3,1,0,0,2,19
+2026-01-04_lmu_ca_san_francisco,LMU (CA),28,"Matic, Andjela",True,40,4,13,0.308,3,7,0.429,2,2,1.0,1,4,5,1,3,1,0,0,13
+2026-01-04_lmu_ca_san_francisco,LMU (CA),13,"Krajina, Ivana",True,32,2,4,0.5,0,0,,0,0,,1,1,2,5,4,1,0,3,4
+2026-01-04_lmu_ca_san_francisco,LMU (CA),05,"Heidger, Carly",True,27,1,5,0.2,1,3,0.333,0,0,,1,0,1,3,3,1,0,1,3
+2026-01-04_lmu_ca_san_francisco,LMU (CA),04,"Clarke, Allison",False,18,1,4,0.25,1,4,0.25,2,3,0.667,0,0,0,0,2,0,0,2,5
+2026-01-04_lmu_ca_san_francisco,LMU (CA),24,"Jones, Kayla",False,7,2,2,1.0,0,0,,0,0,,0,1,1,1,0,1,0,0,4
+2026-01-04_lmu_ca_san_francisco,LMU (CA),02,"Somvichian, Mari",False,4,0,0,,0,0,,2,2,1.0,0,1,1,0,0,0,0,0,2
+2026-01-04_lmu_ca_san_francisco,LMU (CA),30,"Reus Piza, Paula",False,20,0,4,0.0,0,2,0.0,0,0,,0,2,2,1,2,3,0,0,0
+2026-01-04_lmu_ca_san_francisco,LMU (CA),54,"Ogot, Zawadi",False,8,0,0,,0,0,,0,0,,0,0,0,3,0,1,0,0,0
+2026-01-04_lmu_ca_san_francisco,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,4,2,6,0,0,2,0,0,0
+2026-01-08_pepperdine_lmu_ca,LMU (CA),55,"Hernandez, Maya",True,27,7,14,0.5,0,0,,7,9,0.778,4,4,8,4,0,3,0,1,21
+2026-01-08_pepperdine_lmu_ca,LMU (CA),28,"Matic, Andjela",True,34,7,10,0.7,4,5,0.8,2,2,1.0,0,0,0,2,1,4,0,1,20
+2026-01-08_pepperdine_lmu_ca,LMU (CA),13,"Krajina, Ivana",True,29,4,9,0.444,2,3,0.667,0,0,,0,3,3,2,4,3,0,2,10
+2026-01-08_pepperdine_lmu_ca,LMU (CA),00,"Lawson, Jess",True,23,3,8,0.375,0,0,,0,0,,1,3,4,1,2,1,0,3,6
+2026-01-08_pepperdine_lmu_ca,LMU (CA),05,"Heidger, Carly",True,21,3,4,0.75,0,1,0.0,0,0,,0,2,2,1,0,1,0,1,6
+2026-01-08_pepperdine_lmu_ca,LMU (CA),24,"Jones, Kayla",False,16,5,8,0.625,0,1,0.0,0,0,,2,1,3,3,0,2,0,0,10
+2026-01-08_pepperdine_lmu_ca,LMU (CA),30,"Reus Piza, Paula",False,27,3,9,0.333,0,0,,2,2,1.0,2,2,4,1,3,0,0,0,8
+2026-01-08_pepperdine_lmu_ca,LMU (CA),54,"Ogot, Zawadi",False,25,1,3,0.333,0,0,,0,3,0.0,0,4,4,2,2,0,0,0,2
+2026-01-08_pepperdine_lmu_ca,LMU (CA),04,"Clarke, Allison",False,21,0,2,0.0,0,2,0.0,0,0,,1,3,4,1,0,0,2,0,0
+2026-01-08_pepperdine_lmu_ca,LMU (CA),02,"Somvichian, Mari",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-08_pepperdine_lmu_ca,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,3,1,4,0,0,0,0,0,0
+2026-01-08_pepperdine_lmu_ca,Pepperdine,02,"Guiney, Elli",True,43,8,13,0.615,2,5,0.4,4,6,0.667,0,4,4,1,2,0,0,1,22
+2026-01-08_pepperdine_lmu_ca,Pepperdine,22,"Falk, Lina",True,37,4,8,0.5,0,2,0.0,2,2,1.0,1,1,2,4,5,4,0,1,10
+2026-01-08_pepperdine_lmu_ca,Pepperdine,13,"Fiso, Meghan",True,35,4,12,0.333,0,1,0.0,0,0,,0,2,2,3,3,2,0,0,8
+2026-01-08_pepperdine_lmu_ca,Pepperdine,12,"Preston, Shorna",True,29,4,7,0.571,0,0,,0,0,,3,12,15,3,5,2,1,1,8
+2026-01-08_pepperdine_lmu_ca,Pepperdine,01,"Sta. Maria, Taija",True,29,3,6,0.5,1,2,0.5,0,0,,0,0,0,2,1,3,0,1,7
+2026-01-08_pepperdine_lmu_ca,Pepperdine,03,"Green, Bella",False,16,5,7,0.714,0,0,,5,6,0.833,1,1,2,3,0,4,0,2,15
+2026-01-08_pepperdine_lmu_ca,Pepperdine,00,"Finley, Ivory",False,26,3,8,0.375,2,4,0.5,0,0,,1,2,3,3,3,0,1,1,8
+2026-01-08_pepperdine_lmu_ca,Pepperdine,30,"Harmon, Seleh",False,10,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-08_pepperdine_lmu_ca,Pepperdine,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,1,4,0,0,0,0,0,0
+2026-01-15_lmu_ca_oregon_st,Oregon St.,03,"Villa, Jenna",True,40,5,11,0.455,2,6,0.333,1,2,0.5,1,3,4,1,2,2,0,0,13
+2026-01-15_lmu_ca_oregon_st,Oregon St.,01,"Shuler, Kennedie",True,35,3,5,0.6,0,0,,6,8,0.75,1,6,7,2,6,2,1,1,12
+2026-01-15_lmu_ca_oregon_st,Oregon St.,00,"Bolden, Tiara",True,34,5,9,0.556,1,1,1.0,0,0,,1,3,4,3,1,2,1,0,11
+2026-01-15_lmu_ca_oregon_st,Oregon St.,15,"Williamson, Lizzy",True,8,1,4,0.25,0,0,,0,0,,0,2,2,0,1,0,0,0,2
+2026-01-15_lmu_ca_oregon_st,Oregon St.,04,"Schimel, Ally",True,36,0,5,0.0,0,4,0.0,0,0,,0,3,3,2,0,1,1,0,0
+2026-01-15_lmu_ca_oregon_st,Oregon St.,32,"Sow, Nene",False,27,3,5,0.6,0,0,,1,4,0.25,1,4,5,2,0,6,2,0,7
+2026-01-15_lmu_ca_oregon_st,Oregon St.,22,"Alonso, Lara",False,5,1,2,0.5,0,0,,2,2,1.0,0,0,0,1,1,0,0,0,4
+2026-01-15_lmu_ca_oregon_st,Oregon St.,25,"Lindemans, Keira",False,11,1,2,0.5,0,1,0.0,0,0,,0,1,1,1,1,0,0,1,2
+2026-01-15_lmu_ca_oregon_st,Oregon St.,31,"Vecina, Cloe",False,4,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2026-01-15_lmu_ca_oregon_st,Oregon St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,3,5,0,0,0,0,0,0
+2026-01-15_lmu_ca_oregon_st,LMU (CA),05,"Heidger, Carly",True,39,6,11,0.545,2,3,0.667,0,0,,1,1,2,1,2,0,0,1,14
+2026-01-15_lmu_ca_oregon_st,LMU (CA),00,"Lawson, Jess",True,31,4,14,0.286,3,3,1.0,3,4,0.75,5,11,16,1,0,1,0,1,14
+2026-01-15_lmu_ca_oregon_st,LMU (CA),55,"Hernandez, Maya",True,31,3,9,0.333,0,0,,2,3,0.667,4,2,6,4,1,1,2,3,8
+2026-01-15_lmu_ca_oregon_st,LMU (CA),28,"Matic, Andjela",True,38,2,15,0.133,2,5,0.4,0,0,,1,2,3,1,4,0,0,0,6
+2026-01-15_lmu_ca_oregon_st,LMU (CA),13,"Krajina, Ivana",True,35,2,5,0.4,0,1,0.0,0,0,,0,1,1,5,4,3,0,1,4
+2026-01-15_lmu_ca_oregon_st,LMU (CA),04,"Clarke, Allison",False,7,1,1,1.0,1,1,1.0,0,0,,1,0,1,0,0,0,0,0,3
+2026-01-15_lmu_ca_oregon_st,LMU (CA),54,"Ogot, Zawadi",False,9,1,2,0.5,0,0,,0,0,,0,2,2,2,1,1,0,1,2
+2026-01-15_lmu_ca_oregon_st,LMU (CA),30,"Reus Piza, Paula",False,5,1,3,0.333,0,2,0.0,0,0,,0,0,0,2,1,0,0,0,2
+2026-01-15_lmu_ca_oregon_st,LMU (CA),24,"Jones, Kayla",False,4,1,1,1.0,0,0,,0,0,,0,0,0,2,0,2,0,0,2
+2026-01-15_lmu_ca_oregon_st,LMU (CA),07,"Milanovic, Ana",False,1,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2026-01-15_lmu_ca_oregon_st,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,1,0,1,0,0,1,0,0,0
+2026-01-17_pacific_lmu_ca,LMU (CA),28,"Matic, Andjela",True,34,6,10,0.6,2,4,0.5,1,1,1.0,0,2,2,1,3,1,0,3,15
+2026-01-17_pacific_lmu_ca,LMU (CA),55,"Hernandez, Maya",True,21,6,13,0.462,0,1,0.0,2,2,1.0,1,1,2,4,1,1,0,0,14
+2026-01-17_pacific_lmu_ca,LMU (CA),00,"Lawson, Jess",True,23,4,10,0.4,0,1,0.0,4,5,0.8,3,3,6,2,4,2,0,1,12
+2026-01-17_pacific_lmu_ca,LMU (CA),13,"Krajina, Ivana",True,32,4,7,0.571,0,0,,0,0,,0,2,2,1,5,1,0,1,8
+2026-01-17_pacific_lmu_ca,LMU (CA),05,"Heidger, Carly",True,22,3,6,0.5,0,0,,0,0,,1,3,4,4,2,0,0,2,6
+2026-01-17_pacific_lmu_ca,LMU (CA),07,"Milanovic, Ana",False,12,3,4,0.75,1,1,1.0,0,0,,0,0,0,2,0,1,0,0,7
+2026-01-17_pacific_lmu_ca,LMU (CA),24,"Jones, Kayla",False,18,3,5,0.6,0,0,,0,0,,4,4,8,3,0,0,0,1,6
+2026-01-17_pacific_lmu_ca,LMU (CA),02,"Somvichian, Mari",False,6,2,2,1.0,0,0,,0,0,,0,0,0,1,0,0,0,1,4
+2026-01-17_pacific_lmu_ca,LMU (CA),04,"Clarke, Allison",False,13,1,2,0.5,0,1,0.0,0,0,,0,0,0,0,0,0,0,1,2
+2026-01-17_pacific_lmu_ca,LMU (CA),54,"Ogot, Zawadi",False,16,0,2,0.0,0,0,,0,2,0.0,0,1,1,2,0,2,0,2,0
+2026-01-17_pacific_lmu_ca,LMU (CA),10,"Lagerlid, Lova",False,3,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-17_pacific_lmu_ca,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,2,2,4,0,0,0,0,0,0
+2026-01-17_pacific_lmu_ca,Pacific,25,"Bartholomew, Winner",True,34,11,15,0.733,0,0,,6,7,0.857,3,2,5,0,2,2,0,0,28
+2026-01-17_pacific_lmu_ca,Pacific,08,"Mindermann, Sophia",True,33,6,14,0.429,3,9,0.333,2,2,1.0,0,2,2,0,1,1,0,0,17
+2026-01-17_pacific_lmu_ca,Pacific,21,"Nestorov, Daria",True,32,0,6,0.0,0,1,0.0,4,4,1.0,1,0,1,2,8,5,0,1,4
+2026-01-17_pacific_lmu_ca,Pacific,10,"Ward, Sydney",True,19,0,1,0.0,0,1,0.0,2,2,1.0,1,5,6,1,0,2,0,0,2
+2026-01-17_pacific_lmu_ca,Pacific,05,"Szabo, Stella",True,26,0,2,0.0,0,1,0.0,0,0,,4,1,5,3,1,3,0,1,0
+2026-01-17_pacific_lmu_ca,Pacific,07,"Yergensen, Liv",False,11,1,2,0.5,0,1,0.0,0,0,,0,0,0,0,0,3,0,0,2
+2026-01-17_pacific_lmu_ca,Pacific,09,"Radocaj, Marina",False,26,0,2,0.0,0,0,,1,2,0.5,1,8,9,2,0,1,2,0,1
+2026-01-17_pacific_lmu_ca,Pacific,15,"Lowery, Nyah",False,14,0,4,0.0,0,3,0.0,0,0,,0,1,1,2,1,3,0,0,0
+2026-01-17_pacific_lmu_ca,Pacific,23,"Durrill, Kenlee",False,3,0,1,0.0,0,1,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-17_pacific_lmu_ca,Pacific,11,"Anderegg, Luisa",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2026-01-17_pacific_lmu_ca,Pacific,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,1,4,0,0,0,0,0,0
+2026-01-22_lmu_ca_portland,Portland,03,"Dallow, Florence",True,30,6,13,0.462,0,1,0.0,1,2,0.5,1,3,4,3,2,5,1,0,13
+2026-01-22_lmu_ca_portland,Portland,22,"Mogel, Rhyan",True,37,6,10,0.6,0,1,0.0,0,0,,0,0,0,4,7,4,0,0,12
+2026-01-22_lmu_ca_portland,Portland,17,"Anderson, Nicole",True,34,3,10,0.3,3,7,0.429,3,3,1.0,2,2,4,1,2,4,0,0,12
+2026-01-22_lmu_ca_portland,Portland,02,"Ananiev, Dyani",True,30,4,16,0.25,1,7,0.143,0,0,,1,4,5,5,2,1,0,1,9
+2026-01-22_lmu_ca_portland,Portland,09,"Kennedy, Jada",True,20,3,5,0.6,0,0,,1,1,1.0,6,3,9,2,0,0,2,0,7
+2026-01-22_lmu_ca_portland,Portland,42,"Zimmerman, Ella",False,12,2,4,0.5,0,0,,4,4,1.0,1,1,2,3,0,0,1,2,8
+2026-01-22_lmu_ca_portland,Portland,07,"Barbosa, Tiffany",False,30,1,3,0.333,0,0,,2,2,1.0,0,2,2,1,2,1,0,2,4
+2026-01-22_lmu_ca_portland,Portland,12,"Smith, Brynn",False,5,1,1,1.0,1,1,1.0,0,0,,0,1,1,2,0,1,0,0,3
+2026-01-22_lmu_ca_portland,Portland,14,"Monahan, Caitlin",False,2,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,1,0
+2026-01-22_lmu_ca_portland,Portland,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,3,3,0,0,1,0,0,0
+2026-01-22_lmu_ca_portland,LMU (CA),55,"Hernandez, Maya",True,29,7,12,0.583,0,0,,6,7,0.857,1,5,6,4,2,1,1,0,20
+2026-01-22_lmu_ca_portland,LMU (CA),05,"Heidger, Carly",True,33,7,12,0.583,1,3,0.333,0,0,,2,2,4,1,2,1,0,0,15
+2026-01-22_lmu_ca_portland,LMU (CA),00,"Lawson, Jess",True,27,4,8,0.5,0,0,,2,8,0.25,5,1,6,1,3,3,0,4,10
+2026-01-22_lmu_ca_portland,LMU (CA),28,"Matic, Andjela",True,38,2,9,0.222,2,5,0.4,2,2,1.0,0,4,4,0,2,2,0,0,8
+2026-01-22_lmu_ca_portland,LMU (CA),13,"Krajina, Ivana",True,19,0,4,0.0,0,1,0.0,3,4,0.75,0,4,4,3,4,0,1,0,3
+2026-01-22_lmu_ca_portland,LMU (CA),30,"Reus Piza, Paula",False,13,3,5,0.6,0,0,,0,0,,0,3,3,3,1,4,0,0,6
+2026-01-22_lmu_ca_portland,LMU (CA),04,"Clarke, Allison",False,21,2,4,0.5,0,1,0.0,1,1,1.0,0,1,1,1,0,0,1,3,5
+2026-01-22_lmu_ca_portland,LMU (CA),54,"Ogot, Zawadi",False,11,1,3,0.333,0,0,,2,2,1.0,0,0,0,3,0,0,0,0,4
+2026-01-22_lmu_ca_portland,LMU (CA),24,"Jones, Kayla",False,6,2,4,0.5,0,0,,0,0,,2,1,3,0,1,0,0,0,4
+2026-01-22_lmu_ca_portland,LMU (CA),07,"Milanovic, Ana",False,3,1,1,1.0,0,0,,0,0,,0,0,0,1,0,0,0,0,2
+2026-01-22_lmu_ca_portland,LMU (CA),02,"Somvichian, Mari",False,,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-22_lmu_ca_portland,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,3,2,5,0,0,1,0,0,0
+2026-01-24_san_diego_lmu_ca,LMU (CA),00,"Lawson, Jess",True,32,9,23,0.391,1,3,0.333,4,6,0.667,5,5,10,2,2,2,0,4,23
+2026-01-24_san_diego_lmu_ca,LMU (CA),55,"Hernandez, Maya",True,30,7,12,0.583,0,0,,3,4,0.75,3,4,7,3,1,3,1,5,17
+2026-01-24_san_diego_lmu_ca,LMU (CA),05,"Heidger, Carly",True,28,1,4,0.25,0,2,0.0,4,4,1.0,0,1,1,0,2,1,0,0,6
+2026-01-24_san_diego_lmu_ca,LMU (CA),28,"Matic, Andjela",True,35,1,10,0.1,1,7,0.143,2,3,0.667,0,3,3,4,4,2,0,1,5
+2026-01-24_san_diego_lmu_ca,LMU (CA),13,"Krajina, Ivana",True,13,0,0,,0,0,,0,0,,0,0,0,3,1,2,0,0,0
+2026-01-24_san_diego_lmu_ca,LMU (CA),24,"Jones, Kayla",False,7,2,2,1.0,0,0,,2,2,1.0,1,0,1,0,0,0,0,0,6
+2026-01-24_san_diego_lmu_ca,LMU (CA),04,"Clarke, Allison",False,23,1,6,0.167,1,4,0.25,0,0,,0,2,2,2,1,0,0,0,3
+2026-01-24_san_diego_lmu_ca,LMU (CA),54,"Ogot, Zawadi",False,17,0,2,0.0,0,0,,0,0,,1,0,1,0,0,0,2,1,0
+2026-01-24_san_diego_lmu_ca,LMU (CA),30,"Reus Piza, Paula",False,9,0,2,0.0,0,1,0.0,0,0,,1,2,3,0,0,1,1,1,0
+2026-01-24_san_diego_lmu_ca,LMU (CA),07,"Milanovic, Ana",False,6,0,3,0.0,0,2,0.0,0,0,,1,0,1,1,0,1,0,0,0
+2026-01-24_san_diego_lmu_ca,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,1,3,4,0,0,1,0,0,0
+2026-01-24_san_diego_lmu_ca,San Diego,06,"Ray, Kylie",True,38,6,16,0.375,1,2,0.5,13,14,0.929,0,9,9,1,5,5,0,1,26
+2026-01-24_san_diego_lmu_ca,San Diego,20,"Rhodes, Hallie",True,39,6,15,0.4,0,0,,0,0,,0,2,2,3,7,3,0,1,12
+2026-01-24_san_diego_lmu_ca,San Diego,15,"Ruse, Eva",True,34,6,9,0.667,0,0,,0,2,0.0,5,7,12,1,1,1,2,1,12
+2026-01-24_san_diego_lmu_ca,San Diego,10,"Holley, Helen",True,19,1,2,0.5,0,0,,0,0,,1,1,2,2,1,1,0,2,2
+2026-01-24_san_diego_lmu_ca,San Diego,03,"Amor, Lilly",True,12,0,1,0.0,0,1,0.0,0,0,,0,1,1,0,0,3,0,1,0
+2026-01-24_san_diego_lmu_ca,San Diego,24,"Owens, Olivia",False,29,4,5,0.8,1,1,1.0,0,1,0.0,1,4,5,2,2,4,0,1,9
+2026-01-24_san_diego_lmu_ca,San Diego,19,"Rhodes, Jayden",False,22,3,4,0.75,2,2,1.0,0,0,,0,1,1,2,0,1,0,1,8
+2026-01-24_san_diego_lmu_ca,San Diego,22,"Williams, Ayla",False,6,0,1,0.0,0,0,,0,0,,0,3,3,2,0,1,0,2,0
+2026-01-24_san_diego_lmu_ca,San Diego,11,"Tharpe, Malia",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-24_san_diego_lmu_ca,San Diego,04,"Ajayi, Jessica",False,,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-24_san_diego_lmu_ca,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,3,4,0,0,0,0,0,0
+2026-01-29_lmu_ca_pacific,Pacific,08,"Mindermann, Sophia",True,32,6,10,0.6,5,8,0.625,0,0,,0,2,2,2,4,2,0,0,17
+2026-01-29_lmu_ca_pacific,Pacific,21,"Nestorov, Daria",True,36,7,14,0.5,0,1,0.0,0,0,,2,2,4,3,9,3,0,2,14
+2026-01-29_lmu_ca_pacific,Pacific,10,"Ward, Sydney",True,35,5,9,0.556,3,4,0.75,1,2,0.5,2,4,6,1,0,3,1,0,14
+2026-01-29_lmu_ca_pacific,Pacific,05,"Szabo, Stella",True,30,2,3,0.667,2,3,0.667,3,3,1.0,0,2,2,1,0,3,0,1,9
+2026-01-29_lmu_ca_pacific,Pacific,25,"Bartholomew, Winner",True,28,2,10,0.2,0,0,,1,2,0.5,2,4,6,4,2,3,0,0,5
+2026-01-29_lmu_ca_pacific,Pacific,11,"Anderegg, Luisa",False,13,1,5,0.2,1,4,0.25,0,0,,0,0,0,1,2,0,1,0,3
+2026-01-29_lmu_ca_pacific,Pacific,15,"Lowery, Nyah",False,19,1,6,0.167,0,3,0.0,0,0,,1,0,1,0,1,0,0,1,2
+2026-01-29_lmu_ca_pacific,Pacific,03,"Burg, Hannah",False,4,1,2,0.5,0,1,0.0,0,0,,0,1,1,0,0,0,0,0,2
+2026-01-29_lmu_ca_pacific,Pacific,09,"Radocaj, Marina",False,3,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-29_lmu_ca_pacific,Pacific,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,2,4,0,0,2,0,0,0
+2026-01-29_lmu_ca_pacific,LMU (CA),05,"Heidger, Carly",True,28,8,10,0.8,2,3,0.667,0,0,,1,2,3,0,2,0,0,0,18
+2026-01-29_lmu_ca_pacific,LMU (CA),13,"Krajina, Ivana",True,31,4,5,0.8,3,4,0.75,4,4,1.0,0,2,2,1,9,0,0,0,15
+2026-01-29_lmu_ca_pacific,LMU (CA),55,"Hernandez, Maya",True,13,4,6,0.667,0,1,0.0,3,3,1.0,1,1,2,3,1,2,1,0,11
+2026-01-29_lmu_ca_pacific,LMU (CA),28,"Matic, Andjela",True,31,4,5,0.8,2,3,0.667,0,0,,0,4,4,2,1,1,0,0,10
+2026-01-29_lmu_ca_pacific,LMU (CA),00,"Lawson, Jess",True,21,5,9,0.556,0,0,,0,0,,0,6,6,3,4,1,0,3,10
+2026-01-29_lmu_ca_pacific,LMU (CA),24,"Jones, Kayla",False,17,3,5,0.6,1,1,1.0,0,0,,1,1,2,3,2,1,0,0,7
+2026-01-29_lmu_ca_pacific,LMU (CA),54,"Ogot, Zawadi",False,11,3,3,1.0,0,0,,0,0,,1,1,2,0,2,1,0,0,6
+2026-01-29_lmu_ca_pacific,LMU (CA),30,"Reus Piza, Paula",False,17,1,3,0.333,1,2,0.5,2,2,1.0,0,3,3,2,1,2,0,2,5
+2026-01-29_lmu_ca_pacific,LMU (CA),04,"Clarke, Allison",False,22,1,4,0.25,1,3,0.333,0,0,,0,0,0,0,1,2,0,0,3
+2026-01-29_lmu_ca_pacific,LMU (CA),07,"Milanovic, Ana",False,4,1,4,0.25,0,3,0.0,0,0,,0,0,0,0,0,0,0,0,2
+2026-01-29_lmu_ca_pacific,LMU (CA),02,"Somvichian, Mari",False,4,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2026-01-29_lmu_ca_pacific,LMU (CA),10,"Lagerlid, Lova",False,1,0,2,0.0,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-29_lmu_ca_pacific,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,0,2,2,0,0,1,0,0,0
+2026-01-31_lmu_ca_seattle_u,Seattle U,03,"Brubaker, Ella",True,33,4,14,0.286,0,5,0.0,4,4,1.0,1,1,2,2,0,3,0,0,12
+2026-01-31_lmu_ca_seattle_u,Seattle U,06,"Bigovic, Andjela",True,30,1,4,0.25,0,0,,4,4,1.0,3,7,10,4,2,2,0,1,6
+2026-01-31_lmu_ca_seattle_u,Seattle U,24,"Rodriguez, Sydnie",True,28,2,7,0.286,1,3,0.333,0,0,,1,4,5,0,1,3,0,5,5
+2026-01-31_lmu_ca_seattle_u,Seattle U,14,"Stricklin, Tamia",True,38,2,9,0.222,0,1,0.0,0,2,0.0,2,2,4,2,1,2,0,2,4
+2026-01-31_lmu_ca_seattle_u,Seattle U,09,"Vesic, Jana",True,29,0,9,0.0,0,2,0.0,2,2,1.0,0,0,0,3,1,4,0,0,2
+2026-01-31_lmu_ca_seattle_u,Seattle U,08,"Emanga, Chloe",False,20,1,3,0.333,0,0,,6,9,0.667,1,3,4,2,0,4,0,0,8
+2026-01-31_lmu_ca_seattle_u,Seattle U,04,"Proctor, Fia",False,9,1,2,0.5,1,1,1.0,0,0,,1,2,3,0,0,0,0,0,3
+2026-01-31_lmu_ca_seattle_u,Seattle U,22,"Larson, Lucy",False,9,0,1,0.0,0,1,0.0,0,0,,0,1,1,4,1,1,0,0,0
+2026-01-31_lmu_ca_seattle_u,Seattle U,07,"Milkovic, Lucija",False,4,0,1,0.0,0,0,,0,0,,1,1,2,1,0,3,0,0,0
+2026-01-31_lmu_ca_seattle_u,Seattle U,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,2,4,0,0,1,0,0,0
+2026-01-31_lmu_ca_seattle_u,LMU (CA),00,"Lawson, Jess",True,23,5,9,0.556,1,1,1.0,1,2,0.5,3,3,6,2,5,1,0,0,12
+2026-01-31_lmu_ca_seattle_u,LMU (CA),28,"Matic, Andjela",True,27,4,6,0.667,3,4,0.75,0,1,0.0,2,2,4,0,2,2,0,1,11
+2026-01-31_lmu_ca_seattle_u,LMU (CA),55,"Hernandez, Maya",True,17,4,11,0.364,0,0,,3,4,0.75,8,4,12,2,1,1,0,2,11
+2026-01-31_lmu_ca_seattle_u,LMU (CA),05,"Heidger, Carly",True,14,4,11,0.364,1,5,0.2,1,2,0.5,0,2,2,0,0,1,0,2,10
+2026-01-31_lmu_ca_seattle_u,LMU (CA),13,"Krajina, Ivana",True,22,0,2,0.0,0,1,0.0,0,0,,0,2,2,4,7,2,0,1,0
+2026-01-31_lmu_ca_seattle_u,LMU (CA),30,"Reus Piza, Paula",False,13,4,10,0.4,2,5,0.4,2,2,1.0,2,4,6,1,1,1,0,1,12
+2026-01-31_lmu_ca_seattle_u,LMU (CA),24,"Jones, Kayla",False,19,3,6,0.5,0,0,,3,5,0.6,3,2,5,2,4,0,0,0,9
+2026-01-31_lmu_ca_seattle_u,LMU (CA),04,"Clarke, Allison",False,18,2,6,0.333,2,6,0.333,0,0,,0,2,2,2,1,0,0,2,6
+2026-01-31_lmu_ca_seattle_u,LMU (CA),54,"Ogot, Zawadi",False,25,2,2,1.0,0,0,,0,1,0.0,0,4,4,4,0,1,0,2,4
+2026-01-31_lmu_ca_seattle_u,LMU (CA),10,"Lagerlid, Lova",False,4,1,3,0.333,1,2,0.5,0,0,,0,1,1,0,0,0,1,0,3
+2026-01-31_lmu_ca_seattle_u,LMU (CA),07,"Milanovic, Ana",False,11,1,2,0.5,0,1,0.0,0,0,,1,1,2,1,0,3,0,0,2
+2026-01-31_lmu_ca_seattle_u,LMU (CA),02,"Somvichian, Mari",False,7,0,1,0.0,0,0,,1,2,0.5,0,1,1,0,1,0,0,0,1
+2026-01-31_lmu_ca_seattle_u,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2026-02-05_saint_marys_ca_lmu_ca,LMU (CA),55,"Hernandez, Maya",True,24,5,9,0.556,0,0,,5,5,1.0,4,1,5,3,3,3,0,2,15
+2026-02-05_saint_marys_ca_lmu_ca,LMU (CA),00,"Lawson, Jess",True,22,4,4,1.0,2,2,1.0,4,5,0.8,1,3,4,2,0,3,0,2,14
+2026-02-05_saint_marys_ca_lmu_ca,LMU (CA),05,"Heidger, Carly",True,31,5,9,0.556,1,4,0.25,1,1,1.0,1,2,3,2,2,1,0,1,12
+2026-02-05_saint_marys_ca_lmu_ca,LMU (CA),13,"Krajina, Ivana",True,33,3,7,0.429,2,5,0.4,2,2,1.0,0,2,2,3,4,6,0,2,10
+2026-02-05_saint_marys_ca_lmu_ca,LMU (CA),28,"Matic, Andjela",True,37,1,7,0.143,1,6,0.167,2,2,1.0,0,3,3,2,7,2,0,0,5
+2026-02-05_saint_marys_ca_lmu_ca,LMU (CA),54,"Ogot, Zawadi",False,16,4,6,0.667,0,0,,0,0,,2,2,4,2,1,0,0,2,8
+2026-02-05_saint_marys_ca_lmu_ca,LMU (CA),24,"Jones, Kayla",False,16,2,6,0.333,0,0,,1,2,0.5,4,0,4,3,2,2,0,0,5
+2026-02-05_saint_marys_ca_lmu_ca,LMU (CA),30,"Reus Piza, Paula",False,14,2,3,0.667,0,0,,0,0,,0,3,3,2,0,2,0,0,4
+2026-02-05_saint_marys_ca_lmu_ca,LMU (CA),04,"Clarke, Allison",False,7,1,3,0.333,0,2,0.0,0,0,,0,0,0,0,0,0,0,0,2
+2026-02-05_saint_marys_ca_lmu_ca,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,1,0,1,0,0,1,0,0,0
+2026-02-05_saint_marys_ca_lmu_ca,Saint Mary's (CA),04,"Ohiaeri, Charlece",True,16,4,5,0.8,1,2,0.5,2,3,0.667,0,0,0,4,0,2,0,2,11
+2026-02-05_saint_marys_ca_lmu_ca,Saint Mary's (CA),33,"Wedin, Ella",True,22,3,7,0.429,3,7,0.429,0,0,,0,1,1,1,1,0,0,2,9
+2026-02-05_saint_marys_ca_lmu_ca,Saint Mary's (CA),07,"Clarke, Edie",True,26,3,5,0.6,0,0,,0,0,,0,1,1,1,2,2,1,2,6
+2026-02-05_saint_marys_ca_lmu_ca,Saint Mary's (CA),00,"Hunter, Jada",True,18,2,4,0.5,0,0,,2,4,0.5,1,1,2,3,2,5,0,2,6
+2026-02-05_saint_marys_ca_lmu_ca,Saint Mary's (CA),02,"Kurkowski, Amy",True,15,1,2,0.5,0,1,0.0,0,0,,0,1,1,0,2,2,0,3,2
+2026-02-05_saint_marys_ca_lmu_ca,Saint Mary's (CA),05,"Shoff, Abigail",False,22,5,10,0.5,1,4,0.25,7,10,0.7,2,2,4,4,2,0,0,4,18
+2026-02-05_saint_marys_ca_lmu_ca,Saint Mary's (CA),13,"Latu, Malia",False,27,1,5,0.2,0,1,0.0,6,6,1.0,1,3,4,2,5,3,0,1,8
+2026-02-05_saint_marys_ca_lmu_ca,Saint Mary's (CA),23,"Wedin, Addi",False,18,2,6,0.333,1,4,0.25,0,0,,0,2,2,0,0,0,0,0,5
+2026-02-05_saint_marys_ca_lmu_ca,Saint Mary's (CA),22,"Afeaki, Melesungu",False,11,2,5,0.4,0,0,,0,2,0.0,3,0,3,0,0,1,1,0,4
+2026-02-05_saint_marys_ca_lmu_ca,Saint Mary's (CA),03,"Hashemian-Orr, Mauriana",False,22,0,1,0.0,0,0,,0,0,,2,0,2,4,6,1,0,1,0
+2026-02-05_saint_marys_ca_lmu_ca,Saint Mary's (CA),10,"Grigoropoulou, Georgia",False,3,0,0,,0,0,,0,0,,1,0,1,0,0,0,0,0,0
+2026-02-05_saint_marys_ca_lmu_ca,Saint Mary's (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,3,3,6,0,0,2,0,0,0
+2026-02-12_lmu_ca_pepperdine,Pepperdine,02,"Guiney, Elli",True,32,8,13,0.615,1,4,0.25,5,5,1.0,2,3,5,3,2,5,1,1,22
+2026-02-12_lmu_ca_pepperdine,Pepperdine,22,"Falk, Lina",True,39,6,15,0.4,3,6,0.5,0,0,,1,6,7,0,2,3,1,0,15
+2026-02-12_lmu_ca_pepperdine,Pepperdine,13,"Fiso, Meghan",True,22,2,3,0.667,0,0,,2,6,0.333,1,2,3,0,0,3,1,0,6
+2026-02-12_lmu_ca_pepperdine,Pepperdine,01,"Sta. Maria, Taija",True,38,1,2,0.5,0,0,,3,4,0.75,0,1,1,2,4,3,0,1,5
+2026-02-12_lmu_ca_pepperdine,Pepperdine,12,"Preston, Shorna",True,20,1,4,0.25,0,2,0.0,2,2,1.0,0,6,6,6,1,4,2,1,4
+2026-02-12_lmu_ca_pepperdine,Pepperdine,30,"Harmon, Seleh",False,21,2,4,0.5,1,2,0.5,1,2,0.5,0,1,1,1,0,3,0,0,6
+2026-02-12_lmu_ca_pepperdine,Pepperdine,03,"Green, Bella",False,20,2,5,0.4,0,0,,0,0,,2,2,4,1,1,0,0,0,4
+2026-02-12_lmu_ca_pepperdine,Pepperdine,00,"Finley, Ivory",False,8,0,0,,0,0,,0,0,,0,2,2,1,1,0,0,0,0
+2026-02-12_lmu_ca_pepperdine,Pepperdine,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,2,3,0,0,1,0,0,0
+2026-02-12_lmu_ca_pepperdine,LMU (CA),00,"Lawson, Jess",True,32,5,11,0.455,0,1,0.0,7,8,0.875,2,6,8,3,4,1,0,3,17
+2026-02-12_lmu_ca_pepperdine,LMU (CA),55,"Hernandez, Maya",True,25,5,14,0.357,0,1,0.0,4,6,0.667,3,4,7,4,1,1,1,2,14
+2026-02-12_lmu_ca_pepperdine,LMU (CA),28,"Matic, Andjela",True,34,4,9,0.444,3,5,0.6,2,3,0.667,1,0,1,2,3,2,0,0,13
+2026-02-12_lmu_ca_pepperdine,LMU (CA),05,"Heidger, Carly",True,21,3,6,0.5,1,1,1.0,4,5,0.8,0,1,1,1,0,2,1,2,11
+2026-02-12_lmu_ca_pepperdine,LMU (CA),13,"Krajina, Ivana",True,28,2,6,0.333,0,3,0.0,1,2,0.5,0,2,2,5,1,1,0,6,5
+2026-02-12_lmu_ca_pepperdine,LMU (CA),04,"Clarke, Allison",False,8,2,2,1.0,1,1,1.0,0,0,,0,1,1,1,0,1,0,1,5
+2026-02-12_lmu_ca_pepperdine,LMU (CA),30,"Reus Piza, Paula",False,29,2,5,0.4,0,0,,0,0,,1,2,3,0,0,2,2,1,4
+2026-02-12_lmu_ca_pepperdine,LMU (CA),24,"Jones, Kayla",False,15,1,3,0.333,1,1,1.0,0,0,,0,2,2,2,2,3,0,0,3
+2026-02-12_lmu_ca_pepperdine,LMU (CA),54,"Ogot, Zawadi",False,8,0,2,0.0,0,0,,0,0,,1,1,2,2,0,0,0,1,0
+2026-02-12_lmu_ca_pepperdine,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,3,0,3,0,0,0,0,0,0
+2026-02-14_lmu_ca_gonzaga,Gonzaga,11,"Turner, Allie",True,39,6,12,0.5,5,8,0.625,2,2,1.0,1,3,4,0,0,4,0,0,19
+2026-02-14_lmu_ca_gonzaga,Gonzaga,20,"Smith, Taylor",True,26,5,6,0.833,0,0,,2,3,0.667,3,3,6,4,4,3,0,0,12
+2026-02-14_lmu_ca_gonzaga,Gonzaga,33,"Whittaker, Lauren",True,22,4,8,0.5,0,0,,2,3,0.667,3,5,8,4,1,6,0,1,10
+2026-02-14_lmu_ca_gonzaga,Gonzaga,55,"Aokuso, Zeryhia",True,25,2,6,0.333,0,0,,2,2,1.0,2,1,3,1,3,3,1,0,6
+2026-02-14_lmu_ca_gonzaga,Gonzaga,08,"Bettencourt, Ines",True,25,1,5,0.2,0,1,0.0,0,0,,0,6,6,2,2,4,2,1,2
+2026-02-14_lmu_ca_gonzaga,Gonzaga,23,"Haile, Jaiden",False,23,2,3,0.667,0,0,,2,4,0.5,2,2,4,2,3,1,0,0,6
+2026-02-14_lmu_ca_gonzaga,Gonzaga,24,"Gardner, Teryn",False,19,2,6,0.333,2,5,0.4,0,0,,1,1,2,4,1,4,0,2,6
+2026-02-14_lmu_ca_gonzaga,Gonzaga,04,"Lichtie, Sierra",False,7,1,1,1.0,0,0,,0,0,,0,0,0,0,0,0,0,2,2
+2026-02-14_lmu_ca_gonzaga,Gonzaga,03,"Wilson, Julia",False,9,0,2,0.0,0,1,0.0,0,0,,0,0,0,0,2,0,0,1,0
+2026-02-14_lmu_ca_gonzaga,Gonzaga,12,"Osarobo, Christabel",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-14_lmu_ca_gonzaga,Gonzaga,22,"Dalan, McKynnlie",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-14_lmu_ca_gonzaga,Gonzaga,01,"Lofing, Paige",False,1,0,2,0.0,0,2,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-14_lmu_ca_gonzaga,Gonzaga,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,2,5,0,0,1,0,0,0
+2026-02-14_lmu_ca_gonzaga,LMU (CA),28,"Matic, Andjela",True,36,4,11,0.364,3,7,0.429,5,6,0.833,0,3,3,0,2,1,0,1,16
+2026-02-14_lmu_ca_gonzaga,LMU (CA),00,"Lawson, Jess",True,25,6,14,0.429,2,2,1.0,2,2,1.0,2,5,7,3,4,2,0,7,16
+2026-02-14_lmu_ca_gonzaga,LMU (CA),22,"Hernandez, Maya",True,28,4,10,0.4,0,0,,3,4,0.75,4,0,4,2,2,2,1,2,11
+2026-02-14_lmu_ca_gonzaga,LMU (CA),13,"Krajina, Ivana",True,18,3,5,0.6,1,2,0.5,1,2,0.5,0,2,2,5,4,2,0,1,8
+2026-02-14_lmu_ca_gonzaga,LMU (CA),05,"Heidger, Carly",True,30,3,8,0.375,1,4,0.25,0,0,,0,1,1,1,3,0,0,3,7
+2026-02-14_lmu_ca_gonzaga,LMU (CA),04,"Clarke, Allison",False,18,2,7,0.286,1,3,0.333,1,2,0.5,0,0,0,2,0,0,0,2,6
+2026-02-14_lmu_ca_gonzaga,LMU (CA),54,"Ogot, Zawadi",False,13,3,3,1.0,0,0,,0,2,0.0,1,0,1,1,0,0,0,0,6
+2026-02-14_lmu_ca_gonzaga,LMU (CA),30,"Reus Piza, Paula",False,17,0,2,0.0,0,0,,1,2,0.5,1,0,1,0,1,2,0,1,1
+2026-02-14_lmu_ca_gonzaga,LMU (CA),24,"Jones, Kayla",False,7,0,0,,0,0,,1,2,0.5,1,0,1,2,1,0,0,0,1
+2026-02-14_lmu_ca_gonzaga,LMU (CA),07,"Milanovic, Ana",False,8,0,0,,0,0,,0,0,,0,1,1,1,0,1,0,0,0
+2026-02-14_lmu_ca_gonzaga,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,3,2,5,0,0,0,0,0,0
+2026-02-19_seattle_u_lmu_ca,LMU (CA),55,"Hernandez, Maya",True,17,8,13,0.615,0,1,0.0,6,6,1.0,2,2,4,2,1,1,0,1,22
+2026-02-19_seattle_u_lmu_ca,LMU (CA),28,"Matic, Andjela",True,24,2,6,0.333,1,3,0.333,4,4,1.0,1,4,5,0,3,2,1,2,9
+2026-02-19_seattle_u_lmu_ca,LMU (CA),00,"Lawson, Jess",True,20,3,10,0.3,0,2,0.0,3,3,1.0,2,3,5,2,1,0,0,5,9
+2026-02-19_seattle_u_lmu_ca,LMU (CA),05,"Heidger, Carly",True,17,1,6,0.167,1,2,0.5,0,0,,1,0,1,1,1,0,0,0,3
+2026-02-19_seattle_u_lmu_ca,LMU (CA),13,"Krajina, Ivana",True,19,0,0,,0,0,,0,0,,0,3,3,2,3,2,0,1,0
+2026-02-19_seattle_u_lmu_ca,LMU (CA),04,"Clarke, Allison",False,22,3,8,0.375,2,5,0.4,5,5,1.0,1,0,1,1,3,0,0,7,13
+2026-02-19_seattle_u_lmu_ca,LMU (CA),54,"Ogot, Zawadi",False,19,4,10,0.4,0,0,,2,4,0.5,1,1,2,5,0,4,0,0,10
+2026-02-19_seattle_u_lmu_ca,LMU (CA),24,"Jones, Kayla",False,22,4,8,0.5,0,0,,0,0,,3,2,5,3,0,0,0,1,8
+2026-02-19_seattle_u_lmu_ca,LMU (CA),30,"Reus Piza, Paula",False,15,0,2,0.0,0,1,0.0,2,2,1.0,1,1,2,0,0,0,0,1,2
+2026-02-19_seattle_u_lmu_ca,LMU (CA),02,"Somvichian, Mari",False,11,1,1,1.0,0,0,,0,0,,0,0,0,1,0,2,0,0,2
+2026-02-19_seattle_u_lmu_ca,LMU (CA),07,"Milanovic, Ana",False,12,0,1,0.0,0,0,,0,0,,3,1,4,2,2,4,0,0,0
+2026-02-19_seattle_u_lmu_ca,LMU (CA),10,"Lagerlid, Lova",False,2,0,1,0.0,0,1,0.0,0,0,,0,0,0,1,0,0,0,0,0
+2026-02-19_seattle_u_lmu_ca,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,3,1,4,0,0,0,0,0,0
+2026-02-19_seattle_u_lmu_ca,Seattle U,03,"Brubaker, Ella",True,40,8,12,0.667,3,7,0.429,6,8,0.75,0,3,3,3,1,4,1,2,25
+2026-02-19_seattle_u_lmu_ca,Seattle U,14,"Stricklin, Tamia",True,29,3,6,0.5,1,2,0.5,1,2,0.5,0,7,7,4,3,5,0,1,8
+2026-02-19_seattle_u_lmu_ca,Seattle U,07,"Milkovic, Lucija",True,20,4,8,0.5,0,1,0.0,0,0,,2,4,6,2,0,1,1,1,8
+2026-02-19_seattle_u_lmu_ca,Seattle U,08,"Emanga, Chloe",True,37,0,5,0.0,0,2,0.0,6,6,1.0,1,1,2,3,3,4,1,0,6
+2026-02-19_seattle_u_lmu_ca,Seattle U,09,"Vesic, Jana",True,32,1,4,0.25,0,1,0.0,0,2,0.0,1,2,3,4,3,5,0,1,2
+2026-02-19_seattle_u_lmu_ca,Seattle U,06,"Bigovic, Andjela",False,18,2,7,0.286,0,1,0.0,0,0,,1,0,1,3,0,6,1,0,4
+2026-02-19_seattle_u_lmu_ca,Seattle U,04,"Proctor, Fia",False,13,0,0,,0,0,,1,2,0.5,1,0,1,1,1,1,0,0,1
+2026-02-19_seattle_u_lmu_ca,Seattle U,22,"Larson, Lucy",False,11,0,0,,0,0,,0,0,,0,0,0,2,0,1,0,0,0
+2026-02-19_seattle_u_lmu_ca,Seattle U,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,2,2,0,0,0,0,0,0
+2026-02-21_lmu_ca_san_diego,San Diego,06,"Ray, Kylie",True,39,5,16,0.312,0,3,0.0,7,9,0.778,0,4,4,3,4,8,0,0,17
+2026-02-21_lmu_ca_san_diego,San Diego,24,"Owens, Olivia",True,33,3,8,0.375,0,2,0.0,5,9,0.556,0,4,4,3,0,2,0,3,11
+2026-02-21_lmu_ca_san_diego,San Diego,10,"Holley, Helen",True,25,2,2,1.0,0,0,,3,3,1.0,3,2,5,2,0,1,0,1,7
+2026-02-21_lmu_ca_san_diego,San Diego,15,"Ruse, Eva",True,10,0,0,,0,0,,1,2,0.5,0,5,5,0,0,0,0,0,1
+2026-02-21_lmu_ca_san_diego,San Diego,03,"Amor, Lilly",True,6,0,1,0.0,0,1,0.0,0,0,,0,0,0,0,0,1,0,0,0
+2026-02-21_lmu_ca_san_diego,San Diego,20,"Rhodes, Hallie",False,31,4,13,0.308,0,3,0.0,4,4,1.0,1,2,3,1,0,1,0,2,12
+2026-02-21_lmu_ca_san_diego,San Diego,01,"Moore, Dresha",False,21,4,5,0.8,0,1,0.0,0,0,,0,4,4,3,0,3,0,1,8
+2026-02-21_lmu_ca_san_diego,San Diego,19,"Rhodes, Jayden",False,13,1,3,0.333,1,2,0.5,0,0,,0,1,1,2,0,0,0,0,3
+2026-02-21_lmu_ca_san_diego,San Diego,22,"Williams, Ayla",False,9,0,0,,0,0,,2,4,0.5,1,0,1,0,0,0,1,0,2
+2026-02-21_lmu_ca_san_diego,San Diego,11,"Tharpe, Malia",False,11,0,2,0.0,0,1,0.0,0,0,,1,1,2,0,1,2,0,2,0
+2026-02-21_lmu_ca_san_diego,San Diego,04,"Ajayi, Jessica",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2026-02-21_lmu_ca_san_diego,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,3,5,0,0,1,0,0,0
+2026-02-21_lmu_ca_san_diego,LMU (CA),28,"Matic, Andjela",True,36,9,19,0.474,5,11,0.455,0,0,,1,1,2,1,5,2,0,5,23
+2026-02-21_lmu_ca_san_diego,LMU (CA),00,"Lawson, Jess",True,32,6,13,0.462,1,2,0.5,2,2,1.0,2,12,14,3,5,2,0,0,15
+2026-02-21_lmu_ca_san_diego,LMU (CA),30,"Reus Piza, Paula",True,21,3,6,0.5,0,1,0.0,0,0,,0,1,1,2,1,0,0,0,6
+2026-02-21_lmu_ca_san_diego,LMU (CA),05,"Heidger, Carly",True,21,0,3,0.0,0,3,0.0,3,4,0.75,1,0,1,5,2,0,0,0,3
+2026-02-21_lmu_ca_san_diego,LMU (CA),13,"Krajina, Ivana",True,25,0,2,0.0,0,1,0.0,0,0,,0,3,3,4,3,3,0,2,0
+2026-02-21_lmu_ca_san_diego,LMU (CA),55,"Hernandez, Maya",False,19,8,13,0.615,0,0,,1,1,1.0,1,1,2,4,1,2,0,2,17
+2026-02-21_lmu_ca_san_diego,LMU (CA),24,"Jones, Kayla",False,18,3,5,0.6,0,0,,0,0,,1,0,1,3,0,0,0,1,6
+2026-02-21_lmu_ca_san_diego,LMU (CA),04,"Clarke, Allison",False,13,1,5,0.2,0,4,0.0,0,0,,0,0,0,2,0,0,0,0,2
+2026-02-21_lmu_ca_san_diego,LMU (CA),54,"Ogot, Zawadi",False,13,1,2,0.5,0,0,,0,2,0.0,1,2,3,4,1,1,0,1,2
+2026-02-21_lmu_ca_san_diego,LMU (CA),02,"Somvichian, Mari",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-21_lmu_ca_san_diego,LMU (CA),10,"Lagerlid, Lova",False,1,0,1,0.0,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-21_lmu_ca_san_diego,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,2,3,5,0,0,1,0,0,0
+2026-02-26_san_francisco_lmu_ca,LMU (CA),00,"Lawson, Jess",True,21,3,10,0.3,0,3,0.0,11,14,0.786,3,4,7,3,2,2,0,3,17
+2026-02-26_san_francisco_lmu_ca,LMU (CA),28,"Matic, Andjela",True,34,4,11,0.364,4,9,0.444,3,3,1.0,2,2,4,1,0,1,0,3,15
+2026-02-26_san_francisco_lmu_ca,LMU (CA),05,"Heidger, Carly",True,17,1,5,0.2,1,3,0.333,2,2,1.0,1,2,3,2,2,0,0,1,5
+2026-02-26_san_francisco_lmu_ca,LMU (CA),13,"Krajina, Ivana",True,17,1,3,0.333,1,1,1.0,0,0,,0,0,0,5,2,2,1,0,3
+2026-02-26_san_francisco_lmu_ca,LMU (CA),55,"Hernandez, Maya",True,23,0,6,0.0,0,0,,1,4,0.25,1,8,9,3,2,4,0,2,1
+2026-02-26_san_francisco_lmu_ca,LMU (CA),04,"Clarke, Allison",False,32,3,10,0.3,3,8,0.375,0,2,0.0,0,0,0,3,1,2,0,2,9
+2026-02-26_san_francisco_lmu_ca,LMU (CA),30,"Reus Piza, Paula",False,23,4,8,0.5,0,1,0.0,0,0,,0,5,5,0,1,1,0,1,8
+2026-02-26_san_francisco_lmu_ca,LMU (CA),24,"Jones, Kayla",False,17,3,7,0.429,0,1,0.0,0,0,,3,4,7,3,1,0,0,0,6
+2026-02-26_san_francisco_lmu_ca,LMU (CA),54,"Ogot, Zawadi",False,16,0,2,0.0,0,0,,2,2,1.0,1,0,1,0,2,1,0,0,2
+2026-02-26_san_francisco_lmu_ca,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,3,3,6,0,0,1,0,0,0
+2026-02-26_san_francisco_lmu_ca,San Francisco,02,"Neira, Mara",True,34,7,16,0.438,4,10,0.4,0,0,,0,2,2,4,2,4,0,1,18
+2026-02-26_san_francisco_lmu_ca,San Francisco,23,"Edokpaigbe, Candy",True,36,6,15,0.4,0,1,0.0,3,5,0.6,5,4,9,4,1,2,1,3,15
+2026-02-26_san_francisco_lmu_ca,San Francisco,09,"Cargol, Aina",True,31,1,5,0.2,0,3,0.0,4,7,0.571,0,5,5,4,4,4,0,3,6
+2026-02-26_san_francisco_lmu_ca,San Francisco,12,"Tausova, Natasa",True,28,2,6,0.333,0,3,0.0,2,2,1.0,1,3,4,1,3,2,1,1,6
+2026-02-26_san_francisco_lmu_ca,San Francisco,03,"Mourino, Noelia",True,22,2,6,0.333,0,0,,0,0,,0,5,5,0,2,1,1,0,4
+2026-02-26_san_francisco_lmu_ca,San Francisco,21,"Williams, Olivia",False,19,3,5,0.6,0,1,0.0,0,0,,1,5,6,1,0,1,0,0,6
+2026-02-26_san_francisco_lmu_ca,San Francisco,24,"Castro, Sol",False,4,1,2,0.5,0,0,,0,0,,0,0,0,0,0,0,0,0,2
+2026-02-26_san_francisco_lmu_ca,San Francisco,14,"Ugwah, Michelle",False,14,0,1,0.0,0,0,,0,2,0.0,3,2,5,2,1,1,1,0,0
+2026-02-26_san_francisco_lmu_ca,San Francisco,04,"McIntyre, Meghan",False,11,0,4,0.0,0,2,0.0,0,0,,2,1,3,2,1,2,0,0,0
+2026-02-26_san_francisco_lmu_ca,San Francisco,10,"Pateman, Amy",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2026-02-26_san_francisco_lmu_ca,San Francisco,07,"Ferrara Horne, Nevaeh",False,,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-26_san_francisco_lmu_ca,San Francisco,32,"Priestley, Sophia",False,,0,1,0.0,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-26_san_francisco_lmu_ca,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,4,6,0,0,0,0,0,0
+2026-02-28_oregon_st_lmu_ca,LMU (CA),55,"Hernandez, Maya",True,30,9,16,0.562,0,0,,2,2,1.0,0,1,1,3,1,1,0,3,20
+2026-02-28_oregon_st_lmu_ca,LMU (CA),00,"Lawson, Jess",True,39,5,14,0.357,1,2,0.5,4,6,0.667,5,16,21,2,2,3,0,2,15
+2026-02-28_oregon_st_lmu_ca,LMU (CA),28,"Matic, Andjela",True,41,4,10,0.4,2,5,0.4,0,1,0.0,0,1,1,4,4,2,0,0,10
+2026-02-28_oregon_st_lmu_ca,LMU (CA),13,"Krajina, Ivana",True,37,5,11,0.455,0,5,0.0,0,0,,0,2,2,2,1,3,0,0,10
+2026-02-28_oregon_st_lmu_ca,LMU (CA),05,"Heidger, Carly",True,33,3,7,0.429,1,2,0.5,0,0,,3,1,4,1,1,0,0,1,7
+2026-02-28_oregon_st_lmu_ca,LMU (CA),24,"Jones, Kayla",False,12,3,6,0.5,0,1,0.0,0,0,,1,1,2,2,1,1,0,0,6
+2026-02-28_oregon_st_lmu_ca,LMU (CA),30,"Reus Piza, Paula",False,15,1,6,0.167,0,2,0.0,1,2,0.5,1,0,1,0,0,2,0,1,3
+2026-02-28_oregon_st_lmu_ca,LMU (CA),04,"Clarke, Allison",False,12,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2026-02-28_oregon_st_lmu_ca,LMU (CA),54,"Ogot, Zawadi",False,6,0,3,0.0,0,0,,0,0,,0,1,1,0,1,1,0,0,0
+2026-02-28_oregon_st_lmu_ca,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,2,1,3,0,0,1,0,0,0
+2026-02-28_oregon_st_lmu_ca,Oregon St.,00,"Bolden, Tiara",True,43,5,13,0.385,2,5,0.4,3,4,0.75,1,6,7,4,4,1,0,3,15
+2026-02-28_oregon_st_lmu_ca,Oregon St.,03,"Villa, Jenna",True,43,6,14,0.429,1,7,0.143,2,2,1.0,1,6,7,2,2,5,0,1,15
+2026-02-28_oregon_st_lmu_ca,Oregon St.,01,"Shuler, Kennedie",True,37,7,11,0.636,0,1,0.0,1,3,0.333,1,1,2,1,5,9,1,2,15
+2026-02-28_oregon_st_lmu_ca,Oregon St.,15,"Williamson, Lizzy",True,26,5,6,0.833,0,0,,0,1,0.0,1,7,8,2,1,1,1,1,10
+2026-02-28_oregon_st_lmu_ca,Oregon St.,04,"Schimel, Ally",True,38,2,5,0.4,2,5,0.4,0,0,,0,2,2,0,3,1,1,0,6
+2026-02-28_oregon_st_lmu_ca,Oregon St.,32,"Sow, Nene",False,5,3,4,0.75,0,0,,0,0,,1,2,3,1,0,2,0,0,6
+2026-02-28_oregon_st_lmu_ca,Oregon St.,22,"Alonso, Lara",False,14,1,1,1.0,0,0,,0,2,0.0,0,8,8,0,0,0,0,0,2
+2026-02-28_oregon_st_lmu_ca,Oregon St.,31,"Vecina, Cloe",False,8,0,0,,0,0,,0,0,,0,0,0,0,1,2,1,0,0
+2026-02-28_oregon_st_lmu_ca,Oregon St.,02,"Field, Katelyn",False,5,0,1,0.0,0,1,0.0,0,0,,0,0,0,1,0,0,0,0,0
+2026-02-28_oregon_st_lmu_ca,Oregon St.,25,"Lindemans, Keira",False,4,0,1,0.0,0,1,0.0,0,0,,0,0,0,0,2,0,0,0,0
+2026-02-28_oregon_st_lmu_ca,Oregon St.,10,"Yepes, Susana",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-28_oregon_st_lmu_ca,Oregon St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,2,2,0,0,1,0,0,0
+2026-03-09_lmu_ca_oregon_st,Oregon St.,03,"Villa, Jenna",True,35,5,9,0.556,2,4,0.5,10,10,1.0,2,3,5,0,3,3,0,0,22
+2026-03-09_lmu_ca_oregon_st,Oregon St.,04,"Schimel, Ally",True,40,7,9,0.778,5,6,0.833,2,3,0.667,0,4,4,0,1,0,0,0,21
+2026-03-09_lmu_ca_oregon_st,Oregon St.,00,"Bolden, Tiara",True,22,4,13,0.308,0,3,0.0,3,4,0.75,0,5,5,1,0,2,0,1,11
+2026-03-09_lmu_ca_oregon_st,Oregon St.,01,"Shuler, Kennedie",True,29,1,6,0.167,0,1,0.0,5,8,0.625,1,3,4,4,7,4,0,0,7
+2026-03-09_lmu_ca_oregon_st,Oregon St.,15,"Williamson, Lizzy",True,25,3,7,0.429,0,0,,0,0,,2,7,9,2,0,0,1,0,6
+2026-03-09_lmu_ca_oregon_st,Oregon St.,22,"Alonso, Lara",False,29,1,4,0.25,0,0,,2,2,1.0,3,5,8,3,0,3,1,1,4
+2026-03-09_lmu_ca_oregon_st,Oregon St.,25,"Lindemans, Keira",False,8,1,2,0.5,0,1,0.0,0,0,,0,0,0,0,0,1,0,1,2
+2026-03-09_lmu_ca_oregon_st,Oregon St.,02,"Field, Katelyn",False,7,0,1,0.0,0,0,,0,0,,0,2,2,0,0,0,0,0,0
+2026-03-09_lmu_ca_oregon_st,Oregon St.,32,"Sow, Nene",False,4,0,1,0.0,0,0,,0,0,,0,1,1,0,0,1,0,0,0
+2026-03-09_lmu_ca_oregon_st,Oregon St.,10,"Yepes, Susana",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-03-09_lmu_ca_oregon_st,Oregon St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,2,4,0,0,2,0,0,0
+2026-03-09_lmu_ca_oregon_st,LMU (CA),00,"Lawson, Jess",True,33,10,21,0.476,1,2,0.5,4,7,0.571,5,5,10,4,3,2,1,4,25
+2026-03-09_lmu_ca_oregon_st,LMU (CA),55,"Hernandez, Maya",True,28,5,13,0.385,1,1,1.0,0,0,,2,2,4,5,2,1,3,2,11
+2026-03-09_lmu_ca_oregon_st,LMU (CA),13,"Krajina, Ivana",True,33,3,10,0.3,0,2,0.0,0,0,,0,2,2,3,1,0,0,1,6
+2026-03-09_lmu_ca_oregon_st,LMU (CA),28,"Matic, Andjela",True,28,1,9,0.111,0,4,0.0,0,0,,0,2,2,2,0,2,0,0,2
+2026-03-09_lmu_ca_oregon_st,LMU (CA),05,"Heidger, Carly",True,25,0,3,0.0,0,3,0.0,0,0,,0,2,2,0,0,0,0,0,0
+2026-03-09_lmu_ca_oregon_st,LMU (CA),30,"Reus Piza, Paula",False,20,5,7,0.714,0,1,0.0,1,1,1.0,0,3,3,1,4,0,0,1,11
+2026-03-09_lmu_ca_oregon_st,LMU (CA),04,"Clarke, Allison",False,18,4,5,0.8,2,3,0.667,0,0,,0,0,0,2,0,0,1,1,10
+2026-03-09_lmu_ca_oregon_st,LMU (CA),24,"Jones, Kayla",False,10,1,3,0.333,0,0,,0,0,,3,2,5,1,1,2,0,0,2
+2026-03-09_lmu_ca_oregon_st,LMU (CA),54,"Ogot, Zawadi",False,5,0,0,,0,0,,0,0,,0,1,1,3,0,1,0,0,0
+2026-03-09_lmu_ca_oregon_st,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,2,1,3,0,0,0,0,0,0
+2026-03-19_stanford_lmu_ca,LMU (CA),13,"Krajina, Ivana",True,35,7,16,0.438,4,8,0.5,3,4,0.75,3,0,3,2,0,0,0,1,21
+2026-03-19_stanford_lmu_ca,LMU (CA),05,"Heidger, Carly",True,29,5,6,0.833,2,3,0.667,0,0,,2,0,2,0,1,2,0,1,12
+2026-03-19_stanford_lmu_ca,LMU (CA),00,"Lawson, Jess",True,26,2,10,0.2,1,2,0.5,7,11,0.636,7,4,11,3,4,3,0,3,12
+2026-03-19_stanford_lmu_ca,LMU (CA),28,"Matic, Andjela",True,36,4,12,0.333,3,9,0.333,0,0,,1,2,3,2,2,4,0,1,11
+2026-03-19_stanford_lmu_ca,LMU (CA),55,"Hernandez, Maya",True,26,4,15,0.267,0,1,0.0,0,0,,1,2,3,4,1,1,0,1,8
+2026-03-19_stanford_lmu_ca,LMU (CA),30,"Reus Piza, Paula",False,13,2,2,1.0,0,0,,0,0,,1,2,3,2,1,2,0,0,4
+2026-03-19_stanford_lmu_ca,LMU (CA),54,"Ogot, Zawadi",False,10,2,5,0.4,0,0,,0,0,,0,0,0,3,0,0,0,1,4
+2026-03-19_stanford_lmu_ca,LMU (CA),24,"Jones, Kayla",False,14,0,1,0.0,0,1,0.0,3,4,0.75,2,0,2,4,0,1,0,0,3
+2026-03-19_stanford_lmu_ca,LMU (CA),04,"Clarke, Allison",False,11,0,2,0.0,0,2,0.0,1,3,0.333,0,2,2,1,0,0,0,0,1
+2026-03-19_stanford_lmu_ca,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,2,2,4,0,0,2,0,0,0
+2026-03-19_stanford_lmu_ca,Stanford,03,"Agara, Nunu",True,37,10,16,0.625,0,1,0.0,6,9,0.667,9,7,16,3,1,4,0,1,26
+2026-03-19_stanford_lmu_ca,Stanford,40,"Ogden, Courtney",True,38,7,12,0.583,1,2,0.5,4,4,1.0,0,3,3,1,2,3,1,2,19
+2026-03-19_stanford_lmu_ca,Stanford,02,"Swain, Hailee",True,37,9,14,0.643,0,1,0.0,0,0,,1,1,2,3,4,8,1,3,18
+2026-03-19_stanford_lmu_ca,Stanford,13,"Clardy, Chloe",True,40,5,12,0.417,3,7,0.429,1,2,0.5,0,4,4,2,3,2,0,0,14
+2026-03-19_stanford_lmu_ca,Stanford,04,"Eschmeyer, Alexandra",True,24,1,1,1.0,0,0,,0,0,,1,6,7,3,1,2,5,0,2
+2026-03-19_stanford_lmu_ca,Stanford,06,"Ijiwoye, Shay",False,20,0,1,0.0,0,0,,1,2,0.5,0,2,2,4,3,0,0,1,1
+2026-03-19_stanford_lmu_ca,Stanford,22,"Stevenson, Mary Ashley",False,3,0,0,,0,0,,0,0,,0,1,1,0,0,1,0,0,0
+2026-03-19_stanford_lmu_ca,Stanford,25,"Ezike, Nora",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-03-19_stanford_lmu_ca,Stanford,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,3,3,0,0,0,0,0,0

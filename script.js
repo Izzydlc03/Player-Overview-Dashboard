@@ -143,6 +143,7 @@ const TEAMS = {
       ["2026-03-04","UC Santa Barbara",1, 71,60, 26,57, 37,15,10],
     ]),
   },
+  lmu:{ name:"Loyola Marymount", short:"LMU", mascot:"Lions", players:[], games:[] },
 };
 
 const TEAM_KEYS = Object.keys(TEAMS);
@@ -162,6 +163,25 @@ const TEAM_LOGOS = {
   csun: 'Team_Logos/csunLogo.jpg',
   calpoly: 'Team_Logos/calpolyLogo.jpg',
   csuf: 'Team_Logos/csufLogo.jpg',
+  lmu: 'opponent_team_logos/LMU/loyola-marymount.svg',
+};
+
+const ROSTER_HEADSHOTS = {
+  lmu: {
+    'jess lawson': 'https://d2vhz6gv4pigvw.cloudfront.net/images/2025/10/2/Jess_Lawson.jpg?width=600&quality=90',
+    'mari somvichian': 'https://d2vhz6gv4pigvw.cloudfront.net/images/2025/10/2/Mari_Somvichian.jpg?width=600&quality=90',
+    'allison clarke': 'https://d2vhz6gv4pigvw.cloudfront.net/images/2025/10/2/Allison_Clarke.jpg?width=600&quality=90',
+    'carly heidger': 'https://d2vhz6gv4pigvw.cloudfront.net/images/2025/10/2/Carly_Heidger.jpg?width=600&quality=90',
+    'ana milanovic': 'https://d2vhz6gv4pigvw.cloudfront.net/images/2025/10/2/Ana_Milanovic.jpg?width=600&quality=90',
+    'lova lagerlid': 'https://d2vhz6gv4pigvw.cloudfront.net/images/2025/10/2/Lova_Lagerlid.jpg?width=600&quality=90',
+    'ivana krajina': 'https://d2vhz6gv4pigvw.cloudfront.net/images/2025/10/2/Ivana_Krajina.jpg?width=600&quality=90',
+    "ali'a matavao": 'https://d2vhz6gv4pigvw.cloudfront.net/images/2025/10/2/Ali_a_Matavao.jpg?width=600&quality=90',
+    'kayla jones': 'https://d2vhz6gv4pigvw.cloudfront.net/images/2025/10/2/Kayla_Jones.jpg?width=600&quality=90',
+    'andjela matic': 'https://d2vhz6gv4pigvw.cloudfront.net/images/2025/10/2/Andjela_Matic.jpg?width=600&quality=90',
+    'paula reus piza': 'https://d2vhz6gv4pigvw.cloudfront.net/images/2025/10/2/Paula_Reus_Piza.jpg?width=600&quality=90',
+    'zawadi ogot': 'https://d2vhz6gv4pigvw.cloudfront.net/images/2025/10/2/Zawadi_Ogot.jpg?width=600&quality=90',
+    'maya hernandez': 'https://d2vhz6gv4pigvw.cloudfront.net/images/2025/10/2/Maya_Hernandez.jpg?width=600&quality=90',
+  },
 };
 /* Returns an <img> tag if a logo exists for this team key, otherwise falls
    back to the given initials/text inside the same circle. */
@@ -169,7 +189,363 @@ function avatarContent(teamKey, fallbackText){
   const logo = TEAM_LOGOS[teamKey];
   return logo ? `<img src="${logo}" alt="${teamKey} logo">` : fallbackText;
 }
+function displayPos(pos){
+  return pos && pos !== '—' ? pos : '';
+}
+function displayPlayerName(name){
+  const parts = name.split(',').map(part => part.trim());
+  return parts.length === 2 ? `${parts[1]} ${parts[0]}` : name;
+}
+function displayClassYear(player){
+  const cls = player.advanced?.cls || '';
+  const labels = {
+    FR: 'Fr.',
+    SO: 'So.',
+    JR: 'Jr.',
+    SR: 'Sr.',
+    GR: 'Gr.',
+    'R-SO': 'R-So.',
+    'R-JR': 'R-Jr.',
+    'R-SR': 'R-Sr.',
+  };
+  return labels[cls] || cls || state.season.slice(2);
+}
+function displayListedPosition(player){
+  return displayPos(player.advanced?.pos || player.pos) || 'Player';
+}
+function playerHeadshot(teamKey, playerName){
+  return ROSTER_HEADSHOTS[teamKey]?.[normalizePlayerName(playerName)] || '';
+}
 function teamColor(key){ return key===state.team ? 'var(--series-a)' : 'var(--series-b)'; }
+
+const REMOTE_TEAM_SEASONS = {
+  lmu: ['2025-26'],
+};
+
+const teamDataCache = {};
+const teamLoadCache = {};
+let lmuAdvancedRowsPromise = null;
+
+function teamCacheKey(teamKey, season){
+  return `${teamKey}::${season}`;
+}
+
+function availableSeasonsForTeam(teamKey){
+  return REMOTE_TEAM_SEASONS[teamKey] || seasonOptions();
+}
+
+function preferredSeasonForTeam(teamKey, currentSeason){
+  const seasons = availableSeasonsForTeam(teamKey);
+  return seasons.includes(currentSeason) ? currentSeason : seasons[0];
+}
+
+function hasSeasonData(teamKey, season){
+  return availableSeasonsForTeam(teamKey).includes(season);
+}
+
+function isDynamicTeam(teamKey){
+  return teamKey in REMOTE_TEAM_SEASONS;
+}
+
+function getTeamData(teamKey, season){
+  return teamDataCache[teamCacheKey(teamKey, season)] || TEAMS[teamKey];
+}
+
+function parseCsv(text){
+  const rows = [];
+  let row = [];
+  let cell = '';
+  let inQuotes = false;
+
+  for(let i = 0; i < text.length; i++){
+    const ch = text[i];
+    if(inQuotes){
+      if(ch === '"'){
+        if(text[i + 1] === '"'){
+          cell += '"';
+          i += 1;
+        } else {
+          inQuotes = false;
+        }
+      } else {
+        cell += ch;
+      }
+      continue;
+    }
+
+    if(ch === '"'){
+      inQuotes = true;
+    } else if(ch === ','){
+      row.push(cell);
+      cell = '';
+    } else if(ch === '\n'){
+      row.push(cell.replace(/\r$/, ''));
+      rows.push(row);
+      row = [];
+      cell = '';
+    } else {
+      cell += ch;
+    }
+  }
+
+  if(cell.length || row.length){
+    row.push(cell.replace(/\r$/, ''));
+    rows.push(row);
+  }
+
+  if(!rows.length) return [];
+  const [header, ...body] = rows;
+  return body
+    .filter(cols => cols.length && cols.some(val => val !== ''))
+    .map(cols => Object.fromEntries(header.map((key, idx) => [key, cols[idx] || ''])));
+}
+
+function parseMadeAttempt(stat){
+  const [made, att] = stat.split('-').map(Number);
+  return { made, att };
+}
+
+function normalizePlayerName(name){
+  const parts = name.split(',').map(p => p.trim());
+  if(parts.length === 2) name = `${parts[1]} ${parts[0]}`;
+  return name.replace(/\./g, '').replace(/\s+/g, ' ').trim().toLowerCase();
+}
+
+function pointsFromSplit(fg, tp, ft){
+  const fgSplit = parseMadeAttempt(fg);
+  const tpSplit = parseMadeAttempt(tp);
+  const ftSplit = parseMadeAttempt(ft);
+  return (2 * fgSplit.made) + tpSplit.made + ftSplit.made;
+}
+
+async function loadLmuAdvancedRows(){
+  if(!lmuAdvancedRowsPromise){
+    lmuAdvancedRowsPromise = fetch('opponents/overall_data/wbb_d1_processed_players.csv')
+      .then(r => r.text())
+      .then(text => parseCsv(text))
+      .then(rows => {
+        const filtered = rows.filter(row => row.team === 'Loyola Marymount');
+        return Object.fromEntries(filtered.map(row => [normalizePlayerName(row.name), row]));
+      });
+  }
+  return lmuAdvancedRowsPromise;
+}
+
+async function loadLmuSeason(season){
+  const base = `opponents/LMU/${season}`;
+  const [csv1Text, csv2Text, csv4Text, advancedRows] = await Promise.all([
+    fetch(`${base}/csv1_game_index.csv`).then(r => r.text()),
+    fetch(`${base}/csv2_boxscore_players.csv`).then(r => r.text()),
+    fetch(`${base}/csv4_play_analysis.csv`).then(r => r.text()),
+    loadLmuAdvancedRows(),
+  ]);
+
+  const csv1 = parseCsv(csv1Text);
+  const csv2 = parseCsv(csv2Text);
+  const csv4 = parseCsv(csv4Text);
+  const teamName = 'LMU (CA)';
+  const nonD1GameIds = new Set(['2025-12-16_lmu_ca_chapman']);
+
+  const gameRows = csv1.filter(row => row.home_team === teamName || row.away_team === teamName);
+  const playerRows = csv2.filter(row => row.team === teamName);
+  const analysisRows = csv4.filter(row => row.team === teamName);
+
+  const analysisByGame = Object.fromEntries(analysisRows.map(row => [row.game_id, row]));
+  const playerRowsByGame = {};
+  playerRows.forEach(row => {
+    if(!playerRowsByGame[row.game_id]) playerRowsByGame[row.game_id] = [];
+    playerRowsByGame[row.game_id].push(row);
+  });
+
+  const games = gameRows.map(row => {
+    const teamIsHome = row.home_team === teamName;
+    const teamScore = Number(teamIsHome ? row.home_score : row.away_score);
+    const oppScore = Number(teamIsHome ? row.away_score : row.home_score);
+    const analysis = analysisByGame[row.game_id];
+    const shooting = analysis ? parseMadeAttempt(analysis.total_fg) : { made: 0, att: 0 };
+    const boxRows = playerRowsByGame[row.game_id] || [];
+    const totals = boxRows.reduce((acc, playerRow) => {
+      acc.reb += Number(playerRow.reb || 0);
+      acc.ast += Number(playerRow.ast || 0);
+      acc.to += Number(playerRow.to || 0);
+      if(playerRow.player !== 'TEAM'){
+        acc.fouls += Number(playerRow.pf || 0);
+      }
+      return acc;
+    }, { reb: 0, ast: 0, to: 0, fouls: 0 });
+    const quarterPoints = analysis ? ['q1', 'q2', 'q3', 'q4'].map(q =>
+      pointsFromSplit(analysis[`${q}_fg`], analysis[`${q}_3p`], analysis[`${q}_ft`])
+    ) : [0, 0, 0, 0];
+
+    return {
+      game_id: row.game_id,
+      date: row.date,
+      opp: teamIsHome ? row.away_team : row.home_team,
+      home: row.home_away_neutral === 'home',
+      pf: teamScore,
+      pa: oppScore,
+      fgm: shooting.made,
+      fga: shooting.att,
+      reb: totals.reb,
+      ast: totals.ast,
+      to: totals.to,
+      fouls: totals.fouls,
+      quarterPoints,
+      isD1: !nonD1GameIds.has(row.game_id),
+      win: teamScore > oppScore,
+    };
+  });
+
+  function aggregatePlayers(rows){
+    const playersByKey = {};
+    rows
+      .filter(row => row.player !== 'TEAM')
+      .forEach(row => {
+        const key = row.player;
+        if(!playersByKey[key]){
+          playersByKey[key] = {
+            num: row.jersey,
+            name: row.player,
+            pos: '—',
+            gp: 0,
+            minTotal: 0,
+            fgm: 0, fga: 0, tpm: 0, tpa: 0, ftm: 0, fta: 0,
+            oreb: 0, dreb: 0, ast: 0, stl: 0, blk: 0, to: 0, pts: 0,
+            jerseyCounts: {},
+          };
+        }
+        const player = playersByKey[key];
+        player.jerseyCounts[row.jersey] = (player.jerseyCounts[row.jersey] || 0) + 1;
+        player.gp += 1;
+        player.minTotal += Number(row.min || 0);
+        player.fgm += Number(row.fg_m || 0);
+        player.fga += Number(row.fg_a || 0);
+        player.tpm += Number(row['3p_m'] || 0);
+        player.tpa += Number(row['3p_a'] || 0);
+        player.ftm += Number(row.ft_m || 0);
+        player.fta += Number(row.ft_a || 0);
+        player.oreb += Number(row.oreb || 0);
+        player.dreb += Number(row.dreb || 0);
+        player.ast += Number(row.ast || 0);
+        player.stl += Number(row.stl || 0);
+        player.blk += Number(row.blk || 0);
+        player.to += Number(row.to || 0);
+        player.pts += Number(row.pts || 0);
+      });
+
+    return Object.values(playersByKey)
+      .map(player => {
+        const primaryJersey = Object.entries(player.jerseyCounts)
+          .sort((a, b) => b[1] - a[1])[0]?.[0] || player.num;
+        return {
+          num: primaryJersey,
+          name: player.name,
+          pos: player.pos,
+          gp: player.gp,
+          min: Math.round((player.minTotal / Math.max(player.gp, 1)) * 10) / 10,
+          fgm: player.fgm,
+          fga: player.fga,
+          tpm: player.tpm,
+          tpa: player.tpa,
+          ftm: player.ftm,
+          fta: player.fta,
+          oreb: player.oreb,
+          dreb: player.dreb,
+          ast: player.ast,
+          stl: player.stl,
+          blk: player.blk,
+          to: player.to,
+          pts: player.pts,
+          advanced: advancedRows[normalizePlayerName(player.name)] || null,
+        };
+      })
+      .sort((a, b) => b.pts - a.pts);
+  }
+
+  const players = aggregatePlayers(playerRows);
+  const d1Players = aggregatePlayers(playerRows.filter(row => !nonD1GameIds.has(row.game_id)));
+  const d1Games = games.filter(game => game.isD1);
+  const d1GameMeta = Object.fromEntries(d1Games.map(game => [game.game_id, game]));
+  const playerGameLogs = {};
+  playerRows
+    .filter(row => row.player !== 'TEAM' && !nonD1GameIds.has(row.game_id))
+    .forEach(row => {
+      const key = normalizePlayerName(row.player);
+      const game = d1GameMeta[row.game_id];
+      if(!game) return;
+      if(!playerGameLogs[key]) playerGameLogs[key] = [];
+      const fgm = Number(row.fg_m || 0);
+      const fga = Number(row.fg_a || 0);
+      const tpm = Number(row['3p_m'] || 0);
+      const tpa = Number(row['3p_a'] || 0);
+      const ftm = Number(row.ft_m || 0);
+      const fta = Number(row.ft_a || 0);
+      const oreb = Number(row.oreb || 0);
+      const dreb = Number(row.dreb || 0);
+      playerGameLogs[key].push({
+        gameId: row.game_id,
+        date: game.date,
+        opp: game.opp,
+        home: game.home,
+        win: game.win,
+        min: Number(row.min || 0),
+        fgm, fga, tpm, tpa, ftm, fta,
+        oreb, dreb,
+        reb: oreb + dreb,
+        ast: Number(row.ast || 0),
+        stl: Number(row.stl || 0),
+        blk: Number(row.blk || 0),
+        to: Number(row.to || 0),
+        pts: Number(row.pts || 0),
+        fgPct: pct(fgm, fga),
+        tpPct: pct(tpm, tpa),
+        ftPct: pct(ftm, fta),
+      });
+    });
+
+  return {
+    name: 'Loyola Marymount',
+    short: 'LMU',
+    mascot: 'Lions',
+    players,
+    games,
+    d1Players,
+    d1Games,
+    playerGameLogs,
+  };
+}
+
+function analysisTeam(team){
+  if(team.d1Players && team.d1Games){
+    return { ...team, players: team.d1Players, games: team.d1Games };
+  }
+  return team;
+}
+
+async function ensureTeamData(teamKey, season){
+  const cacheKey = teamCacheKey(teamKey, season);
+  if(teamDataCache[cacheKey] || !isDynamicTeam(teamKey) || !hasSeasonData(teamKey, season)){
+    return teamDataCache[cacheKey] || TEAMS[teamKey];
+  }
+  if(!teamLoadCache[cacheKey]){
+    if(teamKey === 'lmu'){
+      teamLoadCache[cacheKey] = loadLmuSeason(season).then(data => {
+        teamDataCache[cacheKey] = data;
+        return data;
+      });
+    }
+  }
+  return teamLoadCache[cacheKey];
+}
+
+function loadingCard(teamKey, season){
+  return `<div class="card"><div class="card-title"><h3>Loading ${TEAMS[teamKey].name}</h3><span class="hint">${season}</span></div><p class="muted">Pulling the local LMU season data into the dashboard.</p></div>`;
+}
+
+function unavailableCard(teamKey, season){
+  const fallback = preferredSeasonForTeam(teamKey, season);
+  return `<div class="card"><div class="card-title"><h3>${TEAMS[teamKey].name}</h3><span class="hint">Season unavailable</span></div><p class="muted">This dashboard currently has ${TEAMS[teamKey].name} data for ${fallback} only.</p></div>`;
+}
 
 /* ============================= DERIVED STATS ============================= */
 function pct(m,a){ return a>0 ? (m/a*100) : 0; }
@@ -279,6 +655,9 @@ function seededVal(seedStr, min, max){
 
 /* Made-up quarter-by-quarter scoring split that sums to the team's PPG. */
 function quarterAverages(team){
+  if(team.games.length && team.games.every(g => Array.isArray(g.quarterPoints) && g.quarterPoints.length === 4)){
+    return [0,1,2,3].map(idx => avg(team.games.reduce((sum, g) => sum + g.quarterPoints[idx], 0), team.games.length));
+  }
   const ppg = seasonTotals(team).ppg;
   const weights = [0,1,2,3].map(q => 0.85 + seededVal(team.short+'q'+q, 0, 0.3));
   const total = weights.reduce((a,b)=>a+b,0);
@@ -287,13 +666,17 @@ function quarterAverages(team){
 
 /* Made-up per-game team foul counts, aligned 1:1 with team.games. */
 function foulsForGames(games){
+  if(games.length && games.every(g => typeof g.fouls === 'number')){
+    return games.map(g => g.fouls);
+  }
   return games.map(g => Math.round(seededVal(g.date+g.opp, 12, 22)));
 }
 
 /* ============================= STATE / NAV ============================= */
 const state = { view:'overview', team:'ucsd', season:'2025-26', gameSort:{key:'date',dir:1},
   p1:{team:'ucsd',idx:0}, p2:{team:'ucdavis',idx:0}, t1:'ucsd', t2:'ucdavis',
-  selectedPlayer:null, leaderTab:'scorers', playerStatKey:'pts' };
+  selectedPlayer:null, rosterCardPlayer:null, leaderTab:'scorers', playerStatKey:'pts', playerTrendWindow:'all', playerGameFocus:null, rosterMode:'pergame', rosterTableView:'main', shootingMode:'basic', rosterScrollLeft:0,
+  rosterSortMain:{key:'ppg',dir:-1}, rosterSortShooting:{key:'tsPct',dir:-1}, rosterSortEfficiency:{key:'tsPct',dir:-1} };
 
 const NAV = [
   {id:'overview', label:'Team Overview'},
@@ -310,14 +693,16 @@ function renderNav(){
       ${ICONS[v.id]}<span>${v.label}</span>
     </button>`).join('');
   nav.querySelectorAll('.nav-btn').forEach(b=>b.addEventListener('click',()=>{
-    state.view = b.dataset.view; state.selectedPlayer=null; render();
+    state.view = b.dataset.view; state.selectedPlayer=null; state.playerGameFocus=null; render();
   }));
 }
 
 function teamSelect(id, selected, opts){
   opts = opts || {};
-  return `<select id="${id}" ${opts.attrs||''}>${TEAM_KEYS.map(k=>
-    `<option value="${k}" ${k===selected?'selected':''}>${TEAMS[k].name} ${opts.mascot?('· '+TEAMS[k].mascot):''}</option>`
+  return `<select id="${id}" ${opts.attrs||''}>${TEAM_KEYS.map(k=>{
+    const team = getTeamData(k, state.season);
+    return `<option value="${k}" ${k===selected?'selected':''}>${team.name} ${opts.mascot?('· '+team.mascot):''}</option>`;
+  }
   ).join('')}</select>`;
 }
 
@@ -343,13 +728,14 @@ function renderTopbar(){
   const titles = {
     overview:['Team Overview','Season averages for your team'],
     gamelog:['Game Log','Every game this season, sortable'],
-    roster:['Players','Full roster with season per-game averages'],
+    roster:['Stats Page','Full roster with season per-game averages'],
+    rostercards:['Roster Page','Visual player cards for the current roster'],
     cplayers:['Compare Players','Any two players, same team or different teams'],
     cteams:['Compare Teams','Season-long team stats, side by side'],
   };
   const [title,sub] = titles[state.view];
   let controls = '';
-  if(['overview','gamelog','roster'].includes(state.view)){
+  if(['overview','gamelog','roster','rostercards'].includes(state.view)){
     controls = `
       <div class="topbar-controls">
         <span class="vslabel">Select Team</span>${teamSelect('team-picker', state.team)}
@@ -367,7 +753,9 @@ function renderTopbar(){
   const tp = document.getElementById('team-picker');
   if(tp) tp.addEventListener('change', e=>{
     state.team = e.target.value;
+    state.season = preferredSeasonForTeam(state.team, state.season);
     state.selectedPlayer = null;
+    state.playerGameFocus = null;
     render();
   });
 
@@ -375,6 +763,7 @@ function renderTopbar(){
   if(sp) sp.addEventListener('change', e=>{
     state.season = e.target.value;
     state.selectedPlayer = null;
+    state.playerGameFocus = null;
     render();
   });
 }
@@ -435,20 +824,44 @@ function quarterBarChart(quarters, w, h){
   const pad = {l:26,r:10,t:16,b:22};
   const iw = w-pad.l-pad.r, ih = h-pad.t-pad.b;
   const max = Math.ceil(Math.max(...quarters)/5)*5 + 5;
-  const gap = iw/quarters.length, bw = gap*0.46;
+  const gap = iw/quarters.length, bw = gap*0.64;
   const gridY = [0,.5,1].map(t=>t*max);
   const bars = quarters.map((v,i)=>{
     const bh = (v/max)*ih;
     const x = pad.l + i*gap + (gap-bw)/2;
     const y = pad.t + ih - bh;
-    return `<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${bw.toFixed(1)}" height="${bh.toFixed(1)}" rx="3" fill="var(--series-a)"/>
-      <text class="axislabel" x="${(x+bw/2).toFixed(1)}" y="${h-6}" text-anchor="middle">Q${i+1}</text>
-      <text x="${(x+bw/2).toFixed(1)}" y="${(y-6).toFixed(1)}" text-anchor="middle" style="fill:var(--ink);font-weight:700;font-family:var(--font-body);font-size:11px;">${v.toFixed(1)}</text>`;
+    return `<rect class="quarter-bar" x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${bw.toFixed(1)}" height="${bh.toFixed(1)}" rx="8" fill="var(--series-a)" data-i="${i}"/>
+      <text class="axislabel quarter-axislabel" x="${(x+bw/2).toFixed(1)}" y="${h-4}" text-anchor="middle">Q${i+1}</text>
+      <text class="quarter-val" x="${(x+bw/2).toFixed(1)}" y="${(y-8).toFixed(1)}" text-anchor="middle">${v.toFixed(1)}</text>
+      <rect class="hit" x="${x.toFixed(1)}" y="${pad.t}" width="${bw.toFixed(1)}" height="${ih}" data-i="${i}" fill="transparent"/>`;
   }).join('');
-  return `<svg class="chart" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" style="height:${h}px">
-    ${gridY.map(v=>`<line class="gridline" x1="${pad.l}" x2="${w-pad.r}" y1="${(pad.t+ih-(v/max)*ih).toFixed(1)}" y2="${(pad.t+ih-(v/max)*ih).toFixed(1)}"/>`).join('')}
-    ${bars}
-  </svg>`;
+  return `<div class="chart-wrap" data-chart="quarters">
+    <svg class="chart" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" style="height:${h}px">
+      ${gridY.map(v=>`<line class="gridline" x1="${pad.l}" x2="${w-pad.r}" y1="${(pad.t+ih-(v/max)*ih).toFixed(1)}" y2="${(pad.t+ih-(v/max)*ih).toFixed(1)}"/>`).join('')}
+      ${bars}
+    </svg>
+  </div>`;
+}
+function wireQuarterChart(container, quarters){
+  const wrap = container.querySelector('[data-chart="quarters"]');
+  if(!wrap) return;
+  const svg = wrap.querySelector('svg');
+  const tooltip = document.getElementById('tooltip');
+  svg.querySelectorAll('.hit').forEach(hit=>{
+    hit.addEventListener('mouseenter', ()=>{
+      const i = +hit.dataset.i;
+      const bar = svg.querySelector(`.quarter-bar[data-i="${i}"]`);
+      const rect = svg.getBoundingClientRect(), wrapAbs = wrap.getBoundingClientRect();
+      const px = ((Number(bar.getAttribute('x')) + Number(bar.getAttribute('width')) / 2)/svg.viewBox.baseVal.width)*rect.width;
+      const py = (Number(bar.getAttribute('y'))/svg.viewBox.baseVal.height)*rect.height;
+      tooltip.innerHTML = `<div>Q${i+1}: ${quarters[i].toFixed(1)} points</div>`;
+      tooltip.style.transform = 'translate(-50%,-125%)';
+      tooltip.style.left = (wrapAbs.left+window.scrollX+px)+'px';
+      tooltip.style.top = (wrapAbs.top+window.scrollY+py)+'px';
+      tooltip.classList.add('show');
+    });
+    hit.addEventListener('mouseleave', ()=>{ tooltip.classList.remove('show'); });
+  });
 }
 
 /* ============================= TEAM FOULS PER GAME CHART ============================= */
@@ -631,9 +1044,106 @@ function shotHeatmap(team, w, h){
 }
 
 /* ============================= VIEW: OVERVIEW ============================= */
-function viewOverview(){
-  const team = TEAMS[state.team];
+function teamSectionTabs(){
+  const tabs = [
+    {id:'overview', label:'Team Summary'},
+    {id:'roster', label:'Stats Page'},
+    {id:'rostercards', label:'Roster Page'},
+  ];
+  return `<div class="team-section-tabs" role="tablist" aria-label="Team section views">
+    ${tabs.map(tab=>`<button class="team-section-tab ${state.view===tab.id?'active':''}" data-team-view="${tab.id}" role="tab" aria-selected="${state.view===tab.id}">${tab.label}</button>`).join('')}
+  </div>`;
+}
+
+function rosterCardPalette(teamKey){
+  const palettes = {
+    lmu: {bg:'linear-gradient(180deg,#182b49 0%,#102039 100%)', border:'#c8a14d', accent:'#f1c75b', accentSoft:'rgba(241,199,91,.18)'},
+    ucsd: {bg:'linear-gradient(180deg,#182b49 0%,#102039 100%)', border:'#c8a14d', accent:'#f1c75b', accentSoft:'rgba(241,199,91,.18)'},
+    ucdavis: {bg:'linear-gradient(180deg,#0f2d52 0%,#0b203a 100%)', border:'#c89a3c', accent:'#f2c861', accentSoft:'rgba(242,200,97,.18)'},
+    ucirvine: {bg:'linear-gradient(180deg,#0e4578 0%,#0b2e50 100%)', border:'#f0b53a', accent:'#ffd36f', accentSoft:'rgba(255,211,111,.18)'},
+    hawaii: {bg:'linear-gradient(180deg,#0c5b3a 0%,#083f28 100%)', border:'#d5ddd7', accent:'#f4f7f3', accentSoft:'rgba(244,247,243,.18)'},
+  };
+  return palettes[teamKey] || {bg:'linear-gradient(180deg,#182b49 0%,#102039 100%)', border:'#c8a14d', accent:'#f1c75b', accentSoft:'rgba(241,199,91,.18)'};
+}
+
+function rosterPageCards(team){
+  const leaders = [...team.players]
+    .map((player, idx) => ({ player, idx, pg: playerPerGame(player) }))
+    .sort((a, b) => b.pg.mpg - a.pg.mpg);
+  const palette = rosterCardPalette(state.team);
+  return `<div class="roster-page-grid">
+    ${leaders.map(({player, idx, pg}, rank)=>{
+      const headshot = playerHeadshot(state.team, player.name);
+      return `<button class="roster-spotlight-card" data-roster-card="${idx}" style="--card-bg:${palette.bg};--card-border:${palette.border};--card-accent:${palette.accent};--card-accent-soft:${palette.accentSoft};">
+        <div class="roster-spotlight-top">
+          <span class="roster-spotlight-rank">#${player.num}</span>
+          <span class="roster-spotlight-season">${displayListedPosition(player)}</span>
+        </div>
+        <div class="roster-spotlight-art">
+          <div class="roster-spotlight-logo">${avatarContent(state.team, team.short)}</div>
+          ${headshot
+            ? `<img class="roster-spotlight-photo" src="${headshot}" alt="${displayPlayerName(player.name)} headshot">`
+            : `<div class="roster-spotlight-monogram">${initials(displayPlayerName(player.name))}</div>`}
+        </div>
+        <div class="roster-spotlight-name">${displayPlayerName(player.name)}</div>
+        <div class="roster-spotlight-stats">
+          <div class="roster-spotlight-stat"><span>PPG</span><strong>${fmt1(pg.ppg)}</strong></div>
+          <div class="roster-spotlight-stat"><span>RPG</span><strong>${fmt1(pg.rpg)}</strong></div>
+          <div class="roster-spotlight-stat"><span>APG</span><strong>${fmt1(pg.apg)}</strong></div>
+          <div class="roster-spotlight-stat"><span>MPG</span><strong>${fmt1(pg.mpg)}</strong></div>
+        </div>
+      </button>`;
+    }).join('')}
+  </div>`;
+}
+
+function viewRosterCards(){
+  if(!hasSeasonData(state.team, state.season)) return unavailableCard(state.team, state.season);
+  const baseTeam = getTeamData(state.team, state.season);
+  if(isDynamicTeam(state.team) && !baseTeam.players.length){
+    ensureTeamData(state.team, state.season).then(()=>render());
+    return loadingCard(state.team, state.season);
+  }
+  const team = analysisTeam(baseTeam);
+  return `
+    ${teamSectionTabs()}
+    ${rosterPageCards(team)}
+    ${state.rosterCardPlayer && state.rosterCardPlayer.team===state.team ? playerModal(team, state.rosterCardPlayer.idx, 'rosterCardPlayer') : ''}
+  `;
+}
+
+function playerModal(team, idx, stateKey){
+  return `<div class="roster-modal-backdrop" data-player-modal-close="${stateKey}">
+    <div class="roster-modal-shell player-modal-shell" role="dialog" aria-modal="true" aria-label="${displayPlayerName(team.players[idx].name)} profile" data-player-modal-shell>
+      <button class="roster-modal-close" type="button" data-player-modal-button="${stateKey}" aria-label="Close player window">×</button>
+      ${playerDetail(team, idx, stateKey)}
+    </div>
+  </div>`;
+}
+
+function overviewTiles(team){
   const s = seasonTotals(team);
+  const tile = (label,val,unit)=>`<div class="tile"><div class="eyebrow">${label}</div><div class="val num">${val}${unit?`<small>${unit}</small>`:''}</div></div>`;
+  return `<div class="tiles team-summary-tiles">
+    ${tile('Record', s.record.w+'–'+s.record.l)}
+    ${tile('PPG', fmt1(s.ppg))}
+    ${tile('Opp PPG', fmt1(s.oppPpg))}
+    ${tile('Reb / gm', fmt1(s.rpg))}
+    ${tile('Ast / gm', fmt1(s.apg))}
+    ${tile('FG%', s.fgPct.toFixed(1),'%')}
+    ${tile('3P%', s.tpPct.toFixed(1),'%')}
+    ${tile('TO / gm', fmt1(s.topg))}
+  </div>`;
+}
+
+function viewOverview(){
+  if(!hasSeasonData(state.team, state.season)) return unavailableCard(state.team, state.season);
+  const baseTeam = getTeamData(state.team, state.season);
+  if(isDynamicTeam(state.team) && !baseTeam.games.length){
+    ensureTeamData(state.team, state.season).then(()=>render());
+    return loadingCard(state.team, state.season);
+  }
+  const team = analysisTeam(baseTeam);
   const quarters = quarterAverages(team);
   const fouls = foulsForGames(team.games);
   const avgFouls = fouls.reduce((a,b)=>a+b,0)/fouls.length;
@@ -670,16 +1180,8 @@ function viewOverview(){
   };
 
   return `
-    <div class="tiles">
-      ${tile('Record', s.record.w+'–'+s.record.l)}
-      ${tile('PPG', fmt1(s.ppg))}
-      ${tile('Opp PPG', fmt1(s.oppPpg))}
-      ${tile('Reb / gm', fmt1(s.rpg))}
-      ${tile('Ast / gm', fmt1(s.apg))}
-      ${tile('FG%', s.fgPct.toFixed(1),'%')}
-      ${tile('3P%', s.tpPct.toFixed(1),'%')}
-      ${tile('TO / gm', fmt1(s.topg))}
-    </div>
+    ${teamSectionTabs()}
+    ${overviewTiles(team)}
 
     <div class="grid-3">
       <div class="card">
@@ -735,6 +1237,13 @@ function wireLeaderTabs(container){
   }));
 }
 
+function wireTeamSectionTabs(container){
+  container.querySelectorAll('[data-team-view]').forEach(btn=>btn.addEventListener('click', ()=>{
+    state.view = btn.dataset.teamView;
+    render();
+  }));
+}
+
 /* ============================= VIEW: GAME LOG ============================= */
 const GAME_COLS = [
   {key:'date', label:'Date'}, {key:'opp', label:'Opponent'}, {key:'loc', label:'Loc'},
@@ -742,7 +1251,12 @@ const GAME_COLS = [
   {key:'reb', label:'Reb', num:true}, {key:'ast', label:'Ast', num:true}, {key:'to', label:'TO', num:true},
 ];
 function viewGameLog(){
-  const team = TEAMS[state.team];
+  if(!hasSeasonData(state.team, state.season)) return unavailableCard(state.team, state.season);
+  const team = getTeamData(state.team, state.season);
+  if(isDynamicTeam(state.team) && !team.games.length){
+    ensureTeamData(state.team, state.season).then(()=>render());
+    return loadingCard(state.team, state.season);
+  }
   let rows = team.games.map(g=>({...g, fgpct:pct(g.fgm,g.fga)}));
   const {key,dir} = state.gameSort;
   const sortVal = g => key==='result' ? (g.win?1:0) : key==='loc' ? (g.home?1:0) : key==='opp' ? g.opp : g[key];
@@ -799,29 +1313,337 @@ function wireGameLog(container){
 
 /* ============================= VIEW: ROSTER / PLAYER DETAIL ============================= */
 function viewRoster(){
-  const team = TEAMS[state.team];
-  if(state.selectedPlayer && state.selectedPlayer.team===state.team){
-    return rosterGrid(team) + playerDetail(team, state.selectedPlayer.idx);
+  if(!hasSeasonData(state.team, state.season)) return unavailableCard(state.team, state.season);
+  const baseTeam = getTeamData(state.team, state.season);
+  if(isDynamicTeam(state.team) && !baseTeam.players.length){
+    ensureTeamData(state.team, state.season).then(()=>render());
+    return loadingCard(state.team, state.season);
   }
-  return rosterGrid(team);
+  const team = analysisTeam(baseTeam);
+  const summary = `${teamSectionTabs()}${overviewTiles(team)}${rosterGrid(team)}`;
+  if(state.selectedPlayer && state.selectedPlayer.team===state.team){
+    return summary + playerModal(team, state.selectedPlayer.idx, 'selectedPlayer');
+  }
+  return summary;
 }
-function rosterGrid(team){
-  return `<div class="card">
-    <div class="card-title"><h3>${team.name} roster</h3><span class="hint">${team.players.length} players · click for detail</span></div>
-    <div class="roster-grid">
-      ${team.players.map((p,i)=>{ const pg = playerPerGame(p); const active = state.selectedPlayer && state.selectedPlayer.team===state.team && state.selectedPlayer.idx===i;
-        return `<button class="player-card ${active?'active':''}" data-idx="${i}">
-          <div class="pc-head"><div class="pc-avatar">${avatarContent(state.team, initials(p.name))}</div>
-            <div><div class="pc-name">${p.name}</div><div class="pc-meta">#${p.num} · ${p.pos}</div></div>
-          </div>
-          <div class="pc-stats">
-            <div class="pc-stat"><b class="num">${fmt1(pg.ppg)}</b><span>PPG</span></div>
-            <div class="pc-stat"><b class="num">${fmt1(pg.rpg)}</b><span>RPG</span></div>
-            <div class="pc-stat"><b class="num">${fmt1(pg.apg)}</b><span>APG</span></div>
-          </div>
-        </button>`; }).join('')}
+
+function advancedNumber(player, key, fallback = 0){
+  const raw = player.advanced?.[key];
+  const num = Number(raw);
+  return Number.isFinite(num) ? num : fallback;
+}
+
+function advancedPercent(player, key, fallback = 0){
+  return advancedNumber(player, key, fallback) * 100;
+}
+
+function playerPer40(player, key){
+  const per40Key = {
+    pts: 'pts_per_40',
+    reb: 'reb_per_40',
+    ast: 'ast_per_40',
+    stl: 'stl_per_40',
+    blk: 'blk_per_40',
+    to: 'tov_per_40',
+  }[key];
+  if(per40Key && player.advanced?.[per40Key] !== undefined){
+    return advancedNumber(player, per40Key);
+  }
+  const mpg = player.min || 0;
+  return mpg > 0 ? (player[key] / Math.max(player.gp, 1)) * (40 / mpg) : 0;
+}
+
+function rosterPlayerMetrics(team, player, idx){
+  const pg = playerPerGame(player);
+  const rimMakesTotal = advancedNumber(player, 'rimmade');
+  const rimAttTotal = advancedNumber(player, 'rimatt');
+  const midMakesTotal = advancedNumber(player, 'midmade');
+  const midAttTotal = advancedNumber(player, 'midatt');
+  const rimMakes = avg(rimMakesTotal, Math.max(player.gp, 1));
+  const rimAtt = avg(rimAttTotal, Math.max(player.gp, 1));
+  const midMakes = avg(midMakesTotal, Math.max(player.gp, 1));
+  const midAtt = avg(midAttTotal, Math.max(player.gp, 1));
+  const threeMakes = avg(player.tpm, Math.max(player.gp, 1));
+  const threeAtt = avg(player.tpa, Math.max(player.gp, 1));
+  const rimAssistShare = advancedNumber(player, 'pct_rim_made_assisted');
+  const midAssistShare = advancedNumber(player, 'pct_mid_made_assisted');
+  const threeAssistShare = advancedNumber(player, 'pct_three_made_assisted');
+  const assistedMakesTotal = (rimMakesTotal * rimAssistShare) + (midMakesTotal * midAssistShare) + (player.tpm * threeAssistShare);
+  const totalAssistPct = player.fgm > 0 ? (assistedMakesTotal / player.fgm) * 100 : 0;
+  const tsPct = player.advanced?.ts !== undefined
+    ? advancedPercent(player, 'ts')
+    : ((player.fga + 0.44 * player.fta) > 0 ? (player.pts / (2 * (player.fga + 0.44 * player.fta))) * 100 : 0);
+  const fgPct = player.advanced?.fg !== undefined ? advancedPercent(player, 'fg') : pg.fgPct;
+  const tpPct = player.advanced?.tp !== undefined ? advancedPercent(player, 'tp') : pg.tpPct;
+  const ftPct = player.advanced?.ft !== undefined ? advancedPercent(player, 'ft') : pg.ftPct;
+  const astTo = player.advanced?.ast_tov !== undefined ? advancedNumber(player, 'ast_tov') : astToRatio(player);
+  const usg = player.advanced?.usg !== undefined ? advancedPercent(player, 'usg') : usageRate(team, player);
+  const metrics = {
+    name: player.name,
+    gp: player.gp,
+    mpg: pg.mpg,
+    ppg: pg.ppg,
+    rpg: pg.rpg,
+    apg: pg.apg,
+    spg: pg.stlpg,
+    bpg: pg.blkpg,
+    topg: pg.topg,
+    fgPct,
+    tpPct,
+    ftPct,
+    pts40: playerPer40(player, 'pts'),
+    reb40: playerPer40(player, 'reb'),
+    ast40: playerPer40(player, 'ast'),
+    stl40: playerPer40(player, 'stl'),
+    blk40: playerPer40(player, 'blk'),
+    to40: playerPer40(player, 'to'),
+    tsPct,
+    usg,
+    rimMakes,
+    rimAtt,
+    midMakes,
+    midAtt,
+    threeMakes,
+    threeAtt,
+    astTo,
+    astPct: advancedPercent(player, 'ast_pct'),
+    toPct: advancedPercent(player, 'to_pct'),
+    drbPct: advancedPercent(player, 'drb_pct'),
+    orbPct: advancedPercent(player, 'orb_pct'),
+    stlPct: advancedPercent(player, 'stl_pct'),
+    blkPct: advancedPercent(player, 'blk_pct'),
+    rimShare: advancedPercent(player, 'rim_pct_of_total_attempts'),
+    midShare: advancedPercent(player, 'mid_pct_of_total_attempts'),
+    threeShare: advancedPercent(player, 'three_pct_of_total_attempts'),
+    rimAssistPct: rimAssistShare * 100,
+    midAssistPct: midAssistShare * 100,
+    threeAssistPct: threeAssistShare * 100,
+    totalAssistPct,
+    rimFgPct: advancedPercent(player, 'rim_pct'),
+    midFgPct: advancedPercent(player, 'mid_pct'),
+  };
+
+  return { p: player, i: idx, pg, metrics };
+}
+
+function rosterToggle(){
+  const tabs = [
+    {key:'pergame', label:'Per Game'},
+    {key:'per40', label:'Per 40'},
+  ];
+  return `<div class="mini-toggle" role="tablist" aria-label="Roster stat mode">
+    ${tabs.map(tab=>`<button class="mini-toggle-btn ${state.rosterMode===tab.key?'active':''}" data-roster-mode="${tab.key}" role="tab" aria-selected="${state.rosterMode===tab.key}">${tab.label}</button>`).join('')}
+  </div>`;
+}
+
+function rosterTableViewToggle(){
+  const tabs = [
+    {key:'main', label:'General'},
+    {key:'shooting', label:'Shooting'},
+    {key:'efficiency', label:'Efficiency'},
+  ];
+  return `<div class="mini-toggle" role="tablist" aria-label="Roster table view">
+    ${tabs.map(tab=>`<button class="mini-toggle-btn ${state.rosterTableView===tab.key?'active':''}" data-roster-view="${tab.key}" role="tab" aria-selected="${state.rosterTableView===tab.key}">${tab.label}</button>`).join('')}
+  </div>`;
+}
+
+function shootingToggle(){
+  const tabs = [
+    {key:'basic', label:'Standard'},
+    {key:'advanced', label:'Area Split'},
+  ];
+  return `<div class="mini-toggle" role="tablist" aria-label="Shooting detail mode">
+    ${tabs.map(tab=>`<button class="mini-toggle-btn ${state.shootingMode===tab.key?'active':''}" data-shooting-mode="${tab.key}" role="tab" aria-selected="${state.shootingMode===tab.key}">${tab.label}</button>`).join('')}
+  </div>`;
+}
+
+function renderTableHead({tableKey, columns, sortState, headerRows}){
+  if(headerRows?.length){
+    return headerRows.map(row=>`<tr>
+      ${row.map(cell=>{
+        const attrs = [
+          cell.num ? 'class="num"' : '',
+          cell.colSpan ? `colspan="${cell.colSpan}"` : '',
+          cell.rowSpan ? `rowspan="${cell.rowSpan}"` : '',
+        ].filter(Boolean).join(' ');
+        if(cell.key){
+          return `<th ${attrs}><button class="th-sort" data-roster-table="${tableKey}" data-roster-sort="${cell.key}">${cell.label} ${sortState.key===cell.key?(sortState.dir>0?'↑':'↓'):''}</button></th>`;
+        }
+        return `<th ${attrs}>${cell.label}</th>`;
+      }).join('')}
+    </tr>`).join('');
+  }
+  return `<tr>
+    ${columns.map(col=>`<th class="${col.num?'num':''}"><button class="th-sort" data-roster-table="${tableKey}" data-roster-sort="${col.key}">${col.label} ${sortState.key===col.key?(sortState.dir>0?'↑':'↓'):''}</button></th>`).join('')}
+  </tr>`;
+}
+
+function rosterSectionCard({title, hint, tableKey, columns, rows, sortState, headerRows = null, controls = ''}){
+  const sorted = [...rows].sort((a,b)=>{
+    const av = a.metrics[sortState.key];
+    const bv = b.metrics[sortState.key];
+    if(typeof av === 'string' || typeof bv === 'string'){
+      return String(av).localeCompare(String(bv)) * sortState.dir;
+    }
+    return (av < bv ? -1 : av > bv ? 1 : 0) * sortState.dir;
+  });
+
+  return `<div class="card roster-section-card">
+    <div class="card-title">
+      <div class="card-title-copy">
+        <h3>${title}</h3>
+        <span class="hint">${hint}</span>
+      </div>
+      <div class="card-title-actions roster-card-controls">
+        ${controls}
+      </div>
+    </div>
+    <div class="table-wrap roster-table-wrap">
+      <table class="roster-table">
+        <thead>
+          ${renderTableHead({tableKey, columns, sortState, headerRows})}
+        </thead>
+        <tbody>
+          ${sorted.map(({p, i, metrics})=>{
+            const active = state.selectedPlayer && state.selectedPlayer.team===state.team && state.selectedPlayer.idx===i;
+            const headshot = playerHeadshot(state.team, p.name);
+            return `<tr class="clickable ${active?'selected':''}" data-idx="${i}">
+              ${columns.map(col=>{
+                if(col.key === 'name'){
+                  return `<td class="rowname">
+                    <div class="roster-namecell">
+                      <span class="roster-table-photo">
+                        ${headshot ? `<img src="${headshot}" alt="${displayPlayerName(p.name)} headshot">` : avatarContent(state.team, initials(p.name))}
+                      </span>
+                      <span class="roster-identity">
+                        <span class="roster-player">${displayPlayerName(p.name)} <span class="roster-inline-num">#${p.num}</span></span>
+                        <span class="roster-meta">${displayListedPosition(p)} · ${displayClassYear(p)}</span>
+                      </span>
+                    </div>
+                  </td>`;
+                }
+                return `<td class="${col.num?'num':''}">${col.render(metrics)}</td>`;
+              }).join('')}
+            </tr>`;
+          }).join('')}
+        </tbody>
+      </table>
     </div>
   </div>`;
+}
+
+function rosterGrid(team){
+  const rows = team.players.map((player, idx) => rosterPlayerMetrics(team, player, idx));
+  const countingPrefix = state.rosterMode === 'per40' ? '/40' : 'PG';
+  const mainColumns = [
+    {key:'name', label:'Name'},
+    {key:'gp', label:'GP', num:true, render:m => `${m.gp}`},
+    {key:'mpg', label:'MPG', num:true, render:m => fmt1(m.mpg)},
+    {key:state.rosterMode === 'per40' ? 'pts40' : 'ppg', label:state.rosterMode === 'per40' ? 'PTS/40' : 'PPG', num:true, render:m => fmt1(state.rosterMode === 'per40' ? m.pts40 : m.ppg)},
+    {key:state.rosterMode === 'per40' ? 'reb40' : 'rpg', label:state.rosterMode === 'per40' ? 'REB/40' : 'RPG', num:true, render:m => fmt1(state.rosterMode === 'per40' ? m.reb40 : m.rpg)},
+    {key:state.rosterMode === 'per40' ? 'ast40' : 'apg', label:state.rosterMode === 'per40' ? 'AST/40' : 'APG', num:true, render:m => fmt1(state.rosterMode === 'per40' ? m.ast40 : m.apg)},
+    {key:state.rosterMode === 'per40' ? 'stl40' : 'spg', label:state.rosterMode === 'per40' ? 'STL/40' : 'STLPG', num:true, render:m => fmt1(state.rosterMode === 'per40' ? m.stl40 : m.spg)},
+    {key:state.rosterMode === 'per40' ? 'blk40' : 'bpg', label:state.rosterMode === 'per40' ? 'BLK/40' : 'BPG', num:true, render:m => fmt1(state.rosterMode === 'per40' ? m.blk40 : m.bpg)},
+    {key:state.rosterMode === 'per40' ? 'to40' : 'topg', label:state.rosterMode === 'per40' ? 'TOV/40' : 'TOVPG', num:true, render:m => fmt1(state.rosterMode === 'per40' ? m.to40 : m.topg)},
+    {key:'fgPct', label:'FG%', num:true, render:m => m.fgPct.toFixed(1)},
+    {key:'tpPct', label:'3PT%', num:true, render:m => m.tpPct.toFixed(1)},
+    {key:'ftPct', label:'FT%', num:true, render:m => m.ftPct.toFixed(1)},
+  ];
+  const shootingColumnsBasic = [
+    {key:'name', label:'Name'},
+    {key:'gp', label:'GP', num:true, render:m => `${m.gp}`},
+    {key:'mpg', label:'MPG', num:true, render:m => fmt1(m.mpg)},
+    {key:'tpPct', label:'3PT%', num:true, render:m => m.tpPct.toFixed(1)},
+    {key:'ftPct', label:'FT%', num:true, render:m => m.ftPct.toFixed(1)},
+    {key:'tsPct', label:'TS%', num:true, render:m => m.tsPct.toFixed(1)},
+    {key:'usg', label:'USG%', num:true, render:m => m.usg.toFixed(1)},
+    {key:'ppg', label:'PPG', num:true, render:m => fmt1(m.ppg)},
+    {key:'threeMakes', label:'3PM/G', num:true, render:m => fmt1(m.threeMakes)},
+    {key:'threeAtt', label:'3PA/G', num:true, render:m => fmt1(m.threeAtt)},
+  ];
+  const shootingColumnsAdvanced = [
+    {key:'name', label:'Name'},
+    {key:'rimMakes', label:'Rim M/G', num:true, render:m => fmt1(m.rimMakes)},
+    {key:'rimAtt', label:'Rim A/G', num:true, render:m => fmt1(m.rimAtt)},
+    {key:'rimAssistPct', label:'Rim Ast%', num:true, render:m => m.rimAssistPct.toFixed(1)},
+    {key:'midMakes', label:'Mid M/G', num:true, render:m => fmt1(m.midMakes)},
+    {key:'midAtt', label:'Mid A/G', num:true, render:m => fmt1(m.midAtt)},
+    {key:'midAssistPct', label:'Mid Ast%', num:true, render:m => m.midAssistPct.toFixed(1)},
+    {key:'threeMakes', label:'3PM/G', num:true, render:m => fmt1(m.threeMakes)},
+    {key:'threeAtt', label:'3PA/G', num:true, render:m => fmt1(m.threeAtt)},
+    {key:'threeAssistPct', label:'3 Ast%', num:true, render:m => m.threeAssistPct.toFixed(1)},
+    {key:'totalAssistPct', label:'Ast Total%', num:true, render:m => m.totalAssistPct.toFixed(1)},
+  ];
+  const shootingHeaderRows = [
+    [
+      {key:'name', label:'Name', rowSpan:3},
+      {label:'Area', colSpan:9},
+      {key:'totalAssistPct', label:'Ast Total%', num:true, rowSpan:3},
+    ],
+    [
+      {label:'Rim', colSpan:3},
+      {label:'Mid', colSpan:3},
+      {label:'3PT', colSpan:3},
+    ],
+    [
+      {key:'rimMakes', label:'M/G', num:true},
+      {key:'rimAtt', label:'A/G', num:true},
+      {key:'rimAssistPct', label:'Ast%', num:true},
+      {key:'midMakes', label:'M/G', num:true},
+      {key:'midAtt', label:'A/G', num:true},
+      {key:'midAssistPct', label:'Ast%', num:true},
+      {key:'threeMakes', label:'M/G', num:true},
+      {key:'threeAtt', label:'A/G', num:true},
+      {key:'threeAssistPct', label:'Ast%', num:true},
+    ],
+  ];
+  const efficiencyColumns = [
+    {key:'name', label:'Name'},
+    {key:'gp', label:'GP', num:true, render:m => `${m.gp}`},
+    {key:'mpg', label:'MPG', num:true, render:m => fmt1(m.mpg)},
+    {key:'fgPct', label:'FG%', num:true, render:m => m.fgPct.toFixed(1)},
+    {key:'tpPct', label:'3PT%', num:true, render:m => m.tpPct.toFixed(1)},
+    {key:'ftPct', label:'FT%', num:true, render:m => m.ftPct.toFixed(1)},
+    {key:'astTo', label:'AST/TO', num:true, render:m => m.astTo.toFixed(2)},
+    {key:'usg', label:'USG%', num:true, render:m => m.usg.toFixed(1)},
+    {key:'astPct', label:'AST%', num:true, render:m => m.astPct.toFixed(1)},
+    {key:'toPct', label:'TO%', num:true, render:m => m.toPct.toFixed(1)},
+    {key:'drbPct', label:'DRB%', num:true, render:m => m.drbPct.toFixed(1)},
+    {key:'orbPct', label:'ORB%', num:true, render:m => m.orbPct.toFixed(1)},
+    {key:'stlPct', label:'STL%', num:true, render:m => m.stlPct.toFixed(1)},
+    {key:'blkPct', label:'BLK%', num:true, render:m => m.blkPct.toFixed(1)},
+  ];
+  const tableViews = {
+    main: {
+      title: `${team.name} general`,
+      hint: `${team.players.length} players · click a row for player detail`,
+      tableKey: 'main',
+      columns: mainColumns,
+      rows,
+      sortState: state.rosterSortMain,
+      controls: `${rosterToggle()}${rosterTableViewToggle()}`,
+    },
+    shooting: {
+      title: `${team.name} shooting`,
+      hint: state.shootingMode === 'advanced' ? 'Grouped area shooting with makes, attempts, and assisted rates.' : 'Efficiency first with core shooting volume.',
+      tableKey: 'shooting',
+      columns: state.shootingMode === 'advanced' ? shootingColumnsAdvanced : shootingColumnsBasic,
+      rows,
+      sortState: state.rosterSortShooting,
+      headerRows: state.shootingMode === 'advanced' ? shootingHeaderRows : null,
+      controls: `${shootingToggle()}${rosterTableViewToggle()}`,
+    },
+    efficiency: {
+      title: `${team.name} efficiency`,
+      hint: 'Advanced rate, usage, shot-share, and assisted-finishing stats.',
+      tableKey: 'efficiency',
+      columns: efficiencyColumns,
+      rows,
+      sortState: state.rosterSortEfficiency,
+      controls: rosterTableViewToggle(),
+    },
+  };
+  return rosterSectionCard(tableViews[state.rosterTableView] || tableViews.main);
 }
 /* All stats shown as clickable tiles on the player detail card. `val` is the
    season per-game (or ratio/%) value shown on the tile; `decimals`/`min`/`max`
@@ -831,23 +1653,18 @@ function rosterGrid(team){
    (fouls, quarter splits, shot chart) — they're seeded deterministically per
    player rather than left out. */
 function playerStatDefs(team, p, pg){
-  const efg = efgPct(p), astTo = astToRatio(p);
   const plusMinus = seededVal(team.short+p.name+'pm', -8, 12);
-  const orebPct = seededVal(team.short+p.name+'orebpct', 2, 14);
-  const drebPct = seededVal(team.short+p.name+'drebpct', 8, 26);
   return [
-    {key:'pts', label:'PPG', trendLabel:'Points', val:pg.ppg, fmt:fmt1, decimals:0},
-    {key:'reb', label:'RPG', trendLabel:'Rebounds', val:pg.rpg, fmt:fmt1, decimals:0},
-    {key:'ast', label:'APG', trendLabel:'Assists', val:pg.apg, fmt:fmt1, decimals:0},
+    {key:'min', label:'MIN', trendLabel:'Minutes', val:pg.mpg, fmt:fmt1, decimals:1},
+    {key:'pts', label:'PTS', trendLabel:'Points', val:pg.ppg, fmt:fmt1, decimals:0},
+    {key:'reb', label:'REB', trendLabel:'Rebounds', val:pg.rpg, fmt:fmt1, decimals:0},
+    {key:'ast', label:'AST', trendLabel:'Assists', val:pg.apg, fmt:fmt1, decimals:0},
+    {key:'stl', label:'STL', trendLabel:'Steals', val:pg.stlpg, fmt:fmt1, decimals:1},
+    {key:'blk', label:'BLK', trendLabel:'Blocks', val:pg.blkpg, fmt:fmt1, decimals:1},
     {key:'fgpct', label:'FG%', trendLabel:'FG%', val:pg.fgPct, fmt:v=>v.toFixed(1), decimals:1, max:100},
     {key:'tppct', label:'3P%', trendLabel:'3P%', val:pg.tpPct, fmt:v=>v.toFixed(1), decimals:1, max:100},
     {key:'ftpct', label:'FT%', trendLabel:'FT%', val:pg.ftPct, fmt:v=>v.toFixed(1), decimals:1, max:100},
-    {key:'efgpct', label:'eFG%', trendLabel:'eFG%', val:efg, fmt:v=>v.toFixed(1), decimals:1, max:100},
     {key:'pm', label:'+/-', trendLabel:'Plus/Minus', val:plusMinus, fmt:v=>(v>=0?'+':'')+v.toFixed(1), decimals:1, min:-Infinity},
-    {key:'astto', label:'AST/TO', trendLabel:'Ast/TO ratio', val:astTo, fmt:v=>v.toFixed(2), decimals:2},
-    {key:'orebpct', label:'OREB%', trendLabel:'OREB%', val:orebPct, fmt:v=>v.toFixed(1), decimals:1, max:100},
-    {key:'drebpct', label:'DREB%', trendLabel:'DREB%', val:drebPct, fmt:v=>v.toFixed(1), decimals:1, max:100},
-    {key:'min', label:'MIN', trendLabel:'Minutes', val:pg.mpg, fmt:fmt1, decimals:1},
   ];
 }
 
@@ -856,28 +1673,42 @@ function playerStatDefs(team, p, pg){
    value ticks using the active stat's own formatter) and labeled x-axis
    (game number, sparse-ticked so labels don't collide on long seasons),
    plus a hover crosshair + tooltip on every point (not just the last one). */
-function statTrendChart(series, active, games, w, h){
+function trendAxisSpec(active, series){
+  const seriesMax = Math.max(...series, 0);
+  const presets = {
+    min: { min: 0, max: 40, ticks: [0, 10, 20, 30, 40] },
+    fgpct: { min: 0, max: 100, ticks: [0, 25, 50, 75, 100] },
+    tppct: { min: 0, max: 100, ticks: [0, 25, 50, 75, 100] },
+    ftpct: { min: 0, max: 100, ticks: [0, 25, 50, 75, 100] },
+    blk: { min: 0, max: 10, ticks: [0, 2.5, 5, 7.5, 10] },
+    stl: { min: 0, max: 10, ticks: [0, 2.5, 5, 7.5, 10] },
+    pts: { min: 0, max: Math.max(40, Math.ceil(seriesMax / 10) * 10), ticks: null },
+    reb: { min: 0, max: 20, ticks: [0, 5, 10, 15, 20] },
+    ast: { min: 0, max: 20, ticks: [0, 5, 10, 15, 20] },
+    pm: { min: 0, max: 10, ticks: [0, 2.5, 5, 7.5, 10] },
+  };
+  const preset = presets[active.key];
+  if(preset){
+    if(preset.ticks) return preset;
+    const max = preset.max;
+    return { min: preset.min, max, ticks: [0, max * 0.25, max * 0.5, max * 0.75, max] };
+  }
+  const autoMax = Math.max(5, Math.ceil(seriesMax / 5) * 5);
+  return { min: 0, max: autoMax, ticks: [0, autoMax * 0.25, autoMax * 0.5, autoMax * 0.75, autoMax] };
+}
+
+function statTrendChart(series, active, games, w, h, selectedGameId = null){
   const pad = {l:46, r:16, t:16, b:34};
   const iw = w-pad.l-pad.r, ih = h-pad.t-pad.b;
-
-  const seriesMax = Math.max(...series), seriesMin = Math.min(...series);
-  const range = Math.max(seriesMax-seriesMin, Math.abs(seriesMax)*0.1, 1);
-  const padV = range*0.2;
-  const hardMin = active.min===undefined ? undefined : active.min;
-  const hardMax = active.max===undefined ? undefined : active.max;
-  let max = seriesMax + padV;
-  let min = seriesMin - padV;
-  if(!(hardMin < 0)) min = Math.min(min, 0); // keep a zero baseline unless the stat can go negative
-  if(hardMax!==undefined) max = Math.min(Math.max(max, seriesMax), hardMax + padV*0.3);
-  if(hardMin!==undefined) min = Math.max(min, hardMin);
-  if(max<=min) max = min+1;
+  const axis = trendAxisSpec(active, series);
+  const min = axis.min;
+  const max = axis.max;
 
   const n = series.length;
   const x = i => pad.l + (n===1?iw/2:(i/(n-1))*iw);
   const y = v => pad.t + ih - ((v-min)/(max-min))*ih;
 
-  const gridY = [0,.25,.5,.75,1].map(t=> min + t*(max-min));
-  const yAxis = gridY.map(v=>`<line class="gridline" x1="${pad.l}" x2="${w-pad.r}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}"/><text class="axislabel" x="${pad.l-6}" y="${(y(v)+3).toFixed(1)}" text-anchor="end">${active.fmt(v)}</text>`).join('');
+  const yAxis = axis.ticks.map(v=>`<line class="gridline" x1="${pad.l}" x2="${w-pad.r}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}"/><text class="axislabel" x="${pad.l-6}" y="${(y(v)+3).toFixed(1)}" text-anchor="end">${formatTrendAxisValue(v)}</text>`).join('');
 
   const xTickEvery = Math.max(1, Math.ceil(n/8));
   const xAxis = series.map((v,i)=> (i%xTickEvery===0 || i===n-1) ? `<text class="axislabel" x="${x(i).toFixed(1)}" y="${h-pad.b+16}" text-anchor="middle">G${i+1}</text>` : '').join('');
@@ -885,12 +1716,16 @@ function statTrendChart(series, active, games, w, h){
   const linePath = series.map((v,i)=>(i===0?'M':'L')+x(i).toFixed(1)+','+y(v).toFixed(1)).join(' ');
   const areaPath = linePath + ` L${x(n-1).toFixed(1)},${y(min).toFixed(1)} L${x(0).toFixed(1)},${y(min).toFixed(1)} Z`;
 
-  const dots = series.map((v,i)=>`<circle class="trend-pt" cx="${x(i).toFixed(1)}" cy="${y(v).toFixed(1)}" r="${i===n-1?4.5:3}" fill="var(--series-a)" ${i===n-1?'stroke="white" stroke-width="1.5"':''} data-i="${i}"/>`).join('');
+  const dots = series.map((v,i)=>{
+    const fill = games && games[i % games.length] ? (games[i % games.length].win ? 'var(--good)' : 'var(--critical)') : 'var(--series-a)';
+    const selected = selectedGameId && games?.[i]?.gameId === selectedGameId;
+    return `<circle class="trend-pt" cx="${x(i).toFixed(1)}" cy="${y(v).toFixed(1)}" r="${selected?5.5:(i===n-1?4.5:3)}" fill="${fill}" ${(i===n-1 || selected)?'stroke="white" stroke-width="1.5"':''} data-i="${i}"/>`;
+  }).join('');
   const hitW = n>1 ? iw/(n-1) : iw;
-  const hits = series.map((v,i)=>`<rect class="hit" x="${(x(i)-hitW/2).toFixed(1)}" y="${pad.t}" width="${hitW.toFixed(1)}" height="${ih}" data-i="${i}"/>`).join('');
+  const hits = series.map((v,i)=>`<rect class="trend-hit" x="${(x(i)-hitW/2).toFixed(1)}" y="${pad.t}" width="${hitW.toFixed(1)}" height="${ih}" data-i="${i}"/>`).join('');
 
   return `<div class="chart-wrap" data-chart="stat-trend">
-    <svg class="chart" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" style="width:100%;height:100%;">
+    <svg class="chart chart--trend" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
       ${yAxis}
       <line class="gridline" x1="${pad.l}" x2="${pad.l}" y1="${pad.t}" y2="${h-pad.b}"/>
       <line class="gridline" x1="${pad.l}" x2="${w-pad.r}" y1="${h-pad.b}" y2="${h-pad.b}"/>
@@ -905,13 +1740,25 @@ function statTrendChart(series, active, games, w, h){
     </svg>
   </div>`;
 }
-function wireStatTrendChart(container, series, active, games){
+
+function formatTrendTooltipValue(active, value){
+  if(['min','pts','reb','ast','stl','blk'].includes(active.key)){
+    return `${Math.round(value)}`;
+  }
+  if(active.key === 'pm'){
+    const rounded = Math.round(value);
+    return `${rounded >= 0 ? '+' : ''}${rounded}`;
+  }
+  return active.fmt(value);
+}
+
+function wireStatTrendChart(container, series, active, games, onSelectGame = null){
   const wrap = container.querySelector('[data-chart="stat-trend"]');
   if(!wrap) return;
   const svg = wrap.querySelector('svg');
   const tooltip = document.getElementById('tooltip');
   const hoverline = wrap.querySelector('#stat-hoverline');
-  svg.querySelectorAll('.hit').forEach(hit=>{
+  svg.querySelectorAll('.trend-hit').forEach(hit=>{
     hit.addEventListener('mouseenter', ()=>{
       const i = +hit.dataset.i;
       const pt = svg.querySelector(`.trend-pt[data-i="${i}"]`);
@@ -922,37 +1769,325 @@ function wireStatTrendChart(container, series, active, games){
       const py = (pt.getAttribute('cy')/svg.viewBox.baseVal.height)*rect.height;
       const g = games && games.length ? games[i % games.length] : null;
       const sub = g ? `Game ${i+1} · ${g.win?'W':'L'} vs ${g.opp}` : `Game ${i+1}`;
-      tooltip.innerHTML = `<div>${active.fmt(series[i])} ${active.label} <span class="t-sub">${sub}</span></div>`;
+      const displayValue = formatTrendTooltipValue(active, series[i]);
+      tooltip.innerHTML = `<div>${displayValue} ${active.label} <span class="t-sub">${sub}</span></div>`;
       tooltip.style.transform = 'translate(-50%,-125%)';
       tooltip.style.left = (wrapAbs.left+window.scrollX+px)+'px'; tooltip.style.top = (wrapAbs.top+window.scrollY+py)+'px';
       tooltip.classList.add('show');
     });
     hit.addEventListener('mouseleave', ()=>{ hoverline.style.opacity=0; tooltip.classList.remove('show'); });
+    hit.addEventListener('click', ()=>{
+      const i = +hit.dataset.i;
+      if(onSelectGame && games[i]){
+        onSelectGame(games[i], i);
+      }
+    });
   });
 }
 
-function playerDetail(team, idx){
-  const p = team.players[idx], pg = playerPerGame(p);
-  const defs = playerStatDefs(team, p, pg);
-  const active = defs.find(d=>d.key===state.playerStatKey) || defs[0];
+function shotSliceColor(fgPct){
+  if(fgPct >= 50) return 'var(--good)';
+  if(fgPct >= 35) return '#D5A437';
+  return 'var(--critical)';
+}
 
+function polarPoint(cx, cy, radius, degrees){
+  const radians = ((degrees - 90) * Math.PI) / 180;
+  return {
+    x: cx + radius * Math.cos(radians),
+    y: cy + radius * Math.sin(radians),
+  };
+}
+
+function pieSlicePath(cx, cy, radius, startAngle, endAngle){
+  const start = polarPoint(cx, cy, radius, endAngle);
+  const end = polarPoint(cx, cy, radius, startAngle);
+  const largeArc = endAngle - startAngle > 180 ? 1 : 0;
+  return `M ${cx} ${cy} L ${start.x.toFixed(2)} ${start.y.toFixed(2)} A ${radius} ${radius} 0 ${largeArc} 0 ${end.x.toFixed(2)} ${end.y.toFixed(2)} Z`;
+}
+
+function shotDistributionChart(rows){
+  const cx = 140;
+  const cy = 120;
+  const radius = 92;
+  const insideLabelThreshold = 8;
+  const orderedRows = [
+    rows.find(row => row.label === 'Rim'),
+    rows.find(row => row.label === '3PT'),
+    rows.find(row => row.label === 'Mid'),
+  ].filter(row => row && row.share > 0.05);
+  const rimRow = orderedRows.find(row => row.label === 'Rim');
+  let startAngle = rimRow ? -(rimRow.share / 100) * 180 : 0;
+  const slices = orderedRows.map(row=>{
+    const sweep = (row.share / 100) * 360;
+    const endAngle = startAngle + sweep;
+    const path = pieSlicePath(cx, cy, radius, startAngle, endAngle);
+    const midAngle = startAngle + (sweep / 2);
+    const labelPoint = polarPoint(cx, cy, radius * 0.58, midAngle);
+    const outerPoint = polarPoint(cx, cy, radius * 1.04, midAngle);
+    const calloutPoint = polarPoint(cx, cy, radius * 1.22, midAngle);
+    const calloutDirection = calloutPoint.x >= cx ? 1 : -1;
+    const rawCalloutX = calloutPoint.x + (calloutDirection * 14);
+    const slice = {
+      ...row,
+      path,
+      labelX: labelPoint.x,
+      labelY: labelPoint.y,
+      outerX: outerPoint.x,
+      outerY: outerPoint.y,
+      calloutX: Math.max(32, Math.min(248, rawCalloutX)),
+      calloutY: calloutPoint.y,
+      textAnchor: calloutDirection > 0 ? 'start' : 'end',
+      labelInside: row.share >= insideLabelThreshold,
+      color: shotSliceColor(row.fg),
+    };
+    startAngle = endAngle;
+    return slice;
+  });
+  return `<div class="shot-pie-layout" data-shot-distribution>
+    <svg class="shot-pie" viewBox="0 0 280 240" aria-label="Shot distribution pie chart">
+      ${slices.map((slice, idx)=>`
+        <path
+          class="shot-pie-slice"
+          d="${slice.path}"
+          fill="${slice.color}"
+          data-shot-slice="${idx}"
+          data-area-key="${slice.label.toLowerCase()}"
+          data-label="${slice.label}"
+          data-share="${slice.share.toFixed(1)}"
+          data-fg="${slice.fg.toFixed(1)}"
+          data-assist-pct="${slice.assist.toFixed(1)}"
+          data-assist-makes="${slice.assistMakes.toFixed(1)}"
+        ></path>
+      `).join('')}
+      ${slices.map(slice=>`
+        ${slice.labelInside
+          ? `<text class="shot-pie-label" x="${slice.labelX.toFixed(1)}" y="${slice.labelY.toFixed(1)}" text-anchor="middle" dominant-baseline="middle">${slice.label}</text>`
+          : `
+            <path class="shot-pie-callout" d="M ${slice.outerX.toFixed(1)} ${slice.outerY.toFixed(1)} L ${slice.calloutX.toFixed(1)} ${slice.calloutY.toFixed(1)}"></path>
+            <text class="shot-pie-label shot-pie-label-outside" x="${slice.calloutX.toFixed(1)}" y="${slice.calloutY.toFixed(1)}" text-anchor="${slice.textAnchor}" dominant-baseline="middle">
+              ${slice.label}
+            </text>
+          `}
+      `).join('')}
+    </svg>
+  </div>`;
+}
+
+function wireShotDistributionChart(container){
+  const wrap = container.querySelector('[data-shot-distribution]');
+  if(!wrap) return;
+  const tooltip = document.getElementById('tooltip');
+  const showShotTooltip = (target, event)=>{
+    tooltip.innerHTML = `<div>${target.dataset.label} <span class="t-sub">${target.dataset.share}% of all FGA · ${target.dataset.fg}% FG · ${target.dataset.assistPct}% assisted</span></div>`;
+    tooltip.style.transform = 'translate(-50%,-125%)';
+    tooltip.style.left = `${event.pageX}px`;
+    tooltip.style.top = `${event.pageY}px`;
+    tooltip.classList.add('show');
+    const areaKey = target.dataset.areaKey;
+    wrap.querySelector(`[data-shot-slice][data-area-key="${areaKey}"]`)?.classList.add('active');
+  };
+  const hideShotTooltip = target=>{
+    tooltip.classList.remove('show');
+    const areaKey = target.dataset.areaKey;
+    wrap.querySelector(`[data-shot-slice][data-area-key="${areaKey}"]`)?.classList.remove('active');
+  };
+  wrap.querySelectorAll('[data-shot-slice]').forEach(slice=>{
+    slice.addEventListener('mouseenter', event=>{
+      showShotTooltip(slice, event);
+    });
+    slice.addEventListener('mousemove', event=>{
+      tooltip.style.left = `${event.pageX}px`;
+      tooltip.style.top = `${event.pageY}px`;
+    });
+    slice.addEventListener('mouseleave', ()=>{
+      hideShotTooltip(slice);
+    });
+    slice.addEventListener('focus', event=>{
+      const rect = slice.getBoundingClientRect();
+      showShotTooltip(slice, {
+        pageX: rect.left + window.scrollX + (rect.width / 2),
+        pageY: rect.top + window.scrollY,
+      });
+    });
+    slice.addEventListener('blur', ()=>{
+      hideShotTooltip(slice);
+    });
+  });
+}
+
+function playerRadarChart(metrics){
+  const cx = 132;
+  const cy = 126;
+  const radius = 86;
+  const axes = [
+    { label: 'Scoring', value: Math.min(100, (metrics.ppg / 20) * 100) },
+    { label: 'Shooting', value: Math.min(100, metrics.tsPct) },
+    { label: 'Usage', value: Math.min(100, (metrics.usg / 30) * 100) },
+    { label: 'Defense', value: Math.min(100, (((metrics.stlPct + metrics.blkPct) / 2) / 6) * 100) },
+    { label: 'Rebound', value: Math.min(100, (metrics.rpg / 10) * 100) },
+    { label: 'Passing', value: Math.min(100, (metrics.astPct / 35) * 100) },
+  ];
+  const levels = [0.25, 0.5, 0.75, 1];
+  const angleStep = (Math.PI * 2) / axes.length;
+  const pointAt = (axisIdx, scale) => {
+    const angle = -Math.PI / 2 + (axisIdx * angleStep);
+    return {
+      x: cx + Math.cos(angle) * radius * scale,
+      y: cy + Math.sin(angle) * radius * scale,
+    };
+  };
+  const rings = levels.map(level => {
+    const path = axes.map((_, idx) => {
+      const pt = pointAt(idx, level);
+      return `${idx===0?'M':'L'} ${pt.x.toFixed(1)} ${pt.y.toFixed(1)}`;
+    }).join(' ') + ' Z';
+    return `<path class="radar-grid-ring" d="${path}"></path>`;
+  }).join('');
+  const spokes = axes.map((_, idx) => {
+    const pt = pointAt(idx, 1);
+    return `<line class="radar-grid-spoke" x1="${cx}" y1="${cy}" x2="${pt.x.toFixed(1)}" y2="${pt.y.toFixed(1)}"></line>`;
+  }).join('');
+  const areaPath = axes.map((axis, idx) => {
+    const pt = pointAt(idx, axis.value / 100);
+    return `${idx===0?'M':'L'} ${pt.x.toFixed(1)} ${pt.y.toFixed(1)}`;
+  }).join(' ') + ' Z';
+  const points = axes.map((axis, idx) => {
+    const pt = pointAt(idx, axis.value / 100);
+    return `<circle class="radar-point" cx="${pt.x.toFixed(1)}" cy="${pt.y.toFixed(1)}" r="3.5"></circle>`;
+  }).join('');
+  const labels = axes.map((axis, idx) => {
+    const pt = pointAt(idx, 1.18);
+    return `<text class="radar-axis-label" x="${pt.x.toFixed(1)}" y="${pt.y.toFixed(1)}" text-anchor="middle" dominant-baseline="middle">${axis.label}</text>`;
+  }).join('');
+  return `<div class="player-radar-panel">
+    <div class="card-title"><h3>Role Profile</h3><span class="hint">Percent-based radar design</span></div>
+    <svg class="player-radar" viewBox="0 0 264 252" aria-label="Player role radar chart">
+      ${rings}
+      ${spokes}
+      <path class="radar-area" d="${areaPath}"></path>
+      ${points}
+      ${labels}
+    </svg>
+  </div>`;
+}
+
+function playerShotProfileCard(team, player){
+  const metrics = rosterPlayerMetrics(team, player, 0).metrics;
+  const rows = [
+    {label:'Rim', share:metrics.rimShare, fg:metrics.rimFgPct, assist:metrics.rimAssistPct, assistMakes:metrics.rimMakes * (metrics.rimAssistPct / 100)},
+    {label:'Mid', share:metrics.midShare, fg:metrics.midFgPct, assist:metrics.midAssistPct, assistMakes:metrics.midMakes * (metrics.midAssistPct / 100)},
+    {label:'3PT', share:metrics.threeShare, fg:metrics.tpPct, assist:metrics.threeAssistPct, assistMakes:metrics.threeMakes * (metrics.threeAssistPct / 100)},
+  ];
+  return `<div class="pdetail-shot-profile">
+    <div class="player-visual-grid">
+      <div class="player-shot-panel">
+        <div class="card-title"><h3>Shot Distribution</h3><span class="hint">Hover an area for share, FG%, and assisted%</span></div>
+        ${shotDistributionChart(rows)}
+      </div>
+      ${playerRadarChart(metrics)}
+    </div>
+  </div>`;
+}
+
+function playerModalOptions(team, idx){
+  return team.players
+    .map((player, playerIdx)=>({ player, playerIdx, mpg: playerPerGame(player).mpg }))
+    .sort((a,b)=> b.mpg - a.mpg || displayPlayerName(a.player.name).localeCompare(displayPlayerName(b.player.name)))
+    .map(({ player, playerIdx })=>`<option value="${playerIdx}" ${playerIdx===idx?'selected':''}>#${player.num} ${displayPlayerName(player.name)}</option>`)
+    .join('');
+}
+
+function playerTrendWindowOptions(){
+  const options = [
+    { value: 'all', label: 'All Games' },
+    { value: '10', label: 'Last 10' },
+    { value: '5', label: 'Last 5' },
+    { value: '3', label: 'Last 3' },
+  ];
+  return options.map(option => `<option value="${option.value}" ${state.playerTrendWindow===option.value?'selected':''}>${option.label}</option>`).join('');
+}
+
+function playerTrendGames(team, player){
+  const playerLogs = team.playerGameLogs?.[normalizePlayerName(player.name)];
+  const availableGames = (playerLogs && playerLogs.length)
+    ? playerLogs
+    : team.games.slice(-Math.min(team.games.length, player.gp));
+  if(state.playerTrendWindow === 'all') return availableGames;
+  const count = Number(state.playerTrendWindow);
+  return Number.isFinite(count) && count > 0 ? availableGames.slice(-count) : availableGames;
+}
+
+function playerTrendSeries(team, player, active, entries){
+  const actualSeriesKey = {
+    min: 'min',
+    pts: 'pts',
+    reb: 'reb',
+    ast: 'ast',
+    stl: 'stl',
+    blk: 'blk',
+    fgpct: 'fgPct',
+    tppct: 'tpPct',
+    ftpct: 'ftPct',
+  }[active.key];
+  if(actualSeriesKey && entries.length && entries[0][actualSeriesKey] !== undefined){
+    return entries.map(entry => Number(entry[actualSeriesKey] || 0));
+  }
   const spread = Math.max(0.5, Math.abs(active.val)*0.35);
-  const seed = p.num*7 + p.name.length + active.key.length*13;
-  const series = seededSeries(seed, p.gp, active.val, spread, {decimals:active.decimals, min:active.min, max:active.max});
+  const seed = player.num*7 + player.name.length + active.key.length*13;
+  return seededSeries(seed, Math.max(entries.length, 1), active.val, spread, {decimals:active.decimals, min:active.min, max:active.max});
+}
+
+function playerGameStatDefs(gameLog){
+  return [
+    {key:'min', label:'MIN', trendLabel:'Minutes', val:gameLog.min, fmt:fmt1, decimals:1},
+    {key:'pts', label:'PTS', trendLabel:'Points', val:gameLog.pts, fmt:v => `${v}`, decimals:0},
+    {key:'reb', label:'REB', trendLabel:'Rebounds', val:gameLog.reb, fmt:v => `${v}`, decimals:0},
+    {key:'ast', label:'AST', trendLabel:'Assists', val:gameLog.ast, fmt:v => `${v}`, decimals:0},
+    {key:'stl', label:'STL', trendLabel:'Steals', val:gameLog.stl, fmt:v => `${v}`, decimals:0},
+    {key:'blk', label:'BLK', trendLabel:'Blocks', val:gameLog.blk, fmt:v => `${v}`, decimals:0},
+    {key:'fgpct', label:'FG', trendLabel:'FG%', val:`${gameLog.fgm}-${gameLog.fga}`, fmt:v => v, decimals:1, max:100},
+    {key:'tppct', label:'3PT', trendLabel:'3P%', val:`${gameLog.tpm}-${gameLog.tpa}`, fmt:v => v, decimals:1, max:100},
+    {key:'ftpct', label:'FT', trendLabel:'FT%', val:`${gameLog.ftm}-${gameLog.fta}`, fmt:v => v, decimals:1, max:100},
+    {key:'pm', label:'TOV', trendLabel:'Turnovers', val:gameLog.to, fmt:v => `${v}`, decimals:0, min:0},
+  ];
+}
+
+function formatTrendAxisValue(value){
+  return Number.isInteger(value) ? `${value}` : value.toFixed(1).replace(/\.0$/, '');
+}
+
+function playerDetail(team, idx, stateKey = ''){
+  const p = team.players[idx], pg = playerPerGame(p);
+  const trendGames = playerTrendGames(team, p);
+  const activeGame = state.playerGameFocus && state.playerGameFocus.team===state.team && state.playerGameFocus.idx===idx
+    ? trendGames.find(game => game.gameId === state.playerGameFocus.gameId) || null
+    : null;
+  const defs = activeGame ? playerGameStatDefs(activeGame) : playerStatDefs(team, p, pg);
+  const active = defs.find(d=>d.key===state.playerStatKey) || defs[0];
+  const displayName = displayPlayerName(p.name);
+  const headshot = playerHeadshot(state.team, p.name);
+  const series = playerTrendSeries(team, p, active, trendGames);
+  const contextLabel = activeGame
+    ? `${activeGame.date} ${activeGame.home ? 'vs' : '@'} ${activeGame.opp}`
+    : `${state.playerTrendWindow === 'all' ? 'Season' : `Last ${state.playerTrendWindow}`} view`;
 
   return `<div class="card" id="player-detail">
     <div class="pdetail-head">
-      <div class="pdetail-avatar">${avatarContent(state.team, initials(p.name))}</div>
+      <div class="pdetail-avatar">${headshot ? `<img src="${headshot}" alt="${displayName} headshot">` : avatarContent(state.team, initials(p.name))}</div>
       <div>
-        <h3 class="pdetail-name">${p.name} <span class="muted" style="font-weight:700;">#${p.num}</span></h3>
-        <div class="pdetail-meta"><b>${p.pos}</b> · ${team.name} · ${p.gp} games · ${fmt1(pg.mpg)} min/gm</div>
+        <h3 class="pdetail-name">${displayName} <span class="muted" style="font-weight:700;">#${p.num}</span></h3>
+        <div class="pdetail-meta">${displayListedPosition(p)} · ${displayClassYear(p)} · ${team.name} · ${p.gp} games</div>
       </div>
-      <button class="btn" style="margin-left:auto;" id="close-detail">Close</button>
     </div>
 
     <div class="pdetail-body">
       <div class="pdetail-stats-col">
-        <div class="eyebrow" style="margin-bottom:8px;">Select a stat</div>
+        <div class="pdetail-stats-head">
+          <div class="eyebrow">${activeGame ? 'Game Stats' : 'Select a stat'}</div>
+          <span class="pdetail-context-label">${contextLabel}</span>
+          ${activeGame ? `<button type="button" class="btn link" data-clear-player-game>Back to season</button>` : ''}
+        </div>
         <div class="stat-tile-grid">
           ${defs.map(d=>`
             <button class="tile stat-tile ${d.key===active.key?'active':''}" data-stat="${d.key}">
@@ -961,33 +2096,146 @@ function playerDetail(team, idx){
         </div>
       </div>
       <div class="pdetail-chart-col">
-        <div class="card-title"><h3>${active.trendLabel}, game by game</h3><span class="hint">Illustrative trend</span></div>
-        ${statTrendChart(series, active, team.games, 640, 340)}
+        <div class="card-title">
+          <h3>${active.trendLabel}, game by game</h3>
+          <div class="player-detail-actions">
+            ${stateKey ? `
+              <label class="player-detail-picker">
+                <span>Choose Player</span>
+                <select data-player-picker="${stateKey}" aria-label="Choose player">
+                  ${playerModalOptions(team, idx)}
+                </select>
+              </label>
+              <label class="player-detail-picker player-detail-picker--compact">
+                <span>Window</span>
+                <select data-player-trend-window="${stateKey}" aria-label="Choose game window">
+                  ${playerTrendWindowOptions()}
+                </select>
+              </label>
+            ` : ''}
+            <span class="hint">${team.playerGameLogs?.[normalizePlayerName(p.name)]?.length ? 'Click a point for game stats' : 'Illustrative trend'}</span>
+          </div>
+        </div>
+        ${statTrendChart(series, active, trendGames, 640, 265, activeGame?.gameId || null)}
+        ${playerShotProfileCard(team, p)}
       </div>
     </div>
   </div>`;
 }
 function wireRoster(container){
-  container.querySelectorAll('.player-card').forEach(btn=>btn.addEventListener('click',()=>{
-    state.selectedPlayer = {team:state.team, idx:+btn.dataset.idx}; state.playerStatKey='pts'; render();
-    document.getElementById('player-detail')?.scrollIntoView({behavior:'smooth', block:'nearest'});
+  const team = analysisTeam(getTeamData(state.team, state.season));
+  container.querySelectorAll('[data-roster-view]').forEach(btn=>btn.addEventListener('click', ()=>{
+    state.rosterScrollLeft = 0;
+    state.rosterTableView = btn.dataset.rosterView;
+    render();
+  }));
+  container.querySelectorAll('[data-shooting-mode]').forEach(btn=>btn.addEventListener('click', ()=>{
+    const wrap = container.querySelector('.roster-table-wrap');
+    state.rosterScrollLeft = wrap ? wrap.scrollLeft : 0;
+    state.shootingMode = btn.dataset.shootingMode;
+    render();
+  }));
+  container.querySelectorAll('[data-roster-mode]').forEach(btn=>btn.addEventListener('click', ()=>{
+    const wrap = container.querySelector('.roster-table-wrap');
+    state.rosterScrollLeft = wrap ? wrap.scrollLeft : 0;
+    state.rosterMode = btn.dataset.rosterMode;
+    state.rosterSortMain = {
+      key: state.rosterMode === 'per40' ? 'pts40' : 'ppg',
+      dir: -1,
+    };
+    render();
+  }));
+  container.querySelectorAll('[data-roster-sort]').forEach(btn=>btn.addEventListener('click', e=>{
+    e.stopPropagation();
+    const wrap = container.querySelector('.roster-table-wrap');
+    state.rosterScrollLeft = wrap ? wrap.scrollLeft : 0;
+    const key = btn.dataset.rosterSort;
+    const sortKey = btn.dataset.rosterTable;
+    const stateKey = sortKey === 'shooting'
+      ? 'rosterSortShooting'
+      : sortKey === 'efficiency'
+        ? 'rosterSortEfficiency'
+        : 'rosterSortMain';
+    const current = state[stateKey];
+    state[stateKey] = { key, dir: current.key===key ? -current.dir : (key==='name' ? 1 : -1) };
+    render();
+  }));
+  container.querySelectorAll('.roster-table tbody tr[data-idx]').forEach(row=>row.addEventListener('click',()=>{
+    const idx = +row.dataset.idx;
+    const isSame = state.selectedPlayer && state.selectedPlayer.team===state.team && state.selectedPlayer.idx===idx;
+    state.selectedPlayer = isSame ? null : {team:state.team, idx};
+    state.playerStatKey='pts';
+    state.playerGameFocus = null;
+    render();
   }));
   container.querySelectorAll('.stat-tile').forEach(btn=>btn.addEventListener('click',()=>{
     state.playerStatKey = btn.dataset.stat; render();
-    document.getElementById('player-detail')?.scrollIntoView({behavior:'smooth', block:'nearest'});
   }));
-  container.querySelector('#close-detail')?.addEventListener('click',()=>{ state.selectedPlayer=null; render(); });
 
   if(state.selectedPlayer && state.selectedPlayer.team===state.team){
-    const team = TEAMS[state.team];
-    const p = team.players[state.selectedPlayer.idx], pg = playerPerGame(p);
-    const defs = playerStatDefs(team, p, pg);
-    const active = defs.find(d=>d.key===state.playerStatKey) || defs[0];
-    const spread = Math.max(0.5, Math.abs(active.val)*0.35);
-    const seed = p.num*7 + p.name.length + active.key.length*13;
-    const series = seededSeries(seed, p.gp, active.val, spread, {decimals:active.decimals, min:active.min, max:active.max});
-    wireStatTrendChart(container, series, active, team.games);
+    wirePlayerModal(container, team, 'selectedPlayer', state.selectedPlayer.idx);
   }
+}
+
+function wireRosterCards(container){
+  const team = analysisTeam(getTeamData(state.team, state.season));
+  container.querySelectorAll('[data-roster-card]').forEach(card=>card.addEventListener('click', ()=>{
+    state.rosterCardPlayer = { team: state.team, idx: Number(card.dataset.rosterCard) };
+    state.playerStatKey = 'pts';
+    state.playerGameFocus = null;
+    render();
+  }));
+
+  if(state.rosterCardPlayer && state.rosterCardPlayer.team===state.team){
+    wirePlayerModal(container, team, 'rosterCardPlayer', state.rosterCardPlayer.idx);
+  }
+}
+
+function wirePlayerModal(container, team, stateKey, idx){
+  container.querySelectorAll(`[data-player-modal-close="${stateKey}"]`).forEach(backdrop=>backdrop.addEventListener('click', e=>{
+    if(e.target.closest('[data-player-modal-shell]') && !e.target.matches(`[data-player-modal-button="${stateKey}"]`)) return;
+    state[stateKey] = null;
+    render();
+  }));
+  container.querySelector(`[data-player-modal-button="${stateKey}"]`)?.addEventListener('click', ()=>{
+    state[stateKey] = null;
+    state.playerGameFocus = null;
+    render();
+  });
+  container.querySelector(`[data-player-picker="${stateKey}"]`)?.addEventListener('change', e=>{
+    state[stateKey] = { team: state.team, idx: Number(e.target.value) };
+    state.playerGameFocus = null;
+    render();
+  });
+  container.querySelector(`[data-player-trend-window="${stateKey}"]`)?.addEventListener('change', e=>{
+    state.playerTrendWindow = e.target.value;
+    state.playerGameFocus = null;
+    render();
+  });
+  container.querySelector('[data-clear-player-game]')?.addEventListener('click', ()=>{
+    state.playerGameFocus = null;
+    render();
+  });
+  container.querySelectorAll('.stat-tile').forEach(btn=>btn.addEventListener('click', ()=>{
+    state.playerStatKey = btn.dataset.stat;
+    render();
+  }));
+
+  const p = team.players[idx];
+  const pg = playerPerGame(p);
+  const trendGames = playerTrendGames(team, p);
+  const activeGame = state.playerGameFocus && state.playerGameFocus.team===state.team && state.playerGameFocus.idx===idx
+    ? trendGames.find(game => game.gameId === state.playerGameFocus.gameId) || null
+    : null;
+  const defs = activeGame ? playerGameStatDefs(activeGame) : playerStatDefs(team, p, pg);
+  const active = defs.find(d=>d.key===state.playerStatKey) || defs[0];
+  const series = playerTrendSeries(team, p, active, trendGames);
+  wireStatTrendChart(container, series, active, trendGames, game=>{
+    const isSame = state.playerGameFocus && state.playerGameFocus.team===state.team && state.playerGameFocus.idx===idx && state.playerGameFocus.gameId===game.gameId;
+    state.playerGameFocus = isSame ? null : { team: state.team, idx, gameId: game.gameId };
+    render();
+  });
+  wireShotDistributionChart(container);
 }
 
 
@@ -1029,11 +2277,21 @@ const CP_STATS = [
   {key:'usg', label:'USG%', fmt:v=>v.toFixed(1), max:35},
 ];
 function playerPickerOptions(){
-  return TEAM_KEYS.map(tk=>`<optgroup label="${TEAMS[tk].name}">${TEAMS[tk].players.map((p,i)=>
-    `<option value="${tk}|${i}">#${p.num} ${p.name}</option>`).join('')}</optgroup>`).join('');
+  return TEAM_KEYS.map(tk=>{
+    const team = getTeamData(tk, state.season);
+    const options = team.players.map((p,i)=>
+      `<option value="${tk}|${i}">#${p.num} ${p.name}</option>`
+    ).join('');
+    return `<optgroup label="${team.name}">${options}</optgroup>`;
+  }).join('');
 }
 function viewComparePlayers(){
-  const team1 = TEAMS[state.p1.team], team2 = TEAMS[state.p2.team];
+  const team1 = getTeamData(state.p1.team, state.season), team2 = getTeamData(state.p2.team, state.season);
+  if((isDynamicTeam(state.p1.team) && !team1.players.length) || (isDynamicTeam(state.p2.team) && !team2.players.length)){
+    if(isDynamicTeam(state.p1.team)) ensureTeamData(state.p1.team, state.season).then(()=>render());
+    if(isDynamicTeam(state.p2.team)) ensureTeamData(state.p2.team, state.season).then(()=>render());
+    return loadingCard(isDynamicTeam(state.p1.team) ? state.p1.team : state.p2.team, state.season);
+  }
   const p1 = team1.players[state.p1.idx], pg1 = playerPerGame(p1);
   const p2 = team2.players[state.p2.idx], pg2 = playerPerGame(p2);
   pg1.efgPct = efgPct(p1); pg1.plusMinus = seededVal(team1.short+p1.name+'pm', -8, 12); pg1.usg = usageRate(team1, p1);
@@ -1048,12 +2306,12 @@ function viewComparePlayers(){
       <div class="compare-heads">
         <div class="compare-side">
           <div class="compare-avatar" style="background:color-mix(in srgb, var(--series-a) 22%, var(--surface-3));color:var(--series-a)">${avatarContent(state.p1.team, initials(p1.name))}</div>
-          <div><div class="compare-name">${p1.name}</div><div class="compare-meta">#${p1.num} ${p1.pos} · ${TEAMS[state.p1.team].name}</div></div>
+          <div><div class="compare-name">${p1.name}</div><div class="compare-meta">#${p1.num} ${p1.pos} · ${team1.name}</div></div>
         </div>
         <div class="compare-vs">VS</div>
         <div class="compare-side right">
           <div class="compare-avatar" style="background:color-mix(in srgb, var(--series-b) 22%, var(--surface-3));color:var(--series-b)">${avatarContent(state.p2.team, initials(p2.name))}</div>
-          <div><div class="compare-name">${p2.name}</div><div class="compare-meta">#${p2.num} ${p2.pos} · ${TEAMS[state.p2.team].name}</div></div>
+          <div><div class="compare-name">${p2.name}</div><div class="compare-meta">#${p2.num} ${p2.pos} · ${team2.name}</div></div>
         </div>
       </div>
     </div>
@@ -1113,7 +2371,12 @@ function ctLegend(t1, t2){
 }
 
 function viewCompareTeams(){
-  const t1 = TEAMS[state.t1], t2 = TEAMS[state.t2];
+  const t1 = getTeamData(state.t1, state.season), t2 = getTeamData(state.t2, state.season);
+  if((isDynamicTeam(state.t1) && !t1.players.length) || (isDynamicTeam(state.t2) && !t2.players.length)){
+    if(isDynamicTeam(state.t1)) ensureTeamData(state.t1, state.season).then(()=>render());
+    if(isDynamicTeam(state.t2)) ensureTeamData(state.t2, state.season).then(()=>render());
+    return loadingCard(isDynamicTeam(state.t1) ? state.t1 : state.t2, state.season);
+  }
   const s1 = teamAdvancedStats(t1), s2 = teamAdvancedStats(t2);
   return `
     <div class="compare-picker-row">
@@ -1151,8 +2414,8 @@ function viewCompareTeams(){
   `;
 }
 function wireCompareTeams(container){
-  container.querySelector('#t1-pick').addEventListener('change', e=>{ state.t1=e.target.value; render(); });
-  container.querySelector('#t2-pick').addEventListener('change', e=>{ state.t2=e.target.value; render(); });
+  container.querySelector('#t1-pick').addEventListener('change', e=>{ state.t1=e.target.value; state.season = preferredSeasonForTeam(state.t1, state.season); render(); });
+  container.querySelector('#t2-pick').addEventListener('change', e=>{ state.t2=e.target.value; state.season = preferredSeasonForTeam(state.t2, state.season); render(); });
 }
 
 /* ============================= RENDER DISPATCH ============================= */
@@ -1162,13 +2425,31 @@ function render(){
   const root = document.getElementById('view');
   if(state.view==='overview'){
     root.innerHTML = viewOverview();
-    wireTrendChart(root, TEAMS[state.team].games);
-    wireFoulsChart(root, TEAMS[state.team].games);
+    const currentTeam = analysisTeam(getTeamData(state.team, state.season));
+    if(currentTeam.games.length){
+      wireTrendChart(root, currentTeam.games);
+      wireQuarterChart(root, quarterAverages(currentTeam));
+      wireFoulsChart(root, currentTeam.games);
+    }
+    wireTeamSectionTabs(root);
     wireLeaderboardScroll(root);
     wireLeaderTabs(root);
   }
   else if(state.view==='gamelog'){ root.innerHTML = viewGameLog(); wireGameLog(root); }
-  else if(state.view==='roster'){ root.innerHTML = viewRoster(); wireRoster(root); }
+  else if(state.view==='roster'){
+    root.innerHTML = viewRoster();
+    wireTeamSectionTabs(root);
+    wireRoster(root);
+    const wrap = root.querySelector('.roster-table-wrap');
+    if(wrap){
+      requestAnimationFrame(()=>{ wrap.scrollLeft = state.rosterScrollLeft || 0; });
+    }
+  }
+  else if(state.view==='rostercards'){
+    root.innerHTML = viewRosterCards();
+    wireTeamSectionTabs(root);
+    wireRosterCards(root);
+  }
   else if(state.view==='cplayers'){ root.innerHTML = viewComparePlayers(); wireComparePlayers(root); }
   else if(state.view==='cteams'){ root.innerHTML = viewCompareTeams(); wireCompareTeams(root); }
 }

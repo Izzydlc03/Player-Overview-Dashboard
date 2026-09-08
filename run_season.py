@@ -76,7 +76,7 @@ def main():
     ap.add_argument("season", help="e.g. 2025-26")
     ap.add_argument("--teams", default=",".join(TEAMS.keys()))
     ap.add_argument("--out-dir", default=os.path.join(
-        os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "output"))
+        os.path.dirname(os.path.abspath(__file__)), "output"))
     ap.add_argument("--no-cache", action="store_true")
     args = ap.parse_args()
 
