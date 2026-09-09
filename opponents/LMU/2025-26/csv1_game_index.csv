@@ -1,0 +1,32 @@
+game_id,date,home_team,away_team,home_score,away_score,winner,site_location,home_away_neutral,is_conference_game,season,source_url
+2025-11-05_lmu_ca_utah_valley,2025-11-05,LMU (CA),Utah Valley,60,64,Utah Valley,Gersten Pavilion,home,False,2025-26,https://lmulions.com/sports/womens-basketball/stats/2025-26/utah-valley-university/boxscore/17472
+2025-11-09_lmu_ca_denver,2025-11-09,LMU (CA),Denver,64,57,LMU (CA),Gersten Pavilion,home,False,2025-26,https://lmulions.com/sports/womens-basketball/stats/2025-26/university-of-denver/boxscore/17473
+2025-11-13_nevada_lmu_ca,2025-11-13,Nevada,LMU (CA),56,52,Nevada,"Reno, NV",away,False,2025-26,https://lmulions.com/sports/womens-basketball/stats/2025-26/university-of-nevada/boxscore/17474
+2025-11-21_hawaii_lmu_ca,2025-11-21,Hawaii,LMU (CA),55,51,Hawaii,"Manoa, HI",away,False,2025-26,https://lmulions.com/sports/womens-basketball/stats/2025-26/hawaii/boxscore/17477
+2025-11-23_lmu_ca_idaho_st,2025-11-23,LMU (CA),Idaho St.,71,52,LMU (CA),"Manoa, Hawaii",neutral,False,2025-26,https://lmulions.com/sports/womens-basketball/stats/2025-26/idaho-state/boxscore/17478
+2025-11-29_cal_st_fullerton_lmu_ca,2025-11-29,Cal St. Fullerton,LMU (CA),62,73,LMU (CA),"Fullerton, CA",away,False,2025-26,https://lmulions.com/sports/womens-basketball/stats/2025-26/cal-state-fullerton/boxscore/17479
+2025-12-05_lmu_ca_utah_st,2025-12-05,LMU (CA),Utah St.,63,58,LMU (CA),Gersten Pavilion,home,False,2025-26,https://lmulions.com/sports/womens-basketball/stats/2025-26/utah-state-university/boxscore/17480
+2025-12-13_wichita_st_lmu_ca,2025-12-13,Wichita St.,LMU (CA),71,64,Wichita St.,"Wichita, KS",away,False,2025-26,https://lmulions.com/sports/womens-basketball/stats/2025-26/wichita-state-university/boxscore/17481
+2025-12-16_lmu_ca_chapman,2025-12-16,LMU (CA),Chapman,81,27,LMU (CA),Gersten Pavilion,home,False,2025-26,https://lmulions.com/sports/womens-basketball/stats/2025-26/chapman-university/boxscore/17482
+2025-12-20_lmu_ca_weber_st,2025-12-20,LMU (CA),Weber St.,60,68,Weber St.,Gersten Pavilion,home,False,2025-26,https://lmulions.com/sports/womens-basketball/stats/2025-26/weber-state-university/boxscore/17484
+2025-12-21_lmu_ca_southern_utah,2025-12-21,LMU (CA),Southern Utah,76,68,LMU (CA),Gersten Pavilion,home,False,2025-26,https://lmulions.com/sports/womens-basketball/stats/2025-26/southern-utah-university/boxscore/17486
+2025-12-28_gonzaga_lmu_ca,2025-12-28,Gonzaga,LMU (CA),87,80,Gonzaga,"Spokane, WA",away,True,2025-26,https://lmulions.com/sports/womens-basketball/stats/2025-26/gonzaga-university/boxscore/17520
+2025-12-30_washington_st_lmu_ca,2025-12-30,Washington St.,LMU (CA),58,67,LMU (CA),"Pullman, WA",away,True,2025-26,https://lmulions.com/sports/womens-basketball/stats/2025-26/washington-state-university/boxscore/17521
+2026-01-02_lmu_ca_santa_clara,2026-01-02,LMU (CA),Santa Clara,92,85,LMU (CA),Gersten Pavilion,home,True,2025-26,https://lmulions.com/sports/womens-basketball/stats/2025-26/santa-clara-university/boxscore/17522
+2026-01-04_lmu_ca_san_francisco,2026-01-04,LMU (CA),San Francisco,82,85,San Francisco,Gersten Pavilion,home,True,2025-26,https://lmulions.com/sports/womens-basketball/stats/2025-26/university-of-san-francisco/boxscore/17524
+2026-01-08_pepperdine_lmu_ca,2026-01-08,Pepperdine,LMU (CA),78,83,LMU (CA),"Malibu, CA",away,True,2025-26,https://lmulions.com/sports/womens-basketball/stats/2025-26/pepperdine/boxscore/17525
+2026-01-15_lmu_ca_oregon_st,2026-01-15,LMU (CA),Oregon St.,55,51,LMU (CA),Gersten Pavilion,home,True,2025-26,https://lmulions.com/sports/womens-basketball/stats/2025-26/oregon-state-university/boxscore/17526
+2026-01-17_pacific_lmu_ca,2026-01-17,Pacific,LMU (CA),54,74,LMU (CA),"Stockton, CA",away,True,2025-26,https://lmulions.com/sports/womens-basketball/stats/2025-26/university-of-the-pacific/boxscore/17527
+2026-01-22_lmu_ca_portland,2026-01-22,LMU (CA),Portland,77,68,LMU (CA),Gersten Pavilion,home,True,2025-26,https://lmulions.com/sports/womens-basketball/stats/2025-26/university-of-portland/boxscore/17528
+2026-01-24_san_diego_lmu_ca,2026-01-24,San Diego,LMU (CA),69,60,San Diego,"San Diego, CA",away,True,2025-26,https://lmulions.com/sports/womens-basketball/stats/2025-26/university-of-san-diego/boxscore/17529
+2026-01-29_lmu_ca_pacific,2026-01-29,LMU (CA),Pacific,87,66,LMU (CA),Gersten Pavilion,home,True,2025-26,https://lmulions.com/sports/womens-basketball/stats/2025-26/university-of-the-pacific/boxscore/17530
+2026-01-31_lmu_ca_seattle_u,2026-01-31,LMU (CA),Seattle U,81,40,LMU (CA),Gersten Pavilion,home,True,2025-26,https://lmulions.com/sports/womens-basketball/stats/2025-26/seattle-university/boxscore/17531
+2026-02-05_saint_marys_ca_lmu_ca,2026-02-05,Saint Mary's (CA),LMU (CA),69,75,LMU (CA),"Moraga, CA",away,True,2025-26,https://lmulions.com/sports/womens-basketball/stats/2025-26/saint-marys-college/boxscore/17532
+2026-02-12_lmu_ca_pepperdine,2026-02-12,LMU (CA),Pepperdine,72,62,LMU (CA),Gersten Pavilion,home,True,2025-26,https://lmulions.com/sports/womens-basketball/stats/2025-26/pepperdine/boxscore/17533
+2026-02-14_lmu_ca_gonzaga,2026-02-14,LMU (CA),Gonzaga,72,63,LMU (CA),Gersten Pavilion,home,True,2025-26,https://lmulions.com/sports/womens-basketball/stats/2025-26/gonzaga-university/boxscore/17534
+2026-02-19_seattle_u_lmu_ca,2026-02-19,Seattle U,LMU (CA),54,78,LMU (CA),"Seattle, WA",away,True,2025-26,https://lmulions.com/sports/womens-basketball/stats/2025-26/seattle-university/boxscore/17535
+2026-02-21_lmu_ca_san_diego,2026-02-21,LMU (CA),San Diego,74,61,LMU (CA),Gersten Pavilion,home,True,2025-26,https://lmulions.com/sports/womens-basketball/stats/2025-26/university-of-san-diego/boxscore/17536
+2026-02-26_san_francisco_lmu_ca,2026-02-26,San Francisco,LMU (CA),57,66,LMU (CA),"San Francisco, CA",away,True,2025-26,https://lmulions.com/sports/womens-basketball/stats/2025-26/university-of-san-francisco/boxscore/17537
+2026-02-28_oregon_st_lmu_ca,2026-02-28,Oregon St.,LMU (CA),69,71,LMU (CA),"Corvallis, OR",away,True,2025-26,https://lmulions.com/sports/womens-basketball/stats/2025-26/oregon-state-university/boxscore/17538
+2026-03-09_lmu_ca_oregon_st,2026-03-09,LMU (CA),Oregon St.,67,73,Oregon St.,"Las Vegas, NV",neutral,False,2025-26,https://lmulions.com/sports/womens-basketball/stats/2025-26/oregon-state/boxscore/17748
+2026-03-19_stanford_lmu_ca,2026-03-19,Stanford,LMU (CA),80,76,Stanford,"Stanford, CA",away,False,2025-26,https://lmulions.com/sports/womens-basketball/stats/2025-26/stanford/boxscore/17751

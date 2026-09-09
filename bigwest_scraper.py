@@ -8,6 +8,7 @@ Big West Conference member sites and produces 4 linked CSVs:
 """
 import csv
 import hashlib
+import json
 import os
 import re
 import sys
@@ -29,7 +30,7 @@ REQUEST_DELAY_SECONDS = 1.5
 REQUEST_TIMEOUT = 25
 MAX_RETRIES = 3
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CACHE_DIR = os.path.join(BASE_DIR, "cache")
 
 # team_key -> (site domain, canonical display name as it appears on box score pages)
@@ -45,6 +46,7 @@ TEAMS = {
     "csuf": ("fullertontitans.com", "Cal State Fullerton"),
     "csub": ("gorunners.com", "Cal State Bakersfield"),
     "ucr": ("gohighlanders.com", "UC Riverside"),
+    "lmu": ("lmulions.com", "LMU"),
 }
 
 
@@ -101,8 +103,33 @@ class ScheduleGame:
     result_text: str
 
 
+def extract_schedule_meta_by_box_id(html: str) -> dict:
+    """Return Sidearm event metadata keyed by numeric boxscore id when available."""
+    meta_by_box_id = {}
+    for match in re.finditer(r"var obj = (\{.*?\});\s*(?:if\s*\(!\(\"sidearmComponents\"|window\.sidearmComponents\.push\(obj\);)", html, re.S):
+        try:
+            obj = json.loads(match.group(1))
+        except json.JSONDecodeError:
+            continue
+        if obj.get("type") != "events" or not isinstance(obj.get("data"), list):
+            continue
+        for event in obj["data"]:
+            result = event.get("result") or {}
+            boxscore = result.get("boxscore") or ""
+            box_id_match = re.search(r"id=(\d+)", boxscore)
+            if not box_id_match:
+                continue
+            meta_by_box_id[box_id_match.group(1)] = {
+                "is_conference": bool(event.get("is_conference")),
+                "conference": event.get("conference") or "",
+                "conference_abbrev": event.get("conference_abbrev") or "",
+            }
+    return meta_by_box_id
+
+
 def parse_schedule(html: str, team_key: str, domain: str) -> list:
     soup = BeautifulSoup(html, "lxml")
+    meta_by_box_id = extract_schedule_meta_by_box_id(html)
     games = []
     for li in soup.select("li.sidearm-schedule-game"):
         classes = li.get("class", [])
@@ -131,8 +158,17 @@ def parse_schedule(html: str, team_key: str, domain: str) -> list:
         if box_url.startswith("/"):
             box_url = f"https://{domain}{box_url}"
 
-        conf_span = li.select_one(".sidearm-schedule-game-conference-conference span")
-        is_conference = bool(conf_span and conf_span.get_text(strip=True))
+        box_id_match = re.search(r"/boxscore/(\d+)", box_url)
+        schedule_meta = meta_by_box_id.get(box_id_match.group(1), {}) if box_id_match else {}
+        conf_block = li.select_one(".sidearm-schedule-game-conference")
+        has_conference_badge = bool(
+            conf_block and (conf_block.get_text(strip=True) or conf_block.select_one("img[alt]"))
+        )
+        is_conference = (
+            schedule_meta["is_conference"]
+            if "is_conference" in schedule_meta
+            else has_conference_badge
+        )
 
         loc = li.select_one(".sidearm-schedule-game-location span")
         site_location = loc.get_text(strip=True) if loc else ""
@@ -461,6 +497,7 @@ def detect_template(html: str) -> str:
 
 def parse_schedule_v2(html: str, team_key: str, domain: str) -> list:
     soup = BeautifulSoup(html, "lxml")
+    meta_by_box_id = extract_schedule_meta_by_box_id(html)
     games = []
     for card in soup.select(".s-game-card"):
         opp_a = card.select_one('[data-test-id="s-game-card-standard__header-team-opponent-link"]')
@@ -485,8 +522,14 @@ def parse_schedule_v2(html: str, team_key: str, domain: str) -> list:
         if box_url.startswith("/"):
             box_url = f"https://{domain}{box_url}"
 
+        box_id_match = re.search(r"/boxscore/(\d+)", box_url)
+        schedule_meta = meta_by_box_id.get(box_id_match.group(1), {}) if box_id_match else {}
         descs = [d.get_text(strip=True) for d in card.select(".s-descriptor__text")]
-        is_conference = "Big West" in descs
+        is_conference = (
+            schedule_meta["is_conference"]
+            if "is_conference" in schedule_meta
+            else any("conference" in d.lower() for d in descs)
+        )
 
         loc_el = card.select_one('[data-test-id="s-game-card-facility-and-location__standard-location-details"]')
         site_location = loc_el.get_text(strip=True) if loc_el else ""
