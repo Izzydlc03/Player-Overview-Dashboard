@@ -565,6 +565,7 @@ tbody tr.selected{ background:var(--accent-soft); }
 .diffrow{ padding:10px 2px; border-bottom:1px solid var(--border); }
 .diffrow:last-child{ border-bottom:none; }
 .diffrow .stat-label{ font-size:10.5px; font-weight:800; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-muted); margin-bottom:6px; }
+.stat-label.has-tip{ cursor:help; width:fit-content; border-bottom:1px dotted var(--ink-faint); }
 .diff-bar-row{ display:grid; grid-template-columns:1fr 64px; align-items:center; gap:8px; }
 .diff-bar-row + .diff-bar-row{ margin-top:4px; }
 .diffval{ font-family:var(--font-mono); font-weight:800; font-size:13px; text-align:right; padding:2px 7px; border-radius:6px; }
@@ -589,6 +590,7 @@ svg.chart{ display:block; width:100%; height:auto; overflow:visible; }
   transform:translate(-50%,-115%); opacity:0; transition:opacity .1s; z-index:90; box-shadow:var(--shadow);
 }
 .tooltip.show{ opacity:1; }
+.tooltip.wide{ white-space:normal; max-width:220px; text-align:center; }
 .tooltip .t-sub{ font-weight:500; opacity:.75; }
 .hover-x{ stroke:var(--ink-faint); stroke-width:1; stroke-dasharray:3 3; opacity:0; }
 .hit{ fill:transparent; }

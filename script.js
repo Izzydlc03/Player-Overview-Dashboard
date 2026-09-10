@@ -595,7 +595,8 @@ function foulsForGames(games){
 const state = { view:'overview', team:'ucsd', season:'2025-26', gameSort:{key:'date',dir:1},
   p1:{team:'ucsd',idx:0}, p2:{team:'ucsb',idx:0}, t1:'ucsd', t2:'ucsb',
   selectedPlayer:null, rosterCardPlayer:null, leaderTab:'scorers', playerStatKey:'pts', playerTrendWindow:'all', playerGameFocus:null, rosterMode:'pergame', rosterTableView:'main', shootingMode:'basic', rosterScrollLeft:0,
-  rosterSortMain:{key:'ppg',dir:-1}, rosterSortShooting:{key:'tsPct',dir:-1}, rosterSortEfficiency:{key:'tsPct',dir:-1} };
+  rosterSortMain:{key:'ppg',dir:-1}, rosterSortShooting:{key:'tsPct',dir:-1}, rosterSortEfficiency:{key:'tsPct',dir:-1},
+  compareTeamsSection:'overview' };
 
 const NAV = [
   {id:'overview', label:'Team Overview'},
@@ -2176,7 +2177,7 @@ function diffRowsHtml(stats, obj1, obj2){
     const w1 = Math.max(0, Math.min(100, (v1-lo)/(s.max-lo)*100));
     const w2 = Math.max(0, Math.min(100, (v2-lo)/(s.max-lo)*100));
     return `<div class="diffrow ${aBetter?'a-wins':''} ${bBetter?'b-wins':''}">
-      <div class="stat-label">${s.label}</div>
+      <div class="stat-label has-tip" data-tip="${s.desc||''}">${s.label}</div>
       <div class="diff-bar-row">
         <div class="bar-track"><div class="bar-fill a" style="width:${w1}%"></div></div>
         <div class="diffval a">${s.fmt(v1)}</div>
@@ -2189,19 +2190,42 @@ function diffRowsHtml(stats, obj1, obj2){
   }).join('');
 }
 
+/* Hover a stat's abbreviation to see what it stands for + what it measures,
+   via data-tip set by diffRowsHtml from each stat def's `desc`. */
+function wireStatTooltips(container){
+  container.querySelectorAll('.has-tip[data-tip]').forEach(el=>{
+    if(!el.dataset.tip) return;
+    el.addEventListener('mouseenter', ()=>{
+      const tooltip = document.getElementById('tooltip');
+      const rect = el.getBoundingClientRect();
+      const halfWidth = 115, margin = 8; // matches .tooltip.wide's max-width:220px
+      const left = Math.max(halfWidth+margin, Math.min(window.innerWidth-halfWidth-margin, rect.left+rect.width/2));
+      tooltip.innerHTML = `<div>${el.dataset.tip}</div>`;
+      tooltip.classList.add('wide');
+      tooltip.style.transform = 'translate(-50%,-115%)';
+      tooltip.style.left = (left + window.scrollX) + 'px';
+      tooltip.style.top = (rect.top + window.scrollY) + 'px';
+      tooltip.classList.add('show');
+    });
+    el.addEventListener('mouseleave', ()=>{
+      document.getElementById('tooltip').classList.remove('show', 'wide');
+    });
+  });
+}
+
 const CP_STATS = [
-  {key:'ppg', label:'PPG', fmt:fmt1, max:30},
-  {key:'rpg', label:'RPG', fmt:fmt1, max:14},
-  {key:'apg', label:'APG', fmt:fmt1, max:9},
-  {key:'stlpg', label:'STL', fmt:fmt1, max:3.5},
-  {key:'blkpg', label:'BLK', fmt:fmt1, max:2.5},
-  {key:'topg', label:'TO', fmt:fmt1, max:4.5, lowerBetter:true},
-  {key:'efgPct', label:'eFG%', fmt:v=>v.toFixed(1), max:65},
-  {key:'fgPct', label:'FG%', fmt:v=>v.toFixed(1), max:65},
-  {key:'tpPct', label:'3P%', fmt:v=>v.toFixed(1), max:50},
-  {key:'ftPct', label:'FT%', fmt:v=>v.toFixed(1), max:100},
-  {key:'plusMinus', label:'+/-', fmt:v=>(v>=0?'+':'')+v.toFixed(1), min:-10, max:15},
-  {key:'usg', label:'USG%', fmt:v=>v.toFixed(1), max:35},
+  {key:'ppg', label:'PPG', desc:'Points Per Game — average points scored per game.', fmt:fmt1, max:30},
+  {key:'rpg', label:'RPG', desc:'Rebounds Per Game — average total rebounds per game.', fmt:fmt1, max:14},
+  {key:'apg', label:'APG', desc:'Assists Per Game — average assists per game.', fmt:fmt1, max:9},
+  {key:'stlpg', label:'STL', desc:'Steals Per Game — average steals per game.', fmt:fmt1, max:3.5},
+  {key:'blkpg', label:'BLK', desc:'Blocks Per Game — average blocks per game.', fmt:fmt1, max:2.5},
+  {key:'topg', label:'TO', desc:'Turnovers Per Game — average turnovers committed per game (lower is better).', fmt:fmt1, max:4.5, lowerBetter:true},
+  {key:'efgPct', label:'eFG%', desc:'Effective Field Goal % — field goal % adjusted to give 3-pointers extra credit for being worth more.', fmt:v=>v.toFixed(1), max:65},
+  {key:'fgPct', label:'FG%', desc:'Field Goal % — percentage of field goal attempts made.', fmt:v=>v.toFixed(1), max:65},
+  {key:'tpPct', label:'3P%', desc:'Three-Point % — percentage of three-point attempts made.', fmt:v=>v.toFixed(1), max:50},
+  {key:'ftPct', label:'FT%', desc:'Free Throw % — percentage of free throw attempts made.', fmt:v=>v.toFixed(1), max:100},
+  {key:'plusMinus', label:'+/-', desc:'Plus/Minus — point differential (points scored minus points allowed) while this player is on the floor.', fmt:v=>(v>=0?'+':'')+v.toFixed(1), min:-10, max:15},
+  {key:'usg', label:'USG%', desc:'Usage Rate — estimated share of the team\'s possessions this player uses (shots, free throws, turnovers) while on the floor.', fmt:v=>v.toFixed(1), max:35},
 ];
 function playerOptionsForTeam(teamKey, selectedIdx){
   const team = getTeamData(teamKey, state.season);
@@ -2264,36 +2288,37 @@ function wireComparePlayers(container){
   p1Player.addEventListener('change', e=>{ state.p1={team:state.p1.team, idx:+e.target.value}; render(); });
   p2Team.addEventListener('change', e=>{ state.p2={team:e.target.value, idx:0}; render(); });
   p2Player.addEventListener('change', e=>{ state.p2={team:state.p2.team, idx:+e.target.value}; render(); });
+  wireStatTooltips(container);
 }
 
 /* ============================= VIEW: COMPARE TEAMS ============================= */
 const CT_SEASON_STATS = [
-  {key:'ppg', label:'PPG', fmt:fmt1, max:90},
-  {key:'oppPpg', label:'Opp PPG', fmt:fmt1, max:90},
-  {key:'ortg', label:'ORTG', fmt:fmt1, max:130},
-  {key:'drtg', label:'DRTG', fmt:fmt1, max:130, lowerBetter:true},
-  {key:'rpg', label:'RPG', fmt:fmt1, max:50},
-  {key:'apg', label:'APG', fmt:fmt1, max:25},
-  {key:'topg', label:'TOPG', fmt:fmt1, max:20, lowerBetter:true},
-  {key:'poss', label:'POSS', fmt:fmt1, max:80},
-  {key:'ppp', label:'PPP', fmt:v=>v.toFixed(2), max:1.3},
-  {key:'tovPct', label:'TOV%', fmt:v=>v.toFixed(1), max:30, lowerBetter:true},
-  {key:'astPct', label:'AST%', fmt:v=>v.toFixed(1), max:75},
-  {key:'plusMinus', label:'+/-', fmt:v=>(v>=0?'+':'')+v.toFixed(1), min:-20, max:20},
+  {key:'ppg', label:'PPG', desc:'Points Per Game — average points scored per game.', fmt:fmt1, max:90},
+  {key:'oppPpg', label:'Opp PPG', desc:'Opponent Points Per Game — average points allowed per game (lower is better).', fmt:fmt1, max:90, lowerBetter:true},
+  {key:'ortg', label:'ORTG', desc:'Offensive Rating — estimated points produced per 100 possessions.', fmt:fmt1, max:130},
+  {key:'drtg', label:'DRTG', desc:'Defensive Rating — estimated points allowed per 100 possessions (lower is better).', fmt:fmt1, max:130, lowerBetter:true},
+  {key:'rpg', label:'RPG', desc:'Rebounds Per Game — average total rebounds per game.', fmt:fmt1, max:50},
+  {key:'apg', label:'APG', desc:'Assists Per Game — average assists per game.', fmt:fmt1, max:25},
+  {key:'topg', label:'TOPG', desc:'Turnovers Per Game — average turnovers committed per game (lower is better).', fmt:fmt1, max:20, lowerBetter:true},
+  {key:'poss', label:'POSS', desc:'Possessions — estimated number of possessions per game; a measure of pace.', fmt:fmt1, max:80},
+  {key:'ppp', label:'PPP', desc:'Points Per Possession — scoring efficiency: points scored per possession used.', fmt:v=>v.toFixed(2), max:1.3},
+  {key:'tovPct', label:'TOV%', desc:'Turnover % — estimated turnovers per 100 possessions (lower is better).', fmt:v=>v.toFixed(1), max:30, lowerBetter:true},
+  {key:'astPct', label:'AST%', desc:'Assist % — share of made field goals that were set up by an assist.', fmt:v=>v.toFixed(1), max:75},
+  {key:'plusMinus', label:'+/-', desc:'Plus/Minus — average point differential (points scored minus points allowed) per game.', fmt:v=>(v>=0?'+':'')+v.toFixed(1), min:-20, max:20},
 ];
 const CT_SHOOTING_STATS = [
-  {key:'fgPct', label:'FG%', fmt:v=>v.toFixed(1), max:65},
-  {key:'tpPct', label:'3P%', fmt:v=>v.toFixed(1), max:50},
-  {key:'ftPct', label:'FT%', fmt:v=>v.toFixed(1), max:100},
-  {key:'tsPct', label:'TS%', fmt:v=>v.toFixed(1), max:70},
+  {key:'fgPct', label:'FG%', desc:'Field Goal % — percentage of field goal attempts made.', fmt:v=>v.toFixed(1), max:65},
+  {key:'tpPct', label:'3P%', desc:'Three-Point % — percentage of three-point attempts made.', fmt:v=>v.toFixed(1), max:50},
+  {key:'ftPct', label:'FT%', desc:'Free Throw % — percentage of free throw attempts made.', fmt:v=>v.toFixed(1), max:100},
+  {key:'tsPct', label:'TS%', desc:'True Shooting % — overall shooting efficiency, accounting for 2s, 3s, and free throws together.', fmt:v=>v.toFixed(1), max:70},
 ];
 const CT_DEFENSE_STATS = [
-  {key:'drebPct', label:'DREB%', fmt:v=>v.toFixed(1), max:100},
-  {key:'orebPct', label:'OREB%', fmt:v=>v.toFixed(1), max:100},
-  {key:'stlpg', label:'STL', fmt:fmt1, max:12},
-  {key:'blkpg', label:'BLK', fmt:fmt1, max:8},
-  {key:'oppFgPct', label:'Opp FG%', fmt:v=>v.toFixed(1), max:60, lowerBetter:true},
-  {key:'forcedTovPct', label:'Forced TOV%', fmt:v=>v.toFixed(1), max:30},
+  {key:'drebPct', label:'DREB%', desc:'Defensive Rebound % — share of available defensive rebounds this team grabbed.', fmt:v=>v.toFixed(1), max:100},
+  {key:'orebPct', label:'OREB%', desc:'Offensive Rebound % — share of available offensive rebounds this team grabbed.', fmt:v=>v.toFixed(1), max:100},
+  {key:'stlpg', label:'STL', desc:'Steals Per Game — average steals forced per game.', fmt:fmt1, max:12},
+  {key:'blkpg', label:'BLK', desc:'Blocks Per Game — average shots blocked per game.', fmt:fmt1, max:8},
+  {key:'oppFgPct', label:'Opp FG%', desc:'Opponent Field Goal % — field goal % allowed to opponents (lower is better).', fmt:v=>v.toFixed(1), max:60, lowerBetter:true},
+  {key:'forcedTovPct', label:'Forced TOV%', desc:'Forced Turnover % — share of opponent possessions that end in a turnover.', fmt:v=>v.toFixed(1), max:30},
 ];
 
 function ctLegend(t1, t2){
@@ -2303,6 +2328,12 @@ function ctLegend(t1, t2){
   </div>`;
 }
 
+const CT_SECTIONS = [
+  {id:'overview', label:'Overview'},
+  {id:'offense', label:'Offense'},
+  {id:'defense', label:'Defense'},
+];
+
 function viewCompareTeams(){
   const t1 = getTeamData(state.t1, state.season), t2 = getTeamData(state.t2, state.season);
   if((isDynamicTeam(state.t1) && !t1.players.length) || (isDynamicTeam(state.t2) && !t2.players.length)){
@@ -2311,6 +2342,21 @@ function viewCompareTeams(){
     return loadingCard(isDynamicTeam(state.t1) ? state.t1 : state.t2, state.season);
   }
   const s1 = teamAdvancedStats(t1), s2 = teamAdvancedStats(t2);
+  const section = state.compareTeamsSection;
+  const sectionHtml = section==='offense'
+    ? `<div class="card">
+        <div class="card-title"><h3>Shooting splits</h3>${ctLegend(t1,t2)}</div>
+        ${diffRowsHtml(CT_SHOOTING_STATS, s1, s2)}
+      </div>`
+    : section==='defense'
+    ? `<div class="card">
+        <div class="card-title"><h3>Defensive breakdown</h3>${ctLegend(t1,t2)}</div>
+        ${diffRowsHtml(CT_DEFENSE_STATS, s1, s2)}
+      </div>`
+    : `<div class="card">
+        <div class="card-title"><h3>Season averages</h3>${ctLegend(t1,t2)}</div>
+        ${diffRowsHtml(CT_SEASON_STATS, s1, s2)}
+      </div>`;
   return `
     <div class="compare-picker-row">
       ${teamSelect('t1-pick', state.t1, {mascot:true})}
@@ -2330,20 +2376,10 @@ function viewCompareTeams(){
         </div>
       </div>
     </div>
-    <div class="card">
-      <div class="card-title"><h3>Season averages</h3>${ctLegend(t1,t2)}</div>
-      ${diffRowsHtml(CT_SEASON_STATS, s1, s2)}
+    <div class="team-section-tabs" role="tablist" aria-label="Compare teams sections">
+      ${CT_SECTIONS.map(sec=>`<button class="team-section-tab ${section===sec.id?'active':''}" data-ct-section="${sec.id}" role="tab" aria-selected="${section===sec.id}">${sec.label}</button>`).join('')}
     </div>
-    <div class="grid-2">
-      <div class="card">
-        <div class="card-title"><h3>Shooting splits</h3>${ctLegend(t1,t2)}</div>
-        ${diffRowsHtml(CT_SHOOTING_STATS, s1, s2)}
-      </div>
-      <div class="card">
-        <div class="card-title"><h3>Defensive breakdown</h3>${ctLegend(t1,t2)}</div>
-        ${diffRowsHtml(CT_DEFENSE_STATS, s1, s2)}
-      </div>
-    </div>
+    ${sectionHtml}
   `;
 }
 function wireCompareTeams(container){
@@ -2351,6 +2387,11 @@ function wireCompareTeams(container){
   if(!t1 || !t2) return; // view rendered a loadingCard() while dynamic team data fetches — no pickers to wire yet
   t1.addEventListener('change', e=>{ state.t1=e.target.value; state.season = preferredSeasonForTeam(state.t1, state.season); render(); });
   t2.addEventListener('change', e=>{ state.t2=e.target.value; state.season = preferredSeasonForTeam(state.t2, state.season); render(); });
+  container.querySelectorAll('[data-ct-section]').forEach(btn=>btn.addEventListener('click', ()=>{
+    state.compareTeamsSection = btn.dataset.ctSection;
+    render();
+  }));
+  wireStatTooltips(container);
 }
 
 /* ============================= RENDER DISPATCH ============================= */
