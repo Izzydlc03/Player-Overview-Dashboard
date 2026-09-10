@@ -2203,14 +2203,11 @@ const CP_STATS = [
   {key:'plusMinus', label:'+/-', fmt:v=>(v>=0?'+':'')+v.toFixed(1), min:-10, max:15},
   {key:'usg', label:'USG%', fmt:v=>v.toFixed(1), max:35},
 ];
-function playerPickerOptions(){
-  return TEAM_KEYS.map(tk=>{
-    const team = getTeamData(tk, state.season);
-    const options = team.players.map((p,i)=>
-      `<option value="${tk}|${i}">#${p.num} ${p.name}</option>`
-    ).join('');
-    return `<optgroup label="${team.name}">${options}</optgroup>`;
-  }).join('');
+function playerOptionsForTeam(teamKey, selectedIdx){
+  const team = getTeamData(teamKey, state.season);
+  return team.players.map((p,i)=>
+    `<option value="${i}" ${i===selectedIdx?'selected':''}>#${p.num} ${p.name}</option>`
+  ).join('');
 }
 function viewComparePlayers(){
   const team1 = getTeamData(state.p1.team, state.season), team2 = getTeamData(state.p2.team, state.season);
@@ -2225,9 +2222,15 @@ function viewComparePlayers(){
   pg2.efgPct = efgPct(p2); pg2.plusMinus = seededVal(team2.short+p2.name+'pm', -8, 12); pg2.usg = usageRate(team2, p2);
   return `
     <div class="compare-picker-row">
-      <select id="p1-pick">${playerPickerOptions()}</select>
+      <div class="compare-picker-group">
+        ${teamSelect('p1-team-pick', state.p1.team)}
+        <select id="p1-player-pick">${playerOptionsForTeam(state.p1.team, state.p1.idx)}</select>
+      </div>
       <span></span>
-      <select id="p2-pick" class="picker-right">${playerPickerOptions()}</select>
+      <div class="compare-picker-group right">
+        ${teamSelect('p2-team-pick', state.p2.team, {attrs:'class="picker-right"'})}
+        <select id="p2-player-pick" class="picker-right">${playerOptionsForTeam(state.p2.team, state.p2.idx)}</select>
+      </div>
     </div>
     <div class="card">
       <div class="compare-heads">
@@ -2254,10 +2257,13 @@ function viewComparePlayers(){
   `;
 }
 function wireComparePlayers(container){
-  const p1 = container.querySelector('#p1-pick'), p2 = container.querySelector('#p2-pick');
-  p1.value = state.p1.team+'|'+state.p1.idx; p2.value = state.p2.team+'|'+state.p2.idx;
-  p1.addEventListener('change', e=>{ const [t,i]=e.target.value.split('|'); state.p1={team:t,idx:+i}; render(); });
-  p2.addEventListener('change', e=>{ const [t,i]=e.target.value.split('|'); state.p2={team:t,idx:+i}; render(); });
+  const p1Team = container.querySelector('#p1-team-pick'), p1Player = container.querySelector('#p1-player-pick');
+  const p2Team = container.querySelector('#p2-team-pick'), p2Player = container.querySelector('#p2-player-pick');
+  if(!p1Team || !p1Player || !p2Team || !p2Player) return; // view rendered a loadingCard() while dynamic team data fetches — no pickers to wire yet
+  p1Team.addEventListener('change', e=>{ state.p1={team:e.target.value, idx:0}; render(); });
+  p1Player.addEventListener('change', e=>{ state.p1={team:state.p1.team, idx:+e.target.value}; render(); });
+  p2Team.addEventListener('change', e=>{ state.p2={team:e.target.value, idx:0}; render(); });
+  p2Player.addEventListener('change', e=>{ state.p2={team:state.p2.team, idx:+e.target.value}; render(); });
 }
 
 /* ============================= VIEW: COMPARE TEAMS ============================= */
@@ -2341,8 +2347,10 @@ function viewCompareTeams(){
   `;
 }
 function wireCompareTeams(container){
-  container.querySelector('#t1-pick').addEventListener('change', e=>{ state.t1=e.target.value; state.season = preferredSeasonForTeam(state.t1, state.season); render(); });
-  container.querySelector('#t2-pick').addEventListener('change', e=>{ state.t2=e.target.value; state.season = preferredSeasonForTeam(state.t2, state.season); render(); });
+  const t1 = container.querySelector('#t1-pick'), t2 = container.querySelector('#t2-pick');
+  if(!t1 || !t2) return; // view rendered a loadingCard() while dynamic team data fetches — no pickers to wire yet
+  t1.addEventListener('change', e=>{ state.t1=e.target.value; state.season = preferredSeasonForTeam(state.t1, state.season); render(); });
+  t2.addEventListener('change', e=>{ state.t2=e.target.value; state.season = preferredSeasonForTeam(state.t2, state.season); render(); });
 }
 
 /* ============================= RENDER DISPATCH ============================= */
