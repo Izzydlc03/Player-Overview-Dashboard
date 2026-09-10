@@ -1,0 +1,34 @@
+game_id,date,home_team,away_team,home_score,away_score,winner,site_location,home_away_neutral,is_conference_game,season,source_url
+2025-11-03_san_diego_bethesda_ca,2025-11-03,San Diego,Bethesda (CA),92,23,San Diego,"San Diego, CA",home,False,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/bethesda/boxscore/15075
+2025-11-05_uc_irvine_san_diego,2025-11-05,UC Irvine,San Diego,72,54,UC Irvine,"Irvine, CA",away,False,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/uc-irvine/boxscore/15076
+2025-11-08_csun_san_diego,2025-11-08,CSUN,San Diego,63,48,CSUN,"Northridge, CA",away,False,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/csun/boxscore/15077
+2025-11-13_san_diego_arizona_st,2025-11-13,San Diego,Arizona St.,47,79,Arizona St.,"San Diego, CA",home,False,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/arizona-state/boxscore/15078
+2025-11-17_colorado_st_san_diego,2025-11-17,Colorado St.,San Diego,71,44,Colorado St.,"Fort Collins, CO",away,False,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/colorado-state/boxscore/15079
+2025-11-24_san_diego_new_mexico_st,2025-11-24,San Diego,New Mexico St.,57,48,San Diego,"San Diego, CA",home,False,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/new-mexico-state/boxscore/15080
+2025-11-29_little_rock_san_diego,2025-11-29,Little Rock,San Diego,51,37,Little Rock,"Tempe, AZ",neutral,False,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/little-rock/boxscore/15082
+2025-11-30_san_diego_southeast_mo_st,2025-11-30,San Diego,Southeast Mo. St.,65,55,San Diego,"Tempe, AZ",neutral,False,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/southeast-missouri-state/boxscore/15083
+2025-12-03_san_diego_binghamton,2025-12-03,San Diego,Binghamton,55,63,Binghamton,"San Diego, CA",home,False,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/binghamton/boxscore/15084
+2025-12-07_san_diego_utah_st,2025-12-07,San Diego,Utah St.,70,66,San Diego,"San Diego, CA",home,False,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/utah-state/boxscore/15085
+2025-12-10_wisconsin_san_diego,2025-12-10,Wisconsin,San Diego,74,46,Wisconsin,"Madison, WI",away,False,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/wisconsin/boxscore/15086
+2025-12-14_san_diego_uc_riverside,2025-12-14,San Diego,UC Riverside,63,56,San Diego,"San Diego, CA",home,False,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/uc-riverside/boxscore/15087
+2025-12-20_san_diego_cal_st_fullerton,2025-12-20,San Diego,Cal St. Fullerton,56,55,San Diego,"San Diego, CA",home,False,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/cal-state-fullerton/boxscore/15088
+2025-12-28_santa_clara_san_diego,2025-12-28,Santa Clara,San Diego,68,46,Santa Clara,"Santa Clara, CA",away,True,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/santa-clara/boxscore/15200
+2025-12-30_pacific_san_diego,2025-12-30,Pacific,San Diego,72,68,Pacific,"Stockton, CA",away,True,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/pacific/boxscore/15201
+2026-01-02_san_diego_san_francisco,2026-01-02,San Diego,San Francisco,55,59,San Francisco,"San Diego, CA",home,True,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/san-francisco/boxscore/15202
+2026-01-04_san_diego_saint_marys_ca,2026-01-04,San Diego,Saint Mary's (CA),49,57,Saint Mary's (CA),"San Diego, CA",home,True,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/saint-mary-s/boxscore/15204
+2026-01-08_seattle_u_san_diego,2026-01-08,Seattle U,San Diego,68,62,Seattle U,"Seattle, WA",away,True,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/seattle-u/boxscore/15205
+2026-01-10_san_diego_pepperdine,2026-01-10,San Diego,Pepperdine,54,51,San Diego,"San Diego, CA",home,True,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/pepperdine/boxscore/15207
+2026-01-17_gonzaga_san_diego,2026-01-17,Gonzaga,San Diego,87,42,Gonzaga,"Spokane, WA",away,True,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/gonzaga/boxscore/15209
+2026-01-22_san_francisco_san_diego,2026-01-22,San Francisco,San Diego,69,65,San Francisco,"San Francisco, CA",away,True,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/san-francisco/boxscore/15210
+2026-01-24_san_diego_lmu_ca,2026-01-24,San Diego,LMU (CA),69,60,San Diego,"San Diego, CA",home,True,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/lmu/boxscore/15212
+2026-01-29_oregon_st_san_diego,2026-01-29,Oregon St.,San Diego,61,43,Oregon St.,"Corvallis, OR",away,True,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/oregon-state/boxscore/15214
+2026-01-31_portland_san_diego,2026-01-31,Portland,San Diego,64,59,Portland,"Portland, OR",away,True,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/portland/boxscore/15216
+2026-02-05_san_diego_washington_st,2026-02-05,San Diego,Washington St.,76,80,Washington St.,"San Diego, CA",home,True,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/washington-state/boxscore/15218
+2026-02-07_san_diego_seattle_u,2026-02-07,San Diego,Seattle U,71,54,San Diego,"San Diego, CA",home,True,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/seattle-u/boxscore/15220
+2026-02-12_san_diego_gonzaga,2026-02-12,San Diego,Gonzaga,56,66,Gonzaga,"San Diego, CA",home,True,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/gonzaga/boxscore/15221
+2026-02-19_pepperdine_san_diego,2026-02-19,Pepperdine,San Diego,76,55,Pepperdine,"Malibu, CA",away,True,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/pepperdine/boxscore/15223
+2026-02-21_lmu_ca_san_diego,2026-02-21,LMU (CA),San Diego,74,61,LMU (CA),"Los Angeles, CA",away,True,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/lmu/boxscore/15224
+2026-02-26_san_diego_oregon_st,2026-02-26,San Diego,Oregon St.,49,83,Oregon St.,"San Diego, CA",home,True,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/oregon-state/boxscore/15226
+2026-02-28_san_diego_pacific,2026-02-28,San Diego,Pacific,64,59,San Diego,"San Diego, CA",home,True,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/pacific/boxscore/15228
+2026-03-05_saint_marys_ca_san_diego,2026-03-05,Saint Mary's (CA),San Diego,62,66,San Diego,"Las Vegas, NV / Orleans Arena",neutral,False,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/saint-mary-s/boxscore/15446
+2026-03-06_san_francisco_san_diego,2026-03-06,San Francisco,San Diego,61,52,San Francisco,"Las Vegas, NV / Orleans Arena",neutral,False,2025-26,https://usdtoreros.com/sports/womens-basketball/stats/2025-26/san-francisco/boxscore/15449

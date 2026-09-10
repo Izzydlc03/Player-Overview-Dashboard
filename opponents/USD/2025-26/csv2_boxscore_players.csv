@@ -1,0 +1,749 @@
+game_id,team,jersey,player,started,min,fg_m,fg_a,fg_pct,3p_m,3p_a,3p_pct,ft_m,ft_a,ft_pct,oreb,dreb,reb,pf,ast,to,blk,stl,pts
+2025-11-03_san_diego_bethesda_ca,Bethesda (CA),22,"Aguilar, Jacqueline",True,40,3,19,0.158,3,14,0.214,2,2,1.0,0,1,1,1,1,3,0,0,11
+2025-11-03_san_diego_bethesda_ca,Bethesda (CA),10,"Roberts, Danielle",True,40,3,9,0.333,1,1,1.0,2,5,0.4,0,2,2,2,1,2,0,0,9
+2025-11-03_san_diego_bethesda_ca,Bethesda (CA),07,"Carter, Aaliyah",True,40,1,5,0.2,1,2,0.5,0,0,,0,4,4,2,3,2,1,0,3
+2025-11-03_san_diego_bethesda_ca,Bethesda (CA),25,"Smith, Makaia",True,40,0,2,0.0,0,0,,0,0,,0,5,5,1,0,0,0,1,0
+2025-11-03_san_diego_bethesda_ca,Bethesda (CA),02,"Quezada, Serina",True,20,0,6,0.0,0,1,0.0,0,0,,0,0,0,0,0,1,0,0,0
+2025-11-03_san_diego_bethesda_ca,Bethesda (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,1,2,3,0,0,10,0,0,0
+2025-11-03_san_diego_bethesda_ca,San Diego,20,"Rhodes, Hallie",True,12,5,8,0.625,1,3,0.333,0,0,,1,1,2,0,0,0,0,0,11
+2025-11-03_san_diego_bethesda_ca,San Diego,24,"Owens, Olivia",True,12,2,4,0.5,0,2,0.0,0,0,,1,0,1,0,1,1,0,1,4
+2025-11-03_san_diego_bethesda_ca,San Diego,06,"Ray, Kylie",True,12,1,4,0.25,1,4,0.25,0,0,,0,1,1,0,6,2,0,0,3
+2025-11-03_san_diego_bethesda_ca,San Diego,11,"Tharpe, Malia",True,10,1,3,0.333,0,0,,0,0,,2,3,5,0,0,0,0,0,2
+2025-11-03_san_diego_bethesda_ca,San Diego,10,"Holley, Helen",True,6,0,3,0.0,0,0,,0,0,,3,1,4,1,0,0,1,0,0
+2025-11-03_san_diego_bethesda_ca,San Diego,19,"Rhodes, Jayden",False,23,9,13,0.692,4,5,0.8,0,0,,5,3,8,0,1,1,0,1,22
+2025-11-03_san_diego_bethesda_ca,San Diego,03,"Amor, Lilly",False,22,5,13,0.385,3,10,0.3,0,0,,1,1,2,1,2,0,1,0,13
+2025-11-03_san_diego_bethesda_ca,San Diego,00,"Von Seipler, Ysabella",False,20,5,11,0.455,2,5,0.4,0,0,,2,4,6,1,3,0,0,1,12
+2025-11-03_san_diego_bethesda_ca,San Diego,12,"Carr, Erica",False,24,3,5,0.6,0,1,0.0,2,2,1.0,2,2,4,0,2,1,1,0,8
+2025-11-03_san_diego_bethesda_ca,San Diego,04,"Ajayi, Jessica",False,19,3,7,0.429,1,5,0.2,1,2,0.5,1,4,5,2,6,1,1,2,8
+2025-11-03_san_diego_bethesda_ca,San Diego,15,"Ruse, Eva",False,16,3,3,1.0,0,0,,1,1,1.0,4,5,9,0,1,1,0,0,7
+2025-11-03_san_diego_bethesda_ca,San Diego,01,"Moore, Dresha",False,8,1,1,1.0,0,0,,0,0,,1,1,2,1,0,0,0,1,2
+2025-11-03_san_diego_bethesda_ca,San Diego,22,"Williams, Ayla",False,16,0,0,,0,0,,0,4,0.0,2,4,6,0,2,0,1,0,0
+2025-11-03_san_diego_bethesda_ca,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,4,4,0,0,0,0,0,0
+2025-11-05_uc_irvine_san_diego,San Diego,06,"Ray, Kylie",True,37,7,23,0.304,3,7,0.429,6,6,1.0,4,4,8,3,1,10,0,4,23
+2025-11-05_uc_irvine_san_diego,San Diego,24,"Owens, Olivia",True,25,2,7,0.286,2,5,0.4,0,0,,0,0,0,3,1,2,0,1,6
+2025-11-05_uc_irvine_san_diego,San Diego,20,"Rhodes, Hallie",True,32,2,7,0.286,1,4,0.25,0,0,,2,2,4,1,1,0,0,2,5
+2025-11-05_uc_irvine_san_diego,San Diego,11,"Tharpe, Malia",True,18,2,5,0.4,0,1,0.0,0,2,0.0,1,0,1,3,1,1,0,0,4
+2025-11-05_uc_irvine_san_diego,San Diego,10,"Holley, Helen",True,30,1,5,0.2,0,2,0.0,1,2,0.5,2,7,9,3,0,0,2,2,3
+2025-11-05_uc_irvine_san_diego,San Diego,01,"Moore, Dresha",False,22,3,6,0.5,1,1,1.0,0,1,0.0,1,1,2,4,0,0,0,0,7
+2025-11-05_uc_irvine_san_diego,San Diego,15,"Ruse, Eva",False,10,2,2,1.0,0,0,,2,4,0.5,2,0,2,3,1,1,0,0,6
+2025-11-05_uc_irvine_san_diego,San Diego,19,"Rhodes, Jayden",False,14,0,2,0.0,0,2,0.0,0,0,,0,1,1,0,1,0,1,1,0
+2025-11-05_uc_irvine_san_diego,San Diego,04,"Ajayi, Jessica",False,7,0,2,0.0,0,1,0.0,0,0,,1,1,2,2,0,1,0,0,0
+2025-11-05_uc_irvine_san_diego,San Diego,03,"Amor, Lilly",False,3,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-05_uc_irvine_san_diego,San Diego,22,"Williams, Ayla",False,2,0,0,,0,0,,0,0,,0,0,0,1,1,0,0,1,0
+2025-11-05_uc_irvine_san_diego,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,3,4,0,0,1,0,0,0
+2025-11-05_uc_irvine_san_diego,UC Irvine,23,"Wynn, Jada",True,36,3,10,0.3,2,8,0.25,9,9,1.0,0,6,6,2,7,0,0,1,17
+2025-11-05_uc_irvine_san_diego,UC Irvine,20,"Hernandez, Hunter",True,25,4,12,0.333,3,5,0.6,2,2,1.0,2,4,6,0,2,3,0,0,13
+2025-11-05_uc_irvine_san_diego,UC Irvine,10,"Madsen, Lauryn",True,34,4,8,0.5,4,8,0.5,0,0,,1,7,8,0,3,2,1,1,12
+2025-11-05_uc_irvine_san_diego,UC Irvine,12,"Nahum, Shirel",True,34,1,7,0.143,0,1,0.0,4,6,0.667,0,3,3,1,4,3,0,3,6
+2025-11-05_uc_irvine_san_diego,UC Irvine,09,"Falcon Hernandez, Daniela",True,15,1,2,0.5,0,0,,2,2,1.0,0,4,4,2,0,2,1,1,4
+2025-11-05_uc_irvine_san_diego,UC Irvine,13,"Stores, Nohealani",False,25,7,8,0.875,0,0,,3,5,0.6,4,1,5,2,0,1,0,2,17
+2025-11-05_uc_irvine_san_diego,UC Irvine,24,"Zonzon-Huyghe, Naomy",False,22,0,0,,0,0,,3,4,0.75,1,1,2,4,0,2,0,2,3
+2025-11-05_uc_irvine_san_diego,UC Irvine,01,"Grant, Ameerah",False,5,0,2,0.0,0,1,0.0,0,0,,0,0,0,0,0,1,0,0,0
+2025-11-05_uc_irvine_san_diego,UC Irvine,02,"Hernandez, Haley",False,2,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2025-11-05_uc_irvine_san_diego,UC Irvine,21,"Baltzi, Despoina",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-05_uc_irvine_san_diego,UC Irvine,22,"Noa, Reese",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-05_uc_irvine_san_diego,UC Irvine,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,1,3,0,0,1,0,0,0
+2025-11-08_csun_san_diego,San Diego,06,"Ray, Kylie",True,38,7,22,0.318,3,7,0.429,3,4,0.75,1,8,9,2,3,9,0,3,20
+2025-11-08_csun_san_diego,San Diego,20,"Rhodes, Hallie",True,30,5,12,0.417,0,1,0.0,4,5,0.8,2,3,5,2,2,1,2,1,14
+2025-11-08_csun_san_diego,San Diego,10,"Holley, Helen",True,28,1,4,0.25,0,2,0.0,0,2,0.0,1,1,2,3,1,3,1,3,2
+2025-11-08_csun_san_diego,San Diego,01,"Moore, Dresha",True,14,1,3,0.333,0,1,0.0,0,0,,1,0,1,3,1,1,0,0,2
+2025-11-08_csun_san_diego,San Diego,11,"Tharpe, Malia",True,13,0,2,0.0,0,1,0.0,0,0,,0,1,1,2,0,0,0,0,0
+2025-11-08_csun_san_diego,San Diego,03,"Amor, Lilly",False,17,2,2,1.0,0,0,,0,0,,0,1,1,0,0,2,0,1,4
+2025-11-08_csun_san_diego,San Diego,22,"Williams, Ayla",False,10,0,1,0.0,0,0,,3,6,0.5,1,2,3,3,0,3,1,0,3
+2025-11-08_csun_san_diego,San Diego,15,"Ruse, Eva",False,25,1,4,0.25,0,2,0.0,0,2,0.0,0,3,3,1,1,1,1,1,2
+2025-11-08_csun_san_diego,San Diego,24,"Owens, Olivia",False,18,0,6,0.0,0,2,0.0,1,2,0.5,3,3,6,2,1,1,0,4,1
+2025-11-08_csun_san_diego,San Diego,19,"Rhodes, Jayden",False,6,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-08_csun_san_diego,San Diego,12,"Carr, Erica",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2025-11-08_csun_san_diego,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,6,1,7,0,0,0,0,0,0
+2025-11-08_csun_san_diego,CSUN,33,"Nazario, Rita",True,34,7,12,0.583,6,9,0.667,1,1,1.0,0,3,3,3,2,4,0,3,21
+2025-11-08_csun_san_diego,CSUN,12,"Aspajo, Erika",True,27,2,9,0.222,0,4,0.0,0,0,,1,3,4,3,5,4,1,1,4
+2025-11-08_csun_san_diego,CSUN,24,"Cos Morales, Mariona",True,20,2,6,0.333,0,2,0.0,0,0,,1,5,6,0,0,2,0,1,4
+2025-11-08_csun_san_diego,CSUN,34,"Bernard, Nadia",True,15,2,4,0.5,0,0,,0,0,,3,1,4,6,1,3,1,0,4
+2025-11-08_csun_san_diego,CSUN,22,"Dahlin, Laini",True,9,2,3,0.667,0,0,,0,0,,3,1,4,0,1,0,0,1,4
+2025-11-08_csun_san_diego,CSUN,00,"Gbemuotor, Jite",False,20,4,7,0.571,1,1,1.0,2,2,1.0,3,5,8,2,0,0,1,1,11
+2025-11-08_csun_san_diego,CSUN,02,"White, Saray",False,20,2,6,0.333,1,1,1.0,3,4,0.75,3,2,5,2,2,3,2,1,8
+2025-11-08_csun_san_diego,CSUN,10,"Lizama, Alondra",False,17,1,4,0.25,0,2,0.0,2,2,1.0,2,1,3,0,0,1,0,0,4
+2025-11-08_csun_san_diego,CSUN,01,"Moody, Amya",False,12,1,4,0.25,1,1,1.0,0,0,,0,2,2,1,3,1,0,0,3
+2025-11-08_csun_san_diego,CSUN,04,"Edwards, Morgan",False,20,0,8,0.0,0,5,0.0,0,0,,0,2,2,1,2,3,1,1,0
+2025-11-08_csun_san_diego,CSUN,03,"Tumlin, Kelly",False,3,0,1,0.0,0,0,,0,0,,0,1,1,0,0,1,0,0,0
+2025-11-08_csun_san_diego,CSUN,23,"Contreras, Maya",False,3,0,0,,0,0,,0,0,,0,0,0,3,0,1,0,0,0
+2025-11-08_csun_san_diego,CSUN,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,2,4,0,0,0,0,0,0
+2025-11-13_san_diego_arizona_st,Arizona St.,00,"Elliott, Gabby",True,31,8,14,0.571,6,8,0.75,2,3,0.667,1,6,7,2,4,4,0,0,24
+2025-11-13_san_diego_arizona_st,Arizona St.,11,"Washenitz, Marley",True,28,7,12,0.583,4,7,0.571,1,2,0.5,0,4,4,3,6,1,0,2,19
+2025-11-13_san_diego_arizona_st,Arizona St.,21,"Brackens, McKinna",True,18,4,8,0.5,0,0,,2,2,1.0,1,2,3,3,1,0,1,1,10
+2025-11-13_san_diego_arizona_st,Arizona St.,01,"Williams, Amaya",True,34,2,7,0.286,2,3,0.667,0,0,,1,0,1,0,11,3,1,4,6
+2025-11-13_san_diego_arizona_st,Arizona St.,14,"Carrera, Heloisa",True,20,3,6,0.5,0,0,,0,0,,3,3,6,3,1,2,0,0,6
+2025-11-13_san_diego_arizona_st,Arizona St.,07,"Fantini, Martina",False,16,3,4,0.75,0,0,,0,0,,0,5,5,3,1,1,2,2,6
+2025-11-13_san_diego_arizona_st,Arizona St.,04,"LoVett, Jyah",False,23,1,5,0.2,1,3,0.333,0,0,,1,4,5,1,1,1,0,0,3
+2025-11-13_san_diego_arizona_st,Arizona St.,12,"Moore, Makayla",False,12,1,1,1.0,1,1,1.0,0,0,,1,1,2,0,0,1,1,2,3
+2025-11-13_san_diego_arizona_st,Arizona St.,24,"Davenport, Deborah",False,16,1,1,1.0,0,0,,0,0,,0,1,1,1,0,0,0,0,2
+2025-11-13_san_diego_arizona_st,Arizona St.,22,"Grice, Timya",False,2,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2025-11-13_san_diego_arizona_st,Arizona St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,1,2,0,0,1,0,0,0
+2025-11-13_san_diego_arizona_st,San Diego,24,"Owens, Olivia",True,32,4,11,0.364,2,6,0.333,4,4,1.0,1,2,3,1,4,3,0,1,14
+2025-11-13_san_diego_arizona_st,San Diego,20,"Rhodes, Hallie",True,28,4,14,0.286,0,2,0.0,0,0,,0,2,2,1,2,5,0,2,8
+2025-11-13_san_diego_arizona_st,San Diego,11,"Tharpe, Malia",True,37,2,10,0.2,1,3,0.333,1,2,0.5,2,4,6,2,0,2,0,0,6
+2025-11-13_san_diego_arizona_st,San Diego,10,"Holley, Helen",True,24,2,5,0.4,1,2,0.5,1,2,0.5,3,1,4,4,0,3,2,1,6
+2025-11-13_san_diego_arizona_st,San Diego,01,"Moore, Dresha",True,25,2,8,0.25,0,0,,1,2,0.5,1,4,5,3,0,3,0,1,5
+2025-11-13_san_diego_arizona_st,San Diego,03,"Amor, Lilly",False,21,1,3,0.333,1,3,0.333,0,2,0.0,0,0,0,1,2,0,0,0,3
+2025-11-13_san_diego_arizona_st,San Diego,00,"Von Seipler, Ysabella",False,8,1,2,0.5,1,1,1.0,0,0,,1,1,2,1,0,0,0,0,3
+2025-11-13_san_diego_arizona_st,San Diego,22,"Williams, Ayla",False,13,0,1,0.0,0,0,,2,2,1.0,2,3,5,0,0,0,1,0,2
+2025-11-13_san_diego_arizona_st,San Diego,15,"Ruse, Eva",False,12,0,1,0.0,0,0,,0,4,0.0,4,2,6,2,0,3,1,1,0
+2025-11-13_san_diego_arizona_st,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,1,3,0,0,1,0,0,0
+2025-11-17_colorado_st_san_diego,San Diego,06,"Ray, Kylie",True,34,7,16,0.438,0,2,0.0,7,7,1.0,1,7,8,2,2,5,0,2,21
+2025-11-17_colorado_st_san_diego,San Diego,24,"Owens, Olivia",True,32,2,14,0.143,0,4,0.0,0,0,,0,3,3,1,1,1,0,2,4
+2025-11-17_colorado_st_san_diego,San Diego,01,"Moore, Dresha",True,30,0,4,0.0,0,1,0.0,2,2,1.0,2,6,8,3,2,7,0,0,2
+2025-11-17_colorado_st_san_diego,San Diego,10,"Holley, Helen",True,13,0,2,0.0,0,1,0.0,2,2,1.0,1,2,3,1,0,4,0,1,2
+2025-11-17_colorado_st_san_diego,San Diego,11,"Tharpe, Malia",True,12,0,2,0.0,0,1,0.0,0,0,,0,2,2,1,0,1,0,0,0
+2025-11-17_colorado_st_san_diego,San Diego,20,"Rhodes, Hallie",False,20,2,4,0.5,1,1,1.0,1,4,0.25,1,1,2,0,0,0,0,2,6
+2025-11-17_colorado_st_san_diego,San Diego,00,"Von Seipler, Ysabella",False,11,1,2,0.5,1,2,0.5,0,0,,1,0,1,1,0,0,0,0,3
+2025-11-17_colorado_st_san_diego,San Diego,03,"Amor, Lilly",False,10,1,1,1.0,1,1,1.0,0,0,,0,1,1,0,0,1,0,0,3
+2025-11-17_colorado_st_san_diego,San Diego,15,"Ruse, Eva",False,18,1,5,0.2,0,0,,0,0,,3,1,4,2,0,0,0,0,2
+2025-11-17_colorado_st_san_diego,San Diego,22,"Williams, Ayla",False,2,0,0,,0,0,,1,4,0.25,4,0,4,0,0,0,0,1,1
+2025-11-17_colorado_st_san_diego,San Diego,19,"Rhodes, Jayden",False,17,0,0,,0,0,,0,0,,1,2,3,0,0,0,1,0,0
+2025-11-17_colorado_st_san_diego,San Diego,04,"Ajayi, Jessica",False,1,0,1,0.0,0,1,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-17_colorado_st_san_diego,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-17_colorado_st_san_diego,Colorado St.,03,"Bargesser, Lexus",True,30,6,10,0.6,1,1,1.0,5,7,0.714,0,2,2,3,3,0,1,2,18
+2025-11-17_colorado_st_san_diego,Colorado St.,30,"Ronsiek, Hannah",True,27,4,6,0.667,3,5,0.6,0,0,,0,10,10,2,0,2,0,3,11
+2025-11-17_colorado_st_san_diego,Colorado St.,01,"Froebe, Kloe",True,24,3,6,0.5,0,2,0.0,0,0,,0,3,3,2,3,2,0,2,6
+2025-11-17_colorado_st_san_diego,Colorado St.,00,"Bragg, Madelyn",True,21,3,4,0.75,0,0,,0,0,,1,2,3,2,3,1,2,1,6
+2025-11-17_colorado_st_san_diego,Colorado St.,02,"Carlson, Brooke",True,27,2,5,0.4,1,3,0.333,0,3,0.0,1,3,4,1,2,4,0,1,5
+2025-11-17_colorado_st_san_diego,Colorado St.,31,"Murphy, McKenna",False,19,4,7,0.571,4,6,0.667,0,0,,0,1,1,1,1,0,0,0,12
+2025-11-17_colorado_st_san_diego,Colorado St.,14,"Leimane, Marta",False,22,3,9,0.333,0,3,0.0,1,2,0.5,0,1,1,0,3,1,0,1,7
+2025-11-17_colorado_st_san_diego,Colorado St.,05,"Fife, Jadyn",False,17,1,3,0.333,1,2,0.5,0,0,,0,0,0,1,2,0,0,0,3
+2025-11-17_colorado_st_san_diego,Colorado St.,24,"Pawlicki, Olivia",False,3,1,1,1.0,1,1,1.0,0,0,,0,0,0,0,0,0,0,0,3
+2025-11-17_colorado_st_san_diego,Colorado St.,06,"Deden, Lexi",False,6,0,0,,0,0,,0,0,,0,2,2,1,0,2,0,0,0
+2025-11-17_colorado_st_san_diego,Colorado St.,11,"Smith, Gianna",False,3,0,1,0.0,0,1,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-17_colorado_st_san_diego,Colorado St.,23,"Kramer, Caitlin",False,1,0,0,,0,0,,0,0,,0,1,1,0,1,0,1,0,0
+2025-11-17_colorado_st_san_diego,Colorado St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,1,2,0,0,0,0,0,0
+2025-11-24_san_diego_new_mexico_st,New Mexico St.,27,"Lara, Lucia",True,30,4,6,0.667,1,1,1.0,0,0,,2,7,9,4,0,2,0,0,9
+2025-11-24_san_diego_new_mexico_st,New Mexico St.,24,"Yenes, Lucia",True,30,3,9,0.333,0,1,0.0,0,0,,2,3,5,2,4,2,1,2,6
+2025-11-24_san_diego_new_mexico_st,New Mexico St.,30,"Csenyi, Anna",True,34,1,10,0.1,0,6,0.0,0,0,,0,2,2,2,0,2,1,2,2
+2025-11-24_san_diego_new_mexico_st,New Mexico St.,02,"Rozing, Loes",True,18,1,1,1.0,0,0,,0,0,,0,4,4,0,1,3,0,0,2
+2025-11-24_san_diego_new_mexico_st,New Mexico St.,22,"Christiano, Emma",True,10,0,0,,0,0,,0,0,,1,0,1,4,1,1,0,1,0
+2025-11-24_san_diego_new_mexico_st,New Mexico St.,01,"Warren, Imani",False,28,6,16,0.375,1,2,0.5,7,10,0.7,0,3,3,2,1,5,2,2,20
+2025-11-24_san_diego_new_mexico_st,New Mexico St.,33,"Jones, Senoj",False,12,2,3,0.667,0,0,,2,4,0.5,1,3,4,3,1,3,2,1,6
+2025-11-24_san_diego_new_mexico_st,New Mexico St.,03,"Hudson, Keira",False,7,1,3,0.333,0,2,0.0,0,0,,0,0,0,1,0,2,0,0,2
+2025-11-24_san_diego_new_mexico_st,New Mexico St.,04,"Wilson, DeAvion",False,23,0,1,0.0,0,1,0.0,1,2,0.5,0,2,2,4,2,0,0,4,1
+2025-11-24_san_diego_new_mexico_st,New Mexico St.,05,"Dossou, Morane",False,8,0,2,0.0,0,0,,0,0,,2,1,3,0,1,4,0,0,0
+2025-11-24_san_diego_new_mexico_st,New Mexico St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,3,5,0,0,1,0,0,0
+2025-11-24_san_diego_new_mexico_st,San Diego,24,"Owens, Olivia",True,38,6,17,0.353,2,5,0.4,3,4,0.75,2,2,4,3,6,5,0,2,17
+2025-11-24_san_diego_new_mexico_st,San Diego,20,"Rhodes, Hallie",True,35,4,11,0.364,0,1,0.0,1,4,0.25,0,3,3,1,2,4,0,1,9
+2025-11-24_san_diego_new_mexico_st,San Diego,22,"Williams, Ayla",True,25,1,4,0.25,0,0,,5,6,0.833,7,7,14,4,1,0,2,1,7
+2025-11-24_san_diego_new_mexico_st,San Diego,10,"Holley, Helen",True,19,1,5,0.2,0,1,0.0,0,0,,1,3,4,3,1,4,1,4,2
+2025-11-24_san_diego_new_mexico_st,San Diego,11,"Tharpe, Malia",True,13,0,5,0.0,0,2,0.0,0,0,,1,0,1,0,1,0,0,2,0
+2025-11-24_san_diego_new_mexico_st,San Diego,00,"Von Seipler, Ysabella",False,20,4,5,0.8,2,2,1.0,1,4,0.25,0,3,3,3,2,0,0,3,11
+2025-11-24_san_diego_new_mexico_st,San Diego,15,"Ruse, Eva",False,13,3,6,0.5,0,1,0.0,0,0,,3,3,6,2,0,1,0,2,6
+2025-11-24_san_diego_new_mexico_st,San Diego,19,"Rhodes, Jayden",False,18,1,5,0.2,1,3,0.333,0,2,0.0,0,1,1,1,1,2,0,1,3
+2025-11-24_san_diego_new_mexico_st,San Diego,04,"Ajayi, Jessica",False,17,1,6,0.167,0,3,0.0,0,0,,0,2,2,1,1,1,0,2,2
+2025-11-24_san_diego_new_mexico_st,San Diego,03,"Amor, Lilly",False,2,0,0,,0,0,,0,0,,0,0,0,0,1,0,0,0,0
+2025-11-24_san_diego_new_mexico_st,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,2,5,0,0,1,0,0,0
+2025-11-29_little_rock_san_diego,San Diego,24,"Owens, Olivia",True,29,4,17,0.235,1,7,0.143,1,2,0.5,0,1,1,3,0,2,0,2,10
+2025-11-29_little_rock_san_diego,San Diego,22,"Williams, Ayla",True,19,1,2,0.5,0,0,,3,4,0.75,3,5,8,4,0,3,4,0,5
+2025-11-29_little_rock_san_diego,San Diego,11,"Tharpe, Malia",True,27,1,6,0.167,0,1,0.0,0,0,,0,4,4,0,1,2,0,1,2
+2025-11-29_little_rock_san_diego,San Diego,20,"Rhodes, Hallie",True,19,1,11,0.091,0,2,0.0,0,0,,3,0,3,1,0,4,0,0,2
+2025-11-29_little_rock_san_diego,San Diego,10,"Holley, Helen",True,25,0,1,0.0,0,1,0.0,0,0,,0,3,3,0,1,2,0,1,0
+2025-11-29_little_rock_san_diego,San Diego,00,"Von Seipler, Ysabella",False,19,3,7,0.429,2,4,0.5,0,0,,1,4,5,2,0,1,0,0,8
+2025-11-29_little_rock_san_diego,San Diego,15,"Ruse, Eva",False,14,3,5,0.6,0,0,,0,0,,2,6,8,1,0,2,1,0,6
+2025-11-29_little_rock_san_diego,San Diego,04,"Ajayi, Jessica",False,10,1,4,0.25,1,2,0.5,0,0,,0,1,1,1,1,0,0,0,3
+2025-11-29_little_rock_san_diego,San Diego,19,"Rhodes, Jayden",False,11,0,2,0.0,0,1,0.0,1,2,0.5,2,1,3,1,0,1,0,0,1
+2025-11-29_little_rock_san_diego,San Diego,01,"Moore, Dresha",False,17,0,2,0.0,0,0,,0,0,,1,4,5,2,1,2,0,0,0
+2025-11-29_little_rock_san_diego,San Diego,03,"Amor, Lilly",False,10,0,1,0.0,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-29_little_rock_san_diego,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,5,0,5,0,0,0,0,0,0
+2025-11-29_little_rock_san_diego,Little Rock,05,"Holman, Jordan",True,36,5,10,0.5,0,2,0.0,3,5,0.6,0,8,8,2,0,3,1,2,13
+2025-11-29_little_rock_san_diego,Little Rock,07,"Payne, Alaina",True,36,2,8,0.25,2,2,1.0,2,2,1.0,1,5,6,2,4,3,1,3,8
+2025-11-29_little_rock_san_diego,Little Rock,03,"Burk, Brenna",True,31,3,7,0.429,0,1,0.0,2,2,1.0,1,2,3,2,4,1,0,0,8
+2025-11-29_little_rock_san_diego,Little Rock,14,"Salgado, Destinee",True,22,4,12,0.333,0,0,,0,0,,2,1,3,4,1,0,0,1,8
+2025-11-29_little_rock_san_diego,Little Rock,16,"Belmonte Hurtado, Lidia",True,27,0,5,0.0,0,2,0.0,0,0,,0,3,3,0,0,2,0,0,0
+2025-11-29_little_rock_san_diego,Little Rock,11,"McVay, Pearson",False,21,4,9,0.444,0,0,,0,0,,2,2,4,2,0,1,1,3,8
+2025-11-29_little_rock_san_diego,Little Rock,15,"Cotto, Mya",False,14,2,4,0.5,0,2,0.0,0,2,0.0,1,1,2,0,1,0,0,1,4
+2025-11-29_little_rock_san_diego,Little Rock,01,"Smitherman, Naomi",False,9,1,2,0.5,0,0,,0,0,,0,0,0,0,0,0,1,0,2
+2025-11-29_little_rock_san_diego,Little Rock,10,"Teamer, Blessing",False,4,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2025-11-29_little_rock_san_diego,Little Rock,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,5,8,0,0,1,0,0,0
+2025-11-30_san_diego_southeast_mo_st,Southeast Mo. St.,11,"McCully, Lexi",True,33,7,15,0.467,1,4,0.25,2,2,1.0,0,1,1,3,2,1,0,2,17
+2025-11-30_san_diego_southeast_mo_st,Southeast Mo. St.,02,"Nsabua, Raissa",True,38,3,6,0.5,1,1,1.0,4,6,0.667,2,4,6,1,4,7,0,1,11
+2025-11-30_san_diego_southeast_mo_st,Southeast Mo. St.,21,"Williams, Ainaya",True,22,4,8,0.5,0,0,,2,2,1.0,1,3,4,5,2,2,1,0,10
+2025-11-30_san_diego_southeast_mo_st,Southeast Mo. St.,00,"Taylor, Carmen",True,34,3,9,0.333,3,7,0.429,0,0,,1,4,5,1,3,0,0,2,9
+2025-11-30_san_diego_southeast_mo_st,Southeast Mo. St.,03,"Rixter, Zoey",True,26,0,3,0.0,0,0,,0,0,,1,3,4,3,0,1,0,1,0
+2025-11-30_san_diego_southeast_mo_st,Southeast Mo. St.,01,"Taylor, Charmen",False,29,2,6,0.333,0,2,0.0,0,0,,1,1,2,1,1,0,0,0,4
+2025-11-30_san_diego_southeast_mo_st,Southeast Mo. St.,04,"Jones, Kearra",False,14,2,10,0.2,0,3,0.0,0,0,,1,1,2,1,0,1,2,0,4
+2025-11-30_san_diego_southeast_mo_st,Southeast Mo. St.,22,"Ayers, Madison",False,4,0,1,0.0,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-30_san_diego_southeast_mo_st,Southeast Mo. St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,6,8,0,0,1,0,0,0
+2025-11-30_san_diego_southeast_mo_st,San Diego,15,"Ruse, Eva",True,25,6,9,0.667,1,1,1.0,7,11,0.636,3,5,8,1,0,3,2,1,20
+2025-11-30_san_diego_southeast_mo_st,San Diego,24,"Owens, Olivia",True,39,4,17,0.235,1,5,0.2,4,4,1.0,3,6,9,1,6,3,0,1,13
+2025-11-30_san_diego_southeast_mo_st,San Diego,22,"Williams, Ayla",True,18,1,5,0.2,0,0,,2,2,1.0,4,1,5,2,0,2,0,0,4
+2025-11-30_san_diego_southeast_mo_st,San Diego,03,"Amor, Lilly",True,28,0,4,0.0,0,3,0.0,0,0,,0,1,1,2,0,1,0,0,0
+2025-11-30_san_diego_southeast_mo_st,San Diego,00,"Von Seipler, Ysabella",True,10,0,2,0.0,0,1,0.0,0,0,,2,0,2,2,1,2,0,0,0
+2025-11-30_san_diego_southeast_mo_st,San Diego,20,"Rhodes, Hallie",False,33,7,11,0.636,2,4,0.5,0,0,,1,3,4,2,6,3,1,3,16
+2025-11-30_san_diego_southeast_mo_st,San Diego,10,"Holley, Helen",False,21,2,5,0.4,0,1,0.0,2,3,0.667,5,4,9,1,0,0,0,1,6
+2025-11-30_san_diego_southeast_mo_st,San Diego,01,"Moore, Dresha",False,16,3,7,0.429,0,2,0.0,0,0,,1,6,7,2,2,1,0,0,6
+2025-11-30_san_diego_southeast_mo_st,San Diego,04,"Ajayi, Jessica",False,6,0,3,0.0,0,1,0.0,0,0,,1,1,2,2,0,1,0,0,0
+2025-11-30_san_diego_southeast_mo_st,San Diego,19,"Rhodes, Jayden",False,3,0,1,0.0,0,1,0.0,0,0,,0,0,0,0,0,0,1,0,0
+2025-11-30_san_diego_southeast_mo_st,San Diego,11,"Tharpe, Malia",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-30_san_diego_southeast_mo_st,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,2,3,0,0,0,0,0,0
+2025-12-03_san_diego_binghamton,Binghamton,04,"Bennett, Kendall",True,34,6,7,0.857,0,0,,0,0,,1,2,3,1,2,2,3,1,12
+2025-12-03_san_diego_binghamton,Binghamton,22,"Middleton, Leah",True,28,4,9,0.444,2,5,0.4,1,2,0.5,0,0,0,1,0,5,0,2,11
+2025-12-03_san_diego_binghamton,Binghamton,20,"Pucci, Bella",True,29,4,6,0.667,2,3,0.667,0,0,,0,3,3,4,1,4,0,0,10
+2025-12-03_san_diego_binghamton,Binghamton,00,"Boyd, Yanniah",True,16,1,6,0.167,0,0,,0,2,0.0,0,2,2,0,1,1,0,0,2
+2025-12-03_san_diego_binghamton,Binghamton,03,"Goode, Kaia",True,15,0,1,0.0,0,1,0.0,1,2,0.5,0,1,1,5,2,0,0,2,1
+2025-12-03_san_diego_binghamton,Binghamton,11,"Bennett, Carletta",False,23,4,9,0.444,0,3,0.0,3,4,0.75,1,2,3,3,7,3,0,2,11
+2025-12-03_san_diego_binghamton,Binghamton,23,"Redd, Ashley",False,16,4,7,0.571,1,2,0.5,2,3,0.667,3,2,5,2,1,1,0,2,11
+2025-12-03_san_diego_binghamton,Binghamton,05,"Casey, Meghan",False,27,2,7,0.286,1,4,0.25,0,0,,0,3,3,1,2,2,0,0,5
+2025-12-03_san_diego_binghamton,Binghamton,01,"Goode, Klarissa",False,6,0,0,,0,0,,0,0,,0,0,0,0,1,1,0,0,0
+2025-12-03_san_diego_binghamton,Binghamton,55,"Salgado, Daysha",False,6,0,0,,0,0,,0,0,,0,1,1,2,0,0,0,0,0
+2025-12-03_san_diego_binghamton,Binghamton,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,6,8,0,0,0,0,0,0
+2025-12-03_san_diego_binghamton,San Diego,20,"Rhodes, Hallie",True,39,11,16,0.688,0,1,0.0,3,3,1.0,1,2,3,4,2,4,0,0,25
+2025-12-03_san_diego_binghamton,San Diego,24,"Owens, Olivia",True,33,2,13,0.154,1,6,0.167,0,0,,0,2,2,4,1,6,0,2,5
+2025-12-03_san_diego_binghamton,San Diego,15,"Ruse, Eva",True,17,1,5,0.2,0,0,,2,2,1.0,2,1,3,3,1,1,2,2,4
+2025-12-03_san_diego_binghamton,San Diego,03,"Amor, Lilly",True,38,1,8,0.125,1,7,0.143,0,0,,0,1,1,0,1,2,0,3,3
+2025-12-03_san_diego_binghamton,San Diego,10,"Holley, Helen",True,25,0,4,0.0,0,0,,3,4,0.75,5,1,6,3,2,4,0,0,3
+2025-12-03_san_diego_binghamton,San Diego,22,"Williams, Ayla",False,26,3,4,0.75,0,0,,6,6,1.0,6,10,16,1,0,1,1,2,12
+2025-12-03_san_diego_binghamton,San Diego,11,"Tharpe, Malia",False,10,1,4,0.25,0,1,0.0,1,2,0.5,0,1,1,0,0,0,0,2,3
+2025-12-03_san_diego_binghamton,San Diego,01,"Moore, Dresha",False,10,0,2,0.0,0,1,0.0,0,0,,0,1,1,2,0,2,1,0,0
+2025-12-03_san_diego_binghamton,San Diego,19,"Rhodes, Jayden",False,2,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2025-12-03_san_diego_binghamton,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,3,4,0,0,2,0,0,0
+2025-12-07_san_diego_utah_st,Utah St.,03,"Gayles, Aaliyah",True,35,6,15,0.4,0,3,0.0,8,9,0.889,0,4,4,3,4,5,1,2,20
+2025-12-07_san_diego_utah_st,Utah St.,01,"Asensio, Marina",True,33,6,10,0.6,4,8,0.5,0,0,,0,1,1,4,2,4,0,4,16
+2025-12-07_san_diego_utah_st,Utah St.,32,"Heaton, Jamisyn",True,11,2,4,0.5,1,2,0.5,0,0,,3,1,4,3,1,1,1,1,5
+2025-12-07_san_diego_utah_st,Utah St.,23,"Livingston, Elise",True,21,1,5,0.2,1,4,0.25,0,0,,2,0,2,0,0,0,0,0,3
+2025-12-07_san_diego_utah_st,Utah St.,08,"Rosello Lopez, Aitana",True,22,1,5,0.2,0,3,0.0,0,0,,0,0,0,2,0,2,0,1,2
+2025-12-07_san_diego_utah_st,Utah St.,55,"Sene, Sophie",False,12,4,8,0.5,0,0,,1,1,1.0,2,0,2,3,1,0,1,0,9
+2025-12-07_san_diego_utah_st,Utah St.,00,"Wilson, Rachel",False,23,2,3,0.667,0,1,0.0,0,1,0.0,1,1,2,4,0,1,0,1,4
+2025-12-07_san_diego_utah_st,Utah St.,15,"Sanford, Karyn",False,17,1,3,0.333,0,2,0.0,2,2,1.0,0,1,1,0,2,2,0,0,4
+2025-12-07_san_diego_utah_st,Utah St.,12,"Cosme, Bella",False,14,1,3,0.333,1,2,0.5,0,0,,0,2,2,1,2,1,0,1,3
+2025-12-07_san_diego_utah_st,Utah St.,31,"Brown, Macie",False,9,0,1,0.0,0,1,0.0,0,0,,0,0,0,1,0,1,0,2,0
+2025-12-07_san_diego_utah_st,Utah St.,09,"Munoz Herreros, Paloma",False,3,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-07_san_diego_utah_st,Utah St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,3,3,0,0,1,0,0,0
+2025-12-07_san_diego_utah_st,San Diego,24,"Owens, Olivia",True,33,8,18,0.444,3,9,0.333,6,8,0.75,3,6,9,2,3,8,0,2,25
+2025-12-07_san_diego_utah_st,San Diego,22,"Williams, Ayla",True,35,3,6,0.5,0,0,,8,15,0.533,7,11,18,3,2,2,2,1,14
+2025-12-07_san_diego_utah_st,San Diego,20,"Rhodes, Hallie",True,38,4,12,0.333,0,1,0.0,3,4,0.75,1,1,2,0,4,4,0,3,11
+2025-12-07_san_diego_utah_st,San Diego,03,"Amor, Lilly",True,37,3,6,0.5,3,6,0.5,0,0,,0,2,2,2,3,2,0,4,9
+2025-12-07_san_diego_utah_st,San Diego,10,"Holley, Helen",True,18,0,2,0.0,0,0,,1,2,0.5,2,1,3,3,1,0,0,0,1
+2025-12-07_san_diego_utah_st,San Diego,06,"Ray, Kylie",False,11,1,2,0.5,0,0,,4,4,1.0,2,0,2,0,0,5,0,2,6
+2025-12-07_san_diego_utah_st,San Diego,15,"Ruse, Eva",False,11,0,1,0.0,0,0,,2,2,1.0,0,0,0,1,0,0,0,0,2
+2025-12-07_san_diego_utah_st,San Diego,01,"Moore, Dresha",False,7,1,2,0.5,0,1,0.0,0,0,,1,1,2,3,0,2,0,1,2
+2025-12-07_san_diego_utah_st,San Diego,19,"Rhodes, Jayden",False,6,0,0,,0,0,,0,0,,1,0,1,0,1,0,0,0,0
+2025-12-07_san_diego_utah_st,San Diego,11,"Tharpe, Malia",False,4,0,0,,0,0,,0,0,,0,0,0,0,0,0,1,0,0
+2025-12-07_san_diego_utah_st,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,3,3,0,0,2,0,0,0
+2025-12-10_wisconsin_san_diego,San Diego,24,"Owens, Olivia",True,22,3,6,0.5,1,3,0.333,0,0,,0,1,1,4,1,6,0,1,7
+2025-12-10_wisconsin_san_diego,San Diego,20,"Rhodes, Hallie",True,26,3,9,0.333,0,0,,0,0,,0,1,1,1,0,1,1,0,6
+2025-12-10_wisconsin_san_diego,San Diego,10,"Holley, Helen",True,24,1,2,0.5,0,1,0.0,1,4,0.25,2,2,4,1,0,3,1,1,3
+2025-12-10_wisconsin_san_diego,San Diego,22,"Williams, Ayla",True,24,0,4,0.0,0,0,,3,3,1.0,2,5,7,3,0,1,0,0,3
+2025-12-10_wisconsin_san_diego,San Diego,03,"Amor, Lilly",True,20,0,1,0.0,0,0,,0,0,,0,1,1,0,1,2,0,0,0
+2025-12-10_wisconsin_san_diego,San Diego,06,"Ray, Kylie",False,26,7,13,0.538,3,3,1.0,0,0,,0,4,4,3,1,4,0,0,17
+2025-12-10_wisconsin_san_diego,San Diego,11,"Tharpe, Malia",False,15,2,2,1.0,0,0,,1,2,0.5,0,1,1,2,0,2,0,0,5
+2025-12-10_wisconsin_san_diego,San Diego,19,"Rhodes, Jayden",False,20,1,4,0.25,1,3,0.333,0,0,,0,4,4,2,2,1,0,1,3
+2025-12-10_wisconsin_san_diego,San Diego,15,"Ruse, Eva",False,11,0,2,0.0,0,0,,2,4,0.5,3,2,5,1,0,2,0,0,2
+2025-12-10_wisconsin_san_diego,San Diego,01,"Moore, Dresha",False,12,0,1,0.0,0,0,,0,0,,0,1,1,1,0,0,0,0,0
+2025-12-10_wisconsin_san_diego,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,1,2,0,0,0,0,0,0
+2025-12-10_wisconsin_san_diego,Wisconsin,22,"Bollin, Shay",True,19,3,5,0.6,1,3,0.333,4,4,1.0,2,2,4,2,1,1,0,1,11
+2025-12-10_wisconsin_san_diego,Wisconsin,13,"Porter, Ronnie",True,25,3,7,0.429,2,4,0.5,2,2,1.0,3,2,5,0,4,0,0,1,10
+2025-12-10_wisconsin_san_diego,Wisconsin,20,"Daniels, Kyrah",True,24,2,10,0.2,2,7,0.286,2,2,1.0,2,2,4,1,2,3,1,5,8
+2025-12-10_wisconsin_san_diego,Wisconsin,06,"Zaja, Dorja",True,5,1,2,0.5,0,0,,0,0,,0,0,0,0,0,0,0,0,2
+2025-12-10_wisconsin_san_diego,Wisconsin,03,"Ware, Breauna",True,10,0,3,0.0,0,0,,0,0,,1,0,1,1,3,1,0,1,0
+2025-12-10_wisconsin_san_diego,Wisconsin,01,"Howell, Destiny",False,23,6,10,0.6,2,5,0.4,0,0,,2,3,5,2,1,1,0,1,14
+2025-12-10_wisconsin_san_diego,Wisconsin,15,"Uchenna, Gift",False,16,3,6,0.5,0,0,,4,4,1.0,1,5,6,2,0,0,0,1,10
+2025-12-10_wisconsin_san_diego,Wisconsin,05,"Patibandla, Leena",False,4,2,2,1.0,0,0,,2,3,0.667,1,0,1,0,0,0,0,0,6
+2025-12-10_wisconsin_san_diego,Wisconsin,24,"Steele, Laci",False,17,2,5,0.4,0,2,0.0,1,2,0.5,0,2,2,1,1,0,0,0,5
+2025-12-10_wisconsin_san_diego,Wisconsin,04,"Krahn, Lily",False,20,1,5,0.2,1,5,0.2,0,0,,0,0,0,3,1,0,0,0,3
+2025-12-10_wisconsin_san_diego,Wisconsin,11,"Spasovski, Jovana",False,12,1,4,0.25,0,2,0.0,1,2,0.5,2,0,2,0,0,0,0,0,3
+2025-12-10_wisconsin_san_diego,Wisconsin,02,"Bisballe, Alie",False,9,1,1,1.0,0,0,,0,0,,1,2,3,1,1,1,0,1,2
+2025-12-10_wisconsin_san_diego,Wisconsin,00,"Kerstein, Nikki",False,11,0,4,0.0,0,2,0.0,0,0,,0,0,0,1,0,0,0,1,0
+2025-12-10_wisconsin_san_diego,Wisconsin,09,"Martín Mesa, Alba",False,4,0,0,,0,0,,0,0,,0,0,0,0,0,0,1,0,0
+2025-12-10_wisconsin_san_diego,Wisconsin,14,"Jaramillo, Reese",False,1,0,1,0.0,0,1,0.0,0,0,,0,0,0,1,0,0,0,0,0
+2025-12-10_wisconsin_san_diego,Wisconsin,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,1,5,0,0,3,0,0,0
+2025-12-14_san_diego_uc_riverside,UC Riverside,07,"Wickstrom, Hannah",True,35,6,20,0.3,1,8,0.125,4,4,1.0,2,4,6,1,2,4,0,3,17
+2025-12-14_san_diego_uc_riverside,UC Riverside,02,"Hackley, Seneca",True,30,3,10,0.3,2,4,0.5,2,2,1.0,1,1,2,1,2,0,0,1,10
+2025-12-14_san_diego_uc_riverside,UC Riverside,01,"Polk, Kaylani",True,27,2,7,0.286,2,5,0.4,0,0,,1,1,2,4,2,0,0,1,6
+2025-12-14_san_diego_uc_riverside,UC Riverside,09,"Chocano, Maya",True,23,1,4,0.25,1,2,0.5,3,3,1.0,0,4,4,1,0,0,0,0,6
+2025-12-14_san_diego_uc_riverside,UC Riverside,41,"Shine, Bria",True,30,1,10,0.1,0,6,0.0,1,2,0.5,3,1,4,2,2,0,0,1,3
+2025-12-14_san_diego_uc_riverside,UC Riverside,22,"Swanson, Taylor",False,17,3,6,0.5,1,2,0.5,2,2,1.0,0,4,4,3,0,1,1,0,9
+2025-12-14_san_diego_uc_riverside,UC Riverside,10,"Minshall, Makayla",False,15,2,4,0.5,1,3,0.333,0,0,,3,0,3,2,0,1,0,0,5
+2025-12-14_san_diego_uc_riverside,UC Riverside,23,"Mejia, Maria",False,13,0,0,,0,0,,0,0,,1,2,3,0,5,1,0,0,0
+2025-12-14_san_diego_uc_riverside,UC Riverside,30,"Sylla, Dieynaba",False,10,0,0,,0,0,,0,0,,0,0,0,1,0,1,1,0,0
+2025-12-14_san_diego_uc_riverside,UC Riverside,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,0,2,0,0,0,0,0,0
+2025-12-14_san_diego_uc_riverside,San Diego,06,"Ray, Kylie",True,34,5,15,0.333,3,6,0.5,5,6,0.833,0,9,9,3,3,0,2,0,18
+2025-12-14_san_diego_uc_riverside,San Diego,20,"Rhodes, Hallie",True,34,4,10,0.4,0,2,0.0,1,1,1.0,2,2,4,2,5,4,3,3,9
+2025-12-14_san_diego_uc_riverside,San Diego,22,"Williams, Ayla",True,18,4,6,0.667,0,0,,1,2,0.5,2,2,4,3,0,2,1,1,9
+2025-12-14_san_diego_uc_riverside,San Diego,24,"Owens, Olivia",True,29,3,10,0.3,2,3,0.667,0,0,,1,8,9,3,3,1,1,0,8
+2025-12-14_san_diego_uc_riverside,San Diego,03,"Amor, Lilly",True,23,1,2,0.5,1,2,0.5,0,0,,0,2,2,0,2,1,0,0,3
+2025-12-14_san_diego_uc_riverside,San Diego,15,"Ruse, Eva",False,22,3,4,0.75,0,0,,1,2,0.5,2,4,6,1,0,3,1,0,7
+2025-12-14_san_diego_uc_riverside,San Diego,19,"Rhodes, Jayden",False,23,1,1,1.0,1,1,1.0,2,2,1.0,1,0,1,3,0,0,0,0,5
+2025-12-14_san_diego_uc_riverside,San Diego,10,"Holley, Helen",False,11,1,3,0.333,0,0,,0,0,,2,2,4,3,1,1,1,0,2
+2025-12-14_san_diego_uc_riverside,San Diego,01,"Moore, Dresha",False,6,1,1,1.0,0,0,,0,0,,0,0,0,0,1,0,1,0,2
+2025-12-14_san_diego_uc_riverside,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,0,3,0,0,1,0,0,0
+2025-12-20_san_diego_cal_st_fullerton,Cal St. Fullerton,55,"Jones, Cristina",True,40,7,20,0.35,0,1,0.0,2,4,0.5,5,2,7,1,2,6,1,6,16
+2025-12-20_san_diego_cal_st_fullerton,Cal St. Fullerton,00,"Steiner, Nicole",True,29,5,11,0.455,0,0,,2,3,0.667,4,3,7,5,1,3,0,2,12
+2025-12-20_san_diego_cal_st_fullerton,Cal St. Fullerton,04,"Falsdottir, Jana",True,14,3,6,0.5,2,3,0.667,0,0,,1,2,3,3,0,0,0,1,8
+2025-12-20_san_diego_cal_st_fullerton,Cal St. Fullerton,33,"Pearson, Kya",True,31,2,5,0.4,0,0,,2,2,1.0,2,3,5,5,4,2,0,1,6
+2025-12-20_san_diego_cal_st_fullerton,Cal St. Fullerton,03,"Tauro, Maddy",True,13,2,4,0.5,0,0,,0,2,0.0,0,1,1,2,1,1,0,1,4
+2025-12-20_san_diego_cal_st_fullerton,Cal St. Fullerton,05,"Sutisna, Maxine",False,17,1,5,0.2,0,3,0.0,2,4,0.5,1,0,1,2,1,2,0,0,4
+2025-12-20_san_diego_cal_st_fullerton,Cal St. Fullerton,22,"Muniz, Madelynn",False,20,1,6,0.167,1,6,0.167,0,0,,0,0,0,0,0,0,0,0,3
+2025-12-20_san_diego_cal_st_fullerton,Cal St. Fullerton,10,"Swindle, Dylan",False,23,0,10,0.0,0,2,0.0,1,2,0.5,2,0,2,4,2,2,0,1,1
+2025-12-20_san_diego_cal_st_fullerton,Cal St. Fullerton,23,"Maxwell, Talia",False,13,0,0,,0,0,,1,2,0.5,1,1,2,0,0,0,1,1,1
+2025-12-20_san_diego_cal_st_fullerton,Cal St. Fullerton,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,0,3,0,0,0,0,0,0
+2025-12-20_san_diego_cal_st_fullerton,San Diego,24,"Owens, Olivia",True,38,3,10,0.3,2,6,0.333,5,6,0.833,1,8,9,4,2,7,0,3,13
+2025-12-20_san_diego_cal_st_fullerton,San Diego,20,"Rhodes, Hallie",True,37,5,10,0.5,0,1,0.0,2,2,1.0,1,2,3,1,5,3,1,1,12
+2025-12-20_san_diego_cal_st_fullerton,San Diego,22,"Williams, Ayla",True,25,2,4,0.5,0,0,,2,4,0.5,2,3,5,4,1,2,1,0,6
+2025-12-20_san_diego_cal_st_fullerton,San Diego,03,"Amor, Lilly",True,15,2,3,0.667,1,2,0.5,0,0,,0,2,2,0,2,0,0,2,5
+2025-12-20_san_diego_cal_st_fullerton,San Diego,06,"Ray, Kylie",True,21,1,5,0.2,0,2,0.0,0,0,,0,2,2,1,4,8,0,1,2
+2025-12-20_san_diego_cal_st_fullerton,San Diego,19,"Rhodes, Jayden",False,20,2,4,0.5,2,3,0.667,2,2,1.0,1,1,2,1,0,1,0,0,8
+2025-12-20_san_diego_cal_st_fullerton,San Diego,10,"Holley, Helen",False,16,3,4,0.75,1,1,1.0,0,0,,2,3,5,3,0,1,0,0,7
+2025-12-20_san_diego_cal_st_fullerton,San Diego,01,"Moore, Dresha",False,22,1,5,0.2,1,1,1.0,0,0,,2,8,10,4,0,3,3,0,3
+2025-12-20_san_diego_cal_st_fullerton,San Diego,15,"Ruse, Eva",False,6,0,0,,0,0,,0,0,,0,1,1,2,0,2,0,0,0
+2025-12-20_san_diego_cal_st_fullerton,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,1,3,0,0,5,0,0,0
+2025-12-28_santa_clara_san_diego,San Diego,06,"Ray, Kylie",True,25,4,16,0.25,0,3,0.0,2,2,1.0,0,5,5,1,1,5,0,1,10
+2025-12-28_santa_clara_san_diego,San Diego,03,"Amor, Lilly",True,24,3,7,0.429,3,7,0.429,0,0,,0,1,1,2,1,2,0,0,9
+2025-12-28_santa_clara_san_diego,San Diego,24,"Owens, Olivia",True,24,3,9,0.333,0,4,0.0,2,2,1.0,0,5,5,3,3,1,0,2,8
+2025-12-28_santa_clara_san_diego,San Diego,20,"Rhodes, Hallie",True,25,3,14,0.214,0,1,0.0,0,1,0.0,1,3,4,1,3,3,1,0,6
+2025-12-28_santa_clara_san_diego,San Diego,22,"Williams, Ayla",True,13,0,3,0.0,0,0,,0,2,0.0,2,6,8,2,3,1,0,0,0
+2025-12-28_santa_clara_san_diego,San Diego,01,"Moore, Dresha",False,21,3,8,0.375,0,3,0.0,0,0,,1,6,7,1,0,0,0,1,6
+2025-12-28_santa_clara_san_diego,San Diego,19,"Rhodes, Jayden",False,20,2,3,0.667,0,1,0.0,0,0,,1,3,4,3,0,0,0,0,4
+2025-12-28_santa_clara_san_diego,San Diego,15,"Ruse, Eva",False,13,0,1,0.0,0,0,,2,4,0.5,1,1,2,2,0,1,1,0,2
+2025-12-28_santa_clara_san_diego,San Diego,00,"Von Seipler, Ysabella",False,11,0,1,0.0,0,0,,1,2,0.5,1,3,4,2,0,1,0,0,1
+2025-12-28_santa_clara_san_diego,San Diego,10,"Holley, Helen",False,18,0,2,0.0,0,0,,0,2,0.0,1,4,5,3,0,0,1,0,0
+2025-12-28_santa_clara_san_diego,San Diego,04,"Ajayi, Jessica",False,6,0,3,0.0,0,2,0.0,0,0,,0,0,0,0,1,1,1,0,0
+2025-12-28_santa_clara_san_diego,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,1,2,0,0,1,0,0,0
+2025-12-28_santa_clara_san_diego,Santa Clara,00,"Jones, Maia",True,19,3,8,0.375,2,6,0.333,5,7,0.714,1,5,6,3,1,1,0,1,13
+2025-12-28_santa_clara_san_diego,Santa Clara,23,"Hawkins, Ashley",True,25,4,9,0.444,2,4,0.5,2,2,1.0,1,6,7,0,5,3,0,1,12
+2025-12-28_santa_clara_san_diego,Santa Clara,12,"Glancey, Sophie",True,13,3,11,0.273,0,3,0.0,2,2,1.0,1,3,4,3,2,0,1,1,8
+2025-12-28_santa_clara_san_diego,Santa Clara,30,"Fox, Kylee",True,24,3,13,0.231,1,6,0.167,0,0,,3,5,8,1,2,0,0,1,7
+2025-12-28_santa_clara_san_diego,Santa Clara,13,"Schmidt, Ava",True,26,1,5,0.2,1,3,0.333,0,0,,0,3,3,1,1,0,3,1,3
+2025-12-28_santa_clara_san_diego,Santa Clara,03,"Schat, Kate",False,19,5,8,0.625,3,6,0.5,1,2,0.5,0,2,2,0,1,0,0,1,14
+2025-12-28_santa_clara_san_diego,Santa Clara,20,"Miller, Delainey",False,21,2,10,0.2,0,1,0.0,3,5,0.6,1,7,8,1,0,3,0,0,7
+2025-12-28_santa_clara_san_diego,Santa Clara,34,"Gildersleeve-Stiles, Tyler",False,16,1,2,0.5,0,0,,1,2,0.5,1,3,4,1,0,1,0,1,3
+2025-12-28_santa_clara_san_diego,Santa Clara,02,"Hooker, Aniya",False,25,0,3,0.0,0,1,0.0,1,2,0.5,4,3,7,2,5,2,0,2,1
+2025-12-28_santa_clara_san_diego,Santa Clara,11,"Goodchild, Alana",False,6,0,5,0.0,0,3,0.0,0,0,,1,1,2,0,0,0,0,1,0
+2025-12-28_santa_clara_san_diego,Santa Clara,06,"Grieger, Sienna",False,5,0,0,,0,0,,0,0,,0,0,0,2,0,0,0,0,0
+2025-12-28_santa_clara_san_diego,Santa Clara,10,"Grover, Lauren",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-28_santa_clara_san_diego,Santa Clara,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,3,5,0,0,0,0,0,0
+2025-12-30_pacific_san_diego,San Diego,06,"Ray, Kylie",True,40,10,22,0.455,3,7,0.429,6,7,0.857,0,8,8,4,4,2,0,4,29
+2025-12-30_pacific_san_diego,San Diego,24,"Owens, Olivia",True,30,4,11,0.364,1,7,0.143,5,6,0.833,2,4,6,4,1,6,0,2,14
+2025-12-30_pacific_san_diego,San Diego,20,"Rhodes, Hallie",True,29,4,10,0.4,1,4,0.25,2,4,0.5,0,2,2,2,0,1,0,1,11
+2025-12-30_pacific_san_diego,San Diego,03,"Amor, Lilly",True,28,0,4,0.0,0,3,0.0,0,0,,0,1,1,2,1,0,0,1,0
+2025-12-30_pacific_san_diego,San Diego,22,"Williams, Ayla",True,10,0,2,0.0,0,0,,0,0,,0,0,0,1,0,3,0,0,0
+2025-12-30_pacific_san_diego,San Diego,10,"Holley, Helen",False,24,3,3,1.0,0,0,,1,2,0.5,2,3,5,4,0,1,0,0,7
+2025-12-30_pacific_san_diego,San Diego,15,"Ruse, Eva",False,23,2,5,0.4,0,0,,1,2,0.5,4,2,6,1,1,0,1,0,5
+2025-12-30_pacific_san_diego,San Diego,01,"Moore, Dresha",False,8,0,2,0.0,0,0,,2,2,1.0,2,1,3,4,0,1,0,0,2
+2025-12-30_pacific_san_diego,San Diego,19,"Rhodes, Jayden",False,8,0,0,,0,0,,0,0,,0,1,1,1,0,2,0,0,0
+2025-12-30_pacific_san_diego,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,2,6,0,0,0,0,0,0
+2025-12-30_pacific_san_diego,Pacific,10,"Ward, Sydney",True,31,6,8,0.75,1,1,1.0,6,9,0.667,1,7,8,2,2,1,0,1,19
+2025-12-30_pacific_san_diego,Pacific,21,"Nestorov, Daria",True,27,4,9,0.444,1,2,0.5,4,5,0.8,1,5,6,4,4,1,0,1,13
+2025-12-30_pacific_san_diego,Pacific,25,"Bartholomew, Winner",True,13,4,9,0.444,0,0,,0,0,,1,1,2,2,0,2,0,0,8
+2025-12-30_pacific_san_diego,Pacific,15,"Lowery, Nyah",True,29,2,7,0.286,1,5,0.2,0,2,0.0,0,2,2,1,2,1,0,2,5
+2025-12-30_pacific_san_diego,Pacific,05,"Szabo, Stella",True,33,1,2,0.5,1,2,0.5,0,2,0.0,1,2,3,5,1,1,0,1,3
+2025-12-30_pacific_san_diego,Pacific,07,"Yergensen, Liv",False,23,2,3,0.667,0,1,0.0,6,8,0.75,0,1,1,2,2,1,0,0,10
+2025-12-30_pacific_san_diego,Pacific,09,"Radocaj, Marina",False,25,4,11,0.364,0,0,,1,4,0.25,2,2,4,1,2,2,2,0,9
+2025-12-30_pacific_san_diego,Pacific,08,"Mindermann, Sophia",False,8,0,1,0.0,0,1,0.0,3,3,1.0,0,0,0,1,0,2,0,0,3
+2025-12-30_pacific_san_diego,Pacific,11,"Anderegg, Luisa",False,11,1,3,0.333,0,1,0.0,0,0,,0,2,2,1,0,0,0,1,2
+2025-12-30_pacific_san_diego,Pacific,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,4,7,0,0,1,0,0,0
+2026-01-02_san_diego_san_francisco,San Francisco,23,"Edokpaigbe, Candy",True,38,5,8,0.625,2,2,1.0,5,8,0.625,1,5,6,1,1,3,3,1,17
+2026-01-02_san_diego_san_francisco,San Francisco,09,"Cargol, Aina",True,35,4,8,0.5,2,4,0.5,2,4,0.5,1,3,4,1,6,3,0,1,12
+2026-01-02_san_diego_san_francisco,San Francisco,12,"Tausova, Natasa",True,28,3,4,0.75,2,3,0.667,1,3,0.333,1,5,6,4,1,4,0,0,9
+2026-01-02_san_diego_san_francisco,San Francisco,03,"Mourino, Noelia",True,27,4,6,0.667,0,0,,1,2,0.5,2,7,9,3,1,4,1,2,9
+2026-01-02_san_diego_san_francisco,San Francisco,02,"Neira, Mara",True,32,3,13,0.231,1,9,0.111,0,0,,2,1,3,1,2,0,0,1,7
+2026-01-02_san_diego_san_francisco,San Francisco,24,"Castro, Sol",False,13,2,6,0.333,0,0,,1,2,0.5,1,1,2,1,1,0,0,0,5
+2026-01-02_san_diego_san_francisco,San Francisco,22,"Tirado, Paula",False,12,0,2,0.0,0,2,0.0,0,0,,0,1,1,3,1,2,0,1,0
+2026-01-02_san_diego_san_francisco,San Francisco,04,"McIntyre, Meghan",False,10,0,1,0.0,0,1,0.0,0,0,,1,4,5,0,1,1,0,0,0
+2026-01-02_san_diego_san_francisco,San Francisco,21,"Williams, Olivia",False,3,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-02_san_diego_san_francisco,San Francisco,07,"Ferrara Horne, Nevaeh",False,2,0,1,0.0,0,0,,0,0,,0,0,0,0,1,0,0,0,0
+2026-01-02_san_diego_san_francisco,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,5,5,0,0,1,0,0,0
+2026-01-02_san_diego_san_francisco,San Diego,06,"Ray, Kylie",True,40,10,21,0.476,4,8,0.5,0,0,,1,8,9,5,5,5,0,3,24
+2026-01-02_san_diego_san_francisco,San Diego,20,"Rhodes, Hallie",True,38,3,16,0.188,0,3,0.0,1,2,0.5,1,0,1,1,1,1,1,3,7
+2026-01-02_san_diego_san_francisco,San Diego,24,"Owens, Olivia",True,27,3,10,0.3,0,3,0.0,0,1,0.0,0,3,3,2,2,3,1,0,6
+2026-01-02_san_diego_san_francisco,San Diego,22,"Williams, Ayla",True,6,0,1,0.0,0,0,,2,2,1.0,0,1,1,3,0,1,0,0,2
+2026-01-02_san_diego_san_francisco,San Diego,03,"Amor, Lilly",True,10,0,1,0.0,0,1,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-02_san_diego_san_francisco,San Diego,15,"Ruse, Eva",False,33,3,8,0.375,0,1,0.0,0,0,,2,2,4,0,2,1,1,0,6
+2026-01-02_san_diego_san_francisco,San Diego,10,"Holley, Helen",False,20,3,6,0.5,0,2,0.0,0,0,,3,3,6,2,2,0,0,1,6
+2026-01-02_san_diego_san_francisco,San Diego,19,"Rhodes, Jayden",False,8,1,1,1.0,1,1,1.0,0,0,,0,0,0,0,0,0,0,0,3
+2026-01-02_san_diego_san_francisco,San Diego,01,"Moore, Dresha",False,18,0,2,0.0,0,0,,1,2,0.5,1,3,4,4,0,0,0,1,1
+2026-01-02_san_diego_san_francisco,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,1,4,0,0,1,0,0,0
+2026-01-04_san_diego_saint_marys_ca,Saint Mary's (CA),23,"Wedin, Addi",True,27,2,11,0.182,0,5,0.0,6,6,1.0,2,1,3,1,3,0,0,1,10
+2026-01-04_san_diego_saint_marys_ca,Saint Mary's (CA),08,"Foy, Emily",True,23,4,8,0.5,2,5,0.4,0,0,,0,2,2,0,1,1,0,1,10
+2026-01-04_san_diego_saint_marys_ca,Saint Mary's (CA),05,"Shoff, Abigail",True,22,2,4,0.5,1,2,0.5,0,0,,1,2,3,3,1,2,0,1,5
+2026-01-04_san_diego_saint_marys_ca,Saint Mary's (CA),13,"Latu, Malia",True,18,2,7,0.286,0,1,0.0,0,0,,2,2,4,1,0,3,0,0,4
+2026-01-04_san_diego_saint_marys_ca,Saint Mary's (CA),07,"Clarke, Edie",True,22,0,2,0.0,0,1,0.0,2,2,1.0,4,2,6,1,3,3,1,1,2
+2026-01-04_san_diego_saint_marys_ca,Saint Mary's (CA),22,"Afeaki, Melesungu",False,16,3,4,0.75,0,0,,2,2,1.0,0,0,0,2,0,2,0,0,8
+2026-01-04_san_diego_saint_marys_ca,Saint Mary's (CA),00,"Hunter, Jada",False,22,3,6,0.5,0,1,0.0,0,1,0.0,0,3,3,0,2,4,0,5,6
+2026-01-04_san_diego_saint_marys_ca,Saint Mary's (CA),33,"Wedin, Ella",False,16,2,5,0.4,2,5,0.4,0,0,,0,3,3,2,0,0,0,0,6
+2026-01-04_san_diego_saint_marys_ca,Saint Mary's (CA),03,"Hashemian-Orr, Mauriana",False,16,2,3,0.667,0,0,,0,0,,0,4,4,2,3,2,0,0,4
+2026-01-04_san_diego_saint_marys_ca,Saint Mary's (CA),04,"Ohiaeri, Charlece",False,9,1,2,0.5,0,1,0.0,0,0,,0,3,3,0,0,0,0,1,2
+2026-01-04_san_diego_saint_marys_ca,Saint Mary's (CA),02,"Kurkowski, Amy",False,6,0,1,0.0,0,1,0.0,0,0,,1,0,1,1,0,2,0,0,0
+2026-01-04_san_diego_saint_marys_ca,Saint Mary's (CA),10,"Grigoropoulou, Georgia",False,3,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-04_san_diego_saint_marys_ca,Saint Mary's (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,2,3,5,0,0,1,0,0,0
+2026-01-04_san_diego_saint_marys_ca,San Diego,06,"Ray, Kylie",True,37,7,22,0.318,3,13,0.231,0,0,,2,3,5,4,5,9,1,1,17
+2026-01-04_san_diego_saint_marys_ca,San Diego,24,"Owens, Olivia",True,30,3,9,0.333,0,3,0.0,2,2,1.0,0,3,3,3,2,2,0,3,8
+2026-01-04_san_diego_saint_marys_ca,San Diego,20,"Rhodes, Hallie",True,25,1,8,0.125,0,1,0.0,0,0,,0,4,4,1,0,1,1,1,2
+2026-01-04_san_diego_saint_marys_ca,San Diego,03,"Amor, Lilly",True,22,1,5,0.2,0,4,0.0,0,0,,0,0,0,1,1,0,2,1,2
+2026-01-04_san_diego_saint_marys_ca,San Diego,22,"Williams, Ayla",True,11,0,0,,0,0,,2,2,1.0,0,0,0,0,0,0,0,0,2
+2026-01-04_san_diego_saint_marys_ca,San Diego,15,"Ruse, Eva",False,29,5,6,0.833,0,0,,4,6,0.667,5,5,10,1,1,1,1,2,14
+2026-01-04_san_diego_saint_marys_ca,San Diego,00,"Von Seipler, Ysabella",False,15,1,1,1.0,0,0,,0,0,,1,0,1,1,1,0,0,1,2
+2026-01-04_san_diego_saint_marys_ca,San Diego,19,"Rhodes, Jayden",False,15,1,2,0.5,0,1,0.0,0,0,,0,2,2,1,0,2,0,2,2
+2026-01-04_san_diego_saint_marys_ca,San Diego,04,"Ajayi, Jessica",False,10,0,2,0.0,0,2,0.0,0,0,,1,1,2,1,0,1,0,2,0
+2026-01-04_san_diego_saint_marys_ca,San Diego,01,"Moore, Dresha",False,4,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2026-01-04_san_diego_saint_marys_ca,San Diego,10,"Holley, Helen",False,2,0,1,0.0,0,0,,0,0,,1,0,1,1,0,0,0,0,0
+2026-01-04_san_diego_saint_marys_ca,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,2,3,0,0,0,0,0,0
+2026-01-08_seattle_u_san_diego,San Diego,06,"Ray, Kylie",True,40,9,18,0.5,1,3,0.333,4,5,0.8,1,2,3,3,5,3,0,0,23
+2026-01-08_seattle_u_san_diego,San Diego,20,"Rhodes, Hallie",True,34,5,11,0.455,2,5,0.4,2,2,1.0,0,4,4,2,1,1,1,0,14
+2026-01-08_seattle_u_san_diego,San Diego,24,"Owens, Olivia",True,29,3,9,0.333,0,1,0.0,0,0,,2,2,4,2,2,3,0,2,6
+2026-01-08_seattle_u_san_diego,San Diego,15,"Ruse, Eva",True,11,0,4,0.0,0,1,0.0,0,0,,2,0,2,3,0,1,0,0,0
+2026-01-08_seattle_u_san_diego,San Diego,22,"Williams, Ayla",True,6,0,1,0.0,0,0,,0,0,,0,1,1,1,0,0,1,1,0
+2026-01-08_seattle_u_san_diego,San Diego,01,"Moore, Dresha",False,24,2,12,0.167,0,2,0.0,5,6,0.833,5,7,12,4,0,3,0,1,9
+2026-01-08_seattle_u_san_diego,San Diego,11,"Tharpe, Malia",False,23,4,8,0.5,0,2,0.0,0,0,,3,0,3,3,1,1,0,3,8
+2026-01-08_seattle_u_san_diego,San Diego,19,"Rhodes, Jayden",False,14,1,3,0.333,0,2,0.0,0,0,,0,4,4,2,0,2,0,2,2
+2026-01-08_seattle_u_san_diego,San Diego,03,"Amor, Lilly",False,16,0,1,0.0,0,1,0.0,0,0,,0,0,0,1,0,0,0,1,0
+2026-01-08_seattle_u_san_diego,San Diego,00,"Von Seipler, Ysabella",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-08_seattle_u_san_diego,San Diego,04,"Ajayi, Jessica",False,1,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2026-01-08_seattle_u_san_diego,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,3,6,0,0,0,0,0,0
+2026-01-08_seattle_u_san_diego,Seattle U,03,"Brubaker, Ella",True,39,6,11,0.545,3,5,0.6,5,5,1.0,1,2,3,1,0,3,1,2,20
+2026-01-08_seattle_u_san_diego,Seattle U,14,"Stricklin, Tamia",True,39,6,11,0.545,3,5,0.6,5,6,0.833,1,5,6,1,3,1,0,0,20
+2026-01-08_seattle_u_san_diego,Seattle U,24,"Rodriguez, Sydnie",True,34,2,11,0.182,1,7,0.143,4,4,1.0,2,9,11,1,3,3,0,0,9
+2026-01-08_seattle_u_san_diego,Seattle U,07,"Milkovic, Lucija",True,19,2,4,0.5,0,0,,0,0,,0,1,1,3,1,2,0,0,4
+2026-01-08_seattle_u_san_diego,Seattle U,05,"Mogel, Dylan",True,17,1,1,1.0,0,0,,1,2,0.5,0,0,0,2,2,4,0,1,3
+2026-01-08_seattle_u_san_diego,Seattle U,09,"Vesic, Jana",False,23,3,7,0.429,1,3,0.333,2,2,1.0,1,4,5,2,2,1,0,0,9
+2026-01-08_seattle_u_san_diego,Seattle U,06,"Bigovic, Andjela",False,21,1,4,0.25,1,2,0.5,0,0,,0,3,3,4,1,1,0,0,3
+2026-01-08_seattle_u_san_diego,Seattle U,04,"Proctor, Fia",False,4,0,0,,0,0,,0,0,,0,0,0,1,0,1,0,0,0
+2026-01-08_seattle_u_san_diego,Seattle U,08,"Emanga, Chloe",False,4,0,0,,0,0,,0,0,,1,0,1,1,0,2,0,0,0
+2026-01-08_seattle_u_san_diego,Seattle U,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2026-01-10_san_diego_pepperdine,Pepperdine,13,"Fiso, Meghan",True,35,8,18,0.444,0,3,0.0,0,0,,0,6,6,2,3,0,0,1,16
+2026-01-10_san_diego_pepperdine,Pepperdine,22,"Falk, Lina",True,30,3,10,0.3,1,3,0.333,5,6,0.833,4,3,7,2,2,1,0,1,12
+2026-01-10_san_diego_pepperdine,Pepperdine,12,"Preston, Shorna",True,31,3,5,0.6,1,2,0.5,0,2,0.0,1,9,10,4,5,3,1,1,7
+2026-01-10_san_diego_pepperdine,Pepperdine,02,"Guiney, Elli",True,31,2,8,0.25,0,3,0.0,2,2,1.0,2,4,6,3,4,4,0,0,6
+2026-01-10_san_diego_pepperdine,Pepperdine,01,"Sta. Maria, Taija",True,23,0,4,0.0,0,2,0.0,0,0,,0,1,1,1,3,4,0,0,0
+2026-01-10_san_diego_pepperdine,Pepperdine,30,"Harmon, Seleh",False,20,2,8,0.25,0,4,0.0,0,0,,0,1,1,0,1,2,0,1,4
+2026-01-10_san_diego_pepperdine,Pepperdine,03,"Green, Bella",False,9,2,2,1.0,0,0,,0,0,,1,1,2,1,1,0,0,0,4
+2026-01-10_san_diego_pepperdine,Pepperdine,00,"Finley, Ivory",False,21,1,5,0.2,0,1,0.0,0,0,,1,2,3,3,0,2,0,0,2
+2026-01-10_san_diego_pepperdine,Pepperdine,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,1,2,0,0,0,0,0,0
+2026-01-10_san_diego_pepperdine,San Diego,20,"Rhodes, Hallie",True,38,7,12,0.583,1,3,0.333,1,2,0.5,0,6,6,3,1,2,1,1,16
+2026-01-10_san_diego_pepperdine,San Diego,06,"Ray, Kylie",True,29,5,18,0.278,0,3,0.0,4,4,1.0,2,5,7,4,3,8,0,0,14
+2026-01-10_san_diego_pepperdine,San Diego,24,"Owens, Olivia",True,35,3,9,0.333,0,1,0.0,0,0,,4,7,11,2,2,1,1,5,6
+2026-01-10_san_diego_pepperdine,San Diego,01,"Moore, Dresha",True,9,1,2,0.5,0,0,,0,0,,0,0,0,2,1,1,0,0,2
+2026-01-10_san_diego_pepperdine,San Diego,03,"Amor, Lilly",True,32,0,2,0.0,0,1,0.0,0,0,,0,0,0,2,0,0,0,0,0
+2026-01-10_san_diego_pepperdine,San Diego,11,"Tharpe, Malia",False,18,3,5,0.6,0,0,,2,2,1.0,0,1,1,2,1,1,0,1,8
+2026-01-10_san_diego_pepperdine,San Diego,10,"Holley, Helen",False,21,1,2,0.5,1,1,1.0,0,0,,0,4,4,2,0,1,1,0,3
+2026-01-10_san_diego_pepperdine,San Diego,15,"Ruse, Eva",False,9,1,3,0.333,0,0,,1,2,0.5,0,1,1,3,0,2,0,2,3
+2026-01-10_san_diego_pepperdine,San Diego,22,"Williams, Ayla",False,7,0,3,0.0,0,0,,2,2,1.0,1,2,3,2,1,0,0,0,2
+2026-01-10_san_diego_pepperdine,San Diego,19,"Rhodes, Jayden",False,2,0,2,0.0,0,0,,0,0,,1,0,1,0,0,0,0,1,0
+2026-01-10_san_diego_pepperdine,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,3,5,0,0,0,0,0,0
+2026-01-17_gonzaga_san_diego,San Diego,06,"Ray, Kylie",True,33,6,19,0.316,1,2,0.5,0,0,,0,2,2,2,0,6,1,1,13
+2026-01-17_gonzaga_san_diego,San Diego,20,"Rhodes, Hallie",True,24,4,9,0.444,0,0,,2,2,1.0,0,2,2,0,0,3,1,0,10
+2026-01-17_gonzaga_san_diego,San Diego,24,"Owens, Olivia",True,22,1,6,0.167,0,2,0.0,0,0,,1,0,1,1,0,1,0,2,2
+2026-01-17_gonzaga_san_diego,San Diego,15,"Ruse, Eva",True,14,0,5,0.0,0,0,,2,4,0.5,2,1,3,0,0,2,0,0,2
+2026-01-17_gonzaga_san_diego,San Diego,22,"Williams, Ayla",True,,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-17_gonzaga_san_diego,San Diego,01,"Moore, Dresha",False,17,2,3,0.667,0,0,,0,0,,1,0,1,4,1,1,0,0,4
+2026-01-17_gonzaga_san_diego,San Diego,04,"Ajayi, Jessica",False,16,1,4,0.25,1,3,0.333,0,0,,0,1,1,2,0,1,1,0,3
+2026-01-17_gonzaga_san_diego,San Diego,11,"Tharpe, Malia",False,19,1,3,0.333,0,0,,0,0,,1,1,2,0,1,0,0,0,2
+2026-01-17_gonzaga_san_diego,San Diego,19,"Rhodes, Jayden",False,19,1,3,0.333,0,1,0.0,0,0,,0,2,2,1,0,0,0,1,2
+2026-01-17_gonzaga_san_diego,San Diego,10,"Holley, Helen",False,13,1,3,0.333,0,1,0.0,0,0,,2,1,3,1,0,0,0,0,2
+2026-01-17_gonzaga_san_diego,San Diego,00,"Von Seipler, Ysabella",False,9,1,1,1.0,0,0,,0,0,,0,0,0,0,0,0,0,0,2
+2026-01-17_gonzaga_san_diego,San Diego,03,"Amor, Lilly",False,14,0,1,0.0,0,0,,0,0,,0,0,0,3,0,1,0,0,0
+2026-01-17_gonzaga_san_diego,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,4,8,0,0,0,0,0,0
+2026-01-17_gonzaga_san_diego,Gonzaga,11,"Turner, Allie",True,25,4,6,0.667,1,1,1.0,2,2,1.0,0,0,0,0,6,2,0,2,11
+2026-01-17_gonzaga_san_diego,Gonzaga,55,"Aokuso, Zeryhia",True,22,4,9,0.444,1,2,0.5,0,0,,2,1,3,1,2,1,0,1,9
+2026-01-17_gonzaga_san_diego,Gonzaga,20,"Smith, Taylor",True,17,4,6,0.667,0,0,,0,0,,3,2,5,3,2,3,0,0,8
+2026-01-17_gonzaga_san_diego,Gonzaga,33,"Whittaker, Lauren",True,24,3,6,0.5,1,2,0.5,0,0,,1,12,13,3,2,3,0,3,7
+2026-01-17_gonzaga_san_diego,Gonzaga,08,"Bettencourt, Ines",True,24,1,6,0.167,1,5,0.2,0,0,,0,2,2,1,5,0,0,2,3
+2026-01-17_gonzaga_san_diego,Gonzaga,24,"Gardner, Teryn",False,20,4,7,0.571,4,6,0.667,0,0,,1,1,2,0,3,0,0,0,12
+2026-01-17_gonzaga_san_diego,Gonzaga,23,"Haile, Jaiden",False,24,5,6,0.833,0,0,,0,0,,1,5,6,1,1,0,1,1,10
+2026-01-17_gonzaga_san_diego,Gonzaga,04,"Lichtie, Sierra",False,16,4,5,0.8,1,1,1.0,0,0,,0,2,2,1,2,1,1,0,9
+2026-01-17_gonzaga_san_diego,Gonzaga,01,"Lofing, Paige",False,14,3,7,0.429,2,5,0.4,1,1,1.0,0,0,0,0,2,1,0,1,9
+2026-01-17_gonzaga_san_diego,Gonzaga,12,"Osarobo, Christabel",False,14,3,5,0.6,1,3,0.333,2,2,1.0,1,1,2,2,1,0,1,0,9
+2026-01-17_gonzaga_san_diego,Gonzaga,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,3,6,0,0,0,0,0,0
+2026-01-22_san_francisco_san_diego,San Diego,06,"Ray, Kylie",True,38,10,27,0.37,2,6,0.333,5,6,0.833,3,10,13,4,1,7,0,4,27
+2026-01-22_san_francisco_san_diego,San Diego,20,"Rhodes, Hallie",True,40,8,19,0.421,2,4,0.5,6,8,0.75,3,4,7,2,0,1,0,1,24
+2026-01-22_san_francisco_san_diego,San Diego,15,"Ruse, Eva",True,27,1,1,1.0,0,0,,3,6,0.5,5,3,8,4,0,3,0,1,5
+2026-01-22_san_francisco_san_diego,San Diego,10,"Holley, Helen",True,34,2,4,0.5,0,1,0.0,0,0,,1,0,1,5,2,0,1,0,4
+2026-01-22_san_francisco_san_diego,San Diego,03,"Amor, Lilly",True,33,1,5,0.2,1,5,0.2,0,0,,0,0,0,1,2,0,0,0,3
+2026-01-22_san_francisco_san_diego,San Diego,22,"Williams, Ayla",False,7,0,1,0.0,0,0,,2,2,1.0,1,2,3,1,0,2,1,1,2
+2026-01-22_san_francisco_san_diego,San Diego,01,"Moore, Dresha",False,6,0,0,,0,0,,0,0,,0,1,1,2,0,2,1,0,0
+2026-01-22_san_francisco_san_diego,San Diego,04,"Ajayi, Jessica",False,6,0,1,0.0,0,1,0.0,0,0,,0,0,0,3,0,1,0,0,0
+2026-01-22_san_francisco_san_diego,San Diego,11,"Tharpe, Malia",False,6,0,3,0.0,0,1,0.0,0,0,,0,0,0,1,0,0,0,1,0
+2026-01-22_san_francisco_san_diego,San Diego,00,"Von Seipler, Ysabella",False,3,0,0,,0,0,,0,0,,0,1,1,0,0,0,1,0,0
+2026-01-22_san_francisco_san_diego,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,0,3,0,0,1,0,0,0
+2026-01-22_san_francisco_san_diego,San Francisco,23,"Edokpaigbe, Candy",True,32,6,8,0.75,2,2,1.0,10,11,0.909,1,1,2,2,0,1,1,0,24
+2026-01-22_san_francisco_san_diego,San Francisco,09,"Cargol, Aina",True,37,4,11,0.364,2,5,0.4,6,8,0.75,0,0,0,3,5,5,0,3,16
+2026-01-22_san_francisco_san_diego,San Francisco,03,"Mourino, Noelia",True,25,2,6,0.333,0,0,,3,5,0.6,3,8,11,4,2,3,0,0,7
+2026-01-22_san_francisco_san_diego,San Francisco,12,"Tausova, Natasa",True,22,2,5,0.4,1,2,0.5,0,0,,1,0,1,4,0,2,0,0,5
+2026-01-22_san_francisco_san_diego,San Francisco,02,"Neira, Mara",True,19,1,6,0.167,0,3,0.0,0,0,,0,3,3,1,1,1,0,0,2
+2026-01-22_san_francisco_san_diego,San Francisco,21,"Williams, Olivia",False,25,3,7,0.429,0,0,,0,0,,0,4,4,0,1,1,1,1,6
+2026-01-22_san_francisco_san_diego,San Francisco,22,"Tirado, Paula",False,9,2,5,0.4,1,2,0.5,0,0,,0,0,0,2,1,0,0,1,5
+2026-01-22_san_francisco_san_diego,San Francisco,04,"McIntyre, Meghan",False,15,1,3,0.333,0,1,0.0,2,2,1.0,2,3,5,0,1,1,0,1,4
+2026-01-22_san_francisco_san_diego,San Francisco,24,"Castro, Sol",False,12,0,1,0.0,0,0,,0,2,0.0,3,2,5,2,2,0,0,0,0
+2026-01-22_san_francisco_san_diego,San Francisco,14,"Ugwah, Michelle",False,4,0,0,,0,0,,0,0,,0,0,0,2,0,2,1,0,0
+2026-01-22_san_francisco_san_diego,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,4,7,0,0,0,0,0,0
+2026-01-24_san_diego_lmu_ca,LMU (CA),00,"Lawson, Jess",True,32,9,23,0.391,1,3,0.333,4,6,0.667,5,5,10,2,2,2,0,4,23
+2026-01-24_san_diego_lmu_ca,LMU (CA),55,"Hernandez, Maya",True,30,7,12,0.583,0,0,,3,4,0.75,3,4,7,3,1,3,1,5,17
+2026-01-24_san_diego_lmu_ca,LMU (CA),05,"Heidger, Carly",True,28,1,4,0.25,0,2,0.0,4,4,1.0,0,1,1,0,2,1,0,0,6
+2026-01-24_san_diego_lmu_ca,LMU (CA),28,"Matic, Andjela",True,35,1,10,0.1,1,7,0.143,2,3,0.667,0,3,3,4,4,2,0,1,5
+2026-01-24_san_diego_lmu_ca,LMU (CA),13,"Krajina, Ivana",True,13,0,0,,0,0,,0,0,,0,0,0,3,1,2,0,0,0
+2026-01-24_san_diego_lmu_ca,LMU (CA),24,"Jones, Kayla",False,7,2,2,1.0,0,0,,2,2,1.0,1,0,1,0,0,0,0,0,6
+2026-01-24_san_diego_lmu_ca,LMU (CA),04,"Clarke, Allison",False,23,1,6,0.167,1,4,0.25,0,0,,0,2,2,2,1,0,0,0,3
+2026-01-24_san_diego_lmu_ca,LMU (CA),54,"Ogot, Zawadi",False,17,0,2,0.0,0,0,,0,0,,1,0,1,0,0,0,2,1,0
+2026-01-24_san_diego_lmu_ca,LMU (CA),30,"Reus Piza, Paula",False,9,0,2,0.0,0,1,0.0,0,0,,1,2,3,0,0,1,1,1,0
+2026-01-24_san_diego_lmu_ca,LMU (CA),07,"Milanovic, Ana",False,6,0,3,0.0,0,2,0.0,0,0,,1,0,1,1,0,1,0,0,0
+2026-01-24_san_diego_lmu_ca,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,1,3,4,0,0,1,0,0,0
+2026-01-24_san_diego_lmu_ca,San Diego,06,"Ray, Kylie",True,38,6,16,0.375,1,2,0.5,13,14,0.929,0,9,9,1,5,5,0,1,26
+2026-01-24_san_diego_lmu_ca,San Diego,20,"Rhodes, Hallie",True,39,6,15,0.4,0,0,,0,0,,0,2,2,3,7,3,0,1,12
+2026-01-24_san_diego_lmu_ca,San Diego,15,"Ruse, Eva",True,34,6,9,0.667,0,0,,0,2,0.0,5,7,12,1,1,1,2,1,12
+2026-01-24_san_diego_lmu_ca,San Diego,10,"Holley, Helen",True,19,1,2,0.5,0,0,,0,0,,1,1,2,2,1,1,0,2,2
+2026-01-24_san_diego_lmu_ca,San Diego,03,"Amor, Lilly",True,12,0,1,0.0,0,1,0.0,0,0,,0,1,1,0,0,3,0,1,0
+2026-01-24_san_diego_lmu_ca,San Diego,24,"Owens, Olivia",False,29,4,5,0.8,1,1,1.0,0,1,0.0,1,4,5,2,2,4,0,1,9
+2026-01-24_san_diego_lmu_ca,San Diego,19,"Rhodes, Jayden",False,22,3,4,0.75,2,2,1.0,0,0,,0,1,1,2,0,1,0,1,8
+2026-01-24_san_diego_lmu_ca,San Diego,22,"Williams, Ayla",False,6,0,1,0.0,0,0,,0,0,,0,3,3,2,0,1,0,2,0
+2026-01-24_san_diego_lmu_ca,San Diego,11,"Tharpe, Malia",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-24_san_diego_lmu_ca,San Diego,04,"Ajayi, Jessica",False,,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-24_san_diego_lmu_ca,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,3,4,0,0,0,0,0,0
+2026-01-29_oregon_st_san_diego,San Diego,20,"Rhodes, Hallie",True,18,4,8,0.5,1,2,0.5,0,0,,0,1,1,1,2,0,0,0,9
+2026-01-29_oregon_st_san_diego,San Diego,15,"Ruse, Eva",True,26,2,8,0.25,0,1,0.0,0,0,,1,2,3,0,1,0,0,1,4
+2026-01-29_oregon_st_san_diego,San Diego,03,"Amor, Lilly",True,35,1,2,0.5,0,1,0.0,0,0,,0,1,1,3,1,1,0,2,2
+2026-01-29_oregon_st_san_diego,San Diego,10,"Holley, Helen",True,15,0,1,0.0,0,0,,0,0,,4,2,6,4,0,0,0,0,0
+2026-01-29_oregon_st_san_diego,San Diego,06,"Ray, Kylie",True,3,0,4,0.0,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-29_oregon_st_san_diego,San Diego,24,"Owens, Olivia",False,31,5,17,0.294,1,4,0.25,1,4,0.25,2,7,9,4,0,4,0,0,12
+2026-01-29_oregon_st_san_diego,San Diego,19,"Rhodes, Jayden",False,27,3,9,0.333,1,5,0.2,3,6,0.5,0,3,3,2,0,0,0,0,10
+2026-01-29_oregon_st_san_diego,San Diego,22,"Williams, Ayla",False,14,1,1,1.0,0,0,,2,4,0.5,3,3,6,0,0,2,1,2,4
+2026-01-29_oregon_st_san_diego,San Diego,04,"Ajayi, Jessica",False,29,1,9,0.111,0,3,0.0,0,0,,0,3,3,4,1,0,0,1,2
+2026-01-29_oregon_st_san_diego,San Diego,00,"Von Seipler, Ysabella",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-29_oregon_st_san_diego,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,1,2,0,0,1,0,0,0
+2026-01-29_oregon_st_san_diego,Oregon St.,01,"Shuler, Kennedie",True,30,9,15,0.6,0,0,,6,7,0.857,0,7,7,1,3,1,1,3,24
+2026-01-29_oregon_st_san_diego,Oregon St.,00,"Bolden, Tiara",True,27,4,10,0.4,2,5,0.4,4,4,1.0,1,7,8,1,0,3,2,1,14
+2026-01-29_oregon_st_san_diego,Oregon St.,04,"Schimel, Ally",True,31,3,6,0.5,2,4,0.5,1,2,0.5,2,2,4,2,1,0,0,0,9
+2026-01-29_oregon_st_san_diego,Oregon St.,15,"Williamson, Lizzy",True,21,2,3,0.667,0,0,,1,2,0.5,3,2,5,3,0,1,1,2,5
+2026-01-29_oregon_st_san_diego,Oregon St.,03,"Villa, Jenna",True,30,0,4,0.0,0,3,0.0,0,0,,0,4,4,2,4,3,0,0,0
+2026-01-29_oregon_st_san_diego,Oregon St.,22,"Alonso, Lara",False,14,2,3,0.667,1,1,1.0,0,0,,0,2,2,0,0,1,0,0,5
+2026-01-29_oregon_st_san_diego,Oregon St.,31,"Vecina, Cloe",False,2,1,1,1.0,1,1,1.0,0,0,,0,0,0,1,0,1,0,0,3
+2026-01-29_oregon_st_san_diego,Oregon St.,32,"Sow, Nene",False,11,0,1,0.0,0,0,,1,4,0.25,1,4,5,2,2,0,1,0,1
+2026-01-29_oregon_st_san_diego,Oregon St.,02,"Field, Katelyn",False,14,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2026-01-29_oregon_st_san_diego,Oregon St.,10,"Yepes, Susana",False,9,0,2,0.0,0,2,0.0,0,0,,0,0,0,1,0,0,0,0,0
+2026-01-29_oregon_st_san_diego,Oregon St.,25,"Lindemans, Keira",False,7,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2026-01-29_oregon_st_san_diego,Oregon St.,12,"Shivers, Mackenzie",False,4,0,3,0.0,0,1,0.0,0,0,,0,2,2,0,0,1,0,0,0
+2026-01-29_oregon_st_san_diego,Oregon St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,4,4,0,0,0,0,0,0
+2026-01-31_portland_san_diego,San Diego,24,"Owens, Olivia",True,40,10,21,0.476,5,9,0.556,2,3,0.667,1,6,7,2,4,5,0,1,27
+2026-01-31_portland_san_diego,San Diego,15,"Ruse, Eva",True,22,3,7,0.429,0,0,,3,4,0.75,5,5,10,3,2,3,0,0,9
+2026-01-31_portland_san_diego,San Diego,03,"Amor, Lilly",True,36,2,6,0.333,2,4,0.5,0,0,,0,2,2,2,3,0,0,1,6
+2026-01-31_portland_san_diego,San Diego,19,"Rhodes, Jayden",True,28,2,4,0.5,0,1,0.0,1,2,0.5,0,2,2,1,3,7,0,1,5
+2026-01-31_portland_san_diego,San Diego,10,"Holley, Helen",True,22,2,6,0.333,0,0,,0,1,0.0,4,4,8,2,1,0,0,1,4
+2026-01-31_portland_san_diego,San Diego,04,"Ajayi, Jessica",False,12,1,5,0.2,1,3,0.333,0,0,,0,1,1,4,0,1,0,0,3
+2026-01-31_portland_san_diego,San Diego,22,"Williams, Ayla",False,12,1,2,0.5,0,0,,1,2,0.5,3,4,7,0,0,1,2,0,3
+2026-01-31_portland_san_diego,San Diego,01,"Moore, Dresha",False,18,1,6,0.167,0,0,,0,0,,2,3,5,4,1,3,2,1,2
+2026-01-31_portland_san_diego,San Diego,11,"Tharpe, Malia",False,7,0,2,0.0,0,0,,0,0,,1,0,1,0,0,0,0,0,0
+2026-01-31_portland_san_diego,San Diego,00,"Von Seipler, Ysabella",False,3,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2026-01-31_portland_san_diego,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,2,4,0,0,2,0,0,0
+2026-01-31_portland_san_diego,Portland,03,"Dallow, Florence",True,36,6,14,0.429,0,4,0.0,6,6,1.0,3,5,8,2,3,1,1,2,18
+2026-01-31_portland_san_diego,Portland,02,"Ananiev, Dyani",True,35,5,14,0.357,1,5,0.2,1,2,0.5,0,1,1,2,2,3,3,2,12
+2026-01-31_portland_san_diego,Portland,09,"Kennedy, Jada",True,24,6,11,0.545,0,0,,0,0,,3,3,6,2,3,1,4,1,12
+2026-01-31_portland_san_diego,Portland,22,"Mogel, Rhyan",True,36,3,11,0.273,0,2,0.0,2,2,1.0,0,2,2,1,4,1,1,1,8
+2026-01-31_portland_san_diego,Portland,17,"Anderson, Nicole",True,31,3,8,0.375,0,5,0.0,1,2,0.5,1,3,4,2,2,0,0,4,7
+2026-01-31_portland_san_diego,Portland,07,"Barbosa, Tiffany",False,19,2,2,1.0,1,1,1.0,0,0,,0,1,1,0,2,0,0,2,5
+2026-01-31_portland_san_diego,Portland,42,"Zimmerman, Ella",False,15,1,3,0.333,0,0,,0,0,,0,2,2,3,0,1,0,0,2
+2026-01-31_portland_san_diego,Portland,12,"Smith, Brynn",False,4,0,0,,0,0,,0,0,,0,0,0,0,1,2,0,0,0
+2026-01-31_portland_san_diego,Portland,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,1,2,0,0,2,0,0,0
+2026-02-05_san_diego_washington_st,Washington St.,10,"Abraham, Charlotte",True,36,6,14,0.429,4,8,0.5,0,0,,0,6,6,2,1,2,1,2,16
+2026-02-05_san_diego_washington_st,Washington St.,08,"Chatfield, Mackenzie",True,34,6,9,0.667,0,0,,4,4,1.0,0,7,7,3,3,1,0,1,16
+2026-02-05_san_diego_washington_st,Washington St.,02,"Villa, Eleonora",True,36,5,12,0.417,0,2,0.0,5,6,0.833,1,1,2,1,5,2,0,2,15
+2026-02-05_san_diego_washington_st,Washington St.,09,"Valancic, Tanja",True,17,1,4,0.25,0,3,0.0,2,2,1.0,1,1,2,3,5,3,0,0,4
+2026-02-05_san_diego_washington_st,Washington St.,33,"Covill, Alex",True,15,0,3,0.0,0,0,,2,2,1.0,0,1,1,1,0,1,1,0,2
+2026-02-05_san_diego_washington_st,Washington St.,55,"Ruud, Malia",False,25,6,8,0.75,3,4,0.75,4,5,0.8,2,4,6,0,2,0,0,1,19
+2026-02-05_san_diego_washington_st,Washington St.,01,"Haziri, Malvina",False,10,2,4,0.5,1,3,0.333,0,0,,0,0,0,1,0,0,0,0,5
+2026-02-05_san_diego_washington_st,Washington St.,12,"Alsina, Marta",False,18,1,3,0.333,0,1,0.0,1,2,0.5,0,1,1,3,2,1,1,1,3
+2026-02-05_san_diego_washington_st,Washington St.,15,"Koorits, Keandra",False,8,0,3,0.0,0,3,0.0,0,0,,0,0,0,3,1,0,0,0,0
+2026-02-05_san_diego_washington_st,Washington St.,25,"Glazier, Lauren",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-05_san_diego_washington_st,Washington St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,3,7,0,0,0,0,0,0
+2026-02-05_san_diego_washington_st,San Diego,24,"Owens, Olivia",True,39,10,20,0.5,4,7,0.571,7,10,0.7,1,11,12,3,6,1,0,0,31
+2026-02-05_san_diego_washington_st,San Diego,06,"Ray, Kylie",True,37,9,21,0.429,1,3,0.333,2,2,1.0,0,3,3,5,2,6,0,1,21
+2026-02-05_san_diego_washington_st,San Diego,03,"Amor, Lilly",True,40,2,4,0.5,2,4,0.5,0,0,,0,0,0,2,2,1,0,1,6
+2026-02-05_san_diego_washington_st,San Diego,15,"Ruse, Eva",True,21,2,5,0.4,0,0,,2,2,1.0,4,7,11,2,0,1,0,1,6
+2026-02-05_san_diego_washington_st,San Diego,10,"Holley, Helen",True,24,1,4,0.25,0,1,0.0,1,2,0.5,4,3,7,4,0,1,2,1,3
+2026-02-05_san_diego_washington_st,San Diego,01,"Moore, Dresha",False,13,3,5,0.6,0,0,,1,1,1.0,1,0,1,3,0,2,0,0,7
+2026-02-05_san_diego_washington_st,San Diego,22,"Williams, Ayla",False,8,1,3,0.333,0,0,,0,0,,1,1,2,1,1,0,1,0,2
+2026-02-05_san_diego_washington_st,San Diego,19,"Rhodes, Jayden",False,14,0,1,0.0,0,1,0.0,0,0,,0,0,0,1,1,0,0,1,0
+2026-02-05_san_diego_washington_st,San Diego,04,"Ajayi, Jessica",False,4,0,2,0.0,0,2,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-05_san_diego_washington_st,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2026-02-07_san_diego_seattle_u,Seattle U,03,"Brubaker, Ella",True,40,8,17,0.471,2,4,0.5,9,11,0.818,0,8,8,4,2,2,2,5,27
+2026-02-07_san_diego_seattle_u,Seattle U,14,"Stricklin, Tamia",True,38,3,12,0.25,1,3,0.333,0,0,,1,2,3,2,1,0,1,1,7
+2026-02-07_san_diego_seattle_u,Seattle U,06,"Bigovic, Andjela",True,26,2,14,0.143,1,7,0.143,2,2,1.0,1,4,5,2,1,0,1,2,7
+2026-02-07_san_diego_seattle_u,Seattle U,08,"Emanga, Chloe",True,38,2,7,0.286,0,2,0.0,2,2,1.0,0,1,1,4,1,2,0,3,6
+2026-02-07_san_diego_seattle_u,Seattle U,09,"Vesic, Jana",True,40,2,9,0.222,1,3,0.333,0,0,,0,1,1,1,5,3,0,1,5
+2026-02-07_san_diego_seattle_u,Seattle U,07,"Milkovic, Lucija",False,7,1,3,0.333,0,0,,0,0,,0,0,0,1,0,1,1,0,2
+2026-02-07_san_diego_seattle_u,Seattle U,04,"Proctor, Fia",False,9,0,0,,0,0,,0,0,,0,2,2,0,0,0,0,0,0
+2026-02-07_san_diego_seattle_u,Seattle U,22,"Larson, Lucy",False,2,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2026-02-07_san_diego_seattle_u,Seattle U,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2026-02-07_san_diego_seattle_u,San Diego,24,"Owens, Olivia",True,35,8,17,0.471,2,6,0.333,2,2,1.0,1,12,13,0,7,8,0,0,20
+2026-02-07_san_diego_seattle_u,San Diego,15,"Ruse, Eva",True,27,6,10,0.6,0,0,,8,9,0.889,7,11,18,1,1,0,3,2,20
+2026-02-07_san_diego_seattle_u,San Diego,06,"Ray, Kylie",True,39,5,11,0.455,1,2,0.5,2,2,1.0,0,4,4,3,4,4,0,1,13
+2026-02-07_san_diego_seattle_u,San Diego,10,"Holley, Helen",True,14,2,4,0.5,0,0,,0,0,,2,4,6,1,1,2,0,1,4
+2026-02-07_san_diego_seattle_u,San Diego,03,"Amor, Lilly",True,18,0,6,0.0,0,5,0.0,0,0,,0,1,1,1,2,1,0,1,0
+2026-02-07_san_diego_seattle_u,San Diego,04,"Ajayi, Jessica",False,25,3,7,0.429,2,6,0.333,0,0,,2,2,4,3,0,3,0,0,8
+2026-02-07_san_diego_seattle_u,San Diego,11,"Tharpe, Malia",False,16,2,6,0.333,0,0,,0,1,0.0,4,3,7,1,0,1,0,0,4
+2026-02-07_san_diego_seattle_u,San Diego,22,"Williams, Ayla",False,10,1,1,1.0,0,0,,0,1,0.0,0,4,4,1,1,0,0,0,2
+2026-02-07_san_diego_seattle_u,San Diego,19,"Rhodes, Jayden",False,11,0,3,0.0,0,3,0.0,0,0,,0,1,1,0,0,0,0,0,0
+2026-02-07_san_diego_seattle_u,San Diego,01,"Moore, Dresha",False,3,0,1,0.0,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-07_san_diego_seattle_u,San Diego,00,"Von Seipler, Ysabella",False,2,0,0,,0,0,,0,0,,0,0,0,1,0,1,0,0,0
+2026-02-07_san_diego_seattle_u,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,1,5,0,0,3,0,0,0
+2026-02-12_san_diego_gonzaga,Gonzaga,33,"Whittaker, Lauren",True,26,8,11,0.727,1,1,1.0,2,2,1.0,3,9,12,2,1,4,1,3,19
+2026-02-12_san_diego_gonzaga,Gonzaga,55,"Aokuso, Zeryhia",True,25,5,9,0.556,0,1,0.0,2,2,1.0,1,1,2,2,1,4,0,1,12
+2026-02-12_san_diego_gonzaga,Gonzaga,11,"Turner, Allie",True,34,1,10,0.1,0,3,0.0,6,6,1.0,0,3,3,2,4,1,0,0,8
+2026-02-12_san_diego_gonzaga,Gonzaga,20,"Smith, Taylor",True,18,3,5,0.6,0,1,0.0,0,0,,1,2,3,3,4,2,0,1,6
+2026-02-12_san_diego_gonzaga,Gonzaga,08,"Bettencourt, Ines",True,28,1,6,0.167,0,2,0.0,2,2,1.0,1,1,2,3,3,0,0,1,4
+2026-02-12_san_diego_gonzaga,Gonzaga,24,"Gardner, Teryn",False,17,2,5,0.4,2,5,0.4,0,0,,3,1,4,1,0,2,0,0,6
+2026-02-12_san_diego_gonzaga,Gonzaga,23,"Haile, Jaiden",False,22,2,3,0.667,0,0,,1,2,0.5,1,0,1,1,0,0,0,1,5
+2026-02-12_san_diego_gonzaga,Gonzaga,04,"Lichtie, Sierra",False,12,0,1,0.0,0,0,,2,2,1.0,0,3,3,3,1,3,0,2,2
+2026-02-12_san_diego_gonzaga,Gonzaga,03,"Wilson, Julia",False,3,1,1,1.0,0,0,,0,0,,0,0,0,0,1,0,0,0,2
+2026-02-12_san_diego_gonzaga,Gonzaga,22,"Dalan, McKynnlie",False,2,1,2,0.5,0,0,,0,0,,0,0,0,1,0,1,0,0,2
+2026-02-12_san_diego_gonzaga,Gonzaga,12,"Osarobo, Christabel",False,7,0,2,0.0,0,2,0.0,0,0,,0,0,0,0,0,1,0,0,0
+2026-02-12_san_diego_gonzaga,Gonzaga,01,"Lofing, Paige",False,6,0,2,0.0,0,1,0.0,0,0,,0,0,0,0,1,0,0,0,0
+2026-02-12_san_diego_gonzaga,Gonzaga,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,6,10,0,0,1,0,0,0
+2026-02-12_san_diego_gonzaga,San Diego,06,"Ray, Kylie",True,40,11,23,0.478,0,5,0.0,3,4,0.75,0,4,4,2,1,6,0,1,25
+2026-02-12_san_diego_gonzaga,San Diego,24,"Owens, Olivia",True,38,5,15,0.333,1,7,0.143,3,6,0.5,2,9,11,2,7,4,0,1,14
+2026-02-12_san_diego_gonzaga,San Diego,10,"Holley, Helen",True,29,4,5,0.8,0,0,,0,0,,1,0,1,2,1,0,2,0,8
+2026-02-12_san_diego_gonzaga,San Diego,15,"Ruse, Eva",True,20,0,1,0.0,0,0,,2,2,1.0,1,1,2,4,1,2,0,2,2
+2026-02-12_san_diego_gonzaga,San Diego,03,"Amor, Lilly",True,38,0,4,0.0,0,4,0.0,0,0,,0,1,1,2,0,0,0,1,0
+2026-02-12_san_diego_gonzaga,San Diego,01,"Moore, Dresha",False,6,1,2,0.5,0,0,,2,2,1.0,1,1,2,1,0,2,0,0,4
+2026-02-12_san_diego_gonzaga,San Diego,11,"Tharpe, Malia",False,22,1,3,0.333,1,1,1.0,0,0,,1,2,3,3,0,2,1,0,3
+2026-02-12_san_diego_gonzaga,San Diego,04,"Ajayi, Jessica",False,4,0,1,0.0,0,1,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-12_san_diego_gonzaga,San Diego,22,"Williams, Ayla",False,3,0,0,,0,0,,0,0,,1,0,1,1,0,0,0,0,0
+2026-02-12_san_diego_gonzaga,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,2,3,0,0,0,0,0,0
+2026-02-19_pepperdine_san_diego,San Diego,06,"Ray, Kylie",True,38,8,19,0.421,0,1,0.0,2,2,1.0,0,6,6,3,3,5,0,3,18
+2026-02-19_pepperdine_san_diego,San Diego,24,"Owens, Olivia",True,31,4,13,0.308,1,4,0.25,2,2,1.0,0,2,2,4,2,3,2,1,11
+2026-02-19_pepperdine_san_diego,San Diego,10,"Holley, Helen",True,17,2,3,0.667,0,0,,2,2,1.0,1,3,4,1,1,1,0,0,6
+2026-02-19_pepperdine_san_diego,San Diego,15,"Ruse, Eva",True,18,2,3,0.667,0,0,,0,0,,2,2,4,1,0,0,1,1,4
+2026-02-19_pepperdine_san_diego,San Diego,03,"Amor, Lilly",True,33,1,3,0.333,1,2,0.5,0,0,,0,0,0,2,0,1,0,1,3
+2026-02-19_pepperdine_san_diego,San Diego,01,"Moore, Dresha",False,14,2,5,0.4,1,1,1.0,0,0,,3,2,5,5,0,5,0,1,5
+2026-02-19_pepperdine_san_diego,San Diego,11,"Tharpe, Malia",False,21,1,4,0.25,0,0,,2,2,1.0,2,1,3,1,1,0,0,0,4
+2026-02-19_pepperdine_san_diego,San Diego,20,"Rhodes, Hallie",False,19,1,7,0.143,0,2,0.0,0,0,,1,2,3,1,0,0,0,2,2
+2026-02-19_pepperdine_san_diego,San Diego,22,"Williams, Ayla",False,7,0,1,0.0,0,0,,2,4,0.5,2,0,2,1,0,1,1,0,2
+2026-02-19_pepperdine_san_diego,San Diego,00,"Von Seipler, Ysabella",False,1,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2026-02-19_pepperdine_san_diego,San Diego,04,"Ajayi, Jessica",False,1,0,1,0.0,0,1,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-19_pepperdine_san_diego,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,4,7,0,0,2,0,0,0
+2026-02-19_pepperdine_san_diego,Pepperdine,01,"Sta. Maria, Taija",True,32,6,12,0.5,0,3,0.0,3,4,0.75,1,1,2,1,0,1,0,0,15
+2026-02-19_pepperdine_san_diego,Pepperdine,12,"Preston, Shorna",True,23,5,9,0.556,2,3,0.667,1,1,1.0,2,3,5,3,2,1,1,4,13
+2026-02-19_pepperdine_san_diego,Pepperdine,22,"Falk, Lina",True,36,3,8,0.375,3,5,0.6,3,4,0.75,1,4,5,1,4,3,1,1,12
+2026-02-19_pepperdine_san_diego,Pepperdine,13,"Fiso, Meghan",True,28,4,10,0.4,1,3,0.333,1,2,0.5,1,3,4,2,2,2,2,0,10
+2026-02-19_pepperdine_san_diego,Pepperdine,02,"Guiney, Elli",True,31,1,6,0.167,0,2,0.0,4,4,1.0,2,2,4,2,6,7,2,1,6
+2026-02-19_pepperdine_san_diego,Pepperdine,03,"Green, Bella",False,15,5,7,0.714,1,1,1.0,1,2,0.5,2,5,7,4,1,0,0,0,12
+2026-02-19_pepperdine_san_diego,Pepperdine,30,"Harmon, Seleh",False,23,2,5,0.4,2,5,0.4,0,0,,1,3,4,2,0,0,0,0,6
+2026-02-19_pepperdine_san_diego,Pepperdine,00,"Finley, Ivory",False,7,1,3,0.333,0,1,0.0,0,0,,1,0,1,0,1,0,0,0,2
+2026-02-19_pepperdine_san_diego,Pepperdine,31,"Orio, Irune",False,2,0,1,0.0,0,1,0.0,0,0,,0,1,1,0,0,0,1,0,0
+2026-02-19_pepperdine_san_diego,Pepperdine,44,"Shanahan, Zoe",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-19_pepperdine_san_diego,Pepperdine,10,"Belegante, Ilinca",False,1,0,1,0.0,0,1,0.0,0,0,,0,0,0,0,1,0,0,0,0
+2026-02-19_pepperdine_san_diego,Pepperdine,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,3,5,0,0,0,0,0,0
+2026-02-21_lmu_ca_san_diego,San Diego,06,"Ray, Kylie",True,39,5,16,0.312,0,3,0.0,7,9,0.778,0,4,4,3,4,8,0,0,17
+2026-02-21_lmu_ca_san_diego,San Diego,24,"Owens, Olivia",True,33,3,8,0.375,0,2,0.0,5,9,0.556,0,4,4,3,0,2,0,3,11
+2026-02-21_lmu_ca_san_diego,San Diego,10,"Holley, Helen",True,25,2,2,1.0,0,0,,3,3,1.0,3,2,5,2,0,1,0,1,7
+2026-02-21_lmu_ca_san_diego,San Diego,15,"Ruse, Eva",True,10,0,0,,0,0,,1,2,0.5,0,5,5,0,0,0,0,0,1
+2026-02-21_lmu_ca_san_diego,San Diego,03,"Amor, Lilly",True,6,0,1,0.0,0,1,0.0,0,0,,0,0,0,0,0,1,0,0,0
+2026-02-21_lmu_ca_san_diego,San Diego,20,"Rhodes, Hallie",False,31,4,13,0.308,0,3,0.0,4,4,1.0,1,2,3,1,0,1,0,2,12
+2026-02-21_lmu_ca_san_diego,San Diego,01,"Moore, Dresha",False,21,4,5,0.8,0,1,0.0,0,0,,0,4,4,3,0,3,0,1,8
+2026-02-21_lmu_ca_san_diego,San Diego,19,"Rhodes, Jayden",False,13,1,3,0.333,1,2,0.5,0,0,,0,1,1,2,0,0,0,0,3
+2026-02-21_lmu_ca_san_diego,San Diego,22,"Williams, Ayla",False,9,0,0,,0,0,,2,4,0.5,1,0,1,0,0,0,1,0,2
+2026-02-21_lmu_ca_san_diego,San Diego,11,"Tharpe, Malia",False,11,0,2,0.0,0,1,0.0,0,0,,1,1,2,0,1,2,0,2,0
+2026-02-21_lmu_ca_san_diego,San Diego,04,"Ajayi, Jessica",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2026-02-21_lmu_ca_san_diego,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,3,5,0,0,1,0,0,0
+2026-02-21_lmu_ca_san_diego,LMU (CA),28,"Matic, Andjela",True,36,9,19,0.474,5,11,0.455,0,0,,1,1,2,1,5,2,0,5,23
+2026-02-21_lmu_ca_san_diego,LMU (CA),00,"Lawson, Jess",True,32,6,13,0.462,1,2,0.5,2,2,1.0,2,12,14,3,5,2,0,0,15
+2026-02-21_lmu_ca_san_diego,LMU (CA),30,"Reus Piza, Paula",True,21,3,6,0.5,0,1,0.0,0,0,,0,1,1,2,1,0,0,0,6
+2026-02-21_lmu_ca_san_diego,LMU (CA),05,"Heidger, Carly",True,21,0,3,0.0,0,3,0.0,3,4,0.75,1,0,1,5,2,0,0,0,3
+2026-02-21_lmu_ca_san_diego,LMU (CA),13,"Krajina, Ivana",True,25,0,2,0.0,0,1,0.0,0,0,,0,3,3,4,3,3,0,2,0
+2026-02-21_lmu_ca_san_diego,LMU (CA),55,"Hernandez, Maya",False,19,8,13,0.615,0,0,,1,1,1.0,1,1,2,4,1,2,0,2,17
+2026-02-21_lmu_ca_san_diego,LMU (CA),24,"Jones, Kayla",False,18,3,5,0.6,0,0,,0,0,,1,0,1,3,0,0,0,1,6
+2026-02-21_lmu_ca_san_diego,LMU (CA),04,"Clarke, Allison",False,13,1,5,0.2,0,4,0.0,0,0,,0,0,0,2,0,0,0,0,2
+2026-02-21_lmu_ca_san_diego,LMU (CA),54,"Ogot, Zawadi",False,13,1,2,0.5,0,0,,0,2,0.0,1,2,3,4,1,1,0,1,2
+2026-02-21_lmu_ca_san_diego,LMU (CA),02,"Somvichian, Mari",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-21_lmu_ca_san_diego,LMU (CA),10,"Lagerlid, Lova",False,1,0,1,0.0,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-21_lmu_ca_san_diego,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,2,3,5,0,0,1,0,0,0
+2026-02-26_san_diego_oregon_st,Oregon St.,01,"Shuler, Kennedie",True,34,9,17,0.529,0,0,,4,6,0.667,1,3,4,2,3,2,2,2,22
+2026-02-26_san_diego_oregon_st,Oregon St.,00,"Bolden, Tiara",True,33,7,19,0.368,1,4,0.25,2,2,1.0,3,1,4,2,4,0,1,1,17
+2026-02-26_san_diego_oregon_st,Oregon St.,03,"Villa, Jenna",True,30,5,8,0.625,2,3,0.667,2,3,0.667,0,1,1,0,1,1,0,0,14
+2026-02-26_san_diego_oregon_st,Oregon St.,15,"Williamson, Lizzy",True,20,5,6,0.833,0,0,,0,0,,2,10,12,0,0,0,1,1,10
+2026-02-26_san_diego_oregon_st,Oregon St.,04,"Schimel, Ally",True,13,0,1,0.0,0,1,0.0,0,0,,0,3,3,0,0,2,0,0,0
+2026-02-26_san_diego_oregon_st,Oregon St.,31,"Vecina, Cloe",False,21,2,4,0.5,1,3,0.333,2,2,1.0,0,2,2,0,5,1,0,1,7
+2026-02-26_san_diego_oregon_st,Oregon St.,22,"Alonso, Lara",False,11,2,3,0.667,0,0,,0,0,,2,1,3,2,1,4,1,0,4
+2026-02-26_san_diego_oregon_st,Oregon St.,25,"Lindemans, Keira",False,19,0,3,0.0,0,1,0.0,3,4,0.75,1,3,4,0,2,0,1,0,3
+2026-02-26_san_diego_oregon_st,Oregon St.,12,"Shivers, Mackenzie",False,4,1,1,1.0,1,1,1.0,0,0,,0,0,0,1,1,0,0,0,3
+2026-02-26_san_diego_oregon_st,Oregon St.,16,"Mehyar, Elisa",False,2,1,1,1.0,0,0,,1,1,1.0,0,0,0,1,0,0,0,0,3
+2026-02-26_san_diego_oregon_st,Oregon St.,32,"Sow, Nene",False,6,0,1,0.0,0,0,,0,0,,1,2,3,0,0,1,1,1,0
+2026-02-26_san_diego_oregon_st,Oregon St.,02,"Field, Katelyn",False,3,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-26_san_diego_oregon_st,Oregon St.,07,"Navarro, Lucia",False,2,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2026-02-26_san_diego_oregon_st,Oregon St.,10,"Yepes, Susana",False,2,0,0,,0,0,,0,0,,0,1,1,0,1,1,0,0,0
+2026-02-26_san_diego_oregon_st,Oregon St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,4,8,0,0,0,0,0,0
+2026-02-26_san_diego_oregon_st,San Diego,24,"Owens, Olivia",True,31,6,14,0.429,0,2,0.0,1,2,0.5,1,6,7,0,1,2,0,1,13
+2026-02-26_san_diego_oregon_st,San Diego,06,"Ray, Kylie",True,31,3,14,0.214,0,2,0.0,2,2,1.0,0,3,3,3,4,3,0,2,8
+2026-02-26_san_diego_oregon_st,San Diego,20,"Rhodes, Hallie",True,30,4,14,0.286,0,1,0.0,0,0,,0,2,2,2,1,1,1,0,8
+2026-02-26_san_diego_oregon_st,San Diego,10,"Holley, Helen",True,14,2,2,1.0,0,0,,0,0,,0,1,1,0,0,1,0,1,4
+2026-02-26_san_diego_oregon_st,San Diego,15,"Ruse, Eva",True,15,1,2,0.5,0,0,,0,0,,4,2,6,1,0,1,1,0,2
+2026-02-26_san_diego_oregon_st,San Diego,04,"Ajayi, Jessica",False,24,3,5,0.6,2,4,0.5,0,0,,0,0,0,2,1,0,0,2,8
+2026-02-26_san_diego_oregon_st,San Diego,01,"Moore, Dresha",False,19,1,4,0.25,0,1,0.0,0,0,,0,4,4,2,1,0,2,2,2
+2026-02-26_san_diego_oregon_st,San Diego,11,"Tharpe, Malia",False,12,1,4,0.25,0,2,0.0,0,0,,1,1,2,4,0,2,0,1,2
+2026-02-26_san_diego_oregon_st,San Diego,00,"Von Seipler, Ysabella",False,3,0,2,0.0,0,2,0.0,2,2,1.0,0,0,0,0,0,0,0,0,2
+2026-02-26_san_diego_oregon_st,San Diego,19,"Rhodes, Jayden",False,15,0,2,0.0,0,0,,0,0,,3,2,5,0,0,1,0,0,0
+2026-02-26_san_diego_oregon_st,San Diego,22,"Williams, Ayla",False,6,0,2,0.0,0,0,,0,0,,1,1,2,1,0,1,0,0,0
+2026-02-26_san_diego_oregon_st,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,0,2,0,0,1,0,0,0
+2026-02-28_san_diego_pacific,Pacific,08,"Mindermann, Sophia",True,24,3,9,0.333,3,8,0.375,0,0,,0,0,0,4,4,2,0,1,9
+2026-02-28_san_diego_pacific,Pacific,09,"Radocaj, Marina",True,29,4,4,1.0,0,0,,0,0,,0,4,4,0,4,0,3,2,8
+2026-02-28_san_diego_pacific,Pacific,21,"Nestorov, Daria",True,27,2,11,0.182,2,5,0.4,2,2,1.0,0,5,5,4,1,3,0,2,8
+2026-02-28_san_diego_pacific,Pacific,10,"Ward, Sydney",True,17,2,4,0.5,0,0,,0,0,,2,2,4,4,1,1,0,0,4
+2026-02-28_san_diego_pacific,Pacific,05,"Szabo, Stella",True,22,1,3,0.333,0,1,0.0,0,0,,2,2,4,1,1,2,0,1,2
+2026-02-28_san_diego_pacific,Pacific,25,"Bartholomew, Winner",False,28,5,12,0.417,0,0,,7,8,0.875,1,4,5,1,3,3,0,0,17
+2026-02-28_san_diego_pacific,Pacific,24,"Lebon, Lamiracle",False,5,0,1,0.0,0,0,,4,4,1.0,0,0,0,3,0,1,0,0,4
+2026-02-28_san_diego_pacific,Pacific,15,"Lowery, Nyah",False,29,1,8,0.125,1,6,0.167,0,0,,2,4,6,4,1,2,0,0,3
+2026-02-28_san_diego_pacific,Pacific,07,"Yergensen, Liv",False,8,1,1,1.0,0,0,,0,0,,0,1,1,0,2,0,0,0,2
+2026-02-28_san_diego_pacific,Pacific,11,"Anderegg, Luisa",False,2,1,1,1.0,0,0,,0,0,,0,0,0,0,0,1,0,1,2
+2026-02-28_san_diego_pacific,Pacific,03,"Burg, Hannah",False,9,0,0,,0,0,,0,0,,0,2,2,0,1,2,0,1,0
+2026-02-28_san_diego_pacific,Pacific,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,0,4,0,0,0,0,0,0
+2026-02-28_san_diego_pacific,San Diego,20,"Rhodes, Hallie",True,32,7,16,0.438,3,4,0.75,1,2,0.5,0,6,6,1,1,1,0,2,18
+2026-02-28_san_diego_pacific,San Diego,24,"Owens, Olivia",True,32,5,17,0.294,1,5,0.2,6,8,0.75,3,7,10,1,4,5,0,2,17
+2026-02-28_san_diego_pacific,San Diego,15,"Ruse, Eva",True,23,3,5,0.6,0,0,,0,0,,3,3,6,3,0,0,1,1,6
+2026-02-28_san_diego_pacific,San Diego,06,"Ray, Kylie",True,16,1,4,0.25,0,0,,3,3,1.0,1,1,2,3,3,2,0,0,5
+2026-02-28_san_diego_pacific,San Diego,19,"Rhodes, Jayden",True,4,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-28_san_diego_pacific,San Diego,04,"Ajayi, Jessica",False,30,5,9,0.556,2,6,0.333,2,2,1.0,1,3,4,3,1,3,0,2,14
+2026-02-28_san_diego_pacific,San Diego,22,"Williams, Ayla",False,13,0,0,,0,0,,2,2,1.0,0,0,0,3,2,0,0,1,2
+2026-02-28_san_diego_pacific,San Diego,01,"Moore, Dresha",False,4,1,1,1.0,0,0,,0,0,,0,0,0,0,0,1,0,0,2
+2026-02-28_san_diego_pacific,San Diego,03,"Amor, Lilly",False,34,0,4,0.0,0,4,0.0,0,0,,0,0,0,2,1,0,1,1,0
+2026-02-28_san_diego_pacific,San Diego,11,"Tharpe, Malia",False,5,0,2,0.0,0,0,,0,0,,0,1,1,1,0,1,0,0,0
+2026-02-28_san_diego_pacific,San Diego,00,"Von Seipler, Ysabella",False,4,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2026-02-28_san_diego_pacific,San Diego,10,"Holley, Helen",False,3,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2026-02-28_san_diego_pacific,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,1,5,0,0,0,0,0,0
+2026-03-05_saint_marys_ca_san_diego,San Diego,20,"Rhodes, Hallie",True,36,8,14,0.571,3,5,0.6,3,7,0.429,0,9,9,0,0,1,1,0,22
+2026-03-05_saint_marys_ca_san_diego,San Diego,06,"Ray, Kylie",True,37,6,15,0.4,3,8,0.375,4,4,1.0,1,9,10,3,2,4,0,1,19
+2026-03-05_saint_marys_ca_san_diego,San Diego,15,"Ruse, Eva",True,20,2,4,0.5,0,0,,4,4,1.0,3,2,5,3,1,2,0,0,8
+2026-03-05_saint_marys_ca_san_diego,San Diego,03,"Amor, Lilly",True,40,1,7,0.143,1,5,0.2,2,2,1.0,0,2,2,1,1,0,4,1,5
+2026-03-05_saint_marys_ca_san_diego,San Diego,24,"Owens, Olivia",True,24,1,6,0.167,0,4,0.0,0,0,,0,0,0,4,2,1,0,1,2
+2026-03-05_saint_marys_ca_san_diego,San Diego,04,"Ajayi, Jessica",False,22,2,5,0.4,1,3,0.333,1,3,0.333,0,0,0,4,0,1,0,2,6
+2026-03-05_saint_marys_ca_san_diego,San Diego,22,"Williams, Ayla",False,9,1,2,0.5,0,0,,2,2,1.0,2,1,3,3,0,1,0,0,4
+2026-03-05_saint_marys_ca_san_diego,San Diego,01,"Moore, Dresha",False,6,0,1,0.0,0,0,,0,0,,0,1,1,2,0,0,0,0,0
+2026-03-05_saint_marys_ca_san_diego,San Diego,10,"Holley, Helen",False,3,0,1,0.0,0,0,,0,0,,1,0,1,1,0,0,0,0,0
+2026-03-05_saint_marys_ca_san_diego,San Diego,11,"Tharpe, Malia",False,2,0,0,,0,0,,0,0,,0,0,0,0,1,0,0,0,0
+2026-03-05_saint_marys_ca_san_diego,San Diego,19,"Rhodes, Jayden",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-03-05_saint_marys_ca_san_diego,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,8,11,0,0,0,0,0,0
+2026-03-05_saint_marys_ca_san_diego,Saint Mary's (CA),13,"Latu, Malia",True,30,8,17,0.471,0,0,,3,5,0.6,4,1,5,2,2,2,0,0,19
+2026-03-05_saint_marys_ca_san_diego,Saint Mary's (CA),07,"Clarke, Edie",True,29,8,13,0.615,1,3,0.333,0,1,0.0,6,5,11,1,4,0,1,1,17
+2026-03-05_saint_marys_ca_san_diego,Saint Mary's (CA),00,"Hunter, Jada",True,22,2,9,0.222,0,0,,1,2,0.5,0,3,3,4,0,0,0,1,5
+2026-03-05_saint_marys_ca_san_diego,Saint Mary's (CA),05,"Shoff, Abigail",True,23,2,11,0.182,0,1,0.0,0,0,,0,3,3,2,1,0,2,0,4
+2026-03-05_saint_marys_ca_san_diego,Saint Mary's (CA),23,"Wedin, Addi",True,15,1,1,1.0,1,1,1.0,0,0,,0,2,2,0,0,1,0,0,3
+2026-03-05_saint_marys_ca_san_diego,Saint Mary's (CA),04,"Ohiaeri, Charlece",False,11,2,6,0.333,1,2,0.5,2,2,1.0,1,1,2,5,0,0,0,0,7
+2026-03-05_saint_marys_ca_san_diego,Saint Mary's (CA),03,"Hashemian-Orr, Mauriana",False,19,0,1,0.0,0,0,,3,6,0.5,0,3,3,1,2,2,0,1,3
+2026-03-05_saint_marys_ca_san_diego,Saint Mary's (CA),33,"Wedin, Ella",False,10,1,3,0.333,0,2,0.0,1,1,1.0,1,1,2,0,1,0,0,0,3
+2026-03-05_saint_marys_ca_san_diego,Saint Mary's (CA),22,"Afeaki, Melesungu",False,15,0,3,0.0,0,0,,1,2,0.5,0,1,1,1,0,0,1,0,1
+2026-03-05_saint_marys_ca_san_diego,Saint Mary's (CA),02,"Kurkowski, Amy",False,25,0,1,0.0,0,1,0.0,0,0,,0,4,4,1,1,0,1,1,0
+2026-03-05_saint_marys_ca_san_diego,Saint Mary's (CA),10,"Grigoropoulou, Georgia",False,1,0,1,0.0,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-03-05_saint_marys_ca_san_diego,Saint Mary's (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,2,2,4,0,0,0,0,0,0
+2026-03-06_san_francisco_san_diego,San Diego,24,"Owens, Olivia",True,40,5,16,0.312,1,6,0.167,5,6,0.833,1,6,7,1,4,6,0,0,16
+2026-03-06_san_francisco_san_diego,San Diego,06,"Ray, Kylie",True,38,4,16,0.25,1,6,0.167,1,2,0.5,3,4,7,2,2,7,0,1,10
+2026-03-06_san_francisco_san_diego,San Diego,03,"Amor, Lilly",True,40,3,8,0.375,2,6,0.333,0,0,,0,3,3,1,0,2,1,1,8
+2026-03-06_san_francisco_san_diego,San Diego,20,"Rhodes, Hallie",True,31,2,12,0.167,0,2,0.0,2,2,1.0,3,3,6,2,1,3,1,0,6
+2026-03-06_san_francisco_san_diego,San Diego,15,"Ruse, Eva",True,15,3,3,1.0,0,0,,0,0,,4,5,9,4,0,2,1,0,6
+2026-03-06_san_francisco_san_diego,San Diego,04,"Ajayi, Jessica",False,11,2,3,0.667,2,2,1.0,0,0,,0,1,1,4,1,1,0,0,6
+2026-03-06_san_francisco_san_diego,San Diego,01,"Moore, Dresha",False,18,0,1,0.0,0,0,,0,0,,0,3,3,3,0,1,0,0,0
+2026-03-06_san_francisco_san_diego,San Diego,22,"Williams, Ayla",False,4,0,1,0.0,0,0,,0,0,,1,1,2,2,1,0,0,0,0
+2026-03-06_san_francisco_san_diego,San Diego,10,"Holley, Helen",False,3,0,0,,0,0,,0,0,,1,0,1,0,0,0,0,0,0
+2026-03-06_san_francisco_san_diego,San Diego,19,"Rhodes, Jayden",False,,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-03-06_san_francisco_san_diego,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,4,6,0,0,0,0,0,0
+2026-03-06_san_francisco_san_diego,San Francisco,23,"Edokpaigbe, Candy",True,36,8,15,0.533,1,1,1.0,8,8,1.0,2,4,6,0,1,1,0,0,25
+2026-03-06_san_francisco_san_diego,San Francisco,02,"Neira, Mara",True,36,3,11,0.273,2,7,0.286,1,2,0.5,0,5,5,3,4,5,1,5,9
+2026-03-06_san_francisco_san_diego,San Francisco,09,"Cargol, Aina",True,37,2,11,0.182,0,2,0.0,2,6,0.333,1,5,6,3,4,2,0,4,6
+2026-03-06_san_francisco_san_diego,San Francisco,12,"Tausova, Natasa",True,20,3,9,0.333,0,4,0.0,0,0,,2,2,4,1,0,2,0,1,6
+2026-03-06_san_francisco_san_diego,San Francisco,03,"Mourino, Noelia",True,15,2,5,0.4,0,0,,1,2,0.5,2,2,4,3,1,0,0,0,5
+2026-03-06_san_francisco_san_diego,San Francisco,14,"Ugwah, Michelle",False,20,3,6,0.5,0,0,,0,0,,1,2,3,0,1,0,2,3,6
+2026-03-06_san_francisco_san_diego,San Francisco,04,"McIntyre, Meghan",False,11,1,5,0.2,0,1,0.0,0,0,,1,1,2,3,0,0,0,0,2
+2026-03-06_san_francisco_san_diego,San Francisco,24,"Castro, Sol",False,5,0,1,0.0,0,0,,2,2,1.0,1,0,1,2,0,0,0,0,2
+2026-03-06_san_francisco_san_diego,San Francisco,21,"Williams, Olivia",False,12,0,2,0.0,0,0,,0,0,,0,2,2,1,1,2,0,0,0
+2026-03-06_san_francisco_san_diego,San Francisco,07,"Ferrara Horne, Nevaeh",False,8,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-03-06_san_francisco_san_diego,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,4,8,0,0,0,0,0,0
