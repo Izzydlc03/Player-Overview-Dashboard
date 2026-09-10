@@ -67,12 +67,36 @@ def game_pct(made, att):
     return (made / att * 100) if att > 0 else 0
 
 
+# National per-player advanced stats (shot-zone splits, assisted%, usage,
+# etc.) — script.js's opponent loader already joins this in client-side for
+# non-conference teams (see OPPONENT_TEAMS in script.js); build_season()
+# below does the equivalent join for Big West teams so the same Shot
+# Distribution / Role Profile cards work for every team, not just opponents.
+ADVANCED_CSV_PATH = os.path.join(ROOT, "opponents", "overall_data", "wbb_d1_processed_players.csv")
+
+# TEAM_META's keys are the team-name strings as they literally appear in our
+# own scraped CSVs; the national dataset spells a couple of these
+# differently. Only needed where the two disagree.
+ADVANCED_TEAM_ALIASES = {
+    "CSU Bakersfield": "Cal St. Bakersfield",
+    "CSUN": "Cal St. Northridge",
+}
+
+
+def load_advanced_index():
+    if not os.path.exists(ADVANCED_CSV_PATH):
+        return {}
+    with open(ADVANCED_CSV_PATH, newline="", encoding="utf-8") as fh:
+        rows = list(csv.DictReader(fh))
+    return {(r["team"], normalize_player_name(r["name"])): r for r in rows}
+
+
 def opp_display(raw_name):
     meta = TEAM_META.get(raw_name)
     return meta["name"] if meta else raw_name
 
 
-def build_season(season_dir, season):
+def build_season(season_dir, season, advanced_index):
     game_index_path = os.path.join(season_dir, "csv1_game_index.csv")
     boxscore_path = os.path.join(season_dir, "csv2_boxscore_players.csv")
     if not (os.path.exists(game_index_path) and os.path.exists(boxscore_path)):
@@ -173,13 +197,17 @@ def build_season(season_dir, season):
             name = max(p["names"], key=p["names"].get)
             jersey_disp = max(p["jersey_display"], key=p["jersey_display"].get)
             gp = p["gp"]
+            display = display_name(name)
+            advanced_team_name = ADVANCED_TEAM_ALIASES.get(raw_name, raw_name)
+            advanced = advanced_index.get((advanced_team_name, normalize_player_name(display)))
             players.append({
                 "num": int(jersey_disp) if re.fullmatch(r"\d+", jersey_disp) else jersey_disp,
-                "name": display_name(name), "pos": "",
+                "name": display, "pos": "",
                 "gp": gp, "min": round(p["min_sum"] / gp, 1) if gp else 0,
                 "fgm": p["fgm"], "fga": p["fga"], "tpm": p["tpm"], "tpa": p["tpa"],
                 "ftm": p["ftm"], "fta": p["fta"], "oreb": p["oreb"], "dreb": p["dreb"],
                 "ast": p["ast"], "stl": p["stl"], "blk": p["blk"], "to": p["to"], "pts": p["pts"],
+                "advanced": advanced,
             })
         players.sort(key=lambda p: -p["pts"])
 
@@ -199,13 +227,20 @@ def build_season(season_dir, season):
 
 def main():
     os.makedirs(OUT_DIR, exist_ok=True)
+    advanced_index = load_advanced_index()
     season_dirs = sorted(
         d for d in glob.glob(os.path.join(ROOT, "20*-*"))
         if os.path.isdir(d) and re.fullmatch(r"\d{4}-\d{2}", os.path.basename(d))
     )
+    # wbb_d1_processed_players.csv is a single current-season snapshot (one
+    # row per player, no season column) — only join it onto the most recent
+    # season directory, or a past season's players would get this year's
+    # shot profile/class-year attached to them.
+    current_season = os.path.basename(season_dirs[-1]) if season_dirs else None
     for season_dir in season_dirs:
         season = os.path.basename(season_dir)
-        teams = build_season(season_dir, season)
+        season_advanced_index = advanced_index if season == current_season else {}
+        teams = build_season(season_dir, season, season_advanced_index)
         if teams is None:
             print(f"skip {season}: missing csv1/csv2")
             continue
