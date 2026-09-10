@@ -19,8 +19,11 @@ let TEAM_KEYS = [];
 const SEASON_CACHE = {};
 
 function injectDynamicTeams(){
-  if(REMOTE_TEAM_SEASONS.lmu.includes(state.season) && !TEAMS.lmu){
-    TEAMS.lmu = { name:"Loyola Marymount", short:"LMU", mascot:"Lions", players:[], games:[] };
+  for(const key in OPPONENT_TEAMS){
+    if(REMOTE_TEAM_SEASONS[key]?.includes(state.season) && !TEAMS[key]){
+      const cfg = OPPONENT_TEAMS[key];
+      TEAMS[key] = { name: cfg.name, short: cfg.short, mascot: cfg.mascot, players: [], games: [] };
+    }
   }
 }
 
@@ -48,9 +51,7 @@ async function loadSeason(season){
    Keys match every Big West team build_data.py aggregates into TEAMS. */
 const TEAM_LOGOS = {
   ucsd: 'Team_Logos/ucsdLogo.jpg',
-  ucdavis: 'Team_Logos/UCdavisLogo.jpg',
   ucirvine: 'Team_Logos/uciLogo.webp',
-  hawaii: 'Team_Logos/HawaiiLogo.jpg',
   csub: 'Team_Logos/csubLogo.jpg',
   csulb: 'Team_Logos/csulbLogo.jpg',
   ucr: 'Team_Logos/ucrLogo.jpg',
@@ -113,13 +114,35 @@ function playerHeadshot(teamKey, playerName){
 }
 function teamColor(key){ return key===state.team ? 'var(--series-a)' : 'var(--series-b)'; }
 
-const REMOTE_TEAM_SEASONS = {
-  lmu: ['2025-26'],
+/* Non-conference opponents scraped straight into opponents/<folder>/<season>/
+   and loaded client-side (current season only) rather than pre-aggregated by
+   build_data.py — see opponents/OPPONENT_ANALYSIS_PLAN.md. boxscoreName must
+   match the team-name string exactly as scraped into csv1/csv2; advancedName
+   matches the "team" column in opponents/overall_data/wbb_d1_processed_players.csv. */
+const OPPONENT_TEAMS = {
+  lmu: { folder: 'LMU', boxscoreName: 'LMU (CA)', advancedName: 'Loyola Marymount',
+    name: 'Loyola Marymount', short: 'LMU', mascot: 'Lions',
+    nonD1GameIds: new Set(['2025-12-16_lmu_ca_chapman']) },
+  washington: { folder: 'Washington', boxscoreName: 'Washington', advancedName: 'Washington',
+    name: 'Washington', short: 'UW', mascot: 'Huskies', nonD1GameIds: new Set() },
+  usandiego: { folder: 'USD', boxscoreName: 'San Diego', advancedName: 'San Diego',
+    name: 'San Diego', short: 'USD', mascot: 'Toreros', nonD1GameIds: new Set() },
+  portlandstate: { folder: 'PortlandState', boxscoreName: 'Portland St.', advancedName: 'Portland St.',
+    name: 'Portland State', short: 'PSU', mascot: 'Vikings',
+    nonD1GameIds: new Set(['2025-10-30_portland_st_warner_pacific']) },
+  usf: { folder: 'USF', boxscoreName: 'San Francisco', advancedName: 'San Francisco',
+    name: 'San Francisco', short: 'USF', mascot: 'Dons', nonD1GameIds: new Set() },
+  nau: { folder: 'NAU', boxscoreName: 'Northern Ariz.', advancedName: 'Northern Arizona',
+    name: 'Northern Arizona', short: 'NAU', mascot: 'Lumberjacks', nonD1GameIds: new Set() },
 };
+
+const REMOTE_TEAM_SEASONS = Object.fromEntries(
+  Object.keys(OPPONENT_TEAMS).map(key => [key, ['2025-26']])
+);
 
 const teamDataCache = {};
 const teamLoadCache = {};
-let lmuAdvancedRowsPromise = null;
+let advancedRowsPromise = null;
 
 function teamCacheKey(teamKey, season){
   return `${teamKey}::${season}`;
@@ -213,33 +236,36 @@ function pointsFromSplit(fg, tp, ft){
   return (2 * fgSplit.made) + tpSplit.made + ftSplit.made;
 }
 
-async function loadLmuAdvancedRows(){
-  if(!lmuAdvancedRowsPromise){
-    lmuAdvancedRowsPromise = fetch('opponents/overall_data/wbb_d1_processed_players.csv')
+async function loadAdvancedRowsIndex(){
+  if(!advancedRowsPromise){
+    advancedRowsPromise = fetch('opponents/overall_data/wbb_d1_processed_players.csv')
       .then(r => r.text())
-      .then(text => parseCsv(text))
-      .then(rows => {
-        const filtered = rows.filter(row => row.team === 'Loyola Marymount');
-        return Object.fromEntries(filtered.map(row => [normalizePlayerName(row.name), row]));
-      });
+      .then(text => parseCsv(text));
   }
-  return lmuAdvancedRowsPromise;
+  return advancedRowsPromise;
 }
 
-async function loadLmuSeason(season){
-  const base = `opponents/LMU/${season}`;
+async function loadAdvancedRowsFor(teamName){
+  const rows = await loadAdvancedRowsIndex();
+  const filtered = rows.filter(row => row.team === teamName);
+  return Object.fromEntries(filtered.map(row => [normalizePlayerName(row.name), row]));
+}
+
+async function loadOpponentSeason(teamKey, season){
+  const cfg = OPPONENT_TEAMS[teamKey];
+  const base = `opponents/${cfg.folder}/${season}`;
   const [csv1Text, csv2Text, csv4Text, advancedRows] = await Promise.all([
     fetch(`${base}/csv1_game_index.csv`).then(r => r.text()),
     fetch(`${base}/csv2_boxscore_players.csv`).then(r => r.text()),
     fetch(`${base}/csv4_play_analysis.csv`).then(r => r.text()),
-    loadLmuAdvancedRows(),
+    loadAdvancedRowsFor(cfg.advancedName),
   ]);
 
   const csv1 = parseCsv(csv1Text);
   const csv2 = parseCsv(csv2Text);
   const csv4 = parseCsv(csv4Text);
-  const teamName = 'LMU (CA)';
-  const nonD1GameIds = new Set(['2025-12-16_lmu_ca_chapman']);
+  const teamName = cfg.boxscoreName;
+  const nonD1GameIds = cfg.nonD1GameIds;
 
   const gameRows = csv1.filter(row => row.home_team === teamName || row.away_team === teamName);
   const playerRows = csv2.filter(row => row.team === teamName);
@@ -399,9 +425,9 @@ async function loadLmuSeason(season){
     });
 
   return {
-    name: 'Loyola Marymount',
-    short: 'LMU',
-    mascot: 'Lions',
+    name: cfg.name,
+    short: cfg.short,
+    mascot: cfg.mascot,
     players,
     games,
     d1Players,
@@ -423,18 +449,16 @@ async function ensureTeamData(teamKey, season){
     return teamDataCache[cacheKey] || TEAMS[teamKey];
   }
   if(!teamLoadCache[cacheKey]){
-    if(teamKey === 'lmu'){
-      teamLoadCache[cacheKey] = loadLmuSeason(season).then(data => {
-        teamDataCache[cacheKey] = data;
-        return data;
-      });
-    }
+    teamLoadCache[cacheKey] = loadOpponentSeason(teamKey, season).then(data => {
+      teamDataCache[cacheKey] = data;
+      return data;
+    });
   }
   return teamLoadCache[cacheKey];
 }
 
 function loadingCard(teamKey, season){
-  return `<div class="card"><div class="card-title"><h3>Loading ${TEAMS[teamKey].name}</h3><span class="hint">${season}</span></div><p class="muted">Pulling the local LMU season data into the dashboard.</p></div>`;
+  return `<div class="card"><div class="card-title"><h3>Loading ${TEAMS[teamKey].name}</h3><span class="hint">${season}</span></div><p class="muted">Pulling the local ${TEAMS[teamKey].short} season data into the dashboard.</p></div>`;
 }
 
 function unavailableCard(teamKey, season){
@@ -569,7 +593,7 @@ function foulsForGames(games){
 
 /* ============================= STATE / NAV ============================= */
 const state = { view:'overview', team:'ucsd', season:'2025-26', gameSort:{key:'date',dir:1},
-  p1:{team:'ucsd',idx:0}, p2:{team:'ucdavis',idx:0}, t1:'ucsd', t2:'ucdavis',
+  p1:{team:'ucsd',idx:0}, p2:{team:'ucsb',idx:0}, t1:'ucsd', t2:'ucsb',
   selectedPlayer:null, rosterCardPlayer:null, leaderTab:'scorers', playerStatKey:'pts', playerTrendWindow:'all', playerGameFocus:null, rosterMode:'pergame', rosterTableView:'main', shootingMode:'basic', rosterScrollLeft:0,
   rosterSortMain:{key:'ppg',dir:-1}, rosterSortShooting:{key:'tsPct',dir:-1}, rosterSortEfficiency:{key:'tsPct',dir:-1} };
 
@@ -955,9 +979,12 @@ function rosterCardPalette(teamKey){
   const palettes = {
     lmu: {bg:'linear-gradient(180deg,#182b49 0%,#102039 100%)', border:'#c8a14d', accent:'#f1c75b', accentSoft:'rgba(241,199,91,.18)'},
     ucsd: {bg:'linear-gradient(180deg,#182b49 0%,#102039 100%)', border:'#c8a14d', accent:'#f1c75b', accentSoft:'rgba(241,199,91,.18)'},
-    ucdavis: {bg:'linear-gradient(180deg,#0f2d52 0%,#0b203a 100%)', border:'#c89a3c', accent:'#f2c861', accentSoft:'rgba(242,200,97,.18)'},
     ucirvine: {bg:'linear-gradient(180deg,#0e4578 0%,#0b2e50 100%)', border:'#f0b53a', accent:'#ffd36f', accentSoft:'rgba(255,211,111,.18)'},
-    hawaii: {bg:'linear-gradient(180deg,#0c5b3a 0%,#083f28 100%)', border:'#d5ddd7', accent:'#f4f7f3', accentSoft:'rgba(244,247,243,.18)'},
+    washington: {bg:'linear-gradient(180deg,#4b2e83 0%,#331f5c 100%)', border:'#b7a57a', accent:'#e8dcb0', accentSoft:'rgba(232,220,176,.18)'},
+    usandiego: {bg:'linear-gradient(180deg,#003b71 0%,#00274d 100%)', border:'#83b2d6', accent:'#a9cbe8', accentSoft:'rgba(169,203,232,.18)'},
+    portlandstate: {bg:'linear-gradient(180deg,#154734 0%,#0d3024 100%)', border:'#b8b8b8', accent:'#e8e8e8', accentSoft:'rgba(232,232,232,.18)'},
+    usf: {bg:'linear-gradient(180deg,#00543c 0%,#003a29 100%)', border:'#fdbb30', accent:'#ffd166', accentSoft:'rgba(255,209,102,.18)'},
+    nau: {bg:'linear-gradient(180deg,#002554 0%,#001938 100%)', border:'#ffc72c', accent:'#ffd966', accentSoft:'rgba(255,217,102,.18)'},
   };
   return palettes[teamKey] || {bg:'linear-gradient(180deg,#182b49 0%,#102039 100%)', border:'#c8a14d', accent:'#f1c75b', accentSoft:'rgba(241,199,91,.18)'};
 }

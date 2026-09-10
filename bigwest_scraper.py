@@ -35,8 +35,6 @@ CACHE_DIR = os.path.join(BASE_DIR, "cache")
 
 # team_key -> (site domain, canonical display name as it appears on box score pages)
 TEAMS = {
-    "ucdavis": ("ucdavisaggies.com", "UC Davis"),
-    "hawaii": ("hawaiiathletics.com", "Hawai'i"),
     "ucirvine": ("ucirvinesports.com", "UC Irvine"),
     "ucsd": ("ucsdtritons.com", "UC San Diego"),
     "ucsb": ("ucsbgauchos.com", "UC Santa Barbara"),
@@ -47,6 +45,11 @@ TEAMS = {
     "csub": ("gorunners.com", "Cal State Bakersfield"),
     "ucr": ("gohighlanders.com", "UC Riverside"),
     "lmu": ("lmulions.com", "LMU"),
+    "washington": ("gohuskies.com", "Washington"),
+    "usandiego": ("usdtoreros.com", "San Diego"),
+    "portlandstate": ("goviks.com", "Portland State"),
+    "usf": ("usfdons.com", "San Francisco"),
+    "nau": ("nauathletics.com", "Northern Arizona"),
 }
 
 
@@ -768,12 +771,10 @@ def parse_boxscore_v2(html: str, season: str) -> BoxscoreData:
 
 
 # Sites whose schedule URL needs a season slug other than the standard
-# "YYYY-YY". hawaiiathletics.com silently redirects "YYYY-YY" to its generic
+# "YYYY-YY" (e.g. a site that silently redirects "YYYY-YY" to its generic
 # /schedule (current season) endpoint instead of 404ing, so a naive request
-# for any historical season there would quietly return current-season data.
-SEASON_URL_OVERRIDES = {
-    "hawaii": lambda season: f"{season.split('-')[0]}-{int(season.split('-')[0][:2] + season.split('-')[1])}",
-}
+# for any historical season there would quietly return current-season data).
+SEASON_URL_OVERRIDES = {}
 
 
 def format_season_url(team_key: str, season: str) -> str:
