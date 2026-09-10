@@ -2175,12 +2175,16 @@ function diffRowsHtml(stats, obj1, obj2){
     const lo = s.min||0;
     const w1 = Math.max(0, Math.min(100, (v1-lo)/(s.max-lo)*100));
     const w2 = Math.max(0, Math.min(100, (v2-lo)/(s.max-lo)*100));
-    return `<div class="diffrow ${aBetter?'left-wins':''} ${bBetter?'right-wins':''}">
-      <div class="diffval a" style="text-align:right;">${s.fmt(v1)}</div>
-      <div class="bar-track left"><div class="bar-fill a" style="width:${w1}%"></div></div>
+    return `<div class="diffrow ${aBetter?'a-wins':''} ${bBetter?'b-wins':''}">
       <div class="stat-label">${s.label}</div>
-      <div class="bar-track"><div class="bar-fill b" style="width:${w2}%"></div></div>
-      <div class="diffval b">${s.fmt(v2)}</div>
+      <div class="diff-bar-row">
+        <div class="bar-track"><div class="bar-fill a" style="width:${w1}%"></div></div>
+        <div class="diffval a">${s.fmt(v1)}</div>
+      </div>
+      <div class="diff-bar-row">
+        <div class="bar-track"><div class="bar-fill b" style="width:${w2}%"></div></div>
+        <div class="diffval b">${s.fmt(v2)}</div>
+      </div>
     </div>`;
   }).join('');
 }
