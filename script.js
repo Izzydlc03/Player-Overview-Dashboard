@@ -1597,28 +1597,33 @@ function playerStatDefs(team, p, pg){
    value ticks using the active stat's own formatter) and labeled x-axis
    (game number, sparse-ticked so labels don't collide on long seasons),
    plus a hover crosshair + tooltip on every point (not just the last one). */
+/* Axis bounds are derived from the actual series being plotted (with a
+   per-stat floor so a quiet game/season doesn't zoom the axis in too far),
+   never a bare fixed cap — otherwise any value above that cap renders
+   outside the chart entirely (SVG has overflow:visible so it doesn't even
+   clip, it just draws over whatever is above the card). */
 function trendAxisSpec(active, series){
   const seriesMax = Math.max(...series, 0);
-  const presets = {
-    min: { min: 0, max: 40, ticks: [0, 10, 20, 30, 40] },
-    fgpct: { min: 0, max: 100, ticks: [0, 25, 50, 75, 100] },
-    tppct: { min: 0, max: 100, ticks: [0, 25, 50, 75, 100] },
-    ftpct: { min: 0, max: 100, ticks: [0, 25, 50, 75, 100] },
-    blk: { min: 0, max: 10, ticks: [0, 2.5, 5, 7.5, 10] },
-    stl: { min: 0, max: 10, ticks: [0, 2.5, 5, 7.5, 10] },
-    pts: { min: 0, max: Math.max(40, Math.ceil(seriesMax / 10) * 10), ticks: null },
-    reb: { min: 0, max: 20, ticks: [0, 5, 10, 15, 20] },
-    ast: { min: 0, max: 20, ticks: [0, 5, 10, 15, 20] },
-    pm: { min: 0, max: 10, ticks: [0, 2.5, 5, 7.5, 10] },
-  };
-  const preset = presets[active.key];
-  if(preset){
-    if(preset.ticks) return preset;
-    const max = preset.max;
-    return { min: preset.min, max, ticks: [0, max * 0.25, max * 0.5, max * 0.75, max] };
+  const seriesMin = Math.min(...series, 0);
+
+  // True 0-100 bounds — percentages can't exceed this, so no need to scale.
+  if(active.key==='fgpct' || active.key==='tppct' || active.key==='ftpct'){
+    return { min: 0, max: 100, ticks: [0, 25, 50, 75, 100] };
   }
-  const autoMax = Math.max(5, Math.ceil(seriesMax / 5) * 5);
-  return { min: 0, max: autoMax, ticks: [0, autoMax * 0.25, autoMax * 0.5, autoMax * 0.75, autoMax] };
+
+  const stepByKey = { min:10, pts:10, reb:5, ast:5, stl:2, blk:2, pm:5 };
+  const step = stepByKey[active.key] || 5;
+
+  if(active.key==='pm'){
+    // Can go negative — scale symmetrically around 0 to whichever side needs more room.
+    const bound = Math.max(step*2, Math.ceil(Math.max(seriesMax, -seriesMin) / step) * step);
+    return { min: -bound, max: bound, ticks: [-bound, -bound/2, 0, bound/2, bound] };
+  }
+
+  const floorByKey = { min:40, pts:40, reb:20, ast:20, stl:10, blk:10 };
+  const floor = floorByKey[active.key] || step*4;
+  const max = Math.max(floor, Math.ceil(seriesMax / step) * step);
+  return { min: 0, max, ticks: [0, max*0.25, max*0.5, max*0.75, max] };
 }
 
 function statTrendChart(series, active, games, w, h, selectedGameId = null){

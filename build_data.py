@@ -52,6 +52,21 @@ def display_name(raw):
     return raw.strip()
 
 
+def normalize_player_name(name):
+    # Mirrors script.js's normalizePlayerName() exactly — this is the key
+    # playerTrendGames() looks up into a team's playerGameLogs by.
+    parts = [p.strip() for p in name.split(",")]
+    if len(parts) == 2:
+        name = f"{parts[1]} {parts[0]}"
+    name = re.sub(r"\.", "", name)
+    name = re.sub(r"\s+", " ", name).strip().lower()
+    return name
+
+
+def game_pct(made, att):
+    return (made / att * 100) if att > 0 else 0
+
+
 def opp_display(raw_name):
     meta = TEAM_META.get(raw_name)
     return meta["name"] if meta else raw_name
@@ -80,6 +95,11 @@ def build_season(season_dir, season):
         "fgm": 0, "fga": 0, "tpm": 0, "tpa": 0, "ftm": 0, "fta": 0,
         "oreb": 0, "dreb": 0, "ast": 0, "stl": 0, "blk": 0, "to": 0, "pts": 0,
     })
+    # (team, normalized_player_name) -> per-game entries, for the player-detail
+    # trend chart. Without this, playerTrendGames() in script.js falls back to
+    # the TEAM's per-game totals (e.g. ~30 rebounds/game) as if they were a
+    # single player's — wildly wrong and well outside that player's own axis.
+    player_game_logs = defaultdict(list)
 
     for r in box_rows:
         if r["player"] == "TEAM":
@@ -104,6 +124,27 @@ def build_season(season_dir, season):
         p["ast"] += num(r["ast"], int); p["stl"] += num(r["stl"], int)
         p["blk"] += num(r["blk"], int); p["to"] += num(r["to"], int)
         p["pts"] += num(r["pts"], int)
+
+        g = games_by_id.get(r["game_id"])
+        if g:
+            is_home = g["home_team"] == team
+            opp_raw = g["away_team"] if is_home else g["home_team"]
+            pf = num(g["home_score"] if is_home else g["away_score"], int)
+            pa = num(g["away_score"] if is_home else g["home_score"], int)
+            fgm, fga = num(r["fg_m"], int), num(r["fg_a"], int)
+            tpm, tpa = num(r["3p_m"], int), num(r["3p_a"], int)
+            ftm, fta = num(r["ft_m"], int), num(r["ft_a"], int)
+            oreb, dreb = num(r["oreb"], int), num(r["dreb"], int)
+            player_game_logs[(team, normalize_player_name(display_name(r["player"])))].append({
+                "gameId": r["game_id"], "date": g["date"], "opp": opp_display(opp_raw),
+                "home": is_home, "win": pf > pa,
+                "min": num(r["min"], float),
+                "fgm": fgm, "fga": fga, "tpm": tpm, "tpa": tpa, "ftm": ftm, "fta": fta,
+                "oreb": oreb, "dreb": dreb, "reb": oreb + dreb,
+                "ast": num(r["ast"], int), "stl": num(r["stl"], int), "blk": num(r["blk"], int),
+                "to": num(r["to"], int), "pts": num(r["pts"], int),
+                "fgPct": game_pct(fgm, fga), "tpPct": game_pct(tpm, tpa), "ftPct": game_pct(ftm, fta),
+            })
 
     teams = {}
     for raw_name, meta in TEAM_META.items():
@@ -142,9 +183,15 @@ def build_season(season_dir, season):
             })
         players.sort(key=lambda p: -p["pts"])
 
+        player_game_logs_out = {}
+        for (team, norm_name), entries in player_game_logs.items():
+            if team != raw_name:
+                continue
+            player_game_logs_out[norm_name] = sorted(entries, key=lambda e: e["date"])
+
         teams[meta["key"]] = {
             "name": meta["name"], "short": meta["short"], "mascot": meta["mascot"],
-            "players": players, "games": games,
+            "players": players, "games": games, "playerGameLogs": player_game_logs_out,
         }
 
     return teams
