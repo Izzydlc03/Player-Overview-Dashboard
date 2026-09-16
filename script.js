@@ -133,46 +133,61 @@ async function loadBartPlayerStats(season){
       if(!text){
         BART_PLAYER_CACHE[year] = { rows: [], byKey: {} };
       } else {
-        const rows = parseCsv(text).map(row => ({
-          name: row.name,
-          team: row.team,
-          conf: row.conf,
-          pos: row.pos || '',
-          gp: Number(row.gp || 0),
-          mpg: Number(row.mpg || 0),
-          ppg: Number(row.ppg || 0),
-          rpg: Number(row.rpg || 0),
-          apg: Number(row.apg || 0),
-          fgPct: Number(row.fg || 0) * 100,
-          tpPct: Number(row.tp || 0) * 100,
-          porpag: Number(row.porpag || 0),
-          adjoe: Number(row.adjoe || 0),
-          drtg: Number(row.drtg || 0),
-          bpm: Number(row.bpm || 0),
-          usage: Number(row.usg || 0) * 100,
-          ts: Number(row.ts || 0) * 100,
-          efg: Number(row.efg || 0) * 100,
-          astPct: possessionRatePercent(row.ast_pct, 'ast_pct'),
-          toPct: possessionRatePercent(row.to_pct, 'to_pct'),
-          drbPct: possessionRatePercent(row.drb_pct, 'drb_pct'),
-          orbPct: possessionRatePercent(row.orb_pct, 'orb_pct'),
-          stlPct: possessionRatePercent(row.stl_pct, 'stl_pct'),
-          blkPct: possessionRatePercent(row.blk_pct, 'blk_pct'),
-          rimmade: Number(row.rimmade || 0),
-          rimatt: Number(row.rimatt || 0),
-          rimPct: Number(row.rim_pct || 0) * 100,
-          midmade: Number(row.midmade || 0),
-          midatt: Number(row.midatt || 0),
-          midPct: Number(row.mid_pct || 0) * 100,
-          tpm: Number(row.tpm || 0),
-          tpa: Number(row.tpa || 0),
-          rimShare: Number(row.rim_pct_of_total_attempts || 0) * 100,
-          midShare: Number(row.mid_pct_of_total_attempts || 0) * 100,
-          threeShare: Number(row.three_pct_of_total_attempts || 0) * 100,
-          rimAssistPct: Number(row.pct_rim_made_assisted || 0) * 100,
-          midAssistPct: Number(row.pct_mid_made_assisted || 0) * 100,
-          threeAssistPct: Number(row.pct_three_made_assisted || 0) * 100,
-        })).filter(row => row.name && row.team);
+        const rows = parseCsv(text).map(row => {
+          const midmade = Number(row.midmade || 0);
+          const midatt = Number(row.midatt || 0);
+          const tpm = Number(row.tpm || 0);
+          const tpa = Number(row.tpa || 0);
+          const nonRimAtt = midatt + tpa;
+          const orbPct = possessionRatePercent(row.orb_pct, 'orb_pct');
+          const drbPct = possessionRatePercent(row.drb_pct, 'drb_pct');
+          const stlPct = possessionRatePercent(row.stl_pct, 'stl_pct');
+          const blkPct = possessionRatePercent(row.blk_pct, 'blk_pct');
+          return {
+            name: row.name,
+            team: row.team,
+            conf: row.conf,
+            pos: row.pos || '',
+            gp: Number(row.gp || 0),
+            mpg: Number(row.mpg || 0),
+            ppg: Number(row.ppg || 0),
+            rpg: Number(row.rpg || 0),
+            apg: Number(row.apg || 0),
+            fgPct: Number(row.fg || 0) * 100,
+            tpPct: Number(row.tp || 0) * 100,
+            porpag: Number(row.porpag || 0),
+            adjoe: Number(row.adjoe || 0),
+            drtg: Number(row.drtg || 0),
+            bpm: Number(row.bpm || 0),
+            usage: Number(row.usg || 0) * 100,
+            ts: Number(row.ts || 0) * 100,
+            efg: Number(row.efg || 0) * 100,
+            astPct: possessionRatePercent(row.ast_pct, 'ast_pct'),
+            toPct: possessionRatePercent(row.to_pct, 'to_pct'),
+            drbPct,
+            orbPct,
+            stlPct,
+            blkPct,
+            reboundProfile: (orbPct + drbPct) / 2,
+            defenseProfile: (stlPct + blkPct) / 2,
+            rimmade: Number(row.rimmade || 0),
+            rimatt: Number(row.rimatt || 0),
+            rimPct: Number(row.rim_pct || 0) * 100,
+            midmade,
+            midatt,
+            midPct: Number(row.mid_pct || 0) * 100,
+            tpm,
+            tpa,
+            nonRimAtt,
+            nonRimFgPct: nonRimAtt > 0 ? ((midmade + tpm) / nonRimAtt) * 100 : NaN,
+            rimShare: Number(row.rim_pct_of_total_attempts || 0) * 100,
+            midShare: Number(row.mid_pct_of_total_attempts || 0) * 100,
+            threeShare: Number(row.three_pct_of_total_attempts || 0) * 100,
+            rimAssistPct: Number(row.pct_rim_made_assisted || 0) * 100,
+            midAssistPct: Number(row.pct_mid_made_assisted || 0) * 100,
+            threeAssistPct: Number(row.pct_three_made_assisted || 0) * 100,
+          };
+        }).filter(row => row.name && row.team);
         BART_PLAYER_CACHE[year] = { rows, byKey: Object.fromEntries(rows.map(row => [bartPlayerKey(row.team, row.name), row])) };
       }
     } catch {
@@ -2598,18 +2613,63 @@ function wireShotDistributionChart(container){
   });
 }
 
+function d1PlayerPercentile(key, value, higherBetter = true){
+  const rows = BART_PLAYER_CACHE[bartSeasonYear(state.season)]?.rows || [];
+  if(!rows.length || !Number.isFinite(value)) return null;
+  const eligible = rows.filter(row => row.mpg >= 1);
+  if(eligible.length <= 1) return null;
+  return valuePercentile(eligible, key, value, higherBetter);
+}
+
+function roleProfileScore(key, value, fallback, higherBetter = true){
+  const percentile = d1PlayerPercentile(key, value, higherBetter);
+  return percentile === null ? fallback : percentile;
+}
+
+function roleProfileAxes(metrics){
+  const nonRimAtt = metrics.midAtt + metrics.threeAtt;
+  const nonRimFgPct = nonRimAtt > 0 ? ((metrics.midMakes + metrics.threeMakes) / nonRimAtt) * 100 : NaN;
+  const reboundProfile = (metrics.orbPct + metrics.drbPct) / 2;
+  const defenseProfile = (metrics.stlPct + metrics.blkPct) / 2;
+  return [
+    {
+      label: 'Scoring',
+      value: roleProfileScore('ppg', metrics.ppg, Math.min(100, (metrics.ppg / 20) * 100)),
+      detail: `${fmt1(metrics.ppg)} PPG`,
+    },
+    {
+      label: 'Shooting',
+      value: roleProfileScore('nonRimFgPct', nonRimFgPct, Math.min(100, Number.isFinite(nonRimFgPct) ? nonRimFgPct : metrics.tsPct)),
+      detail: Number.isFinite(nonRimFgPct) ? `${fmt1(nonRimFgPct)}% on mid/3` : `${fmt1(metrics.tsPct)} TS%`,
+    },
+    {
+      label: 'Usage',
+      value: roleProfileScore('usage', metrics.usg, Math.min(100, (metrics.usg / 30) * 100)),
+      detail: `${fmt1(metrics.usg)} usage%`,
+    },
+    {
+      label: 'Defense',
+      value: roleProfileScore('defenseProfile', defenseProfile, Math.min(100, (defenseProfile / 6) * 100)),
+      detail: `${fmt1(metrics.stlPct)} STL% · ${fmt1(metrics.blkPct)} BLK%`,
+    },
+    {
+      label: 'Rebound',
+      value: roleProfileScore('reboundProfile', reboundProfile, Math.min(100, (reboundProfile / 20) * 100)),
+      detail: `${fmt1(metrics.orbPct)} ORB% · ${fmt1(metrics.drbPct)} DRB%`,
+    },
+    {
+      label: 'Passing',
+      value: roleProfileScore('astPct', metrics.astPct, Math.min(100, (metrics.astPct / 35) * 100)),
+      detail: `${fmt1(metrics.astPct)} AST%`,
+    },
+  ];
+}
+
 function playerRadarChart(metrics){
   const cx = 132;
   const cy = 126;
   const radius = 86;
-  const axes = [
-    { label: 'Scoring', value: Math.min(100, (metrics.ppg / 20) * 100), detail: `${fmt1(metrics.ppg)} PPG` },
-    { label: 'Shooting', value: Math.min(100, metrics.tsPct), detail: `${fmt1(metrics.tsPct)} TS%` },
-    { label: 'Usage', value: Math.min(100, (metrics.usg / 30) * 100), detail: `${fmt1(metrics.usg)} usage%` },
-    { label: 'Defense', value: Math.min(100, (((metrics.stlPct + metrics.blkPct) / 2) / 6) * 100), detail: `${fmt1(metrics.stlPct)} STL% · ${fmt1(metrics.blkPct)} BLK%` },
-    { label: 'Rebound', value: Math.min(100, (metrics.rpg / 10) * 100), detail: `${fmt1(metrics.rpg)} RPG` },
-    { label: 'Passing', value: Math.min(100, (metrics.astPct / 35) * 100), detail: `${fmt1(metrics.astPct)} AST%` },
-  ];
+  const axes = roleProfileAxes(metrics);
   const levels = [0.25, 0.5, 0.75, 1];
   const angleStep = (Math.PI * 2) / axes.length;
   const pointAt = (axisIdx, scale) => {
@@ -3140,14 +3200,7 @@ function comparePlayerVisualMetrics(team, player, teamKey){
 }
 
 function comparePlayerRadarAxes(metrics){
-  return [
-    { label: 'Scoring', value: Math.min(100, (metrics.ppg / 20) * 100), detail: `${fmt1(metrics.ppg)} PPG` },
-    { label: 'Shooting', value: Math.min(100, metrics.tsPct), detail: `${fmt1(metrics.tsPct)} TS%` },
-    { label: 'Usage', value: Math.min(100, (metrics.usg / 30) * 100), detail: `${fmt1(metrics.usg)} usage%` },
-    { label: 'Defense', value: Math.min(100, (((metrics.stlPct + metrics.blkPct) / 2) / 6) * 100), detail: `${fmt1(metrics.stlPct)} STL% · ${fmt1(metrics.blkPct)} BLK%` },
-    { label: 'Rebound', value: Math.min(100, (metrics.rpg / 10) * 100), detail: `${fmt1(metrics.rpg)} RPG` },
-    { label: 'Passing', value: Math.min(100, (metrics.astPct / 35) * 100), detail: `${fmt1(metrics.astPct)} AST%` },
-  ];
+  return roleProfileAxes(metrics);
 }
 
 function comparePlayerRadarChart(m1, m2, p1, p2){
