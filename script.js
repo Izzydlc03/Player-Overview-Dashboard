@@ -20,7 +20,7 @@ const SEASON_CACHE = {};
 const BART_CACHE = {};
 const BART_PLAYER_CACHE = {};
 const ARCHETYPE_CACHE = {};
-const DATA_VERSION = '20260916x';
+const DATA_VERSION = '20260916y';
 
 function bartSeasonYear(season){
   const end = season.split('-')[1];
@@ -3050,19 +3050,24 @@ function wirePlayerModal(container, team, stateKey, idx){
    lets a stat's bar scale start below zero (e.g. Plus/Minus). */
 function diffRowsHtml(stats, obj1, obj2){
   return stats.map(s=>{
-    const v1=Number(obj1[s.key] || 0), v2=Number(obj2[s.key] || 0);
-    const sub1 = s.subKey ? Number(obj1[s.subKey] || 0) : null;
-    const sub2 = s.subKey ? Number(obj2[s.subKey] || 0) : null;
-    const tied = Math.abs(v1 - v2) < 0.000001;
-    const aBetter = tied || (s.lowerBetter ? v1<v2 : v1>v2);
-    const bBetter = tied || (s.lowerBetter ? v2<v1 : v2>v1);
+    const raw1 = obj1[s.key];
+    const raw2 = obj2[s.key];
+    const has1 = raw1 !== undefined && raw1 !== null && raw1 !== '' && Number.isFinite(Number(raw1));
+    const has2 = raw2 !== undefined && raw2 !== null && raw2 !== '' && Number.isFinite(Number(raw2));
+    const v1 = has1 ? Number(raw1) : null;
+    const v2 = has2 ? Number(raw2) : null;
+    const sub1 = s.subKey && Number.isFinite(Number(obj1[s.subKey])) ? Number(obj1[s.subKey]) : null;
+    const sub2 = s.subKey && Number.isFinite(Number(obj2[s.subKey])) ? Number(obj2[s.subKey]) : null;
+    const tied = has1 && has2 && Math.abs(v1 - v2) < 0.000001;
+    const aBetter = has1 && (!has2 || tied || (s.lowerBetter ? v1<v2 : v1>v2));
+    const bBetter = has2 && (!has1 || tied || (s.lowerBetter ? v2<v1 : v2>v1));
     const lo = s.min||0;
-    const w1 = Math.max(0, Math.min(100, (v1-lo)/(s.max-lo)*100));
-    const w2 = Math.max(0, Math.min(100, (v2-lo)/(s.max-lo)*100));
+    const w1 = has1 ? Math.max(0, Math.min(100, (v1-lo)/(s.max-lo)*100)) : 0;
+    const w2 = has2 ? Math.max(0, Math.min(100, (v2-lo)/(s.max-lo)*100)) : 0;
     const aTag = aBetter ? '<span class="edge-tag" aria-label="Better value">✓</span>' : '';
     const bTag = bBetter ? '<span class="edge-tag" aria-label="Better value">✓</span>' : '';
-    const aValue = `${aTag}${s.fmt(v1)}${s.subKey ? `<span class="diffval-sub">${s.subFmt(sub1)}</span>` : ''}`;
-    const bValue = `${s.fmt(v2)}${bTag}${s.subKey ? `<span class="diffval-sub">${s.subFmt(sub2)}</span>` : ''}`;
+    const aValue = has1 ? `${aTag}${s.fmt(v1)}${s.subKey && sub1 !== null ? `<span class="diffval-sub">${s.subFmt(sub1)}</span>` : ''}` : '—';
+    const bValue = has2 ? `${s.fmt(v2)}${bTag}${s.subKey && sub2 !== null ? `<span class="diffval-sub">${s.subFmt(sub2)}</span>` : ''}` : '—';
     const label = `${s.label}${s.subKey ? `<span class="stat-label-sub">${s.subLabel}</span>` : ''}`;
     return `<div class="diffrow diffrow-mirrored ${aBetter?'left-wins':''} ${bBetter?'right-wins':''}">
       <div class="bar-track left"><div class="bar-fill a" style="width:${w1}%"></div></div>
