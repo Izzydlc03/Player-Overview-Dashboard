@@ -20,7 +20,7 @@ const SEASON_CACHE = {};
 const BART_CACHE = {};
 const BART_PLAYER_CACHE = {};
 const ARCHETYPE_CACHE = {};
-const DATA_VERSION = '20260916y';
+const DATA_VERSION = '20260916z';
 
 function bartSeasonYear(season){
   const end = season.split('-')[1];
@@ -2630,8 +2630,8 @@ function playerRadarChart(metrics){
     return `<circle class="radar-point" cx="${pt.x.toFixed(1)}" cy="${pt.y.toFixed(1)}" r="3.5"></circle>`;
   }).join('');
   const hitTargets = axes.map((axis, idx) => {
-    const pt = pointAt(idx, Math.max(axis.value / 100, 0.18));
-    return `<circle class="radar-hit" cx="${pt.x.toFixed(1)}" cy="${pt.y.toFixed(1)}" r="18" tabindex="0" role="button" aria-label="${axis.label}: ${axis.detail}" data-radar-label="${axis.label}" data-radar-detail="${axis.detail}" data-radar-score="${Math.round(axis.value)}"></circle>`;
+    const pt = pointAt(idx, Math.max(axis.value / 100, 0.22));
+    return `<circle class="radar-hit" cx="${pt.x.toFixed(1)}" cy="${pt.y.toFixed(1)}" r="28" tabindex="0" role="button" aria-label="${axis.label}: ${axis.detail}" data-radar-label="${axis.label}" data-radar-detail="${axis.detail}" data-radar-score="${Math.round(axis.value)}"></circle>`;
   }).join('');
   const labels = axes.map((axis, idx) => {
     const pt = pointAt(idx, 1.18);
@@ -2797,7 +2797,19 @@ function playerTrendWindowOptions(){
 }
 
 function playerLogsFor(team, player){
-  return team.playerGameLogs?.[normalizePlayerName(player.name)] || [];
+  const logs = team.playerGameLogs || {};
+  const candidateKeys = [
+    normalizePlayerName(player.name),
+    normalizePlayerName(displayPlayerName(player.name)),
+    asciiPlayerNameKey(player.name),
+    loosePlayerNameKey(player.name),
+  ];
+  for(const key of candidateKeys){
+    if(logs[key]?.length) return logs[key];
+  }
+  const looseTarget = loosePlayerNameKey(player.name);
+  const matchedKey = Object.keys(logs).find(key => loosePlayerNameKey(key) === looseTarget);
+  return matchedKey ? logs[matchedKey] : [];
 }
 
 function playerTrendGames(team, player){
@@ -3161,15 +3173,18 @@ function comparePlayerRadarChart(m1, m2, p1, p2){
   }).join('');
   const labels = axes1.map((axis, idx) => {
     const pt = pointAt(idx, 1.18);
-    return `<text class="radar-axis-label" x="${pt.x.toFixed(1)}" y="${pt.y.toFixed(1)}" text-anchor="middle" dominant-baseline="middle">${axis.label}</text>`;
+    return `<text class="radar-axis-label" x="${pt.x.toFixed(1)}" y="${pt.y.toFixed(1)}" text-anchor="middle" dominant-baseline="middle" data-radar-axis-label="${axis.label}">${axis.label}</text>`;
   }).join('');
   const points = (axes, className) => axes.map((axis, idx) => {
     const pt = pointAt(idx, axis.value / 100);
     return `<circle class="${className}" cx="${pt.x.toFixed(1)}" cy="${pt.y.toFixed(1)}" r="3.8"></circle>`;
   }).join('');
   const hitTargets = axes1.map((axis, idx) => {
-    const pt = pointAt(idx, 1);
-    return `<circle class="radar-hit" cx="${pt.x.toFixed(1)}" cy="${pt.y.toFixed(1)}" r="20" tabindex="0" role="button"
+    const p1Pt = pointAt(idx, Math.max(axes1[idx].value / 100, 0.2));
+    const p2Pt = pointAt(idx, Math.max(axes2[idx].value / 100, 0.2));
+    const midX = (p1Pt.x + p2Pt.x) / 2;
+    const midY = (p1Pt.y + p2Pt.y) / 2;
+    const attrs = `tabindex="0" role="button"
       aria-label="${axis.label}: ${p1.name} ${axes1[idx].detail}; ${p2.name} ${axes2[idx].detail}"
       data-radar-label="${axis.label}"
       data-radar-detail="${p1.name}: ${axes1[idx].detail} · ${p2.name}: ${axes2[idx].detail}"
@@ -3179,7 +3194,11 @@ function comparePlayerRadarChart(m1, m2, p1, p2){
       data-player-one-grade="${Math.round(axes1[idx].value)}"
       data-player-two-name="${displayPlayerName(p2.name)}"
       data-player-two-stat="${axes2[idx].detail}"
-      data-player-two-grade="${Math.round(axes2[idx].value)}"></circle>`;
+      data-player-two-grade="${Math.round(axes2[idx].value)}"`;
+    return `<g class="radar-hit-group">
+      <path class="radar-hit radar-hit-ray" d="M ${p1Pt.x.toFixed(1)} ${p1Pt.y.toFixed(1)} L ${p2Pt.x.toFixed(1)} ${p2Pt.y.toFixed(1)}" stroke-width="46" ${attrs}></path>
+      <circle class="radar-hit" cx="${midX.toFixed(1)}" cy="${midY.toFixed(1)}" r="28" ${attrs}></circle>
+    </g>`;
   }).join('');
   return `<div class="card compare-player-radar-card">
     <div class="card-title"><h3>Role radar</h3>

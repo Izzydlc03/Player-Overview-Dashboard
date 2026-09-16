@@ -564,7 +564,10 @@ tbody tr.selected{ background:var(--accent-soft); }
   fill:#264475; stroke:white; stroke-width:1.4;
 }
 .radar-hit{
-  fill:transparent; stroke:transparent; stroke-width:0; cursor:pointer; outline:none;
+  fill:transparent; stroke:transparent; cursor:pointer; outline:none; pointer-events:all;
+}
+.radar-hit-ray{
+  fill:none; stroke:transparent; stroke-linecap:round; stroke-linejoin:round;
 }
 .radar-hit.active{
   fill:transparent;
