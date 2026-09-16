@@ -20,7 +20,7 @@ const SEASON_CACHE = {};
 const BART_CACHE = {};
 const BART_PLAYER_CACHE = {};
 const ARCHETYPE_CACHE = {};
-const DATA_VERSION = '20260916e';
+const DATA_VERSION = '20260916x';
 
 function bartSeasonYear(season){
   const end = season.split('-')[1];
@@ -263,17 +263,32 @@ function playerArchetype(teamKey, team, player, season = state.season){
   return null;
 }
 
-function archetypePct(archetype){
-  return `${Math.round((archetype?.confidence || 0) * 100)}%`;
+function displayArchetypeName(name){
+  return name === 'Low-Production Player' ? 'Role Player' : name;
+}
+
+function archetypeDisplayItems(archetype, threshold = 0.10){
+  if(!archetype) return [];
+  const topScore = archetype.top?.[0]?.pct ?? archetype.confidence ?? 0;
+  const items = (archetype.top?.length ? archetype.top : [{ archetype: archetype.archetype, pct: archetype.confidence }])
+    .filter(item => item.archetype && item.pct >= topScore - threshold)
+    .map(item => ({ ...item, archetype: displayArchetypeName(item.archetype) }));
+  return items.length ? items : [{ archetype: displayArchetypeName(archetype.archetype), pct: archetype.confidence }];
 }
 
 function archetypeLabel(archetype){
-  return archetype ? `${archetype.archetype} (${archetypePct(archetype)})` : '';
+  return archetypeDisplayItems(archetype).map(item => item.archetype).join(' / ');
+}
+
+function archetypeChips(archetype, className = ''){
+  if(!archetype) return '';
+  return `<span class="archetype-chip-stack ${className}">
+    ${archetypeDisplayItems(archetype).map(item => `<span class="archetype-chip">${item.archetype}</span>`).join('')}
+  </span>`;
 }
 
 function archetypePill(archetype, className = ''){
-  if(!archetype) return '';
-  return `<span class="archetype-pill ${className}" title="K8 archetype confidence: ${archetypePct(archetype)}">${archetype.archetype}</span>`;
+  return archetypeChips(archetype, className);
 }
 
 function injectDynamicTeams(){
@@ -591,9 +606,23 @@ function displayClassYear(player){
 function displayListedPosition(player){
   return displayPos(player.advanced?.pos || player.pos) || 'Player';
 }
+function compactRoleLabel(role){
+  const value = (role || '').trim();
+  if(!value || value === 'Player') return '';
+  const lower = value.toLowerCase();
+  if(lower.includes('wing') || lower === 'g/f' || lower === 'gf') return 'G/F';
+  if(lower === 'f/c' || lower === 'fc' || lower.includes('pf/c')) return 'F/C';
+  if(['pg', 'sg', 'g'].includes(lower) || /\b(pg|sg|g)\b/.test(lower) || lower.includes('guard')) return 'G';
+  if(lower.includes('forward') || lower === 'f' || lower === 'pf' || lower === 'sf') return 'F';
+  if(lower.includes('center') || lower === 'c') return 'C';
+  return value;
+}
 function displayPlayerRole(teamKey, team, player){
   const listed = displayPos(player.advanced?.pos || player.pos);
   return listed || playerArchetype(teamKey, team, player)?.role || 'Player';
+}
+function displayCompactPlayerRole(teamKey, team, player){
+  return compactRoleLabel(displayPlayerRole(teamKey, team, player)) || 'Player';
 }
 function playerHeadshot(teamKey, playerName){
   const teamShots = ROSTER_HEADSHOTS[teamKey] || {};
@@ -1654,7 +1683,7 @@ function rosterPageCards(team){
     ${leaders.map(({player, idx, pg}, rank)=>{
       const headshot = playerHeadshot(state.team, player.name);
       const archetype = playerArchetype(state.team, team, player);
-      const roleLabel = displayPlayerRole(state.team, team, player);
+      const roleLabel = displayCompactPlayerRole(state.team, team, player);
       return `<button class="roster-spotlight-card" data-roster-card="${idx}" style="--card-bg:${palette.bg};--card-border:${palette.border};--card-accent:${palette.accent};--card-accent-soft:${palette.accentSoft};">
         <div class="roster-spotlight-top">
           <span class="roster-spotlight-rank">#${player.num}</span>
@@ -1936,7 +1965,7 @@ function playerPer40(player, key){
   return mpg > 0 ? (player[key] / Math.max(player.gp, 1)) * (40 / mpg) : 0;
 }
 
-function rosterPlayerMetrics(team, player, idx){
+function rosterPlayerMetrics(team, player, idx, teamKey = state.team){
   const pg = playerPerGame(player);
   const rimMakesTotal = advancedNumber(player, 'rimmade');
   const rimAttTotal = advancedNumber(player, 'rimatt');
@@ -2005,6 +2034,46 @@ function rosterPlayerMetrics(team, player, idx){
     rimFgPct: advancedPercent(player, 'rim_pct'),
     midFgPct: advancedPercent(player, 'mid_pct'),
   };
+
+  const bart = teamKey ? bartPlayerFor(teamKey, team, player) : null;
+  if(bart){
+    const gp = Math.max(bart.gp || player.gp || 1, 1);
+    Object.assign(metrics, {
+      mpg: bart.mpg || metrics.mpg,
+      ppg: bart.ppg || metrics.ppg,
+      rpg: bart.rpg || metrics.rpg,
+      apg: bart.apg || metrics.apg,
+      fgPct: bart.fgPct || metrics.fgPct,
+      tpPct: bart.tpPct || metrics.tpPct,
+      tsPct: bart.ts || metrics.tsPct,
+      usg: bart.usage || metrics.usg,
+      astPct: bart.astPct || metrics.astPct,
+      toPct: bart.toPct || metrics.toPct,
+      drbPct: bart.drbPct || metrics.drbPct,
+      orbPct: bart.orbPct || metrics.orbPct,
+      stlPct: bart.stlPct || metrics.stlPct,
+      blkPct: bart.blkPct || metrics.blkPct,
+      rimMakes: avg(bart.rimmade, gp),
+      rimAtt: avg(bart.rimatt, gp),
+      midMakes: avg(bart.midmade, gp),
+      midAtt: avg(bart.midatt, gp),
+      threeMakes: avg(bart.tpm || player.tpm, gp),
+      threeAtt: avg(bart.tpa || player.tpa, gp),
+      rimShare: bart.rimShare,
+      midShare: bart.midShare,
+      threeShare: bart.threeShare,
+      rimAssistPct: bart.rimAssistPct,
+      midAssistPct: bart.midAssistPct,
+      threeAssistPct: bart.threeAssistPct,
+      rimFgPct: bart.rimPct,
+      midFgPct: bart.midPct,
+    });
+    const assistedMakes = (metrics.rimMakes * (metrics.rimAssistPct / 100))
+      + (metrics.midMakes * (metrics.midAssistPct / 100))
+      + (metrics.threeMakes * (metrics.threeAssistPct / 100));
+    const totalMakes = metrics.rimMakes + metrics.midMakes + metrics.threeMakes;
+    metrics.totalAssistPct = totalMakes > 0 ? (assistedMakes / totalMakes) * 100 : metrics.totalAssistPct;
+  }
 
   return { p: player, i: idx, pg, metrics };
 }
@@ -2796,11 +2865,7 @@ function playerDetail(team, idx, stateKey = ''){
   const displayName = displayPlayerName(p.name);
   const headshot = playerHeadshot(contextTeam, p.name);
   const archetype = playerArchetype(contextTeam, team, p);
-  const archetypeChips = archetype?.top?.length
-    ? `<div class="pdetail-archetype-list">
-        ${archetype.top.map(item => `<span class="archetype-chip">${item.archetype} <b>${Math.round(item.pct * 100)}%</b></span>`).join('')}
-      </div>`
-    : '';
+  const archetypeChipList = archetypeChips(archetype, 'pdetail-archetype-list');
   const series = playerTrendSeries(team, p, active, trendGames);
   const contextLabel = activeGame
     ? `${activeGame.date} ${activeGame.home ? 'vs' : '@'} ${activeGame.opp}`
@@ -2812,7 +2877,7 @@ function playerDetail(team, idx, stateKey = ''){
       <div>
         <h3 class="pdetail-name">${displayName} <span class="muted" style="font-weight:700;">#${p.num}</span></h3>
         <div class="pdetail-meta">${displayPlayerRole(contextTeam, team, p)} · ${displayClassYear(p)} · ${team.name} · ${p.gp} games</div>
-        ${archetype ? `<div class="pdetail-archetype">${archetype.code} · ${archetypeLabel(archetype)}</div>${archetypeChips}` : ''}
+        ${archetype ? `<div class="pdetail-archetype">${archetypeLabel(archetype)}</div>${archetypeChipList}` : ''}
       </div>
     </div>
 
@@ -3177,6 +3242,8 @@ function viewComparePlayers(){
   const p2 = team2.players[state.p2.idx], pg2 = playerPerGame(p2);
   const m1 = comparePlayerVisualMetrics(team1, p1, state.p1.team);
   const m2 = comparePlayerVisualMetrics(team2, p2, state.p2.team);
+  const archetype1 = playerArchetype(state.p1.team, team1, p1);
+  const archetype2 = playerArchetype(state.p2.team, team2, p2);
   Object.assign(pg1, {
     efgPct: efgPct(p1),
     plusMinus: seededVal(team1.short+p1.name+'pm', -8, 12),
@@ -3215,12 +3282,20 @@ function viewComparePlayers(){
       <div class="compare-heads">
         <div class="compare-side">
           <div class="compare-avatar" style="background:color-mix(in srgb, var(--series-a) 22%, var(--surface-3));color:var(--series-a)">${rotationPhotoHtml(state.p1.team, p1)}</div>
-          <div><div class="compare-name">${p1.name}</div><div class="compare-meta">#${p1.num} ${p1.pos} · ${team1.name}</div></div>
+          <div>
+            <div class="compare-name">${displayPlayerName(p1.name)}</div>
+            <div class="compare-meta">#${p1.num} ${displayCompactPlayerRole(state.p1.team, team1, p1)} · ${team1.name}</div>
+            ${archetypeChips(archetype1, 'compare-archetype-list')}
+          </div>
         </div>
         <div class="compare-vs">VS</div>
         <div class="compare-side right">
           <div class="compare-avatar" style="background:color-mix(in srgb, var(--series-b) 22%, var(--surface-3));color:var(--series-b)">${rotationPhotoHtml(state.p2.team, p2)}</div>
-          <div><div class="compare-name">${p2.name}</div><div class="compare-meta">#${p2.num} ${p2.pos} · ${team2.name}</div></div>
+          <div>
+            <div class="compare-name">${displayPlayerName(p2.name)}</div>
+            <div class="compare-meta">#${p2.num} ${displayCompactPlayerRole(state.p2.team, team2, p2)} · ${team2.name}</div>
+            ${archetypeChips(archetype2, 'compare-archetype-list')}
+          </div>
         </div>
       </div>
     </div>
@@ -3428,58 +3503,68 @@ function playerTraitTags(stats, pool){
     .slice(0,3);
 }
 
-function topMinutesRows(team, teamKey, pool){
+function topMinutesEntries(team){
   return [...team.players]
     .map((player, idx) => ({ player, idx }))
     .sort((a,b)=>b.player.min-a.player.min || b.player.pts-a.player.pts)
-    .slice(0,5)
-    .map(({ player, idx }) => {
-      const stats = comparePlayerStats(team, player, teamKey);
-      const tags = stats.bart ? bartPlayerTraitTags(stats.bart) : playerTraitTags(stats, pool);
-      const archetype = playerArchetype(teamKey, team, player);
-      const pos = displayPos(stats.bart?.pos) || displayListedPosition(player);
-      const meta = [
-        pos && pos !== 'Player' ? pos : '',
-        `${fmt1(stats.mpg)} MPG`,
-        `${fmt1(stats.ppg)} PPG`,
-        `${fmt1(stats.rpg)} RPG`,
-        `${fmt1(stats.apg)} APG`,
-        `${stats.fgPct.toFixed(1)} FG%`,
-        `${stats.tpPct.toFixed(1)} 3P%`,
-      ].filter(Boolean).join(' · ');
-      return `<button type="button" class="rotation-row" data-compare-player-team="${teamKey}" data-compare-player-idx="${idx}">
-        <div class="rotation-main">
-          <div class="rotation-photo">
-            ${rotationPhotoHtml(teamKey, player)}
-          </div>
-          <div class="rotation-player">
-            <b>#${player.num} ${displayPlayerName(player.name)}</b>
-            <span>${meta}</span>
-          </div>
-        </div>
-        <div class="rotation-tags">
-          ${archetype ? `<span class="rotation-tag archetype-rotation-tag">${archetype.archetype} · ${archetypePct(archetype)}</span>` : ''}
-          ${tags.map(tag => `<span class="rotation-tag ${tag.pct < 35 ? 'weak' : ''}">
-            ${tag.label}: ${tag.fmt(tag.value)} · ${Math.round(tag.pct)}th
-          </span>`).join('')}
-        </div>
-      </button>`;
-    }).join('');
+    .slice(0,5);
+}
+
+function topMinutesPlayerCard(team, teamKey, pool, entry){
+  if(!entry) return '<div class="rotation-row rotation-row-empty" aria-hidden="true"></div>';
+  const { player, idx } = entry;
+  const stats = comparePlayerStats(team, player, teamKey);
+  const tags = stats.bart ? bartPlayerTraitTags(stats.bart) : playerTraitTags(stats, pool);
+  const archetype = playerArchetype(teamKey, team, player);
+  const pos = displayCompactPlayerRole(teamKey, team, player);
+  const meta = [
+    pos && pos !== 'Player' ? pos : '',
+    `${fmt1(stats.mpg)} MPG`,
+    `${fmt1(stats.ppg)} PPG`,
+    `${fmt1(stats.rpg)} RPG`,
+    `${fmt1(stats.apg)} APG`,
+    `${stats.fgPct.toFixed(1)} FG%`,
+    `${stats.tpPct.toFixed(1)} 3P%`,
+  ].filter(Boolean).join(' · ');
+  return `<button type="button" class="rotation-row" data-compare-player-team="${teamKey}" data-compare-player-idx="${idx}">
+    <div class="rotation-main">
+      <div class="rotation-photo">
+        ${rotationPhotoHtml(teamKey, player)}
+      </div>
+      <div class="rotation-player">
+        <b class="rotation-player-name">#${player.num} ${displayPlayerName(player.name)} ${archetypeChips(archetype, 'rotation-name-archetypes')}</b>
+        <span>${meta}</span>
+      </div>
+    </div>
+    <div class="rotation-tags">
+      ${tags.map(tag => `<span class="rotation-tag ${tag.pct < 35 ? 'weak' : ''}">
+        ${tag.label}: ${tag.fmt(tag.value)} · ${Math.round(tag.pct)}th
+      </span>`).join('')}
+    </div>
+  </button>`;
+}
+
+function topMinutesRows(t1, t2, pool){
+  const left = topMinutesEntries(t1);
+  const right = topMinutesEntries(t2);
+  return Array.from({ length: 5 }, (_, idx) => `
+    <div class="rotation-pair-row">
+      <div>${topMinutesPlayerCard(t1, state.t1, pool, left[idx])}</div>
+      <div>${topMinutesPlayerCard(t2, state.t2, pool, right[idx])}</div>
+    </div>
+  `).join('');
 }
 
 function topMinutesCard(t1, t2){
   const pool = comparePlayerPool();
   return `<div class="card">
-    <div class="card-title"><h3>Top five by minutes</h3><span class="hint">Bart-style national player percentiles when matched</span></div>
+    <div class="card-title"><h3>Top five by minutes</h3><span class="hint">Rows pair each team's rank by minutes</span></div>
     <div class="rotation-grid">
-      <div>
+      <div class="rotation-pair-head">
         <div class="rotation-team-title">${t1.name}</div>
-        ${topMinutesRows(t1, state.t1, pool)}
-      </div>
-      <div>
         <div class="rotation-team-title">${t2.name}</div>
-        ${topMinutesRows(t2, state.t2, pool)}
       </div>
+      ${topMinutesRows(t1, t2, pool)}
     </div>
   </div>`;
 }
