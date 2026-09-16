@@ -22,9 +22,7 @@ OUT_DIR = os.path.join(ROOT, "data")
 # own TEAMS entry.
 TEAM_META = {
     "UC San Diego":     {"key": "ucsd",    "name": "UC San Diego",     "short": "UCSD", "mascot": "Tritons"},
-    "UC Davis":         {"key": "ucdavis", "name": "UC Davis",         "short": "UCD",  "mascot": "Aggies"},
     "UC Irvine":        {"key": "ucirvine","name": "UC Irvine",        "short": "UCI",  "mascot": "Anteaters"},
-    "Hawaii":           {"key": "hawaii",  "name": "Hawai'i",          "short": "HAW",  "mascot": "Rainbow Wahine"},
     "Cal Poly":         {"key": "calpoly", "name": "Cal Poly",         "short": "CP",   "mascot": "Mustangs"},
     "CSU Bakersfield":  {"key": "csub",    "name": "Cal State Bakersfield", "short": "CSUB", "mascot": "Roadrunners"},
     "Cal St. Fullerton":{"key": "csuf",    "name": "Cal State Fullerton",   "short": "CSUF", "mascot": "Titans"},

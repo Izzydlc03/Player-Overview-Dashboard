@@ -1,0 +1,707 @@
+game_id,team,jersey,player,started,min,fg_m,fg_a,fg_pct,3p_m,3p_a,3p_pct,ft_m,ft_a,ft_pct,oreb,dreb,reb,pf,ast,to,blk,stl,pts
+2025-10-30_portland_st_warner_pacific,Warner Pacific,13,"Saunders, Alex",True,27,5,11,0.455,1,3,0.333,1,2,0.5,1,4,5,1,2,0,0,0,12
+2025-10-30_portland_st_warner_pacific,Warner Pacific,25,"Brooks, Kiki",True,20,3,5,0.6,0,0,,1,3,0.333,0,2,2,0,2,4,0,0,7
+2025-10-30_portland_st_warner_pacific,Warner Pacific,05,"Campbell, Ashland",True,18,2,6,0.333,0,0,,2,2,1.0,0,2,2,1,1,3,0,0,6
+2025-10-30_portland_st_warner_pacific,Warner Pacific,14,"Fortin, Emily",True,15,3,5,0.6,0,0,,0,0,,0,1,1,1,0,1,1,1,6
+2025-10-30_portland_st_warner_pacific,Warner Pacific,12,"Gonzales, Kailey",True,24,0,3,0.0,0,2,0.0,0,0,,0,4,4,1,0,1,0,0,0
+2025-10-30_portland_st_warner_pacific,Warner Pacific,32,"Mee, Alexa",False,22,6,13,0.462,0,2,0.0,0,0,,2,1,3,5,4,1,1,1,12
+2025-10-30_portland_st_warner_pacific,Warner Pacific,03,"Sales, Amalya",False,24,3,6,0.5,1,2,0.5,0,0,,0,2,2,1,1,0,0,0,7
+2025-10-30_portland_st_warner_pacific,Warner Pacific,10,"Tonkin, McKeeley",False,9,0,0,,0,0,,1,2,0.5,0,1,1,0,0,0,0,0,1
+2025-10-30_portland_st_warner_pacific,Warner Pacific,11,"Rhode, Paitlyn",False,14,0,1,0.0,0,0,,0,0,,0,2,2,3,0,1,0,0,0
+2025-10-30_portland_st_warner_pacific,Warner Pacific,20,"Groesbeck, SKylar",False,14,0,4,0.0,0,2,0.0,0,0,,1,4,5,1,1,3,0,0,0
+2025-10-30_portland_st_warner_pacific,Warner Pacific,23,"Barbee, Blake",False,9,0,2,0.0,0,1,0.0,0,0,,0,0,0,2,0,2,0,1,0
+2025-10-30_portland_st_warner_pacific,Warner Pacific,01,"Nagai, Emiko",False,4,0,1,0.0,0,1,0.0,0,0,,0,1,1,0,0,0,0,0,0
+2025-10-30_portland_st_warner_pacific,Warner Pacific,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,5,6,0,0,1,0,0,0
+2025-10-30_portland_st_warner_pacific,Portland St.,05,"Yoakum, Ajae",True,24,11,16,0.688,0,1,0.0,4,5,0.8,2,3,5,0,0,0,0,0,26
+2025-10-30_portland_st_warner_pacific,Portland St.,13,"Encinas, Alani",True,32,7,14,0.5,3,10,0.3,0,0,,0,3,3,1,2,3,0,2,17
+2025-10-30_portland_st_warner_pacific,Portland St.,12,"Brown, Kyleigh",True,27,5,10,0.5,2,3,0.667,2,2,1.0,0,4,4,3,2,0,0,2,14
+2025-10-30_portland_st_warner_pacific,Portland St.,11,"Torres-Kahapea, Laynee",True,33,3,7,0.429,0,3,0.0,2,3,0.667,0,9,9,0,8,2,1,1,8
+2025-10-30_portland_st_warner_pacific,Portland St.,10,"Munk, Kirstine",True,24,1,4,0.25,0,0,,0,0,,1,4,5,2,2,0,0,2,2
+2025-10-30_portland_st_warner_pacific,Portland St.,04,"Buzzard, Sophie",False,27,5,9,0.556,2,3,0.667,2,2,1.0,1,0,1,0,2,0,1,1,14
+2025-10-30_portland_st_warner_pacific,Portland St.,09,"Chicken, Hannah",False,16,2,4,0.5,0,0,,3,3,1.0,0,5,5,3,2,1,0,1,7
+2025-10-30_portland_st_warner_pacific,Portland St.,03,"Strandy, Brooklyn",False,9,0,0,,0,0,,0,0,,0,3,3,0,0,0,1,2,0
+2025-10-30_portland_st_warner_pacific,Portland St.,20,"Best, Katelyn",False,8,0,3,0.0,0,0,,0,0,,1,0,1,3,0,0,0,1,0
+2025-10-30_portland_st_warner_pacific,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,1,2,0,0,0,0,0,0
+2025-11-04_hawaii_portland_st,Portland St.,11,"Torres-Kahapea, Laynee",True,37,6,8,0.75,2,3,0.667,8,10,0.8,1,5,6,3,0,2,0,0,22
+2025-11-04_hawaii_portland_st,Portland St.,12,"Brown, Kyleigh",True,27,4,9,0.444,1,2,0.5,3,3,1.0,1,4,5,5,2,4,2,1,12
+2025-11-04_hawaii_portland_st,Portland St.,05,"Yoakum, Ajae",True,33,1,7,0.143,0,2,0.0,1,2,0.5,3,2,5,3,1,4,0,0,3
+2025-11-04_hawaii_portland_st,Portland St.,10,"Munk, Kirstine",True,26,0,5,0.0,0,2,0.0,2,2,1.0,0,2,2,2,1,1,0,1,2
+2025-11-04_hawaii_portland_st,Portland St.,13,"Encinas, Alani",True,12,0,4,0.0,0,3,0.0,0,0,,1,1,2,1,0,1,0,0,0
+2025-11-04_hawaii_portland_st,Portland St.,04,"Buzzard, Sophie",False,31,7,10,0.7,0,1,0.0,6,11,0.545,2,3,5,4,1,1,0,0,20
+2025-11-04_hawaii_portland_st,Portland St.,09,"Chicken, Hannah",False,20,2,10,0.2,0,2,0.0,0,0,,1,3,4,2,0,1,0,1,4
+2025-11-04_hawaii_portland_st,Portland St.,23,"Moffat, Taylor",False,13,0,2,0.0,0,1,0.0,0,0,,0,2,2,2,3,2,0,1,0
+2025-11-04_hawaii_portland_st,Portland St.,20,"Best, Katelyn",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2025-11-04_hawaii_portland_st,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,5,2,7,0,0,0,0,0,0
+2025-11-04_hawaii_portland_st,Hawaii,03,"Flavell, Bailey",True,27,4,14,0.286,0,3,0.0,6,9,0.667,0,2,2,3,0,1,1,0,14
+2025-11-04_hawaii_portland_st,Hawaii,33,"Neverson, Saniyah",True,31,3,8,0.375,1,1,1.0,4,4,1.0,3,3,6,2,0,1,0,3,11
+2025-11-04_hawaii_portland_st,Hawaii,02,"Bond, Teyahna",True,28,4,9,0.444,0,3,0.0,3,6,0.5,1,2,3,2,5,4,0,1,11
+2025-11-04_hawaii_portland_st,Hawaii,08,"Moors, Rebecca",True,19,2,4,0.5,0,0,,1,1,1.0,1,5,6,2,2,0,0,0,5
+2025-11-04_hawaii_portland_st,Hawaii,12,"Perez, Imani",True,4,0,1,0.0,0,1,0.0,1,2,0.5,0,1,1,0,0,0,1,0,1
+2025-11-04_hawaii_portland_st,Hawaii,10,"Kujovic, Danijela",False,32,4,6,0.667,2,4,0.5,1,2,0.5,3,2,5,3,2,1,3,2,11
+2025-11-04_hawaii_portland_st,Hawaii,06,"Webb, Kyra",False,22,4,8,0.5,0,0,,2,5,0.4,4,3,7,4,1,0,0,1,10
+2025-11-04_hawaii_portland_st,Hawaii,01,"Filemu, Kira-May",False,16,4,7,0.571,1,2,0.5,0,0,,1,1,2,3,0,2,0,1,9
+2025-11-04_hawaii_portland_st,Hawaii,11,"Curtis, Keiara",False,14,1,5,0.2,0,0,,0,0,,1,0,1,3,0,1,0,1,2
+2025-11-04_hawaii_portland_st,Hawaii,17,"Serra, Fiamma",False,6,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,1,0
+2025-11-04_hawaii_portland_st,Hawaii,07,"Collins, Ella",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2025-11-04_hawaii_portland_st,Hawaii,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,4,4,0,0,0,0,0,0
+2025-11-11_portland_st_willamette,Willamette,11,"Imai, Kaitlin",True,20,7,13,0.538,2,5,0.4,0,0,,0,2,2,2,3,2,0,2,16
+2025-11-11_portland_st_willamette,Willamette,12,"Walden, Riley",True,28,5,13,0.385,3,7,0.429,0,0,,1,5,6,2,1,3,0,1,13
+2025-11-11_portland_st_willamette,Willamette,10,"Gardner, Peyton",True,21,1,4,0.25,1,2,0.5,0,0,,2,1,3,4,2,0,0,0,3
+2025-11-11_portland_st_willamette,Willamette,14,"Boling-Schmidt, Daisy",True,19,0,5,0.0,0,1,0.0,1,2,0.5,2,1,3,2,0,3,0,2,1
+2025-11-11_portland_st_willamette,Willamette,30,"Floyd, Emma",True,18,0,1,0.0,0,1,0.0,0,0,,1,2,3,0,0,4,0,1,0
+2025-11-11_portland_st_willamette,Willamette,20,"Williams, Aasia",False,13,2,3,0.667,1,2,0.5,0,0,,0,0,0,3,2,0,0,0,5
+2025-11-11_portland_st_willamette,Willamette,33,"Mata, Leia",False,11,1,4,0.25,1,3,0.333,0,0,,0,0,0,0,0,0,0,0,3
+2025-11-11_portland_st_willamette,Willamette,24,"Thompson, Mattie",False,9,1,2,0.5,0,0,,1,4,0.25,1,2,3,0,0,0,0,0,3
+2025-11-11_portland_st_willamette,Willamette,22,"Hiler, Addie",False,6,1,4,0.25,1,2,0.5,0,0,,0,0,0,1,0,0,0,0,3
+2025-11-11_portland_st_willamette,Willamette,23,"Reed, Jordyn",False,6,0,0,,0,0,,3,4,0.75,0,0,0,0,2,1,1,0,3
+2025-11-11_portland_st_willamette,Willamette,01,"Wilson, Gabby",False,26,1,5,0.2,0,4,0.0,0,0,,0,1,1,0,1,0,0,0,2
+2025-11-11_portland_st_willamette,Willamette,04,"Dockter, Alexis",False,9,0,1,0.0,0,0,,0,0,,0,1,1,0,0,0,0,1,0
+2025-11-11_portland_st_willamette,Willamette,05,"Shoemaker, Syd",False,6,0,0,,0,0,,0,0,,0,1,1,1,0,0,0,0,0
+2025-11-11_portland_st_willamette,Willamette,02,"Lutu, Jaydin",False,5,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,1,0
+2025-11-11_portland_st_willamette,Willamette,03,"Ripplinger, Karsyn",False,3,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-11_portland_st_willamette,Willamette,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,1,3,0,0,2,0,0,0
+2025-11-11_portland_st_willamette,Portland St.,12,"Brown, Kyleigh",True,28,9,20,0.45,4,8,0.5,2,2,1.0,2,5,7,1,4,3,0,2,24
+2025-11-11_portland_st_willamette,Portland St.,05,"Yoakum, Ajae",True,26,9,12,0.75,0,0,,2,2,1.0,1,5,6,1,2,0,3,1,20
+2025-11-11_portland_st_willamette,Portland St.,11,"Torres-Kahapea, Laynee",True,29,2,6,0.333,0,1,0.0,0,0,,2,5,7,2,2,1,0,1,4
+2025-11-11_portland_st_willamette,Portland St.,13,"Encinas, Alani",True,9,1,1,1.0,0,0,,0,0,,0,0,0,0,1,0,0,1,2
+2025-11-11_portland_st_willamette,Portland St.,10,"Munk, Kirstine",True,15,0,2,0.0,0,0,,0,0,,2,0,2,0,0,0,0,0,0
+2025-11-11_portland_st_willamette,Portland St.,20,"Best, Katelyn",False,13,5,6,0.833,0,0,,0,0,,0,3,3,1,1,0,0,1,10
+2025-11-11_portland_st_willamette,Portland St.,04,"Buzzard, Sophie",False,23,3,6,0.5,1,4,0.25,2,2,1.0,0,1,1,4,0,1,0,0,9
+2025-11-11_portland_st_willamette,Portland St.,23,"Moffat, Taylor",False,12,3,4,0.75,0,0,,2,3,0.667,0,2,2,2,3,0,0,1,8
+2025-11-11_portland_st_willamette,Portland St.,08,"Ellington, Cici",False,19,3,5,0.6,0,1,0.0,0,0,,1,1,2,0,3,3,1,1,6
+2025-11-11_portland_st_willamette,Portland St.,09,"Chicken, Hannah",False,19,3,5,0.6,0,1,0.0,0,0,,3,5,8,1,4,1,0,0,6
+2025-11-11_portland_st_willamette,Portland St.,03,"Strandy, Brooklyn",False,7,0,1,0.0,0,0,,0,0,,1,1,2,1,0,0,0,0,0
+2025-11-11_portland_st_willamette,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,1,2,0,0,0,0,0,0
+2025-11-16_colorado_portland_st,Portland St.,12,"Brown, Kyleigh",True,31,6,14,0.429,4,7,0.571,0,0,,0,2,2,1,0,4,0,0,16
+2025-11-16_colorado_portland_st,Portland St.,11,"Torres-Kahapea, Laynee",True,31,3,7,0.429,1,3,0.333,0,0,,0,6,6,1,1,5,0,1,7
+2025-11-16_colorado_portland_st,Portland St.,05,"Yoakum, Ajae",True,36,1,4,0.25,0,0,,2,4,0.5,0,5,5,2,3,4,0,0,4
+2025-11-16_colorado_portland_st,Portland St.,08,"Ellington, Cici",True,22,1,4,0.25,0,1,0.0,0,0,,0,2,2,1,0,4,3,3,2
+2025-11-16_colorado_portland_st,Portland St.,10,"Munk, Kirstine",True,17,0,2,0.0,0,0,,0,0,,2,1,3,5,0,2,0,1,0
+2025-11-16_colorado_portland_st,Portland St.,09,"Chicken, Hannah",False,23,5,6,0.833,1,1,1.0,0,0,,2,2,4,2,1,4,0,1,11
+2025-11-16_colorado_portland_st,Portland St.,04,"Buzzard, Sophie",False,19,0,4,0.0,0,2,0.0,5,6,0.833,0,0,0,3,0,1,0,0,5
+2025-11-16_colorado_portland_st,Portland St.,23,"Moffat, Taylor",False,16,0,3,0.0,0,2,0.0,0,0,,0,1,1,2,2,0,0,0,0
+2025-11-16_colorado_portland_st,Portland St.,20,"Best, Katelyn",False,3,0,0,,0,0,,0,2,0.0,1,0,1,1,0,3,0,1,0
+2025-11-16_colorado_portland_st,Portland St.,13,"Encinas, Alani",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-16_colorado_portland_st,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-16_colorado_portland_st,Colorado,11,"Greer, Logyn",True,20,8,12,0.667,2,3,0.667,1,2,0.5,3,3,6,4,0,3,1,1,19
+2025-11-16_colorado_portland_st,Colorado,03,"Wooten, Desiree",True,23,3,8,0.375,2,5,0.4,0,0,,1,0,1,0,1,1,0,2,8
+2025-11-16_colorado_portland_st,Colorado,15,"Dutat, Anaëlle",True,24,2,7,0.286,0,4,0.0,2,4,0.5,5,5,10,2,2,1,0,2,6
+2025-11-16_colorado_portland_st,Colorado,14,"Masogayo, Jade",True,18,2,5,0.4,0,0,,0,0,,1,3,4,1,1,3,1,2,4
+2025-11-16_colorado_portland_st,Colorado,02,"Sanders, Kennedy",True,4,1,1,1.0,0,0,,0,0,,0,0,0,0,0,0,0,1,2
+2025-11-16_colorado_portland_st,Colorado,00,"Gooden, Erianna",False,22,3,5,0.6,0,2,0.0,2,3,0.667,0,0,0,0,1,2,0,2,8
+2025-11-16_colorado_portland_st,Colorado,01,"Walker, Zyanna",False,20,3,8,0.375,0,2,0.0,2,2,1.0,1,3,4,0,6,1,0,5,8
+2025-11-16_colorado_portland_st,Colorado,07,"O'Connor, Claire",False,17,3,7,0.429,2,4,0.5,0,0,,0,1,1,2,0,3,0,2,8
+2025-11-16_colorado_portland_st,Colorado,08,"Crook, Jade",False,18,3,6,0.5,0,1,0.0,1,2,0.5,1,2,3,1,2,1,1,1,7
+2025-11-16_colorado_portland_st,Colorado,13,"McErlane, Maeve",False,18,1,1,1.0,1,1,1.0,2,2,1.0,1,4,5,1,0,0,0,0,5
+2025-11-16_colorado_portland_st,Colorado,22,"Zadel, Sophia",False,16,1,7,0.143,0,0,,0,2,0.0,1,2,3,0,0,2,1,0,2
+2025-11-16_colorado_portland_st,Colorado,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,0,2,0,0,0,0,0,0
+2025-11-18_air_force_portland_st,Portland St.,10,"Munk, Kirstine",True,20,3,5,0.6,0,1,0.0,5,5,1.0,3,3,6,1,2,2,0,2,11
+2025-11-18_air_force_portland_st,Portland St.,12,"Brown, Kyleigh",True,30,4,10,0.4,0,1,0.0,2,2,1.0,1,0,1,0,0,4,0,0,10
+2025-11-18_air_force_portland_st,Portland St.,05,"Yoakum, Ajae",True,26,4,6,0.667,0,0,,0,1,0.0,1,1,2,2,1,3,0,1,8
+2025-11-18_air_force_portland_st,Portland St.,11,"Torres-Kahapea, Laynee",True,31,1,3,0.333,0,0,,5,6,0.833,0,4,4,2,0,4,0,1,7
+2025-11-18_air_force_portland_st,Portland St.,25,"Ellington, Cici",True,18,1,6,0.167,0,2,0.0,2,4,0.5,1,4,5,1,1,4,0,0,4
+2025-11-18_air_force_portland_st,Portland St.,09,"Chicken, Hannah",False,29,5,8,0.625,1,1,1.0,0,0,,1,7,8,0,2,0,1,1,11
+2025-11-18_air_force_portland_st,Portland St.,04,"Buzzard, Sophie",False,26,1,4,0.25,0,1,0.0,0,0,,0,0,0,2,0,2,0,1,2
+2025-11-18_air_force_portland_st,Portland St.,23,"Moffat, Taylor",False,10,0,1,0.0,0,0,,2,2,1.0,0,0,0,3,0,0,0,1,2
+2025-11-18_air_force_portland_st,Portland St.,13,"Encinas, Alani",False,5,0,1,0.0,0,1,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-18_air_force_portland_st,Portland St.,20,"Best, Katelyn",False,5,0,0,,0,0,,0,0,,0,1,1,0,1,0,0,1,0
+2025-11-18_air_force_portland_st,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,2,6,0,0,1,0,0,0
+2025-11-18_air_force_portland_st,Air Force,02,"Perry, Milahnie",True,29,9,21,0.429,1,2,0.5,1,2,0.5,1,3,4,1,4,2,1,1,20
+2025-11-18_air_force_portland_st,Air Force,10,"McNabb, Jayda",True,31,4,7,0.571,1,1,1.0,0,0,,4,2,6,1,1,1,3,2,9
+2025-11-18_air_force_portland_st,Air Force,31,"Adams, Emily",True,26,3,6,0.5,0,0,,0,0,,5,0,5,1,1,2,0,1,6
+2025-11-18_air_force_portland_st,Air Force,01,"Cortez, Alexis",True,30,0,5,0.0,0,1,0.0,2,2,1.0,0,2,2,4,2,1,0,2,2
+2025-11-18_air_force_portland_st,Air Force,13,"O'Hollaren, Keelie",True,19,1,5,0.2,0,3,0.0,0,0,,1,4,5,2,1,0,0,0,2
+2025-11-18_air_force_portland_st,Air Force,14,"Clay, Bhret",False,26,4,8,0.5,3,5,0.6,0,0,,3,3,6,3,0,1,0,3,11
+2025-11-18_air_force_portland_st,Air Force,00,"DeVaughn, Jordyn",False,23,3,7,0.429,2,4,0.5,2,2,1.0,0,0,0,4,2,2,0,1,10
+2025-11-18_air_force_portland_st,Air Force,24,"Hargrave, Marissa",False,14,2,5,0.4,1,4,0.25,0,0,,0,1,1,0,0,2,0,0,5
+2025-11-18_air_force_portland_st,Air Force,09,"Jensen, Madelyn",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-18_air_force_portland_st,Air Force,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,0,2,0,0,0,0,0,0
+2025-11-22_utah_tech_portland_st,Portland St.,12,"Brown, Kyleigh",True,35,11,22,0.5,1,2,0.5,3,5,0.6,2,4,6,3,0,4,0,2,26
+2025-11-22_utah_tech_portland_st,Portland St.,08,"Ellington, Cici",True,20,3,4,0.75,1,1,1.0,3,6,0.5,0,4,4,4,0,1,0,2,10
+2025-11-22_utah_tech_portland_st,Portland St.,11,"Torres-Kahapea, Laynee",True,36,0,9,0.0,0,4,0.0,6,6,1.0,0,9,9,2,3,2,0,2,6
+2025-11-22_utah_tech_portland_st,Portland St.,05,"Yoakum, Ajae",True,29,1,11,0.091,0,0,,0,0,,3,4,7,2,2,4,0,1,2
+2025-11-22_utah_tech_portland_st,Portland St.,10,"Munk, Kirstine",True,20,0,1,0.0,0,0,,1,2,0.5,0,2,2,3,0,2,0,0,1
+2025-11-22_utah_tech_portland_st,Portland St.,09,"Chicken, Hannah",False,28,8,13,0.615,0,0,,2,3,0.667,1,3,4,3,0,4,1,2,18
+2025-11-22_utah_tech_portland_st,Portland St.,04,"Buzzard, Sophie",False,21,0,0,,0,0,,0,0,,0,1,1,2,0,1,0,0,0
+2025-11-22_utah_tech_portland_st,Portland St.,23,"Moffat, Taylor",False,6,0,0,,0,0,,0,0,,0,1,1,0,2,0,0,0,0
+2025-11-22_utah_tech_portland_st,Portland St.,22,"Jaekel, Ryme",False,3,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2025-11-22_utah_tech_portland_st,Portland St.,20,"Best, Katelyn",False,2,0,0,,0,0,,0,0,,0,2,2,0,0,0,0,0,0
+2025-11-22_utah_tech_portland_st,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,0,1,0,0,0,0,0,0
+2025-11-22_utah_tech_portland_st,Utah Tech,21,"Borden, Kaylee",True,36,9,16,0.562,2,5,0.4,5,7,0.714,1,4,5,2,3,4,0,0,25
+2025-11-22_utah_tech_portland_st,Utah Tech,04,"Crittendon, Brie",True,28,5,11,0.455,2,7,0.286,1,2,0.5,1,3,4,3,2,2,1,2,13
+2025-11-22_utah_tech_portland_st,Utah Tech,11,"Cofer, Paige",True,30,5,7,0.714,0,2,0.0,0,0,,2,9,11,3,0,1,2,0,10
+2025-11-22_utah_tech_portland_st,Utah Tech,01,"Warren, Maddie",True,21,3,7,0.429,1,3,0.333,2,2,1.0,1,2,3,5,1,3,0,4,9
+2025-11-22_utah_tech_portland_st,Utah Tech,05,"Hartley, Chardonnay",True,35,3,12,0.25,1,3,0.333,0,0,,0,2,2,1,4,1,0,3,7
+2025-11-22_utah_tech_portland_st,Utah Tech,03,"Dallas, Calyn",False,22,2,7,0.286,2,7,0.286,0,0,,0,4,4,0,0,2,0,0,6
+2025-11-22_utah_tech_portland_st,Utah Tech,25,"Shimada, Annalyse",False,6,0,0,,0,0,,1,2,0.5,2,0,2,0,0,0,0,0,1
+2025-11-22_utah_tech_portland_st,Utah Tech,24,"Crocker, Lauren",False,8,0,2,0.0,0,1,0.0,0,0,,0,3,3,2,0,1,1,0,0
+2025-11-22_utah_tech_portland_st,Utah Tech,10,"Colic, Andjela",False,7,0,1,0.0,0,0,,0,0,,0,0,0,3,1,2,0,1,0
+2025-11-22_utah_tech_portland_st,Utah Tech,20,"Mili, Merceius",False,7,0,0,,0,0,,0,0,,0,2,2,0,1,0,0,0,0
+2025-11-22_utah_tech_portland_st,Utah Tech,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,2,2,0,0,1,0,0,0
+2025-11-28_portland_st_san_jose_st,San Jose St.,04,"Waugh, Rylei",True,33,7,12,0.583,0,0,,4,6,0.667,3,5,8,2,3,2,0,4,18
+2025-11-28_portland_st_san_jose_st,San Jose St.,01,"Cummins, Allie",True,32,3,13,0.231,2,8,0.25,1,2,0.5,0,0,0,1,2,0,0,0,9
+2025-11-28_portland_st_san_jose_st,San Jose St.,15,"Anderson, Maya",True,29,3,11,0.273,1,5,0.2,2,2,1.0,4,3,7,0,0,4,0,1,9
+2025-11-28_portland_st_san_jose_st,San Jose St.,32,"Pato, Gabriela",True,20,4,8,0.5,0,0,,1,4,0.25,1,2,3,4,1,2,3,0,9
+2025-11-28_portland_st_san_jose_st,San Jose St.,11,"Fuster, Carla",True,16,2,3,0.667,2,3,0.667,0,0,,0,0,0,3,1,1,0,1,6
+2025-11-28_portland_st_san_jose_st,San Jose St.,08,"Brown, Amira",False,17,2,6,0.333,0,2,0.0,0,0,,2,6,8,1,1,2,0,0,4
+2025-11-28_portland_st_san_jose_st,San Jose St.,02,"Simons, McKenna",False,19,1,4,0.25,0,1,0.0,1,2,0.5,1,1,2,2,0,2,0,2,3
+2025-11-28_portland_st_san_jose_st,San Jose St.,05,"Mehmedovic, Harisa",False,14,1,3,0.333,0,0,,0,0,,0,4,4,4,1,3,2,1,2
+2025-11-28_portland_st_san_jose_st,San Jose St.,00,"Anderson, Katarina",False,8,1,2,0.5,0,1,0.0,0,0,,0,0,0,0,2,2,0,1,2
+2025-11-28_portland_st_san_jose_st,San Jose St.,22,"Dillard, Kaliyah",False,6,1,1,1.0,0,0,,0,0,,1,0,1,0,0,0,1,0,2
+2025-11-28_portland_st_san_jose_st,San Jose St.,23,"Sgro, Stella",False,4,0,0,,0,0,,0,0,,0,0,0,0,1,1,0,0,0
+2025-11-28_portland_st_san_jose_st,San Jose St.,03,"Alexander, Mecca",False,2,0,0,,0,0,,0,0,,0,0,0,2,0,1,0,0,0
+2025-11-28_portland_st_san_jose_st,San Jose St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,4,5,0,0,0,0,0,0
+2025-11-28_portland_st_san_jose_st,Portland St.,12,"Brown, Kyleigh",True,37,10,20,0.5,2,6,0.333,0,0,,1,6,7,3,2,1,1,1,22
+2025-11-28_portland_st_san_jose_st,Portland St.,08,"Ellington, Cici",True,30,5,11,0.455,1,3,0.333,3,4,0.75,2,3,5,1,4,2,2,1,14
+2025-11-28_portland_st_san_jose_st,Portland St.,10,"Munk, Kirstine",True,19,1,2,0.5,0,0,,4,5,0.8,1,1,2,1,1,1,0,1,6
+2025-11-28_portland_st_san_jose_st,Portland St.,15,"Yoakum, Ajae",True,22,2,7,0.286,0,0,,1,2,0.5,0,4,4,3,3,4,0,0,5
+2025-11-28_portland_st_san_jose_st,Portland St.,11,"Torres-Kahapea, Laynee",True,32,0,5,0.0,0,3,0.0,2,2,1.0,1,5,6,3,7,4,0,1,2
+2025-11-28_portland_st_san_jose_st,Portland St.,09,"Chicken, Hannah",False,27,6,11,0.545,0,1,0.0,3,4,0.75,3,5,8,4,1,4,1,4,15
+2025-11-28_portland_st_san_jose_st,Portland St.,04,"Buzzard, Sophie",False,18,2,5,0.4,2,4,0.5,2,2,1.0,0,0,0,2,0,0,0,1,8
+2025-11-28_portland_st_san_jose_st,Portland St.,23,"Moffat, Taylor",False,8,1,3,0.333,1,3,0.333,0,0,,0,1,1,0,2,0,1,0,3
+2025-11-28_portland_st_san_jose_st,Portland St.,20,"Best, Katelyn",False,5,0,2,0.0,0,0,,0,0,,1,0,1,0,0,0,0,1,0
+2025-11-28_portland_st_san_jose_st,Portland St.,03,"Strandy, Brooklyn",False,2,0,0,,0,0,,0,0,,1,0,1,1,0,0,0,0,0
+2025-11-28_portland_st_san_jose_st,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,6,3,9,0,0,0,0,0,0
+2025-11-30_portland_st_uc_san_diego,UC San Diego,15,"Ma, Sabrina",True,26,7,13,0.538,6,9,0.667,1,1,1.0,2,2,4,3,1,0,1,0,21
+2025-11-30_portland_st_uc_san_diego,UC San Diego,12,"Smith, Rosa",True,34,7,15,0.467,2,5,0.4,1,1,1.0,0,5,5,2,4,0,0,0,17
+2025-11-30_portland_st_uc_san_diego,UC San Diego,11,"Condron, Erin",True,25,7,13,0.538,0,0,,3,3,1.0,2,7,9,2,1,1,1,0,17
+2025-11-30_portland_st_uc_san_diego,UC San Diego,04,"Rose, Makayla",True,27,3,8,0.375,0,2,0.0,0,0,,1,2,3,3,3,1,0,3,6
+2025-11-30_portland_st_uc_san_diego,UC San Diego,10,"Maxie, Dymonique",True,29,2,5,0.4,1,1,1.0,0,0,,0,3,3,3,11,3,0,3,5
+2025-11-30_portland_st_uc_san_diego,UC San Diego,24,"Price, Niya",False,8,3,6,0.5,1,3,0.333,2,2,1.0,0,3,3,3,1,1,0,1,9
+2025-11-30_portland_st_uc_san_diego,UC San Diego,21,"Polocheck, Nicki",False,16,2,5,0.4,1,3,0.333,2,2,1.0,2,2,4,3,0,0,0,0,7
+2025-11-30_portland_st_uc_san_diego,UC San Diego,30,"Sule, Damilola",False,6,2,2,1.0,0,0,,1,2,0.5,1,3,4,3,0,0,0,0,5
+2025-11-30_portland_st_uc_san_diego,UC San Diego,03,"Jones, Tatum",False,9,2,2,1.0,0,0,,0,0,,0,1,1,1,1,0,1,0,4
+2025-11-30_portland_st_uc_san_diego,UC San Diego,25,"Mahan, Junae",False,14,1,3,0.333,0,1,0.0,1,2,0.5,0,1,1,2,2,2,0,0,3
+2025-11-30_portland_st_uc_san_diego,UC San Diego,02,"Fairwell, Michaela",False,6,0,0,,0,0,,0,0,,0,1,1,2,0,0,0,0,0
+2025-11-30_portland_st_uc_san_diego,UC San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,3,4,0,0,0,0,0,0
+2025-11-30_portland_st_uc_san_diego,Portland St.,08,"Ellington, Cici",True,28,7,15,0.467,1,3,0.333,5,9,0.556,2,4,6,2,0,0,0,1,20
+2025-11-30_portland_st_uc_san_diego,Portland St.,12,"Brown, Kyleigh",True,30,2,6,0.333,0,0,,11,12,0.917,0,9,9,0,2,2,0,2,15
+2025-11-30_portland_st_uc_san_diego,Portland St.,11,"Torres-Kahapea, Laynee",True,26,3,7,0.429,3,6,0.5,2,2,1.0,0,2,2,1,2,2,0,0,11
+2025-11-30_portland_st_uc_san_diego,Portland St.,09,"Chicken, Hannah",True,28,1,8,0.125,0,2,0.0,4,4,1.0,4,3,7,0,4,1,0,1,6
+2025-11-30_portland_st_uc_san_diego,Portland St.,10,"Munk, Kirstine",True,26,1,3,0.333,0,0,,1,3,0.333,0,1,1,3,1,2,1,0,3
+2025-11-30_portland_st_uc_san_diego,Portland St.,23,"Moffat, Taylor",False,14,1,4,0.25,0,3,0.0,3,4,0.75,1,2,3,2,0,2,0,0,5
+2025-11-30_portland_st_uc_san_diego,Portland St.,04,"Buzzard, Sophie",False,16,1,6,0.167,0,2,0.0,0,0,,1,1,2,0,0,2,0,0,2
+2025-11-30_portland_st_uc_san_diego,Portland St.,13,"Encinas, Alani",False,9,0,3,0.0,0,1,0.0,1,3,0.333,0,1,1,0,0,1,0,0,1
+2025-11-30_portland_st_uc_san_diego,Portland St.,03,"Strandy, Brooklyn",False,8,0,0,,0,0,,1,2,0.5,1,0,1,2,0,0,0,0,1
+2025-11-30_portland_st_uc_san_diego,Portland St.,20,"Best, Katelyn",False,15,0,3,0.0,0,1,0.0,0,0,,1,2,3,3,0,1,0,0,0
+2025-11-30_portland_st_uc_san_diego,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,4,7,0,0,1,0,0,0
+2025-12-03_portland_st_south_dakota,South Dakota,05,"Robles, Angelina",True,33,8,13,0.615,2,4,0.5,5,8,0.625,1,4,5,1,2,0,0,1,23
+2025-12-03_portland_st_south_dakota,South Dakota,11,"Williams, Patience",True,22,6,10,0.6,0,0,,2,4,0.5,2,7,9,3,0,2,2,1,14
+2025-12-03_portland_st_south_dakota,South Dakota,24,"Turrubiates, Elise",True,28,5,9,0.556,1,1,1.0,0,0,,3,6,9,2,2,0,2,0,11
+2025-12-03_portland_st_south_dakota,South Dakota,33,"Schlagel, Tori",True,11,1,1,1.0,1,1,1.0,2,2,1.0,0,3,3,4,1,1,1,0,5
+2025-12-03_portland_st_south_dakota,South Dakota,02,"Hopp, Jenna",True,15,0,2,0.0,0,1,0.0,4,4,1.0,0,0,0,1,2,3,0,0,4
+2025-12-03_portland_st_south_dakota,South Dakota,12,"Flattery, Alex",False,21,4,9,0.444,3,3,1.0,0,0,,3,3,6,2,2,2,0,2,11
+2025-12-03_portland_st_south_dakota,South Dakota,01,"Joyce, Molly",False,23,1,6,0.167,0,1,0.0,0,0,,0,2,2,3,1,2,1,0,2
+2025-12-03_portland_st_south_dakota,South Dakota,14,"Hill, Josie",False,18,1,4,0.25,0,1,0.0,0,0,,1,2,3,0,2,1,0,0,2
+2025-12-03_portland_st_south_dakota,South Dakota,00,"Kieffer, Olivia",False,8,1,4,0.25,0,3,0.0,0,0,,2,2,4,0,1,0,0,0,2
+2025-12-03_portland_st_south_dakota,South Dakota,20,"Reyerson, Katy",False,10,0,0,,0,0,,1,2,0.5,0,2,2,0,0,0,0,0,1
+2025-12-03_portland_st_south_dakota,South Dakota,10,"Bartlett, Alyssa",False,4,0,1,0.0,0,1,0.0,0,0,,0,0,0,0,1,0,0,0,0
+2025-12-03_portland_st_south_dakota,South Dakota,25,"Moore, Olivia",False,3,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2025-12-03_portland_st_south_dakota,South Dakota,03,"Mason, Coral",False,2,0,0,,0,0,,0,0,,0,1,1,1,0,0,0,0,0
+2025-12-03_portland_st_south_dakota,South Dakota,23,"Peterson, Grace",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,1,0,0
+2025-12-03_portland_st_south_dakota,South Dakota,TM,TEAM,False,0,0,0,,0,0,,0,0,,5,5,10,0,0,2,0,0,0
+2025-12-03_portland_st_south_dakota,Portland St.,12,"Brown, Kyleigh",True,37,6,18,0.333,2,4,0.5,14,14,1.0,1,4,5,2,2,1,0,0,28
+2025-12-03_portland_st_south_dakota,Portland St.,11,"Torres-Kahapea, Laynee",True,32,3,9,0.333,1,3,0.333,0,1,0.0,2,2,4,2,1,1,0,1,7
+2025-12-03_portland_st_south_dakota,Portland St.,08,"Ellington, Cici",True,24,2,10,0.2,2,4,0.5,0,0,,2,3,5,2,1,1,1,0,6
+2025-12-03_portland_st_south_dakota,Portland St.,23,"Moffat, Taylor",True,23,2,7,0.286,2,4,0.5,0,2,0.0,1,2,3,3,0,0,1,0,6
+2025-12-03_portland_st_south_dakota,Portland St.,10,"Munk, Kirstine",True,27,0,6,0.0,0,2,0.0,0,0,,1,2,3,2,1,2,1,1,0
+2025-12-03_portland_st_south_dakota,Portland St.,09,"Chicken, Hannah",False,29,0,6,0.0,0,1,0.0,4,4,1.0,2,3,5,2,0,1,0,1,4
+2025-12-03_portland_st_south_dakota,Portland St.,04,"Buzzard, Sophie",False,22,0,3,0.0,0,2,0.0,0,0,,1,0,1,5,0,1,0,0,0
+2025-12-03_portland_st_south_dakota,Portland St.,03,"Strandy, Brooklyn",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-03_portland_st_south_dakota,Portland St.,13,"Encinas, Alani",False,2,0,0,,0,0,,0,0,,0,1,1,1,1,0,0,0,0
+2025-12-03_portland_st_south_dakota,Portland St.,20,"Best, Katelyn",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-03_portland_st_south_dakota,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,1,2,0,0,1,0,0,0
+2025-12-06_kansas_city_portland_st,Portland St.,12,"Brown, Kyleigh",True,42,8,21,0.381,1,4,0.25,12,13,0.923,2,4,6,2,2,5,0,1,29
+2025-12-06_kansas_city_portland_st,Portland St.,11,"Torres-Kahapea, Laynee",True,36,2,4,0.5,2,2,1.0,5,10,0.5,0,4,4,4,2,6,2,1,11
+2025-12-06_kansas_city_portland_st,Portland St.,25,"Ellington, Cici",True,23,4,9,0.444,0,2,0.0,0,0,,2,2,4,3,2,0,0,1,8
+2025-12-06_kansas_city_portland_st,Portland St.,23,"Moffat, Taylor",True,14,1,1,1.0,1,1,1.0,0,0,,0,1,1,1,2,1,0,0,3
+2025-12-06_kansas_city_portland_st,Portland St.,10,"Munk, Kirstine",True,11,1,3,0.333,0,0,,0,0,,2,1,3,3,0,3,0,0,2
+2025-12-06_kansas_city_portland_st,Portland St.,05,"Yoakum, Ajae",False,37,3,12,0.25,0,3,0.0,5,7,0.714,5,9,14,3,0,3,2,1,11
+2025-12-06_kansas_city_portland_st,Portland St.,09,"Chicken, Hannah",False,32,4,6,0.667,0,0,,3,3,1.0,4,4,8,3,2,3,0,0,11
+2025-12-06_kansas_city_portland_st,Portland St.,04,"Buzzard, Sophie",False,30,3,8,0.375,0,2,0.0,4,7,0.571,4,1,5,3,1,1,0,0,10
+2025-12-06_kansas_city_portland_st,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,6,5,11,0,0,0,0,0,0
+2025-12-06_kansas_city_portland_st,Kansas City,00,"Bennett, Emani",True,39,10,23,0.435,3,7,0.429,4,4,1.0,0,2,2,5,0,1,0,1,27
+2025-12-06_kansas_city_portland_st,Kansas City,02,"Bennett, Elauni",True,19,4,7,0.571,0,0,,2,5,0.4,3,2,5,5,1,0,0,3,10
+2025-12-06_kansas_city_portland_st,Kansas City,24,"Harrell, Zaire",True,40,2,2,1.0,0,0,,5,6,0.833,2,3,5,5,3,2,0,3,9
+2025-12-06_kansas_city_portland_st,Kansas City,22,"Adaramoye, Jumoke",True,27,3,10,0.3,0,0,,0,0,,3,4,7,3,0,0,6,1,6
+2025-12-06_kansas_city_portland_st,Kansas City,25,"Winter, Jamyah",True,23,1,4,0.25,1,4,0.25,3,3,1.0,1,2,3,2,3,0,0,0,6
+2025-12-06_kansas_city_portland_st,Kansas City,05,"Trotter, Tierra",False,35,6,18,0.333,0,3,0.0,6,10,0.6,1,5,6,4,3,4,0,2,18
+2025-12-06_kansas_city_portland_st,Kansas City,10,"Amode, Funmi",False,5,1,1,1.0,0,0,,0,0,,0,0,0,1,0,2,0,0,2
+2025-12-06_kansas_city_portland_st,Kansas City,11,"Bannerman, Kelby",False,8,0,2,0.0,0,0,,1,2,0.5,2,0,2,2,0,1,1,0,1
+2025-12-06_kansas_city_portland_st,Kansas City,23,"Febres, Alyssa",False,19,0,1,0.0,0,0,,0,0,,0,0,0,1,2,0,0,3,0
+2025-12-06_kansas_city_portland_st,Kansas City,01,"Thomas, Nikole",False,5,0,1,0.0,0,0,,0,0,,0,1,1,2,0,0,0,0,0
+2025-12-06_kansas_city_portland_st,Kansas City,33,"Majoros, Hallie",False,5,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2025-12-06_kansas_city_portland_st,Kansas City,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,1,2,0,0,1,0,0,0
+2025-12-13_cal_st_fullerton_portland_st,Portland St.,12,"Brown, Kyleigh",True,17,3,6,0.5,2,3,0.667,4,4,1.0,0,2,2,4,0,6,0,2,12
+2025-12-13_cal_st_fullerton_portland_st,Portland St.,11,"Torres-Kahapea, Laynee",True,29,4,11,0.364,0,5,0.0,1,1,1.0,2,1,3,3,1,4,0,0,9
+2025-12-13_cal_st_fullerton_portland_st,Portland St.,23,"Moffat, Taylor",True,29,2,10,0.2,2,6,0.333,1,4,0.25,2,0,2,1,2,3,1,0,7
+2025-12-13_cal_st_fullerton_portland_st,Portland St.,05,"Yoakum, Ajae",True,33,2,5,0.4,0,0,,2,2,1.0,2,3,5,1,2,2,2,0,6
+2025-12-13_cal_st_fullerton_portland_st,Portland St.,25,"Ellington, Cici",True,28,2,7,0.286,0,2,0.0,0,0,,2,1,3,3,2,3,0,2,4
+2025-12-13_cal_st_fullerton_portland_st,Portland St.,09,"Chicken, Hannah",False,25,4,7,0.571,1,1,1.0,6,7,0.857,4,6,10,3,1,4,1,3,15
+2025-12-13_cal_st_fullerton_portland_st,Portland St.,04,"Buzzard, Sophie",False,28,2,6,0.333,1,4,0.25,5,5,1.0,3,1,4,2,1,2,0,0,10
+2025-12-13_cal_st_fullerton_portland_st,Portland St.,10,"Munk, Kirstine",False,5,1,2,0.5,0,1,0.0,0,0,,0,1,1,1,0,0,0,0,2
+2025-12-13_cal_st_fullerton_portland_st,Portland St.,02,"Carter, Jamia",False,6,0,3,0.0,0,2,0.0,1,2,0.5,0,0,0,3,0,0,0,0,1
+2025-12-13_cal_st_fullerton_portland_st,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,5,0,5,0,0,2,0,0,0
+2025-12-13_cal_st_fullerton_portland_st,Cal St. Fullerton,10,"Swindle, Dylan",True,33,4,8,0.5,0,1,0.0,7,8,0.875,1,0,1,2,2,2,0,0,15
+2025-12-13_cal_st_fullerton_portland_st,Cal St. Fullerton,03,"Tauro, Maddy",True,9,7,9,0.778,0,0,,0,0,,0,0,0,3,0,1,0,2,14
+2025-12-13_cal_st_fullerton_portland_st,Cal St. Fullerton,33,"Pearson, Kya",True,24,4,6,0.667,1,1,1.0,4,4,1.0,1,3,4,2,3,2,2,2,13
+2025-12-13_cal_st_fullerton_portland_st,Cal St. Fullerton,00,"Steiner, Nicole",True,30,3,6,0.5,0,0,,3,3,1.0,3,6,9,3,0,5,0,1,9
+2025-12-13_cal_st_fullerton_portland_st,Cal St. Fullerton,55,"Jones, Cristina",True,24,4,6,0.667,0,0,,0,0,,2,1,3,3,1,3,0,1,8
+2025-12-13_cal_st_fullerton_portland_st,Cal St. Fullerton,04,"Falsdottir, Jana",False,27,5,9,0.556,2,3,0.667,1,1,1.0,0,2,2,2,3,0,0,5,13
+2025-12-13_cal_st_fullerton_portland_st,Cal St. Fullerton,23,"Maxwell, Talia",False,12,2,6,0.333,0,0,,0,0,,2,1,3,1,1,0,0,1,4
+2025-12-13_cal_st_fullerton_portland_st,Cal St. Fullerton,22,"Muniz, Madelynn",False,21,1,5,0.2,0,2,0.0,0,0,,2,1,3,3,0,1,0,0,2
+2025-12-13_cal_st_fullerton_portland_st,Cal St. Fullerton,05,"Sutisna, Maxine",False,6,1,2,0.5,0,0,,0,0,,1,0,1,3,0,2,0,0,2
+2025-12-13_cal_st_fullerton_portland_st,Cal St. Fullerton,01,"Moon, Mimi",False,10,0,5,0.0,0,2,0.0,1,2,0.5,0,0,0,1,0,0,0,0,1
+2025-12-13_cal_st_fullerton_portland_st,Cal St. Fullerton,24,"Orhan, Basak",False,4,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-13_cal_st_fullerton_portland_st,Cal St. Fullerton,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,3,6,0,0,3,0,0,0
+2025-12-17_portland_st_seattle_u,Seattle U,03,"Brubaker, Ella",True,34,7,18,0.389,3,7,0.429,3,5,0.6,0,5,5,3,0,3,1,1,20
+2025-12-17_portland_st_seattle_u,Seattle U,24,"Rodriguez, Sydnie",True,35,6,9,0.667,1,1,1.0,3,4,0.75,1,8,9,2,1,3,0,5,16
+2025-12-17_portland_st_seattle_u,Seattle U,07,"Milkovic, Lucija",True,33,7,13,0.538,0,1,0.0,0,2,0.0,1,6,7,2,1,1,4,2,14
+2025-12-17_portland_st_seattle_u,Seattle U,08,"Emanga, Chloe",True,39,3,11,0.273,0,1,0.0,0,0,,2,1,3,4,3,2,1,1,6
+2025-12-17_portland_st_seattle_u,Seattle U,05,"Mogel, Dylan",True,23,0,5,0.0,0,0,,0,0,,2,0,2,1,4,3,0,1,0
+2025-12-17_portland_st_seattle_u,Seattle U,09,"Vesic, Jana",False,20,1,5,0.2,0,2,0.0,1,2,0.5,0,1,1,1,1,4,0,1,3
+2025-12-17_portland_st_seattle_u,Seattle U,04,"Proctor, Fia",False,7,1,2,0.5,1,1,1.0,0,0,,0,0,0,0,0,0,0,0,3
+2025-12-17_portland_st_seattle_u,Seattle U,22,"Larson, Lucy",False,9,0,0,,0,0,,0,0,,0,1,1,0,1,1,0,0,0
+2025-12-17_portland_st_seattle_u,Seattle U,TM,TEAM,False,0,0,0,,0,0,,0,0,,5,1,6,0,0,0,0,0,0
+2025-12-17_portland_st_seattle_u,Portland St.,08,"Ellington, Cici",True,27,7,11,0.636,2,3,0.667,2,4,0.5,4,10,14,4,4,4,3,2,18
+2025-12-17_portland_st_seattle_u,Portland St.,12,"Brown, Kyleigh",True,31,5,15,0.333,2,6,0.333,4,4,1.0,2,1,3,2,3,1,1,0,16
+2025-12-17_portland_st_seattle_u,Portland St.,11,"Torres-Kahapea, Laynee",True,31,5,9,0.556,3,6,0.5,0,0,,3,2,5,2,5,4,0,0,13
+2025-12-17_portland_st_seattle_u,Portland St.,05,"Yoakum, Ajae",True,26,5,11,0.455,0,1,0.0,0,1,0.0,4,8,12,0,3,2,0,3,10
+2025-12-17_portland_st_seattle_u,Portland St.,23,"Moffat, Taylor",True,27,3,6,0.5,3,5,0.6,0,0,,1,2,3,2,5,0,0,2,9
+2025-12-17_portland_st_seattle_u,Portland St.,09,"Chicken, Hannah",False,27,6,9,0.667,0,0,,1,1,1.0,0,4,4,2,3,4,1,6,13
+2025-12-17_portland_st_seattle_u,Portland St.,04,"Buzzard, Sophie",False,21,2,6,0.333,2,5,0.4,0,0,,0,0,0,1,0,1,0,0,6
+2025-12-17_portland_st_seattle_u,Portland St.,10,"Munk, Kirstine",False,5,0,0,,0,0,,0,2,0.0,0,1,1,2,2,0,0,0,0
+2025-12-17_portland_st_seattle_u,Portland St.,13,"Encinas, Alani",False,3,0,2,0.0,0,2,0.0,0,0,,0,0,0,1,0,0,0,0,0
+2025-12-17_portland_st_seattle_u,Portland St.,02,"Carter, Jamia",False,2,0,2,0.0,0,1,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-17_portland_st_seattle_u,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,0,3,0,0,0,0,0,0
+2025-12-21_portland_st_portland,Portland,02,"Ananiev, Dyani",True,16,7,8,0.875,3,3,1.0,0,0,,2,3,5,0,2,0,0,4,17
+2025-12-21_portland_st_portland,Portland,44,"Dalan, Julia",True,17,6,8,0.75,0,1,0.0,1,1,1.0,1,3,4,0,0,0,2,1,13
+2025-12-21_portland_st_portland,Portland,03,"Dallow, Florence",True,16,3,7,0.429,1,1,1.0,4,4,1.0,1,1,2,1,4,1,1,1,11
+2025-12-21_portland_st_portland,Portland,20,"Spear, Lainey",True,14,5,6,0.833,0,0,,1,2,0.5,1,2,3,1,5,1,0,1,11
+2025-12-21_portland_st_portland,Portland,22,"Mogel, Rhyan",True,18,2,4,0.5,0,0,,2,2,1.0,0,1,1,1,3,2,0,2,6
+2025-12-21_portland_st_portland,Portland,07,"Barbosa, Tiffany",False,25,6,6,1.0,1,1,1.0,1,1,1.0,0,6,6,1,3,0,1,3,14
+2025-12-21_portland_st_portland,Portland,09,"Kennedy, Jada",False,10,3,5,0.6,0,0,,2,2,1.0,1,2,3,3,0,1,0,0,8
+2025-12-21_portland_st_portland,Portland,12,"Smith, Brynn",False,19,2,5,0.4,2,2,1.0,1,2,0.5,0,0,0,3,3,2,0,0,7
+2025-12-21_portland_st_portland,Portland,17,"Rodriguez, Nicole",False,22,2,7,0.286,1,6,0.167,0,0,,2,6,8,1,5,3,0,0,5
+2025-12-21_portland_st_portland,Portland,10,"Fraley, Natalie",False,16,1,4,0.25,0,1,0.0,0,0,,1,2,3,5,3,1,1,1,2
+2025-12-21_portland_st_portland,Portland,42,"Zimmerman, Ella",False,14,1,2,0.5,0,0,,0,0,,2,1,3,4,0,1,1,0,2
+2025-12-21_portland_st_portland,Portland,14,"Monahan, Caitlin",False,13,1,2,0.5,0,1,0.0,0,0,,0,2,2,2,1,0,0,0,2
+2025-12-21_portland_st_portland,Portland,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,1,4,0,0,3,0,0,0
+2025-12-21_portland_st_portland,Portland St.,12,"Brown, Kyleigh",True,26,5,12,0.417,0,1,0.0,0,0,,0,1,1,0,0,5,0,0,10
+2025-12-21_portland_st_portland,Portland St.,08,"Ellington, Cici",True,22,3,6,0.5,0,1,0.0,2,2,1.0,0,3,3,1,0,3,0,0,8
+2025-12-21_portland_st_portland,Portland St.,11,"Torres-Kahapea, Laynee",True,24,1,7,0.143,0,2,0.0,2,3,0.667,1,2,3,2,5,0,0,0,4
+2025-12-21_portland_st_portland,Portland St.,05,"Yoakum, Ajae",True,23,1,4,0.25,0,0,,2,4,0.5,4,0,4,2,1,1,0,0,4
+2025-12-21_portland_st_portland,Portland St.,23,"Moffat, Taylor",True,22,0,5,0.0,0,2,0.0,2,2,1.0,0,2,2,2,1,3,0,0,2
+2025-12-21_portland_st_portland,Portland St.,09,"Chicken, Hannah",False,22,5,8,0.625,0,0,,4,5,0.8,1,1,2,3,0,2,1,2,14
+2025-12-21_portland_st_portland,Portland St.,04,"Buzzard, Sophie",False,24,2,7,0.286,0,1,0.0,0,0,,2,0,2,0,2,0,0,0,4
+2025-12-21_portland_st_portland,Portland St.,02,"Carter, Jamia",False,12,2,5,0.4,0,1,0.0,0,3,0.0,0,1,1,2,0,1,0,0,4
+2025-12-21_portland_st_portland,Portland St.,20,"Best, Katelyn",False,16,1,3,0.333,0,0,,0,0,,0,0,0,0,0,0,0,0,2
+2025-12-21_portland_st_portland,Portland St.,10,"Munk, Kirstine",False,5,0,0,,0,0,,1,4,0.25,0,1,1,1,0,2,0,0,1
+2025-12-21_portland_st_portland,Portland St.,13,"Encinas, Alani",False,4,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-21_portland_st_portland,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,7,0,7,0,0,2,0,0,0
+2026-01-01_portland_st_weber_st,Weber St.,08,"Robbins, Hannah",True,36,7,13,0.538,1,3,0.333,3,4,0.75,0,4,4,5,2,1,0,2,18
+2026-01-01_portland_st_weber_st,Weber St.,32,"Billy, Lanae",True,38,4,14,0.286,2,10,0.2,3,4,0.75,2,7,9,3,3,2,0,1,13
+2026-01-01_portland_st_weber_st,Weber St.,13,"Shaffer, Makenna",True,39,3,9,0.333,0,2,0.0,6,9,0.667,1,7,8,4,0,5,0,1,12
+2026-01-01_portland_st_weber_st,Weber St.,25,"Willardson, Nicole",True,22,2,4,0.5,0,0,,0,0,,1,3,4,2,2,1,1,0,4
+2026-01-01_portland_st_weber_st,Weber St.,22,"White, Sydney",True,33,0,5,0.0,0,3,0.0,2,2,1.0,0,4,4,4,3,4,0,0,2
+2026-01-01_portland_st_weber_st,Weber St.,10,"Lauro, Paris",False,12,2,5,0.4,1,3,0.333,1,1,1.0,1,1,2,1,0,1,1,0,6
+2026-01-01_portland_st_weber_st,Weber St.,12,"Niumeitolu, Fui",False,20,1,5,0.2,1,1,1.0,0,0,,1,1,2,2,1,0,0,0,3
+2026-01-01_portland_st_weber_st,Weber St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,1,2,0,0,0,0,0,0
+2026-01-01_portland_st_weber_st,Portland St.,12,"Brown, Kyleigh",True,28,7,16,0.438,1,3,0.333,3,3,1.0,0,3,3,4,1,4,0,0,18
+2026-01-01_portland_st_weber_st,Portland St.,05,"Yoakum, Ajae",True,37,5,13,0.385,0,1,0.0,2,2,1.0,4,4,8,3,4,0,0,1,12
+2026-01-01_portland_st_weber_st,Portland St.,08,"Ellington, Cici",True,30,3,11,0.273,1,3,0.333,0,0,,3,13,16,3,3,1,2,2,7
+2026-01-01_portland_st_weber_st,Portland St.,11,"Torres-Kahapea, Laynee",True,28,1,6,0.167,1,4,0.25,2,2,1.0,0,2,2,1,2,2,0,0,5
+2026-01-01_portland_st_weber_st,Portland St.,23,"Moffat, Taylor",True,22,1,4,0.25,0,2,0.0,0,0,,0,2,2,2,3,3,0,1,2
+2026-01-01_portland_st_weber_st,Portland St.,09,"Chicken, Hannah",False,25,4,8,0.5,0,1,0.0,9,12,0.75,4,5,9,2,1,1,2,0,17
+2026-01-01_portland_st_weber_st,Portland St.,04,"Buzzard, Sophie",False,20,2,4,0.5,1,2,0.5,0,0,,0,0,0,3,0,0,0,0,5
+2026-01-01_portland_st_weber_st,Portland St.,02,"Carter, Jamia",False,5,0,0,,0,0,,2,2,1.0,0,0,0,0,0,0,0,0,2
+2026-01-01_portland_st_weber_st,Portland St.,10,"Munk, Kirstine",False,3,0,0,,0,0,,0,0,,0,0,0,0,1,0,0,0,0
+2026-01-01_portland_st_weber_st,Portland St.,20,"Best, Katelyn",False,2,0,0,,0,0,,0,0,,1,0,1,0,0,0,0,0,0
+2026-01-01_portland_st_weber_st,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,2,3,0,0,0,0,0,0
+2026-01-03_portland_st_idaho_st,Idaho St.,05,"Jordan, Tasia",True,29,8,17,0.471,0,0,,4,4,1.0,0,5,5,3,1,0,0,0,20
+2026-01-03_portland_st_idaho_st,Idaho St.,02,"Caldwell, Aspen",True,34,3,9,0.333,0,2,0.0,5,5,1.0,0,1,1,4,5,2,0,2,11
+2026-01-03_portland_st_idaho_st,Idaho St.,14,"Carlson, Piper",True,32,4,8,0.5,0,0,,2,3,0.667,7,5,12,4,2,0,0,1,10
+2026-01-03_portland_st_idaho_st,Idaho St.,01,"Spink, Kacey",True,32,3,6,0.5,2,4,0.5,1,2,0.5,2,6,8,3,5,2,0,2,9
+2026-01-03_portland_st_idaho_st,Idaho St.,04,"Aby, Alyse",True,33,1,7,0.143,0,4,0.0,0,0,,0,3,3,3,4,2,2,1,2
+2026-01-03_portland_st_idaho_st,Idaho St.,18,"GAUFFRENET, Maeva",False,16,4,7,0.571,3,5,0.6,2,2,1.0,1,2,3,2,0,2,0,2,13
+2026-01-03_portland_st_idaho_st,Idaho St.,13,"Wolfram, Asa",False,8,1,1,1.0,0,0,,2,2,1.0,1,0,1,2,0,2,2,0,4
+2026-01-03_portland_st_idaho_st,Idaho St.,23,"Jones, Tylie",False,8,1,2,0.5,1,2,0.5,0,0,,0,2,2,2,2,0,0,0,3
+2026-01-03_portland_st_idaho_st,Idaho St.,24,"Wright, Halle",False,7,0,5,0.0,0,3,0.0,0,0,,0,0,0,0,0,0,0,1,0
+2026-01-03_portland_st_idaho_st,Idaho St.,03,"Collman, Camryn",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-03_portland_st_idaho_st,Idaho St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,1,2,0,0,0,0,0,0
+2026-01-03_portland_st_idaho_st,Portland St.,12,"Brown, Kyleigh",True,38,9,19,0.474,2,3,0.667,3,5,0.6,0,3,3,3,1,3,0,0,23
+2026-01-03_portland_st_idaho_st,Portland St.,08,"Ellington, Cici",True,28,6,12,0.5,0,4,0.0,2,3,0.667,4,7,11,4,1,5,0,0,14
+2026-01-03_portland_st_idaho_st,Portland St.,05,"Yoakum, Ajae",True,33,3,8,0.375,0,0,,3,4,0.75,3,1,4,1,2,0,0,2,9
+2026-01-03_portland_st_idaho_st,Portland St.,23,"Moffat, Taylor",True,26,0,2,0.0,0,2,0.0,1,2,0.5,0,4,4,1,7,1,0,0,1
+2026-01-03_portland_st_idaho_st,Portland St.,11,"Torres-Kahapea, Laynee",True,24,0,3,0.0,0,1,0.0,1,2,0.5,0,0,0,2,5,2,0,0,1
+2026-01-03_portland_st_idaho_st,Portland St.,09,"Chicken, Hannah",False,24,4,8,0.5,3,4,0.75,1,2,0.5,1,2,3,4,1,5,0,2,12
+2026-01-03_portland_st_idaho_st,Portland St.,20,"Best, Katelyn",False,4,1,1,1.0,1,1,1.0,0,0,,1,0,1,0,0,0,0,0,3
+2026-01-03_portland_st_idaho_st,Portland St.,04,"Buzzard, Sophie",False,18,0,2,0.0,0,1,0.0,0,0,,0,2,2,3,0,0,0,0,0
+2026-01-03_portland_st_idaho_st,Portland St.,02,"Carter, Jamia",False,5,0,1,0.0,0,0,,0,0,,0,1,1,1,0,0,0,0,0
+2026-01-03_portland_st_idaho_st,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,5,8,0,0,1,0,0,0
+2026-01-10_sacramento_st_portland_st,Portland St.,12,"Brown, Kyleigh",True,35,6,9,0.667,0,1,0.0,6,7,0.857,0,4,4,3,4,4,0,0,18
+2026-01-10_sacramento_st_portland_st,Portland St.,25,"Ellington, Cici",True,30,6,9,0.667,1,1,1.0,0,0,,3,2,5,4,2,3,0,2,13
+2026-01-10_sacramento_st_portland_st,Portland St.,05,"Yoakum, Ajae",True,33,4,10,0.4,0,1,0.0,0,0,,5,7,12,2,1,2,1,0,8
+2026-01-10_sacramento_st_portland_st,Portland St.,23,"Moffat, Taylor",True,19,1,3,0.333,1,2,0.5,0,0,,0,0,0,1,0,1,1,0,3
+2026-01-10_sacramento_st_portland_st,Portland St.,11,"Torres-Kahapea, Laynee",True,32,0,5,0.0,0,4,0.0,0,0,,1,0,1,2,3,4,0,1,0
+2026-01-10_sacramento_st_portland_st,Portland St.,09,"Chicken, Hannah",False,28,5,12,0.417,1,1,1.0,0,0,,2,6,8,2,1,4,1,2,11
+2026-01-10_sacramento_st_portland_st,Portland St.,04,"Buzzard, Sophie",False,19,3,8,0.375,1,3,0.333,2,2,1.0,1,2,3,2,1,1,2,2,9
+2026-01-10_sacramento_st_portland_st,Portland St.,20,"Best, Katelyn",False,1,0,0,,0,0,,2,2,1.0,0,0,0,0,0,0,0,0,2
+2026-01-10_sacramento_st_portland_st,Portland St.,02,"Carter, Jamia",False,3,0,1,0.0,0,1,0.0,0,0,,0,1,1,0,0,0,0,0,0
+2026-01-10_sacramento_st_portland_st,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,4,6,0,0,0,0,0,0
+2026-01-10_sacramento_st_portland_st,Sacramento St.,02,"Picton, Natalie",True,38,8,21,0.381,2,8,0.25,3,4,0.75,3,2,5,1,3,1,0,1,21
+2026-01-10_sacramento_st_portland_st,Sacramento St.,11,"Gray, Rubi",True,38,7,22,0.318,2,12,0.167,2,2,1.0,2,4,6,1,2,2,1,2,18
+2026-01-10_sacramento_st_portland_st,Sacramento St.,22,"Mandaquit, Jaety",True,38,4,6,0.667,2,2,1.0,0,0,,0,0,0,3,1,0,0,3,10
+2026-01-10_sacramento_st_portland_st,Sacramento St.,01,"Versteeg, Benthe",True,32,4,13,0.308,0,0,,0,0,,3,3,6,4,6,3,0,1,8
+2026-01-10_sacramento_st_portland_st,Sacramento St.,12,"Lual, Ajong",True,11,2,3,0.667,0,0,,0,0,,4,0,4,1,0,1,0,1,4
+2026-01-10_sacramento_st_portland_st,Sacramento St.,05,"Abiara, Elizabeth",False,24,1,5,0.2,0,0,,3,4,0.75,5,7,12,3,0,0,2,0,5
+2026-01-10_sacramento_st_portland_st,Sacramento St.,03,"Taylor, Brooklyn",False,5,1,1,1.0,0,0,,0,0,,0,0,0,1,0,0,0,0,2
+2026-01-10_sacramento_st_portland_st,Sacramento St.,14,"Fa'i, Tali",False,14,0,2,0.0,0,0,,0,0,,0,2,2,1,0,1,0,1,0
+2026-01-10_sacramento_st_portland_st,Sacramento St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,1,5,0,0,1,0,0,0
+2026-01-15_northern_colo_portland_st,Portland St.,12,"Brown, Kyleigh",True,26,4,8,0.5,0,2,0.0,2,2,1.0,0,1,1,0,0,5,0,0,10
+2026-01-15_northern_colo_portland_st,Portland St.,23,"Moffat, Taylor",True,19,3,4,0.75,0,1,0.0,3,3,1.0,0,4,4,0,0,2,0,0,9
+2026-01-15_northern_colo_portland_st,Portland St.,05,"Yoakum, Ajae",True,24,4,5,0.8,0,0,,0,0,,3,7,10,3,3,3,0,0,8
+2026-01-15_northern_colo_portland_st,Portland St.,11,"Torres-Kahapea, Laynee",True,22,1,2,0.5,0,0,,2,2,1.0,0,3,3,2,1,1,0,0,4
+2026-01-15_northern_colo_portland_st,Portland St.,08,"Ellington, Cici",True,16,1,8,0.125,0,1,0.0,0,0,,0,4,4,2,0,1,0,1,2
+2026-01-15_northern_colo_portland_st,Portland St.,09,"Chicken, Hannah",False,21,5,9,0.556,0,0,,0,0,,1,1,2,3,0,4,0,0,10
+2026-01-15_northern_colo_portland_st,Portland St.,02,"Carter, Jamia",False,22,1,5,0.2,0,3,0.0,7,13,0.538,1,3,4,0,2,1,0,0,9
+2026-01-15_northern_colo_portland_st,Portland St.,04,"Buzzard, Sophie",False,21,1,4,0.25,0,3,0.0,1,5,0.2,0,0,0,0,0,2,0,0,3
+2026-01-15_northern_colo_portland_st,Portland St.,10,"Munk, Kirstine",False,8,1,1,1.0,0,0,,0,0,,1,2,3,2,1,0,0,0,2
+2026-01-15_northern_colo_portland_st,Portland St.,13,"Encinas, Alani",False,8,1,3,0.333,0,2,0.0,0,0,,0,1,1,1,0,1,0,0,2
+2026-01-15_northern_colo_portland_st,Portland St.,20,"Best, Katelyn",False,13,0,1,0.0,0,0,,1,2,0.5,2,0,2,3,0,2,0,0,1
+2026-01-15_northern_colo_portland_st,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,2,5,0,0,2,0,0,0
+2026-01-15_northern_colo_portland_st,Northern Colo.,05,"George, Neenah",True,19,5,7,0.714,2,3,0.667,3,4,0.75,2,3,5,4,5,1,0,2,15
+2026-01-15_northern_colo_portland_st,Northern Colo.,24,"West, Tatum",True,21,4,8,0.5,0,0,,5,6,0.833,5,5,10,4,1,2,0,2,13
+2026-01-15_northern_colo_portland_st,Northern Colo.,33,"Riley, Julia",True,25,3,9,0.333,3,9,0.333,1,2,0.5,0,0,0,1,2,0,0,0,10
+2026-01-15_northern_colo_portland_st,Northern Colo.,15,"Fields, Gabi",True,29,3,6,0.5,0,1,0.0,0,0,,1,0,1,4,5,3,0,3,6
+2026-01-15_northern_colo_portland_st,Northern Colo.,08,"Powell, Erin",True,20,1,7,0.143,1,4,0.25,0,0,,1,0,1,1,1,0,0,3,3
+2026-01-15_northern_colo_portland_st,Northern Colo.,02,"Baymon, Heather",False,27,8,17,0.471,5,10,0.5,2,3,0.667,1,2,3,3,0,1,0,5,23
+2026-01-15_northern_colo_portland_st,Northern Colo.,22,"Hall, Aniah",False,16,3,6,0.5,0,0,,2,3,0.667,1,1,2,1,1,3,2,1,8
+2026-01-15_northern_colo_portland_st,Northern Colo.,13,"Tanuvasa, Lele",False,3,1,1,1.0,0,0,,0,0,,0,0,0,1,0,1,0,0,2
+2026-01-15_northern_colo_portland_st,Northern Colo.,04,"Fraser, Claire",False,14,0,1,0.0,0,0,,0,0,,0,3,3,2,0,0,0,0,0
+2026-01-15_northern_colo_portland_st,Northern Colo.,11,"Moore, Lilah",False,11,0,3,0.0,0,1,0.0,0,0,,0,0,0,0,0,0,0,1,0
+2026-01-15_northern_colo_portland_st,Northern Colo.,12,"Loomis-Goltl, Ruthie",False,11,0,3,0.0,0,0,,0,0,,2,1,3,2,0,0,0,0,0
+2026-01-15_northern_colo_portland_st,Northern Colo.,00,"Loomis-Goltl, Olivia",False,2,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2026-01-15_northern_colo_portland_st,Northern Colo.,10,"Dykstra, Louise",False,2,0,0,,0,0,,0,0,,0,1,1,1,0,0,1,0,0
+2026-01-15_northern_colo_portland_st,Northern Colo.,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,4,5,0,0,1,0,0,0
+2026-01-17_northern_ariz_portland_st,Portland St.,12,"Brown, Kyleigh",True,35,6,21,0.286,2,7,0.286,2,2,1.0,2,5,7,4,3,0,0,0,16
+2026-01-17_northern_ariz_portland_st,Portland St.,23,"Moffat, Taylor",True,33,4,11,0.364,2,6,0.333,2,4,0.5,1,3,4,3,2,0,0,3,12
+2026-01-17_northern_ariz_portland_st,Portland St.,05,"Yoakum, Ajae",True,29,4,5,0.8,0,0,,0,0,,5,1,6,1,0,1,0,0,8
+2026-01-17_northern_ariz_portland_st,Portland St.,08,"Ellington, Cici",True,18,1,6,0.167,0,1,0.0,3,3,1.0,2,2,4,3,0,2,3,0,5
+2026-01-17_northern_ariz_portland_st,Portland St.,11,"Torres-Kahapea, Laynee",True,8,0,2,0.0,0,0,,0,0,,0,0,0,1,0,2,0,0,0
+2026-01-17_northern_ariz_portland_st,Portland St.,09,"Chicken, Hannah",False,25,7,10,0.7,2,4,0.5,0,0,,2,4,6,2,1,5,0,2,16
+2026-01-17_northern_ariz_portland_st,Portland St.,02,"Carter, Jamia",False,24,3,6,0.5,1,3,0.333,1,3,0.333,0,0,0,3,2,1,0,1,8
+2026-01-17_northern_ariz_portland_st,Portland St.,04,"Buzzard, Sophie",False,20,1,3,0.333,1,2,0.5,0,0,,2,1,3,1,3,2,0,1,3
+2026-01-17_northern_ariz_portland_st,Portland St.,10,"Munk, Kirstine",False,8,0,0,,0,0,,0,0,,0,1,1,2,0,2,0,0,0
+2026-01-17_northern_ariz_portland_st,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,4,5,0,0,1,0,0,0
+2026-01-17_northern_ariz_portland_st,Northern Ariz.,03,"Watts, Madison",True,23,6,8,0.75,0,0,,5,5,1.0,3,6,9,3,2,0,1,0,17
+2026-01-17_northern_ariz_portland_st,Northern Ariz.,25,"White, Naomi",True,40,6,15,0.4,1,5,0.2,2,2,1.0,2,4,6,1,2,4,0,2,15
+2026-01-17_northern_ariz_portland_st,Northern Ariz.,11,"Taylor, Audrey",True,36,2,6,0.333,2,6,0.333,8,9,0.889,1,2,3,2,7,3,0,0,14
+2026-01-17_northern_ariz_portland_st,Northern Ariz.,35,"Morris, Simone",True,31,5,10,0.5,1,3,0.333,2,2,1.0,2,5,7,1,0,1,1,2,13
+2026-01-17_northern_ariz_portland_st,Northern Ariz.,07,"Davis, Layla",True,16,1,6,0.167,0,0,,2,2,1.0,0,1,1,3,2,1,0,0,4
+2026-01-17_northern_ariz_portland_st,Northern Ariz.,00,"Dasovich, Emma",False,23,3,9,0.333,1,4,0.25,0,0,,0,3,3,2,3,0,0,2,7
+2026-01-17_northern_ariz_portland_st,Northern Ariz.,13,"Robinson, JBionna",False,14,3,4,0.75,0,0,,0,0,,0,1,1,1,1,1,0,1,6
+2026-01-17_northern_ariz_portland_st,Northern Ariz.,10,"Williams, Hannah",False,11,1,3,0.333,0,0,,0,0,,2,1,3,1,0,0,0,0,2
+2026-01-17_northern_ariz_portland_st,Northern Ariz.,23,"Williams, Kayla",False,6,1,3,0.333,0,0,,0,0,,2,1,3,0,0,0,0,0,2
+2026-01-17_northern_ariz_portland_st,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,2,5,0,0,1,0,0,0
+2026-01-22_portland_st_eastern_wash,Eastern Wash.,01,"Bowers, Elyn",True,30,7,14,0.5,1,4,0.25,6,6,1.0,1,4,5,4,3,5,0,1,21
+2026-01-22_portland_st_eastern_wash,Eastern Wash.,02,"Gallatin, Ella",True,32,7,16,0.438,0,5,0.0,2,4,0.5,1,4,5,3,2,1,0,1,16
+2026-01-22_portland_st_eastern_wash,Eastern Wash.,22,"Grossman, Kourtney",True,32,7,14,0.5,2,3,0.667,0,2,0.0,4,9,13,1,1,2,0,0,16
+2026-01-22_portland_st_eastern_wash,Eastern Wash.,10,"Eggers, Jaecy",True,16,5,8,0.625,0,0,,4,4,1.0,4,3,7,4,3,1,0,1,14
+2026-01-22_portland_st_eastern_wash,Eastern Wash.,13,"Gingras, Caitie",True,27,0,3,0.0,0,3,0.0,0,0,,1,1,2,1,2,1,1,1,0
+2026-01-22_portland_st_eastern_wash,Eastern Wash.,12,"Kirk, Paris",False,18,2,6,0.333,1,1,1.0,0,0,,2,3,5,2,0,0,0,1,5
+2026-01-22_portland_st_eastern_wash,Eastern Wash.,03,"Gibbs, Madeline",False,17,2,5,0.4,1,2,0.5,0,0,,0,2,2,2,1,0,0,1,5
+2026-01-22_portland_st_eastern_wash,Eastern Wash.,52,"Hays, Bella",False,5,2,3,0.667,0,0,,0,0,,1,0,1,2,0,0,0,0,4
+2026-01-22_portland_st_eastern_wash,Eastern Wash.,23,"McElmurry, Emily",False,19,0,3,0.0,0,2,0.0,0,0,,2,4,6,1,1,2,0,2,0
+2026-01-22_portland_st_eastern_wash,Eastern Wash.,24,"Magnuson, Brielle",False,4,0,1,0.0,0,1,0.0,0,0,,0,1,1,1,0,0,0,0,0
+2026-01-22_portland_st_eastern_wash,Eastern Wash.,TM,TEAM,False,0,0,0,,0,0,,0,0,,7,4,11,0,0,0,0,0,0
+2026-01-22_portland_st_eastern_wash,Portland St.,12,"Brown, Kyleigh",True,37,8,14,0.571,1,3,0.333,8,12,0.667,0,1,1,3,2,1,0,1,25
+2026-01-22_portland_st_eastern_wash,Portland St.,05,"Yoakum, Ajae",True,26,3,5,0.6,0,0,,2,4,0.5,0,5,5,2,0,3,1,0,8
+2026-01-22_portland_st_eastern_wash,Portland St.,11,"Torres-Kahapea, Laynee",True,39,3,7,0.429,1,4,0.25,0,0,,0,3,3,4,2,0,1,1,7
+2026-01-22_portland_st_eastern_wash,Portland St.,02,"Carter, Jamia",True,24,2,9,0.222,0,2,0.0,2,8,0.25,1,2,3,3,0,0,0,2,6
+2026-01-22_portland_st_eastern_wash,Portland St.,09,"Chicken, Hannah",True,17,3,7,0.429,0,0,,0,1,0.0,4,2,6,5,2,2,1,0,6
+2026-01-22_portland_st_eastern_wash,Portland St.,08,"Ellington, Cici",False,26,5,10,0.5,0,1,0.0,1,2,0.5,1,4,5,2,1,2,1,2,11
+2026-01-22_portland_st_eastern_wash,Portland St.,04,"Buzzard, Sophie",False,20,0,2,0.0,0,1,0.0,0,0,,0,0,0,2,0,2,0,0,0
+2026-01-22_portland_st_eastern_wash,Portland St.,20,"Best, Katelyn",False,9,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,1,0
+2026-01-22_portland_st_eastern_wash,Portland St.,10,"Munk, Kirstine",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2026-01-22_portland_st_eastern_wash,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,3,4,0,0,0,0,0,0
+2026-01-24_portland_st_idaho,Idaho,04,"Hassmann, Hope",True,32,5,14,0.357,5,9,0.556,5,6,0.833,1,4,5,0,12,0,0,1,20
+2026-01-24_portland_st_idaho,Idaho,03,"Gardner, Kyra",True,28,8,14,0.571,3,6,0.5,0,0,,1,6,7,2,2,3,2,3,19
+2026-01-24_portland_st_idaho,Idaho,05,"Uriarte, Ella",True,25,4,6,0.667,1,1,1.0,0,0,,1,3,4,3,1,3,0,1,9
+2026-01-24_portland_st_idaho,Idaho,10,"Barbosa, Lorena",True,17,2,7,0.286,1,2,0.5,3,4,0.75,2,7,9,2,3,2,0,1,8
+2026-01-24_portland_st_idaho,Idaho,37,"Pinheiro, Ana",True,26,2,2,1.0,0,0,,1,1,1.0,2,3,5,2,4,1,0,0,5
+2026-01-24_portland_st_idaho,Idaho,09,"Dos Santos, Debora",False,19,4,8,0.5,0,0,,0,0,,2,6,8,2,0,3,3,3,8
+2026-01-24_portland_st_idaho,Idaho,14,"Kangur, Katlin",False,21,3,7,0.429,1,3,0.333,0,0,,1,2,3,3,0,1,0,1,7
+2026-01-24_portland_st_idaho,Idaho,23,"Beatriz Passos Alves da Silva, Ana",False,23,2,8,0.25,0,2,0.0,2,4,0.5,2,1,3,1,0,0,0,1,6
+2026-01-24_portland_st_idaho,Idaho,02,"Brans, Sarah",False,4,1,2,0.5,0,0,,0,0,,0,0,0,2,0,1,1,0,2
+2026-01-24_portland_st_idaho,Idaho,06,"Ekh, Sofia",False,3,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2026-01-24_portland_st_idaho,Idaho,13,"Deaver, Catelyn",False,2,0,0,,0,0,,0,0,,0,1,1,0,2,0,0,0,0
+2026-01-24_portland_st_idaho,Idaho,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,0,1,0,0,0,0,0,0
+2026-01-24_portland_st_idaho,Portland St.,12,"Brown, Kyleigh",True,35,9,18,0.5,0,4,0.0,5,5,1.0,0,2,2,2,3,4,0,2,23
+2026-01-24_portland_st_idaho,Portland St.,09,"Chicken, Hannah",True,30,5,7,0.714,4,4,1.0,3,4,0.75,1,2,3,2,5,3,0,1,17
+2026-01-24_portland_st_idaho,Portland St.,11,"Torres-Kahapea, Laynee",True,35,3,8,0.375,1,4,0.25,5,5,1.0,0,1,1,1,4,0,1,0,12
+2026-01-24_portland_st_idaho,Portland St.,02,"Carter, Jamia",True,17,2,6,0.333,0,1,0.0,0,1,0.0,0,3,3,1,1,2,0,1,4
+2026-01-24_portland_st_idaho,Portland St.,05,"Yoakum, Ajae",True,10,0,3,0.0,0,2,0.0,0,0,,3,1,4,5,1,3,0,1,0
+2026-01-24_portland_st_idaho,Portland St.,08,"Ellington, Cici",False,21,2,5,0.4,0,1,0.0,1,2,0.5,0,6,6,1,1,1,2,1,5
+2026-01-24_portland_st_idaho,Portland St.,10,"Munk, Kirstine",False,16,1,8,0.125,0,3,0.0,0,0,,1,3,4,3,0,2,0,1,2
+2026-01-24_portland_st_idaho,Portland St.,20,"Best, Katelyn",False,7,1,1,1.0,0,0,,0,0,,1,3,4,0,0,0,0,0,2
+2026-01-24_portland_st_idaho,Portland St.,04,"Buzzard, Sophie",False,23,0,4,0.0,0,3,0.0,1,2,0.5,1,0,1,2,0,0,0,0,1
+2026-01-24_portland_st_idaho,Portland St.,13,"Encinas, Alani",False,6,0,3,0.0,0,2,0.0,0,0,,0,0,0,0,0,1,0,0,0
+2026-01-24_portland_st_idaho,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,3,6,0,0,0,0,0,0
+2026-01-29_montana_portland_st,Portland St.,12,"Brown, Kyleigh",True,38,7,17,0.412,0,2,0.0,6,6,1.0,1,2,3,2,1,2,0,0,20
+2026-01-29_montana_portland_st,Portland St.,05,"Yoakum, Ajae",True,30,4,9,0.444,0,1,0.0,2,3,0.667,4,2,6,3,1,0,0,1,10
+2026-01-29_montana_portland_st,Portland St.,09,"Chicken, Hannah",True,30,4,13,0.308,0,4,0.0,0,0,,2,10,12,2,4,1,3,1,8
+2026-01-29_montana_portland_st,Portland St.,23,"Moffat, Taylor",True,21,2,6,0.333,0,4,0.0,0,0,,0,2,2,3,1,0,0,0,4
+2026-01-29_montana_portland_st,Portland St.,11,"Torres-Kahapea, Laynee",True,32,1,7,0.143,1,4,0.25,0,0,,0,2,2,2,2,0,0,0,3
+2026-01-29_montana_portland_st,Portland St.,08,"Ellington, Cici",False,22,5,10,0.5,0,0,,2,2,1.0,0,6,6,3,2,0,1,1,12
+2026-01-29_montana_portland_st,Portland St.,04,"Buzzard, Sophie",False,24,2,7,0.286,2,7,0.286,0,0,,0,0,0,1,0,1,0,0,6
+2026-01-29_montana_portland_st,Portland St.,10,"Munk, Kirstine",False,2,0,1,0.0,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-29_montana_portland_st,Portland St.,02,"Carter, Jamia",False,1,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2026-01-29_montana_portland_st,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,4,7,0,0,0,0,0,0
+2026-01-29_montana_portland_st,Montana,10,"Waddington, Avery",True,33,13,20,0.65,0,1,0.0,5,6,0.833,7,3,10,1,1,3,1,0,31
+2026-01-29_montana_portland_st,Montana,23,"Land, Jocelyn",True,33,4,12,0.333,1,6,0.167,0,0,,0,6,6,2,0,1,3,0,9
+2026-01-29_montana_portland_st,Montana,11,"Shubert, Aby",True,32,2,8,0.25,0,5,0.0,0,0,,0,4,4,2,1,0,0,1,4
+2026-01-29_montana_portland_st,Montana,01,"Donarski, Macy",True,31,2,4,0.5,0,0,,0,0,,1,3,4,2,1,0,0,0,4
+2026-01-29_montana_portland_st,Montana,05,"Gillette, Kennedy",True,27,0,1,0.0,0,1,0.0,4,4,1.0,0,3,3,2,0,1,1,0,4
+2026-01-29_montana_portland_st,Montana,20,"Ehrman, Rae",False,24,4,9,0.444,1,4,0.25,4,5,0.8,0,4,4,1,1,0,0,0,13
+2026-01-29_montana_portland_st,Montana,03,"Wacker, Draya",False,20,0,9,0.0,0,4,0.0,4,4,1.0,2,9,11,2,2,3,1,0,4
+2026-01-29_montana_portland_st,Montana,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,3,5,0,0,0,0,0,0
+2026-01-31_montana_st_portland_st,Portland St.,11,"Torres-Kahapea, Laynee",True,28,2,4,0.5,0,1,0.0,7,9,0.778,0,1,1,0,0,3,0,1,11
+2026-01-31_montana_st_portland_st,Portland St.,12,"Brown, Kyleigh",True,25,4,10,0.4,1,4,0.25,2,2,1.0,2,1,3,1,0,3,1,1,11
+2026-01-31_montana_st_portland_st,Portland St.,23,"Moffat, Taylor",True,25,2,6,0.333,1,4,0.25,0,0,,0,3,3,3,0,9,0,2,5
+2026-01-31_montana_st_portland_st,Portland St.,05,"Yoakum, Ajae",True,24,1,4,0.25,0,0,,0,0,,4,0,4,2,1,2,0,1,2
+2026-01-31_montana_st_portland_st,Portland St.,09,"Chicken, Hannah",True,18,1,7,0.143,0,1,0.0,0,0,,0,2,2,1,1,3,1,1,2
+2026-01-31_montana_st_portland_st,Portland St.,10,"Munk, Kirstine",False,13,3,3,1.0,0,0,,1,2,0.5,0,4,4,0,0,1,0,0,7
+2026-01-31_montana_st_portland_st,Portland St.,08,"Ellington, Cici",False,21,2,7,0.286,0,0,,1,1,1.0,1,6,7,2,1,3,1,0,5
+2026-01-31_montana_st_portland_st,Portland St.,02,"Carter, Jamia",False,17,0,3,0.0,0,2,0.0,0,2,0.0,0,1,1,1,1,3,0,0,0
+2026-01-31_montana_st_portland_st,Portland St.,04,"Buzzard, Sophie",False,17,0,2,0.0,0,1,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-31_montana_st_portland_st,Portland St.,20,"Best, Katelyn",False,7,0,1,0.0,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2026-01-31_montana_st_portland_st,Portland St.,13,"Encinas, Alani",False,5,0,1,0.0,0,1,0.0,0,0,,0,0,0,0,0,1,0,0,0
+2026-01-31_montana_st_portland_st,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,0,1,0,0,1,0,0,0
+2026-01-31_montana_st_portland_st,Montana St.,44,"Chirrick, Taylee",True,27,12,16,0.75,4,5,0.8,3,4,0.75,3,9,12,2,2,6,1,11,31
+2026-01-31_montana_st_portland_st,Montana St.,05,"Johnson, Ella",True,16,4,5,0.8,2,2,1.0,0,0,,2,1,3,4,0,0,1,0,10
+2026-01-31_montana_st_portland_st,Montana St.,12,"Philip, Jamison",True,17,3,5,0.6,0,0,,2,2,1.0,1,2,3,0,3,2,0,1,8
+2026-01-31_montana_st_portland_st,Montana St.,33,"Harris, Addison",True,18,3,7,0.429,0,0,,0,0,,2,1,3,1,2,1,0,1,6
+2026-01-31_montana_st_portland_st,Montana St.,15,"Bunyan, Isobel",True,20,2,5,0.4,1,3,0.333,0,0,,1,1,2,0,4,1,1,4,5
+2026-01-31_montana_st_portland_st,Montana St.,21,"Bailey, Brianne",False,23,6,12,0.5,1,2,0.5,0,0,,1,1,2,1,2,2,0,1,13
+2026-01-31_montana_st_portland_st,Montana St.,24,"Couture, Kadynce",False,22,3,8,0.375,1,3,0.333,0,0,,3,3,6,4,0,1,0,2,7
+2026-01-31_montana_st_portland_st,Montana St.,02,"Smith, Courtney",False,21,2,4,0.5,1,3,0.333,0,0,,0,1,1,2,2,0,0,1,5
+2026-01-31_montana_st_portland_st,Montana St.,23,"Erickson, Teagan",False,21,2,7,0.286,0,1,0.0,0,0,,2,2,4,0,2,0,0,1,4
+2026-01-31_montana_st_portland_st,Montana St.,13,"Hintz, Grace",False,15,1,5,0.2,0,4,0.0,0,0,,0,1,1,4,0,1,0,1,2
+2026-01-31_montana_st_portland_st,Montana St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-02_idaho_st_portland_st,Portland St.,11,"Torres-Kahapea, Laynee",True,34,4,11,0.364,0,4,0.0,6,6,1.0,0,4,4,1,2,4,0,3,14
+2026-02-02_idaho_st_portland_st,Portland St.,23,"Moffat, Taylor",True,31,4,7,0.571,3,6,0.5,1,2,0.5,0,2,2,3,0,1,0,3,12
+2026-02-02_idaho_st_portland_st,Portland St.,12,"Brown, Kyleigh",True,33,3,9,0.333,0,3,0.0,5,6,0.833,0,3,3,2,0,4,0,0,11
+2026-02-02_idaho_st_portland_st,Portland St.,09,"Chicken, Hannah",True,27,2,7,0.286,0,1,0.0,4,4,1.0,1,7,8,3,1,6,0,0,8
+2026-02-02_idaho_st_portland_st,Portland St.,05,"Yoakum, Ajae",True,34,1,3,0.333,0,0,,0,0,,1,4,5,3,4,1,0,2,2
+2026-02-02_idaho_st_portland_st,Portland St.,08,"Ellington, Cici",False,24,3,7,0.429,0,2,0.0,4,6,0.667,2,2,4,1,0,1,1,1,10
+2026-02-02_idaho_st_portland_st,Portland St.,02,"Carter, Jamia",False,8,0,0,,0,0,,0,2,0.0,0,0,0,2,0,1,0,0,0
+2026-02-02_idaho_st_portland_st,Portland St.,04,"Buzzard, Sophie",False,7,0,0,,0,0,,0,0,,1,0,1,2,0,2,0,0,0
+2026-02-02_idaho_st_portland_st,Portland St.,10,"Munk, Kirstine",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2026-02-02_idaho_st_portland_st,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2026-02-02_idaho_st_portland_st,Idaho St.,05,"Jordan, Tasia",True,29,12,19,0.632,0,1,0.0,6,8,0.75,1,3,4,2,0,1,0,2,30
+2026-02-02_idaho_st_portland_st,Idaho St.,01,"Spink, Kacey",True,34,3,7,0.429,0,2,0.0,4,4,1.0,1,5,6,1,4,3,0,3,10
+2026-02-02_idaho_st_portland_st,Idaho St.,14,"Carlson, Piper",True,28,3,10,0.3,0,0,,1,2,0.5,4,4,8,2,1,0,1,1,7
+2026-02-02_idaho_st_portland_st,Idaho St.,02,"Caldwell, Aspen",True,31,3,6,0.5,0,1,0.0,0,0,,0,3,3,1,3,3,0,1,6
+2026-02-02_idaho_st_portland_st,Idaho St.,04,"Aby, Alyse",True,24,1,3,0.333,0,1,0.0,1,2,0.5,1,2,3,5,0,1,0,1,3
+2026-02-02_idaho_st_portland_st,Idaho St.,13,"Wolfram, Asa",False,12,2,5,0.4,0,1,0.0,1,1,1.0,2,1,3,2,2,0,0,0,5
+2026-02-02_idaho_st_portland_st,Idaho St.,23,"Jones, Tylie",False,18,2,5,0.4,0,3,0.0,0,0,,1,2,3,4,0,2,0,1,4
+2026-02-02_idaho_st_portland_st,Idaho St.,18,"GAUFFRENET, Maeva",False,15,2,4,0.5,0,1,0.0,0,0,,0,0,0,5,0,1,1,2,4
+2026-02-02_idaho_st_portland_st,Idaho St.,24,"Wright, Halle",False,8,0,1,0.0,0,0,,0,2,0.0,1,3,4,1,1,1,0,0,0
+2026-02-02_idaho_st_portland_st,Idaho St.,03,"Collman, Camryn",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-02_idaho_st_portland_st,Idaho St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-07_portland_st_sacramento_st,Sacramento St.,02,"Picton, Natalie",True,37,6,17,0.353,2,8,0.25,3,4,0.75,2,2,4,1,2,3,0,1,17
+2026-02-07_portland_st_sacramento_st,Sacramento St.,11,"Gray, Rubi",True,36,5,14,0.357,4,9,0.444,2,2,1.0,1,0,1,4,2,4,0,1,16
+2026-02-07_portland_st_sacramento_st,Sacramento St.,01,"Versteeg, Benthe",True,25,6,11,0.545,0,1,0.0,2,4,0.5,0,3,3,5,0,4,1,1,14
+2026-02-07_portland_st_sacramento_st,Sacramento St.,45,"Jaiteh, Fatoumata",True,28,5,11,0.455,0,0,,2,2,1.0,3,5,8,1,3,0,0,2,12
+2026-02-07_portland_st_sacramento_st,Sacramento St.,22,"Mandaquit, Jaety",True,33,0,0,,0,0,,0,0,,1,3,4,2,1,1,0,4,0
+2026-02-07_portland_st_sacramento_st,Sacramento St.,08,"Salave'a, Keanna",False,15,1,3,0.333,0,0,,1,2,0.5,3,1,4,2,1,1,3,1,3
+2026-02-07_portland_st_sacramento_st,Sacramento St.,14,"Fa'i, Tali",False,12,0,1,0.0,0,1,0.0,0,0,,0,1,1,2,1,1,0,1,0
+2026-02-07_portland_st_sacramento_st,Sacramento St.,10,"Paananen, Pinja",False,8,0,0,,0,0,,0,0,,1,1,2,0,2,0,0,0,0
+2026-02-07_portland_st_sacramento_st,Sacramento St.,05,"Abiara, Elizabeth",False,6,0,1,0.0,0,0,,0,0,,1,1,2,0,0,0,0,0,0
+2026-02-07_portland_st_sacramento_st,Sacramento St.,12,"Lual, Ajong",False,,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-07_portland_st_sacramento_st,Sacramento St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,4,4,0,0,2,0,0,0
+2026-02-07_portland_st_sacramento_st,Portland St.,09,"Chicken, Hannah",True,33,8,11,0.727,2,2,1.0,4,7,0.571,1,6,7,4,4,2,2,0,22
+2026-02-07_portland_st_sacramento_st,Portland St.,12,"Brown, Kyleigh",True,39,7,15,0.467,0,1,0.0,3,3,1.0,0,0,0,2,2,5,0,2,17
+2026-02-07_portland_st_sacramento_st,Portland St.,05,"Yoakum, Ajae",True,35,3,5,0.6,0,0,,0,0,,2,6,8,0,0,3,1,3,6
+2026-02-07_portland_st_sacramento_st,Portland St.,23,"Moffat, Taylor",True,15,1,6,0.167,0,2,0.0,0,0,,0,1,1,1,2,1,0,0,2
+2026-02-07_portland_st_sacramento_st,Portland St.,11,"Torres-Kahapea, Laynee",True,31,0,1,0.0,0,0,,0,0,,0,6,6,2,7,2,0,1,0
+2026-02-07_portland_st_sacramento_st,Portland St.,08,"Ellington, Cici",False,31,6,8,0.75,0,1,0.0,5,6,0.833,0,2,2,4,1,3,0,0,17
+2026-02-07_portland_st_sacramento_st,Portland St.,04,"Buzzard, Sophie",False,12,0,3,0.0,0,1,0.0,0,0,,0,1,1,1,0,0,0,0,0
+2026-02-07_portland_st_sacramento_st,Portland St.,02,"Carter, Jamia",False,2,0,1,0.0,0,0,,0,0,,0,0,0,0,0,0,0,1,0
+2026-02-07_portland_st_sacramento_st,Portland St.,10,"Munk, Kirstine",False,1,0,0,,0,0,,0,0,,0,0,0,1,0,1,0,0,0
+2026-02-07_portland_st_sacramento_st,Portland St.,20,"Best, Katelyn",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-07_portland_st_sacramento_st,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,3,7,0,0,1,0,0,0
+2026-02-12_portland_st_northern_ariz,Northern Ariz.,25,"White, Naomi",True,44,8,18,0.444,4,8,0.5,5,6,0.833,1,7,8,2,1,5,1,2,25
+2026-02-12_portland_st_northern_ariz,Northern Ariz.,03,"Watts, Madison",True,32,4,10,0.4,0,0,,5,6,0.833,4,6,10,3,6,1,1,2,13
+2026-02-12_portland_st_northern_ariz,Northern Ariz.,35,"Morris, Simone",True,30,3,10,0.3,0,1,0.0,3,4,0.75,2,4,6,2,3,1,0,5,9
+2026-02-12_portland_st_northern_ariz,Northern Ariz.,07,"Davis, Layla",True,15,1,4,0.25,0,0,,2,4,0.5,0,1,1,1,0,0,2,1,4
+2026-02-12_portland_st_northern_ariz,Northern Ariz.,10,"Williams, Hannah",True,6,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,1,0
+2026-02-12_portland_st_northern_ariz,Northern Ariz.,23,"Williams, Kayla",False,33,9,15,0.6,2,4,0.5,4,5,0.8,2,6,8,4,2,3,2,1,24
+2026-02-12_portland_st_northern_ariz,Northern Ariz.,13,"Robinson, JBionna",False,37,2,5,0.4,0,0,,3,5,0.6,0,2,2,4,5,3,0,2,7
+2026-02-12_portland_st_northern_ariz,Northern Ariz.,00,"Dasovich, Emma",False,22,2,7,0.286,0,2,0.0,0,0,,0,3,3,5,3,2,1,1,4
+2026-02-12_portland_st_northern_ariz,Northern Ariz.,12,"Dunn, Addison",False,1,1,1,1.0,0,0,,0,0,,0,0,0,0,1,0,0,0,2
+2026-02-12_portland_st_northern_ariz,Northern Ariz.,30,"Curry, Faith",False,5,0,0,,0,0,,0,0,,0,0,0,0,1,0,0,0,0
+2026-02-12_portland_st_northern_ariz,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,1,4,0,0,2,0,0,0
+2026-02-12_portland_st_northern_ariz,Portland St.,12,"Brown, Kyleigh",True,45,6,22,0.273,2,9,0.222,4,4,1.0,1,2,3,4,3,1,0,2,18
+2026-02-12_portland_st_northern_ariz,Portland St.,11,"Torres-Kahapea, Laynee",True,43,6,10,0.6,1,2,0.5,5,5,1.0,0,7,7,2,3,3,1,1,18
+2026-02-12_portland_st_northern_ariz,Portland St.,09,"Chicken, Hannah",True,34,6,13,0.462,0,2,0.0,4,4,1.0,3,8,11,5,1,5,2,3,16
+2026-02-12_portland_st_northern_ariz,Portland St.,23,"Moffat, Taylor",True,34,1,5,0.2,0,3,0.0,2,2,1.0,0,1,1,4,5,2,0,2,4
+2026-02-12_portland_st_northern_ariz,Portland St.,05,"Yoakum, Ajae",True,25,1,4,0.25,0,0,,0,0,,0,3,3,3,1,2,1,0,2
+2026-02-12_portland_st_northern_ariz,Portland St.,08,"Ellington, Cici",False,24,7,16,0.438,1,2,0.5,5,8,0.625,4,5,9,4,1,4,2,0,20
+2026-02-12_portland_st_northern_ariz,Portland St.,02,"Carter, Jamia",False,4,1,1,1.0,0,0,,0,0,,0,0,0,0,0,0,0,0,2
+2026-02-12_portland_st_northern_ariz,Portland St.,10,"Munk, Kirstine",False,9,0,0,,0,0,,0,0,,1,0,1,0,0,0,0,0,0
+2026-02-12_portland_st_northern_ariz,Portland St.,04,"Buzzard, Sophie",False,7,0,0,,0,0,,0,0,,0,0,0,1,0,1,0,0,0
+2026-02-12_portland_st_northern_ariz,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,3,7,0,0,1,0,0,0
+2026-02-14_portland_st_northern_colo,Northern Colo.,05,"George, Neenah",True,35,4,9,0.444,1,2,0.5,8,8,1.0,0,5,5,1,4,1,0,1,17
+2026-02-14_portland_st_northern_colo,Northern Colo.,15,"Fields, Gabi",True,36,4,9,0.444,1,5,0.2,2,2,1.0,0,2,2,5,6,2,0,3,11
+2026-02-14_portland_st_northern_colo,Northern Colo.,24,"West, Tatum",True,23,5,6,0.833,0,0,,0,0,,4,1,5,4,1,5,0,2,10
+2026-02-14_portland_st_northern_colo,Northern Colo.,33,"Riley, Julia",True,21,3,7,0.429,3,5,0.6,0,0,,0,4,4,2,0,1,0,0,9
+2026-02-14_portland_st_northern_colo,Northern Colo.,08,"Powell, Erin",True,18,2,2,1.0,1,1,1.0,0,0,,1,4,5,0,2,2,0,2,5
+2026-02-14_portland_st_northern_colo,Northern Colo.,22,"Hall, Aniah",False,20,4,10,0.4,0,0,,8,12,0.667,3,0,3,4,0,2,0,1,16
+2026-02-14_portland_st_northern_colo,Northern Colo.,02,"Baymon, Heather",False,23,0,3,0.0,0,0,,3,4,0.75,0,3,3,2,0,1,0,1,3
+2026-02-14_portland_st_northern_colo,Northern Colo.,04,"Fraser, Claire",False,10,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2026-02-14_portland_st_northern_colo,Northern Colo.,11,"Moore, Lilah",False,10,0,0,,0,0,,0,0,,0,1,1,1,0,1,0,1,0
+2026-02-14_portland_st_northern_colo,Northern Colo.,12,"Loomis-Goltl, Ruthie",False,4,0,1,0.0,0,0,,0,0,,0,1,1,1,0,0,1,1,0
+2026-02-14_portland_st_northern_colo,Northern Colo.,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,3,3,0,0,0,0,0,0
+2026-02-14_portland_st_northern_colo,Portland St.,12,"Brown, Kyleigh",True,37,6,11,0.545,0,2,0.0,2,3,0.667,1,4,5,4,1,7,0,1,14
+2026-02-14_portland_st_northern_colo,Portland St.,09,"Chicken, Hannah",True,22,3,9,0.333,0,1,0.0,3,3,1.0,0,3,3,5,1,3,1,0,9
+2026-02-14_portland_st_northern_colo,Portland St.,23,"Moffat, Taylor",True,26,2,6,0.333,1,5,0.2,2,2,1.0,0,2,2,2,2,1,1,0,7
+2026-02-14_portland_st_northern_colo,Portland St.,11,"Torres-Kahapea, Laynee",True,25,1,4,0.25,1,4,0.25,4,5,0.8,1,2,3,1,4,1,0,0,7
+2026-02-14_portland_st_northern_colo,Portland St.,05,"Yoakum, Ajae",True,28,1,2,0.5,0,0,,2,2,1.0,0,1,1,5,1,1,1,0,4
+2026-02-14_portland_st_northern_colo,Portland St.,08,"Ellington, Cici",False,27,1,8,0.125,0,1,0.0,4,6,0.667,1,1,2,2,2,2,0,0,6
+2026-02-14_portland_st_northern_colo,Portland St.,04,"Buzzard, Sophie",False,13,2,2,1.0,0,0,,1,2,0.5,1,1,2,2,1,0,0,0,5
+2026-02-14_portland_st_northern_colo,Portland St.,20,"Best, Katelyn",False,11,2,3,0.667,0,0,,0,0,,2,0,2,1,0,0,0,1,4
+2026-02-14_portland_st_northern_colo,Portland St.,10,"Munk, Kirstine",False,6,0,1,0.0,0,0,,1,2,0.5,0,1,1,0,1,0,0,0,1
+2026-02-14_portland_st_northern_colo,Portland St.,02,"Carter, Jamia",False,5,0,1,0.0,0,0,,0,0,,0,1,1,1,0,2,0,0,0
+2026-02-14_portland_st_northern_colo,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,3,4,0,0,0,0,0,0
+2026-02-19_idaho_portland_st,Portland St.,09,"Chicken, Hannah",True,28,7,15,0.467,0,2,0.0,2,2,1.0,2,2,4,3,2,0,0,3,16
+2026-02-19_idaho_portland_st,Portland St.,12,"Brown, Kyleigh",True,38,6,12,0.5,1,4,0.25,2,2,1.0,0,3,3,2,2,2,1,1,15
+2026-02-19_idaho_portland_st,Portland St.,05,"Yoakum, Ajae",True,24,2,4,0.5,0,0,,0,0,,0,4,4,1,3,1,0,1,4
+2026-02-19_idaho_portland_st,Portland St.,11,"Torres-Kahapea, Laynee",True,23,1,6,0.167,1,3,0.333,0,0,,0,0,0,3,2,3,0,1,3
+2026-02-19_idaho_portland_st,Portland St.,23,"Moffat, Taylor",True,25,1,3,0.333,0,1,0.0,0,2,0.0,0,2,2,2,1,2,0,0,2
+2026-02-19_idaho_portland_st,Portland St.,08,"Ellington, Cici",False,24,7,10,0.7,1,1,1.0,1,3,0.333,1,3,4,4,1,1,1,0,16
+2026-02-19_idaho_portland_st,Portland St.,04,"Buzzard, Sophie",False,19,3,6,0.5,0,0,,1,1,1.0,2,0,2,1,1,1,1,0,7
+2026-02-19_idaho_portland_st,Portland St.,20,"Best, Katelyn",False,12,1,3,0.333,1,2,0.5,0,0,,1,1,2,2,0,2,0,1,3
+2026-02-19_idaho_portland_st,Portland St.,02,"Carter, Jamia",False,4,0,0,,0,0,,0,0,,0,1,1,0,0,1,0,0,0
+2026-02-19_idaho_portland_st,Portland St.,10,"Munk, Kirstine",False,3,0,1,0.0,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-19_idaho_portland_st,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,2,4,0,0,3,0,0,0
+2026-02-19_idaho_portland_st,Idaho,03,"Gardner, Kyra",True,31,7,12,0.583,3,5,0.6,0,0,,0,4,4,1,0,4,1,2,17
+2026-02-19_idaho_portland_st,Idaho,04,"Hassmann, Hope",True,26,3,6,0.5,0,2,0.0,7,7,1.0,1,2,3,1,5,3,0,3,13
+2026-02-19_idaho_portland_st,Idaho,10,"Barbosa, Lorena",True,20,4,8,0.5,0,1,0.0,4,5,0.8,1,4,5,0,0,0,1,0,12
+2026-02-19_idaho_portland_st,Idaho,05,"Uriarte, Ella",True,31,4,10,0.4,3,5,0.6,0,0,,1,1,2,2,0,2,0,1,11
+2026-02-19_idaho_portland_st,Idaho,37,"Pinheiro, Ana",True,28,5,13,0.385,0,2,0.0,0,0,,2,8,10,2,5,0,0,0,10
+2026-02-19_idaho_portland_st,Idaho,09,"Dos Santos, Debora",False,17,7,10,0.7,0,0,,1,2,0.5,4,1,5,3,0,0,0,0,15
+2026-02-19_idaho_portland_st,Idaho,23,"Beatriz Passos Alves da Silva, Ana",False,20,2,4,0.5,0,1,0.0,2,2,1.0,3,0,3,2,2,2,0,2,6
+2026-02-19_idaho_portland_st,Idaho,14,"Kangur, Katlin",False,22,1,1,1.0,0,0,,0,0,,0,2,2,0,3,2,0,1,2
+2026-02-19_idaho_portland_st,Idaho,02,"Brans, Sarah",False,3,0,1,0.0,0,1,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-19_idaho_portland_st,Idaho,06,"Ekh, Sofia",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-19_idaho_portland_st,Idaho,13,"Deaver, Catelyn",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-19_idaho_portland_st,Idaho,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,5,7,0,0,0,0,0,0
+2026-02-21_eastern_wash_portland_st,Portland St.,09,"Chicken, Hannah",True,30,8,14,0.571,1,3,0.333,0,0,,2,7,9,1,1,3,0,0,17
+2026-02-21_eastern_wash_portland_st,Portland St.,12,"Brown, Kyleigh",True,33,4,15,0.267,2,7,0.286,6,8,0.75,0,1,1,4,4,1,0,2,16
+2026-02-21_eastern_wash_portland_st,Portland St.,11,"Torres-Kahapea, Laynee",True,31,3,10,0.3,2,6,0.333,2,3,0.667,0,4,4,1,3,1,0,2,10
+2026-02-21_eastern_wash_portland_st,Portland St.,23,"Moffat, Taylor",True,25,2,5,0.4,1,3,0.333,0,0,,1,2,3,1,3,2,0,1,5
+2026-02-21_eastern_wash_portland_st,Portland St.,05,"Yoakum, Ajae",True,28,0,2,0.0,0,0,,2,4,0.5,1,6,7,0,3,2,1,0,2
+2026-02-21_eastern_wash_portland_st,Portland St.,08,"Ellington, Cici",False,27,11,15,0.733,1,2,0.5,0,0,,1,2,3,1,2,1,1,0,23
+2026-02-21_eastern_wash_portland_st,Portland St.,02,"Carter, Jamia",False,7,1,3,0.333,1,2,0.5,0,0,,0,1,1,1,0,0,0,0,3
+2026-02-21_eastern_wash_portland_st,Portland St.,04,"Buzzard, Sophie",False,12,1,2,0.5,0,0,,0,0,,0,0,0,4,0,0,1,0,2
+2026-02-21_eastern_wash_portland_st,Portland St.,20,"Best, Katelyn",False,5,0,0,,0,0,,0,0,,0,2,2,1,1,0,0,0,0
+2026-02-21_eastern_wash_portland_st,Portland St.,10,"Munk, Kirstine",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-21_eastern_wash_portland_st,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,2,4,0,0,0,0,0,0
+2026-02-21_eastern_wash_portland_st,Eastern Wash.,02,"Gallatin, Ella",True,38,8,17,0.471,3,8,0.375,6,7,0.857,0,5,5,0,10,3,2,0,25
+2026-02-21_eastern_wash_portland_st,Eastern Wash.,22,"Grossman, Kourtney",True,34,10,15,0.667,4,5,0.8,0,0,,3,13,16,0,2,2,0,2,24
+2026-02-21_eastern_wash_portland_st,Eastern Wash.,01,"Bowers, Elyn",True,25,4,14,0.286,1,4,0.25,3,6,0.5,2,1,3,4,4,2,1,2,12
+2026-02-21_eastern_wash_portland_st,Eastern Wash.,10,"Eggers, Jaecy",True,33,5,10,0.5,0,1,0.0,0,0,,3,5,8,3,2,0,1,3,10
+2026-02-21_eastern_wash_portland_st,Eastern Wash.,13,"Gingras, Caitie",True,24,2,6,0.333,2,6,0.333,0,0,,1,0,1,2,2,0,1,0,6
+2026-02-21_eastern_wash_portland_st,Eastern Wash.,23,"McElmurry, Emily",False,23,2,4,0.5,1,2,0.5,3,4,0.75,0,2,2,1,0,0,0,0,8
+2026-02-21_eastern_wash_portland_st,Eastern Wash.,52,"Hays, Bella",False,7,1,2,0.5,0,0,,0,0,,0,1,1,0,0,0,0,0,2
+2026-02-21_eastern_wash_portland_st,Eastern Wash.,03,"Gibbs, Madeline",False,14,0,3,0.0,0,2,0.0,0,0,,2,1,3,0,4,1,0,1,0
+2026-02-21_eastern_wash_portland_st,Eastern Wash.,12,"Kirk, Paris",False,2,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2026-02-21_eastern_wash_portland_st,Eastern Wash.,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,2,3,0,0,1,0,0,0
+2026-02-26_portland_st_montana_st,Montana St.,44,"Chirrick, Taylee",True,35,8,16,0.5,1,4,0.25,5,12,0.417,3,5,8,3,3,6,1,4,22
+2026-02-26_portland_st_montana_st,Montana St.,33,"Harris, Addison",True,25,4,14,0.286,0,2,0.0,2,6,0.333,4,2,6,3,1,3,0,1,10
+2026-02-26_portland_st_montana_st,Montana St.,12,"Philip, Jamison",True,21,2,10,0.2,0,0,,3,4,0.75,1,4,5,4,3,1,0,0,7
+2026-02-26_portland_st_montana_st,Montana St.,15,"Bunyan, Isobel",True,31,2,6,0.333,1,5,0.2,0,0,,1,4,5,1,1,0,0,2,5
+2026-02-26_portland_st_montana_st,Montana St.,05,"Johnson, Ella",True,28,1,3,0.333,0,1,0.0,0,0,,1,3,4,2,0,1,4,4,2
+2026-02-26_portland_st_montana_st,Montana St.,24,"Couture, Kadynce",False,16,4,6,0.667,2,3,0.667,2,2,1.0,1,0,1,0,0,0,0,2,12
+2026-02-26_portland_st_montana_st,Montana St.,23,"Erickson, Teagan",False,14,2,2,1.0,0,0,,2,3,0.667,0,1,1,1,2,3,0,1,6
+2026-02-26_portland_st_montana_st,Montana St.,21,"Bailey, Brianne",False,19,1,5,0.2,0,2,0.0,0,2,0.0,0,2,2,0,3,2,0,3,2
+2026-02-26_portland_st_montana_st,Montana St.,20,"Fatupaito, Brooke",False,11,0,2,0.0,0,0,,0,0,,0,1,1,2,1,0,0,0,0
+2026-02-26_portland_st_montana_st,Montana St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,5,1,6,0,0,2,0,0,0
+2026-02-26_portland_st_montana_st,Portland St.,12,"Brown, Kyleigh",True,39,3,13,0.231,3,9,0.333,3,4,0.75,0,3,3,4,0,4,0,0,12
+2026-02-26_portland_st_montana_st,Portland St.,23,"Moffat, Taylor",True,28,3,8,0.375,2,5,0.4,2,2,1.0,0,6,6,3,4,2,1,1,10
+2026-02-26_portland_st_montana_st,Portland St.,09,"Chicken, Hannah",True,20,4,9,0.444,0,0,,2,2,1.0,1,3,4,5,1,5,2,2,10
+2026-02-26_portland_st_montana_st,Portland St.,05,"Yoakum, Ajae",True,33,1,2,0.5,0,0,,1,2,0.5,3,4,7,3,2,1,1,1,3
+2026-02-26_portland_st_montana_st,Portland St.,11,"Torres-Kahapea, Laynee",True,29,1,4,0.25,0,2,0.0,0,0,,0,2,2,3,4,4,0,1,2
+2026-02-26_portland_st_montana_st,Portland St.,08,"Ellington, Cici",False,27,7,14,0.5,0,1,0.0,0,0,,2,7,9,2,2,5,1,2,14
+2026-02-26_portland_st_montana_st,Portland St.,04,"Buzzard, Sophie",False,19,3,4,0.75,1,1,1.0,3,3,1.0,0,2,2,4,0,1,0,0,10
+2026-02-26_portland_st_montana_st,Portland St.,02,"Carter, Jamia",False,5,1,2,0.5,0,1,0.0,0,0,,0,1,1,0,0,1,0,2,2
+2026-02-26_portland_st_montana_st,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,2,5,0,0,2,0,0,0
+2026-02-28_portland_st_montana,Montana,10,"Waddington, Avery",True,34,12,20,0.6,4,7,0.571,1,2,0.5,2,1,3,1,4,3,2,1,29
+2026-02-28_portland_st_montana,Montana,23,"Land, Jocelyn",True,33,5,13,0.385,0,5,0.0,0,0,,0,5,5,0,2,1,1,1,10
+2026-02-28_portland_st_montana,Montana,05,"Gillette, Kennedy",True,34,1,4,0.25,0,3,0.0,3,3,1.0,3,7,10,2,1,0,0,1,5
+2026-02-28_portland_st_montana,Montana,11,"Shubert, Aby",True,29,1,4,0.25,1,4,0.25,0,0,,0,3,3,1,1,0,0,0,3
+2026-02-28_portland_st_montana,Montana,01,"Donarski, Macy",True,26,0,3,0.0,0,1,0.0,0,0,,2,3,5,2,3,3,0,3,0
+2026-02-28_portland_st_montana,Montana,02,"Konig, Mack",False,15,3,8,0.375,0,2,0.0,0,0,,0,1,1,0,2,2,0,0,6
+2026-02-28_portland_st_montana,Montana,20,"Ehrman, Rae",False,13,1,5,0.2,0,2,0.0,0,0,,0,2,2,1,1,1,0,0,2
+2026-02-28_portland_st_montana,Montana,03,"Wacker, Draya",False,16,0,2,0.0,0,1,0.0,0,0,,0,0,0,0,2,0,0,1,0
+2026-02-28_portland_st_montana,Montana,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,3,4,0,0,1,0,0,0
+2026-02-28_portland_st_montana,Portland St.,08,"Ellington, Cici",True,35,8,11,0.727,0,1,0.0,1,2,0.5,0,10,10,0,3,2,0,1,17
+2026-02-28_portland_st_montana,Portland St.,23,"Moffat, Taylor",True,23,3,6,0.5,3,4,0.75,1,2,0.5,0,1,1,1,0,0,0,0,10
+2026-02-28_portland_st_montana,Portland St.,05,"Yoakum, Ajae",True,24,3,3,1.0,1,1,1.0,0,0,,3,3,6,3,0,2,0,0,7
+2026-02-28_portland_st_montana,Portland St.,02,"Carter, Jamia",True,12,0,3,0.0,0,1,0.0,1,2,0.5,0,1,1,2,0,0,0,1,1
+2026-02-28_portland_st_montana,Portland St.,13,"Encinas, Alani",True,3,0,1,0.0,0,1,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-28_portland_st_montana,Portland St.,11,"Torres-Kahapea, Laynee",False,34,3,9,0.333,2,5,0.4,1,2,0.5,0,6,6,1,5,1,1,1,9
+2026-02-28_portland_st_montana,Portland St.,12,"Brown, Kyleigh",False,34,2,10,0.2,0,1,0.0,0,0,,0,2,2,0,3,4,0,1,4
+2026-02-28_portland_st_montana,Portland St.,09,"Chicken, Hannah",False,20,1,3,0.333,1,2,0.5,0,0,,1,2,3,4,0,7,0,0,3
+2026-02-28_portland_st_montana,Portland St.,04,"Buzzard, Sophie",False,14,1,2,0.5,0,1,0.0,0,0,,0,2,2,1,0,0,0,0,2
+2026-02-28_portland_st_montana,Portland St.,10,"Munk, Kirstine",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2026-02-28_portland_st_montana,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,2,2,0,0,0,0,0,0
+2026-03-02_weber_st_portland_st,Portland St.,12,"Brown, Kyleigh",True,34,9,18,0.5,3,7,0.429,1,1,1.0,2,3,5,1,0,1,0,0,22
+2026-03-02_weber_st_portland_st,Portland St.,09,"Chicken, Hannah",True,24,4,10,0.4,0,1,0.0,0,0,,1,4,5,0,3,1,0,2,8
+2026-03-02_weber_st_portland_st,Portland St.,23,"Moffat, Taylor",True,24,3,9,0.333,1,6,0.167,1,1,1.0,1,4,5,3,1,0,0,0,8
+2026-03-02_weber_st_portland_st,Portland St.,11,"Torres-Kahapea, Laynee",True,26,1,6,0.167,1,3,0.333,3,4,0.75,0,3,3,0,3,2,0,0,6
+2026-03-02_weber_st_portland_st,Portland St.,05,"Yoakum, Ajae",True,18,0,5,0.0,0,0,,0,2,0.0,3,4,7,4,3,1,0,0,0
+2026-03-02_weber_st_portland_st,Portland St.,02,"Carter, Jamia",False,18,1,4,0.25,1,3,0.333,2,2,1.0,1,0,1,4,2,3,0,0,5
+2026-03-02_weber_st_portland_st,Portland St.,10,"Munk, Kirstine",False,11,1,3,0.333,0,1,0.0,0,0,,0,3,3,1,0,0,0,0,2
+2026-03-02_weber_st_portland_st,Portland St.,13,"Encinas, Alani",False,5,0,1,0.0,0,0,,1,2,0.5,0,0,0,0,0,0,0,0,1
+2026-03-02_weber_st_portland_st,Portland St.,08,"Ellington, Cici",False,18,0,5,0.0,0,0,,0,0,,0,1,1,0,1,2,0,1,0
+2026-03-02_weber_st_portland_st,Portland St.,20,"Best, Katelyn",False,12,0,3,0.0,0,0,,0,0,,2,3,5,0,0,1,0,0,0
+2026-03-02_weber_st_portland_st,Portland St.,04,"Buzzard, Sophie",False,10,0,1,0.0,0,1,0.0,0,0,,1,0,1,2,0,1,0,0,0
+2026-03-02_weber_st_portland_st,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,0,2,0,0,0,0,0,0
+2026-03-02_weber_st_portland_st,Weber St.,32,"Billy, Lanae",True,33,7,14,0.5,3,9,0.333,2,3,0.667,0,3,3,1,3,2,0,1,19
+2026-03-02_weber_st_portland_st,Weber St.,22,"White, Sydney",True,32,6,10,0.6,2,4,0.5,2,2,1.0,2,4,6,3,4,0,0,2,16
+2026-03-02_weber_st_portland_st,Weber St.,07,"Emma-Nnopu, Antoniette",True,30,4,6,0.667,0,0,,4,4,1.0,3,9,12,3,3,0,4,3,12
+2026-03-02_weber_st_portland_st,Weber St.,08,"Robbins, Hannah",True,27,3,10,0.3,0,1,0.0,2,2,1.0,0,6,6,2,6,2,0,0,8
+2026-03-02_weber_st_portland_st,Weber St.,25,"Willardson, Nicole",True,22,2,5,0.4,1,1,1.0,3,4,0.75,2,5,7,4,3,2,0,0,8
+2026-03-02_weber_st_portland_st,Weber St.,10,"Lauro, Paris",False,21,4,11,0.364,3,9,0.333,0,0,,2,1,3,1,1,0,0,0,11
+2026-03-02_weber_st_portland_st,Weber St.,13,"Shaffer, Makenna",False,15,2,2,1.0,1,1,1.0,0,0,,0,1,1,1,1,2,1,0,5
+2026-03-02_weber_st_portland_st,Weber St.,11,"Peaua, Arizana",False,5,1,1,1.0,0,0,,0,0,,1,1,2,0,0,0,2,0,2
+2026-03-02_weber_st_portland_st,Weber St.,34,"Niumeitolu, Fui",False,9,0,5,0.0,0,1,0.0,0,0,,0,1,1,1,0,1,0,0,0
+2026-03-02_weber_st_portland_st,Weber St.,15,"Stubbs, Japrix",False,3,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-03-02_weber_st_portland_st,Weber St.,02,"Coombs, Alyssa",False,2,0,0,,0,0,,0,0,,0,1,1,1,0,0,0,0,0
+2026-03-02_weber_st_portland_st,Weber St.,00,"Davis, Maya",False,1,0,1,0.0,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-03-02_weber_st_portland_st,Weber St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,3,4,0,0,0,0,0,0
+2026-03-07_weber_st_portland_st,Portland St.,09,"Chicken, Hannah",True,30,6,9,0.667,2,3,0.667,3,6,0.5,1,3,4,1,0,3,0,1,17
+2026-03-07_weber_st_portland_st,Portland St.,23,"Moffat, Taylor",True,23,5,9,0.556,1,4,0.25,0,1,0.0,1,3,4,3,2,0,0,1,11
+2026-03-07_weber_st_portland_st,Portland St.,11,"Torres-Kahapea, Laynee",True,31,1,6,0.167,0,2,0.0,5,5,1.0,1,4,5,0,4,2,0,1,7
+2026-03-07_weber_st_portland_st,Portland St.,05,"Yoakum, Ajae",True,29,2,6,0.333,0,1,0.0,1,2,0.5,3,2,5,1,0,2,0,0,5
+2026-03-07_weber_st_portland_st,Portland St.,12,"Brown, Kyleigh",True,35,2,14,0.143,0,5,0.0,0,0,,0,1,1,2,1,2,0,1,4
+2026-03-07_weber_st_portland_st,Portland St.,02,"Carter, Jamia",False,7,2,4,0.5,1,2,0.5,2,4,0.5,0,0,0,1,0,0,0,1,7
+2026-03-07_weber_st_portland_st,Portland St.,08,"Ellington, Cici",False,22,1,5,0.2,0,0,,0,0,,2,5,7,3,1,2,0,2,2
+2026-03-07_weber_st_portland_st,Portland St.,04,"Buzzard, Sophie",False,18,0,2,0.0,0,2,0.0,0,0,,0,1,1,1,0,1,0,0,0
+2026-03-07_weber_st_portland_st,Portland St.,10,"Munk, Kirstine",False,2,0,1,0.0,0,0,,0,0,,1,1,2,1,0,1,0,0,0
+2026-03-07_weber_st_portland_st,Portland St.,13,"Encinas, Alani",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-03-07_weber_st_portland_st,Portland St.,20,"Best, Katelyn",False,1,0,1,0.0,0,1,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2026-03-07_weber_st_portland_st,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,1,2,0,0,0,0,0,0
+2026-03-07_weber_st_portland_st,Weber St.,07,"Emma-Nnopu, Antoniette",True,30,8,11,0.727,1,3,0.333,6,7,0.857,3,5,8,2,1,2,1,5,23
+2026-03-07_weber_st_portland_st,Weber St.,08,"Robbins, Hannah",True,34,9,15,0.6,2,5,0.4,0,0,,1,8,9,3,2,3,0,1,20
+2026-03-07_weber_st_portland_st,Weber St.,22,"White, Sydney",True,35,5,12,0.417,1,4,0.25,1,1,1.0,0,3,3,1,6,3,0,0,12
+2026-03-07_weber_st_portland_st,Weber St.,32,"Billy, Lanae",True,24,3,6,0.5,1,2,0.5,0,0,,0,2,2,4,2,4,0,0,7
+2026-03-07_weber_st_portland_st,Weber St.,25,"Willardson, Nicole",True,24,0,1,0.0,0,0,,2,2,1.0,0,4,4,1,3,0,2,1,2
+2026-03-07_weber_st_portland_st,Weber St.,34,"Niumeitolu, Fui",False,18,2,4,0.5,2,3,0.667,2,2,1.0,1,1,2,0,0,0,0,0,8
+2026-03-07_weber_st_portland_st,Weber St.,10,"Lauro, Paris",False,19,1,4,0.25,0,2,0.0,0,0,,1,2,3,2,0,0,0,0,2
+2026-03-07_weber_st_portland_st,Weber St.,11,"Peaua, Arizana",False,3,1,1,1.0,0,0,,0,0,,0,0,0,0,0,0,0,0,2
+2026-03-07_weber_st_portland_st,Weber St.,13,"Shaffer, Makenna",False,13,0,3,0.0,0,2,0.0,0,0,,0,4,4,0,0,0,0,0,0
+2026-03-07_weber_st_portland_st,Weber St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,3,3,0,0,2,0,0,0

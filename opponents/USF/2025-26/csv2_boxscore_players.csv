@@ -1,0 +1,775 @@
+game_id,team,jersey,player,started,min,fg_m,fg_a,fg_pct,3p_m,3p_a,3p_pct,ft_m,ft_a,ft_pct,oreb,dreb,reb,pf,ast,to,blk,stl,pts
+2025-11-05_san_francisco_unc_greensboro,UNC Greensboro,22,"Asidanya, Makiah",True,36,6,16,0.375,3,10,0.3,4,4,1.0,0,2,2,2,1,2,0,1,19
+2025-11-05_san_francisco_unc_greensboro,UNC Greensboro,1,"Levine, Jeni",True,34,3,17,0.176,2,8,0.25,2,2,1.0,0,5,5,1,1,3,0,0,10
+2025-11-05_san_francisco_unc_greensboro,UNC Greensboro,2,"Johnson, Tasia",True,30,2,10,0.2,2,7,0.286,1,2,0.5,1,2,3,1,1,0,0,1,7
+2025-11-05_san_francisco_unc_greensboro,UNC Greensboro,4,"Lee, Jaila",True,23,1,10,0.1,0,3,0.0,0,0,,4,1,5,3,1,2,0,1,2
+2025-11-05_san_francisco_unc_greensboro,UNC Greensboro,15,"Moffitt, Rylan",True,30,0,5,0.0,0,0,,0,0,,5,4,9,1,0,1,0,2,0
+2025-11-05_san_francisco_unc_greensboro,UNC Greensboro,00,"Minor, Leyla",False,21,0,2,0.0,0,1,0.0,2,2,1.0,1,0,1,2,0,2,0,1,2
+2025-11-05_san_francisco_unc_greensboro,UNC Greensboro,6,"Rakotobe, Kristina",False,12,0,2,0.0,0,0,,0,0,,0,3,3,3,0,2,0,1,0
+2025-11-05_san_francisco_unc_greensboro,UNC Greensboro,12,"Harris, Ciara",False,9,0,1,0.0,0,0,,0,0,,1,1,2,2,0,0,0,0,0
+2025-11-05_san_francisco_unc_greensboro,UNC Greensboro,13,"Davis, Joelle",False,3,0,2,0.0,0,2,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-05_san_francisco_unc_greensboro,UNC Greensboro,7,"Traore, Salimata",False,2,0,1,0.0,0,0,,0,0,,1,1,2,0,0,0,0,0,0
+2025-11-05_san_francisco_unc_greensboro,UNC Greensboro,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,2,2,0,0,2,0,0,0
+2025-11-05_san_francisco_unc_greensboro,San Francisco,23,"Edokpaigbe, Candy",True,33,10,16,0.625,1,3,0.333,5,6,0.833,2,5,7,1,1,2,2,0,26
+2025-11-05_san_francisco_unc_greensboro,San Francisco,4,"McIntyre, Meghan",True,29,4,6,0.667,1,2,0.5,2,2,1.0,1,9,10,0,7,1,0,1,11
+2025-11-05_san_francisco_unc_greensboro,San Francisco,3,"Mouriño, Noelia",True,10,4,4,1.0,0,0,,0,0,,1,2,3,5,2,3,0,0,8
+2025-11-05_san_francisco_unc_greensboro,San Francisco,9,"Cargol, Aina",True,25,2,8,0.25,1,3,0.333,2,2,1.0,0,0,0,0,1,0,0,2,7
+2025-11-05_san_francisco_unc_greensboro,San Francisco,2,"Neira, Mara",True,14,0,3,0.0,0,3,0.0,0,0,,0,6,6,2,2,2,0,2,0
+2025-11-05_san_francisco_unc_greensboro,San Francisco,7,"Ferrara Horne, Nevaeh",False,31,2,7,0.286,0,0,,1,2,0.5,4,7,11,2,1,3,0,2,5
+2025-11-05_san_francisco_unc_greensboro,San Francisco,12,"Taušová, Nataša",False,22,1,5,0.2,1,3,0.333,0,0,,2,2,4,3,0,3,0,0,3
+2025-11-05_san_francisco_unc_greensboro,San Francisco,14,"Ugwah, Michelle",False,13,1,6,0.167,0,0,,0,0,,1,0,1,5,0,3,1,1,2
+2025-11-05_san_francisco_unc_greensboro,San Francisco,32,"Priestley, Sophia",False,4,1,1,1.0,0,0,,0,0,,0,1,1,0,0,0,0,0,2
+2025-11-05_san_francisco_unc_greensboro,San Francisco,22,"Tirado, Paula",False,18,0,1,0.0,0,0,,0,0,,0,3,3,2,3,1,0,1,0
+2025-11-05_san_francisco_unc_greensboro,San Francisco,10,"Pateman, Amy",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-05_san_francisco_unc_greensboro,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,5,6,0,0,1,0,0,0
+2025-11-09_boise_st_san_francisco,San Francisco,3,"Mouriño, Noelia",True,21,3,6,0.5,0,1,0.0,5,10,0.5,2,5,7,1,2,4,0,0,11
+2025-11-09_boise_st_san_francisco,San Francisco,9,"Cargol, Aina",True,27,3,6,0.5,2,4,0.5,1,2,0.5,0,1,1,0,3,4,0,1,9
+2025-11-09_boise_st_san_francisco,San Francisco,23,"Edokpaigbe, Candy",True,22,3,4,0.75,2,2,1.0,0,2,0.0,2,0,2,5,1,5,3,1,8
+2025-11-09_boise_st_san_francisco,San Francisco,2,"Neira, Mara",True,17,3,10,0.3,2,8,0.25,0,0,,2,1,3,1,1,1,0,1,8
+2025-11-09_boise_st_san_francisco,San Francisco,4,"McIntyre, Meghan",True,31,1,8,0.125,0,3,0.0,1,2,0.5,0,6,6,3,3,3,0,2,3
+2025-11-09_boise_st_san_francisco,San Francisco,22,"Tirado, Paula",False,27,5,10,0.5,3,3,1.0,0,0,,0,0,0,2,0,2,0,0,13
+2025-11-09_boise_st_san_francisco,San Francisco,14,"Ugwah, Michelle",False,18,3,7,0.429,0,0,,1,2,0.5,0,6,6,4,3,0,1,2,7
+2025-11-09_boise_st_san_francisco,San Francisco,12,"Taušová, Nataša",False,21,3,7,0.429,0,4,0.0,0,2,0.0,0,0,0,1,1,1,0,2,6
+2025-11-09_boise_st_san_francisco,San Francisco,32,"Priestley, Sophia",False,1,1,1,1.0,0,0,,0,0,,1,0,1,0,0,0,0,0,2
+2025-11-09_boise_st_san_francisco,San Francisco,10,"Pateman, Amy",False,3,0,1,0.0,0,0,,1,2,0.5,0,0,0,0,0,0,0,0,1
+2025-11-09_boise_st_san_francisco,San Francisco,7,"Ferrara Horne, Nevaeh",False,12,0,1,0.0,0,0,,0,0,,0,0,0,1,0,1,0,0,0
+2025-11-09_boise_st_san_francisco,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,1,4,0,0,0,0,0,0
+2025-11-09_boise_st_san_francisco,Boise St.,32,"Pasco, Natalie",True,35,7,11,0.636,4,7,0.571,4,4,1.0,0,3,3,1,1,0,0,0,22
+2025-11-09_boise_st_san_francisco,Boise St.,4,"Bayes, Dani",True,31,7,15,0.467,4,8,0.5,2,2,1.0,3,3,6,1,5,3,1,3,20
+2025-11-09_boise_st_san_francisco,Boise St.,00,"Thompson, Tatum",True,29,5,12,0.417,0,0,,7,8,0.875,1,2,3,4,2,4,0,3,17
+2025-11-09_boise_st_san_francisco,Boise St.,14,"Hansen, Mya",True,32,4,6,0.667,2,3,0.667,2,2,1.0,0,2,2,4,9,5,1,1,12
+2025-11-09_boise_st_san_francisco,Boise St.,9,"Hutton, Libby",True,29,4,10,0.4,0,0,,0,0,,3,6,9,3,1,2,1,0,8
+2025-11-09_boise_st_san_francisco,Boise St.,10,"Cooke, Madeline",False,18,2,4,0.5,0,0,,0,0,,0,3,3,0,0,0,2,0,4
+2025-11-09_boise_st_san_francisco,Boise St.,3,"Maldonado, Morgan",False,12,0,0,,0,0,,0,0,,0,4,4,0,0,2,0,1,0
+2025-11-09_boise_st_san_francisco,Boise St.,35,"Thompson, Keirra",False,5,0,0,,0,0,,0,0,,0,0,0,2,0,1,0,2,0
+2025-11-09_boise_st_san_francisco,Boise St.,21,"Borcherding, Mason",False,3,0,2,0.0,0,0,,0,0,,2,2,4,1,0,1,0,0,0
+2025-11-09_boise_st_san_francisco,Boise St.,24,"Lewis, Jayda",False,3,0,0,,0,0,,0,0,,0,0,0,0,1,2,0,0,0
+2025-11-09_boise_st_san_francisco,Boise St.,7,"Harms, Izzie",False,2,0,0,,0,0,,0,0,,0,0,0,1,0,1,0,0,0
+2025-11-09_boise_st_san_francisco,Boise St.,25,"Steadman, Josee",False,1,0,2,0.0,0,1,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-09_boise_st_san_francisco,Boise St.,22,"Garza, Kenna",False,0,0,0,,0,0,,0,0,,0,0,0,2,0,0,0,0,0
+2025-11-09_boise_st_san_francisco,Boise St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,5,9,0,0,3,0,0,0
+2025-11-14_san_francisco_seton_hall,Seton Hall,00,"Eads, Jada",True,30,5,12,0.417,2,7,0.286,4,4,1.0,0,3,3,3,5,5,0,1,16
+2025-11-14_san_francisco_seton_hall,Seton Hall,5,"Catalon, Savannah",True,33,5,8,0.625,1,2,0.5,4,4,1.0,4,3,7,3,3,1,0,4,15
+2025-11-14_san_francisco_seton_hall,Seton Hall,23,"Codio, Jordana",True,16,5,11,0.455,1,3,0.333,3,3,1.0,1,0,1,3,0,1,0,0,14
+2025-11-14_san_francisco_seton_hall,Seton Hall,6,"Valenzuela, Mariana",True,27,5,8,0.625,0,1,0.0,0,2,0.0,2,7,9,3,1,6,0,0,10
+2025-11-14_san_francisco_seton_hall,Seton Hall,21,"Pinkney, Shailyn",True,25,1,4,0.25,0,1,0.0,0,0,,0,2,2,2,3,2,0,2,2
+2025-11-14_san_francisco_seton_hall,Seton Hall,10,"Rust, Cam",False,19,4,6,0.667,0,0,,2,2,1.0,1,2,3,2,3,4,0,1,10
+2025-11-14_san_francisco_seton_hall,Seton Hall,8,"Bishop, Zahara",False,19,4,10,0.4,1,2,0.5,0,0,,2,2,4,1,1,0,0,1,9
+2025-11-14_san_francisco_seton_hall,Seton Hall,13,"Hunter, Messiah",False,18,0,0,,0,0,,2,2,1.0,0,4,4,1,1,2,0,1,2
+2025-11-14_san_francisco_seton_hall,Seton Hall,2,"Craft, Ja'kahla",False,9,1,4,0.25,0,2,0.0,0,1,0.0,0,1,1,2,0,0,0,1,2
+2025-11-14_san_francisco_seton_hall,Seton Hall,3,"Hall-rosa, Natalia",False,4,0,2,0.0,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2025-11-14_san_francisco_seton_hall,Seton Hall,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,4,7,0,0,3,0,0,0
+2025-11-14_san_francisco_seton_hall,San Francisco,9,"Cargol, Aina",True,25,7,12,0.583,2,3,0.667,4,5,0.8,0,3,3,4,3,6,0,1,20
+2025-11-14_san_francisco_seton_hall,San Francisco,23,"Edokpaigbe, Candy",True,24,4,7,0.571,1,2,0.5,2,4,0.5,1,3,4,3,2,4,0,5,11
+2025-11-14_san_francisco_seton_hall,San Francisco,22,"Tirado, Paula",True,22,3,6,0.5,1,3,0.333,0,0,,0,0,0,2,1,2,0,1,7
+2025-11-14_san_francisco_seton_hall,San Francisco,3,"Mouriño, Noelia",True,22,3,5,0.6,0,0,,0,0,,0,3,3,4,1,7,1,0,6
+2025-11-14_san_francisco_seton_hall,San Francisco,2,"Neira, Mara",True,21,1,7,0.143,1,5,0.2,0,0,,0,3,3,2,3,0,0,0,3
+2025-11-14_san_francisco_seton_hall,San Francisco,12,"Taušová, Nataša",False,24,5,11,0.455,2,5,0.4,1,2,0.5,2,3,5,4,0,1,0,2,13
+2025-11-14_san_francisco_seton_hall,San Francisco,14,"Ugwah, Michelle",False,21,1,5,0.2,0,0,,0,0,,2,0,2,0,0,1,0,1,2
+2025-11-14_san_francisco_seton_hall,San Francisco,4,"McIntyre, Meghan",False,19,1,4,0.25,0,2,0.0,0,0,,1,4,5,4,3,4,0,1,2
+2025-11-14_san_francisco_seton_hall,San Francisco,32,"Priestley, Sophia",False,7,0,0,,0,0,,2,2,1.0,0,1,1,1,0,0,0,0,2
+2025-11-14_san_francisco_seton_hall,San Francisco,7,"Ferrara Horne, Nevaeh",False,10,0,1,0.0,0,0,,0,0,,2,0,2,2,0,3,0,0,0
+2025-11-14_san_francisco_seton_hall,San Francisco,10,"Pateman, Amy",False,5,0,2,0.0,0,2,0.0,0,0,,0,0,0,1,0,0,0,0,0
+2025-11-14_san_francisco_seton_hall,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,4,5,0,0,0,0,0,0
+2025-11-16_san_francisco_uc_san_diego,UC San Diego,11,"Condron, Erin",True,38,8,11,0.727,0,0,,2,2,1.0,2,4,6,4,3,2,0,1,18
+2025-11-16_san_francisco_uc_san_diego,UC San Diego,15,"Ma, Sabrina",True,40,3,10,0.3,2,7,0.286,2,3,0.667,0,4,4,4,2,0,1,1,10
+2025-11-16_san_francisco_uc_san_diego,UC San Diego,4,"Rose, Makayla",True,29,3,7,0.429,1,2,0.5,0,0,,1,0,1,1,1,2,0,2,7
+2025-11-16_san_francisco_uc_san_diego,UC San Diego,10,"Maxie, Dymonique",True,23,1,12,0.083,0,1,0.0,4,4,1.0,1,1,2,3,1,2,1,2,6
+2025-11-16_san_francisco_uc_san_diego,UC San Diego,24,"Price, Niya",True,7,0,1,0.0,0,1,0.0,1,2,0.5,0,0,0,1,0,1,0,0,1
+2025-11-16_san_francisco_uc_san_diego,UC San Diego,12,"Smith, Rosa",False,30,4,7,0.571,1,2,0.5,4,4,1.0,1,4,5,2,2,6,0,2,13
+2025-11-16_san_francisco_uc_san_diego,UC San Diego,2,"Fairwell, Michaela",False,22,5,16,0.312,2,9,0.222,0,2,0.0,1,4,5,2,0,3,0,3,12
+2025-11-16_san_francisco_uc_san_diego,UC San Diego,25,"Mahan, Junae",False,7,1,2,0.5,0,0,,0,0,,0,0,0,1,0,0,0,0,2
+2025-11-16_san_francisco_uc_san_diego,UC San Diego,21,"Polocheck, Nicki",False,4,0,0,,0,0,,0,0,,0,1,1,1,0,1,0,0,0
+2025-11-16_san_francisco_uc_san_diego,UC San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,5,6,0,0,1,0,0,0
+2025-11-16_san_francisco_uc_san_diego,San Francisco,23,"Edokpaigbe, Candy",True,38,9,19,0.474,0,5,0.0,6,7,0.857,4,6,10,2,1,5,0,2,24
+2025-11-16_san_francisco_uc_san_diego,San Francisco,3,"Mouriño, Noelia",True,27,8,14,0.571,0,3,0.0,0,0,,2,6,8,1,3,6,0,0,16
+2025-11-16_san_francisco_uc_san_diego,San Francisco,9,"Cargol, Aina",True,34,4,7,0.571,2,5,0.4,1,2,0.5,3,3,6,3,6,2,1,1,11
+2025-11-16_san_francisco_uc_san_diego,San Francisco,12,"Taušová, Nataša",True,22,2,4,0.5,0,1,0.0,0,0,,1,4,5,4,3,3,1,1,4
+2025-11-16_san_francisco_uc_san_diego,San Francisco,22,"Tirado, Paula",True,17,1,6,0.167,0,3,0.0,0,0,,0,0,0,1,2,1,0,2,2
+2025-11-16_san_francisco_uc_san_diego,San Francisco,2,"Neira, Mara",False,19,3,10,0.3,2,6,0.333,2,2,1.0,1,5,6,2,3,0,0,2,10
+2025-11-16_san_francisco_uc_san_diego,San Francisco,4,"McIntyre, Meghan",False,26,4,7,0.571,1,3,0.333,0,0,,2,6,8,1,4,1,0,1,9
+2025-11-16_san_francisco_uc_san_diego,San Francisco,14,"Ugwah, Michelle",False,13,2,3,0.667,0,0,,0,0,,0,3,3,2,0,3,0,0,4
+2025-11-16_san_francisco_uc_san_diego,San Francisco,7,"Ferrara Horne, Nevaeh",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-16_san_francisco_uc_san_diego,San Francisco,32,"Priestley, Sophia",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2025-11-16_san_francisco_uc_san_diego,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,3,4,0,0,2,0,0,0
+2025-11-20_long_beach_st_san_francisco,San Francisco,23,"Edokpaigbe, Candy",True,38,9,16,0.562,0,4,0.0,4,7,0.571,4,3,7,4,4,4,0,3,22
+2025-11-20_long_beach_st_san_francisco,San Francisco,3,"Mouriño, Noelia",True,24,4,11,0.364,0,1,0.0,1,2,0.5,8,9,17,2,3,2,0,1,9
+2025-11-20_long_beach_st_san_francisco,San Francisco,2,"Neira, Mara",True,20,3,11,0.273,2,9,0.222,0,0,,0,1,1,0,1,1,0,1,8
+2025-11-20_long_beach_st_san_francisco,San Francisco,9,"Cargol, Aina",True,37,2,13,0.154,1,5,0.2,0,0,,0,1,1,0,4,1,0,2,5
+2025-11-20_long_beach_st_san_francisco,San Francisco,12,"Taušová, Nataša",True,20,2,5,0.4,1,3,0.333,0,0,,1,2,3,5,1,2,0,1,5
+2025-11-20_long_beach_st_san_francisco,San Francisco,22,"Tirado, Paula",False,23,3,5,0.6,1,1,1.0,1,1,1.0,0,4,4,1,2,0,0,2,8
+2025-11-20_long_beach_st_san_francisco,San Francisco,14,"Ugwah, Michelle",False,17,3,6,0.5,0,0,,0,1,0.0,0,3,3,1,3,2,2,1,6
+2025-11-20_long_beach_st_san_francisco,San Francisco,4,"McIntyre, Meghan",False,17,1,4,0.25,1,2,0.5,0,0,,0,3,3,3,0,0,0,2,3
+2025-11-20_long_beach_st_san_francisco,San Francisco,7,"Ferrara Horne, Nevaeh",False,4,1,1,1.0,0,0,,0,0,,0,1,1,1,0,1,1,0,2
+2025-11-20_long_beach_st_san_francisco,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,1,1,0,0,3,0,0,0
+2025-11-20_long_beach_st_san_francisco,Long Beach St.,30,"Jones-brown, Jaquoia",True,40,7,15,0.467,2,2,1.0,4,6,0.667,1,9,10,2,5,3,0,2,20
+2025-11-20_long_beach_st_san_francisco,Long Beach St.,32,"Pukis, Brynna",True,35,6,12,0.5,2,8,0.25,0,0,,1,4,5,1,3,2,0,1,14
+2025-11-20_long_beach_st_san_francisco,Long Beach St.,42,"Oliva Fernandez, Judit",True,31,3,8,0.375,0,2,0.0,3,4,0.75,0,3,3,3,2,5,1,0,9
+2025-11-20_long_beach_st_san_francisco,Long Beach St.,5,"Ka, Kennan",True,27,4,9,0.444,0,2,0.0,0,0,,1,2,3,2,1,3,0,1,8
+2025-11-20_long_beach_st_san_francisco,Long Beach St.,13,"Pepe, Khylee",True,31,0,7,0.0,0,0,,2,2,1.0,2,2,4,0,1,2,1,3,2
+2025-11-20_long_beach_st_san_francisco,Long Beach St.,25,"Mack, Morgan",False,9,1,3,0.333,0,1,0.0,0,0,,0,0,0,4,1,2,0,0,2
+2025-11-20_long_beach_st_san_francisco,Long Beach St.,00,"Cummings, Lauren",False,13,0,1,0.0,0,1,0.0,0,0,,0,6,6,2,0,0,0,1,0
+2025-11-20_long_beach_st_san_francisco,Long Beach St.,33,"Wright, Haley",False,9,0,0,,0,0,,0,0,,1,0,1,2,0,0,0,0,0
+2025-11-20_long_beach_st_san_francisco,Long Beach St.,10,"Reynoso, Christy",False,4,0,1,0.0,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-20_long_beach_st_san_francisco,Long Beach St.,2,"Akot, Rosie",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,2,0,0,0
+2025-11-20_long_beach_st_san_francisco,Long Beach St.,3,"Samuel  - Afolabi, Tairat",False,0,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-20_long_beach_st_san_francisco,Long Beach St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,0,1,0,0,1,0,0,0
+2025-11-25_san_francisco_lehigh,Lehigh,34,"Fandre, Lily",True,27,8,19,0.421,1,7,0.143,10,11,0.909,3,3,6,4,0,1,0,1,27
+2025-11-25_san_francisco_lehigh,Lehigh,32,"Edwards, Leia",True,31,5,14,0.357,2,5,0.4,3,4,0.75,6,3,9,4,3,4,0,3,15
+2025-11-25_san_francisco_lehigh,Lehigh,23,"Lovette, Gracyn",True,38,5,11,0.455,3,8,0.375,0,0,,1,3,4,5,3,0,0,1,13
+2025-11-25_san_francisco_lehigh,Lehigh,15,"Ozzauto, Jessie",True,36,3,8,0.375,1,4,0.25,2,2,1.0,2,2,4,4,8,3,0,0,9
+2025-11-25_san_francisco_lehigh,Lehigh,12,"Bramer, Belle",True,21,4,7,0.571,1,3,0.333,0,0,,2,0,2,5,3,0,0,1,9
+2025-11-25_san_francisco_lehigh,Lehigh,5,"Reddy, Alana",False,18,3,6,0.5,2,5,0.4,0,0,,0,1,1,5,2,3,0,2,8
+2025-11-25_san_francisco_lehigh,Lehigh,10,"Hurt, Katie",False,9,1,3,0.333,1,3,0.333,0,0,,0,2,2,1,0,1,0,0,3
+2025-11-25_san_francisco_lehigh,Lehigh,33,"Mjaanes, Elizabeth",False,20,0,4,0.0,0,3,0.0,0,0,,0,4,4,1,1,3,1,0,0
+2025-11-25_san_francisco_lehigh,Lehigh,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,1,2,0,0,1,0,0,0
+2025-11-25_san_francisco_lehigh,San Francisco,23,"Edokpaigbe, Candy",True,38,11,14,0.786,1,2,0.5,2,3,0.667,1,4,5,1,2,4,2,0,25
+2025-11-25_san_francisco_lehigh,San Francisco,2,"Neira, Mara",True,25,6,15,0.4,5,12,0.417,2,2,1.0,0,6,6,4,3,3,0,1,19
+2025-11-25_san_francisco_lehigh,San Francisco,9,"Cargol, Aina",True,38,1,1,1.0,0,0,,7,11,0.636,1,5,6,3,10,5,1,0,9
+2025-11-25_san_francisco_lehigh,San Francisco,12,"Taušová, Nataša",True,30,2,7,0.286,1,4,0.25,1,2,0.5,0,1,1,4,0,2,1,1,6
+2025-11-25_san_francisco_lehigh,San Francisco,3,"Mouriño, Noelia",True,18,2,6,0.333,0,1,0.0,0,0,,3,1,4,5,3,1,0,1,4
+2025-11-25_san_francisco_lehigh,San Francisco,24,"Castro, Sol",False,15,6,9,0.667,0,0,,2,4,0.5,3,5,8,3,0,1,0,0,14
+2025-11-25_san_francisco_lehigh,San Francisco,22,"Tirado, Paula",False,17,3,4,0.75,1,2,0.5,2,4,0.5,1,1,2,1,1,0,0,3,9
+2025-11-25_san_francisco_lehigh,San Francisco,4,"McIntyre, Meghan",False,13,0,0,,0,0,,3,6,0.5,0,1,1,1,1,3,0,0,3
+2025-11-25_san_francisco_lehigh,San Francisco,7,"Ferrara Horne, Nevaeh",False,6,0,0,,0,0,,0,0,,0,2,2,1,0,0,0,0,0
+2025-11-25_san_francisco_lehigh,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,2,4,0,0,1,0,0,0
+2025-11-30_san_francisco_cal_st_monterey_bay,Cal St. Monterey Bay,12,"Moreno Ortiz, Jennifer",True,23,3,7,0.429,2,5,0.4,1,2,0.5,0,2,2,1,1,5,0,2,9
+2025-11-30_san_francisco_cal_st_monterey_bay,Cal St. Monterey Bay,5,"Slocum, A'ajah",True,31,4,7,0.571,0,0,,0,0,,1,2,3,0,2,5,1,3,8
+2025-11-30_san_francisco_cal_st_monterey_bay,Cal St. Monterey Bay,20,"McNeal, Jayden",True,14,1,7,0.143,0,1,0.0,3,4,0.75,1,0,1,2,1,0,0,0,5
+2025-11-30_san_francisco_cal_st_monterey_bay,Cal St. Monterey Bay,2,"Walls, Riley",True,25,0,4,0.0,0,1,0.0,2,2,1.0,0,3,3,2,1,0,0,2,2
+2025-11-30_san_francisco_cal_st_monterey_bay,Cal St. Monterey Bay,13,"Whitfield, Cheyanne",True,14,0,6,0.0,0,2,0.0,0,0,,2,0,2,3,1,0,0,1,0
+2025-11-30_san_francisco_cal_st_monterey_bay,Cal St. Monterey Bay,1,"Young, Aliyah",False,18,3,6,0.5,3,5,0.6,0,0,,0,0,0,1,0,0,0,1,9
+2025-11-30_san_francisco_cal_st_monterey_bay,Cal St. Monterey Bay,22,"Lucero, Malaysia",False,12,3,8,0.375,0,0,,1,2,0.5,2,1,3,0,0,1,0,0,7
+2025-11-30_san_francisco_cal_st_monterey_bay,Cal St. Monterey Bay,11,"Sarabia, Leah",False,18,2,6,0.333,1,3,0.333,0,0,,1,4,5,2,3,2,0,1,5
+2025-11-30_san_francisco_cal_st_monterey_bay,Cal St. Monterey Bay,3,"Thompson Lopez, Demi",False,11,0,1,0.0,0,1,0.0,4,4,1.0,1,1,2,2,0,0,0,1,4
+2025-11-30_san_francisco_cal_st_monterey_bay,Cal St. Monterey Bay,10,"Pahukoa, Ledjan",False,7,1,2,0.5,1,2,0.5,0,0,,0,0,0,1,0,0,0,0,3
+2025-11-30_san_francisco_cal_st_monterey_bay,Cal St. Monterey Bay,24,"Pena, Janelle",False,12,0,2,0.0,0,0,,0,0,,0,0,0,1,0,1,0,0,0
+2025-11-30_san_francisco_cal_st_monterey_bay,Cal St. Monterey Bay,15,"Capers, Sasha",False,6,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-30_san_francisco_cal_st_monterey_bay,Cal St. Monterey Bay,23,"Johnson, Jolie",False,5,0,2,0.0,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-30_san_francisco_cal_st_monterey_bay,Cal St. Monterey Bay,00,"Bouton, Brianna",False,4,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-30_san_francisco_cal_st_monterey_bay,Cal St. Monterey Bay,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,0,2,0,0,4,0,0,0
+2025-11-30_san_francisco_cal_st_monterey_bay,San Francisco,23,"Edokpaigbe, Candy",True,14,6,9,0.667,2,4,0.5,0,0,,1,0,1,0,0,0,0,0,14
+2025-11-30_san_francisco_cal_st_monterey_bay,San Francisco,2,"Neira, Mara",True,10,3,4,0.75,0,1,0.0,1,1,1.0,0,4,4,0,3,1,0,1,7
+2025-11-30_san_francisco_cal_st_monterey_bay,San Francisco,3,"Mouriño, Noelia",True,16,2,6,0.333,0,0,,2,2,1.0,2,4,6,2,1,1,0,1,6
+2025-11-30_san_francisco_cal_st_monterey_bay,San Francisco,12,"Taušová, Nataša",True,16,0,2,0.0,0,1,0.0,0,0,,1,4,5,0,0,2,0,3,0
+2025-11-30_san_francisco_cal_st_monterey_bay,San Francisco,9,"Cargol, Aina",True,13,0,0,,0,0,,0,0,,0,1,1,0,2,3,0,0,0
+2025-11-30_san_francisco_cal_st_monterey_bay,San Francisco,4,"McIntyre, Meghan",False,24,7,8,0.875,2,3,0.667,0,0,,3,1,4,0,7,3,0,1,16
+2025-11-30_san_francisco_cal_st_monterey_bay,San Francisco,24,"Castro, Sol",False,14,4,8,0.5,0,0,,5,6,0.833,3,4,7,1,0,2,2,0,13
+2025-11-30_san_francisco_cal_st_monterey_bay,San Francisco,7,"Ferrara Horne, Nevaeh",False,23,4,5,0.8,2,2,1.0,1,2,0.5,0,2,2,1,1,1,1,1,11
+2025-11-30_san_francisco_cal_st_monterey_bay,San Francisco,10,"Pateman, Amy",False,16,4,6,0.667,1,2,0.5,0,0,,0,2,2,4,1,1,0,0,9
+2025-11-30_san_francisco_cal_st_monterey_bay,San Francisco,22,"Tirado, Paula",False,23,2,4,0.5,1,2,0.5,2,2,1.0,0,2,2,1,4,3,0,2,7
+2025-11-30_san_francisco_cal_st_monterey_bay,San Francisco,21,"Williams, Olivia",False,14,1,3,0.333,0,1,0.0,5,6,0.833,0,3,3,0,0,1,0,2,7
+2025-11-30_san_francisco_cal_st_monterey_bay,San Francisco,32,"Priestley, Sophia",False,17,1,2,0.5,0,1,0.0,0,0,,0,3,3,1,2,0,0,1,2
+2025-11-30_san_francisco_cal_st_monterey_bay,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,1,3,0,0,0,0,0,0
+2025-12-05_nevada_san_francisco,San Francisco,23,"Edokpaigbe, Candy",True,29,7,12,0.583,0,2,0.0,2,2,1.0,2,3,5,2,2,2,2,0,16
+2025-12-05_nevada_san_francisco,San Francisco,9,"Cargol, Aina",True,23,3,5,0.6,1,1,1.0,2,2,1.0,1,3,4,1,4,1,0,2,9
+2025-12-05_nevada_san_francisco,San Francisco,3,"Mouriño, Noelia",True,24,4,9,0.444,0,0,,0,0,,3,7,10,1,1,3,1,1,8
+2025-12-05_nevada_san_francisco,San Francisco,12,"Taušová, Nataša",True,19,2,8,0.25,1,5,0.2,1,2,0.5,2,1,3,2,1,2,0,1,6
+2025-12-05_nevada_san_francisco,San Francisco,2,"Neira, Mara",True,23,2,6,0.333,1,4,0.25,0,0,,0,4,4,0,2,2,0,2,5
+2025-12-05_nevada_san_francisco,San Francisco,4,"McIntyre, Meghan",False,27,5,12,0.417,1,5,0.2,0,1,0.0,0,3,3,0,0,0,0,1,11
+2025-12-05_nevada_san_francisco,San Francisco,7,"Ferrara Horne, Nevaeh",False,11,3,5,0.6,0,1,0.0,2,2,1.0,1,0,1,2,0,2,0,0,8
+2025-12-05_nevada_san_francisco,San Francisco,21,"Williams, Olivia",False,10,1,4,0.25,0,0,,2,2,1.0,1,1,2,1,0,0,1,1,4
+2025-12-05_nevada_san_francisco,San Francisco,24,"Castro, Sol",False,10,0,5,0.0,0,0,,1,4,0.25,2,1,3,2,1,0,0,0,1
+2025-12-05_nevada_san_francisco,San Francisco,22,"Tirado, Paula",False,17,0,3,0.0,0,2,0.0,0,0,,0,1,1,1,1,1,0,0,0
+2025-12-05_nevada_san_francisco,San Francisco,10,"Pateman, Amy",False,4,0,0,,0,0,,0,0,,0,1,1,0,0,1,0,1,0
+2025-12-05_nevada_san_francisco,San Francisco,32,"Priestley, Sophia",False,3,0,1,0.0,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2025-12-05_nevada_san_francisco,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,9,4,13,0,0,1,0,0,0
+2025-12-05_nevada_san_francisco,Nevada,10,"Williams, Chloe",True,20,4,7,0.571,0,0,,1,1,1.0,2,2,4,1,0,4,3,1,9
+2025-12-05_nevada_san_francisco,Nevada,1,"Young, Ahrray",True,29,4,12,0.333,0,2,0.0,0,2,0.0,2,5,7,3,3,1,0,1,8
+2025-12-05_nevada_san_francisco,Nevada,24,"Durley, Skylar",True,24,3,9,0.333,0,1,0.0,0,0,,2,1,3,2,3,6,0,1,6
+2025-12-05_nevada_san_francisco,Nevada,2,"Sullivan, Izzy",True,28,1,3,0.333,0,1,0.0,2,2,1.0,0,3,3,0,1,1,0,1,4
+2025-12-05_nevada_san_francisco,Nevada,23,"Carter, Makayla",True,18,1,6,0.167,0,0,,0,0,,1,3,4,3,1,1,0,0,2
+2025-12-05_nevada_san_francisco,Nevada,13,"Raidaveta, Amelia",False,6,2,3,0.667,0,0,,2,2,1.0,1,1,2,0,2,0,2,0,6
+2025-12-05_nevada_san_francisco,Nevada,4,"Ramos, Gabby",False,24,2,8,0.25,0,3,0.0,0,4,0.0,0,2,2,0,1,3,0,1,4
+2025-12-05_nevada_san_francisco,Nevada,3,"Jones, Imbie",False,16,1,5,0.2,0,0,,0,0,,0,2,2,1,0,3,0,0,2
+2025-12-05_nevada_san_francisco,Nevada,34,"Hicks, Kendra",False,13,1,2,0.5,0,0,,0,0,,1,2,3,3,0,0,0,0,2
+2025-12-05_nevada_san_francisco,Nevada,14,"Rosarion, Maia",False,12,1,2,0.5,0,1,0.0,0,2,0.0,1,1,2,2,0,1,1,0,2
+2025-12-05_nevada_san_francisco,Nevada,00,"Bloom, Tahj-monet",False,6,0,2,0.0,0,1,0.0,0,0,,0,2,2,0,0,1,0,0,0
+2025-12-05_nevada_san_francisco,Nevada,11,"Backus, Britain",False,4,0,1,0.0,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-05_nevada_san_francisco,Nevada,TM,TEAM,False,0,0,0,,0,0,,0,0,,5,2,7,0,0,0,0,0,0
+2025-12-06_arizona_st_san_francisco,San Francisco,23,"Edokpaigbe, Candy",True,34,5,15,0.333,0,3,0.0,7,7,1.0,4,1,5,3,2,2,0,5,17
+2025-12-06_arizona_st_san_francisco,San Francisco,3,"Mouriño, Noelia",True,24,2,5,0.4,0,1,0.0,0,0,,1,2,3,3,2,5,0,0,4
+2025-12-06_arizona_st_san_francisco,San Francisco,2,"Neira, Mara",True,17,1,5,0.2,1,4,0.25,0,0,,0,1,1,1,0,2,0,1,3
+2025-12-06_arizona_st_san_francisco,San Francisco,12,"Taušová, Nataša",True,20,1,6,0.167,0,4,0.0,0,0,,0,3,3,2,0,4,0,1,2
+2025-12-06_arizona_st_san_francisco,San Francisco,9,"Cargol, Aina",True,19,0,2,0.0,0,1,0.0,0,0,,0,2,2,1,3,6,0,1,0
+2025-12-06_arizona_st_san_francisco,San Francisco,21,"Williams, Olivia",False,15,2,5,0.4,1,3,0.333,0,0,,1,2,3,1,1,2,1,0,5
+2025-12-06_arizona_st_san_francisco,San Francisco,24,"Castro, Sol",False,12,2,2,1.0,0,0,,0,1,0.0,0,1,1,4,0,4,0,0,4
+2025-12-06_arizona_st_san_francisco,San Francisco,4,"McIntyre, Meghan",False,24,1,2,0.5,1,2,0.5,0,0,,0,1,1,0,1,2,0,2,3
+2025-12-06_arizona_st_san_francisco,San Francisco,10,"Pateman, Amy",False,12,1,2,0.5,1,2,0.5,0,0,,1,1,2,2,2,1,0,0,3
+2025-12-06_arizona_st_san_francisco,San Francisco,7,"Ferrara Horne, Nevaeh",False,11,1,2,0.5,0,1,0.0,1,1,1.0,0,2,2,0,0,3,0,0,3
+2025-12-06_arizona_st_san_francisco,San Francisco,22,"Tirado, Paula",False,8,0,2,0.0,0,1,0.0,0,0,,0,0,0,2,0,0,0,0,0
+2025-12-06_arizona_st_san_francisco,San Francisco,32,"Priestley, Sophia",False,4,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2025-12-06_arizona_st_san_francisco,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,2,3,0,0,0,0,0,0
+2025-12-06_arizona_st_san_francisco,Arizona St.,21,"Brackens, McKinna",True,31,6,8,0.75,1,1,1.0,2,4,0.5,0,4,4,2,2,1,0,1,15
+2025-12-06_arizona_st_san_francisco,Arizona St.,00,"Elliott, Gabby",True,32,4,14,0.286,1,4,0.25,1,2,0.5,1,4,5,2,2,3,1,8,10
+2025-12-06_arizona_st_san_francisco,Arizona St.,14,"Carrera, Heloisa",True,23,4,5,0.8,0,0,,0,0,,0,2,2,2,1,2,0,0,8
+2025-12-06_arizona_st_san_francisco,Arizona St.,13,"Poa, Last-tear",True,18,2,5,0.4,2,3,0.667,1,2,0.5,0,1,1,2,2,5,0,2,7
+2025-12-06_arizona_st_san_francisco,Arizona St.,11,"Washenitz, Marley",True,37,1,5,0.2,0,2,0.0,3,4,0.75,0,4,4,2,6,6,0,2,5
+2025-12-06_arizona_st_san_francisco,Arizona St.,4,"Lovett, Jyah",False,25,7,9,0.778,1,2,0.5,0,0,,1,1,2,1,3,2,0,3,15
+2025-12-06_arizona_st_san_francisco,Arizona St.,24,"Davenport, Deborah",False,18,2,2,1.0,0,0,,1,2,0.5,2,3,5,2,1,3,0,1,5
+2025-12-06_arizona_st_san_francisco,Arizona St.,1,"Williams, Amaya",False,7,1,3,0.333,0,1,0.0,0,0,,0,0,0,1,0,0,0,0,2
+2025-12-06_arizona_st_san_francisco,Arizona St.,7,"Fantini, Martina",False,4,0,1,0.0,0,0,,0,0,,1,2,3,0,0,0,0,0,0
+2025-12-06_arizona_st_san_francisco,Arizona St.,12,"Moore, Makayla",False,3,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,1,0
+2025-12-06_arizona_st_san_francisco,Arizona St.,22,"Grice, Timya",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-06_arizona_st_san_francisco,Arizona St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,4,7,0,0,2,0,0,0
+2025-12-13_san_francisco_colorado_st,Colorado St.,3,"Bargesser, Lexus",True,34,7,14,0.5,1,4,0.25,7,10,0.7,2,6,8,3,4,2,0,3,22
+2025-12-13_san_francisco_colorado_st,Colorado St.,30,"Ronsiek, Hannah",True,34,4,6,0.667,4,6,0.667,1,2,0.5,0,7,7,4,0,1,1,2,13
+2025-12-13_san_francisco_colorado_st,Colorado St.,1,"Froebe, Kloe",True,25,4,7,0.571,1,1,1.0,3,5,0.6,4,2,6,2,3,2,0,1,12
+2025-12-13_san_francisco_colorado_st,Colorado St.,2,"Carlson, Brooke",True,33,4,13,0.308,0,5,0.0,1,2,0.5,1,1,2,1,1,2,0,1,9
+2025-12-13_san_francisco_colorado_st,Colorado St.,6,"Deden, Lexi",True,17,0,2,0.0,0,0,,0,0,,0,4,4,4,0,2,0,1,0
+2025-12-13_san_francisco_colorado_st,Colorado St.,14,"Leimane, Marta",False,28,4,10,0.4,1,2,0.5,0,0,,0,3,3,1,1,1,0,1,9
+2025-12-13_san_francisco_colorado_st,Colorado St.,00,"Bragg, Madelyn",False,11,1,3,0.333,0,0,,2,2,1.0,1,0,1,3,0,0,0,0,4
+2025-12-13_san_francisco_colorado_st,Colorado St.,31,"Murphy, McKenna",False,18,0,4,0.0,0,3,0.0,0,0,,1,0,1,3,0,1,0,0,0
+2025-12-13_san_francisco_colorado_st,Colorado St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,3,5,0,0,0,0,0,0
+2025-12-13_san_francisco_colorado_st,San Francisco,12,"Taušová, Nataša",True,28,4,9,0.444,2,5,0.4,4,6,0.667,1,4,5,3,2,1,0,1,14
+2025-12-13_san_francisco_colorado_st,San Francisco,23,"Edokpaigbe, Candy",True,26,2,10,0.2,0,2,0.0,5,6,0.833,2,3,5,1,0,3,0,1,9
+2025-12-13_san_francisco_colorado_st,San Francisco,9,"Cargol, Aina",True,29,3,6,0.5,2,5,0.4,0,0,,0,2,2,2,2,1,0,0,8
+2025-12-13_san_francisco_colorado_st,San Francisco,3,"Mouriño, Noelia",True,14,1,5,0.2,0,0,,0,0,,2,3,5,3,3,5,0,0,2
+2025-12-13_san_francisco_colorado_st,San Francisco,2,"Neira, Mara",True,23,0,4,0.0,0,3,0.0,0,0,,1,5,6,1,1,4,0,3,0
+2025-12-13_san_francisco_colorado_st,San Francisco,22,"Tirado, Paula",False,21,2,5,0.4,2,3,0.667,0,0,,0,3,3,1,1,3,0,0,6
+2025-12-13_san_francisco_colorado_st,San Francisco,21,"Williams, Olivia",False,15,2,5,0.4,0,0,,2,2,1.0,1,2,3,0,1,0,2,0,6
+2025-12-13_san_francisco_colorado_st,San Francisco,24,"Castro, Sol",False,12,1,4,0.25,0,0,,4,4,1.0,3,1,4,2,1,1,0,0,6
+2025-12-13_san_francisco_colorado_st,San Francisco,32,"Priestley, Sophia",False,8,0,0,,0,0,,1,2,0.5,0,3,3,0,1,0,0,0,1
+2025-12-13_san_francisco_colorado_st,San Francisco,4,"McIntyre, Meghan",False,8,0,1,0.0,0,1,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-13_san_francisco_colorado_st,San Francisco,7,"Ferrara Horne, Nevaeh",False,8,0,1,0.0,0,0,,0,0,,0,1,1,1,0,0,1,0,0
+2025-12-13_san_francisco_colorado_st,San Francisco,10,"Pateman, Amy",False,8,0,3,0.0,0,3,0.0,0,0,,0,0,0,0,0,0,0,1,0
+2025-12-13_san_francisco_colorado_st,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,0,2,0,0,1,0,0,0
+2025-12-17_san_francisco_sacramento_st,Sacramento St.,11,"Gray, Rubi",True,36,5,12,0.417,2,5,0.4,2,2,1.0,0,2,2,2,1,4,1,0,14
+2025-12-17_san_francisco_sacramento_st,Sacramento St.,1,"Versteeg, Benthe",True,39,2,10,0.2,1,2,0.5,6,8,0.75,1,8,9,2,5,8,1,1,11
+2025-12-17_san_francisco_sacramento_st,Sacramento St.,5,"Abiara, Elizabeth",True,22,3,3,1.0,0,0,,1,1,1.0,4,4,8,2,0,3,1,0,7
+2025-12-17_san_francisco_sacramento_st,Sacramento St.,2,"Picton, Natalie",True,38,1,11,0.091,0,3,0.0,1,2,0.5,1,3,4,1,2,4,2,1,3
+2025-12-17_san_francisco_sacramento_st,Sacramento St.,10,"Paananen, Pinja",True,13,1,1,1.0,1,1,1.0,0,0,,0,1,1,1,0,0,1,0,3
+2025-12-17_san_francisco_sacramento_st,Sacramento St.,8,"Salave'a, Keanna",False,19,5,10,0.5,1,4,0.25,0,0,,4,4,8,3,2,4,1,1,11
+2025-12-17_san_francisco_sacramento_st,Sacramento St.,3,"Taylor, Brooklyn",False,23,2,4,0.5,0,0,,2,2,1.0,1,6,7,1,2,2,0,1,6
+2025-12-17_san_francisco_sacramento_st,Sacramento St.,22,"Mandaquit, Jaety",False,4,0,1,0.0,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-17_san_francisco_sacramento_st,Sacramento St.,12,"Lual, Ajong",False,3,0,0,,0,0,,0,0,,0,0,0,1,0,2,0,0,0
+2025-12-17_san_francisco_sacramento_st,Sacramento St.,14,"Fa'i, Tali",False,3,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-17_san_francisco_sacramento_st,Sacramento St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,1,3,0,0,1,0,0,0
+2025-12-17_san_francisco_sacramento_st,San Francisco,9,"Cargol, Aina",True,35,6,10,0.6,2,5,0.4,0,0,,1,3,4,5,7,1,0,1,14
+2025-12-17_san_francisco_sacramento_st,San Francisco,23,"Edokpaigbe, Candy",True,34,5,20,0.25,0,3,0.0,2,2,1.0,2,2,4,1,4,2,1,1,12
+2025-12-17_san_francisco_sacramento_st,San Francisco,3,"Mouriño, Noelia",True,26,5,7,0.714,0,0,,0,0,,3,3,6,5,2,5,1,0,10
+2025-12-17_san_francisco_sacramento_st,San Francisco,2,"Neira, Mara",True,23,3,9,0.333,3,5,0.6,0,0,,0,6,6,0,0,1,0,4,9
+2025-12-17_san_francisco_sacramento_st,San Francisco,12,"Taušová, Nataša",True,22,2,9,0.222,0,4,0.0,0,0,,1,1,2,1,2,2,0,0,4
+2025-12-17_san_francisco_sacramento_st,San Francisco,4,"McIntyre, Meghan",False,24,1,3,0.333,0,0,,3,4,0.75,2,1,3,0,0,1,0,2,5
+2025-12-17_san_francisco_sacramento_st,San Francisco,22,"Tirado, Paula",False,17,2,6,0.333,1,3,0.333,0,0,,1,0,1,0,1,1,0,1,5
+2025-12-17_san_francisco_sacramento_st,San Francisco,24,"Castro, Sol",False,11,1,4,0.25,0,0,,0,0,,1,1,2,4,2,2,0,0,2
+2025-12-17_san_francisco_sacramento_st,San Francisco,21,"Williams, Olivia",False,5,0,1,0.0,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-17_san_francisco_sacramento_st,San Francisco,7,"Ferrara Horne, Nevaeh",False,3,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,1,0
+2025-12-17_san_francisco_sacramento_st,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,3,7,0,0,0,0,0,0
+2025-12-28_san_francisco_oregon_st,Oregon St.,3,"Villa, Jenna",True,33,8,16,0.5,3,6,0.5,5,5,1.0,0,6,6,1,3,2,1,1,24
+2025-12-28_san_francisco_oregon_st,Oregon St.,1,"Shuler, Kennedie",True,34,8,16,0.5,0,0,,3,4,0.75,2,3,5,3,4,2,1,1,19
+2025-12-28_san_francisco_oregon_st,Oregon St.,4,"Schimel, Ally",True,27,3,5,0.6,3,3,1.0,0,0,,0,4,4,0,2,0,0,1,9
+2025-12-28_san_francisco_oregon_st,Oregon St.,00,"Bolden, Tiara",True,25,1,8,0.125,0,4,0.0,6,8,0.75,1,4,5,3,1,2,0,2,8
+2025-12-28_san_francisco_oregon_st,Oregon St.,15,"Williamson, Lizzy",True,16,2,2,1.0,0,0,,0,0,,1,2,3,1,1,2,0,0,4
+2025-12-28_san_francisco_oregon_st,Oregon St.,22,"Alonso, Lara",False,14,2,3,0.667,1,1,1.0,0,0,,0,0,0,1,0,3,1,0,5
+2025-12-28_san_francisco_oregon_st,Oregon St.,32,"Sow, Nene",False,20,1,2,0.5,0,0,,1,2,0.5,2,8,10,3,0,2,3,0,3
+2025-12-28_san_francisco_oregon_st,Oregon St.,25,"Lindemans, Keira",False,14,1,2,0.5,0,0,,0,0,,0,1,1,2,2,1,0,1,2
+2025-12-28_san_francisco_oregon_st,Oregon St.,31,"Vecina, Cloe",False,17,0,1,0.0,0,0,,0,0,,0,0,0,2,2,3,0,1,0
+2025-12-28_san_francisco_oregon_st,Oregon St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,2,4,0,0,1,0,0,0
+2025-12-28_san_francisco_oregon_st,San Francisco,9,"Cargol, Aina",True,39,5,12,0.417,2,3,0.667,3,4,0.75,0,2,2,3,1,3,0,1,15
+2025-12-28_san_francisco_oregon_st,San Francisco,23,"Edokpaigbe, Candy",True,34,3,9,0.333,0,1,0.0,8,8,1.0,3,3,6,4,2,2,0,0,14
+2025-12-28_san_francisco_oregon_st,San Francisco,3,"Mouriño, Noelia",True,24,5,10,0.5,0,1,0.0,2,2,1.0,1,2,3,4,3,1,0,1,12
+2025-12-28_san_francisco_oregon_st,San Francisco,2,"Neira, Mara",True,28,2,8,0.25,1,6,0.167,0,0,,0,5,5,1,1,2,0,0,5
+2025-12-28_san_francisco_oregon_st,San Francisco,4,"McIntyre, Meghan",True,15,2,3,0.667,0,1,0.0,0,0,,2,4,6,1,1,1,0,3,4
+2025-12-28_san_francisco_oregon_st,San Francisco,12,"Taušová, Nataša",False,27,5,9,0.556,1,2,0.5,0,0,,1,0,1,4,1,2,0,0,11
+2025-12-28_san_francisco_oregon_st,San Francisco,22,"Tirado, Paula",False,17,1,4,0.25,0,1,0.0,0,0,,0,5,5,1,1,3,0,1,2
+2025-12-28_san_francisco_oregon_st,San Francisco,24,"Castro, Sol",False,16,1,6,0.167,0,0,,0,1,0.0,0,0,0,1,1,0,0,1,2
+2025-12-28_san_francisco_oregon_st,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,1,2,0,0,0,0,0,0
+2025-12-30_san_francisco_portland,Portland,2,"Ananiev, Dyani",True,26,6,9,0.667,4,5,0.8,0,0,,0,3,3,3,1,4,0,3,16
+2025-12-30_san_francisco_portland,Portland,22,"Mogel, Rhyan",True,34,6,9,0.667,2,3,0.667,0,0,,0,4,4,2,10,6,0,4,14
+2025-12-30_san_francisco_portland,Portland,3,"Dallow, Florence",True,30,3,4,0.75,0,1,0.0,3,4,0.75,3,0,3,2,0,5,1,3,9
+2025-12-30_san_francisco_portland,Portland,44,"Dalan, Julia",True,24,3,13,0.231,0,0,,0,0,,1,4,5,0,0,4,7,2,6
+2025-12-30_san_francisco_portland,Portland,20,"Spear, Lainey",True,24,1,6,0.167,0,0,,1,2,0.5,2,3,5,5,2,3,0,2,3
+2025-12-30_san_francisco_portland,Portland,17,"Rodriguez, Nicole",False,17,4,9,0.444,4,8,0.5,0,0,,0,0,0,3,0,3,0,1,12
+2025-12-30_san_francisco_portland,Portland,7,"Barbosa, Tiffany",False,20,1,3,0.333,0,1,0.0,2,2,1.0,1,4,5,1,1,2,0,0,4
+2025-12-30_san_francisco_portland,Portland,9,"Kennedy, Jada",False,10,0,0,,0,0,,0,0,,1,2,3,0,1,0,0,0,0
+2025-12-30_san_francisco_portland,Portland,10,"Fraley, Natalie",False,7,0,1,0.0,0,0,,0,0,,0,1,1,0,0,1,0,0,0
+2025-12-30_san_francisco_portland,Portland,12,"Smith, Brynn",False,5,0,3,0.0,0,1,0.0,0,0,,1,0,1,0,0,0,0,0,0
+2025-12-30_san_francisco_portland,Portland,42,"Zimmerman, Ella",False,3,0,1,0.0,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2025-12-30_san_francisco_portland,Portland,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,2,2,0,0,1,0,0,0
+2025-12-30_san_francisco_portland,San Francisco,2,"Neira, Mara",True,23,6,11,0.545,4,7,0.571,0,0,,0,2,2,2,3,6,0,3,16
+2025-12-30_san_francisco_portland,San Francisco,12,"Taušová, Nataša",True,25,6,12,0.5,2,7,0.286,0,0,,0,0,0,4,3,4,0,1,14
+2025-12-30_san_francisco_portland,San Francisco,23,"Edokpaigbe, Candy",True,37,5,12,0.417,0,2,0.0,2,2,1.0,2,1,3,3,0,2,0,2,12
+2025-12-30_san_francisco_portland,San Francisco,9,"Cargol, Aina",True,35,3,9,0.333,2,4,0.5,1,2,0.5,0,4,4,1,6,6,0,0,9
+2025-12-30_san_francisco_portland,San Francisco,3,"Mouriño, Noelia",True,22,2,6,0.333,0,0,,0,0,,3,2,5,3,1,3,0,2,4
+2025-12-30_san_francisco_portland,San Francisco,22,"Tirado, Paula",False,14,4,6,0.667,0,1,0.0,0,0,,1,0,1,0,0,1,0,1,8
+2025-12-30_san_francisco_portland,San Francisco,24,"Castro, Sol",False,19,1,5,0.2,0,0,,2,4,0.5,5,8,13,1,1,4,0,1,4
+2025-12-30_san_francisco_portland,San Francisco,4,"McIntyre, Meghan",False,23,0,2,0.0,0,0,,0,0,,1,5,6,0,4,1,0,4,0
+2025-12-30_san_francisco_portland,San Francisco,21,"Williams, Olivia",False,2,0,1,0.0,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2025-12-30_san_francisco_portland,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,3,5,0,0,2,0,0,0
+2026-01-02_san_diego_san_francisco,San Francisco,23,"Edokpaigbe, Candy",True,38,5,8,0.625,2,2,1.0,5,8,0.625,1,5,6,1,1,3,3,1,17
+2026-01-02_san_diego_san_francisco,San Francisco,9,"Cargol, Aina",True,35,4,8,0.5,2,4,0.5,2,4,0.5,1,3,4,1,6,3,0,1,12
+2026-01-02_san_diego_san_francisco,San Francisco,12,"Taušová, Nataša",True,28,3,4,0.75,2,3,0.667,1,3,0.333,1,5,6,4,1,4,0,0,9
+2026-01-02_san_diego_san_francisco,San Francisco,3,"Mouriño, Noelia",True,27,4,6,0.667,0,0,,1,2,0.5,2,7,9,3,1,4,1,2,9
+2026-01-02_san_diego_san_francisco,San Francisco,2,"Neira, Mara",True,32,3,13,0.231,1,9,0.111,0,0,,2,1,3,1,2,0,0,1,7
+2026-01-02_san_diego_san_francisco,San Francisco,24,"Castro, Sol",False,13,2,6,0.333,0,0,,1,2,0.5,1,1,2,1,1,0,0,0,5
+2026-01-02_san_diego_san_francisco,San Francisco,22,"Tirado, Paula",False,12,0,2,0.0,0,2,0.0,0,0,,0,1,1,3,1,2,0,1,0
+2026-01-02_san_diego_san_francisco,San Francisco,4,"McIntyre, Meghan",False,10,0,1,0.0,0,1,0.0,0,0,,1,4,5,0,1,1,0,0,0
+2026-01-02_san_diego_san_francisco,San Francisco,21,"Williams, Olivia",False,3,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-02_san_diego_san_francisco,San Francisco,7,"Ferrara Horne, Nevaeh",False,2,0,1,0.0,0,0,,0,0,,0,0,0,0,1,0,0,0,0
+2026-01-02_san_diego_san_francisco,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,5,5,0,0,1,0,0,0
+2026-01-02_san_diego_san_francisco,San Diego,6,"Ray, Kylie",True,40,10,21,0.476,4,8,0.5,0,0,,1,8,9,5,5,5,0,3,24
+2026-01-02_san_diego_san_francisco,San Diego,20,"Rhodes, Hallie",True,38,3,16,0.188,0,3,0.0,1,2,0.5,1,0,1,1,1,1,1,3,7
+2026-01-02_san_diego_san_francisco,San Diego,24,"Owens, Olivia",True,27,3,10,0.3,0,3,0.0,0,1,0.0,0,3,3,2,2,3,1,0,6
+2026-01-02_san_diego_san_francisco,San Diego,22,"Williams, Ayla",True,6,0,1,0.0,0,0,,2,2,1.0,0,1,1,3,0,1,0,0,2
+2026-01-02_san_diego_san_francisco,San Diego,3,"Amor, Lilly",True,10,0,1,0.0,0,1,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-02_san_diego_san_francisco,San Diego,15,"Ruse, Eva",False,33,3,8,0.375,0,1,0.0,0,0,,2,2,4,0,2,1,1,0,6
+2026-01-02_san_diego_san_francisco,San Diego,10,"Holley, Helen",False,20,3,6,0.5,0,2,0.0,0,0,,3,3,6,2,2,0,0,1,6
+2026-01-02_san_diego_san_francisco,San Diego,19,"Rhodes, Jayden",False,8,1,1,1.0,1,1,1.0,0,0,,0,0,0,0,0,0,0,0,3
+2026-01-02_san_diego_san_francisco,San Diego,1,"Moore, Dresha",False,18,0,2,0.0,0,0,,1,2,0.5,1,3,4,4,0,0,0,1,1
+2026-01-02_san_diego_san_francisco,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,1,4,0,0,1,0,0,0
+2026-01-04_lmu_ca_san_francisco,San Francisco,2,"Neira, Mara",True,32,8,15,0.533,3,7,0.429,0,0,,0,5,5,3,2,4,0,0,19
+2026-01-04_lmu_ca_san_francisco,San Francisco,9,"Cargol, Aina",True,39,4,10,0.4,1,3,0.333,8,10,0.8,0,3,3,2,8,2,0,1,17
+2026-01-04_lmu_ca_san_francisco,San Francisco,23,"Edokpaigbe, Candy",True,31,6,10,0.6,0,1,0.0,5,6,0.833,0,2,2,4,2,2,2,1,17
+2026-01-04_lmu_ca_san_francisco,San Francisco,3,"Mouriño, Noelia",True,29,2,6,0.333,0,0,,2,2,1.0,3,4,7,5,4,2,1,0,6
+2026-01-04_lmu_ca_san_francisco,San Francisco,12,"Taušová, Nataša",True,27,3,6,0.5,0,0,,0,0,,0,4,4,2,1,1,1,2,6
+2026-01-04_lmu_ca_san_francisco,San Francisco,22,"Tirado, Paula",False,24,4,6,0.667,1,2,0.5,2,2,1.0,1,3,4,1,1,0,0,1,11
+2026-01-04_lmu_ca_san_francisco,San Francisco,4,"McIntyre, Meghan",False,15,2,3,0.667,0,1,0.0,1,1,1.0,0,1,1,1,0,0,0,0,5
+2026-01-04_lmu_ca_san_francisco,San Francisco,24,"Castro, Sol",False,16,2,3,0.667,0,0,,0,0,,3,1,4,1,1,1,0,0,4
+2026-01-04_lmu_ca_san_francisco,San Francisco,7,"Ferrara Horne, Nevaeh",False,12,0,0,,0,0,,0,0,,0,0,0,1,0,1,2,0,0
+2026-01-04_lmu_ca_san_francisco,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,1,2,0,0,1,0,0,0
+2026-01-04_lmu_ca_san_francisco,LMU (CA),00,"Lawson, Jess",True,31,11,24,0.458,0,0,,10,13,0.769,6,3,9,3,2,1,0,0,32
+2026-01-04_lmu_ca_san_francisco,LMU (CA),55,"Hernandez, Maya",True,38,7,16,0.438,0,1,0.0,5,8,0.625,4,6,10,3,1,0,0,2,19
+2026-01-04_lmu_ca_san_francisco,LMU (CA),28,"Matic, Andjela",True,40,4,13,0.308,3,7,0.429,2,2,1.0,1,4,5,1,3,1,0,0,13
+2026-01-04_lmu_ca_san_francisco,LMU (CA),13,"Krajina, Ivana",True,32,2,4,0.5,0,0,,0,0,,1,1,2,5,4,1,0,3,4
+2026-01-04_lmu_ca_san_francisco,LMU (CA),5,"Heidger, Carly",True,27,1,5,0.2,1,3,0.333,0,0,,1,0,1,3,3,1,0,1,3
+2026-01-04_lmu_ca_san_francisco,LMU (CA),4,"Clarke, Allison",False,18,1,4,0.25,1,4,0.25,2,3,0.667,0,0,0,0,2,0,0,2,5
+2026-01-04_lmu_ca_san_francisco,LMU (CA),24,"Jones, Kayla",False,7,2,2,1.0,0,0,,0,0,,0,1,1,1,0,1,0,0,4
+2026-01-04_lmu_ca_san_francisco,LMU (CA),2,"Somvichian, Mari",False,4,0,0,,0,0,,2,2,1.0,0,1,1,0,0,0,0,0,2
+2026-01-04_lmu_ca_san_francisco,LMU (CA),30,"Reus Piza, Paula",False,20,0,4,0.0,0,2,0.0,0,0,,0,2,2,1,2,3,0,0,0
+2026-01-04_lmu_ca_san_francisco,LMU (CA),54,"Ogot, Zawadi",False,8,0,0,,0,0,,0,0,,0,0,0,3,0,1,0,0,0
+2026-01-04_lmu_ca_san_francisco,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,4,2,6,0,0,2,0,0,0
+2026-01-08_san_francisco_santa_clara,Santa Clara,00,"Jones, Maia",True,29,6,15,0.4,3,6,0.5,10,12,0.833,0,4,4,1,0,0,1,2,25
+2026-01-08_san_francisco_santa_clara,Santa Clara,23,"Hawkins, Ashley",True,33,4,13,0.308,0,2,0.0,2,3,0.667,1,3,4,1,4,7,0,2,10
+2026-01-08_san_francisco_santa_clara,Santa Clara,12,"Glancey, Sophie",True,25,4,9,0.444,0,1,0.0,0,2,0.0,3,5,8,2,0,2,1,1,8
+2026-01-08_san_francisco_santa_clara,Santa Clara,13,"Schmidt, Ava",True,19,2,7,0.286,1,3,0.333,2,2,1.0,1,2,3,0,0,0,2,0,7
+2026-01-08_san_francisco_santa_clara,Santa Clara,30,"Fox, Kylee",True,27,2,8,0.25,2,6,0.333,0,0,,1,3,4,1,0,1,0,3,6
+2026-01-08_san_francisco_santa_clara,Santa Clara,2,"Hooker, Aniya",False,32,4,7,0.571,1,3,0.333,5,6,0.833,0,1,1,1,3,0,0,4,14
+2026-01-08_san_francisco_santa_clara,Santa Clara,20,"Miller, Delainey",False,18,2,5,0.4,0,0,,1,2,0.5,1,3,4,1,0,2,1,2,5
+2026-01-08_san_francisco_santa_clara,Santa Clara,34,"Gildersleeve-stiles, Tyler",False,13,1,2,0.5,0,0,,0,0,,2,1,3,2,1,1,0,0,2
+2026-01-08_san_francisco_santa_clara,Santa Clara,3,"Schat, Kate",False,4,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2026-01-08_san_francisco_santa_clara,Santa Clara,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,1,5,0,0,1,0,0,0
+2026-01-08_san_francisco_santa_clara,San Francisco,23,"Edokpaigbe, Candy",True,30,8,13,0.615,0,2,0.0,3,5,0.6,2,1,3,5,0,1,0,0,19
+2026-01-08_san_francisco_santa_clara,San Francisco,9,"Cargol, Aina",True,29,8,16,0.5,0,5,0.0,1,1,1.0,0,4,4,4,7,6,0,1,17
+2026-01-08_san_francisco_santa_clara,San Francisco,2,"Neira, Mara",True,29,2,10,0.2,2,7,0.286,1,2,0.5,1,5,6,1,5,1,0,3,7
+2026-01-08_san_francisco_santa_clara,San Francisco,3,"Mouriño, Noelia",True,31,3,9,0.333,0,0,,0,0,,2,9,11,2,2,2,1,0,6
+2026-01-08_san_francisco_santa_clara,San Francisco,12,"Taušová, Nataša",True,27,2,6,0.333,0,4,0.0,0,0,,4,4,8,4,2,4,1,4,4
+2026-01-08_san_francisco_santa_clara,San Francisco,22,"Tirado, Paula",False,20,4,9,0.444,1,3,0.333,0,0,,0,1,1,1,0,1,0,2,9
+2026-01-08_san_francisco_santa_clara,San Francisco,4,"McIntyre, Meghan",False,20,1,5,0.2,0,2,0.0,1,1,1.0,3,5,8,2,2,1,0,1,3
+2026-01-08_san_francisco_santa_clara,San Francisco,21,"Williams, Olivia",False,4,1,4,0.25,0,2,0.0,0,0,,0,1,1,1,0,1,0,0,2
+2026-01-08_san_francisco_santa_clara,San Francisco,24,"Castro, Sol",False,9,0,0,,0,0,,0,0,,1,0,1,0,0,1,0,0,0
+2026-01-08_san_francisco_santa_clara,San Francisco,7,"Ferrara Horne, Nevaeh",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-08_san_francisco_santa_clara,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,2,3,0,0,1,0,0,0
+2026-01-15_gonzaga_san_francisco,San Francisco,23,"Edokpaigbe, Candy",True,39,9,19,0.474,0,2,0.0,6,9,0.667,4,4,8,2,0,2,0,3,24
+2026-01-15_gonzaga_san_francisco,San Francisco,9,"Cargol, Aina",True,34,5,11,0.455,0,3,0.0,3,4,0.75,0,2,2,3,6,3,0,1,13
+2026-01-15_gonzaga_san_francisco,San Francisco,2,"Neira, Mara",True,28,5,11,0.455,2,4,0.5,0,0,,1,1,2,2,1,1,0,2,12
+2026-01-15_gonzaga_san_francisco,San Francisco,3,"Mouriño, Noelia",True,27,4,10,0.4,0,0,,0,0,,1,3,4,4,1,1,1,2,8
+2026-01-15_gonzaga_san_francisco,San Francisco,12,"Taušová, Nataša",True,32,3,7,0.429,1,3,0.333,0,0,,2,3,5,4,2,1,0,4,7
+2026-01-15_gonzaga_san_francisco,San Francisco,22,"Tirado, Paula",False,12,1,3,0.333,0,2,0.0,0,0,,0,0,0,2,1,2,1,1,2
+2026-01-15_gonzaga_san_francisco,San Francisco,21,"Williams, Olivia",False,8,1,1,1.0,0,0,,0,0,,0,0,0,0,0,0,0,0,2
+2026-01-15_gonzaga_san_francisco,San Francisco,24,"Castro, Sol",False,13,0,2,0.0,0,0,,1,4,0.25,1,2,3,0,0,0,0,0,1
+2026-01-15_gonzaga_san_francisco,San Francisco,4,"McIntyre, Meghan",False,6,0,1,0.0,0,1,0.0,0,0,,0,0,0,1,0,0,0,0,0
+2026-01-15_gonzaga_san_francisco,San Francisco,10,"Pateman, Amy",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-15_gonzaga_san_francisco,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,1,4,0,0,0,0,0,0
+2026-01-15_gonzaga_san_francisco,Gonzaga,33,"Whittaker, Lauren",True,28,10,13,0.769,3,3,1.0,3,3,1.0,1,10,11,3,3,2,0,1,26
+2026-01-15_gonzaga_san_francisco,Gonzaga,11,"Turner, Allie",True,35,7,15,0.467,5,8,0.625,6,6,1.0,2,3,5,2,5,3,2,1,25
+2026-01-15_gonzaga_san_francisco,Gonzaga,55,"Aokuso, Zeryhia",True,28,1,5,0.2,1,1,1.0,6,8,0.75,0,2,2,2,2,2,0,1,9
+2026-01-15_gonzaga_san_francisco,Gonzaga,20,"Smith, Taylor",True,22,1,3,0.333,0,1,0.0,0,0,,2,2,4,0,2,2,0,0,2
+2026-01-15_gonzaga_san_francisco,Gonzaga,8,"Bettencourt, Ines",True,11,1,2,0.5,0,1,0.0,0,0,,0,0,0,3,1,3,0,0,2
+2026-01-15_gonzaga_san_francisco,Gonzaga,23,"Haile, Jaiden",False,20,4,6,0.667,0,0,,0,0,,1,3,4,1,1,0,0,1,8
+2026-01-15_gonzaga_san_francisco,Gonzaga,24,"Gardner, Teryn",False,25,2,5,0.4,1,4,0.25,0,0,,1,2,3,0,3,2,0,1,5
+2026-01-15_gonzaga_san_francisco,Gonzaga,3,"Wilson, Julia",False,6,1,2,0.5,1,2,0.5,0,0,,0,2,2,0,1,3,0,0,3
+2026-01-15_gonzaga_san_francisco,Gonzaga,4,"Lichtie, Sierra",False,10,1,1,1.0,0,0,,0,0,,0,0,0,1,0,0,0,0,2
+2026-01-15_gonzaga_san_francisco,Gonzaga,12,"Osarobo, Christabel",False,8,0,0,,0,0,,0,0,,0,0,0,2,1,0,1,0,0
+2026-01-15_gonzaga_san_francisco,Gonzaga,1,"Lofing, Paige",False,7,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-15_gonzaga_san_francisco,Gonzaga,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,3,3,0,0,2,0,0,0
+2026-01-17_washington_st_san_francisco,San Francisco,9,"Cargol, Aina",True,40,7,17,0.412,4,8,0.5,3,4,0.75,2,4,6,5,7,7,0,1,21
+2026-01-17_washington_st_san_francisco,San Francisco,3,"Mouriño, Noelia",True,25,7,12,0.583,0,0,,2,2,1.0,6,6,12,1,3,4,0,0,16
+2026-01-17_washington_st_san_francisco,San Francisco,12,"Taušová, Nataša",True,28,4,10,0.4,1,5,0.2,4,6,0.667,3,4,7,2,1,0,0,2,13
+2026-01-17_washington_st_san_francisco,San Francisco,23,"Edokpaigbe, Candy",True,30,3,9,0.333,2,4,0.5,0,1,0.0,2,1,3,4,1,3,0,2,8
+2026-01-17_washington_st_san_francisco,San Francisco,2,"Neira, Mara",True,24,1,7,0.143,1,6,0.167,0,0,,0,2,2,1,0,1,0,0,3
+2026-01-17_washington_st_san_francisco,San Francisco,22,"Tirado, Paula",False,27,6,8,0.75,2,3,0.667,1,2,0.5,0,3,3,1,0,1,0,1,15
+2026-01-17_washington_st_san_francisco,San Francisco,24,"Castro, Sol",False,14,3,5,0.6,0,0,,1,3,0.333,3,4,7,3,0,2,0,0,7
+2026-01-17_washington_st_san_francisco,San Francisco,4,"McIntyre, Meghan",False,12,1,4,0.25,0,3,0.0,0,0,,3,1,4,0,0,0,0,0,2
+2026-01-17_washington_st_san_francisco,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,1,4,0,0,0,0,0,0
+2026-01-17_washington_st_san_francisco,Washington St.,2,"Villa, Eleonora",True,36,9,15,0.6,0,0,,0,0,,0,1,1,0,4,1,0,1,18
+2026-01-17_washington_st_san_francisco,Washington St.,33,"Covill, Alex",True,22,6,9,0.667,0,0,,5,6,0.833,0,1,1,4,1,3,1,0,17
+2026-01-17_washington_st_san_francisco,Washington St.,10,"Abraham, Charlotte",True,28,2,6,0.333,2,4,0.5,2,2,1.0,1,2,3,4,1,2,0,2,8
+2026-01-17_washington_st_san_francisco,Washington St.,55,"Ruud, Malia",True,12,3,5,0.6,0,0,,0,0,,0,2,2,2,0,1,0,1,6
+2026-01-17_washington_st_san_francisco,Washington St.,8,"Chatfield, Mackenzie",True,18,1,4,0.25,0,0,,0,0,,0,2,2,0,5,0,0,0,2
+2026-01-17_washington_st_san_francisco,Washington St.,1,"Haziri, Malvina",False,11,2,3,0.667,2,3,0.667,0,0,,0,0,0,1,1,1,0,0,6
+2026-01-17_washington_st_san_francisco,Washington St.,15,"Koorits, Keandra",False,25,2,7,0.286,0,4,0.0,1,2,0.5,0,4,4,1,1,1,0,4,5
+2026-01-17_washington_st_san_francisco,Washington St.,12,"Alsina, Marta",False,21,2,4,0.5,1,3,0.333,0,0,,1,1,2,1,4,1,0,2,5
+2026-01-17_washington_st_san_francisco,Washington St.,9,"Valancic, Tanja",False,18,1,2,0.5,0,1,0.0,1,2,0.5,0,4,4,5,1,1,0,0,3
+2026-01-17_washington_st_san_francisco,Washington St.,25,"Glazier, Lauren",False,8,1,4,0.25,0,1,0.0,0,0,,0,3,3,1,1,0,0,0,2
+2026-01-17_washington_st_san_francisco,Washington St.,5,"Chiu, Jean",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2026-01-17_washington_st_san_francisco,Washington St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,2,5,0,0,1,0,0,0
+2026-01-22_san_francisco_san_diego,San Diego,6,"Ray, Kylie",True,38,10,27,0.37,2,6,0.333,5,6,0.833,3,10,13,4,1,7,0,4,27
+2026-01-22_san_francisco_san_diego,San Diego,20,"Rhodes, Hallie",True,40,8,19,0.421,2,4,0.5,6,8,0.75,3,4,7,2,0,1,0,1,24
+2026-01-22_san_francisco_san_diego,San Diego,15,"Ruse, Eva",True,27,1,1,1.0,0,0,,3,6,0.5,5,3,8,4,0,3,0,1,5
+2026-01-22_san_francisco_san_diego,San Diego,10,"Holley, Helen",True,34,2,4,0.5,0,1,0.0,0,0,,1,0,1,5,2,0,1,0,4
+2026-01-22_san_francisco_san_diego,San Diego,3,"Amor, Lilly",True,33,1,5,0.2,1,5,0.2,0,0,,0,0,0,1,2,0,0,0,3
+2026-01-22_san_francisco_san_diego,San Diego,22,"Williams, Ayla",False,7,0,1,0.0,0,0,,2,2,1.0,1,2,3,1,0,2,1,1,2
+2026-01-22_san_francisco_san_diego,San Diego,1,"Moore, Dresha",False,6,0,0,,0,0,,0,0,,0,1,1,2,0,2,1,0,0
+2026-01-22_san_francisco_san_diego,San Diego,4,"Ajayi, Jessica",False,6,0,1,0.0,0,1,0.0,0,0,,0,0,0,3,0,1,0,0,0
+2026-01-22_san_francisco_san_diego,San Diego,11,"Tharpe, Malia",False,6,0,3,0.0,0,1,0.0,0,0,,0,0,0,1,0,0,0,1,0
+2026-01-22_san_francisco_san_diego,San Diego,00,"von Seipler, Ysabella",False,3,0,0,,0,0,,0,0,,0,1,1,0,0,0,1,0,0
+2026-01-22_san_francisco_san_diego,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,0,3,0,0,1,0,0,0
+2026-01-22_san_francisco_san_diego,San Francisco,23,"Edokpaigbe, Candy",True,32,6,8,0.75,2,2,1.0,10,11,0.909,1,1,2,2,0,1,1,0,24
+2026-01-22_san_francisco_san_diego,San Francisco,9,"Cargol, Aina",True,37,4,11,0.364,2,5,0.4,6,8,0.75,0,0,0,3,5,5,0,3,16
+2026-01-22_san_francisco_san_diego,San Francisco,3,"Mouriño, Noelia",True,25,2,6,0.333,0,0,,3,5,0.6,3,8,11,4,2,3,0,0,7
+2026-01-22_san_francisco_san_diego,San Francisco,12,"Taušová, Nataša",True,22,2,5,0.4,1,2,0.5,0,0,,1,0,1,4,0,2,0,0,5
+2026-01-22_san_francisco_san_diego,San Francisco,2,"Neira, Mara",True,19,1,6,0.167,0,3,0.0,0,0,,0,3,3,1,1,1,0,0,2
+2026-01-22_san_francisco_san_diego,San Francisco,21,"Williams, Olivia",False,25,3,7,0.429,0,0,,0,0,,0,4,4,0,1,1,1,1,6
+2026-01-22_san_francisco_san_diego,San Francisco,22,"Tirado, Paula",False,9,2,5,0.4,1,2,0.5,0,0,,0,0,0,2,1,0,0,1,5
+2026-01-22_san_francisco_san_diego,San Francisco,4,"McIntyre, Meghan",False,15,1,3,0.333,0,1,0.0,2,2,1.0,2,3,5,0,1,1,0,1,4
+2026-01-22_san_francisco_san_diego,San Francisco,24,"Castro, Sol",False,12,0,1,0.0,0,0,,0,2,0.0,3,2,5,2,2,0,0,0,0
+2026-01-22_san_francisco_san_diego,San Francisco,14,"Ugwah, Michelle",False,4,0,0,,0,0,,0,0,,0,0,0,2,0,2,1,0,0
+2026-01-22_san_francisco_san_diego,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,4,7,0,0,0,0,0,0
+2026-01-24_san_francisco_pacific,Pacific,25,"Bartholomew, Winner",True,25,8,15,0.533,0,0,,3,4,0.75,1,4,5,3,1,3,0,0,19
+2026-01-24_san_francisco_pacific,Pacific,10,"Ward, Sydney",True,37,5,11,0.455,3,8,0.375,0,0,,3,12,15,0,3,3,1,4,13
+2026-01-24_san_francisco_pacific,Pacific,8,"Mindermann, Sophia",True,39,4,11,0.364,3,9,0.333,1,2,0.5,0,3,3,3,1,6,0,1,12
+2026-01-24_san_francisco_pacific,Pacific,21,"Nestorov, Daria",True,23,1,5,0.2,0,1,0.0,2,2,1.0,0,2,2,3,4,2,0,1,4
+2026-01-24_san_francisco_pacific,Pacific,5,"Szabo, Stella",True,17,1,3,0.333,1,3,0.333,0,0,,1,1,2,2,1,0,0,1,3
+2026-01-24_san_francisco_pacific,Pacific,15,"Lowery, Nyah",False,25,3,10,0.3,0,3,0.0,0,0,,1,1,2,5,3,1,0,2,6
+2026-01-24_san_francisco_pacific,Pacific,9,"Radocaj, Marina",False,13,1,3,0.333,0,0,,2,4,0.5,2,0,2,2,0,1,1,0,4
+2026-01-24_san_francisco_pacific,Pacific,7,"Yergensen, Liv",False,14,0,6,0.0,0,2,0.0,0,0,,1,3,4,0,1,1,0,0,0
+2026-01-24_san_francisco_pacific,Pacific,11,"Anderegg, Luisa",False,5,0,0,,0,0,,0,0,,0,2,2,1,0,0,0,0,0
+2026-01-24_san_francisco_pacific,Pacific,3,"Burg, Hannah",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-24_san_francisco_pacific,Pacific,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,4,6,0,0,3,0,0,0
+2026-01-24_san_francisco_pacific,San Francisco,23,"Edokpaigbe, Candy",True,29,8,14,0.571,0,2,0.0,7,9,0.778,2,0,2,4,1,2,0,1,23
+2026-01-24_san_francisco_pacific,San Francisco,9,"Cargol, Aina",True,34,4,9,0.444,3,5,0.6,4,6,0.667,1,5,6,0,1,7,0,0,15
+2026-01-24_san_francisco_pacific,San Francisco,12,"Taušová, Nataša",True,31,6,12,0.5,3,7,0.429,0,0,,2,2,4,1,2,1,2,2,15
+2026-01-24_san_francisco_pacific,San Francisco,2,"Neira, Mara",True,28,1,11,0.091,1,5,0.2,3,4,0.75,3,4,7,2,3,1,0,2,6
+2026-01-24_san_francisco_pacific,San Francisco,3,"Mouriño, Noelia",True,15,2,5,0.4,0,0,,0,2,0.0,3,5,8,5,2,4,0,2,4
+2026-01-24_san_francisco_pacific,San Francisco,14,"Ugwah, Michelle",False,22,1,5,0.2,0,0,,1,2,0.5,3,5,8,1,1,0,1,2,3
+2026-01-24_san_francisco_pacific,San Francisco,4,"McIntyre, Meghan",False,23,1,6,0.167,0,1,0.0,0,0,,0,3,3,0,3,1,0,1,2
+2026-01-24_san_francisco_pacific,San Francisco,21,"Williams, Olivia",False,15,0,4,0.0,0,4,0.0,0,0,,0,3,3,1,3,1,0,1,0
+2026-01-24_san_francisco_pacific,San Francisco,24,"Castro, Sol",False,3,0,1,0.0,0,0,,0,0,,0,0,0,2,0,0,0,0,0
+2026-01-24_san_francisco_pacific,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,4,6,0,0,0,0,0,0
+2026-01-29_san_francisco_gonzaga,Gonzaga,33,"Whittaker, Lauren",True,29,7,16,0.438,0,2,0.0,3,4,0.75,3,6,9,5,1,1,1,2,17
+2026-01-29_san_francisco_gonzaga,Gonzaga,11,"Turner, Allie",True,40,3,9,0.333,2,5,0.4,5,6,0.833,0,4,4,0,2,4,0,0,13
+2026-01-29_san_francisco_gonzaga,Gonzaga,55,"Aokuso, Zeryhia",True,30,4,13,0.308,1,6,0.167,2,2,1.0,1,2,3,3,4,3,0,1,11
+2026-01-29_san_francisco_gonzaga,Gonzaga,8,"Bettencourt, Ines",True,25,2,6,0.333,1,4,0.25,2,2,1.0,1,2,3,2,3,2,2,1,7
+2026-01-29_san_francisco_gonzaga,Gonzaga,20,"Smith, Taylor",True,18,0,3,0.0,0,1,0.0,0,0,,0,2,2,4,1,2,1,0,0
+2026-01-29_san_francisco_gonzaga,Gonzaga,24,"Gardner, Teryn",False,29,3,6,0.5,2,4,0.5,2,2,1.0,4,4,8,2,2,2,0,0,10
+2026-01-29_san_francisco_gonzaga,Gonzaga,4,"Lichtie, Sierra",False,20,3,6,0.5,0,2,0.0,4,4,1.0,0,3,3,2,0,0,0,0,10
+2026-01-29_san_francisco_gonzaga,Gonzaga,1,"Lofing, Paige",False,7,1,2,0.5,1,2,0.5,0,0,,0,0,0,1,0,1,1,0,3
+2026-01-29_san_francisco_gonzaga,Gonzaga,23,"Haile, Jaiden",False,22,0,8,0.0,0,0,,2,4,0.5,9,4,13,0,1,1,1,0,2
+2026-01-29_san_francisco_gonzaga,Gonzaga,22,"Dalan, McKynnlie",False,2,0,1,0.0,0,0,,1,2,0.5,0,0,0,0,0,0,0,0,1
+2026-01-29_san_francisco_gonzaga,Gonzaga,12,"Osarobo, Christabel",False,3,0,1,0.0,0,0,,0,0,,0,0,0,1,0,2,0,0,0
+2026-01-29_san_francisco_gonzaga,Gonzaga,TM,TEAM,False,0,0,0,,0,0,,0,0,,7,3,10,0,0,0,0,0,0
+2026-01-29_san_francisco_gonzaga,San Francisco,23,"Edokpaigbe, Candy",True,31,4,11,0.364,0,3,0.0,5,5,1.0,3,3,6,3,0,4,0,0,13
+2026-01-29_san_francisco_gonzaga,San Francisco,9,"Cargol, Aina",True,44,4,19,0.211,3,8,0.375,0,0,,1,4,5,3,5,1,0,2,11
+2026-01-29_san_francisco_gonzaga,San Francisco,2,"Neira, Mara",True,29,4,11,0.364,2,8,0.25,0,0,,0,3,3,2,0,2,0,0,10
+2026-01-29_san_francisco_gonzaga,San Francisco,12,"Taušová, Nataša",True,28,3,9,0.333,1,5,0.2,0,2,0.0,1,2,3,4,2,1,1,2,7
+2026-01-29_san_francisco_gonzaga,San Francisco,3,"Mouriño, Noelia",True,22,0,1,0.0,0,0,,2,2,1.0,3,1,4,4,3,3,1,2,2
+2026-01-29_san_francisco_gonzaga,San Francisco,14,"Ugwah, Michelle",False,25,2,5,0.4,0,0,,7,8,0.875,4,4,8,3,1,2,0,0,11
+2026-01-29_san_francisco_gonzaga,San Francisco,4,"McIntyre, Meghan",False,30,5,8,0.625,0,1,0.0,0,0,,1,2,3,2,4,1,0,2,10
+2026-01-29_san_francisco_gonzaga,San Francisco,21,"Williams, Olivia",False,13,1,5,0.2,0,2,0.0,0,0,,0,1,1,2,0,0,1,0,2
+2026-01-29_san_francisco_gonzaga,San Francisco,24,"Castro, Sol",False,3,0,0,,0,0,,0,0,,0,2,2,2,0,1,0,0,0
+2026-01-29_san_francisco_gonzaga,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,4,8,0,0,0,0,0,0
+2026-01-31_oregon_st_san_francisco,San Francisco,23,"Edokpaigbe, Candy",True,35,6,20,0.3,0,3,0.0,1,1,1.0,3,2,5,1,2,2,1,1,13
+2026-01-31_oregon_st_san_francisco,San Francisco,12,"Taušová, Nataša",True,19,3,5,0.6,1,2,0.5,0,0,,0,3,3,4,2,2,1,0,7
+2026-01-31_oregon_st_san_francisco,San Francisco,9,"Cargol, Aina",True,35,1,5,0.2,1,1,1.0,3,4,0.75,0,4,4,1,5,1,0,0,6
+2026-01-31_oregon_st_san_francisco,San Francisco,3,"Mouriño, Noelia",True,17,2,7,0.286,0,0,,0,0,,1,3,4,3,0,2,1,1,4
+2026-01-31_oregon_st_san_francisco,San Francisco,2,"Neira, Mara",True,16,0,3,0.0,0,1,0.0,0,0,,0,1,1,0,0,1,0,0,0
+2026-01-31_oregon_st_san_francisco,San Francisco,21,"Williams, Olivia",False,22,6,7,0.857,1,2,0.5,0,0,,1,4,5,0,0,0,1,0,13
+2026-01-31_oregon_st_san_francisco,San Francisco,14,"Ugwah, Michelle",False,23,4,11,0.364,0,0,,0,0,,1,1,2,1,1,2,0,0,8
+2026-01-31_oregon_st_san_francisco,San Francisco,7,"Ferrara Horne, Nevaeh",False,15,1,2,0.5,0,1,0.0,0,0,,1,2,3,1,1,1,1,0,2
+2026-01-31_oregon_st_san_francisco,San Francisco,4,"McIntyre, Meghan",False,11,0,0,,0,0,,0,0,,2,0,2,0,1,0,0,0,0
+2026-01-31_oregon_st_san_francisco,San Francisco,24,"Castro, Sol",False,3,0,1,0.0,0,0,,0,0,,0,0,0,2,0,1,0,0,0
+2026-01-31_oregon_st_san_francisco,San Francisco,10,"Pateman, Amy",False,2,0,1,0.0,0,1,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-31_oregon_st_san_francisco,San Francisco,32,"Priestley, Sophia",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-31_oregon_st_san_francisco,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2026-01-31_oregon_st_san_francisco,Oregon St.,1,"Shuler, Kennedie",True,28,7,11,0.636,0,1,0.0,5,6,0.833,1,3,4,2,7,2,0,2,19
+2026-01-31_oregon_st_san_francisco,Oregon St.,15,"Williamson, Lizzy",True,25,9,12,0.75,0,0,,0,0,,2,7,9,1,0,1,4,1,18
+2026-01-31_oregon_st_san_francisco,Oregon St.,3,"Villa, Jenna",True,32,4,15,0.267,3,8,0.375,4,4,1.0,0,5,5,0,0,3,0,0,15
+2026-01-31_oregon_st_san_francisco,Oregon St.,4,"Schimel, Ally",True,38,4,8,0.5,3,6,0.5,0,0,,0,1,1,0,4,1,1,2,11
+2026-01-31_oregon_st_san_francisco,Oregon St.,00,"Bolden, Tiara",True,22,1,5,0.2,0,2,0.0,0,0,,0,3,3,3,0,1,0,0,2
+2026-01-31_oregon_st_san_francisco,Oregon St.,22,"Alonso, Lara",False,16,2,6,0.333,0,1,0.0,1,4,0.25,1,3,4,0,1,1,0,1,5
+2026-01-31_oregon_st_san_francisco,Oregon St.,16,"Mehyar, Elisa",False,1,1,1,1.0,0,0,,1,1,1.0,0,0,0,0,0,0,0,0,3
+2026-01-31_oregon_st_san_francisco,Oregon St.,25,"Lindemans, Keira",False,15,1,1,1.0,0,0,,0,0,,0,3,3,1,3,0,0,0,2
+2026-01-31_oregon_st_san_francisco,Oregon St.,31,"Vecina, Cloe",False,12,0,2,0.0,0,1,0.0,0,0,,2,1,3,1,2,0,0,1,0
+2026-01-31_oregon_st_san_francisco,Oregon St.,2,"Field, Katelyn",False,4,0,0,,0,0,,0,0,,0,0,0,1,0,1,0,0,0
+2026-01-31_oregon_st_san_francisco,Oregon St.,32,"Sow, Nene",False,4,0,1,0.0,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-31_oregon_st_san_francisco,Oregon St.,12,"Shivers, Mackenzie",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-31_oregon_st_san_francisco,Oregon St.,10,"Yepes, Susana",False,1,0,0,,0,0,,0,0,,0,0,0,0,1,0,0,0,0
+2026-01-31_oregon_st_san_francisco,Oregon St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,5,5,10,0,0,0,0,0,0
+2026-02-05_seattle_u_san_francisco,San Francisco,23,"Edokpaigbe, Candy",True,36,9,16,0.562,2,3,0.667,4,4,1.0,5,0,5,1,1,0,0,3,24
+2026-02-05_seattle_u_san_francisco,San Francisco,3,"Mouriño, Noelia",True,28,4,6,0.667,0,0,,5,6,0.833,2,7,9,0,1,4,0,3,13
+2026-02-05_seattle_u_san_francisco,San Francisco,2,"Neira, Mara",True,29,4,11,0.364,4,10,0.4,0,0,,0,5,5,3,0,2,0,2,12
+2026-02-05_seattle_u_san_francisco,San Francisco,9,"Cargol, Aina",True,34,2,7,0.286,0,3,0.0,0,0,,2,6,8,4,4,3,0,1,4
+2026-02-05_seattle_u_san_francisco,San Francisco,12,"Taušová, Nataša",True,26,1,7,0.143,1,4,0.25,0,0,,2,1,3,2,3,2,0,1,3
+2026-02-05_seattle_u_san_francisco,San Francisco,4,"McIntyre, Meghan",False,17,5,7,0.714,2,2,1.0,0,0,,0,5,5,0,4,2,0,0,12
+2026-02-05_seattle_u_san_francisco,San Francisco,21,"Williams, Olivia",False,15,2,7,0.286,0,2,0.0,0,0,,2,3,5,2,1,1,0,0,4
+2026-02-05_seattle_u_san_francisco,San Francisco,14,"Ugwah, Michelle",False,10,2,7,0.286,0,0,,0,0,,0,1,1,0,1,0,0,0,4
+2026-02-05_seattle_u_san_francisco,San Francisco,7,"Ferrara Horne, Nevaeh",False,3,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2026-02-05_seattle_u_san_francisco,San Francisco,24,"Castro, Sol",False,2,0,0,,0,0,,0,2,0.0,1,0,1,0,0,0,0,0,0
+2026-02-05_seattle_u_san_francisco,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,0,2,0,0,0,0,0,0
+2026-02-05_seattle_u_san_francisco,Seattle U,3,"Brubaker, Ella",True,38,6,13,0.462,1,5,0.2,8,10,0.8,0,4,4,2,1,5,0,4,21
+2026-02-05_seattle_u_san_francisco,Seattle U,8,"Emanga, Chloe",True,39,4,11,0.364,2,7,0.286,6,6,1.0,3,3,6,1,1,0,0,3,16
+2026-02-05_seattle_u_san_francisco,Seattle U,9,"Vesic, Jana",True,40,4,7,0.571,1,2,0.5,0,0,,0,4,4,1,2,4,0,0,9
+2026-02-05_seattle_u_san_francisco,Seattle U,14,"Stricklin, Tamia",True,32,3,9,0.333,1,2,0.5,2,2,1.0,1,4,5,4,2,3,1,2,9
+2026-02-05_seattle_u_san_francisco,Seattle U,6,"Bigovic, Andjela",True,26,4,9,0.444,1,5,0.2,0,0,,1,3,4,1,0,1,0,0,9
+2026-02-05_seattle_u_san_francisco,Seattle U,4,"Proctor, Fia",False,8,0,0,,0,0,,3,3,1.0,0,1,1,1,0,0,0,0,3
+2026-02-05_seattle_u_san_francisco,Seattle U,22,"Larson, Lucy",False,10,0,2,0.0,0,2,0.0,0,0,,0,0,0,2,0,0,0,0,0
+2026-02-05_seattle_u_san_francisco,Seattle U,7,"Milkovic, Lucija",False,7,0,4,0.0,0,0,,0,0,,1,2,3,0,0,1,0,0,0
+2026-02-05_seattle_u_san_francisco,Seattle U,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,3,4,0,0,0,0,0,0
+2026-02-07_san_francisco_saint_marys_ca,Saint Mary's (CA),7,"Clarke, Edie",True,26,5,9,0.556,1,1,1.0,0,0,,2,2,4,2,3,0,0,3,11
+2026-02-07_san_francisco_saint_marys_ca,Saint Mary's (CA),5,"Shoff, Abigail",True,22,4,10,0.4,0,2,0.0,2,2,1.0,2,5,7,3,1,1,0,1,10
+2026-02-07_san_francisco_saint_marys_ca,Saint Mary's (CA),4,"Ohiaeri, Charlece",True,19,3,6,0.5,1,2,0.5,1,2,0.5,4,2,6,0,1,1,0,1,8
+2026-02-07_san_francisco_saint_marys_ca,Saint Mary's (CA),00,"Hunter, Jada",True,18,3,4,0.75,0,0,,0,0,,0,0,0,2,3,1,0,2,6
+2026-02-07_san_francisco_saint_marys_ca,Saint Mary's (CA),33,"Wedin, Ella",True,10,0,1,0.0,0,1,0.0,0,0,,0,0,0,3,0,2,0,0,0
+2026-02-07_san_francisco_saint_marys_ca,Saint Mary's (CA),13,"Latu, Malia",False,28,6,12,0.5,0,0,,0,0,,1,2,3,1,2,2,0,3,12
+2026-02-07_san_francisco_saint_marys_ca,Saint Mary's (CA),2,"Kurkowski, Amy",False,25,3,4,0.75,1,2,0.5,1,2,0.5,0,2,2,1,3,1,0,1,8
+2026-02-07_san_francisco_saint_marys_ca,Saint Mary's (CA),23,"Wedin, Addi",False,25,3,9,0.333,2,5,0.4,0,0,,1,1,2,2,0,1,0,0,8
+2026-02-07_san_francisco_saint_marys_ca,Saint Mary's (CA),3,"Hashemian-orr, Mauriana",False,13,2,5,0.4,0,0,,0,0,,0,6,6,2,4,1,0,1,4
+2026-02-07_san_francisco_saint_marys_ca,Saint Mary's (CA),11,"Urlacher, Coco",False,1,1,1,1.0,1,1,1.0,0,0,,1,1,2,0,0,0,0,0,3
+2026-02-07_san_francisco_saint_marys_ca,Saint Mary's (CA),10,"Grigoropoulou, Georgia",False,6,1,2,0.5,0,0,,0,0,,0,1,1,0,0,1,0,0,2
+2026-02-07_san_francisco_saint_marys_ca,Saint Mary's (CA),22,"Afeaki, Melesungu",False,7,0,1,0.0,0,1,0.0,0,0,,0,1,1,2,0,0,0,0,0
+2026-02-07_san_francisco_saint_marys_ca,Saint Mary's (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,0,3,3,0,0,2,0,0,0
+2026-02-07_san_francisco_saint_marys_ca,San Francisco,2,"Neira, Mara",True,29,6,14,0.429,4,12,0.333,2,2,1.0,0,3,3,1,0,2,0,1,18
+2026-02-07_san_francisco_saint_marys_ca,San Francisco,23,"Edokpaigbe, Candy",True,35,6,13,0.462,1,3,0.333,4,6,0.667,0,2,2,3,1,3,0,0,17
+2026-02-07_san_francisco_saint_marys_ca,San Francisco,12,"Taušová, Nataša",True,30,3,6,0.5,2,5,0.4,1,2,0.5,3,4,7,1,3,3,1,3,9
+2026-02-07_san_francisco_saint_marys_ca,San Francisco,3,"Mouriño, Noelia",True,31,2,7,0.286,0,0,,2,4,0.5,6,6,12,4,6,3,0,2,6
+2026-02-07_san_francisco_saint_marys_ca,San Francisco,9,"Cargol, Aina",True,30,0,6,0.0,0,3,0.0,2,2,1.0,1,1,2,3,3,5,0,0,2
+2026-02-07_san_francisco_saint_marys_ca,San Francisco,10,"Pateman, Amy",False,2,1,2,0.5,0,1,0.0,0,0,,0,0,0,0,0,0,0,0,2
+2026-02-07_san_francisco_saint_marys_ca,San Francisco,4,"McIntyre, Meghan",False,22,0,2,0.0,0,1,0.0,1,4,0.25,2,1,3,2,1,2,0,1,1
+2026-02-07_san_francisco_saint_marys_ca,San Francisco,24,"Castro, Sol",False,7,0,0,,0,0,,0,0,,1,1,2,0,0,1,0,0,0
+2026-02-07_san_francisco_saint_marys_ca,San Francisco,21,"Williams, Olivia",False,6,0,3,0.0,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2026-02-07_san_francisco_saint_marys_ca,San Francisco,7,"Ferrara Horne, Nevaeh",False,5,0,1,0.0,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2026-02-07_san_francisco_saint_marys_ca,San Francisco,14,"Ugwah, Michelle",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-07_san_francisco_saint_marys_ca,San Francisco,32,"Priestley, Sophia",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-07_san_francisco_saint_marys_ca,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,3,4,0,0,0,0,0,0
+2026-02-14_san_francisco_pepperdine,Pepperdine,13,"Fiso, Meghan",True,37,6,19,0.316,0,3,0.0,6,8,0.75,3,5,8,1,1,2,0,1,18
+2026-02-14_san_francisco_pepperdine,Pepperdine,2,"Guiney, Elli",True,32,3,13,0.231,2,6,0.333,8,8,1.0,2,2,4,1,2,2,0,0,16
+2026-02-14_san_francisco_pepperdine,Pepperdine,22,"Falk, Lina",True,34,3,10,0.3,1,6,0.167,3,4,0.75,1,0,1,3,0,1,1,6,10
+2026-02-14_san_francisco_pepperdine,Pepperdine,1,"Sta. Maria, Taija",True,29,1,3,0.333,1,3,0.333,0,0,,0,1,1,1,4,1,0,1,3
+2026-02-14_san_francisco_pepperdine,Pepperdine,12,"Preston, Shorna",True,14,1,2,0.5,1,1,1.0,0,2,0.0,0,0,0,2,1,1,0,0,3
+2026-02-14_san_francisco_pepperdine,Pepperdine,3,"Green, Bella",False,26,4,11,0.364,2,4,0.5,7,8,0.875,3,9,12,3,0,0,0,5,17
+2026-02-14_san_francisco_pepperdine,Pepperdine,30,"Harmon, Seleh",False,17,1,6,0.167,1,4,0.25,0,0,,2,0,2,2,0,0,0,0,3
+2026-02-14_san_francisco_pepperdine,Pepperdine,00,"Finley, Ivory",False,11,0,4,0.0,0,3,0.0,0,0,,1,0,1,3,1,0,0,1,0
+2026-02-14_san_francisco_pepperdine,Pepperdine,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,4,4,0,0,1,0,0,0
+2026-02-14_san_francisco_pepperdine,San Francisco,23,"Edokpaigbe, Candy",True,38,10,13,0.769,2,3,0.667,6,7,0.857,0,5,5,2,3,1,0,0,28
+2026-02-14_san_francisco_pepperdine,San Francisco,9,"Cargol, Aina",True,32,4,7,0.571,3,4,0.75,0,0,,1,5,6,4,8,5,0,1,11
+2026-02-14_san_francisco_pepperdine,San Francisco,2,"Neira, Mara",True,32,3,11,0.273,3,10,0.3,2,2,1.0,0,4,4,2,5,2,0,1,11
+2026-02-14_san_francisco_pepperdine,San Francisco,3,"Mouriño, Noelia",True,20,4,7,0.571,0,0,,0,0,,1,5,6,4,5,4,0,0,8
+2026-02-14_san_francisco_pepperdine,San Francisco,12,"Taušová, Nataša",True,29,1,4,0.25,0,3,0.0,2,2,1.0,0,6,6,4,3,2,0,1,4
+2026-02-14_san_francisco_pepperdine,San Francisco,24,"Castro, Sol",False,17,4,7,0.571,0,0,,2,2,1.0,2,8,10,3,1,1,0,1,10
+2026-02-14_san_francisco_pepperdine,San Francisco,4,"McIntyre, Meghan",False,14,2,2,1.0,0,0,,1,2,0.5,1,2,3,3,0,3,0,0,5
+2026-02-14_san_francisco_pepperdine,San Francisco,21,"Williams, Olivia",False,14,2,5,0.4,0,0,,0,0,,0,2,2,2,0,1,1,0,4
+2026-02-14_san_francisco_pepperdine,San Francisco,14,"Ugwah, Michelle",False,3,0,1,0.0,0,0,,0,0,,0,0,0,2,0,2,0,0,0
+2026-02-14_san_francisco_pepperdine,San Francisco,7,"Ferrara Horne, Nevaeh",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-14_san_francisco_pepperdine,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,4,6,0,0,0,0,0,0
+2026-02-19_pacific_san_francisco,San Francisco,12,"Taušová, Nataša",True,16,5,7,0.714,3,4,0.75,2,2,1.0,0,1,1,5,2,3,0,3,15
+2026-02-19_pacific_san_francisco,San Francisco,23,"Edokpaigbe, Candy",True,25,4,7,0.571,0,1,0.0,3,4,0.75,2,1,3,3,0,1,0,1,11
+2026-02-19_pacific_san_francisco,San Francisco,9,"Cargol, Aina",True,17,1,7,0.143,0,4,0.0,0,0,,1,2,3,1,2,2,0,1,2
+2026-02-19_pacific_san_francisco,San Francisco,2,"Neira, Mara",True,15,1,5,0.2,0,3,0.0,0,0,,1,1,2,1,0,1,0,0,2
+2026-02-19_pacific_san_francisco,San Francisco,3,"Mouriño, Noelia",True,10,0,2,0.0,0,0,,0,0,,1,1,2,2,1,2,0,0,0
+2026-02-19_pacific_san_francisco,San Francisco,4,"McIntyre, Meghan",False,31,3,11,0.273,1,5,0.2,0,0,,2,4,6,0,2,4,0,3,7
+2026-02-19_pacific_san_francisco,San Francisco,32,"Priestley, Sophia",False,10,0,2,0.0,0,2,0.0,5,6,0.833,0,3,3,1,1,0,0,0,5
+2026-02-19_pacific_san_francisco,San Francisco,10,"Pateman, Amy",False,18,2,6,0.333,0,2,0.0,0,1,0.0,0,1,1,2,0,2,0,0,4
+2026-02-19_pacific_san_francisco,San Francisco,7,"Ferrara Horne, Nevaeh",False,15,1,4,0.25,0,1,0.0,0,0,,1,0,1,1,0,0,0,0,2
+2026-02-19_pacific_san_francisco,San Francisco,24,"Castro, Sol",False,13,0,2,0.0,0,0,,2,2,1.0,1,4,5,1,0,0,0,0,2
+2026-02-19_pacific_san_francisco,San Francisco,14,"Ugwah, Michelle",False,17,0,2,0.0,0,0,,1,2,0.5,0,1,1,2,0,4,0,1,1
+2026-02-19_pacific_san_francisco,San Francisco,21,"Williams, Olivia",False,13,0,5,0.0,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2026-02-19_pacific_san_francisco,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,1,4,0,0,0,0,0,0
+2026-02-19_pacific_san_francisco,Pacific,21,"Nestorov, Daria",True,29,6,11,0.545,3,5,0.6,3,4,0.75,0,2,2,2,5,4,0,3,18
+2026-02-19_pacific_san_francisco,Pacific,8,"Mindermann, Sophia",True,24,3,7,0.429,2,5,0.4,4,4,1.0,0,3,3,2,0,1,0,0,12
+2026-02-19_pacific_san_francisco,Pacific,10,"Ward, Sydney",True,29,3,7,0.429,1,3,0.333,1,1,1.0,1,4,5,1,5,2,1,0,8
+2026-02-19_pacific_san_francisco,Pacific,9,"Radocaj, Marina",True,22,3,4,0.75,0,0,,0,0,,2,2,4,1,2,1,0,0,6
+2026-02-19_pacific_san_francisco,Pacific,5,"Szabo, Stella",True,19,1,2,0.5,1,1,1.0,2,2,1.0,2,4,6,3,1,0,0,1,5
+2026-02-19_pacific_san_francisco,Pacific,7,"Yergensen, Liv",False,21,3,5,0.6,1,2,0.5,0,0,,1,1,2,1,0,2,0,0,7
+2026-02-19_pacific_san_francisco,Pacific,25,"Bartholomew, Winner",False,18,3,9,0.333,0,0,,1,2,0.5,1,7,8,3,2,4,0,0,7
+2026-02-19_pacific_san_francisco,Pacific,15,"Lowery, Nyah",False,14,1,6,0.167,1,5,0.2,2,2,1.0,0,2,2,2,1,5,1,1,5
+2026-02-19_pacific_san_francisco,Pacific,11,"Anderegg, Luisa",False,7,1,1,1.0,1,1,1.0,0,0,,0,1,1,0,0,0,0,0,3
+2026-02-19_pacific_san_francisco,Pacific,3,"Burg, Hannah",False,10,1,2,0.5,0,1,0.0,0,0,,0,1,1,0,0,0,0,2,2
+2026-02-19_pacific_san_francisco,Pacific,2,"Ennis, Mali",False,3,0,0,,0,0,,0,0,,0,0,0,2,0,0,0,0,0
+2026-02-19_pacific_san_francisco,Pacific,23,"Durrill, Kenlee",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-19_pacific_san_francisco,Pacific,24,"Lebon, Lamiracle",False,2,0,0,,0,0,,0,0,,0,0,0,1,0,1,0,0,0
+2026-02-19_pacific_san_francisco,Pacific,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,6,9,0,0,3,0,0,0
+2026-02-21_saint_marys_ca_san_francisco,San Francisco,23,"Edokpaigbe, Candy",True,43,11,17,0.647,1,2,0.5,5,11,0.455,5,2,7,2,2,6,0,0,28
+2026-02-21_saint_marys_ca_san_francisco,San Francisco,2,"Neira, Mara",True,39,4,15,0.267,3,12,0.25,0,2,0.0,0,8,8,1,5,6,0,8,11
+2026-02-21_saint_marys_ca_san_francisco,San Francisco,9,"Cargol, Aina",True,40,3,9,0.333,1,5,0.2,2,2,1.0,2,2,4,1,4,3,0,2,9
+2026-02-21_saint_marys_ca_san_francisco,San Francisco,3,"Mouriño, Noelia",True,26,2,7,0.286,0,0,,4,5,0.8,5,5,10,3,1,1,0,1,8
+2026-02-21_saint_marys_ca_san_francisco,San Francisco,12,"Taušová, Nataša",True,33,1,10,0.1,0,7,0.0,1,2,0.5,0,5,5,2,2,1,0,1,3
+2026-02-21_saint_marys_ca_san_francisco,San Francisco,14,"Ugwah, Michelle",False,11,1,1,1.0,0,0,,0,0,,0,0,0,0,0,0,1,0,2
+2026-02-21_saint_marys_ca_san_francisco,San Francisco,10,"Pateman, Amy",False,11,0,1,0.0,0,1,0.0,0,0,,0,0,0,0,1,0,0,0,0
+2026-02-21_saint_marys_ca_san_francisco,San Francisco,4,"McIntyre, Meghan",False,7,0,0,,0,0,,0,0,,0,0,0,0,2,2,0,1,0
+2026-02-21_saint_marys_ca_san_francisco,San Francisco,24,"Castro, Sol",False,7,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-21_saint_marys_ca_san_francisco,San Francisco,7,"Ferrara Horne, Nevaeh",False,5,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2026-02-21_saint_marys_ca_san_francisco,San Francisco,21,"Williams, Olivia",False,3,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-21_saint_marys_ca_san_francisco,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,4,7,0,0,0,0,0,0
+2026-02-21_saint_marys_ca_san_francisco,Saint Mary's (CA),5,"Shoff, Abigail",True,27,8,15,0.533,3,5,0.6,0,0,,0,2,2,4,0,2,0,1,19
+2026-02-21_saint_marys_ca_san_francisco,Saint Mary's (CA),22,"Afeaki, Melesungu",True,14,0,0,,0,0,,3,4,0.75,1,0,1,1,0,0,0,0,3
+2026-02-21_saint_marys_ca_san_francisco,Saint Mary's (CA),23,"Wedin, Addi",True,12,1,1,1.0,1,1,1.0,0,0,,1,2,3,1,0,4,0,1,3
+2026-02-21_saint_marys_ca_san_francisco,Saint Mary's (CA),13,"Latu, Malia",True,30,1,4,0.25,0,0,,0,0,,2,2,4,1,6,1,0,1,2
+2026-02-21_saint_marys_ca_san_francisco,Saint Mary's (CA),10,"Grigoropoulou, Georgia",True,6,0,3,0.0,0,0,,0,0,,0,1,1,0,0,1,0,0,0
+2026-02-21_saint_marys_ca_san_francisco,Saint Mary's (CA),00,"Hunter, Jada",False,37,6,13,0.462,0,1,0.0,0,0,,2,4,6,4,1,2,0,2,12
+2026-02-21_saint_marys_ca_san_francisco,Saint Mary's (CA),3,"Hashemian-orr, Mauriana",False,17,4,6,0.667,0,1,0.0,0,0,,0,5,5,2,3,3,0,2,8
+2026-02-21_saint_marys_ca_san_francisco,Saint Mary's (CA),2,"Kurkowski, Amy",False,25,3,6,0.5,0,2,0.0,0,1,0.0,2,4,6,3,2,3,1,2,6
+2026-02-21_saint_marys_ca_san_francisco,Saint Mary's (CA),7,"Clarke, Edie",False,30,2,8,0.25,0,0,,0,0,,3,1,4,0,2,3,1,5,4
+2026-02-21_saint_marys_ca_san_francisco,Saint Mary's (CA),4,"Ohiaeri, Charlece",False,9,1,2,0.5,1,2,0.5,0,0,,0,1,1,1,1,0,0,0,3
+2026-02-21_saint_marys_ca_san_francisco,Saint Mary's (CA),33,"Wedin, Ella",False,18,0,3,0.0,0,3,0.0,0,0,,0,1,1,0,1,1,0,0,0
+2026-02-21_saint_marys_ca_san_francisco,Saint Mary's (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,0,4,4,0,0,2,0,0,0
+2026-02-26_san_francisco_lmu_ca,LMU (CA),00,"Lawson, Jess",True,21,3,10,0.3,0,3,0.0,11,14,0.786,3,4,7,3,2,2,0,3,17
+2026-02-26_san_francisco_lmu_ca,LMU (CA),28,"Matic, Andjela",True,34,4,11,0.364,4,9,0.444,3,3,1.0,2,2,4,1,0,1,0,3,15
+2026-02-26_san_francisco_lmu_ca,LMU (CA),5,"Heidger, Carly",True,17,1,5,0.2,1,3,0.333,2,2,1.0,1,2,3,2,2,0,0,1,5
+2026-02-26_san_francisco_lmu_ca,LMU (CA),13,"Krajina, Ivana",True,17,1,3,0.333,1,1,1.0,0,0,,0,0,0,5,2,2,1,0,3
+2026-02-26_san_francisco_lmu_ca,LMU (CA),55,"Hernandez, Maya",True,23,0,6,0.0,0,0,,1,4,0.25,1,8,9,3,2,4,0,2,1
+2026-02-26_san_francisco_lmu_ca,LMU (CA),4,"Clarke, Allison",False,32,3,10,0.3,3,8,0.375,0,2,0.0,0,0,0,3,1,2,0,2,9
+2026-02-26_san_francisco_lmu_ca,LMU (CA),30,"Reus Piza, Paula",False,23,4,8,0.5,0,1,0.0,0,0,,0,5,5,0,1,1,0,1,8
+2026-02-26_san_francisco_lmu_ca,LMU (CA),24,"Jones, Kayla",False,17,3,7,0.429,0,1,0.0,0,0,,3,4,7,3,1,0,0,0,6
+2026-02-26_san_francisco_lmu_ca,LMU (CA),54,"Ogot, Zawadi",False,16,0,2,0.0,0,0,,2,2,1.0,1,0,1,0,2,1,0,0,2
+2026-02-26_san_francisco_lmu_ca,LMU (CA),TM,TEAM,False,0,0,0,,0,0,,0,0,,3,3,6,0,0,1,0,0,0
+2026-02-26_san_francisco_lmu_ca,San Francisco,2,"Neira, Mara",True,34,7,16,0.438,4,10,0.4,0,0,,0,2,2,4,2,4,0,1,18
+2026-02-26_san_francisco_lmu_ca,San Francisco,23,"Edokpaigbe, Candy",True,36,6,15,0.4,0,1,0.0,3,5,0.6,5,4,9,4,1,2,1,3,15
+2026-02-26_san_francisco_lmu_ca,San Francisco,9,"Cargol, Aina",True,31,1,5,0.2,0,3,0.0,4,7,0.571,0,5,5,4,4,4,0,3,6
+2026-02-26_san_francisco_lmu_ca,San Francisco,12,"Taušová, Nataša",True,28,2,6,0.333,0,3,0.0,2,2,1.0,1,3,4,1,3,2,1,1,6
+2026-02-26_san_francisco_lmu_ca,San Francisco,3,"Mouriño, Noelia",True,22,2,6,0.333,0,0,,0,0,,0,5,5,0,2,1,1,0,4
+2026-02-26_san_francisco_lmu_ca,San Francisco,21,"Williams, Olivia",False,19,3,5,0.6,0,1,0.0,0,0,,1,5,6,1,0,1,0,0,6
+2026-02-26_san_francisco_lmu_ca,San Francisco,24,"Castro, Sol",False,4,1,2,0.5,0,0,,0,0,,0,0,0,0,0,0,0,0,2
+2026-02-26_san_francisco_lmu_ca,San Francisco,14,"Ugwah, Michelle",False,14,0,1,0.0,0,0,,0,2,0.0,3,2,5,2,1,1,1,0,0
+2026-02-26_san_francisco_lmu_ca,San Francisco,4,"McIntyre, Meghan",False,11,0,4,0.0,0,2,0.0,0,0,,2,1,3,2,1,2,0,0,0
+2026-02-26_san_francisco_lmu_ca,San Francisco,10,"Pateman, Amy",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2026-02-26_san_francisco_lmu_ca,San Francisco,7,"Ferrara Horne, Nevaeh",False,0,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-26_san_francisco_lmu_ca,San Francisco,32,"Priestley, Sophia",False,0,0,1,0.0,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-26_san_francisco_lmu_ca,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,4,6,0,0,0,0,0,0
+2026-02-28_santa_clara_san_francisco,San Francisco,23,"Edokpaigbe, Candy",True,45,9,21,0.429,1,4,0.25,4,5,0.8,3,3,6,3,4,4,1,4,23
+2026-02-28_santa_clara_san_francisco,San Francisco,2,"Neira, Mara",True,33,3,13,0.231,2,9,0.222,5,6,0.833,2,7,9,5,2,4,1,0,13
+2026-02-28_santa_clara_san_francisco,San Francisco,12,"Taušová, Nataša",True,28,3,8,0.375,0,2,0.0,4,4,1.0,2,6,8,5,5,0,1,1,10
+2026-02-28_santa_clara_san_francisco,San Francisco,9,"Cargol, Aina",True,27,2,4,0.5,1,2,0.5,2,2,1.0,0,3,3,5,4,3,0,0,7
+2026-02-28_santa_clara_san_francisco,San Francisco,3,"Mouriño, Noelia",True,24,2,7,0.286,0,0,,0,0,,3,5,8,4,3,3,0,1,4
+2026-02-28_santa_clara_san_francisco,San Francisco,14,"Ugwah, Michelle",False,22,6,9,0.667,0,0,,1,2,0.5,3,1,4,1,2,4,0,1,13
+2026-02-28_santa_clara_san_francisco,San Francisco,4,"McIntyre, Meghan",False,30,4,10,0.4,0,3,0.0,1,3,0.333,1,8,9,0,2,1,0,1,9
+2026-02-28_santa_clara_san_francisco,San Francisco,24,"Castro, Sol",False,2,1,1,1.0,0,0,,0,0,,0,0,0,0,0,0,0,0,2
+2026-02-28_santa_clara_san_francisco,San Francisco,7,"Ferrara Horne, Nevaeh",False,14,0,1,0.0,0,0,,1,2,0.5,1,2,3,3,0,1,0,0,1
+2026-02-28_santa_clara_san_francisco,San Francisco,10,"Pateman, Amy",False,0,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-28_santa_clara_san_francisco,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,1,4,0,0,2,0,0,0
+2026-02-28_santa_clara_san_francisco,Santa Clara,00,"Jones, Maia",True,30,9,17,0.529,4,8,0.5,7,9,0.778,1,4,5,4,4,4,0,2,29
+2026-02-28_santa_clara_san_francisco,Santa Clara,23,"Hawkins, Ashley",True,36,4,9,0.444,4,7,0.571,6,6,1.0,0,5,5,3,11,5,0,0,18
+2026-02-28_santa_clara_san_francisco,Santa Clara,13,"Schmidt, Ava",True,35,7,12,0.583,2,4,0.5,0,2,0.0,0,5,5,3,1,0,7,3,16
+2026-02-28_santa_clara_san_francisco,Santa Clara,20,"Miller, Delainey",True,30,4,14,0.286,0,2,0.0,8,10,0.8,1,4,5,2,3,0,0,2,16
+2026-02-28_santa_clara_san_francisco,Santa Clara,30,"Fox, Kylee",True,35,1,6,0.167,1,5,0.2,0,0,,1,2,3,4,0,1,1,1,3
+2026-02-28_santa_clara_san_francisco,Santa Clara,2,"Hooker, Aniya",False,31,2,7,0.286,0,2,0.0,0,0,,1,1,2,4,1,1,0,1,4
+2026-02-28_santa_clara_san_francisco,Santa Clara,3,"Schat, Kate",False,15,1,5,0.2,1,3,0.333,1,2,0.5,0,1,1,2,0,0,0,1,4
+2026-02-28_santa_clara_san_francisco,Santa Clara,34,"Gildersleeve-stiles, Tyler",False,13,0,0,,0,0,,0,0,,1,2,3,2,0,2,0,0,0
+2026-02-28_santa_clara_san_francisco,Santa Clara,10,"Grover, Lauren",False,0,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-28_santa_clara_san_francisco,Santa Clara,11,"Goodchild, Alana",False,0,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-28_santa_clara_san_francisco,Santa Clara,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,3,6,0,0,1,0,0,0
+2026-03-06_san_francisco_san_diego,San Diego,24,"Owens, Olivia",True,40,5,16,0.312,1,6,0.167,5,6,0.833,1,6,7,1,4,6,0,0,16
+2026-03-06_san_francisco_san_diego,San Diego,6,"Ray, Kylie",True,38,4,16,0.25,1,6,0.167,1,2,0.5,3,4,7,2,2,7,0,1,10
+2026-03-06_san_francisco_san_diego,San Diego,3,"Amor, Lilly",True,40,3,8,0.375,2,6,0.333,0,0,,0,3,3,1,0,2,1,1,8
+2026-03-06_san_francisco_san_diego,San Diego,20,"Rhodes, Hallie",True,31,2,12,0.167,0,2,0.0,2,2,1.0,3,3,6,2,1,3,1,0,6
+2026-03-06_san_francisco_san_diego,San Diego,15,"Ruse, Eva",True,15,3,3,1.0,0,0,,0,0,,4,5,9,4,0,2,1,0,6
+2026-03-06_san_francisco_san_diego,San Diego,4,"Ajayi, Jessica",False,11,2,3,0.667,2,2,1.0,0,0,,0,1,1,4,1,1,0,0,6
+2026-03-06_san_francisco_san_diego,San Diego,1,"Moore, Dresha",False,18,0,1,0.0,0,0,,0,0,,0,3,3,3,0,1,0,0,0
+2026-03-06_san_francisco_san_diego,San Diego,22,"Williams, Ayla",False,4,0,1,0.0,0,0,,0,0,,1,1,2,2,1,0,0,0,0
+2026-03-06_san_francisco_san_diego,San Diego,10,"Holley, Helen",False,3,0,0,,0,0,,0,0,,1,0,1,0,0,0,0,0,0
+2026-03-06_san_francisco_san_diego,San Diego,19,"Rhodes, Jayden",False,0,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-03-06_san_francisco_san_diego,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,4,6,0,0,0,0,0,0
+2026-03-06_san_francisco_san_diego,San Francisco,23,"Edokpaigbe, Candy",True,36,8,15,0.533,1,1,1.0,8,8,1.0,2,4,6,0,1,1,0,0,25
+2026-03-06_san_francisco_san_diego,San Francisco,2,"Neira, Mara",True,36,3,11,0.273,2,7,0.286,1,2,0.5,0,5,5,3,4,5,1,5,9
+2026-03-06_san_francisco_san_diego,San Francisco,9,"Cargol, Aina",True,37,2,11,0.182,0,2,0.0,2,6,0.333,1,5,6,3,4,2,0,4,6
+2026-03-06_san_francisco_san_diego,San Francisco,12,"Taušová, Nataša",True,20,3,9,0.333,0,4,0.0,0,0,,2,2,4,1,0,2,0,1,6
+2026-03-06_san_francisco_san_diego,San Francisco,3,"Mouriño, Noelia",True,15,2,5,0.4,0,0,,1,2,0.5,2,2,4,3,1,0,0,0,5
+2026-03-06_san_francisco_san_diego,San Francisco,14,"Ugwah, Michelle",False,20,3,6,0.5,0,0,,0,0,,1,2,3,0,1,0,2,3,6
+2026-03-06_san_francisco_san_diego,San Francisco,4,"McIntyre, Meghan",False,11,1,5,0.2,0,1,0.0,0,0,,1,1,2,3,0,0,0,0,2
+2026-03-06_san_francisco_san_diego,San Francisco,24,"Castro, Sol",False,5,0,1,0.0,0,0,,2,2,1.0,1,0,1,2,0,0,0,0,2
+2026-03-06_san_francisco_san_diego,San Francisco,21,"Williams, Olivia",False,12,0,2,0.0,0,0,,0,0,,0,2,2,1,1,2,0,0,0
+2026-03-06_san_francisco_san_diego,San Francisco,7,"Ferrara Horne, Nevaeh",False,8,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-03-06_san_francisco_san_diego,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,4,8,0,0,0,0,0,0
+2026-03-07_pepperdine_san_francisco,San Francisco,2,"Neira, Mara",True,31,5,13,0.385,4,11,0.364,1,2,0.5,0,3,3,3,2,0,0,3,15
+2026-03-07_pepperdine_san_francisco,San Francisco,12,"Taušová, Nataša",True,26,5,10,0.5,4,7,0.571,0,0,,2,5,7,5,1,0,0,3,14
+2026-03-07_pepperdine_san_francisco,San Francisco,9,"Cargol, Aina",True,36,4,9,0.444,1,4,0.25,4,5,0.8,0,2,2,3,9,2,0,1,13
+2026-03-07_pepperdine_san_francisco,San Francisco,3,"Mouriño, Noelia",True,22,5,9,0.556,0,0,,1,1,1.0,3,4,7,0,3,0,0,1,11
+2026-03-07_pepperdine_san_francisco,San Francisco,23,"Edokpaigbe, Candy",True,37,3,13,0.231,2,5,0.4,2,2,1.0,1,2,3,1,2,3,0,4,10
+2026-03-07_pepperdine_san_francisco,San Francisco,14,"Ugwah, Michelle",False,11,4,4,1.0,0,0,,1,1,1.0,1,2,3,2,0,2,0,0,9
+2026-03-07_pepperdine_san_francisco,San Francisco,7,"Ferrara Horne, Nevaeh",False,15,3,4,0.75,2,3,0.667,0,0,,0,2,2,2,2,2,1,1,8
+2026-03-07_pepperdine_san_francisco,San Francisco,4,"McIntyre, Meghan",False,14,2,3,0.667,0,1,0.0,0,0,,0,2,2,2,3,1,0,0,4
+2026-03-07_pepperdine_san_francisco,San Francisco,24,"Castro, Sol",False,8,1,2,0.5,0,0,,0,0,,1,0,1,1,2,1,1,0,2
+2026-03-07_pepperdine_san_francisco,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,4,5,0,0,1,0,0,0
+2026-03-07_pepperdine_san_francisco,Pepperdine,2,"Guiney, Elli",True,38,7,11,0.636,3,5,0.6,5,6,0.833,0,4,4,0,4,0,1,1,22
+2026-03-07_pepperdine_san_francisco,Pepperdine,13,"Fiso, Meghan",True,29,5,12,0.417,1,4,0.25,5,5,1.0,2,6,8,4,3,3,0,3,16
+2026-03-07_pepperdine_san_francisco,Pepperdine,1,"Sta. Maria, Taija",True,25,3,5,0.6,0,1,0.0,5,6,0.833,0,2,2,0,2,2,0,1,11
+2026-03-07_pepperdine_san_francisco,Pepperdine,22,"Falk, Lina",True,28,2,7,0.286,1,4,0.25,2,2,1.0,0,2,2,0,0,5,0,0,7
+2026-03-07_pepperdine_san_francisco,Pepperdine,12,"Preston, Shorna",True,26,0,3,0.0,0,2,0.0,0,0,,3,3,6,4,3,3,1,0,0
+2026-03-07_pepperdine_san_francisco,Pepperdine,00,"Finley, Ivory",False,30,5,12,0.417,2,4,0.5,1,2,0.5,0,4,4,3,1,2,0,0,13
+2026-03-07_pepperdine_san_francisco,Pepperdine,3,"Green, Bella",False,14,0,1,0.0,0,0,,0,0,,0,2,2,1,1,1,0,0,0
+2026-03-07_pepperdine_san_francisco,Pepperdine,30,"Harmon, Seleh",False,9,0,3,0.0,0,2,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2026-03-07_pepperdine_san_francisco,Pepperdine,31,"Orio, Irune",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-03-07_pepperdine_san_francisco,Pepperdine,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,2,5,0,0,1,0,0,0
+2026-03-08_santa_clara_san_francisco,San Francisco,23,"Edokpaigbe, Candy",True,38,6,13,0.462,1,2,0.5,7,8,0.875,2,2,4,4,3,3,0,3,20
+2026-03-08_santa_clara_san_francisco,San Francisco,2,"Neira, Mara",True,28,6,14,0.429,2,6,0.333,3,4,0.75,0,3,3,3,1,4,1,3,17
+2026-03-08_santa_clara_san_francisco,San Francisco,12,"Taušová, Nataša",True,21,4,11,0.364,0,2,0.0,0,0,,2,2,4,5,1,0,0,1,8
+2026-03-08_santa_clara_san_francisco,San Francisco,3,"Mouriño, Noelia",True,18,3,5,0.6,0,0,,0,0,,0,4,4,4,2,3,0,0,6
+2026-03-08_santa_clara_san_francisco,San Francisco,9,"Cargol, Aina",True,32,1,9,0.111,1,3,0.333,2,2,1.0,0,4,4,3,8,3,0,2,5
+2026-03-08_santa_clara_san_francisco,San Francisco,4,"McIntyre, Meghan",False,21,3,4,0.75,1,2,0.5,0,0,,1,1,2,0,2,3,0,0,7
+2026-03-08_santa_clara_san_francisco,San Francisco,7,"Ferrara Horne, Nevaeh",False,20,1,4,0.25,0,0,,1,2,0.5,1,3,4,0,1,0,1,3,3
+2026-03-08_santa_clara_san_francisco,San Francisco,14,"Ugwah, Michelle",False,13,1,2,0.5,0,0,,1,2,0.5,0,2,2,2,2,2,1,0,3
+2026-03-08_santa_clara_san_francisco,San Francisco,24,"Castro, Sol",False,9,0,1,0.0,0,0,,0,0,,0,0,0,2,0,0,0,0,0
+2026-03-08_santa_clara_san_francisco,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,1,5,0,0,0,0,0,0
+2026-03-08_santa_clara_san_francisco,Santa Clara,00,"Jones, Maia",True,26,9,15,0.6,4,8,0.5,6,7,0.857,1,5,6,3,0,3,2,1,28
+2026-03-08_santa_clara_san_francisco,Santa Clara,30,"Fox, Kylee",True,26,5,11,0.455,2,4,0.5,0,0,,2,3,5,1,1,0,0,0,12
+2026-03-08_santa_clara_san_francisco,Santa Clara,23,"Hawkins, Ashley",True,31,3,8,0.375,0,2,0.0,5,7,0.714,0,4,4,1,6,3,0,2,11
+2026-03-08_santa_clara_san_francisco,Santa Clara,13,"Schmidt, Ava",True,32,3,10,0.3,1,5,0.2,0,0,,0,1,1,1,0,3,0,0,7
+2026-03-08_santa_clara_san_francisco,Santa Clara,20,"Miller, Delainey",True,24,1,4,0.25,0,0,,4,4,1.0,3,5,8,1,1,2,1,0,6
+2026-03-08_santa_clara_san_francisco,Santa Clara,2,"Hooker, Aniya",False,26,3,7,0.429,1,4,0.25,6,6,1.0,1,5,6,4,3,6,2,4,13
+2026-03-08_santa_clara_san_francisco,Santa Clara,3,"Schat, Kate",False,17,3,5,0.6,2,2,1.0,1,2,0.5,1,0,1,0,1,0,0,1,9
+2026-03-08_santa_clara_san_francisco,Santa Clara,34,"Gildersleeve-stiles, Tyler",False,15,0,1,0.0,0,0,,1,2,0.5,3,3,6,4,3,2,0,0,1
+2026-03-08_santa_clara_san_francisco,Santa Clara,6,"Grieger, Sienna",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-03-08_santa_clara_san_francisco,Santa Clara,10,"Grover, Lauren",False,1,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2026-03-08_santa_clara_san_francisco,Santa Clara,11,"Goodchild, Alana",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-03-08_santa_clara_san_francisco,Santa Clara,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,2,2,0,0,0,0,0,0
+2026-03-19_san_francisco_utah_valley,Utah Valley,5,"Blackham, Cambree",True,35,6,13,0.462,2,5,0.4,2,4,0.5,0,1,1,4,1,2,0,2,16
+2026-03-19_san_francisco_utah_valley,Utah Valley,14,"Headrick, Kaylee",True,35,4,12,0.333,0,1,0.0,2,3,0.667,1,8,9,4,3,4,0,2,10
+2026-03-19_san_francisco_utah_valley,Utah Valley,1,"Mabry, Kylee",True,27,0,3,0.0,0,2,0.0,4,6,0.667,0,2,2,4,0,3,0,1,4
+2026-03-19_san_francisco_utah_valley,Utah Valley,3,"Barcello, Amanda",True,34,0,4,0.0,0,3,0.0,2,3,0.667,0,3,3,0,0,1,0,2,2
+2026-03-19_san_francisco_utah_valley,Utah Valley,25,"Nelson, Halle",True,14,0,2,0.0,0,0,,1,2,0.5,0,0,0,5,0,2,1,1,1
+2026-03-19_san_francisco_utah_valley,Utah Valley,44,"Sorenson, Gracie",False,14,5,8,0.625,0,0,,1,2,0.5,0,0,0,1,0,2,0,0,11
+2026-03-19_san_francisco_utah_valley,Utah Valley,34,"Chaney, Tessa",False,14,1,3,0.333,0,0,,2,2,1.0,1,2,3,1,1,0,0,0,4
+2026-03-19_san_francisco_utah_valley,Utah Valley,21,"Tanuvasa, Naia",False,6,1,3,0.333,0,2,0.0,0,0,,0,0,0,1,0,0,0,2,2
+2026-03-19_san_francisco_utah_valley,Utah Valley,10,"Gibb, Saige",False,18,0,2,0.0,0,1,0.0,0,0,,0,2,2,0,1,1,0,0,0
+2026-03-19_san_francisco_utah_valley,Utah Valley,2,"Shreeve, Anna",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-03-19_san_francisco_utah_valley,Utah Valley,12,"Goo, Gaby",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-03-19_san_francisco_utah_valley,Utah Valley,15,"Leeson, Evie",False,1,0,1,0.0,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2026-03-19_san_francisco_utah_valley,Utah Valley,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,2,6,0,0,2,0,0,0
+2026-03-19_san_francisco_utah_valley,San Francisco,23,"Edokpaigbe, Candy",True,35,8,10,0.8,1,2,0.5,3,4,0.75,2,0,2,3,3,2,0,2,20
+2026-03-19_san_francisco_utah_valley,San Francisco,2,"Neira, Mara",True,30,5,12,0.417,5,11,0.455,0,0,,0,3,3,1,4,3,0,0,15
+2026-03-19_san_francisco_utah_valley,San Francisco,9,"Cargol, Aina",True,27,2,5,0.4,2,4,0.5,0,0,,0,4,4,1,4,3,0,0,6
+2026-03-19_san_francisco_utah_valley,San Francisco,3,"Mouriño, Noelia",True,15,2,4,0.5,0,0,,2,2,1.0,0,5,5,3,2,2,0,0,6
+2026-03-19_san_francisco_utah_valley,San Francisco,12,"Taušová, Nataša",True,20,2,2,1.0,1,1,1.0,0,0,,0,5,5,3,3,2,0,2,5
+2026-03-19_san_francisco_utah_valley,San Francisco,14,"Ugwah, Michelle",False,16,3,6,0.5,0,0,,3,4,0.75,1,2,3,3,0,3,0,2,9
+2026-03-19_san_francisco_utah_valley,San Francisco,4,"McIntyre, Meghan",False,22,2,4,0.5,0,1,0.0,2,5,0.4,0,4,4,2,3,2,1,1,6
+2026-03-19_san_francisco_utah_valley,San Francisco,24,"Castro, Sol",False,9,2,3,0.667,0,0,,1,1,1.0,1,0,1,3,0,1,0,0,5
+2026-03-19_san_francisco_utah_valley,San Francisco,10,"Pateman, Amy",False,3,1,1,1.0,1,1,1.0,0,0,,0,2,2,1,1,0,0,0,3
+2026-03-19_san_francisco_utah_valley,San Francisco,7,"Ferrara Horne, Nevaeh",False,15,1,1,1.0,0,0,,0,0,,0,1,1,0,0,0,2,0,2
+2026-03-19_san_francisco_utah_valley,San Francisco,21,"Williams, Olivia",False,6,1,3,0.333,0,0,,0,0,,0,1,1,0,0,2,0,0,2
+2026-03-19_san_francisco_utah_valley,San Francisco,32,"Priestley, Sophia",False,2,0,0,,0,0,,1,2,0.5,0,0,0,0,0,0,0,0,1
+2026-03-19_san_francisco_utah_valley,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,2,4,0,0,0,0,0,0
+2026-03-22_montana_st_san_francisco,San Francisco,23,"Edokpaigbe, Candy",True,29,8,16,0.5,1,3,0.333,3,5,0.6,1,2,3,4,0,5,1,2,20
+2026-03-22_montana_st_san_francisco,San Francisco,12,"Taušová, Nataša",True,25,3,9,0.333,2,5,0.4,0,0,,4,5,9,2,0,5,1,3,8
+2026-03-22_montana_st_san_francisco,San Francisco,2,"Neira, Mara",True,18,2,7,0.286,2,5,0.4,0,0,,0,3,3,2,3,5,0,1,6
+2026-03-22_montana_st_san_francisco,San Francisco,3,"Mouriño, Noelia",True,25,2,5,0.4,0,0,,0,1,0.0,6,5,11,2,3,3,0,1,4
+2026-03-22_montana_st_san_francisco,San Francisco,9,"Cargol, Aina",True,28,1,7,0.143,0,4,0.0,1,3,0.333,1,2,3,1,3,5,0,2,3
+2026-03-22_montana_st_san_francisco,San Francisco,4,"McIntyre, Meghan",False,18,2,6,0.333,0,1,0.0,0,0,,1,2,3,2,1,1,0,1,4
+2026-03-22_montana_st_san_francisco,San Francisco,10,"Pateman, Amy",False,13,1,5,0.2,1,3,0.333,1,2,0.5,0,2,2,0,0,2,0,0,4
+2026-03-22_montana_st_san_francisco,San Francisco,7,"Ferrara Horne, Nevaeh",False,21,1,5,0.2,0,3,0.0,0,2,0.0,1,3,4,1,1,2,0,1,2
+2026-03-22_montana_st_san_francisco,San Francisco,14,"Ugwah, Michelle",False,6,1,2,0.5,0,0,,0,0,,0,1,1,0,0,0,0,0,2
+2026-03-22_montana_st_san_francisco,San Francisco,24,"Castro, Sol",False,9,0,4,0.0,0,0,,0,0,,2,3,5,1,1,0,2,2,0
+2026-03-22_montana_st_san_francisco,San Francisco,32,"Priestley, Sophia",False,6,0,1,0.0,0,1,0.0,0,2,0.0,0,1,1,1,0,0,0,1,0
+2026-03-22_montana_st_san_francisco,San Francisco,21,"Williams, Olivia",False,2,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2026-03-22_montana_st_san_francisco,San Francisco,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,4,7,0,0,0,0,0,0
+2026-03-22_montana_st_san_francisco,Montana St.,44,"Chirrick, Taylee",True,34,4,18,0.222,2,10,0.2,5,10,0.5,5,4,9,1,3,5,2,6,15
+2026-03-22_montana_st_san_francisco,Montana St.,33,"Harris, Addison",True,26,6,11,0.545,0,3,0.0,2,4,0.5,1,0,1,1,4,0,0,1,14
+2026-03-22_montana_st_san_francisco,Montana St.,15,"Bunyan, Isobel",True,25,4,7,0.571,4,7,0.571,0,0,,0,1,1,5,0,1,1,2,12
+2026-03-22_montana_st_san_francisco,Montana St.,12,"Philip, Jamison",True,22,3,9,0.333,0,0,,2,2,1.0,1,3,4,3,3,2,1,3,8
+2026-03-22_montana_st_san_francisco,Montana St.,5,"Johnson, Ella",True,26,1,8,0.125,0,5,0.0,0,0,,1,6,7,2,2,0,1,4,2
+2026-03-22_montana_st_san_francisco,Montana St.,21,"Bailey, Brianne",False,17,3,8,0.375,0,3,0.0,2,2,1.0,1,4,5,1,0,7,0,0,8
+2026-03-22_montana_st_san_francisco,Montana St.,24,"Couture, Kadynce",False,22,1,5,0.2,1,4,0.25,2,2,1.0,1,3,4,3,1,2,0,0,5
+2026-03-22_montana_st_san_francisco,Montana St.,20,"Fatupaito, Brooke",False,14,1,3,0.333,1,2,0.5,0,0,,1,5,6,1,1,2,0,3,3
+2026-03-22_montana_st_san_francisco,Montana St.,23,"Erickson, Teagan",False,14,1,4,0.25,0,2,0.0,0,0,,0,2,2,1,1,1,1,0,2
+2026-03-22_montana_st_san_francisco,Montana St.,2,"Smith, Courtney",False,0,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-03-22_montana_st_san_francisco,Montana St.,13,"Hintz, Grace",False,0,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-03-22_montana_st_san_francisco,Montana St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,7,4,11,0,0,0,0,0,0

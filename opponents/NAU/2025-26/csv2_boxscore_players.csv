@@ -1,0 +1,738 @@
+game_id,team,jersey,player,started,min,fg_m,fg_a,fg_pct,3p_m,3p_a,3p_pct,ft_m,ft_a,ft_pct,oreb,dreb,reb,pf,ast,to,blk,stl,pts
+2025-11-03_new_mexico_northern_ariz,Northern Ariz.,25,"White, Naomi",True,37,9,24,0.375,6,13,0.462,0,2,0.0,0,4,4,2,2,6,1,1,24
+2025-11-03_new_mexico_northern_ariz,Northern Ariz.,11,"Taylor, Audrey",True,28,3,7,0.429,2,5,0.4,2,2,1.0,0,1,1,4,1,2,0,3,10
+2025-11-03_new_mexico_northern_ariz,Northern Ariz.,03,"Watts, Madison",True,33,3,11,0.273,0,3,0.0,2,3,0.667,1,5,6,2,1,4,2,1,8
+2025-11-03_new_mexico_northern_ariz,Northern Ariz.,35,"Morris, Simone",True,27,1,7,0.143,0,1,0.0,4,6,0.667,6,2,8,1,2,0,0,0,6
+2025-11-03_new_mexico_northern_ariz,Northern Ariz.,07,"Davis, Layla",True,11,1,2,0.5,0,0,,0,0,,0,1,1,3,2,0,0,0,2
+2025-11-03_new_mexico_northern_ariz,Northern Ariz.,00,"Dasovich, Emma",False,24,2,5,0.4,1,3,0.333,1,2,0.5,1,1,2,4,1,0,0,0,6
+2025-11-03_new_mexico_northern_ariz,Northern Ariz.,05,"Blithikioti, Eri",False,23,0,2,0.0,0,2,0.0,2,2,1.0,1,2,3,0,1,3,0,1,2
+2025-11-03_new_mexico_northern_ariz,Northern Ariz.,13,"Robinson, J'Bionna",False,3,0,0,,0,0,,1,2,0.5,0,1,1,0,0,2,0,0,1
+2025-11-03_new_mexico_northern_ariz,Northern Ariz.,14,"Saric, Valentina",False,7,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2025-11-03_new_mexico_northern_ariz,Northern Ariz.,10,"Williams, Hannah",False,4,0,0,,0,0,,0,0,,1,1,2,0,1,0,0,0,0
+2025-11-03_new_mexico_northern_ariz,Northern Ariz.,23,"Williams, Kayla",False,3,0,0,,0,0,,0,0,,0,1,1,1,0,0,0,0,0
+2025-11-03_new_mexico_northern_ariz,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,3,3,0,0,0,0,0,0
+2025-11-03_new_mexico_northern_ariz,New Mexico,40,"Craig, Clarissa",True,24,4,4,1.0,0,0,,8,9,0.889,1,4,5,3,0,2,1,0,16
+2025-11-03_new_mexico_northern_ariz,New Mexico,03,"Hooks, Destinee",True,20,4,10,0.4,2,3,0.667,2,4,0.5,2,2,4,4,3,2,0,1,12
+2025-11-03_new_mexico_northern_ariz,New Mexico,04,"Hargrove, Alyssa",True,31,4,7,0.571,2,4,0.5,1,2,0.5,1,4,5,2,5,3,1,2,11
+2025-11-03_new_mexico_northern_ariz,New Mexico,11,"Padilla, Nayli",True,37,3,9,0.333,1,6,0.167,2,4,0.5,2,3,5,2,4,2,1,3,9
+2025-11-03_new_mexico_northern_ariz,New Mexico,13,"Magalhães, Joana",True,27,4,7,0.571,0,1,0.0,0,2,0.0,0,4,4,2,2,3,0,6,8
+2025-11-03_new_mexico_northern_ariz,New Mexico,44,"Abdurraqib, Laila",False,22,3,5,0.6,3,4,0.75,0,0,,0,0,0,1,3,2,0,1,9
+2025-11-03_new_mexico_northern_ariz,New Mexico,23,"Najjuma, Emma",False,10,3,3,1.0,0,0,,0,2,0.0,1,2,3,1,0,0,0,0,6
+2025-11-03_new_mexico_northern_ariz,New Mexico,05,"Foster, Kaia",False,9,1,3,0.333,0,2,0.0,0,0,,1,5,6,1,1,1,0,0,2
+2025-11-03_new_mexico_northern_ariz,New Mexico,20,"Jones, Tyler",False,8,1,4,0.25,0,1,0.0,0,0,,0,0,0,0,0,0,0,0,2
+2025-11-03_new_mexico_northern_ariz,New Mexico,15,"Jordon, Drew",False,5,1,2,0.5,0,0,,0,0,,0,1,1,5,0,0,0,1,2
+2025-11-03_new_mexico_northern_ariz,New Mexico,24,"Joaquim, Jessie",False,6,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2025-11-03_new_mexico_northern_ariz,New Mexico,14,"Peixinho, Leonor",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-03_new_mexico_northern_ariz,New Mexico,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,5,5,0,0,0,0,0,0
+2025-11-08_utah_tech_northern_ariz,Northern Ariz.,25,"White, Naomi",True,38,11,22,0.5,4,5,0.8,0,4,0.0,1,6,7,5,1,6,0,3,26
+2025-11-08_utah_tech_northern_ariz,Northern Ariz.,11,"Taylor, Audrey",True,35,6,11,0.545,2,5,0.4,2,2,1.0,3,4,7,2,5,4,0,3,16
+2025-11-08_utah_tech_northern_ariz,Northern Ariz.,35,"Morris, Simone",True,35,5,15,0.333,0,3,0.0,4,4,1.0,0,2,2,5,0,1,1,1,14
+2025-11-08_utah_tech_northern_ariz,Northern Ariz.,00,"Dasovich, Emma",True,17,2,4,0.5,0,1,0.0,1,1,1.0,1,5,6,5,2,3,0,1,5
+2025-11-08_utah_tech_northern_ariz,Northern Ariz.,14,"Saric, Valentina",True,7,0,0,,0,0,,0,0,,0,2,2,0,1,0,0,1,0
+2025-11-08_utah_tech_northern_ariz,Northern Ariz.,05,"Blithikioti, Eri",False,27,3,4,0.75,1,2,0.5,0,0,,0,5,5,5,3,3,1,0,7
+2025-11-08_utah_tech_northern_ariz,Northern Ariz.,07,"Davis, Layla",False,20,1,6,0.167,0,0,,0,0,,3,1,4,0,0,1,1,1,2
+2025-11-08_utah_tech_northern_ariz,Northern Ariz.,10,"Williams, Hannah",False,6,1,2,0.5,0,0,,0,1,0.0,0,2,2,3,0,0,0,1,2
+2025-11-08_utah_tech_northern_ariz,Northern Ariz.,13,"Robinson, J'Bionna",False,12,0,3,0.0,0,0,,1,2,0.5,1,3,4,2,0,4,0,1,1
+2025-11-08_utah_tech_northern_ariz,Northern Ariz.,01,"Harris, Alyssa",False,1,0,0,,0,0,,0,0,,0,0,0,2,0,0,0,0,0
+2025-11-08_utah_tech_northern_ariz,Northern Ariz.,23,"Williams, Kayla",False,1,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2025-11-08_utah_tech_northern_ariz,Northern Ariz.,30,"Curry, Faith",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-08_utah_tech_northern_ariz,Northern Ariz.,12,"Dunn, Addison",False,,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-08_utah_tech_northern_ariz,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,4,7,0,0,0,0,0,0
+2025-11-08_utah_tech_northern_ariz,Utah Tech,21,"Borden, Kaylee",True,31,7,14,0.5,2,5,0.4,5,6,0.833,0,1,1,0,3,1,0,1,21
+2025-11-08_utah_tech_northern_ariz,Utah Tech,05,"Hartley, Chardonnay",True,33,7,13,0.538,3,5,0.6,2,7,0.286,0,3,3,2,4,6,1,5,19
+2025-11-08_utah_tech_northern_ariz,Utah Tech,01,"Warren, Maddie",True,18,2,9,0.222,2,7,0.286,5,6,0.833,0,5,5,4,0,0,0,2,11
+2025-11-08_utah_tech_northern_ariz,Utah Tech,11,"Cofer, Paige",True,23,4,7,0.571,0,1,0.0,1,4,0.25,1,0,1,4,2,2,0,1,9
+2025-11-08_utah_tech_northern_ariz,Utah Tech,04,"Crittendon, Brie",True,30,2,3,0.667,1,1,1.0,2,2,1.0,2,4,6,3,2,4,0,0,7
+2025-11-08_utah_tech_northern_ariz,Utah Tech,03,"Dallas, Calyn",False,31,2,5,0.4,2,4,0.5,1,2,0.5,0,8,8,0,0,0,2,0,7
+2025-11-08_utah_tech_northern_ariz,Utah Tech,20,"Mili, Merceius",False,12,2,4,0.5,0,2,0.0,0,0,,0,3,3,1,1,2,0,1,4
+2025-11-08_utah_tech_northern_ariz,Utah Tech,24,"Crocker, Lauren",False,11,0,3,0.0,0,2,0.0,0,0,,1,3,4,1,1,2,2,0,0
+2025-11-08_utah_tech_northern_ariz,Utah Tech,10,"Colic, Andjela",False,9,0,2,0.0,0,1,0.0,0,0,,0,1,1,0,0,2,0,0,0
+2025-11-08_utah_tech_northern_ariz,Utah Tech,25,"Shimada, Annalyse",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-08_utah_tech_northern_ariz,Utah Tech,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,2,4,0,0,0,0,0,0
+2025-11-11_northern_ariz_embry_riddle_az,Embry-Riddle (AZ),10,"Dean, Abby",True,30,5,14,0.357,3,10,0.3,1,2,0.5,0,2,2,2,1,5,0,1,14
+2025-11-11_northern_ariz_embry_riddle_az,Embry-Riddle (AZ),42,"Morris-Rexford, Riley",True,19,2,5,0.4,0,0,,2,2,1.0,4,2,6,3,2,5,0,1,6
+2025-11-11_northern_ariz_embry_riddle_az,Embry-Riddle (AZ),20,"Smith, Jordyn",True,26,1,5,0.2,0,2,0.0,1,2,0.5,1,1,2,3,2,1,0,0,3
+2025-11-11_northern_ariz_embry_riddle_az,Embry-Riddle (AZ),33,"Barrett, Bella",True,12,0,3,0.0,0,0,,2,2,1.0,0,1,1,2,0,2,0,1,2
+2025-11-11_northern_ariz_embry_riddle_az,Embry-Riddle (AZ),35,"McBride, Kate",True,14,0,1,0.0,0,0,,0,2,0.0,2,4,6,4,2,1,0,0,0
+2025-11-11_northern_ariz_embry_riddle_az,Embry-Riddle (AZ),21,"Alapai, Makenzie",False,26,2,8,0.25,0,4,0.0,6,8,0.75,2,3,5,1,2,5,0,2,10
+2025-11-11_northern_ariz_embry_riddle_az,Embry-Riddle (AZ),17,"Evenson, Morgan",False,16,3,5,0.6,1,3,0.333,2,4,0.5,0,2,2,2,0,3,0,1,9
+2025-11-11_northern_ariz_embry_riddle_az,Embry-Riddle (AZ),15,"Whelan, Angelina",False,20,3,5,0.6,1,2,0.5,0,0,,0,5,5,3,0,1,0,0,7
+2025-11-11_northern_ariz_embry_riddle_az,Embry-Riddle (AZ),03,"Nakakura, Kapomaika'i",False,11,0,2,0.0,0,2,0.0,4,4,1.0,0,1,1,3,1,7,0,1,4
+2025-11-11_northern_ariz_embry_riddle_az,Embry-Riddle (AZ),00,"Clayton, Jaelah",False,13,1,3,0.333,1,3,0.333,0,0,,1,1,2,0,0,4,0,0,3
+2025-11-11_northern_ariz_embry_riddle_az,Embry-Riddle (AZ),05,"Mann, Morgan",False,8,0,1,0.0,0,0,,1,4,0.25,0,2,2,1,0,0,0,1,1
+2025-11-11_northern_ariz_embry_riddle_az,Embry-Riddle (AZ),27,"Evenson, Nicole",False,5,0,0,,0,0,,0,0,,0,0,0,1,0,1,0,0,0
+2025-11-11_northern_ariz_embry_riddle_az,Embry-Riddle (AZ),TM,TEAM,False,0,0,0,,0,0,,0,0,,3,7,10,0,0,2,0,0,0
+2025-11-11_northern_ariz_embry_riddle_az,Northern Ariz.,25,"White, Naomi",True,30,8,16,0.5,5,9,0.556,0,0,,0,7,7,2,6,1,1,6,21
+2025-11-11_northern_ariz_embry_riddle_az,Northern Ariz.,07,"Davis, Layla",True,15,6,9,0.667,0,0,,4,7,0.571,4,3,7,2,0,1,0,0,16
+2025-11-11_northern_ariz_embry_riddle_az,Northern Ariz.,35,"Morris, Simone",True,21,4,11,0.364,0,0,,0,1,0.0,0,2,2,3,0,4,0,4,8
+2025-11-11_northern_ariz_embry_riddle_az,Northern Ariz.,11,"Taylor, Audrey",True,24,2,10,0.2,1,5,0.2,0,0,,1,0,1,2,3,3,0,3,5
+2025-11-11_northern_ariz_embry_riddle_az,Northern Ariz.,14,"Saric, Valentina",True,12,1,3,0.333,1,3,0.333,0,0,,0,2,2,1,1,0,0,0,3
+2025-11-11_northern_ariz_embry_riddle_az,Northern Ariz.,10,"Williams, Hannah",False,20,7,9,0.778,0,0,,2,4,0.5,5,4,9,3,1,1,1,1,16
+2025-11-11_northern_ariz_embry_riddle_az,Northern Ariz.,13,"Robinson, J'Bionna",False,18,4,6,0.667,0,0,,2,6,0.333,0,2,2,3,2,2,0,5,10
+2025-11-11_northern_ariz_embry_riddle_az,Northern Ariz.,30,"Curry, Faith",False,13,1,4,0.25,0,2,0.0,3,3,1.0,2,1,3,3,1,0,0,0,5
+2025-11-11_northern_ariz_embry_riddle_az,Northern Ariz.,05,"Blithikioti, Eri",False,18,1,4,0.25,0,2,0.0,2,2,1.0,4,2,6,2,2,1,0,2,4
+2025-11-11_northern_ariz_embry_riddle_az,Northern Ariz.,12,"Dunn, Addison",False,6,1,3,0.333,0,1,0.0,2,2,1.0,0,1,1,3,0,0,0,0,4
+2025-11-11_northern_ariz_embry_riddle_az,Northern Ariz.,00,"Dasovich, Emma",False,8,0,2,0.0,0,1,0.0,3,4,0.75,0,0,0,2,0,0,0,1,3
+2025-11-11_northern_ariz_embry_riddle_az,Northern Ariz.,02,"Scott, Sydney",False,5,1,1,1.0,1,1,1.0,0,0,,0,1,1,0,2,0,0,1,3
+2025-11-11_northern_ariz_embry_riddle_az,Northern Ariz.,23,"Williams, Kayla",False,5,1,1,1.0,0,0,,0,0,,0,0,0,1,1,0,0,1,2
+2025-11-11_northern_ariz_embry_riddle_az,Northern Ariz.,01,"Harris, Alyssa",False,5,0,0,,0,0,,0,0,,0,0,0,0,0,2,0,0,0
+2025-11-11_northern_ariz_embry_riddle_az,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2025-11-15_uc_irvine_northern_ariz,Northern Ariz.,25,"White, Naomi",True,39,6,17,0.353,2,7,0.286,7,8,0.875,1,3,4,1,4,6,0,1,21
+2025-11-15_uc_irvine_northern_ariz,Northern Ariz.,35,"Morris, Simone",True,12,3,3,1.0,0,0,,5,6,0.833,0,0,0,4,0,0,0,0,11
+2025-11-15_uc_irvine_northern_ariz,Northern Ariz.,00,"Dasovich, Emma",True,29,1,3,0.333,0,1,0.0,6,6,1.0,2,2,4,2,0,1,0,0,8
+2025-11-15_uc_irvine_northern_ariz,Northern Ariz.,11,"Taylor, Audrey",True,34,2,9,0.222,1,6,0.167,0,0,,1,4,5,1,5,1,0,1,5
+2025-11-15_uc_irvine_northern_ariz,Northern Ariz.,05,"Blithikioti, Eri",True,23,1,3,0.333,1,1,1.0,0,0,,1,3,4,3,2,1,0,1,3
+2025-11-15_uc_irvine_northern_ariz,Northern Ariz.,30,"Curry, Faith",False,20,4,7,0.571,3,6,0.5,2,2,1.0,0,1,1,2,0,2,0,1,13
+2025-11-15_uc_irvine_northern_ariz,Northern Ariz.,03,"Watts, Madison",False,22,3,10,0.3,1,1,1.0,3,5,0.6,2,5,7,4,1,1,1,3,10
+2025-11-15_uc_irvine_northern_ariz,Northern Ariz.,07,"Davis, Layla",False,10,0,1,0.0,0,0,,2,4,0.5,1,1,2,0,1,2,0,0,2
+2025-11-15_uc_irvine_northern_ariz,Northern Ariz.,10,"Williams, Hannah",False,8,1,1,1.0,0,0,,0,2,0.0,0,3,3,5,1,1,0,0,2
+2025-11-15_uc_irvine_northern_ariz,Northern Ariz.,14,"Saric, Valentina",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-15_uc_irvine_northern_ariz,Northern Ariz.,13,"Robinson, J'Bionna",False,1,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2025-11-15_uc_irvine_northern_ariz,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,2,2,0,0,0,0,0,0
+2025-11-15_uc_irvine_northern_ariz,UC Irvine,12,"Nahum, Shirel",True,39,6,18,0.333,3,5,0.6,8,8,1.0,1,4,5,5,4,5,0,1,23
+2025-11-15_uc_irvine_northern_ariz,UC Irvine,23,"Wynn, Jada",True,37,4,9,0.444,4,7,0.571,9,10,0.9,1,10,11,4,6,3,0,2,21
+2025-11-15_uc_irvine_northern_ariz,UC Irvine,20,"Hernandez, Hunter",True,31,4,13,0.308,0,3,0.0,3,4,0.75,7,4,11,2,2,1,0,3,11
+2025-11-15_uc_irvine_northern_ariz,UC Irvine,10,"Madsen, Lauryn",True,31,2,10,0.2,1,9,0.111,2,2,1.0,2,3,5,1,3,0,1,1,7
+2025-11-15_uc_irvine_northern_ariz,UC Irvine,09,"Falcon Hernandez, Daniela",True,24,1,6,0.167,0,0,,0,0,,4,2,6,3,0,0,0,0,2
+2025-11-15_uc_irvine_northern_ariz,UC Irvine,13,"Stores, Nohealani",False,15,6,11,0.545,0,1,0.0,2,2,1.0,2,1,3,5,1,2,0,1,14
+2025-11-15_uc_irvine_northern_ariz,UC Irvine,24,"Zonzon-Huyghe, Naomy",False,20,4,5,0.8,2,2,1.0,0,0,,3,1,4,3,2,1,0,0,10
+2025-11-15_uc_irvine_northern_ariz,UC Irvine,01,"Grant, Ameerah",False,1,1,1,1.0,0,0,,0,0,,0,0,0,0,0,0,0,0,2
+2025-11-15_uc_irvine_northern_ariz,UC Irvine,02,"Hernandez, Haley",False,2,0,0,,0,0,,0,0,,0,1,1,1,0,0,0,0,0
+2025-11-15_uc_irvine_northern_ariz,UC Irvine,22,"Noa, Reese",False,,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-15_uc_irvine_northern_ariz,UC Irvine,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,1,2,0,0,0,0,0,0
+2025-11-19_northern_ariz_pepperdine,Pepperdine,02,"Guiney, Elli",True,35,7,12,0.583,3,6,0.5,9,10,0.9,1,4,5,1,0,2,2,2,26
+2025-11-19_northern_ariz_pepperdine,Pepperdine,13,"Fiso, Meghan",True,31,5,10,0.5,0,0,,5,5,1.0,0,6,6,1,2,5,0,2,15
+2025-11-19_northern_ariz_pepperdine,Pepperdine,01,"Sta. Maria, Taija",True,30,6,7,0.857,0,1,0.0,3,6,0.5,0,1,1,0,3,2,0,1,15
+2025-11-19_northern_ariz_pepperdine,Pepperdine,00,"Finley, Ivory",True,19,3,6,0.5,2,3,0.667,2,2,1.0,1,1,2,1,0,1,0,0,10
+2025-11-19_northern_ariz_pepperdine,Pepperdine,12,"Preston, Shorna",True,28,1,4,0.25,0,2,0.0,2,2,1.0,1,7,8,3,3,1,2,0,4
+2025-11-19_northern_ariz_pepperdine,Pepperdine,22,"Falk, Lina",False,21,2,5,0.4,0,1,0.0,0,0,,0,2,2,2,1,2,0,1,4
+2025-11-19_northern_ariz_pepperdine,Pepperdine,30,"Harmon, Seleh",False,22,1,4,0.25,1,2,0.5,0,0,,0,1,1,2,1,0,0,0,3
+2025-11-19_northern_ariz_pepperdine,Pepperdine,03,"Green, Bella",False,12,1,5,0.2,0,0,,1,2,0.5,3,4,7,4,0,1,1,1,3
+2025-11-19_northern_ariz_pepperdine,Pepperdine,31,"Orio, Irune",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2025-11-19_northern_ariz_pepperdine,Pepperdine,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,2,3,0,0,2,0,0,0
+2025-11-19_northern_ariz_pepperdine,Northern Ariz.,25,"White, Naomi",True,38,9,18,0.5,1,5,0.2,8,11,0.727,0,3,3,3,1,4,0,1,27
+2025-11-19_northern_ariz_pepperdine,Northern Ariz.,07,"Davis, Layla",True,22,5,8,0.625,0,0,,1,2,0.5,5,2,7,3,1,2,0,0,11
+2025-11-19_northern_ariz_pepperdine,Northern Ariz.,13,"Robinson, J'Bionna",True,21,1,3,0.333,0,0,,1,2,0.5,1,1,2,2,3,0,0,0,3
+2025-11-19_northern_ariz_pepperdine,Northern Ariz.,35,"Morris, Simone",True,17,0,8,0.0,0,0,,2,2,1.0,0,3,3,0,1,2,1,0,2
+2025-11-19_northern_ariz_pepperdine,Northern Ariz.,30,"Curry, Faith",True,11,0,1,0.0,0,1,0.0,0,0,,0,1,1,1,0,0,0,1,0
+2025-11-19_northern_ariz_pepperdine,Northern Ariz.,11,"Taylor, Audrey",False,30,5,11,0.455,3,5,0.6,1,1,1.0,0,0,0,3,2,2,0,1,14
+2025-11-19_northern_ariz_pepperdine,Northern Ariz.,03,"Watts, Madison",False,21,4,5,0.8,0,0,,0,0,,1,5,6,4,1,0,0,1,8
+2025-11-19_northern_ariz_pepperdine,Northern Ariz.,14,"Saric, Valentina",False,14,1,2,0.5,1,2,0.5,2,2,1.0,0,3,3,2,0,1,0,0,5
+2025-11-19_northern_ariz_pepperdine,Northern Ariz.,00,"Dasovich, Emma",False,14,1,6,0.167,0,2,0.0,0,0,,0,3,3,2,1,1,0,0,2
+2025-11-19_northern_ariz_pepperdine,Northern Ariz.,05,"Blithikioti, Eri",False,3,1,1,1.0,0,0,,0,0,,0,0,0,0,0,0,0,1,2
+2025-11-19_northern_ariz_pepperdine,Northern Ariz.,10,"Williams, Hannah",False,8,0,1,0.0,0,0,,0,0,,1,0,1,2,1,1,0,0,0
+2025-11-19_northern_ariz_pepperdine,Northern Ariz.,23,"Williams, Kayla",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-19_northern_ariz_pepperdine,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,2,6,0,0,0,0,0,0
+2025-11-21_arizona_northern_ariz,Northern Ariz.,25,"White, Naomi",True,29,8,17,0.471,4,9,0.444,8,11,0.727,0,3,3,4,2,6,0,0,28
+2025-11-21_arizona_northern_ariz,Northern Ariz.,35,"Morris, Simone",True,35,5,8,0.625,1,1,1.0,2,2,1.0,1,5,6,4,3,5,1,1,13
+2025-11-21_arizona_northern_ariz,Northern Ariz.,07,"Davis, Layla",True,29,4,6,0.667,0,0,,4,5,0.8,1,3,4,2,2,2,0,0,12
+2025-11-21_arizona_northern_ariz,Northern Ariz.,11,"Taylor, Audrey",True,36,2,8,0.25,2,7,0.286,1,2,0.5,0,1,1,4,5,2,0,2,7
+2025-11-21_arizona_northern_ariz,Northern Ariz.,03,"Watts, Madison",True,39,2,4,0.5,0,1,0.0,1,2,0.5,1,6,7,3,0,3,0,0,5
+2025-11-21_arizona_northern_ariz,Northern Ariz.,00,"Dasovich, Emma",False,11,4,5,0.8,1,1,1.0,2,2,1.0,2,3,5,2,0,1,0,0,11
+2025-11-21_arizona_northern_ariz,Northern Ariz.,14,"Saric, Valentina",False,7,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2025-11-21_arizona_northern_ariz,Northern Ariz.,10,"Williams, Hannah",False,6,0,0,,0,0,,0,0,,0,0,0,1,0,1,0,1,0
+2025-11-21_arizona_northern_ariz,Northern Ariz.,13,"Robinson, J'Bionna",False,6,0,1,0.0,0,0,,0,0,,1,1,2,1,3,1,0,3,0
+2025-11-21_arizona_northern_ariz,Northern Ariz.,30,"Curry, Faith",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-21_arizona_northern_ariz,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,4,5,0,0,1,0,0,0
+2025-11-21_arizona_northern_ariz,Arizona,00,"Perdue, Mickayla",True,32,9,16,0.562,4,9,0.444,5,7,0.714,0,3,3,0,2,0,0,0,27
+2025-11-21_arizona_northern_ariz,Arizona,03,"Sugapong, Sumayah",True,21,5,8,0.625,1,2,0.5,0,1,0.0,0,2,2,4,5,3,0,4,11
+2025-11-21_arizona_northern_ariz,Arizona,04,"Cornfield, Noelani",True,20,4,6,0.667,0,0,,3,3,1.0,0,3,3,4,4,3,0,0,11
+2025-11-21_arizona_northern_ariz,Arizona,33,"Trammell, Daniah",True,24,3,7,0.429,0,0,,1,1,1.0,1,1,2,3,1,2,0,1,7
+2025-11-21_arizona_northern_ariz,Arizona,08,"Jurado, Mireia",True,37,3,4,0.75,0,1,0.0,0,0,,1,2,3,2,3,1,0,1,6
+2025-11-21_arizona_northern_ariz,Arizona,11,"Welch, Tanyuel",False,29,5,10,0.5,0,1,0.0,0,2,0.0,0,2,2,1,1,1,0,0,10
+2025-11-21_arizona_northern_ariz,Arizona,05,"Ladwig, Molly",False,17,2,5,0.4,0,1,0.0,3,4,0.75,0,4,4,3,3,2,0,1,7
+2025-11-21_arizona_northern_ariz,Arizona,13,"Francois, Nora",False,16,2,3,0.667,0,0,,1,1,1.0,0,0,0,3,2,0,1,1,5
+2025-11-21_arizona_northern_ariz,Arizona,14,"Adebanjo, Blessing",False,4,1,2,0.5,0,0,,1,1,1.0,2,1,3,2,0,0,0,0,3
+2025-11-21_arizona_northern_ariz,Arizona,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,1,2,0,0,0,0,0,0
+2025-11-26_northern_ariz_uni,UNI,20,"Twedt, Jenna",True,23,5,14,0.357,5,11,0.455,5,5,1.0,1,1,2,0,1,1,0,2,20
+2025-11-26_northern_ariz_uni,UNI,05,"Goebel, Ryley",True,32,7,9,0.778,0,0,,2,2,1.0,2,9,11,1,2,2,3,2,16
+2025-11-26_northern_ariz_uni,UNI,15,"Jaeger, Elise",True,31,5,10,0.5,3,6,0.5,0,0,,1,15,16,2,2,2,3,0,13
+2025-11-26_northern_ariz_uni,UNI,22,"Wharton, Taryn",True,29,4,7,0.571,1,3,0.333,0,0,,0,3,3,2,7,2,0,3,9
+2025-11-26_northern_ariz_uni,UNI,23,"Robinson, Bri",True,27,1,6,0.167,0,0,,1,2,0.5,0,2,2,1,5,3,0,0,3
+2025-11-26_northern_ariz_uni,UNI,34,"Janes, Kaylynn",False,16,4,6,0.667,3,5,0.6,0,0,,0,2,2,2,0,2,0,0,11
+2025-11-26_northern_ariz_uni,UNI,11,"Nicholson, Mya",False,15,1,7,0.143,1,6,0.167,0,0,,0,0,0,1,1,1,0,2,3
+2025-11-26_northern_ariz_uni,UNI,24,"Schmotzer, Maren",False,14,1,1,1.0,0,0,,0,0,,1,0,1,1,1,1,1,0,2
+2025-11-26_northern_ariz_uni,UNI,30,"Walker, Lauren",False,4,0,1,0.0,0,1,0.0,2,2,1.0,0,0,0,2,0,1,0,1,2
+2025-11-26_northern_ariz_uni,UNI,02,"Tuttle, Abby",False,9,0,1,0.0,0,1,0.0,0,0,,0,0,0,2,1,4,0,0,0
+2025-11-26_northern_ariz_uni,UNI,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,2,4,0,0,1,0,0,0
+2025-11-26_northern_ariz_uni,Northern Ariz.,25,"White, Naomi",True,40,7,20,0.35,2,6,0.333,3,6,0.5,1,4,5,0,2,3,0,0,19
+2025-11-26_northern_ariz_uni,Northern Ariz.,35,"Morris, Simone",True,21,2,8,0.25,1,3,0.333,1,2,0.5,0,2,2,2,0,2,1,1,6
+2025-11-26_northern_ariz_uni,Northern Ariz.,07,"Davis, Layla",True,12,2,4,0.5,0,0,,0,0,,0,3,3,2,0,1,0,0,4
+2025-11-26_northern_ariz_uni,Northern Ariz.,11,"Taylor, Audrey",True,29,1,3,0.333,0,2,0.0,0,0,,0,1,1,1,1,2,0,0,2
+2025-11-26_northern_ariz_uni,Northern Ariz.,03,"Watts, Madison",True,11,0,3,0.0,0,0,,0,0,,0,3,3,1,2,1,2,0,0
+2025-11-26_northern_ariz_uni,Northern Ariz.,23,"Williams, Kayla",False,18,6,11,0.545,2,4,0.5,2,2,1.0,2,6,8,1,0,1,0,0,16
+2025-11-26_northern_ariz_uni,Northern Ariz.,00,"Dasovich, Emma",False,20,2,7,0.286,1,5,0.2,0,0,,2,4,6,0,5,1,0,1,5
+2025-11-26_northern_ariz_uni,Northern Ariz.,13,"Robinson, J'Bionna",False,29,1,3,0.333,0,0,,2,4,0.5,0,4,4,3,5,1,0,1,4
+2025-11-26_northern_ariz_uni,Northern Ariz.,10,"Williams, Hannah",False,9,2,3,0.667,0,0,,0,0,,3,0,3,0,1,3,0,3,4
+2025-11-26_northern_ariz_uni,Northern Ariz.,01,"Harris, Alyssa",False,4,0,0,,0,0,,0,0,,0,0,0,1,1,0,0,0,0
+2025-11-26_northern_ariz_uni,Northern Ariz.,14,"Saric, Valentina",False,4,0,1,0.0,0,1,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-26_northern_ariz_uni,Northern Ariz.,30,"Curry, Faith",False,2,0,3,0.0,0,2,0.0,0,0,,1,1,2,1,0,0,0,0,0
+2025-11-26_northern_ariz_uni,Northern Ariz.,12,"Dunn, Addison",False,1,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2025-11-26_northern_ariz_uni,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,0,1,0,0,1,0,0,0
+2025-11-28_northern_ariz_creighton,Creighton,13,"Heathcock, Allison",True,27,5,6,0.833,3,4,0.75,2,2,1.0,4,2,6,2,3,0,0,1,15
+2025-11-28_northern_ariz_creighton,Creighton,24,"Zediker, Ava",True,29,3,9,0.333,0,3,0.0,5,6,0.833,2,8,10,0,4,2,0,1,11
+2025-11-28_northern_ariz_creighton,Creighton,35,"Gentry, Elizabeth",True,17,5,9,0.556,1,2,0.5,0,0,,4,0,4,3,0,2,0,0,11
+2025-11-28_northern_ariz_creighton,Creighton,02,"Townsend, Kennedy",True,33,3,10,0.3,1,8,0.125,0,0,,0,2,2,3,8,1,0,4,7
+2025-11-28_northern_ariz_creighton,Creighton,42,"Boffeli, Grace",True,23,2,3,0.667,0,0,,3,3,1.0,3,8,11,3,3,2,0,1,7
+2025-11-28_northern_ariz_creighton,Creighton,23,"Gessert, Neleigh",False,26,9,19,0.474,7,13,0.538,0,0,,0,4,4,1,0,6,2,1,25
+2025-11-28_northern_ariz_creighton,Creighton,01,"McGee, Kendall",False,22,3,4,0.75,2,3,0.667,0,0,,0,1,1,5,3,2,0,2,8
+2025-11-28_northern_ariz_creighton,Creighton,30,"Gessert, Norah",False,16,1,4,0.25,0,3,0.0,0,0,,1,2,3,0,1,2,2,0,2
+2025-11-28_northern_ariz_creighton,Creighton,09,"Dacic, Tara",False,7,0,2,0.0,0,0,,0,0,,0,1,1,0,0,1,0,0,0
+2025-11-28_northern_ariz_creighton,Creighton,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,3,3,0,0,0,0,0,0
+2025-11-28_northern_ariz_creighton,Northern Ariz.,13,"Robinson, J'Bionna",True,33,5,12,0.417,0,0,,9,10,0.9,2,3,5,2,3,3,0,2,19
+2025-11-28_northern_ariz_creighton,Northern Ariz.,35,"Morris, Simone",True,32,5,10,0.5,2,5,0.4,1,2,0.5,3,1,4,2,2,0,0,1,13
+2025-11-28_northern_ariz_creighton,Northern Ariz.,25,"White, Naomi",True,37,3,13,0.231,1,4,0.25,2,2,1.0,0,4,4,0,3,5,0,5,9
+2025-11-28_northern_ariz_creighton,Northern Ariz.,07,"Davis, Layla",True,11,1,1,1.0,0,0,,0,0,,0,1,1,1,1,0,0,0,2
+2025-11-28_northern_ariz_creighton,Northern Ariz.,10,"Williams, Hannah",True,8,0,2,0.0,0,0,,0,0,,0,0,0,2,0,1,0,0,0
+2025-11-28_northern_ariz_creighton,Northern Ariz.,03,"Watts, Madison",False,17,3,7,0.429,0,1,0.0,0,2,0.0,0,2,2,2,1,3,0,2,6
+2025-11-28_northern_ariz_creighton,Northern Ariz.,23,"Williams, Kayla",False,12,3,5,0.6,0,1,0.0,0,0,,0,1,1,4,0,1,0,0,6
+2025-11-28_northern_ariz_creighton,Northern Ariz.,14,"Saric, Valentina",False,13,1,2,0.5,1,2,0.5,0,0,,0,2,2,1,0,0,0,1,3
+2025-11-28_northern_ariz_creighton,Northern Ariz.,00,"Dasovich, Emma",False,17,1,6,0.167,0,4,0.0,0,0,,0,5,5,1,1,0,0,0,2
+2025-11-28_northern_ariz_creighton,Northern Ariz.,30,"Curry, Faith",False,6,1,2,0.5,0,1,0.0,0,0,,1,0,1,0,0,0,0,0,2
+2025-11-28_northern_ariz_creighton,Northern Ariz.,11,"Taylor, Audrey",False,10,0,3,0.0,0,1,0.0,0,0,,1,0,1,0,1,2,0,0,0
+2025-11-28_northern_ariz_creighton,Northern Ariz.,02,"Scott, Sydney",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-28_northern_ariz_creighton,Northern Ariz.,01,"Harris, Alyssa",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-28_northern_ariz_creighton,Northern Ariz.,12,"Dunn, Addison",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-28_northern_ariz_creighton,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,2,6,0,0,0,0,0,0
+2025-12-03_st_thomas_mn_northern_ariz,Northern Ariz.,25,"White, Naomi",True,40,7,21,0.333,4,10,0.4,1,1,1.0,1,2,3,2,2,3,0,3,19
+2025-12-03_st_thomas_mn_northern_ariz,Northern Ariz.,13,"Robinson, J'Bionna",True,28,3,10,0.3,0,0,,4,4,1.0,1,3,4,4,6,1,0,5,10
+2025-12-03_st_thomas_mn_northern_ariz,Northern Ariz.,35,"Morris, Simone",True,31,2,9,0.222,0,3,0.0,1,2,0.5,1,7,8,4,3,0,0,1,5
+2025-12-03_st_thomas_mn_northern_ariz,Northern Ariz.,00,"Dasovich, Emma",True,11,0,2,0.0,0,0,,2,2,1.0,1,0,1,3,1,1,0,0,2
+2025-12-03_st_thomas_mn_northern_ariz,Northern Ariz.,23,"Williams, Kayla",True,6,0,0,,0,0,,0,0,,0,0,0,0,1,2,0,0,0
+2025-12-03_st_thomas_mn_northern_ariz,Northern Ariz.,07,"Davis, Layla",False,26,8,10,0.8,0,0,,5,6,0.833,2,4,6,5,0,2,1,1,21
+2025-12-03_st_thomas_mn_northern_ariz,Northern Ariz.,11,"Taylor, Audrey",False,24,2,5,0.4,1,2,0.5,0,0,,0,0,0,3,0,1,0,3,5
+2025-12-03_st_thomas_mn_northern_ariz,Northern Ariz.,10,"Williams, Hannah",False,13,2,4,0.5,0,0,,0,0,,0,2,2,1,0,0,0,0,4
+2025-12-03_st_thomas_mn_northern_ariz,Northern Ariz.,03,"Watts, Madison",False,17,0,3,0.0,0,0,,0,0,,2,5,7,2,2,2,0,0,0
+2025-12-03_st_thomas_mn_northern_ariz,Northern Ariz.,12,"Dunn, Addison",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-03_st_thomas_mn_northern_ariz,Northern Ariz.,01,"Harris, Alyssa",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-03_st_thomas_mn_northern_ariz,Northern Ariz.,30,"Curry, Faith",False,1,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2025-12-03_st_thomas_mn_northern_ariz,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,5,1,6,0,0,1,0,0,0
+2025-12-03_st_thomas_mn_northern_ariz,St. Thomas (MN),05,"Feuerbach, Faith",True,29,5,12,0.417,3,6,0.5,9,11,0.818,2,1,3,3,6,2,0,1,22
+2025-12-03_st_thomas_mn_northern_ariz,St. Thomas (MN),24,"Sand, Alyssa",True,31,7,15,0.467,0,2,0.0,4,6,0.667,5,7,12,2,0,3,4,0,18
+2025-12-03_st_thomas_mn_northern_ariz,St. Thomas (MN),30,"Hauge, Laura",True,27,4,10,0.4,4,10,0.4,0,0,,0,2,2,3,1,2,2,1,12
+2025-12-03_st_thomas_mn_northern_ariz,St. Thomas (MN),11,"Hood, Jada",True,33,2,6,0.333,0,2,0.0,4,6,0.667,0,3,3,2,3,5,1,1,8
+2025-12-03_st_thomas_mn_northern_ariz,St. Thomas (MN),52,"McGowan, Savannah",True,21,3,4,0.75,0,0,,0,0,,2,3,5,3,0,2,1,1,6
+2025-12-03_st_thomas_mn_northern_ariz,St. Thomas (MN),04,"Aalsma, Lydia",False,28,1,4,0.25,0,1,0.0,4,4,1.0,1,5,6,2,2,2,1,2,6
+2025-12-03_st_thomas_mn_northern_ariz,St. Thomas (MN),12,"Werner, Mikayla",False,16,1,2,0.5,0,0,,0,0,,1,1,2,0,1,2,0,0,2
+2025-12-03_st_thomas_mn_northern_ariz,St. Thomas (MN),22,"Vallance, Abbey",False,9,0,0,,0,0,,0,0,,0,1,1,0,0,1,0,0,0
+2025-12-03_st_thomas_mn_northern_ariz,St. Thomas (MN),10,"Gage, Savannah",False,3,0,1,0.0,0,0,,0,0,,0,1,1,0,1,0,0,0,0
+2025-12-03_st_thomas_mn_northern_ariz,St. Thomas (MN),14,"McCall, Autumn",False,3,0,0,,0,0,,0,0,,0,2,2,0,0,1,0,0,0
+2025-12-03_st_thomas_mn_northern_ariz,St. Thomas (MN),TM,TEAM,False,0,0,0,,0,0,,0,0,,1,2,3,0,0,1,0,0,0
+2025-12-06_northern_ariz_south_dakota_st,South Dakota St.,3,"Mathiowetz, Madison",True,,11,17,0.647,4,7,0.571,2,2,1.0,0,3,3,0,4,1,0,2,28
+2025-12-06_northern_ariz_south_dakota_st,South Dakota St.,31,"Meyer, Brooklyn",True,,12,17,0.706,0,0,,4,6,0.667,1,5,6,2,2,1,1,0,28
+2025-12-06_northern_ariz_south_dakota_st,South Dakota St.,24,"Hartwig, Maggie",True,,3,6,0.5,1,3,0.333,3,3,1.0,2,4,6,3,0,0,0,1,10
+2025-12-06_northern_ariz_south_dakota_st,South Dakota St.,15,"Abdouch, Mahli",True,,1,5,0.2,0,1,0.0,0,0,,0,4,4,0,7,4,0,0,2
+2025-12-06_northern_ariz_south_dakota_st,South Dakota St.,5,"Colbeck, Ellie",True,,0,5,0.0,0,3,0.0,0,0,,0,3,3,0,1,2,0,0,0
+2025-12-06_northern_ariz_south_dakota_st,South Dakota St.,25,"Hoselton, Abby",False,,2,2,1.0,1,1,1.0,2,3,0.667,0,0,0,1,0,0,0,0,7
+2025-12-06_northern_ariz_south_dakota_st,South Dakota St.,10,"Behrens, Hilary",False,,1,1,1.0,1,1,1.0,3,4,0.75,2,6,8,1,1,0,0,0,6
+2025-12-06_northern_ariz_south_dakota_st,South Dakota St.,34,"Felchle, Brooklynn",False,,2,2,1.0,0,0,,0,2,0.0,0,1,1,0,1,0,0,0,4
+2025-12-06_northern_ariz_south_dakota_st,South Dakota St.,11,"Thul, Hadley",False,,1,5,0.2,1,2,0.5,0,0,,0,2,2,2,2,0,0,1,3
+2025-12-06_northern_ariz_south_dakota_st,South Dakota St.,32,"Sheppard, Claire",False,,0,0,,0,0,,0,0,,0,1,1,2,0,1,0,0,0
+2025-12-06_northern_ariz_south_dakota_st,South Dakota St.,45,"Dunn, Jaidyn",False,,0,1,0.0,0,1,0.0,0,0,,0,1,1,2,0,0,0,0,0
+2025-12-06_northern_ariz_south_dakota_st,South Dakota St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,3,6,0,0,0,0,0,0
+2025-12-06_northern_ariz_south_dakota_st,Northern Ariz.,25,"White, Naomi",True,40,8,21,0.381,6,12,0.5,3,4,0.75,0,4,4,0,2,2,0,1,25
+2025-12-06_northern_ariz_south_dakota_st,Northern Ariz.,0,"Dasovich, Emma",True,,4,7,0.571,3,5,0.6,3,4,0.75,1,0,1,4,2,0,0,0,14
+2025-12-06_northern_ariz_south_dakota_st,Northern Ariz.,7,"Davis, Layla",True,,2,6,0.333,1,1,1.0,1,1,1.0,0,7,7,2,1,0,1,1,6
+2025-12-06_northern_ariz_south_dakota_st,Northern Ariz.,35,"Morris, Simone",True,,0,4,0.0,0,0,,2,2,1.0,0,2,2,0,2,2,0,0,2
+2025-12-06_northern_ariz_south_dakota_st,Northern Ariz.,13,"Robinson, J'Bionna",True,,0,0,,0,0,,2,2,1.0,0,1,1,2,1,0,0,0,2
+2025-12-06_northern_ariz_south_dakota_st,Northern Ariz.,3,"Watts, Madison",False,,4,8,0.5,0,1,0.0,4,4,1.0,0,5,5,3,2,0,0,1,12
+2025-12-06_northern_ariz_south_dakota_st,Northern Ariz.,11,"Taylor, Audrey",False,,3,8,0.375,2,7,0.286,1,2,0.5,0,3,3,1,3,1,0,1,9
+2025-12-06_northern_ariz_south_dakota_st,Northern Ariz.,10,"Williams, Hannah",False,,1,2,0.5,0,0,,0,2,0.0,1,1,2,0,2,0,0,0,2
+2025-12-06_northern_ariz_south_dakota_st,Northern Ariz.,30,"Curry, Faith",False,,0,1,0.0,0,1,0.0,0,0,,0,1,1,3,0,1,0,0,0
+2025-12-06_northern_ariz_south_dakota_st,Northern Ariz.,23,"Williams, Kayla",False,,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-06_northern_ariz_south_dakota_st,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-15_northern_ariz_park_az,Park (AZ),21,"Cummings, Allie",True,19,2,9,0.222,1,5,0.2,4,4,1.0,3,3,6,0,0,2,0,0,9
+2025-12-15_northern_ariz_park_az,Park (AZ),05,"Palacios, Alynna",True,18,4,7,0.571,0,0,,0,0,,3,0,3,3,0,2,0,1,8
+2025-12-15_northern_ariz_park_az,Park (AZ),01,"Garcia, Yuli",True,18,2,5,0.4,1,2,0.5,0,0,,1,4,5,2,1,3,0,0,5
+2025-12-15_northern_ariz_park_az,Park (AZ),12,"Kalia, Hemani",True,16,1,5,0.2,1,5,0.2,0,0,,0,2,2,1,0,1,0,1,3
+2025-12-15_northern_ariz_park_az,Park (AZ),03,"Hoar, Larken",True,14,0,3,0.0,0,3,0.0,0,0,,0,0,0,2,0,3,0,0,0
+2025-12-15_northern_ariz_park_az,Park (AZ),11,"White, Lizzy",False,16,3,5,0.6,2,4,0.5,0,0,,0,5,5,1,1,0,2,0,8
+2025-12-15_northern_ariz_park_az,Park (AZ),23,"Gray, Symirah",False,16,2,7,0.286,0,2,0.0,1,1,1.0,0,1,1,4,0,2,0,0,5
+2025-12-15_northern_ariz_park_az,Park (AZ),31,"Fuson, Camisha",False,11,2,5,0.4,1,4,0.25,0,0,,0,0,0,0,0,0,0,1,5
+2025-12-15_northern_ariz_park_az,Park (AZ),20,"Begay, Eriana",False,16,2,6,0.333,0,3,0.0,0,0,,1,4,5,0,0,3,0,2,4
+2025-12-15_northern_ariz_park_az,Park (AZ),40,"Bush, Kiley",False,12,2,3,0.667,0,0,,0,0,,3,5,8,2,0,1,0,0,4
+2025-12-15_northern_ariz_park_az,Park (AZ),44,"Julmist, Jelissa",False,11,0,3,0.0,0,0,,2,2,1.0,0,1,1,3,2,3,0,0,2
+2025-12-15_northern_ariz_park_az,Park (AZ),00,"Mask, Hannah",False,9,0,1,0.0,0,0,,0,0,,0,2,2,0,0,1,0,0,0
+2025-12-15_northern_ariz_park_az,Park (AZ),15,"Honig, Kayla",False,6,0,1,0.0,0,1,0.0,0,0,,0,1,1,0,0,0,0,0,0
+2025-12-15_northern_ariz_park_az,Park (AZ),02,"Pietila, Savannah",False,5,0,4,0.0,0,3,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-15_northern_ariz_park_az,Park (AZ),22,"Valencia, Hayley",False,5,0,1,0.0,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-15_northern_ariz_park_az,Park (AZ),35,"DeNovellis, Jordan",False,4,0,1,0.0,0,1,0.0,0,0,,0,0,0,1,1,1,0,1,0
+2025-12-15_northern_ariz_park_az,Park (AZ),04,"West, Alana",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,2,0,0,0
+2025-12-15_northern_ariz_park_az,Park (AZ),32,"Corbin, Michee",False,2,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2025-12-15_northern_ariz_park_az,Park (AZ),TM,TEAM,False,0,0,0,,0,0,,0,0,,1,0,1,0,0,1,0,0,0
+2025-12-15_northern_ariz_park_az,Northern Ariz.,25,"White, Naomi",True,33,12,27,0.444,2,9,0.222,4,4,1.0,1,4,5,1,2,2,1,4,30
+2025-12-15_northern_ariz_park_az,Northern Ariz.,03,"Watts, Madison",True,31,5,11,0.455,1,2,0.5,5,7,0.714,6,7,13,2,1,1,0,1,16
+2025-12-15_northern_ariz_park_az,Northern Ariz.,11,"Taylor, Audrey",True,26,4,7,0.571,4,6,0.667,0,0,,0,2,2,3,7,0,0,3,12
+2025-12-15_northern_ariz_park_az,Northern Ariz.,35,"Morris, Simone",True,17,3,8,0.375,1,1,1.0,0,0,,3,0,3,1,1,0,0,1,7
+2025-12-15_northern_ariz_park_az,Northern Ariz.,07,"Davis, Layla",True,18,2,5,0.4,0,0,,1,4,0.25,3,5,8,0,1,1,2,1,5
+2025-12-15_northern_ariz_park_az,Northern Ariz.,10,"Williams, Hannah",False,22,4,5,0.8,0,0,,0,2,0.0,1,7,8,2,2,3,0,1,8
+2025-12-15_northern_ariz_park_az,Northern Ariz.,13,"Robinson, J'Bionna",False,10,3,4,0.75,0,0,,2,4,0.5,0,0,0,2,1,1,0,0,8
+2025-12-15_northern_ariz_park_az,Northern Ariz.,01,"Harris, Alyssa",False,10,1,1,1.0,0,0,,2,2,1.0,0,1,1,2,2,3,0,2,4
+2025-12-15_northern_ariz_park_az,Northern Ariz.,12,"Dunn, Addison",False,9,1,2,0.5,1,2,0.5,0,0,,0,0,0,0,0,0,0,0,3
+2025-12-15_northern_ariz_park_az,Northern Ariz.,30,"Curry, Faith",False,9,1,3,0.333,0,2,0.0,0,0,,0,2,2,0,0,1,0,1,2
+2025-12-15_northern_ariz_park_az,Northern Ariz.,02,"Scott, Sydney",False,8,0,2,0.0,0,2,0.0,0,0,,0,2,2,0,0,0,0,0,0
+2025-12-15_northern_ariz_park_az,Northern Ariz.,23,"Williams, Kayla",False,7,0,1,0.0,0,0,,0,0,,0,1,1,1,0,1,0,0,0
+2025-12-15_northern_ariz_park_az,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,3,5,0,0,0,0,0,0
+2025-12-18_csun_northern_ariz,Northern Ariz.,25,"White, Naomi",True,38,9,21,0.429,2,8,0.25,7,8,0.875,2,8,10,1,5,5,1,5,27
+2025-12-18_csun_northern_ariz,Northern Ariz.,03,"Watts, Madison",True,35,9,13,0.692,1,2,0.5,1,2,0.5,2,5,7,3,1,6,0,3,20
+2025-12-18_csun_northern_ariz,Northern Ariz.,35,"Morris, Simone",True,27,2,4,0.5,1,1,1.0,0,0,,2,7,9,0,3,2,0,0,5
+2025-12-18_csun_northern_ariz,Northern Ariz.,07,"Davis, Layla",True,14,2,5,0.4,0,0,,1,2,0.5,2,3,5,5,1,1,2,0,5
+2025-12-18_csun_northern_ariz,Northern Ariz.,11,"Taylor, Audrey",True,31,1,5,0.2,0,3,0.0,0,0,,2,0,2,3,5,4,0,6,2
+2025-12-18_csun_northern_ariz,Northern Ariz.,13,"Robinson, J'Bionna",False,22,2,6,0.333,0,1,0.0,5,9,0.556,0,3,3,3,1,3,0,3,9
+2025-12-18_csun_northern_ariz,Northern Ariz.,00,"Dasovich, Emma",False,14,2,3,0.667,0,1,0.0,3,4,0.75,0,1,1,5,1,0,0,1,7
+2025-12-18_csun_northern_ariz,Northern Ariz.,30,"Curry, Faith",False,4,1,4,0.25,0,2,0.0,0,2,0.0,0,0,0,0,0,0,0,0,2
+2025-12-18_csun_northern_ariz,Northern Ariz.,10,"Williams, Hannah",False,9,0,2,0.0,0,0,,0,0,,2,1,3,0,0,1,0,0,0
+2025-12-18_csun_northern_ariz,Northern Ariz.,23,"Williams, Kayla",False,4,0,0,,0,0,,0,0,,0,0,0,1,0,3,0,0,0
+2025-12-18_csun_northern_ariz,Northern Ariz.,01,"Harris, Alyssa",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-18_csun_northern_ariz,Northern Ariz.,12,"Dunn, Addison",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-18_csun_northern_ariz,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,2,3,0,0,0,0,0,0
+2025-12-18_csun_northern_ariz,CSUN,03,"Tumlin, Kelly",True,19,3,9,0.333,2,7,0.286,2,2,1.0,1,2,3,4,0,9,0,1,10
+2025-12-18_csun_northern_ariz,CSUN,33,"Nazario, Rita",True,30,3,10,0.3,2,7,0.286,1,2,0.5,1,3,4,2,3,6,0,6,9
+2025-12-18_csun_northern_ariz,CSUN,22,"Dahlin, Laini",True,26,2,7,0.286,2,6,0.333,0,0,,2,3,5,3,1,2,0,2,6
+2025-12-18_csun_northern_ariz,CSUN,24,"Cos-Morales, Mariona",True,14,0,4,0.0,0,3,0.0,1,2,0.5,3,2,5,2,1,2,0,1,1
+2025-12-18_csun_northern_ariz,CSUN,34,"Bernard, Nadia",True,14,0,0,,0,0,,1,2,0.5,1,3,4,1,1,2,2,0,1
+2025-12-18_csun_northern_ariz,CSUN,04,"Edwards, Morgan",False,24,3,14,0.214,0,9,0.0,2,3,0.667,0,1,1,2,2,3,0,2,8
+2025-12-18_csun_northern_ariz,CSUN,23,"Contreras, Maya",False,13,1,3,0.333,0,0,,6,6,1.0,3,4,7,4,1,0,1,0,8
+2025-12-18_csun_northern_ariz,CSUN,02,"White, Saray",False,24,1,3,0.333,1,2,0.5,1,4,0.25,1,1,2,3,4,3,2,2,4
+2025-12-18_csun_northern_ariz,CSUN,00,"Gbemuotor, Jite",False,11,2,2,1.0,0,0,,0,2,0.0,0,1,1,2,0,2,1,1,4
+2025-12-18_csun_northern_ariz,CSUN,21,"Canadell, Jana",False,4,1,2,0.5,1,2,0.5,0,0,,0,0,0,1,0,0,0,0,3
+2025-12-18_csun_northern_ariz,CSUN,10,"Lizama, Alondra",False,10,0,3,0.0,0,1,0.0,2,2,1.0,0,2,2,0,0,1,0,0,2
+2025-12-18_csun_northern_ariz,CSUN,01,"Moody, Amya",False,11,0,2,0.0,0,0,,0,0,,1,1,2,0,0,3,0,1,0
+2025-12-18_csun_northern_ariz,CSUN,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,3,6,0,0,2,0,0,0
+2025-12-20_uc_san_diego_northern_ariz,Northern Ariz.,25,"White, Naomi",True,40,5,15,0.333,1,4,0.25,7,7,1.0,2,4,6,1,0,1,0,0,18
+2025-12-20_uc_san_diego_northern_ariz,Northern Ariz.,11,"Taylor, Audrey",True,33,4,6,0.667,2,4,0.5,2,4,0.5,1,2,3,4,3,4,0,2,12
+2025-12-20_uc_san_diego_northern_ariz,Northern Ariz.,03,"Watts, Madison",True,27,6,7,0.857,0,0,,0,0,,3,4,7,2,0,4,1,0,12
+2025-12-20_uc_san_diego_northern_ariz,Northern Ariz.,00,"Dasovich, Emma",True,24,3,10,0.3,1,4,0.25,2,4,0.5,1,5,6,2,1,1,0,1,9
+2025-12-20_uc_san_diego_northern_ariz,Northern Ariz.,35,"Morris, Simone",True,22,2,5,0.4,1,2,0.5,1,2,0.5,1,7,8,3,1,1,0,0,6
+2025-12-20_uc_san_diego_northern_ariz,Northern Ariz.,07,"Davis, Layla",False,16,3,6,0.5,0,0,,0,0,,1,3,4,1,3,0,2,1,6
+2025-12-20_uc_san_diego_northern_ariz,Northern Ariz.,13,"Robinson, J'Bionna",False,20,2,4,0.5,0,1,0.0,0,4,0.0,0,1,1,1,2,3,0,0,4
+2025-12-20_uc_san_diego_northern_ariz,Northern Ariz.,10,"Williams, Hannah",False,9,2,2,1.0,0,0,,0,0,,0,3,3,1,0,1,0,0,4
+2025-12-20_uc_san_diego_northern_ariz,Northern Ariz.,01,"Harris, Alyssa",False,5,0,1,0.0,0,0,,0,0,,0,1,1,0,0,2,0,2,0
+2025-12-20_uc_san_diego_northern_ariz,Northern Ariz.,23,"Williams, Kayla",False,4,0,0,,0,0,,0,0,,0,2,2,0,0,1,0,0,0
+2025-12-20_uc_san_diego_northern_ariz,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,2,5,0,0,1,0,0,0
+2025-12-20_uc_san_diego_northern_ariz,UC San Diego,11,"Condron, Erin",True,32,7,14,0.5,0,0,,2,6,0.333,2,4,6,3,3,1,2,1,16
+2025-12-20_uc_san_diego_northern_ariz,UC San Diego,04,"Rose, Makayla",True,40,5,15,0.333,3,6,0.5,1,3,0.333,0,3,3,3,2,1,0,0,14
+2025-12-20_uc_san_diego_northern_ariz,UC San Diego,10,"Maxie, Dymonique",True,40,6,11,0.545,0,2,0.0,2,2,1.0,2,2,4,1,6,1,0,3,14
+2025-12-20_uc_san_diego_northern_ariz,UC San Diego,15,"Ma, Sabrina",True,37,5,14,0.357,2,8,0.25,0,0,,2,1,3,5,1,0,0,1,12
+2025-12-20_uc_san_diego_northern_ariz,UC San Diego,12,"Smith, Rosa",True,20,3,9,0.333,0,5,0.0,0,0,,0,3,3,4,1,4,0,2,6
+2025-12-20_uc_san_diego_northern_ariz,UC San Diego,25,"Mahan, Junae",False,23,2,3,0.667,0,1,0.0,0,0,,2,4,6,3,2,1,2,1,4
+2025-12-20_uc_san_diego_northern_ariz,UC San Diego,21,"Polocheck, Nicki",False,3,1,4,0.25,0,1,0.0,0,1,0.0,2,1,3,0,0,0,0,0,2
+2025-12-20_uc_san_diego_northern_ariz,UC San Diego,30,"Sule, Damilola",False,5,0,2,0.0,0,0,,0,0,,0,0,0,1,0,1,0,0,0
+2025-12-20_uc_san_diego_northern_ariz,UC San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,1,3,0,0,0,0,0,0
+2026-01-01_northern_ariz_montana,Montana,02,"Konig, Mack",True,36,10,16,0.625,1,5,0.2,6,8,0.75,1,6,7,2,5,3,0,3,27
+2026-01-01_northern_ariz_montana,Montana,10,"Waddington, Avery",True,39,7,16,0.438,2,9,0.222,0,1,0.0,1,7,8,0,2,1,0,1,16
+2026-01-01_northern_ariz_montana,Montana,23,"Land, Jocelyn",True,26,4,6,0.667,0,2,0.0,1,2,0.5,0,2,2,2,0,2,0,0,9
+2026-01-01_northern_ariz_montana,Montana,01,"Donarski, Macy",True,27,0,3,0.0,0,2,0.0,2,3,0.667,0,2,2,4,1,1,0,2,2
+2026-01-01_northern_ariz_montana,Montana,11,"Shubert, Aby",True,29,0,8,0.0,0,8,0.0,0,0,,0,0,0,5,1,0,0,0,0
+2026-01-01_northern_ariz_montana,Montana,20,"Ehrman, Rae",False,15,4,6,0.667,3,5,0.6,0,0,,0,0,0,2,1,1,0,0,11
+2026-01-01_northern_ariz_montana,Montana,03,"Wacker, Draya",False,13,1,1,1.0,1,1,1.0,1,2,0.5,1,3,4,0,1,0,0,0,4
+2026-01-01_northern_ariz_montana,Montana,05,"Gillette, Kennedy",False,7,1,1,1.0,0,0,,0,0,,0,1,1,0,0,1,0,0,2
+2026-01-01_northern_ariz_montana,Montana,24,"Hutka, Maggie",False,8,0,0,,0,0,,1,2,0.5,0,1,1,1,0,1,0,0,1
+2026-01-01_northern_ariz_montana,Montana,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2026-01-01_northern_ariz_montana,Northern Ariz.,25,"White, Naomi",True,40,11,17,0.647,4,6,0.667,1,1,1.0,1,9,10,3,4,4,0,0,27
+2026-01-01_northern_ariz_montana,Northern Ariz.,11,"Taylor, Audrey",True,37,6,12,0.5,5,10,0.5,0,0,,1,3,4,0,3,1,0,1,17
+2026-01-01_northern_ariz_montana,Northern Ariz.,00,"Dasovich, Emma",True,32,5,10,0.5,2,3,0.667,3,3,1.0,1,0,1,2,6,2,0,1,15
+2026-01-01_northern_ariz_montana,Northern Ariz.,03,"Watts, Madison",True,26,5,10,0.5,0,1,0.0,0,0,,2,7,9,4,3,4,0,1,10
+2026-01-01_northern_ariz_montana,Northern Ariz.,35,"Morris, Simone",True,28,2,6,0.333,0,1,0.0,3,4,0.75,0,6,6,1,2,2,0,0,7
+2026-01-01_northern_ariz_montana,Northern Ariz.,10,"Williams, Hannah",False,13,2,4,0.5,0,0,,0,0,,0,1,1,1,1,1,0,1,4
+2026-01-01_northern_ariz_montana,Northern Ariz.,07,"Davis, Layla",False,8,0,1,0.0,0,0,,1,4,0.25,4,0,4,2,2,0,0,1,1
+2026-01-01_northern_ariz_montana,Northern Ariz.,13,"Robinson, J'Bionna",False,15,0,0,,0,0,,0,0,,0,1,1,1,4,0,0,0,0
+2026-01-01_northern_ariz_montana,Northern Ariz.,30,"Curry, Faith",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-01_northern_ariz_montana,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,3,3,0,0,0,0,0,0
+2026-01-03_northern_ariz_montana_st,Montana St.,44,"Chirrick, Taylee",True,28,12,19,0.632,1,2,0.5,2,2,1.0,5,3,8,1,2,1,1,5,27
+2026-01-03_northern_ariz_montana_st,Montana St.,15,"Bunyan, Isobel",True,32,6,17,0.353,2,10,0.2,0,0,,1,2,3,1,0,2,0,0,14
+2026-01-03_northern_ariz_montana_st,Montana St.,05,"Johnson, Ella",True,24,3,9,0.333,1,1,1.0,0,0,,6,4,10,2,1,1,2,2,7
+2026-01-03_northern_ariz_montana_st,Montana St.,33,"Harris, Addison",True,23,1,8,0.125,0,5,0.0,2,4,0.5,0,6,6,1,3,1,1,1,4
+2026-01-03_northern_ariz_montana_st,Montana St.,12,"Philip, Jamison",True,22,1,5,0.2,0,2,0.0,2,2,1.0,2,2,4,2,3,1,0,4,4
+2026-01-03_northern_ariz_montana_st,Montana St.,21,"Bailey, Brianne",False,18,3,6,0.5,0,1,0.0,3,4,0.75,1,1,2,1,5,3,0,1,9
+2026-01-03_northern_ariz_montana_st,Montana St.,24,"Couture, Kadynce",False,19,3,4,0.75,2,2,1.0,0,0,,0,5,5,4,0,0,0,2,8
+2026-01-03_northern_ariz_montana_st,Montana St.,13,"Hintz, Grace",False,9,2,4,0.5,1,2,0.5,0,0,,0,0,0,2,0,0,0,0,5
+2026-01-03_northern_ariz_montana_st,Montana St.,23,"Erickson, Teagan",False,14,2,7,0.286,0,2,0.0,0,0,,3,2,5,1,3,0,1,1,4
+2026-01-03_northern_ariz_montana_st,Montana St.,02,"Smith, Courtney",False,11,0,4,0.0,0,1,0.0,0,0,,0,0,0,0,0,0,0,1,0
+2026-01-03_northern_ariz_montana_st,Montana St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,2,3,0,0,0,0,0,0
+2026-01-03_northern_ariz_montana_st,Northern Ariz.,25,"White, Naomi",True,38,8,15,0.533,2,6,0.333,0,0,,3,3,6,1,4,5,0,1,18
+2026-01-03_northern_ariz_montana_st,Northern Ariz.,00,"Dasovich, Emma",True,18,3,5,0.6,2,4,0.5,0,0,,0,2,2,1,2,3,0,0,8
+2026-01-03_northern_ariz_montana_st,Northern Ariz.,03,"Watts, Madison",True,23,3,7,0.429,0,1,0.0,1,3,0.333,0,7,7,2,1,3,0,0,7
+2026-01-03_northern_ariz_montana_st,Northern Ariz.,11,"Taylor, Audrey",True,35,2,12,0.167,2,8,0.25,0,0,,0,2,2,2,4,3,0,1,6
+2026-01-03_northern_ariz_montana_st,Northern Ariz.,35,"Morris, Simone",True,17,1,2,0.5,0,0,,0,0,,1,2,3,1,1,1,0,0,2
+2026-01-03_northern_ariz_montana_st,Northern Ariz.,07,"Davis, Layla",False,27,4,7,0.571,0,0,,3,4,0.75,2,5,7,2,0,1,2,1,11
+2026-01-03_northern_ariz_montana_st,Northern Ariz.,23,"Williams, Kayla",False,13,2,5,0.4,1,3,0.333,2,2,1.0,1,6,7,1,0,1,0,0,7
+2026-01-03_northern_ariz_montana_st,Northern Ariz.,01,"Harris, Alyssa",False,12,2,3,0.667,0,1,0.0,1,2,0.5,1,1,2,1,0,3,0,0,5
+2026-01-03_northern_ariz_montana_st,Northern Ariz.,10,"Williams, Hannah",False,10,0,3,0.0,0,0,,1,2,0.5,1,2,3,1,0,2,1,1,1
+2026-01-03_northern_ariz_montana_st,Northern Ariz.,13,"Robinson, J'Bionna",False,7,0,1,0.0,0,0,,0,0,,0,0,0,0,1,3,0,0,0
+2026-01-03_northern_ariz_montana_st,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,3,5,0,0,0,0,0,0
+2026-01-08_weber_st_northern_ariz,Northern Ariz.,25,"White, Naomi",True,38,13,24,0.542,9,14,0.643,2,3,0.667,0,2,2,2,0,4,1,3,37
+2026-01-08_weber_st_northern_ariz,Northern Ariz.,35,"Morris, Simone",True,26,6,11,0.545,0,1,0.0,4,5,0.8,3,5,8,4,1,2,0,1,16
+2026-01-08_weber_st_northern_ariz,Northern Ariz.,11,"Taylor, Audrey",True,34,3,10,0.3,2,5,0.4,0,0,,0,5,5,2,3,2,0,1,8
+2026-01-08_weber_st_northern_ariz,Northern Ariz.,03,"Watts, Madison",True,29,0,3,0.0,0,0,,2,2,1.0,3,2,5,3,4,5,0,3,2
+2026-01-08_weber_st_northern_ariz,Northern Ariz.,07,"Davis, Layla",True,25,1,5,0.2,0,0,,0,0,,3,2,5,3,3,7,1,0,2
+2026-01-08_weber_st_northern_ariz,Northern Ariz.,00,"Dasovich, Emma",False,18,1,5,0.2,0,2,0.0,2,2,1.0,0,2,2,3,1,4,0,1,4
+2026-01-08_weber_st_northern_ariz,Northern Ariz.,10,"Williams, Hannah",False,8,1,4,0.25,0,0,,0,0,,0,1,1,1,0,0,0,0,2
+2026-01-08_weber_st_northern_ariz,Northern Ariz.,30,"Curry, Faith",False,9,0,0,,0,0,,0,0,,0,2,2,0,0,0,0,1,0
+2026-01-08_weber_st_northern_ariz,Northern Ariz.,13,"Robinson, J'Bionna",False,6,0,1,0.0,0,0,,0,0,,0,1,1,1,1,0,0,0,0
+2026-01-08_weber_st_northern_ariz,Northern Ariz.,23,"Williams, Kayla",False,4,0,1,0.0,0,1,0.0,0,0,,0,2,2,0,1,1,0,0,0
+2026-01-08_weber_st_northern_ariz,Northern Ariz.,01,"Harris, Alyssa",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-08_weber_st_northern_ariz,Northern Ariz.,12,"Dunn, Addison",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-08_weber_st_northern_ariz,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,2,5,0,0,0,0,0,0
+2026-01-08_weber_st_northern_ariz,Weber St.,07,"Emma-Nnopu, Antoniette",True,32,5,8,0.625,0,0,,6,8,0.75,5,10,15,4,3,4,2,3,16
+2026-01-08_weber_st_northern_ariz,Weber St.,08,"Robbins, Hannah",True,34,4,12,0.333,3,6,0.5,2,2,1.0,0,5,5,2,1,9,1,4,13
+2026-01-08_weber_st_northern_ariz,Weber St.,13,"Shaffer, Makenna",True,22,2,5,0.4,0,0,,2,2,1.0,1,2,3,1,0,4,0,2,6
+2026-01-08_weber_st_northern_ariz,Weber St.,22,"White, Sydney",True,25,0,6,0.0,0,4,0.0,0,0,,0,2,2,0,3,4,0,0,0
+2026-01-08_weber_st_northern_ariz,Weber St.,32,"Billy, Lanae",True,22,0,8,0.0,0,6,0.0,0,0,,0,1,1,2,4,4,0,1,0
+2026-01-08_weber_st_northern_ariz,Weber St.,12,"Niumeitolu, Fui",False,29,2,8,0.25,0,3,0.0,7,8,0.875,2,1,3,3,1,2,0,0,11
+2026-01-08_weber_st_northern_ariz,Weber St.,25,"Willardson, Nicole",False,15,3,4,0.75,0,0,,0,0,,3,1,4,2,0,0,1,0,6
+2026-01-08_weber_st_northern_ariz,Weber St.,10,"Lauro, Paris",False,10,2,6,0.333,0,3,0.0,0,0,,1,2,3,0,0,0,0,0,4
+2026-01-08_weber_st_northern_ariz,Weber St.,00,"Davis, Maya",False,11,1,2,0.5,0,1,0.0,0,0,,1,0,1,3,0,2,0,0,2
+2026-01-08_weber_st_northern_ariz,Weber St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,4,6,0,0,0,0,0,0
+2026-01-10_idaho_st_northern_ariz,Northern Ariz.,25,"White, Naomi",True,40,4,17,0.235,1,8,0.125,2,2,1.0,0,2,2,0,0,3,0,0,11
+2026-01-10_idaho_st_northern_ariz,Northern Ariz.,11,"Taylor, Audrey",True,31,3,7,0.429,1,4,0.25,0,1,0.0,0,0,0,4,2,2,0,2,7
+2026-01-10_idaho_st_northern_ariz,Northern Ariz.,03,"Watts, Madison",True,27,2,6,0.333,0,0,,2,4,0.5,4,6,10,3,0,3,0,1,6
+2026-01-10_idaho_st_northern_ariz,Northern Ariz.,35,"Morris, Simone",True,26,3,11,0.273,0,2,0.0,0,0,,1,1,2,2,1,1,0,2,6
+2026-01-10_idaho_st_northern_ariz,Northern Ariz.,07,"Davis, Layla",True,24,1,5,0.2,0,2,0.0,4,4,1.0,2,4,6,0,0,2,0,2,6
+2026-01-10_idaho_st_northern_ariz,Northern Ariz.,13,"Robinson, J'Bionna",False,11,2,3,0.667,0,0,,3,3,1.0,0,2,2,3,0,4,1,3,7
+2026-01-10_idaho_st_northern_ariz,Northern Ariz.,00,"Dasovich, Emma",False,17,1,5,0.2,0,2,0.0,1,1,1.0,1,0,1,3,1,2,0,1,3
+2026-01-10_idaho_st_northern_ariz,Northern Ariz.,10,"Williams, Hannah",False,11,0,2,0.0,0,0,,0,0,,0,1,1,0,0,1,0,1,0
+2026-01-10_idaho_st_northern_ariz,Northern Ariz.,23,"Williams, Kayla",False,7,0,1,0.0,0,0,,0,0,,0,1,1,1,0,0,0,0,0
+2026-01-10_idaho_st_northern_ariz,Northern Ariz.,01,"Harris, Alyssa",False,3,0,0,,0,0,,0,0,,0,1,1,0,0,2,0,1,0
+2026-01-10_idaho_st_northern_ariz,Northern Ariz.,30,"Curry, Faith",False,3,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-10_idaho_st_northern_ariz,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-10_idaho_st_northern_ariz,Idaho St.,05,"Jordan, Tasia",True,28,7,13,0.538,0,0,,4,5,0.8,2,8,10,2,3,2,1,2,18
+2026-01-10_idaho_st_northern_ariz,Idaho St.,14,"Carlson, Piper",True,26,5,8,0.625,0,0,,0,0,,3,5,8,3,0,4,4,3,10
+2026-01-10_idaho_st_northern_ariz,Idaho St.,01,"Spink, Kacey",True,33,3,11,0.273,2,5,0.4,0,0,,4,4,8,1,5,4,0,5,8
+2026-01-10_idaho_st_northern_ariz,Idaho St.,04,"Aby, Alyse",True,34,2,4,0.5,1,3,0.333,2,2,1.0,0,3,3,3,0,3,0,0,7
+2026-01-10_idaho_st_northern_ariz,Idaho St.,02,"Caldwell, Aspen",True,34,2,7,0.286,1,3,0.333,1,2,0.5,1,3,4,2,6,4,0,0,6
+2026-01-10_idaho_st_northern_ariz,Idaho St.,18,"GAUFFRENET, Maeva",False,17,3,5,0.6,1,3,0.333,0,0,,0,2,2,2,2,2,0,5,7
+2026-01-10_idaho_st_northern_ariz,Idaho St.,24,"Wright, Halle",False,13,1,5,0.2,0,2,0.0,0,0,,2,2,4,3,0,0,0,1,2
+2026-01-10_idaho_st_northern_ariz,Idaho St.,13,"Wolfram, Asa",False,6,0,1,0.0,0,0,,1,2,0.5,0,0,0,0,0,0,0,0,1
+2026-01-10_idaho_st_northern_ariz,Idaho St.,23,"Jones, Tylie",False,9,0,1,0.0,0,0,,0,0,,1,3,4,1,0,4,0,0,0
+2026-01-10_idaho_st_northern_ariz,Idaho St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-15_northern_ariz_sacramento_st,Sacramento St.,11,"Gray, Rubi",True,38,10,19,0.526,6,12,0.5,0,0,,3,8,11,0,1,4,0,0,26
+2026-01-15_northern_ariz_sacramento_st,Sacramento St.,01,"Versteeg, Benthe",True,33,8,14,0.571,1,1,1.0,1,1,1.0,3,6,9,4,4,8,0,0,18
+2026-01-15_northern_ariz_sacramento_st,Sacramento St.,02,"Picton, Natalie",True,36,4,13,0.308,1,8,0.125,5,6,0.833,1,4,5,2,3,2,0,4,14
+2026-01-15_northern_ariz_sacramento_st,Sacramento St.,22,"Mandaquit, Jaety",True,26,1,3,0.333,1,2,0.5,0,0,,0,4,4,3,6,1,0,1,3
+2026-01-15_northern_ariz_sacramento_st,Sacramento St.,12,"Lual, Ajong",True,6,0,1,0.0,0,0,,1,2,0.5,0,1,1,1,0,1,1,0,1
+2026-01-15_northern_ariz_sacramento_st,Sacramento St.,08,"Salave'a, Keanna",False,17,3,6,0.5,0,0,,2,4,0.5,2,1,3,1,0,2,0,1,8
+2026-01-15_northern_ariz_sacramento_st,Sacramento St.,10,"Paananen, Pinja",False,14,1,1,1.0,1,1,1.0,0,0,,1,1,2,2,2,0,0,0,3
+2026-01-15_northern_ariz_sacramento_st,Sacramento St.,14,"Fa'i, Tali",False,7,1,1,1.0,1,1,1.0,0,0,,1,0,1,2,0,0,0,0,3
+2026-01-15_northern_ariz_sacramento_st,Sacramento St.,05,"Abiara, Elizabeth",False,18,1,1,1.0,0,0,,0,2,0.0,1,6,7,3,0,2,2,0,2
+2026-01-15_northern_ariz_sacramento_st,Sacramento St.,04,"Fontenberry, Jamiah",False,3,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-15_northern_ariz_sacramento_st,Sacramento St.,03,"Taylor, Brooklyn",False,1,0,0,,0,0,,0,0,,0,2,2,0,0,1,0,0,0
+2026-01-15_northern_ariz_sacramento_st,Sacramento St.,23,"Leghissa, Elisa",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-15_northern_ariz_sacramento_st,Sacramento St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,2,4,0,0,1,0,0,0
+2026-01-15_northern_ariz_sacramento_st,Northern Ariz.,25,"White, Naomi",True,38,6,18,0.333,2,9,0.222,3,4,0.75,0,5,5,2,2,2,1,4,17
+2026-01-15_northern_ariz_sacramento_st,Northern Ariz.,03,"Watts, Madison",True,32,5,8,0.625,0,0,,5,6,0.833,0,2,2,4,1,2,1,1,15
+2026-01-15_northern_ariz_sacramento_st,Northern Ariz.,11,"Taylor, Audrey",True,40,3,10,0.3,2,8,0.25,0,0,,0,5,5,1,3,4,0,4,8
+2026-01-15_northern_ariz_sacramento_st,Northern Ariz.,35,"Morris, Simone",True,16,1,6,0.167,0,0,,1,2,0.5,2,3,5,4,0,1,0,0,3
+2026-01-15_northern_ariz_sacramento_st,Northern Ariz.,07,"Davis, Layla",True,9,0,0,,0,0,,0,0,,0,1,1,1,0,1,0,0,0
+2026-01-15_northern_ariz_sacramento_st,Northern Ariz.,00,"Dasovich, Emma",False,25,4,8,0.5,2,4,0.5,0,0,,1,0,1,1,3,0,0,1,10
+2026-01-15_northern_ariz_sacramento_st,Northern Ariz.,13,"Robinson, J'Bionna",False,26,1,5,0.2,0,1,0.0,3,4,0.75,0,0,0,3,0,2,0,5,5
+2026-01-15_northern_ariz_sacramento_st,Northern Ariz.,23,"Williams, Kayla",False,6,0,3,0.0,0,0,,1,2,0.5,0,1,1,0,0,0,0,0,1
+2026-01-15_northern_ariz_sacramento_st,Northern Ariz.,10,"Williams, Hannah",False,6,0,0,,0,0,,0,0,,0,0,0,1,0,2,0,0,0
+2026-01-15_northern_ariz_sacramento_st,Northern Ariz.,01,"Harris, Alyssa",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-15_northern_ariz_sacramento_st,Northern Ariz.,30,"Curry, Faith",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-15_northern_ariz_sacramento_st,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,1,4,0,0,0,0,0,0
+2026-01-17_northern_ariz_portland_st,Portland St.,12,"Brown, Kyleigh",True,35,6,21,0.286,2,7,0.286,2,2,1.0,2,5,7,4,3,0,0,0,16
+2026-01-17_northern_ariz_portland_st,Portland St.,23,"Moffat, Taylor",True,33,4,11,0.364,2,6,0.333,2,4,0.5,1,3,4,3,2,0,0,3,12
+2026-01-17_northern_ariz_portland_st,Portland St.,05,"Yoakum, Ajae",True,29,4,5,0.8,0,0,,0,0,,5,1,6,1,0,1,0,0,8
+2026-01-17_northern_ariz_portland_st,Portland St.,08,"Ellington, Cici",True,18,1,6,0.167,0,1,0.0,3,3,1.0,2,2,4,3,0,2,3,0,5
+2026-01-17_northern_ariz_portland_st,Portland St.,11,"Torres-Kahapea, Laynee",True,8,0,2,0.0,0,0,,0,0,,0,0,0,1,0,2,0,0,0
+2026-01-17_northern_ariz_portland_st,Portland St.,09,"Chicken, Hannah",False,25,7,10,0.7,2,4,0.5,0,0,,2,4,6,2,1,5,0,2,16
+2026-01-17_northern_ariz_portland_st,Portland St.,02,"Carter, Jamia",False,24,3,6,0.5,1,3,0.333,1,3,0.333,0,0,0,3,2,1,0,1,8
+2026-01-17_northern_ariz_portland_st,Portland St.,04,"Buzzard, Sophie",False,20,1,3,0.333,1,2,0.5,0,0,,2,1,3,1,3,2,0,1,3
+2026-01-17_northern_ariz_portland_st,Portland St.,10,"Munk, Kirstine",False,8,0,0,,0,0,,0,0,,0,1,1,2,0,2,0,0,0
+2026-01-17_northern_ariz_portland_st,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,4,5,0,0,1,0,0,0
+2026-01-17_northern_ariz_portland_st,Northern Ariz.,03,"Watts, Madison",True,23,6,8,0.75,0,0,,5,5,1.0,3,6,9,3,2,0,1,0,17
+2026-01-17_northern_ariz_portland_st,Northern Ariz.,25,"White, Naomi",True,40,6,15,0.4,1,5,0.2,2,2,1.0,2,4,6,1,2,4,0,2,15
+2026-01-17_northern_ariz_portland_st,Northern Ariz.,11,"Taylor, Audrey",True,36,2,6,0.333,2,6,0.333,8,9,0.889,1,2,3,2,7,3,0,0,14
+2026-01-17_northern_ariz_portland_st,Northern Ariz.,35,"Morris, Simone",True,31,5,10,0.5,1,3,0.333,2,2,1.0,2,5,7,1,0,1,1,2,13
+2026-01-17_northern_ariz_portland_st,Northern Ariz.,07,"Davis, Layla",True,16,1,6,0.167,0,0,,2,2,1.0,0,1,1,3,2,1,0,0,4
+2026-01-17_northern_ariz_portland_st,Northern Ariz.,00,"Dasovich, Emma",False,23,3,9,0.333,1,4,0.25,0,0,,0,3,3,2,3,0,0,2,7
+2026-01-17_northern_ariz_portland_st,Northern Ariz.,13,"Robinson, J'Bionna",False,14,3,4,0.75,0,0,,0,0,,0,1,1,1,1,1,0,1,6
+2026-01-17_northern_ariz_portland_st,Northern Ariz.,10,"Williams, Hannah",False,11,1,3,0.333,0,0,,0,0,,2,1,3,1,0,0,0,0,2
+2026-01-17_northern_ariz_portland_st,Northern Ariz.,23,"Williams, Kayla",False,6,1,3,0.333,0,0,,0,0,,2,1,3,0,0,0,0,0,2
+2026-01-17_northern_ariz_portland_st,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,2,5,0,0,1,0,0,0
+2026-01-19_montana_northern_ariz,Northern Ariz.,25,"White, Naomi",True,40,9,19,0.474,5,9,0.556,6,9,0.667,1,4,5,1,1,1,0,2,29
+2026-01-19_montana_northern_ariz,Northern Ariz.,03,"Watts, Madison",True,30,7,10,0.7,0,1,0.0,6,7,0.857,2,7,9,4,1,1,0,0,20
+2026-01-19_montana_northern_ariz,Northern Ariz.,00,"Dasovich, Emma",True,30,6,11,0.545,2,4,0.5,1,2,0.5,2,0,2,0,3,3,1,0,15
+2026-01-19_montana_northern_ariz,Northern Ariz.,11,"Taylor, Audrey",True,36,0,5,0.0,0,2,0.0,1,3,0.333,0,4,4,3,5,1,0,1,1
+2026-01-19_montana_northern_ariz,Northern Ariz.,35,"Morris, Simone",True,16,0,5,0.0,0,0,,1,2,0.5,2,0,2,1,1,0,0,1,1
+2026-01-19_montana_northern_ariz,Northern Ariz.,13,"Robinson, J'Bionna",False,19,1,4,0.25,0,0,,1,1,1.0,1,2,3,1,2,0,0,3,3
+2026-01-19_montana_northern_ariz,Northern Ariz.,10,"Williams, Hannah",False,9,1,1,1.0,0,0,,0,0,,0,1,1,1,0,0,0,0,2
+2026-01-19_montana_northern_ariz,Northern Ariz.,07,"Davis, Layla",False,4,0,1,0.0,0,0,,1,2,0.5,0,0,0,2,0,0,0,0,1
+2026-01-19_montana_northern_ariz,Northern Ariz.,30,"Curry, Faith",False,14,0,3,0.0,0,1,0.0,0,0,,0,1,1,2,0,0,0,3,0
+2026-01-19_montana_northern_ariz,Northern Ariz.,23,"Williams, Kayla",False,2,0,1,0.0,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-19_montana_northern_ariz,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,1,4,0,0,1,0,0,0
+2026-01-19_montana_northern_ariz,Montana,23,"Land, Jocelyn",True,33,7,10,0.7,6,8,0.75,0,0,,0,3,3,3,0,2,1,0,20
+2026-01-19_montana_northern_ariz,Montana,05,"Gillette, Kennedy",True,24,5,8,0.625,2,5,0.4,5,5,1.0,0,3,3,4,1,3,1,0,17
+2026-01-19_montana_northern_ariz,Montana,11,"Shubert, Aby",True,35,3,5,0.6,3,5,0.6,2,2,1.0,0,7,7,4,0,2,0,0,11
+2026-01-19_montana_northern_ariz,Montana,10,"Waddington, Avery",True,34,2,7,0.286,0,0,,4,4,1.0,4,6,10,2,4,5,1,1,8
+2026-01-19_montana_northern_ariz,Montana,01,"Donarski, Macy",True,31,0,4,0.0,0,0,,0,0,,1,2,3,4,3,2,1,0,0
+2026-01-19_montana_northern_ariz,Montana,03,"Wacker, Draya",False,27,6,13,0.462,3,8,0.375,0,0,,0,5,5,3,6,5,0,1,15
+2026-01-19_montana_northern_ariz,Montana,20,"Ehrman, Rae",False,16,2,5,0.4,0,2,0.0,1,1,1.0,1,1,2,2,2,0,0,0,5
+2026-01-19_montana_northern_ariz,Montana,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,1,2,0,0,0,0,0,0
+2026-01-24_northern_colo_northern_ariz,Northern Ariz.,25,"White, Naomi",True,40,9,19,0.474,4,10,0.4,4,4,1.0,1,2,3,1,2,3,0,1,26
+2026-01-24_northern_colo_northern_ariz,Northern Ariz.,07,"Davis, Layla",True,26,2,4,0.5,0,0,,2,2,1.0,0,2,2,3,1,2,0,0,6
+2026-01-24_northern_colo_northern_ariz,Northern Ariz.,00,"Dasovich, Emma",True,24,1,8,0.125,1,2,0.5,2,2,1.0,4,2,6,5,3,4,0,1,5
+2026-01-24_northern_colo_northern_ariz,Northern Ariz.,13,"Robinson, J'Bionna",True,27,2,5,0.4,0,0,,0,0,,1,2,3,2,2,2,0,4,4
+2026-01-24_northern_colo_northern_ariz,Northern Ariz.,11,"Taylor, Audrey",True,35,1,5,0.2,0,4,0.0,0,0,,0,3,3,1,3,3,0,2,2
+2026-01-24_northern_colo_northern_ariz,Northern Ariz.,03,"Watts, Madison",False,36,6,11,0.545,1,2,0.5,1,3,0.333,0,5,5,4,2,3,0,1,14
+2026-01-24_northern_colo_northern_ariz,Northern Ariz.,23,"Williams, Kayla",False,9,1,1,1.0,0,0,,0,0,,0,1,1,0,0,0,0,0,2
+2026-01-24_northern_colo_northern_ariz,Northern Ariz.,10,"Williams, Hannah",False,3,0,0,,0,0,,0,0,,0,1,1,1,0,0,0,0,0
+2026-01-24_northern_colo_northern_ariz,Northern Ariz.,30,"Curry, Faith",False,,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-24_northern_colo_northern_ariz,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,6,9,0,0,1,0,0,0
+2026-01-24_northern_colo_northern_ariz,Northern Colo.,05,"George, Neenah",True,34,5,13,0.385,0,5,0.0,2,2,1.0,1,5,6,3,5,3,0,2,12
+2026-01-24_northern_colo_northern_ariz,Northern Colo.,15,"Fields, Gabi",True,36,3,4,0.75,1,2,0.5,3,5,0.6,2,1,3,4,3,3,0,4,10
+2026-01-24_northern_colo_northern_ariz,Northern Colo.,33,"Riley, Julia",True,15,3,7,0.429,3,7,0.429,0,0,,2,2,4,3,0,1,0,0,9
+2026-01-24_northern_colo_northern_ariz,Northern Colo.,24,"West, Tatum",True,24,2,7,0.286,0,0,,1,2,0.5,7,4,11,5,4,1,0,1,5
+2026-01-24_northern_colo_northern_ariz,Northern Colo.,08,"Powell, Erin",True,6,1,4,0.25,0,2,0.0,1,1,1.0,0,0,0,0,0,0,0,0,3
+2026-01-24_northern_colo_northern_ariz,Northern Colo.,02,"Baymon, Heather",False,28,6,16,0.375,4,13,0.308,1,1,1.0,1,3,4,1,1,1,0,2,17
+2026-01-24_northern_colo_northern_ariz,Northern Colo.,22,"Hall, Aniah",False,24,5,11,0.455,0,0,,2,4,0.5,3,3,6,3,2,1,2,1,12
+2026-01-24_northern_colo_northern_ariz,Northern Colo.,12,"Loomis-Goltl, Ruthie",False,10,2,4,0.5,0,0,,0,0,,1,0,1,0,0,1,1,0,4
+2026-01-24_northern_colo_northern_ariz,Northern Colo.,11,"Moore, Lilah",False,13,0,2,0.0,0,2,0.0,0,0,,0,3,3,0,0,0,1,1,0
+2026-01-24_northern_colo_northern_ariz,Northern Colo.,04,"Fraser, Claire",False,10,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2026-01-24_northern_colo_northern_ariz,Northern Colo.,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,3,6,0,0,2,0,0,0
+2026-01-29_northern_ariz_eastern_wash,Eastern Wash.,01,"Bowers, Elyn",True,36,8,16,0.5,3,8,0.375,7,7,1.0,2,4,6,3,2,6,0,3,26
+2026-01-29_northern_ariz_eastern_wash,Eastern Wash.,02,"Gallatin, Ella",True,38,8,16,0.5,4,8,0.5,0,0,,3,1,4,3,5,3,2,1,20
+2026-01-29_northern_ariz_eastern_wash,Eastern Wash.,22,"Grossman, Kourtney",True,30,5,8,0.625,0,1,0.0,9,10,0.9,1,12,13,2,1,3,0,1,19
+2026-01-29_northern_ariz_eastern_wash,Eastern Wash.,10,"Eggers, Jaecy",True,32,6,11,0.545,0,1,0.0,5,6,0.833,3,8,11,4,1,1,1,0,17
+2026-01-29_northern_ariz_eastern_wash,Eastern Wash.,13,"Gingras, Caitie",True,24,1,5,0.2,0,4,0.0,0,0,,0,0,0,3,3,0,0,0,2
+2026-01-29_northern_ariz_eastern_wash,Eastern Wash.,23,"McElmurry, Emily",False,11,3,7,0.429,1,4,0.25,0,0,,0,2,2,2,1,0,0,1,7
+2026-01-29_northern_ariz_eastern_wash,Eastern Wash.,03,"Gibbs, Madeline",False,11,1,3,0.333,0,2,0.0,0,0,,0,0,0,0,0,0,0,0,2
+2026-01-29_northern_ariz_eastern_wash,Eastern Wash.,24,"Magnuson, Brielle",False,10,0,1,0.0,0,0,,0,0,,0,0,0,0,0,0,0,1,0
+2026-01-29_northern_ariz_eastern_wash,Eastern Wash.,12,"Kirk, Paris",False,8,0,0,,0,0,,0,0,,0,2,2,3,1,1,0,0,0
+2026-01-29_northern_ariz_eastern_wash,Eastern Wash.,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,1,3,0,0,0,0,0,0
+2026-01-29_northern_ariz_eastern_wash,Northern Ariz.,23,"Williams, Kayla",True,30,10,12,0.833,3,4,0.75,9,9,1.0,0,3,3,3,1,0,0,0,32
+2026-01-29_northern_ariz_eastern_wash,Northern Ariz.,25,"White, Naomi",True,40,6,15,0.4,3,6,0.5,6,8,0.75,0,5,5,0,1,3,2,3,21
+2026-01-29_northern_ariz_eastern_wash,Northern Ariz.,03,"Watts, Madison",True,24,6,11,0.545,0,1,0.0,2,2,1.0,1,4,5,5,3,3,1,0,14
+2026-01-29_northern_ariz_eastern_wash,Northern Ariz.,00,"Dasovich, Emma",True,29,3,7,0.429,3,5,0.6,0,0,,0,3,3,5,8,2,1,0,9
+2026-01-29_northern_ariz_eastern_wash,Northern Ariz.,11,"Taylor, Audrey",True,30,0,2,0.0,0,1,0.0,0,0,,0,2,2,2,1,4,0,2,0
+2026-01-29_northern_ariz_eastern_wash,Northern Ariz.,13,"Robinson, J'Bionna",False,20,2,3,0.667,1,1,1.0,1,2,0.5,0,2,2,3,1,2,0,2,6
+2026-01-29_northern_ariz_eastern_wash,Northern Ariz.,12,"Dunn, Addison",False,11,1,1,1.0,1,1,1.0,0,0,,0,0,0,3,1,1,0,0,3
+2026-01-29_northern_ariz_eastern_wash,Northern Ariz.,10,"Williams, Hannah",False,11,1,7,0.143,0,0,,0,0,,2,1,3,1,2,0,0,1,2
+2026-01-29_northern_ariz_eastern_wash,Northern Ariz.,30,"Curry, Faith",False,5,0,1,0.0,0,1,0.0,0,0,,0,1,1,1,0,0,0,0,0
+2026-01-29_northern_ariz_eastern_wash,Northern Ariz.,01,"Harris, Alyssa",False,,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-29_northern_ariz_eastern_wash,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,3,3,0,0,0,0,0,0
+2026-01-31_idaho_northern_ariz,Northern Ariz.,03,"Watts, Madison",True,29,8,23,0.348,0,2,0.0,4,4,1.0,0,6,6,3,2,0,1,1,20
+2026-01-31_idaho_northern_ariz,Northern Ariz.,23,"Williams, Kayla",True,16,3,5,0.6,3,4,0.75,3,4,0.75,0,3,3,3,0,2,0,0,12
+2026-01-31_idaho_northern_ariz,Northern Ariz.,25,"White, Naomi",True,36,4,12,0.333,0,2,0.0,1,2,0.5,0,9,9,2,1,2,1,0,9
+2026-01-31_idaho_northern_ariz,Northern Ariz.,00,"Dasovich, Emma",True,25,4,6,0.667,1,2,0.5,0,0,,1,2,3,2,1,3,1,0,9
+2026-01-31_idaho_northern_ariz,Northern Ariz.,11,"Taylor, Audrey",True,27,1,4,0.25,0,3,0.0,0,0,,0,1,1,0,2,3,0,3,2
+2026-01-31_idaho_northern_ariz,Northern Ariz.,35,"Morris, Simone",False,21,5,7,0.714,2,2,1.0,2,2,1.0,1,0,1,0,0,0,0,0,14
+2026-01-31_idaho_northern_ariz,Northern Ariz.,30,"Curry, Faith",False,14,1,2,0.5,1,2,0.5,0,0,,0,0,0,2,0,2,0,0,3
+2026-01-31_idaho_northern_ariz,Northern Ariz.,13,"Robinson, J'Bionna",False,24,0,4,0.0,0,1,0.0,2,2,1.0,1,1,2,0,2,4,0,1,2
+2026-01-31_idaho_northern_ariz,Northern Ariz.,10,"Williams, Hannah",False,7,0,1,0.0,0,0,,0,0,,0,0,0,3,2,1,0,0,0
+2026-01-31_idaho_northern_ariz,Northern Ariz.,12,"Dunn, Addison",False,1,0,0,,0,0,,0,0,,1,0,1,0,0,3,0,0,0
+2026-01-31_idaho_northern_ariz,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,4,7,0,0,0,0,0,0
+2026-01-31_idaho_northern_ariz,Idaho,04,"Hassmann, Hope",True,32,7,12,0.583,3,4,0.75,3,3,1.0,0,5,5,0,6,6,0,0,20
+2026-01-31_idaho_northern_ariz,Idaho,10,"Barbosa, Lorena",True,17,4,9,0.444,0,0,,7,8,0.875,3,2,5,1,0,1,1,1,15
+2026-01-31_idaho_northern_ariz,Idaho,37,"Pinheiro, Ana",True,31,6,10,0.6,0,1,0.0,2,3,0.667,3,3,6,1,2,1,2,0,14
+2026-01-31_idaho_northern_ariz,Idaho,03,"Gardner, Kyra",True,27,5,11,0.455,3,7,0.429,0,0,,0,7,7,1,5,1,2,5,13
+2026-01-31_idaho_northern_ariz,Idaho,05,"Uriarte, Ella",True,31,0,5,0.0,0,4,0.0,1,2,0.5,1,3,4,3,1,0,0,1,1
+2026-01-31_idaho_northern_ariz,Idaho,09,"Dos Santos, Debora",False,15,8,11,0.727,0,0,,2,2,1.0,1,3,4,3,0,1,2,1,18
+2026-01-31_idaho_northern_ariz,Idaho,23,"Beatriz Passos Alves da Silva, Ana",False,19,3,7,0.429,0,1,0.0,0,0,,1,2,3,1,2,1,0,3,6
+2026-01-31_idaho_northern_ariz,Idaho,02,"Brans, Sarah",False,6,2,3,0.667,0,0,,0,0,,1,1,2,0,0,1,0,0,4
+2026-01-31_idaho_northern_ariz,Idaho,14,"Kangur, Katlin",False,18,1,4,0.25,1,2,0.5,0,0,,2,1,3,1,1,0,0,1,3
+2026-01-31_idaho_northern_ariz,Idaho,06,"Ekh, Sofia",False,2,0,1,0.0,0,1,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-31_idaho_northern_ariz,Idaho,13,"Deaver, Catelyn",False,2,0,0,,0,0,,0,0,,0,0,0,1,1,0,0,0,0
+2026-01-31_idaho_northern_ariz,Idaho,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,5,6,0,0,1,0,0,0
+2026-02-05_northern_ariz_idaho_st,Idaho St.,01,"Spink, Kacey",True,31,6,11,0.545,1,3,0.333,4,4,1.0,3,8,11,4,2,1,0,2,17
+2026-02-05_northern_ariz_idaho_st,Idaho St.,14,"Carlson, Piper",True,30,8,12,0.667,0,0,,0,1,0.0,3,2,5,2,1,0,0,1,16
+2026-02-05_northern_ariz_idaho_st,Idaho St.,04,"Aby, Alyse",True,23,3,6,0.5,2,4,0.5,2,3,0.667,2,1,3,3,1,1,1,0,10
+2026-02-05_northern_ariz_idaho_st,Idaho St.,05,"Jordan, Tasia",True,22,3,16,0.188,0,3,0.0,2,2,1.0,1,4,5,2,0,4,0,3,8
+2026-02-05_northern_ariz_idaho_st,Idaho St.,02,"Caldwell, Aspen",True,31,2,6,0.333,0,0,,0,0,,1,0,1,2,6,3,0,2,4
+2026-02-05_northern_ariz_idaho_st,Idaho St.,23,"Jones, Tylie",False,18,3,6,0.5,0,1,0.0,2,4,0.5,0,5,5,3,0,0,1,0,8
+2026-02-05_northern_ariz_idaho_st,Idaho St.,24,"Wright, Halle",False,20,3,5,0.6,0,2,0.0,1,2,0.5,0,1,1,2,0,0,0,1,7
+2026-02-05_northern_ariz_idaho_st,Idaho St.,18,"GAUFFRENET, Maeva",False,14,2,6,0.333,1,4,0.25,2,2,1.0,0,1,1,0,1,0,0,1,7
+2026-02-05_northern_ariz_idaho_st,Idaho St.,13,"Wolfram, Asa",False,9,1,3,0.333,0,0,,0,0,,0,0,0,0,1,0,0,1,2
+2026-02-05_northern_ariz_idaho_st,Idaho St.,03,"Collman, Camryn",False,2,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2026-02-05_northern_ariz_idaho_st,Idaho St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,5,8,0,0,1,0,0,0
+2026-02-05_northern_ariz_idaho_st,Northern Ariz.,25,"White, Naomi",True,40,7,17,0.412,2,8,0.25,5,6,0.833,0,4,4,3,0,7,1,0,21
+2026-02-05_northern_ariz_idaho_st,Northern Ariz.,03,"Watts, Madison",True,34,4,6,0.667,0,1,0.0,5,7,0.714,2,9,11,2,3,1,1,0,13
+2026-02-05_northern_ariz_idaho_st,Northern Ariz.,23,"Williams, Kayla",True,23,3,7,0.429,0,1,0.0,7,9,0.778,1,3,4,3,2,2,0,0,13
+2026-02-05_northern_ariz_idaho_st,Northern Ariz.,00,"Dasovich, Emma",True,33,4,10,0.4,2,6,0.333,2,2,1.0,2,1,3,2,3,1,0,0,12
+2026-02-05_northern_ariz_idaho_st,Northern Ariz.,11,"Taylor, Audrey",True,27,3,7,0.429,3,6,0.5,0,0,,0,2,2,3,5,2,0,1,9
+2026-02-05_northern_ariz_idaho_st,Northern Ariz.,35,"Morris, Simone",False,24,1,4,0.25,0,1,0.0,0,0,,0,5,5,1,1,1,1,0,2
+2026-02-05_northern_ariz_idaho_st,Northern Ariz.,13,"Robinson, J'Bionna",False,7,0,1,0.0,0,0,,0,0,,0,3,3,1,0,1,0,1,0
+2026-02-05_northern_ariz_idaho_st,Northern Ariz.,07,"Davis, Layla",False,6,0,1,0.0,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2026-02-05_northern_ariz_idaho_st,Northern Ariz.,10,"Williams, Hannah",False,5,0,0,,0,0,,0,0,,0,0,0,1,0,2,1,0,0
+2026-02-05_northern_ariz_idaho_st,Northern Ariz.,30,"Curry, Faith",False,1,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2026-02-05_northern_ariz_idaho_st,Northern Ariz.,12,"Dunn, Addison",False,,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-05_northern_ariz_idaho_st,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,4,5,0,0,0,0,0,0
+2026-02-07_northern_ariz_weber_st,Weber St.,08,"Robbins, Hannah",True,37,6,12,0.5,3,5,0.6,1,2,0.5,1,3,4,3,1,3,3,3,16
+2026-02-07_northern_ariz_weber_st,Weber St.,07,"Emma-Nnopu, Antoniette",True,30,4,10,0.4,0,2,0.0,5,7,0.714,4,9,13,3,0,3,0,2,13
+2026-02-07_northern_ariz_weber_st,Weber St.,32,"Billy, Lanae",True,36,4,17,0.235,3,12,0.25,0,0,,0,3,3,5,1,3,0,0,11
+2026-02-07_northern_ariz_weber_st,Weber St.,22,"White, Sydney",True,34,1,5,0.2,0,2,0.0,3,4,0.75,1,2,3,1,4,1,0,1,5
+2026-02-07_northern_ariz_weber_st,Weber St.,10,"Lauro, Paris",True,16,0,4,0.0,0,2,0.0,4,4,1.0,2,2,4,1,0,1,0,1,4
+2026-02-07_northern_ariz_weber_st,Weber St.,13,"Shaffer, Makenna",False,14,3,7,0.429,2,5,0.4,0,0,,0,2,2,0,0,0,0,1,8
+2026-02-07_northern_ariz_weber_st,Weber St.,25,"Willardson, Nicole",False,19,3,7,0.429,0,1,0.0,0,0,,2,2,4,1,2,1,1,0,6
+2026-02-07_northern_ariz_weber_st,Weber St.,11,"Peaua, Arizana",False,9,1,1,1.0,0,0,,0,2,0.0,1,0,1,4,1,3,0,1,2
+2026-02-07_northern_ariz_weber_st,Weber St.,15,"Stubbs, Japrix",False,5,0,1,0.0,0,1,0.0,0,0,,0,1,1,0,0,0,0,0,0
+2026-02-07_northern_ariz_weber_st,Weber St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,1,3,0,0,1,0,0,0
+2026-02-07_northern_ariz_weber_st,Northern Ariz.,25,"White, Naomi",True,39,8,19,0.421,4,8,0.5,11,12,0.917,3,7,10,1,2,3,2,3,31
+2026-02-07_northern_ariz_weber_st,Northern Ariz.,03,"Watts, Madison",True,30,5,11,0.455,0,1,0.0,5,8,0.625,4,7,11,3,2,2,0,4,15
+2026-02-07_northern_ariz_weber_st,Northern Ariz.,11,"Taylor, Audrey",True,35,1,3,0.333,1,3,0.333,3,6,0.5,0,2,2,2,1,2,0,1,6
+2026-02-07_northern_ariz_weber_st,Northern Ariz.,23,"Williams, Kayla",True,15,0,1,0.0,0,1,0.0,2,2,1.0,0,1,1,2,2,2,0,1,2
+2026-02-07_northern_ariz_weber_st,Northern Ariz.,00,"Dasovich, Emma",True,25,0,3,0.0,0,1,0.0,0,0,,2,4,6,5,2,4,0,0,0
+2026-02-07_northern_ariz_weber_st,Northern Ariz.,07,"Davis, Layla",False,25,5,8,0.625,0,0,,3,6,0.5,2,4,6,3,2,4,1,1,13
+2026-02-07_northern_ariz_weber_st,Northern Ariz.,13,"Robinson, J'Bionna",False,8,2,4,0.5,0,0,,0,0,,0,1,1,1,0,0,0,0,4
+2026-02-07_northern_ariz_weber_st,Northern Ariz.,35,"Morris, Simone",False,17,1,5,0.2,0,1,0.0,0,0,,0,2,2,1,0,0,0,0,2
+2026-02-07_northern_ariz_weber_st,Northern Ariz.,10,"Williams, Hannah",False,6,0,0,,0,0,,0,0,,0,2,2,0,0,0,0,0,0
+2026-02-07_northern_ariz_weber_st,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,2,4,0,0,0,0,0,0
+2026-02-12_portland_st_northern_ariz,Northern Ariz.,25,"White, Naomi",True,44,8,18,0.444,4,8,0.5,5,6,0.833,1,7,8,2,1,5,1,2,25
+2026-02-12_portland_st_northern_ariz,Northern Ariz.,03,"Watts, Madison",True,32,4,10,0.4,0,0,,5,6,0.833,4,6,10,3,6,1,1,2,13
+2026-02-12_portland_st_northern_ariz,Northern Ariz.,35,"Morris, Simone",True,30,3,10,0.3,0,1,0.0,3,4,0.75,2,4,6,2,3,1,0,5,9
+2026-02-12_portland_st_northern_ariz,Northern Ariz.,07,"Davis, Layla",True,15,1,4,0.25,0,0,,2,4,0.5,0,1,1,1,0,0,2,1,4
+2026-02-12_portland_st_northern_ariz,Northern Ariz.,10,"Williams, Hannah",True,6,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,1,0
+2026-02-12_portland_st_northern_ariz,Northern Ariz.,23,"Williams, Kayla",False,33,9,15,0.6,2,4,0.5,4,5,0.8,2,6,8,4,2,3,2,1,24
+2026-02-12_portland_st_northern_ariz,Northern Ariz.,13,"Robinson, J'Bionna",False,37,2,5,0.4,0,0,,3,5,0.6,0,2,2,4,5,3,0,2,7
+2026-02-12_portland_st_northern_ariz,Northern Ariz.,00,"Dasovich, Emma",False,22,2,7,0.286,0,2,0.0,0,0,,0,3,3,5,3,2,1,1,4
+2026-02-12_portland_st_northern_ariz,Northern Ariz.,12,"Dunn, Addison",False,1,1,1,1.0,0,0,,0,0,,0,0,0,0,1,0,0,0,2
+2026-02-12_portland_st_northern_ariz,Northern Ariz.,30,"Curry, Faith",False,5,0,0,,0,0,,0,0,,0,0,0,0,1,0,0,0,0
+2026-02-12_portland_st_northern_ariz,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,1,4,0,0,2,0,0,0
+2026-02-12_portland_st_northern_ariz,Portland St.,12,"Brown, Kyleigh",True,45,6,22,0.273,2,9,0.222,4,4,1.0,1,2,3,4,3,1,0,2,18
+2026-02-12_portland_st_northern_ariz,Portland St.,11,"Torres-Kahapea, Laynee",True,43,6,10,0.6,1,2,0.5,5,5,1.0,0,7,7,2,3,3,1,1,18
+2026-02-12_portland_st_northern_ariz,Portland St.,09,"Chicken, Hannah",True,34,6,13,0.462,0,2,0.0,4,4,1.0,3,8,11,5,1,5,2,3,16
+2026-02-12_portland_st_northern_ariz,Portland St.,23,"Moffat, Taylor",True,34,1,5,0.2,0,3,0.0,2,2,1.0,0,1,1,4,5,2,0,2,4
+2026-02-12_portland_st_northern_ariz,Portland St.,05,"Yoakum, Ajae",True,25,1,4,0.25,0,0,,0,0,,0,3,3,3,1,2,1,0,2
+2026-02-12_portland_st_northern_ariz,Portland St.,08,"Ellington, Cici",False,24,7,16,0.438,1,2,0.5,5,8,0.625,4,5,9,4,1,4,2,0,20
+2026-02-12_portland_st_northern_ariz,Portland St.,02,"Carter, Jamia",False,4,1,1,1.0,0,0,,0,0,,0,0,0,0,0,0,0,0,2
+2026-02-12_portland_st_northern_ariz,Portland St.,10,"Munk, Kirstine",False,9,0,0,,0,0,,0,0,,1,0,1,0,0,0,0,0,0
+2026-02-12_portland_st_northern_ariz,Portland St.,04,"Buzzard, Sophie",False,7,0,0,,0,0,,0,0,,0,0,0,1,0,1,0,0,0
+2026-02-12_portland_st_northern_ariz,Portland St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,3,7,0,0,1,0,0,0
+2026-02-14_sacramento_st_northern_ariz,Northern Ariz.,25,"White, Naomi",True,26,4,11,0.364,1,7,0.143,2,2,1.0,0,2,2,2,1,4,0,0,11
+2026-02-14_sacramento_st_northern_ariz,Northern Ariz.,00,"Dasovich, Emma",True,32,3,7,0.429,3,5,0.6,0,0,,0,6,6,2,1,1,0,0,9
+2026-02-14_sacramento_st_northern_ariz,Northern Ariz.,35,"Morris, Simone",True,24,2,5,0.4,0,1,0.0,4,4,1.0,1,3,4,1,0,4,0,3,8
+2026-02-14_sacramento_st_northern_ariz,Northern Ariz.,03,"Watts, Madison",True,33,3,7,0.429,0,1,0.0,1,1,1.0,4,4,8,1,4,0,2,2,7
+2026-02-14_sacramento_st_northern_ariz,Northern Ariz.,13,"Robinson, J'Bionna",True,37,2,5,0.4,0,1,0.0,2,6,0.333,1,4,5,1,1,2,0,3,6
+2026-02-14_sacramento_st_northern_ariz,Northern Ariz.,23,"Williams, Kayla",False,30,6,9,0.667,2,2,1.0,3,3,1.0,0,2,2,3,1,3,0,1,17
+2026-02-14_sacramento_st_northern_ariz,Northern Ariz.,07,"Davis, Layla",False,13,1,9,0.111,0,1,0.0,0,0,,3,1,4,1,0,0,1,0,2
+2026-02-14_sacramento_st_northern_ariz,Northern Ariz.,10,"Williams, Hannah",False,4,0,0,,0,0,,0,0,,1,1,2,1,1,1,0,0,0
+2026-02-14_sacramento_st_northern_ariz,Northern Ariz.,12,"Dunn, Addison",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-14_sacramento_st_northern_ariz,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,1,1,0,0,2,0,0,0
+2026-02-14_sacramento_st_northern_ariz,Sacramento St.,01,"Versteeg, Benthe",True,36,5,12,0.417,2,5,0.4,0,0,,2,5,7,3,4,6,0,2,12
+2026-02-14_sacramento_st_northern_ariz,Sacramento St.,45,"Jaiteh, Fatoumata",True,32,3,5,0.6,0,0,,2,4,0.5,5,6,11,2,3,4,0,3,8
+2026-02-14_sacramento_st_northern_ariz,Sacramento St.,11,"Gray, Rubi",True,38,2,15,0.133,1,13,0.077,0,0,,1,0,1,2,0,1,0,0,5
+2026-02-14_sacramento_st_northern_ariz,Sacramento St.,22,"Mandaquit, Jaety",True,36,1,8,0.125,1,4,0.25,0,0,,1,2,3,4,4,1,0,2,3
+2026-02-14_sacramento_st_northern_ariz,Sacramento St.,03,"Taylor, Brooklyn",True,3,1,2,0.5,0,0,,0,0,,0,0,0,1,0,1,0,0,2
+2026-02-14_sacramento_st_northern_ariz,Sacramento St.,08,"Salave'a, Keanna",False,19,6,7,0.857,0,0,,1,1,1.0,2,7,9,4,1,2,3,0,13
+2026-02-14_sacramento_st_northern_ariz,Sacramento St.,10,"Paananen, Pinja",False,12,4,9,0.444,1,3,0.333,0,0,,1,1,2,0,2,0,0,0,9
+2026-02-14_sacramento_st_northern_ariz,Sacramento St.,14,"Fa'i, Tali",False,15,1,5,0.2,1,4,0.25,0,0,,2,2,4,2,3,1,0,0,3
+2026-02-14_sacramento_st_northern_ariz,Sacramento St.,05,"Abiara, Elizabeth",False,8,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2026-02-14_sacramento_st_northern_ariz,Sacramento St.,04,"Fontenberry, Jamiah",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2026-02-14_sacramento_st_northern_ariz,Sacramento St.,12,"Lual, Ajong",False,,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-14_sacramento_st_northern_ariz,Sacramento St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,1,3,0,0,1,0,0,0
+2026-02-21_northern_ariz_northern_colo,Northern Colo.,24,"West, Tatum",True,28,5,7,0.714,0,0,,2,2,1.0,3,7,10,3,1,1,1,3,12
+2026-02-21_northern_ariz_northern_colo,Northern Colo.,05,"George, Neenah",True,22,4,11,0.364,1,4,0.25,3,4,0.75,0,0,0,2,3,3,0,3,12
+2026-02-21_northern_ariz_northern_colo,Northern Colo.,15,"Fields, Gabi",True,25,2,5,0.4,0,1,0.0,2,3,0.667,1,1,2,3,4,1,0,2,6
+2026-02-21_northern_ariz_northern_colo,Northern Colo.,08,"Powell, Erin",True,21,2,3,0.667,0,1,0.0,0,0,,2,2,4,3,2,2,0,1,4
+2026-02-21_northern_ariz_northern_colo,Northern Colo.,33,"Riley, Julia",True,18,1,5,0.2,1,5,0.2,0,0,,0,0,0,2,1,1,0,0,3
+2026-02-21_northern_ariz_northern_colo,Northern Colo.,02,"Baymon, Heather",False,26,6,15,0.4,3,8,0.375,0,0,,3,2,5,1,2,2,0,3,15
+2026-02-21_northern_ariz_northern_colo,Northern Colo.,22,"Hall, Aniah",False,18,3,4,0.75,0,0,,6,7,0.857,2,3,5,2,1,0,2,3,12
+2026-02-21_northern_ariz_northern_colo,Northern Colo.,12,"Loomis-Goltl, Ruthie",False,11,5,9,0.556,0,0,,0,0,,2,1,3,0,0,0,1,0,10
+2026-02-21_northern_ariz_northern_colo,Northern Colo.,11,"Moore, Lilah",False,19,3,3,1.0,1,1,1.0,0,0,,1,0,1,3,0,1,0,0,7
+2026-02-21_northern_ariz_northern_colo,Northern Colo.,13,"Tanuvasa, Lele",False,5,0,0,,0,0,,0,0,,0,0,0,1,1,1,1,1,0
+2026-02-21_northern_ariz_northern_colo,Northern Colo.,00,"Loomis-Goltl, Olivia",False,4,0,1,0.0,0,0,,0,0,,0,0,0,2,1,0,0,0,0
+2026-02-21_northern_ariz_northern_colo,Northern Colo.,04,"Fraser, Claire",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-21_northern_ariz_northern_colo,Northern Colo.,10,"Dykstra, Louise",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-21_northern_ariz_northern_colo,Northern Colo.,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,3,5,0,0,3,0,0,0
+2026-02-21_northern_ariz_northern_colo,Northern Ariz.,07,"Davis, Layla",True,25,6,8,0.75,0,0,,3,4,0.75,5,2,7,2,1,2,1,0,15
+2026-02-21_northern_ariz_northern_colo,Northern Ariz.,25,"White, Naomi",True,26,2,3,0.667,0,1,0.0,0,2,0.0,0,2,2,0,1,4,0,0,4
+2026-02-21_northern_ariz_northern_colo,Northern Ariz.,03,"Watts, Madison",True,14,2,4,0.5,0,0,,0,0,,0,3,3,2,0,1,0,0,4
+2026-02-21_northern_ariz_northern_colo,Northern Ariz.,04,"Morris, Simone",True,19,1,4,0.25,0,0,,0,0,,1,1,2,3,0,3,0,2,2
+2026-02-21_northern_ariz_northern_colo,Northern Ariz.,11,"Taylor, Audrey",True,19,0,1,0.0,0,0,,0,0,,0,1,1,1,0,4,0,0,0
+2026-02-21_northern_ariz_northern_colo,Northern Ariz.,23,"Williams, Kayla",False,26,2,8,0.25,1,3,0.333,5,6,0.833,1,3,4,3,0,0,1,2,10
+2026-02-21_northern_ariz_northern_colo,Northern Ariz.,13,"Robinson, J'Bionna",False,31,2,5,0.4,0,0,,2,5,0.4,0,1,1,2,1,1,1,2,6
+2026-02-21_northern_ariz_northern_colo,Northern Ariz.,12,"Dunn, Addison",False,7,2,3,0.667,1,1,1.0,1,1,1.0,0,1,1,0,0,1,0,0,6
+2026-02-21_northern_ariz_northern_colo,Northern Ariz.,10,"Williams, Hannah",False,8,0,4,0.0,0,0,,4,4,1.0,1,1,2,0,1,1,0,0,4
+2026-02-21_northern_ariz_northern_colo,Northern Ariz.,00,"Dasovich, Emma",False,19,0,4,0.0,0,1,0.0,2,2,1.0,1,2,3,1,0,3,0,1,2
+2026-02-21_northern_ariz_northern_colo,Northern Ariz.,01,"Harris, Alyssa",False,4,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-21_northern_ariz_northern_colo,Northern Ariz.,30,"Curry, Faith",False,2,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2026-02-21_northern_ariz_northern_colo,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,1,3,0,0,3,0,0,0
+2026-02-26_northern_ariz_idaho,Idaho,37,"Pinheiro, Ana",True,18,5,8,0.625,0,1,0.0,2,3,0.667,3,4,7,3,2,1,2,3,12
+2026-02-26_northern_ariz_idaho,Idaho,04,"Hassmann, Hope",True,22,5,11,0.455,1,3,0.333,0,0,,1,3,4,0,2,2,0,0,11
+2026-02-26_northern_ariz_idaho,Idaho,05,"Uriarte, Ella",True,18,4,7,0.571,3,6,0.5,0,0,,0,0,0,2,1,1,0,0,11
+2026-02-26_northern_ariz_idaho,Idaho,10,"Barbosa, Lorena",True,13,3,3,1.0,0,0,,1,3,0.333,2,2,4,1,0,0,2,0,7
+2026-02-26_northern_ariz_idaho,Idaho,03,"Gardner, Kyra",True,25,2,7,0.286,1,4,0.25,0,0,,0,11,11,0,4,1,1,1,5
+2026-02-26_northern_ariz_idaho,Idaho,23,"Beatriz Passos Alves da Silva, Ana",False,22,5,12,0.417,2,6,0.333,2,2,1.0,0,6,6,1,2,4,0,0,14
+2026-02-26_northern_ariz_idaho,Idaho,24,"McMorris, Mary",False,18,3,12,0.25,1,4,0.25,1,5,0.2,2,3,5,2,0,5,0,1,8
+2026-02-26_northern_ariz_idaho,Idaho,02,"Brans, Sarah",False,11,3,6,0.5,0,2,0.0,1,3,0.333,3,5,8,1,1,0,0,1,7
+2026-02-26_northern_ariz_idaho,Idaho,09,"Dos Santos, Debora",False,11,3,6,0.5,0,0,,0,2,0.0,4,4,8,1,0,0,1,2,6
+2026-02-26_northern_ariz_idaho,Idaho,14,"Kangur, Katlin",False,24,1,4,0.25,1,3,0.333,1,2,0.5,1,3,4,1,0,2,0,0,4
+2026-02-26_northern_ariz_idaho,Idaho,06,"Ekh, Sofia",False,11,0,2,0.0,0,2,0.0,0,0,,0,2,2,0,0,0,0,0,0
+2026-02-26_northern_ariz_idaho,Idaho,13,"Deaver, Catelyn",False,7,0,2,0.0,0,0,,0,0,,1,1,2,0,0,0,2,0,0
+2026-02-26_northern_ariz_idaho,Idaho,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,1,5,0,0,0,0,0,0
+2026-02-26_northern_ariz_idaho,Northern Ariz.,25,"White, Naomi",True,36,3,16,0.188,3,12,0.25,3,4,0.75,2,6,8,3,0,0,0,3,12
+2026-02-26_northern_ariz_idaho,Northern Ariz.,35,"Morris, Simone",True,29,4,13,0.308,0,1,0.0,2,2,1.0,2,4,6,3,0,0,0,1,10
+2026-02-26_northern_ariz_idaho,Northern Ariz.,11,"Taylor, Audrey",True,31,2,10,0.2,2,6,0.333,0,0,,0,5,5,1,1,2,1,1,6
+2026-02-26_northern_ariz_idaho,Northern Ariz.,07,"Davis, Layla",True,29,2,10,0.2,0,2,0.0,0,0,,4,3,7,2,1,2,4,2,4
+2026-02-26_northern_ariz_idaho,Northern Ariz.,23,"Williams, Kayla",True,11,1,4,0.25,0,3,0.0,2,2,1.0,2,3,5,5,0,1,0,1,4
+2026-02-26_northern_ariz_idaho,Northern Ariz.,13,"Robinson, J'Bionna",False,15,4,9,0.444,0,0,,0,0,,2,0,2,1,4,1,1,3,8
+2026-02-26_northern_ariz_idaho,Northern Ariz.,10,"Williams, Hannah",False,17,2,12,0.167,0,1,0.0,2,2,1.0,0,6,6,3,1,1,1,1,6
+2026-02-26_northern_ariz_idaho,Northern Ariz.,30,"Curry, Faith",False,20,2,6,0.333,1,5,0.2,0,0,,2,1,3,0,0,1,0,0,5
+2026-02-26_northern_ariz_idaho,Northern Ariz.,01,"Harris, Alyssa",False,5,0,1,0.0,0,0,,2,2,1.0,1,0,1,0,0,3,0,0,2
+2026-02-26_northern_ariz_idaho,Northern Ariz.,12,"Dunn, Addison",False,7,0,2,0.0,0,1,0.0,0,0,,1,2,3,0,1,0,1,0,0
+2026-02-26_northern_ariz_idaho,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,2,4,0,0,0,0,0,0
+2026-02-28_eastern_wash_northern_ariz,Northern Ariz.,23,"Williams, Kayla",True,32,9,12,0.75,2,3,0.667,4,4,1.0,3,7,10,0,1,2,1,1,24
+2026-02-28_eastern_wash_northern_ariz,Northern Ariz.,25,"White, Naomi",True,39,4,24,0.167,0,8,0.0,6,6,1.0,1,5,6,2,0,0,1,2,14
+2026-02-28_eastern_wash_northern_ariz,Northern Ariz.,35,"Morris, Simone",True,22,2,6,0.333,0,1,0.0,2,2,1.0,2,1,3,4,0,2,0,1,6
+2026-02-28_eastern_wash_northern_ariz,Northern Ariz.,07,"Davis, Layla",True,14,1,6,0.167,0,1,0.0,0,2,0.0,4,0,4,2,3,1,1,0,2
+2026-02-28_eastern_wash_northern_ariz,Northern Ariz.,11,"Taylor, Audrey",True,34,0,4,0.0,0,3,0.0,0,0,,0,3,3,2,2,0,0,1,0
+2026-02-28_eastern_wash_northern_ariz,Northern Ariz.,13,"Robinson, J'Bionna",False,35,5,13,0.385,0,1,0.0,1,3,0.333,2,2,4,2,4,1,0,4,11
+2026-02-28_eastern_wash_northern_ariz,Northern Ariz.,00,"Dasovich, Emma",False,20,0,3,0.0,0,2,0.0,4,4,1.0,1,2,3,3,2,3,0,0,4
+2026-02-28_eastern_wash_northern_ariz,Northern Ariz.,01,"Harris, Alyssa",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-28_eastern_wash_northern_ariz,Northern Ariz.,12,"Dunn, Addison",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-28_eastern_wash_northern_ariz,Northern Ariz.,30,"Curry, Faith",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-28_eastern_wash_northern_ariz,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,4,6,0,0,1,0,0,0
+2026-02-28_eastern_wash_northern_ariz,Eastern Wash.,01,"Bowers, Elyn",True,38,8,16,0.5,4,9,0.444,1,1,1.0,2,2,4,0,4,5,1,0,21
+2026-02-28_eastern_wash_northern_ariz,Eastern Wash.,22,"Grossman, Kourtney",True,33,7,14,0.5,2,4,0.5,1,1,1.0,3,9,12,2,2,1,0,1,17
+2026-02-28_eastern_wash_northern_ariz,Eastern Wash.,02,"Gallatin, Ella",True,31,4,11,0.364,2,5,0.4,4,4,1.0,0,5,5,4,7,2,1,1,14
+2026-02-28_eastern_wash_northern_ariz,Eastern Wash.,23,"McElmurry, Emily",True,27,4,6,0.667,3,4,0.75,0,0,,0,3,3,0,1,3,0,0,11
+2026-02-28_eastern_wash_northern_ariz,Eastern Wash.,10,"Eggers, Jaecy",True,30,2,9,0.222,1,1,1.0,3,4,0.75,5,6,11,3,0,2,3,0,8
+2026-02-28_eastern_wash_northern_ariz,Eastern Wash.,24,"Magnuson, Brielle",False,11,2,3,0.667,1,1,1.0,0,0,,0,1,1,0,0,1,0,0,5
+2026-02-28_eastern_wash_northern_ariz,Eastern Wash.,03,"Gibbs, Madeline",False,20,1,5,0.2,1,3,0.333,0,0,,2,1,3,3,5,0,1,0,3
+2026-02-28_eastern_wash_northern_ariz,Eastern Wash.,52,"Hays, Bella",False,5,1,1,1.0,0,0,,0,0,,0,2,2,0,1,0,0,1,2
+2026-02-28_eastern_wash_northern_ariz,Eastern Wash.,12,"Kirk, Paris",False,4,0,2,0.0,0,0,,0,0,,1,1,2,3,0,0,1,0,0
+2026-02-28_eastern_wash_northern_ariz,Eastern Wash.,41,"Hall, Addison",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-28_eastern_wash_northern_ariz,Eastern Wash.,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,1,1,0,0,1,0,0,0
+2026-03-02_montana_st_northern_ariz,Northern Ariz.,25,"White, Naomi",True,40,7,26,0.269,5,14,0.357,2,2,1.0,0,6,6,1,1,5,1,4,21
+2026-03-02_montana_st_northern_ariz,Northern Ariz.,11,"Taylor, Audrey",True,36,2,4,0.5,2,4,0.5,1,2,0.5,0,3,3,3,1,9,0,3,7
+2026-03-02_montana_st_northern_ariz,Northern Ariz.,07,"Davis, Layla",True,27,1,3,0.333,0,1,0.0,3,4,0.75,5,3,8,3,0,4,4,0,5
+2026-03-02_montana_st_northern_ariz,Northern Ariz.,35,"Morris, Simone",True,26,2,3,0.667,0,0,,1,4,0.25,1,1,2,4,0,2,0,1,5
+2026-03-02_montana_st_northern_ariz,Northern Ariz.,23,"Williams, Kayla",True,25,2,6,0.333,0,2,0.0,0,2,0.0,2,5,7,1,2,5,0,0,4
+2026-03-02_montana_st_northern_ariz,Northern Ariz.,13,"Robinson, J'Bionna",False,18,2,3,0.667,0,0,,2,4,0.5,1,1,2,2,0,3,0,1,6
+2026-03-02_montana_st_northern_ariz,Northern Ariz.,00,"Dasovich, Emma",False,14,0,1,0.0,0,0,,0,0,,0,4,4,1,0,2,0,0,0
+2026-03-02_montana_st_northern_ariz,Northern Ariz.,10,"Williams, Hannah",False,7,0,1,0.0,0,0,,0,0,,1,2,3,0,0,2,0,0,0
+2026-03-02_montana_st_northern_ariz,Northern Ariz.,01,"Harris, Alyssa",False,3,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-03-02_montana_st_northern_ariz,Northern Ariz.,30,"Curry, Faith",False,3,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-03-02_montana_st_northern_ariz,Northern Ariz.,12,"Dunn, Addison",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-03-02_montana_st_northern_ariz,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,6,8,0,0,0,0,0,0
+2026-03-02_montana_st_northern_ariz,Montana St.,44,"Chirrick, Taylee",True,31,5,18,0.278,1,7,0.143,5,9,0.556,3,4,7,1,3,3,0,7,16
+2026-03-02_montana_st_northern_ariz,Montana St.,33,"Harris, Addison",True,24,3,11,0.273,1,4,0.25,2,2,1.0,0,0,0,2,2,0,1,1,9
+2026-03-02_montana_st_northern_ariz,Montana St.,12,"Philip, Jamison",True,24,3,4,0.75,0,1,0.0,0,0,,0,0,0,3,3,2,0,2,6
+2026-03-02_montana_st_northern_ariz,Montana St.,05,"Johnson, Ella",True,24,2,4,0.5,1,1,1.0,0,0,,1,8,9,2,0,2,0,3,5
+2026-03-02_montana_st_northern_ariz,Montana St.,15,"Bunyan, Isobel",True,22,2,9,0.222,1,7,0.143,0,0,,3,1,4,2,0,0,0,3,5
+2026-03-02_montana_st_northern_ariz,Montana St.,23,"Erickson, Teagan",False,16,4,6,0.667,1,3,0.333,0,0,,1,0,1,0,0,0,0,1,9
+2026-03-02_montana_st_northern_ariz,Montana St.,21,"Bailey, Brianne",False,16,3,6,0.5,1,2,0.5,0,0,,3,2,5,2,2,4,0,1,7
+2026-03-02_montana_st_northern_ariz,Montana St.,20,"Fatupaito, Brooke",False,16,2,4,0.5,0,0,,1,2,0.5,3,4,7,1,1,2,0,2,5
+2026-03-02_montana_st_northern_ariz,Montana St.,24,"Couture, Kadynce",False,13,1,5,0.2,1,3,0.333,0,0,,0,2,2,2,3,1,0,1,3
+2026-03-02_montana_st_northern_ariz,Montana St.,13,"Hintz, Grace",False,5,1,1,1.0,1,1,1.0,0,0,,0,0,0,1,0,0,0,0,3
+2026-03-02_montana_st_northern_ariz,Montana St.,02,"Smith, Courtney",False,9,0,0,,0,0,,0,0,,0,0,0,0,1,2,0,0,0
+2026-03-02_montana_st_northern_ariz,Montana St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,2,2,0,0,0,0,0,0
+2026-03-07_northern_ariz_montana,Montana,02,"Konig, Mack",True,34,5,9,0.556,3,3,1.0,4,4,1.0,0,2,2,4,5,5,0,0,17
+2026-03-07_northern_ariz_montana,Montana,05,"Gillette, Kennedy",True,31,6,13,0.462,1,6,0.167,2,2,1.0,2,7,9,2,2,0,0,1,15
+2026-03-07_northern_ariz_montana,Montana,11,"Shubert, Aby",True,29,2,10,0.2,2,10,0.2,0,0,,0,5,5,4,2,1,0,1,6
+2026-03-07_northern_ariz_montana,Montana,23,"Land, Jocelyn",True,17,2,6,0.333,1,4,0.25,0,0,,1,3,4,2,0,0,1,0,5
+2026-03-07_northern_ariz_montana,Montana,01,"Donarski, Macy",True,29,1,1,1.0,0,0,,0,0,,0,4,4,3,2,1,0,0,2
+2026-03-07_northern_ariz_montana,Montana,20,"Ehrman, Rae",False,29,6,14,0.429,3,9,0.333,1,1,1.0,2,2,4,0,1,2,0,3,16
+2026-03-07_northern_ariz_montana,Montana,03,"Wacker, Draya",False,17,0,6,0.0,0,5,0.0,0,0,,1,3,4,2,2,3,3,1,0
+2026-03-07_northern_ariz_montana,Montana,22,"Cossette, Ava",False,14,0,4,0.0,0,2,0.0,0,0,,0,2,2,3,1,1,0,0,0
+2026-03-07_northern_ariz_montana,Montana,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,3,6,0,0,0,0,0,0
+2026-03-07_northern_ariz_montana,Northern Ariz.,25,"White, Naomi",True,40,6,22,0.273,2,10,0.2,10,10,1.0,1,5,6,1,3,2,0,1,24
+2026-03-07_northern_ariz_montana,Northern Ariz.,00,"Dasovich, Emma",True,34,5,7,0.714,1,1,1.0,5,6,0.833,2,7,9,1,2,2,1,0,16
+2026-03-07_northern_ariz_montana,Northern Ariz.,03,"Watts, Madison",True,38,3,12,0.25,0,2,0.0,0,0,,1,6,7,1,0,2,2,0,6
+2026-03-07_northern_ariz_montana,Northern Ariz.,11,"Taylor, Audrey",True,35,2,8,0.25,2,7,0.286,0,0,,0,5,5,2,1,2,0,0,6
+2026-03-07_northern_ariz_montana,Northern Ariz.,04,"Morris, Simone",True,8,1,2,0.5,0,0,,0,0,,1,0,1,0,0,1,0,0,2
+2026-03-07_northern_ariz_montana,Northern Ariz.,13,"Robinson, J'Bionna",False,32,2,6,0.333,0,0,,2,2,1.0,2,2,4,4,4,3,0,3,6
+2026-03-07_northern_ariz_montana,Northern Ariz.,23,"Williams, Kayla",False,10,0,1,0.0,0,0,,0,2,0.0,0,2,2,0,0,0,0,1,0
+2026-03-07_northern_ariz_montana,Northern Ariz.,07,"Davis, Layla",False,3,0,2,0.0,0,0,,0,0,,2,0,2,1,0,0,0,0,0
+2026-03-07_northern_ariz_montana,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,3,5,0,0,0,0,0,0

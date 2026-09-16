@@ -1,7 +1,7 @@
 """
 Scrape one Big West WBB season across all 11 teams and emit the 4 linked CSVs.
 
-Usage: python3 run_season.py 2025-26 [--teams ucdavis,ucsd,...] [--out-dir DIR]
+Usage: python3 run_season.py 2025-26 [--teams ucsd,ucsb,...] [--out-dir DIR]
 """
 import argparse
 import csv

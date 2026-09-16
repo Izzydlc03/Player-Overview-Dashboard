@@ -1,0 +1,724 @@
+game_id,team,jersey,player,started,min,fg_m,fg_a,fg_pct,3p_m,3p_a,3p_pct,ft_m,ft_a,ft_pct,oreb,dreb,reb,pf,ast,to,blk,stl,pts
+2025-11-03_washington_seattle_u,Seattle U,14,"Stricklin, Tamia",True,23,6,11,0.545,0,0,,0,0,,2,2,4,3,0,6,0,1,12
+2025-11-03_washington_seattle_u,Seattle U,3,"Brubaker, Ella",True,24,3,9,0.333,2,4,0.5,0,0,,2,2,4,1,2,3,1,0,8
+2025-11-03_washington_seattle_u,Seattle U,6,"Bigovic, Andjela",True,17,2,5,0.4,0,2,0.0,0,0,,0,1,1,0,0,1,1,0,4
+2025-11-03_washington_seattle_u,Seattle U,24,"Rodriguez, Sydnie",True,25,1,10,0.1,1,8,0.125,0,0,,2,3,5,1,0,0,0,0,3
+2025-11-03_washington_seattle_u,Seattle U,5,"Mogel, Dylan",True,26,0,1,0.0,0,0,,1,2,0.5,0,0,0,2,3,4,0,1,1
+2025-11-03_washington_seattle_u,Seattle U,9,"Vesic, Jana",False,18,1,9,0.111,0,3,0.0,4,4,1.0,1,1,2,1,2,4,0,0,6
+2025-11-03_washington_seattle_u,Seattle U,7,"Milkovic, Lucija",False,15,2,5,0.4,0,0,,0,0,,3,4,7,2,0,1,2,0,4
+2025-11-03_washington_seattle_u,Seattle U,8,"Emanga, Chloe",False,15,1,4,0.25,1,1,1.0,0,0,,0,1,1,3,0,1,0,1,3
+2025-11-03_washington_seattle_u,Seattle U,22,"Larson, Lucy",False,14,1,3,0.333,0,1,0.0,0,1,0.0,0,1,1,3,0,1,0,1,2
+2025-11-03_washington_seattle_u,Seattle U,21,"Ibarra, Aaliyah",False,13,0,2,0.0,0,1,0.0,0,0,,0,0,0,3,0,0,0,0,0
+2025-11-03_washington_seattle_u,Seattle U,4,"Proctor, Fia",False,10,0,1,0.0,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2025-11-03_washington_seattle_u,Seattle U,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,3,6,0,0,0,0,0,0
+2025-11-03_washington_seattle_u,Washington,00,"Sellers, Sayvia",True,17,9,13,0.692,1,4,0.25,2,3,0.667,0,3,3,1,6,4,1,4,21
+2025-11-03_washington_seattle_u,Washington,2,"Howell, Avery",True,19,5,5,1.0,4,4,1.0,4,5,0.8,0,4,4,1,0,0,0,0,18
+2025-11-03_washington_seattle_u,Washington,1,"Stines, Hannah",True,22,3,8,0.375,0,0,,1,2,0.5,0,4,4,1,5,0,0,3,7
+2025-11-03_washington_seattle_u,Washington,5,"Brown, Teagan",True,22,3,3,1.0,0,0,,0,0,,1,1,2,0,1,0,0,1,6
+2025-11-03_washington_seattle_u,Washington,55,"Grabovskaia, Yulia",True,14,2,5,0.4,0,0,,0,0,,3,2,5,0,4,1,1,0,4
+2025-11-03_washington_seattle_u,Washington,35,"Harvey, Sienna",False,16,6,10,0.6,1,2,0.5,2,3,0.667,0,2,2,0,1,2,0,1,15
+2025-11-03_washington_seattle_u,Washington,11,"Briggs, Chloe",False,23,2,7,0.286,0,2,0.0,2,3,0.667,2,3,5,1,0,1,0,0,6
+2025-11-03_washington_seattle_u,Washington,23,"Anderson, Olivia",False,12,1,4,0.25,0,1,0.0,3,4,0.75,3,0,3,1,1,1,4,0,5
+2025-11-03_washington_seattle_u,Washington,21,"McGaughy, Brynn",False,12,2,5,0.4,0,0,,0,0,,2,1,3,0,0,1,2,0,4
+2025-11-03_washington_seattle_u,Washington,3,"Coppinger, Devin",False,22,1,5,0.2,0,3,0.0,0,0,,3,0,3,3,1,0,0,0,2
+2025-11-03_washington_seattle_u,Washington,22,"Gillmer, Shayla",False,12,1,2,0.5,0,0,,0,2,0.0,2,1,3,0,0,1,1,1,2
+2025-11-03_washington_seattle_u,Washington,25,"Cain, Nina",False,9,0,0,,0,0,,0,2,0.0,2,4,6,1,0,0,0,1,0
+2025-11-03_washington_seattle_u,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,3,4,0,0,0,0,0,0
+2025-11-10_washington_montana,Montana,10,"Waddington, Avery",True,35,5,12,0.417,4,7,0.571,0,0,,1,3,4,3,4,1,1,1,14
+2025-11-10_washington_montana,Montana,2,"Konig, Mack",True,35,5,13,0.385,1,2,0.5,0,0,,0,1,1,2,3,2,1,0,11
+2025-11-10_washington_montana,Montana,23,"Land, Jocelyn",True,24,2,8,0.25,2,8,0.25,4,4,1.0,0,2,2,4,1,0,0,0,10
+2025-11-10_washington_montana,Montana,1,"Donarski, Macy",True,18,1,2,0.5,1,1,1.0,0,0,,0,3,3,1,1,1,0,0,3
+2025-11-10_washington_montana,Montana,11,"Shubert, Aby",True,15,1,6,0.167,1,5,0.2,0,0,,0,2,2,3,0,1,0,0,3
+2025-11-10_washington_montana,Montana,3,"Wacker, Draya",False,21,2,7,0.286,2,6,0.333,0,0,,0,2,2,2,1,0,2,0,6
+2025-11-10_washington_montana,Montana,5,"Gillette, Kennedy",False,23,1,6,0.167,1,6,0.167,1,2,0.5,0,4,4,2,2,2,0,1,4
+2025-11-10_washington_montana,Montana,20,"Ehrman, Rae",False,5,1,3,0.333,1,3,0.333,0,0,,0,0,0,1,0,0,0,0,3
+2025-11-10_washington_montana,Montana,33,"Lincoln, Adria",False,16,0,4,0.0,0,2,0.0,2,5,0.4,0,0,0,1,0,2,0,0,2
+2025-11-10_washington_montana,Montana,24,"Hutka, Maggie",False,4,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,1,0
+2025-11-10_washington_montana,Montana,00,"Washington, Zoey",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-10_washington_montana,Montana,12,"Larsen, Chloe",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-10_washington_montana,Montana,14,"Dick, Lauren",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-10_washington_montana,Montana,22,"Cossette, Ava",False,1,0,1,0.0,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-10_washington_montana,Montana,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,3,4,0,0,1,0,0,0
+2025-11-10_washington_montana,Washington,00,"Sellers, Sayvia",True,18,8,13,0.615,3,6,0.5,0,2,0.0,0,0,0,2,5,2,0,0,19
+2025-11-10_washington_montana,Washington,55,"Grabovskaia, Yulia",True,17,6,7,0.857,0,0,,2,2,1.0,4,4,8,3,3,0,0,1,14
+2025-11-10_washington_montana,Washington,1,"Stines, Hannah",True,21,3,10,0.3,0,1,0.0,0,0,,3,4,7,2,4,0,0,0,6
+2025-11-10_washington_montana,Washington,5,"Brown, Teagan",True,20,3,4,0.75,0,0,,0,0,,1,4,5,1,1,1,0,0,6
+2025-11-10_washington_montana,Washington,2,"Howell, Avery",True,22,1,6,0.167,1,4,0.25,2,2,1.0,2,6,8,2,1,0,0,0,5
+2025-11-10_washington_montana,Washington,21,"McGaughy, Brynn",False,18,4,7,0.571,0,0,,4,7,0.571,1,4,5,1,1,1,1,1,12
+2025-11-10_washington_montana,Washington,3,"Coppinger, Devin",False,27,4,7,0.571,1,3,0.333,0,0,,3,3,6,0,0,1,0,1,9
+2025-11-10_washington_montana,Washington,35,"Harvey, Sienna",False,22,2,14,0.143,1,4,0.25,4,4,1.0,1,5,6,2,1,2,0,0,9
+2025-11-10_washington_montana,Washington,11,"Briggs, Chloe",False,19,2,4,0.5,1,2,0.5,0,0,,1,4,5,0,1,0,0,0,5
+2025-11-10_washington_montana,Washington,23,"Anderson, Olivia",False,5,1,2,0.5,0,1,0.0,0,2,0.0,0,1,1,0,0,0,2,0,2
+2025-11-10_washington_montana,Washington,22,"Gillmer, Shayla",False,7,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,1,0
+2025-11-10_washington_montana,Washington,25,"Cain, Nina",False,4,0,0,,0,0,,0,0,,0,0,0,1,0,1,0,0,0
+2025-11-10_washington_montana,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,7,8,0,0,0,0,0,0
+2025-11-15_utah_washington,Washington,00,"Sellers, Sayvia",True,38,12,23,0.522,2,8,0.25,4,5,0.8,1,3,4,1,0,1,2,2,30
+2025-11-15_utah_washington,Washington,1,"Stines, Hannah",True,34,7,12,0.583,0,1,0.0,0,0,,1,7,8,0,1,0,1,3,14
+2025-11-15_utah_washington,Washington,5,"Brown, Teagan",True,36,2,5,0.4,1,3,0.333,1,2,0.5,1,2,3,1,3,1,0,3,6
+2025-11-15_utah_washington,Washington,2,"Howell, Avery",True,34,2,6,0.333,0,3,0.0,2,2,1.0,0,6,6,3,4,2,1,3,6
+2025-11-15_utah_washington,Washington,55,"Grabovskaia, Yulia",True,11,2,8,0.25,0,0,,0,0,,3,4,7,4,0,3,0,0,4
+2025-11-15_utah_washington,Washington,21,"McGaughy, Brynn",False,13,3,9,0.333,0,1,0.0,0,0,,2,0,2,2,0,1,1,0,6
+2025-11-15_utah_washington,Washington,3,"Coppinger, Devin",False,16,2,3,0.667,0,0,,0,0,,1,2,3,0,0,0,0,2,4
+2025-11-15_utah_washington,Washington,35,"Harvey, Sienna",False,6,1,1,1.0,0,0,,0,0,,0,0,0,2,0,3,0,0,2
+2025-11-15_utah_washington,Washington,11,"Briggs, Chloe",False,12,0,1,0.0,0,1,0.0,0,0,,1,0,1,2,0,0,0,0,0
+2025-11-15_utah_washington,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,2,4,0,0,0,0,0,0
+2025-11-15_utah_washington,Utah,23,"Wilke, Maty",True,31,5,13,0.385,3,8,0.375,0,0,,0,1,1,3,3,3,0,0,13
+2025-11-15_utah_washington,Utah,00,"White, Lani",True,36,1,9,0.111,1,4,0.25,9,10,0.9,0,12,12,2,1,3,0,0,12
+2025-11-15_utah_washington,Utah,20,"Ross, Reese",True,32,5,8,0.625,1,2,0.5,1,2,0.5,1,4,5,3,5,4,0,1,12
+2025-11-15_utah_washington,Utah,12,"Evans, Chyra",True,24,5,7,0.714,0,0,,1,2,0.5,2,1,3,1,0,0,1,0,11
+2025-11-15_utah_washington,Utah,3,"Walker, Brooke",True,19,2,2,1.0,0,0,,0,0,,1,2,3,1,0,3,0,1,4
+2025-11-15_utah_washington,Utah,2,"Sneed, la",False,23,2,8,0.25,0,1,0.0,0,0,,0,0,0,3,2,0,0,2,4
+2025-11-15_utah_washington,Utah,6,"Otto, Evelina",False,12,1,2,0.5,0,0,,1,1,1.0,0,3,3,0,0,2,0,0,3
+2025-11-15_utah_washington,Utah,1,"Hjelmstad, Avery",False,17,1,2,0.5,0,1,0.0,0,0,,0,0,0,0,0,1,0,0,2
+2025-11-15_utah_washington,Utah,10,"Foster, Grace",False,5,0,2,0.0,0,1,0.0,0,0,,0,1,1,0,0,0,0,0,0
+2025-11-15_utah_washington,Utah,44,"Crispe, Sam",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-15_utah_washington,Utah,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,2,3,0,0,0,0,0,0
+2025-11-19_washington_fresno_st,Fresno St.,3,"Powell, Danae",True,33,4,10,0.4,2,3,0.667,0,0,,1,4,5,0,0,3,0,0,10
+2025-11-19_washington_fresno_st,Fresno St.,11,"Long, Emilia",True,34,2,9,0.222,0,1,0.0,0,0,,1,3,4,2,2,6,1,4,4
+2025-11-19_washington_fresno_st,Fresno St.,4,"Gamble, Jaisa",True,28,2,8,0.25,0,0,,0,0,,0,2,2,2,0,2,1,3,4
+2025-11-19_washington_fresno_st,Fresno St.,14,"Rean, Ashlyn",True,23,2,8,0.25,0,0,,0,0,,0,2,2,0,0,6,1,1,4
+2025-11-19_washington_fresno_st,Fresno St.,25,"Koehne, Hedda",True,21,1,2,0.5,0,0,,0,0,,1,1,2,3,2,1,0,0,2
+2025-11-19_washington_fresno_st,Fresno St.,2,"Sissoko, Diarrah",False,14,3,7,0.429,0,2,0.0,3,5,0.6,0,1,1,1,0,2,0,0,9
+2025-11-19_washington_fresno_st,Fresno St.,20,"Clarke, Indiya",False,11,2,3,0.667,0,0,,1,3,0.333,1,0,1,0,0,0,0,1,5
+2025-11-19_washington_fresno_st,Fresno St.,32,"Diawara, Djessira",False,15,2,3,0.667,0,0,,0,0,,2,3,5,4,1,2,0,1,4
+2025-11-19_washington_fresno_st,Fresno St.,12,"Watkins, Avery",False,10,0,1,0.0,0,0,,1,2,0.5,3,0,3,5,0,3,0,0,1
+2025-11-19_washington_fresno_st,Fresno St.,21,"Marr, Ava",False,11,0,1,0.0,0,1,0.0,0,0,,0,1,1,1,0,0,0,0,0
+2025-11-19_washington_fresno_st,Fresno St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,5,8,0,0,3,0,0,0
+2025-11-19_washington_fresno_st,Washington,00,"Sellers, Sayvia",True,29,5,12,0.417,2,5,0.4,2,2,1.0,0,4,4,2,8,3,3,3,14
+2025-11-19_washington_fresno_st,Washington,2,"Howell, Avery",True,26,5,12,0.417,1,4,0.25,3,4,0.75,1,5,6,2,1,0,0,2,14
+2025-11-19_washington_fresno_st,Washington,1,"Stines, Hannah",True,23,1,3,0.333,0,1,0.0,2,4,0.5,1,2,3,1,1,2,0,0,4
+2025-11-19_washington_fresno_st,Washington,55,"Grabovskaia, Yulia",True,14,2,4,0.5,0,0,,0,0,,0,1,1,2,0,1,0,3,4
+2025-11-19_washington_fresno_st,Washington,5,"Brown, Teagan",True,25,1,3,0.333,0,0,,0,0,,1,2,3,1,0,2,0,2,2
+2025-11-19_washington_fresno_st,Washington,35,"Harvey, Sienna",False,18,3,8,0.375,1,1,1.0,2,2,1.0,0,1,1,3,0,3,0,1,9
+2025-11-19_washington_fresno_st,Washington,3,"Coppinger, Devin",False,23,3,7,0.429,1,4,0.25,1,1,1.0,2,2,4,2,0,2,0,1,8
+2025-11-19_washington_fresno_st,Washington,11,"Briggs, Chloe",False,12,2,3,0.667,1,2,0.5,1,3,0.333,0,1,1,0,1,1,0,0,6
+2025-11-19_washington_fresno_st,Washington,21,"McGaughy, Brynn",False,14,0,2,0.0,0,0,,0,0,,2,1,3,2,1,1,1,0,0
+2025-11-19_washington_fresno_st,Washington,22,"Gillmer, Shayla",False,6,0,1,0.0,0,0,,0,0,,0,1,1,0,0,0,1,1,0
+2025-11-19_washington_fresno_st,Washington,23,"Anderson, Olivia",False,5,0,1,0.0,0,0,,0,0,,0,1,1,0,0,0,1,0,0
+2025-11-19_washington_fresno_st,Washington,25,"Cain, Nina",False,5,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2025-11-19_washington_fresno_st,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,1,3,0,0,4,0,0,0
+2025-11-23_washington_vermont,Vermont,12,"Hanson, Keira",True,35,5,14,0.357,2,4,0.5,0,0,,1,1,2,1,1,2,0,0,12
+2025-11-23_washington_vermont,Vermont,25,"Priede, Nikola",True,35,4,10,0.4,0,0,,0,0,,3,5,8,0,2,1,3,0,8
+2025-11-23_washington_vermont,Vermont,14,"Gilwee, Catherine",True,32,3,5,0.6,0,0,,0,0,,0,1,1,1,0,4,0,0,6
+2025-11-23_washington_vermont,Vermont,00,"Lenz, Malia",True,13,1,2,0.5,0,1,0.0,2,2,1.0,1,1,2,3,0,1,0,0,4
+2025-11-23_washington_vermont,Vermont,24,"Weltz, Jadyn",True,23,1,10,0.1,0,2,0.0,1,2,0.5,0,3,3,4,1,3,0,2,3
+2025-11-23_washington_vermont,Vermont,33,"Creal, Savanna",False,12,2,3,0.667,0,0,,2,3,0.667,1,1,2,4,0,1,0,0,6
+2025-11-23_washington_vermont,Vermont,3,"Haan, Emma",False,17,0,5,0.0,0,3,0.0,0,0,,0,4,4,1,0,1,0,0,0
+2025-11-23_washington_vermont,Vermont,1,"Hosier, Jacklynn",False,13,0,2,0.0,0,1,0.0,0,0,,0,2,2,2,1,1,0,1,0
+2025-11-23_washington_vermont,Vermont,10,"Hanson, Lia",False,11,0,3,0.0,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-23_washington_vermont,Vermont,15,"Risdon, Piper",False,7,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2025-11-23_washington_vermont,Vermont,11,"Batista, Annemarie",False,2,0,1,0.0,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-23_washington_vermont,Vermont,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,1,3,0,0,0,0,0,0
+2025-11-23_washington_vermont,Washington,00,"Sellers, Sayvia",True,32,8,15,0.533,1,4,0.25,5,5,1.0,0,3,3,1,4,2,0,1,22
+2025-11-23_washington_vermont,Washington,1,"Stines, Hannah",True,31,5,8,0.625,1,1,1.0,0,1,0.0,2,8,10,1,3,1,1,2,11
+2025-11-23_washington_vermont,Washington,2,"Howell, Avery",True,31,2,9,0.222,0,5,0.0,0,0,,2,10,12,1,3,0,0,1,4
+2025-11-23_washington_vermont,Washington,5,"Brown, Teagan",True,27,1,3,0.333,0,2,0.0,0,0,,1,2,3,2,0,0,0,1,2
+2025-11-23_washington_vermont,Washington,55,"Grabovskaia, Yulia",True,5,0,2,0.0,0,0,,2,2,1.0,2,1,3,1,0,0,0,0,2
+2025-11-23_washington_vermont,Washington,21,"McGaughy, Brynn",False,24,9,15,0.6,0,0,,2,2,1.0,2,0,2,1,0,2,1,0,20
+2025-11-23_washington_vermont,Washington,22,"Gillmer, Shayla",False,5,2,3,0.667,0,0,,0,0,,0,2,2,1,0,1,1,0,4
+2025-11-23_washington_vermont,Washington,23,"Anderson, Olivia",False,2,2,2,1.0,0,0,,0,0,,1,1,2,1,0,0,1,0,4
+2025-11-23_washington_vermont,Washington,3,"Coppinger, Devin",False,20,1,6,0.167,0,3,0.0,0,0,,3,0,3,1,0,0,0,2,2
+2025-11-23_washington_vermont,Washington,11,"Briggs, Chloe",False,10,0,2,0.0,0,1,0.0,0,0,,0,2,2,1,2,0,0,0,0
+2025-11-23_washington_vermont,Washington,35,"Harvey, Sienna",False,9,0,0,,0,0,,0,0,,0,1,1,1,1,3,0,0,0
+2025-11-23_washington_vermont,Washington,25,"Cain, Nina",False,4,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-23_washington_vermont,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,2,2,0,0,0,0,0,0
+2025-11-25_washington_southern_u,Southern U.,24,"Porter, Demya",True,25,6,12,0.5,0,0,,4,4,1.0,8,1,9,1,0,1,0,2,16
+2025-11-25_washington_southern_u,Southern U.,2,"Reed, Jaylia",True,23,3,9,0.333,1,6,0.167,1,2,0.5,0,2,2,3,0,1,1,0,8
+2025-11-25_washington_southern_u,Southern U.,8,"Cunningham, Mykayla",True,23,2,5,0.4,0,1,0.0,0,0,,0,0,0,1,1,2,0,2,4
+2025-11-25_washington_southern_u,Southern U.,5,"Edwards, D'shantae",True,17,0,4,0.0,0,1,0.0,2,2,1.0,2,0,2,4,0,1,0,1,2
+2025-11-25_washington_southern_u,Southern U.,20,"Hurston, Zaria",True,23,0,5,0.0,0,1,0.0,0,0,,0,1,1,0,0,1,1,3,0
+2025-11-25_washington_southern_u,Southern U.,4,"Tate, Jocelyn",False,18,3,8,0.375,0,0,,0,0,,0,1,1,5,0,3,0,1,6
+2025-11-25_washington_southern_u,Southern U.,14,"Dixon, Jestiny",False,20,0,4,0.0,0,1,0.0,2,2,1.0,1,2,3,2,1,0,0,0,2
+2025-11-25_washington_southern_u,Southern U.,30,"Delancy, Olivia",False,18,1,5,0.2,0,1,0.0,0,0,,0,2,2,0,0,1,0,0,2
+2025-11-25_washington_southern_u,Southern U.,10,"Lagway, Demonnie",False,14,0,3,0.0,0,1,0.0,0,2,0.0,0,0,0,2,0,1,0,0,0
+2025-11-25_washington_southern_u,Southern U.,13,"Hall, Anaja",False,9,0,1,0.0,0,0,,0,0,,0,0,0,4,0,2,0,0,0
+2025-11-25_washington_southern_u,Southern U.,23,"Wilson, Kiana",False,6,0,1,0.0,0,0,,0,0,,0,1,1,1,0,2,0,0,0
+2025-11-25_washington_southern_u,Southern U.,00,"Wilkins, Aubri",False,4,0,1,0.0,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-11-25_washington_southern_u,Southern U.,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,2,5,0,0,3,0,0,0
+2025-11-25_washington_southern_u,Washington,2,"Howell, Avery",True,26,6,10,0.6,3,7,0.429,3,3,1.0,1,4,5,3,1,3,0,2,18
+2025-11-25_washington_southern_u,Washington,5,"Brown, Teagan",True,21,2,2,1.0,0,0,,0,0,,0,0,0,1,0,1,1,2,4
+2025-11-25_washington_southern_u,Washington,1,"Stines, Hannah",True,20,2,5,0.4,0,2,0.0,0,0,,0,2,2,1,3,4,2,1,4
+2025-11-25_washington_southern_u,Washington,00,"Sellers, Sayvia",True,19,0,2,0.0,0,2,0.0,1,2,0.5,0,0,0,2,1,3,1,1,1
+2025-11-25_washington_southern_u,Washington,55,"Grabovskaia, Yulia",True,10,0,0,,0,0,,0,0,,0,6,6,0,1,1,0,0,0
+2025-11-25_washington_southern_u,Washington,21,"McGaughy, Brynn",False,16,4,8,0.5,1,3,0.333,5,5,1.0,3,1,4,1,0,0,3,0,14
+2025-11-25_washington_southern_u,Washington,35,"Harvey, Sienna",False,24,2,5,0.4,0,1,0.0,3,4,0.75,2,4,6,3,0,7,0,1,7
+2025-11-25_washington_southern_u,Washington,3,"Coppinger, Devin",False,26,2,6,0.333,1,3,0.333,1,2,0.5,3,1,4,1,2,0,0,1,6
+2025-11-25_washington_southern_u,Washington,11,"Briggs, Chloe",False,17,1,4,0.25,1,2,0.5,2,4,0.5,0,1,1,0,3,0,0,0,5
+2025-11-25_washington_southern_u,Washington,23,"Anderson, Olivia",False,9,2,4,0.5,1,2,0.5,0,0,,0,1,1,3,0,2,2,1,5
+2025-11-25_washington_southern_u,Washington,25,"Cain, Nina",False,4,1,1,1.0,0,0,,0,0,,1,0,1,1,0,0,0,0,2
+2025-11-25_washington_southern_u,Washington,22,"Gillmer, Shayla",False,8,0,1,0.0,0,0,,0,0,,1,1,2,2,0,1,0,0,0
+2025-11-25_washington_southern_u,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,5,7,0,0,0,0,0,0
+2025-11-28_washington_uc_san_diego,UC San Diego,12,"Smith, Rosa",True,40,8,14,0.571,2,6,0.333,1,1,1.0,0,1,1,2,3,4,2,1,19
+2025-11-28_washington_uc_san_diego,UC San Diego,11,"Condron, Erin",True,40,6,12,0.5,1,2,0.5,2,9,0.222,3,12,15,2,1,4,2,3,15
+2025-11-28_washington_uc_san_diego,UC San Diego,15,"Ma, Sabrina",True,38,3,12,0.25,3,11,0.273,0,0,,0,1,1,5,0,4,0,2,9
+2025-11-28_washington_uc_san_diego,UC San Diego,4,"Rose, Makayla",True,40,2,6,0.333,1,3,0.333,0,2,0.0,0,5,5,2,2,2,0,1,5
+2025-11-28_washington_uc_san_diego,UC San Diego,13,"Feiman, Lev",True,7,0,2,0.0,0,0,,0,0,,0,1,1,0,0,1,0,0,0
+2025-11-28_washington_uc_san_diego,UC San Diego,10,"Maxie, Dymonique",False,33,1,6,0.167,0,1,0.0,0,0,,1,1,2,1,2,3,0,2,2
+2025-11-28_washington_uc_san_diego,UC San Diego,25,"Mahan, Junae",False,2,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2025-11-28_washington_uc_san_diego,UC San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,1,2,0,0,1,0,0,0
+2025-11-28_washington_uc_san_diego,Washington,00,"Sellers, Sayvia",True,38,5,13,0.385,3,7,0.429,4,4,1.0,0,5,5,3,4,6,1,2,17
+2025-11-28_washington_uc_san_diego,Washington,2,"Howell, Avery",True,39,4,9,0.444,4,8,0.5,3,3,1.0,2,6,8,2,1,2,1,0,15
+2025-11-28_washington_uc_san_diego,Washington,5,"Brown, Teagan",True,19,1,3,0.333,0,0,,1,1,1.0,2,3,5,0,1,2,0,4,3
+2025-11-28_washington_uc_san_diego,Washington,55,"Grabovskaia, Yulia",True,13,0,2,0.0,0,0,,0,2,0.0,2,2,4,0,3,2,0,1,0
+2025-11-28_washington_uc_san_diego,Washington,1,"Stines, Hannah",True,4,0,1,0.0,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2025-11-28_washington_uc_san_diego,Washington,21,"McGaughy, Brynn",False,24,4,14,0.286,0,1,0.0,2,3,0.667,5,3,8,2,2,1,1,1,10
+2025-11-28_washington_uc_san_diego,Washington,35,"Harvey, Sienna",False,20,4,8,0.5,0,0,,1,2,0.5,1,4,5,2,5,3,0,0,9
+2025-11-28_washington_uc_san_diego,Washington,24,"Ladine, Elle",False,14,4,8,0.5,1,2,0.5,0,0,,2,1,3,3,0,1,0,1,9
+2025-11-28_washington_uc_san_diego,Washington,3,"Coppinger, Devin",False,19,2,3,0.667,0,0,,0,0,,2,2,4,0,0,4,0,0,4
+2025-11-28_washington_uc_san_diego,Washington,11,"Briggs, Chloe",False,10,0,0,,0,0,,0,0,,0,1,1,0,1,0,0,1,0
+2025-11-28_washington_uc_san_diego,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,5,7,0,0,1,0,0,0
+2025-12-01_washington_san_jose_st,San Jose St.,32,"Pato, Gabriela",True,19,3,7,0.429,1,2,0.5,4,4,1.0,3,1,4,1,0,0,0,1,11
+2025-12-01_washington_san_jose_st,San Jose St.,15,"Anderson, Maya",True,29,2,10,0.2,2,5,0.4,4,4,1.0,2,1,3,0,2,1,0,0,10
+2025-12-01_washington_san_jose_st,San Jose St.,1,"Cummins, Allie",True,27,3,7,0.429,2,5,0.4,0,0,,0,1,1,2,2,3,0,1,8
+2025-12-01_washington_san_jose_st,San Jose St.,4,"Waugh, Rylei",True,33,3,9,0.333,1,2,0.5,0,0,,1,2,3,1,4,2,0,1,7
+2025-12-01_washington_san_jose_st,San Jose St.,11,"Fuster, Carla",True,23,0,7,0.0,0,4,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-01_washington_san_jose_st,San Jose St.,8,"Brown, Amira",False,19,4,10,0.4,0,1,0.0,1,1,1.0,3,2,5,1,0,0,0,0,9
+2025-12-01_washington_san_jose_st,San Jose St.,2,"Simons, McKenna",False,10,2,3,0.667,1,1,1.0,0,0,,0,1,1,1,0,0,1,0,5
+2025-12-01_washington_san_jose_st,San Jose St.,5,"Mehmedovic, Harisa",False,14,1,3,0.333,0,0,,0,0,,0,1,1,4,1,0,1,1,2
+2025-12-01_washington_san_jose_st,San Jose St.,3,"Alexander, Mecca",False,3,1,1,1.0,0,0,,0,0,,0,0,0,0,0,1,0,0,2
+2025-12-01_washington_san_jose_st,San Jose St.,10,"Sitterud, Amelie",False,13,0,4,0.0,0,4,0.0,0,0,,0,3,3,3,0,1,1,2,0
+2025-12-01_washington_san_jose_st,San Jose St.,22,"Dillard, Kaliyah",False,6,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-01_washington_san_jose_st,San Jose St.,00,"Anderson, Katarina",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,1,1,0
+2025-12-01_washington_san_jose_st,San Jose St.,23,"Sgro, Stella",False,2,0,1,0.0,0,1,0.0,0,0,,0,1,1,0,0,0,0,0,0
+2025-12-01_washington_san_jose_st,San Jose St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,2,6,0,0,2,0,0,0
+2025-12-01_washington_san_jose_st,Washington,00,"Sellers, Sayvia",True,30,9,16,0.562,5,10,0.5,6,6,1.0,1,5,6,1,3,4,1,1,29
+2025-12-01_washington_san_jose_st,Washington,2,"Howell, Avery",True,34,5,10,0.5,4,8,0.5,3,3,1.0,1,5,6,2,2,0,2,2,17
+2025-12-01_washington_san_jose_st,Washington,24,"Ladine, Elle",True,18,4,8,0.5,0,2,0.0,0,0,,1,3,4,0,0,0,1,0,8
+2025-12-01_washington_san_jose_st,Washington,55,"Grabovskaia, Yulia",True,12,2,5,0.4,0,0,,1,2,0.5,4,2,6,1,1,0,0,1,5
+2025-12-01_washington_san_jose_st,Washington,5,"Brown, Teagan",True,26,0,3,0.0,0,0,,0,0,,2,0,2,0,0,0,0,0,0
+2025-12-01_washington_san_jose_st,Washington,21,"McGaughy, Brynn",False,19,6,11,0.545,0,1,0.0,3,4,0.75,5,3,8,3,2,2,4,0,15
+2025-12-01_washington_san_jose_st,Washington,3,"Coppinger, Devin",False,22,1,2,0.5,0,0,,2,4,0.5,3,3,6,1,3,0,0,0,4
+2025-12-01_washington_san_jose_st,Washington,35,"Harvey, Sienna",False,24,1,4,0.25,0,0,,0,0,,2,4,6,2,2,4,0,0,2
+2025-12-01_washington_san_jose_st,Washington,1,"Stines, Hannah",False,4,0,2,0.0,0,0,,0,0,,1,0,1,1,0,1,0,0,0
+2025-12-01_washington_san_jose_st,Washington,22,"Gillmer, Shayla",False,4,0,1,0.0,0,1,0.0,0,0,,0,1,1,0,0,0,0,0,0
+2025-12-01_washington_san_jose_st,Washington,11,"Briggs, Chloe",False,3,0,0,,0,0,,0,0,,0,1,1,1,0,1,0,0,0
+2025-12-01_washington_san_jose_st,Washington,23,"Anderson, Olivia",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2025-12-01_washington_san_jose_st,Washington,25,"Cain, Nina",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-01_washington_san_jose_st,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,0,2,0,0,0,0,0,0
+2025-12-07_southern_california_washington,Washington,00,"Sellers, Sayvia",True,35,7,23,0.304,3,7,0.429,3,3,1.0,1,1,2,5,2,4,0,1,20
+2025-12-07_southern_california_washington,Washington,2,"Howell, Avery",True,38,5,14,0.357,3,9,0.333,3,4,0.75,2,11,13,4,2,2,0,2,16
+2025-12-07_southern_california_washington,Washington,1,"Stines, Hannah",True,34,2,6,0.333,0,1,0.0,0,0,,2,1,3,2,4,0,1,0,4
+2025-12-07_southern_california_washington,Washington,55,"Grabovskaia, Yulia",True,15,2,3,0.667,0,0,,0,0,,0,2,2,2,0,0,1,1,4
+2025-12-07_southern_california_washington,Washington,24,"Ladine, Elle",True,21,0,10,0.0,0,5,0.0,0,0,,0,2,2,3,1,0,1,0,0
+2025-12-07_southern_california_washington,Washington,5,"Brown, Teagan",False,22,1,2,0.5,0,0,,2,2,1.0,2,1,3,0,0,2,0,3,4
+2025-12-07_southern_california_washington,Washington,21,"McGaughy, Brynn",False,15,1,6,0.167,0,3,0.0,0,2,0.0,4,4,8,4,0,1,2,0,2
+2025-12-07_southern_california_washington,Washington,3,"Coppinger, Devin",False,20,0,3,0.0,0,0,,0,1,0.0,1,1,2,1,1,1,0,2,0
+2025-12-07_southern_california_washington,Washington,11,"Briggs, Chloe",False,0,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-07_southern_california_washington,Washington,35,"Harvey, Sienna",False,0,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-07_southern_california_washington,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,2,3,0,0,0,0,0,0
+2025-12-07_southern_california_washington,Southern California,9,"Davidson, Jazzy",True,38,10,21,0.476,2,7,0.286,0,2,0.0,0,12,12,2,4,4,2,0,22
+2025-12-07_southern_california_washington,Southern California,11,"Smith, Kennedy",True,36,4,10,0.4,0,3,0.0,5,9,0.556,0,5,5,4,4,1,2,2,13
+2025-12-07_southern_california_washington,Southern California,25,"Dunn, Kara",True,36,2,10,0.2,0,3,0.0,1,2,0.5,4,3,7,3,2,0,0,0,5
+2025-12-07_southern_california_washington,Southern California,10,"Samuels, Malia",True,20,0,5,0.0,0,2,0.0,0,0,,2,1,3,1,1,2,1,1,0
+2025-12-07_southern_california_washington,Southern California,00,"Iwuchukwu, Vivian",True,12,0,1,0.0,0,0,,0,0,,1,3,4,1,0,0,0,0,0
+2025-12-07_southern_california_washington,Southern California,8,"Raulusaityte, Gerda",False,25,2,2,1.0,0,0,,4,6,0.667,4,4,8,2,0,2,0,0,8
+2025-12-07_southern_california_washington,Southern California,3,"Jones, Londynn",False,23,3,6,0.5,0,2,0.0,0,0,,0,1,1,2,3,3,0,1,6
+2025-12-07_southern_california_washington,Southern California,6,"Williams, Laura",False,2,1,4,0.25,0,0,,1,2,0.5,2,1,3,0,0,0,1,0,3
+2025-12-07_southern_california_washington,Southern California,13,"Mendes, Dayana",False,8,1,1,1.0,0,0,,0,0,,0,1,1,1,0,1,0,0,2
+2025-12-07_southern_california_washington,Southern California,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,4,6,0,0,0,0,0,0
+2025-12-13_washington_green_bay,Green Bay,30,"Guyer, Jenna",True,32,7,11,0.636,3,6,0.5,2,2,1.0,1,7,8,3,0,1,0,1,19
+2025-12-13_washington_green_bay,Green Bay,3,"Skorupski, Maddy",True,36,5,11,0.455,0,0,,4,6,0.667,2,6,8,1,4,3,0,2,14
+2025-12-13_washington_green_bay,Green Bay,20,"Duffney, Carley",True,29,5,10,0.5,1,2,0.5,2,4,0.5,1,3,4,2,3,1,0,0,13
+2025-12-13_washington_green_bay,Green Bay,55,"Schultz, Meghan",True,22,5,10,0.5,0,0,,3,3,1.0,0,1,1,2,1,2,0,0,13
+2025-12-13_washington_green_bay,Green Bay,1,"Peppler, Kamy",True,36,3,8,0.375,1,6,0.167,0,0,,0,4,4,2,9,2,0,3,7
+2025-12-13_washington_green_bay,Green Bay,2,"Hansford, Lily",False,16,2,3,0.667,2,3,0.667,0,0,,0,0,0,0,0,1,0,0,6
+2025-12-13_washington_green_bay,Green Bay,22,"Grzesk, Gracie",False,21,1,4,0.25,0,0,,0,0,,0,1,1,0,0,1,0,0,2
+2025-12-13_washington_green_bay,Green Bay,44,"Ouimette, Kristina",False,6,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-13_washington_green_bay,Green Bay,21,"Peppler, Kallie",False,2,0,1,0.0,0,0,,0,0,,0,0,0,1,0,1,0,0,0
+2025-12-13_washington_green_bay,Green Bay,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,2,6,0,0,1,0,0,0
+2025-12-13_washington_green_bay,Washington,00,"Sellers, Sayvia",True,37,11,19,0.579,7,12,0.583,1,2,0.5,1,2,3,3,2,7,0,1,30
+2025-12-13_washington_green_bay,Washington,2,"Howell, Avery",True,34,4,9,0.444,2,5,0.4,1,3,0.333,3,9,12,2,0,1,2,2,11
+2025-12-13_washington_green_bay,Washington,24,"Ladine, Elle",True,27,3,8,0.375,3,5,0.6,2,2,1.0,0,4,4,3,4,1,1,1,11
+2025-12-13_washington_green_bay,Washington,55,"Grabovskaia, Yulia",True,16,4,5,0.8,0,0,,2,5,0.4,3,3,6,3,6,0,0,0,10
+2025-12-13_washington_green_bay,Washington,1,"Stines, Hannah",True,28,3,8,0.375,1,4,0.25,0,0,,1,2,3,2,3,2,0,2,7
+2025-12-13_washington_green_bay,Washington,3,"Coppinger, Devin",False,19,2,3,0.667,1,2,0.5,0,0,,0,0,0,1,1,1,2,0,5
+2025-12-13_washington_green_bay,Washington,5,"Brown, Teagan",False,22,1,1,1.0,0,0,,1,2,0.5,1,1,2,1,1,1,1,2,3
+2025-12-13_washington_green_bay,Washington,21,"McGaughy, Brynn",False,16,1,4,0.25,0,1,0.0,0,0,,0,1,1,1,1,0,0,0,2
+2025-12-13_washington_green_bay,Washington,11,"Briggs, Chloe",False,1,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2025-12-13_washington_green_bay,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,1,1,0,0,1,0,0,0
+2025-12-19_stanford_washington,Washington,2,"Howell, Avery",True,40,5,10,0.5,3,8,0.375,0,0,,2,6,8,3,2,2,0,0,13
+2025-12-19_stanford_washington,Washington,00,"Sellers, Sayvia",True,25,5,11,0.455,2,5,0.4,1,1,1.0,0,1,1,4,3,5,0,1,13
+2025-12-19_stanford_washington,Washington,1,"Stines, Hannah",True,36,5,14,0.357,2,4,0.5,0,0,,1,7,8,1,2,1,0,1,12
+2025-12-19_stanford_washington,Washington,24,"Ladine, Elle",True,29,5,6,0.833,1,2,0.5,0,0,,1,5,6,2,1,2,0,0,11
+2025-12-19_stanford_washington,Washington,55,"Grabovskaia, Yulia",True,13,0,1,0.0,0,0,,2,2,1.0,1,0,1,2,1,2,0,0,2
+2025-12-19_stanford_washington,Washington,21,"McGaughy, Brynn",False,25,5,13,0.385,0,1,0.0,1,2,0.5,6,3,9,1,1,2,0,0,11
+2025-12-19_stanford_washington,Washington,5,"Brown, Teagan",False,17,0,2,0.0,0,1,0.0,0,0,,0,0,0,0,0,1,0,0,0
+2025-12-19_stanford_washington,Washington,3,"Coppinger, Devin",False,8,0,0,,0,0,,0,0,,1,0,1,1,0,0,0,0,0
+2025-12-19_stanford_washington,Washington,35,"Harvey, Sienna",False,7,0,1,0.0,0,1,0.0,0,0,,0,0,0,2,0,0,0,0,0
+2025-12-19_stanford_washington,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,1,2,0,0,1,0,0,0
+2025-12-19_stanford_washington,Stanford,12,"Somfai, Lara",True,29,6,15,0.4,0,3,0.0,2,2,1.0,2,4,6,3,1,5,0,2,14
+2025-12-19_stanford_washington,Stanford,2,"Swain, Hailee",True,33,5,10,0.5,0,2,0.0,3,4,0.75,0,1,1,0,0,0,0,2,13
+2025-12-19_stanford_washington,Stanford,40,"Ogden, Courtney",True,37,5,10,0.5,0,2,0.0,2,3,0.667,3,4,7,0,1,0,0,2,12
+2025-12-19_stanford_washington,Stanford,10,"Lepolo, Talana",True,30,3,5,0.6,1,2,0.5,2,2,1.0,1,1,2,1,2,0,0,1,9
+2025-12-19_stanford_washington,Stanford,22,"Stevenson, Mary Ashley",True,20,1,3,0.333,0,1,0.0,0,0,,1,2,3,0,2,3,1,0,2
+2025-12-19_stanford_washington,Stanford,13,"Clardy, Chloe",False,28,2,7,0.286,2,3,0.667,5,7,0.714,1,1,2,0,2,0,0,2,11
+2025-12-19_stanford_washington,Stanford,6,"Ijiwoye, Shay",False,13,2,3,0.667,0,0,,0,0,,0,2,2,1,1,1,0,1,4
+2025-12-19_stanford_washington,Stanford,4,"Eschmeyer, Alexandra",False,10,1,2,0.5,0,0,,0,0,,0,3,3,1,0,1,1,0,2
+2025-12-19_stanford_washington,Stanford,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,3,3,0,0,0,0,0,0
+2025-12-21_pacific_washington,Washington,00,"Sellers, Sayvia",True,24,5,7,0.714,4,6,0.667,0,0,,0,1,1,2,3,1,2,2,14
+2025-12-21_pacific_washington,Washington,2,"Howell, Avery",True,17,3,5,0.6,3,4,0.75,2,2,1.0,1,1,2,2,1,0,0,1,11
+2025-12-21_pacific_washington,Washington,24,"Ladine, Elle",True,21,3,11,0.273,1,5,0.2,0,0,,0,8,8,2,4,2,0,0,7
+2025-12-21_pacific_washington,Washington,55,"Grabovskaia, Yulia",True,14,3,3,1.0,0,0,,0,0,,2,0,2,0,2,2,0,1,6
+2025-12-21_pacific_washington,Washington,1,"Stines, Hannah",True,20,2,5,0.4,0,1,0.0,0,0,,0,2,2,0,1,0,0,2,4
+2025-12-21_pacific_washington,Washington,35,"Harvey, Sienna",False,17,9,11,0.818,2,4,0.5,2,3,0.667,0,1,1,3,1,0,0,0,22
+2025-12-21_pacific_washington,Washington,3,"Coppinger, Devin",False,18,3,5,0.6,2,3,0.667,0,0,,1,1,2,1,1,1,0,1,8
+2025-12-21_pacific_washington,Washington,21,"McGaughy, Brynn",False,13,3,4,0.75,0,0,,0,0,,2,2,4,1,2,1,1,1,6
+2025-12-21_pacific_washington,Washington,11,"Briggs, Chloe",False,17,1,3,0.333,0,1,0.0,2,2,1.0,2,2,4,1,3,0,0,1,4
+2025-12-21_pacific_washington,Washington,25,"Cain, Nina",False,10,1,2,0.5,0,0,,2,2,1.0,1,0,1,1,0,2,0,1,4
+2025-12-21_pacific_washington,Washington,22,"Gillmer, Shayla",False,13,0,1,0.0,0,0,,2,2,1.0,2,1,3,1,1,0,0,1,2
+2025-12-21_pacific_washington,Washington,5,"Brown, Teagan",False,10,1,5,0.2,0,1,0.0,0,2,0.0,3,2,5,0,1,0,0,0,2
+2025-12-21_pacific_washington,Washington,23,"Anderson, Olivia",False,6,0,2,0.0,0,0,,0,0,,1,1,2,1,0,0,0,1,0
+2025-12-21_pacific_washington,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,0,1,0,0,2,0,0,0
+2025-12-21_pacific_washington,Pacific,25,"Bartholomew, Winner",True,23,5,9,0.556,0,0,,1,2,0.5,2,2,4,2,1,1,0,0,11
+2025-12-21_pacific_washington,Pacific,21,"Nestorov, Daria",True,32,4,10,0.4,1,4,0.25,0,0,,0,1,1,1,5,3,0,1,9
+2025-12-21_pacific_washington,Pacific,10,"Ward, Sydney",True,23,3,7,0.429,0,2,0.0,1,1,1.0,0,1,1,0,0,3,2,0,7
+2025-12-21_pacific_washington,Pacific,15,"Lowery, Nyah",True,20,2,4,0.5,0,1,0.0,0,0,,1,3,4,3,1,4,0,0,4
+2025-12-21_pacific_washington,Pacific,5,"Szabo, Stella",True,13,0,1,0.0,0,1,0.0,0,0,,0,0,0,4,0,1,0,0,0
+2025-12-21_pacific_washington,Pacific,8,"Mindermann, Sophia",False,26,3,7,0.429,1,5,0.2,0,0,,0,0,0,0,0,2,0,1,7
+2025-12-21_pacific_washington,Pacific,9,"Radocaj, Marina",False,24,3,5,0.6,0,0,,0,1,0.0,2,1,3,1,1,3,0,1,6
+2025-12-21_pacific_washington,Pacific,11,"Anderegg, Luisa",False,18,2,7,0.286,0,3,0.0,0,0,,3,0,3,0,1,0,0,0,4
+2025-12-21_pacific_washington,Pacific,7,"Yergensen, Liv",False,20,1,4,0.25,0,1,0.0,0,0,,1,2,3,0,0,2,0,0,2
+2025-12-21_pacific_washington,Pacific,3,"Burg, Hannah",False,1,0,1,0.0,0,0,,0,0,,0,0,0,0,1,0,0,0,0
+2025-12-21_pacific_washington,Pacific,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,4,7,0,0,0,0,0,0
+2025-12-29_washington_northwestern,Northwestern,22,"Sullivan, Grace",True,37,11,18,0.611,0,0,,8,10,0.8,2,6,8,4,1,2,2,1,30
+2025-12-29_washington_northwestern,Northwestern,23,"Thomas, Tayla",True,19,4,8,0.5,0,0,,3,5,0.6,1,2,3,2,2,3,0,0,11
+2025-12-29_washington_northwestern,Northwestern,12,"Harter, Casey",True,35,4,10,0.4,2,4,0.5,0,0,,1,2,3,0,2,1,1,0,10
+2025-12-29_washington_northwestern,Northwestern,7,"Lau, Caroline",True,33,2,6,0.333,0,1,0.0,1,2,0.5,0,6,6,2,10,5,0,2,5
+2025-12-29_washington_northwestern,Northwestern,4,"Lash, Tate",True,24,2,3,0.667,0,1,0.0,1,1,1.0,2,0,2,3,2,2,0,0,5
+2025-12-29_washington_northwestern,Northwestern,1,"Walton, Xamiya",False,28,5,7,0.714,2,4,0.5,0,1,0.0,0,2,2,0,1,0,0,1,12
+2025-12-29_washington_northwestern,Northwestern,11,"Hodgens, Angelina",False,9,0,4,0.0,0,3,0.0,0,0,,0,2,2,0,0,2,0,0,0
+2025-12-29_washington_northwestern,Northwestern,24,"Turner, Daija",False,6,0,0,,0,0,,0,0,,0,0,0,0,0,0,1,1,0
+2025-12-29_washington_northwestern,Northwestern,3,"Keswick, Claire",False,3,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-29_washington_northwestern,Northwestern,00,"Mutombo, Rachel",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-29_washington_northwestern,Northwestern,9,"Wang, Crystal",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-29_washington_northwestern,Northwestern,33,"López, Amparo",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2025-12-29_washington_northwestern,Northwestern,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,2,4,0,0,0,0,0,0
+2025-12-29_washington_northwestern,Washington,2,"Howell, Avery",True,33,8,12,0.667,6,9,0.667,1,4,0.25,0,5,5,1,0,1,0,3,23
+2025-12-29_washington_northwestern,Washington,24,"Ladine, Elle",True,21,7,12,0.583,3,7,0.429,6,6,1.0,1,4,5,5,2,2,1,0,23
+2025-12-29_washington_northwestern,Washington,00,"Sellers, Sayvia",True,32,7,14,0.5,4,9,0.444,1,1,1.0,0,0,0,3,4,1,0,2,19
+2025-12-29_washington_northwestern,Washington,1,"Stines, Hannah",True,27,3,9,0.333,2,6,0.333,2,2,1.0,0,3,3,1,4,1,0,0,10
+2025-12-29_washington_northwestern,Washington,55,"Grabovskaia, Yulia",True,8,0,0,,0,0,,0,0,,2,4,6,2,2,0,0,0,0
+2025-12-29_washington_northwestern,Washington,3,"Coppinger, Devin",False,17,4,9,0.444,1,4,0.25,0,0,,4,2,6,2,0,2,0,0,9
+2025-12-29_washington_northwestern,Washington,21,"McGaughy, Brynn",False,25,2,4,0.5,0,0,,1,4,0.25,5,3,8,1,2,0,2,0,5
+2025-12-29_washington_northwestern,Washington,35,"Harvey, Sienna",False,12,1,3,0.333,0,0,,0,0,,1,0,1,1,0,1,0,1,2
+2025-12-29_washington_northwestern,Washington,5,"Brown, Teagan",False,6,1,2,0.5,0,0,,0,0,,0,1,1,1,0,0,0,1,2
+2025-12-29_washington_northwestern,Washington,23,"Anderson, Olivia",False,3,0,2,0.0,0,1,0.0,1,2,0.5,1,0,1,0,1,1,0,0,1
+2025-12-29_washington_northwestern,Washington,11,"Briggs, Chloe",False,11,0,1,0.0,0,0,,0,0,,1,1,2,2,0,0,0,0,0
+2025-12-29_washington_northwestern,Washington,22,"Gillmer, Shayla",False,3,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-29_washington_northwestern,Washington,25,"Cain, Nina",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2025-12-29_washington_northwestern,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2026-01-01_washington_michigan,Michigan,12,"Swords, Syla",True,39,6,19,0.316,3,9,0.333,0,1,0.0,2,4,6,2,0,4,0,2,15
+2026-01-01_washington_michigan,Michigan,1,"Olson, Olivia",True,37,5,17,0.294,0,2,0.0,2,3,0.667,2,3,5,3,0,0,0,2,12
+2026-01-01_washington_michigan,Michigan,3,"Holloway, Mila",True,18,1,3,0.333,0,0,,5,6,0.833,0,0,0,4,1,3,0,1,7
+2026-01-01_washington_michigan,Michigan,15,"Sofilkanich, Ashley",True,19,3,8,0.375,0,0,,0,1,0.0,0,3,3,1,1,1,0,1,6
+2026-01-01_washington_michigan,Michigan,5,"Q. Daniels, Brooke",True,23,1,3,0.333,0,0,,0,0,,2,0,2,3,0,3,0,3,2
+2026-01-01_washington_michigan,Michigan,22,"Dudley, Kendall",False,13,2,2,1.0,0,0,,1,2,0.5,0,1,1,2,1,0,0,2,5
+2026-01-01_washington_michigan,Michigan,33,"Delfosse, Te'yala",False,17,1,2,0.5,0,0,,0,2,0.0,2,0,2,1,0,0,0,0,2
+2026-01-01_washington_michigan,Michigan,21,"Vantimmeren, Ally",False,8,1,2,0.5,0,0,,0,0,,0,0,0,2,0,0,0,0,2
+2026-01-01_washington_michigan,Michigan,25,"Mathurin, McKenzie",False,7,0,0,,0,0,,1,2,0.5,1,0,1,2,0,1,0,0,1
+2026-01-01_washington_michigan,Michigan,2,"Brown, Macy",False,16,0,3,0.0,0,2,0.0,0,0,,0,2,2,0,0,1,0,0,0
+2026-01-01_washington_michigan,Michigan,20,"Crockett, Alyssa",False,3,0,1,0.0,0,1,0.0,0,0,,0,0,0,1,0,0,0,0,0
+2026-01-01_washington_michigan,Michigan,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,3,5,0,0,0,0,0,0
+2026-01-01_washington_michigan,Washington,2,"Howell, Avery",True,37,9,14,0.643,2,3,0.667,2,2,1.0,2,14,16,1,1,1,0,2,22
+2026-01-01_washington_michigan,Washington,00,"Sellers, Sayvia",True,21,2,6,0.333,1,4,0.25,6,6,1.0,0,3,3,4,0,4,1,3,11
+2026-01-01_washington_michigan,Washington,24,"Ladine, Elle",True,27,2,4,0.5,1,2,0.5,4,4,1.0,1,4,5,3,4,2,1,0,9
+2026-01-01_washington_michigan,Washington,55,"Grabovskaia, Yulia",True,18,3,7,0.429,0,0,,0,1,0.0,3,6,9,1,2,1,2,1,6
+2026-01-01_washington_michigan,Washington,1,"Stines, Hannah",True,38,1,5,0.2,1,2,0.5,2,6,0.333,0,1,1,1,5,5,0,2,5
+2026-01-01_washington_michigan,Washington,21,"McGaughy, Brynn",False,19,2,5,0.4,0,1,0.0,1,2,0.5,1,3,4,1,3,2,1,0,5
+2026-01-01_washington_michigan,Washington,3,"Coppinger, Devin",False,24,2,4,0.5,0,2,0.0,0,0,,1,1,2,3,1,1,0,0,4
+2026-01-01_washington_michigan,Washington,35,"Harvey, Sienna",False,10,1,1,1.0,0,0,,0,0,,1,1,2,0,2,2,0,0,2
+2026-01-01_washington_michigan,Washington,5,"Brown, Teagan",False,6,0,1,0.0,0,0,,0,0,,0,1,1,1,0,1,0,0,0
+2026-01-01_washington_michigan,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,0,0,0,0,4,0,0,0
+2026-01-08_washington_michigan_st,Michigan St.,35,"Blair, Kennedy",True,32,8,12,0.667,0,2,0.0,5,6,0.833,0,6,6,2,5,3,0,1,21
+2026-01-08_washington_michigan_st,Michigan St.,14,"Vanslooten, Grace",True,33,8,16,0.5,0,0,,1,3,0.333,3,5,8,1,1,3,1,2,17
+2026-01-08_washington_michigan_st,Michigan St.,1,"Jones, Rashunda",True,29,6,13,0.462,0,2,0.0,5,6,0.833,3,7,10,2,4,1,0,3,17
+2026-01-08_washington_michigan_st,Michigan St.,23,"Brown, Jalyn",True,30,2,6,0.333,1,1,1.0,2,4,0.5,0,0,0,4,0,1,0,2,7
+2026-01-08_washington_michigan_st,Michigan St.,10,"Sotelo, Ines",True,21,2,3,0.667,0,1,0.0,0,0,,0,2,2,2,1,1,1,2,4
+2026-01-08_washington_michigan_st,Michigan St.,5,"Shumate, Emma",False,27,2,4,0.5,2,4,0.5,0,0,,1,3,4,2,2,0,1,0,6
+2026-01-08_washington_michigan_st,Michigan St.,32,"Dykstra, Marah",False,11,2,3,0.667,1,2,0.5,0,0,,2,2,4,1,0,1,0,0,5
+2026-01-08_washington_michigan_st,Michigan St.,33,"Woodard, Juliann",False,5,1,2,0.5,1,2,0.5,0,0,,2,1,3,1,0,2,0,0,3
+2026-01-08_washington_michigan_st,Michigan St.,9,"Sambolic, Sara",False,9,1,3,0.333,0,0,,0,2,0.0,0,1,1,4,0,2,0,0,2
+2026-01-08_washington_michigan_st,Michigan St.,24,"Terrian, Amy",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-08_washington_michigan_st,Michigan St.,2,"Kimball, Abbey",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-08_washington_michigan_st,Michigan St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,0,2,0,0,0,0,0,0
+2026-01-08_washington_michigan_st,Washington,24,"Ladine, Elle",True,30,5,11,0.455,5,7,0.714,0,2,0.0,1,3,4,1,0,3,0,1,15
+2026-01-08_washington_michigan_st,Washington,00,"Sellers, Sayvia",True,31,5,19,0.263,2,11,0.182,2,3,0.667,1,1,2,5,4,2,0,2,14
+2026-01-08_washington_michigan_st,Washington,2,"Howell, Avery",True,31,2,6,0.333,2,5,0.4,4,4,1.0,1,3,4,4,1,0,1,1,10
+2026-01-08_washington_michigan_st,Washington,1,"Stines, Hannah",True,28,2,6,0.333,1,3,0.333,2,2,1.0,1,1,2,0,3,1,1,1,7
+2026-01-08_washington_michigan_st,Washington,55,"Grabovskaia, Yulia",True,17,0,1,0.0,0,0,,0,0,,1,1,2,3,3,3,1,1,0
+2026-01-08_washington_michigan_st,Washington,35,"Harvey, Sienna",False,15,3,6,0.5,1,1,1.0,2,3,0.667,0,4,4,2,0,0,0,0,9
+2026-01-08_washington_michigan_st,Washington,21,"McGaughy, Brynn",False,17,4,7,0.571,0,0,,0,0,,0,3,3,2,2,6,2,0,8
+2026-01-08_washington_michigan_st,Washington,3,"Coppinger, Devin",False,21,1,2,0.5,1,2,0.5,1,2,0.5,0,1,1,3,1,2,1,1,4
+2026-01-08_washington_michigan_st,Washington,5,"Brown, Teagan",False,6,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-08_washington_michigan_st,Washington,11,"Briggs, Chloe",False,3,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2026-01-08_washington_michigan_st,Washington,22,"Gillmer, Shayla",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-08_washington_michigan_st,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,2,5,0,0,0,0,0,0
+2026-01-11_purdue_washington,Washington,00,"Sellers, Sayvia",True,38,10,24,0.417,1,6,0.167,2,2,1.0,4,2,6,5,3,5,0,2,23
+2026-01-11_purdue_washington,Washington,2,"Howell, Avery",True,37,5,12,0.417,2,6,0.333,1,1,1.0,0,8,8,4,0,1,0,0,13
+2026-01-11_purdue_washington,Washington,24,"Ladine, Elle",True,30,4,13,0.308,0,0,,5,5,1.0,4,4,8,3,2,4,1,1,13
+2026-01-11_purdue_washington,Washington,1,"Stines, Hannah",True,37,4,12,0.333,3,5,0.6,0,0,,1,7,8,1,2,3,1,2,11
+2026-01-11_purdue_washington,Washington,55,"Grabovskaia, Yulia",True,25,2,3,0.667,0,0,,0,0,,3,1,4,2,1,2,0,1,4
+2026-01-11_purdue_washington,Washington,3,"Coppinger, Devin",False,17,1,2,0.5,0,1,0.0,2,2,1.0,0,0,0,1,1,0,0,0,4
+2026-01-11_purdue_washington,Washington,21,"McGaughy, Brynn",False,19,1,3,0.333,0,0,,0,0,,0,0,0,4,4,1,0,1,2
+2026-01-11_purdue_washington,Washington,35,"Harvey, Sienna",False,8,1,1,1.0,0,0,,0,0,,0,1,1,0,0,1,0,0,2
+2026-01-11_purdue_washington,Washington,5,"Brown, Teagan",False,14,0,0,,0,0,,0,0,,0,4,4,1,1,0,0,1,0
+2026-01-11_purdue_washington,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,2,2,0,0,3,0,0,0
+2026-01-11_purdue_washington,Purdue,33,"Layden-zay, Madison",True,45,5,14,0.357,4,11,0.364,5,6,0.833,0,5,5,2,4,3,1,4,19
+2026-01-11_purdue_washington,Purdue,44,"Daye, Tara",True,39,7,13,0.538,1,1,1.0,4,5,0.8,2,4,6,4,4,1,0,2,19
+2026-01-11_purdue_washington,Purdue,3,"Smith, Nya",True,25,2,5,0.4,1,4,0.25,3,4,0.75,0,1,1,2,2,2,0,2,8
+2026-01-11_purdue_washington,Purdue,22,"Puryear, Kendall",True,10,2,4,0.5,0,0,,1,2,0.5,2,2,4,0,0,0,0,0,5
+2026-01-11_purdue_washington,Purdue,11,"Layden, McKenna",True,24,1,5,0.2,1,5,0.2,0,0,,0,2,2,1,1,3,0,1,3
+2026-01-11_purdue_washington,Purdue,35,"McCarthy, Lana",False,33,7,12,0.583,0,0,,0,0,,5,7,12,3,0,2,3,1,14
+2026-01-11_purdue_washington,Purdue,23,"Smith, Kiki",False,22,2,5,0.4,0,2,0.0,2,2,1.0,0,2,2,0,2,2,0,0,6
+2026-01-11_purdue_washington,Purdue,8,"Karsh, Hila",False,25,2,8,0.25,0,3,0.0,0,0,,0,0,0,1,4,2,0,0,4
+2026-01-11_purdue_washington,Purdue,55,"Gordon, Avery",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-11_purdue_washington,Purdue,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,4,5,0,0,1,0,0,0
+2026-01-14_indiana_washington,Washington,24,"Ladine, Elle",True,32,8,11,0.727,3,3,1.0,0,0,,2,4,6,2,4,0,1,1,19
+2026-01-14_indiana_washington,Washington,55,"Grabovskaia, Yulia",True,20,8,11,0.727,0,0,,0,0,,2,3,5,4,0,2,1,0,16
+2026-01-14_indiana_washington,Washington,00,"Sellers, Sayvia",True,28,5,10,0.5,0,2,0.0,1,3,0.333,0,4,4,3,4,2,0,1,11
+2026-01-14_indiana_washington,Washington,1,"Stines, Hannah",True,35,4,5,0.8,1,2,0.5,0,0,,0,3,3,1,6,3,2,2,9
+2026-01-14_indiana_washington,Washington,2,"Howell, Avery",True,32,3,6,0.5,1,3,0.333,1,1,1.0,2,4,6,1,2,1,0,1,8
+2026-01-14_indiana_washington,Washington,21,"McGaughy, Brynn",False,20,6,9,0.667,1,1,1.0,0,0,,2,2,4,1,1,2,1,0,13
+2026-01-14_indiana_washington,Washington,35,"Harvey, Sienna",False,8,2,3,0.667,0,0,,0,0,,1,0,1,1,2,1,0,0,4
+2026-01-14_indiana_washington,Washington,11,"Briggs, Chloe",False,18,0,0,,0,0,,2,2,1.0,0,1,1,1,0,0,0,1,2
+2026-01-14_indiana_washington,Washington,3,"Coppinger, Devin",False,7,0,1,0.0,0,0,,0,0,,0,0,0,0,1,0,0,0,0
+2026-01-14_indiana_washington,Washington,5,"Brown, Teagan",False,0,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-14_indiana_washington,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,2,2,0,0,1,0,0,0
+2026-01-14_indiana_washington,Indiana,10,"Ciezki, Shay",True,35,8,18,0.444,7,11,0.636,0,0,,0,1,1,2,0,2,0,0,23
+2026-01-14_indiana_washington,Indiana,3,"Makalusky, Maya",True,29,6,9,0.667,4,7,0.571,0,0,,2,0,2,1,0,1,0,0,16
+2026-01-14_indiana_washington,Indiana,5,"Beaumont, Lenée",True,32,3,8,0.375,1,3,0.333,2,2,1.0,0,2,2,2,2,1,0,2,9
+2026-01-14_indiana_washington,Indiana,2,"Caffey, Nevaeh",True,36,3,7,0.429,0,0,,2,2,1.0,1,3,4,1,3,2,0,1,8
+2026-01-14_indiana_washington,Indiana,23,"Socka-nguemen, Zania",True,20,2,7,0.286,0,0,,0,0,,3,2,5,3,1,5,0,0,4
+2026-01-14_indiana_washington,Indiana,8,"Noyan, Edessa",False,16,1,2,0.5,0,0,,0,0,,2,0,2,1,2,2,0,0,2
+2026-01-14_indiana_washington,Indiana,7,"Kiaku, Jerni",False,10,0,1,0.0,0,0,,1,2,0.5,1,0,1,1,2,2,0,0,1
+2026-01-14_indiana_washington,Indiana,1,"Stotijn, Phoenix",False,17,0,3,0.0,0,2,0.0,0,0,,0,0,0,1,1,0,0,0,0
+2026-01-14_indiana_washington,Indiana,45,"Ondineme, Jade",False,5,0,0,,0,0,,0,0,,1,0,1,0,0,0,0,0,0
+2026-01-14_indiana_washington,Indiana,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,2,2,0,0,0,0,0,0
+2026-01-18_washington_minnesota,Minnesota,10,"Braun, Mara",True,39,6,13,0.462,3,6,0.5,3,4,0.75,0,6,6,1,1,2,1,1,18
+2026-01-18_washington_minnesota,Minnesota,3,"Battle, Amaya",True,35,6,12,0.5,0,1,0.0,0,2,0.0,1,4,5,0,3,2,0,2,12
+2026-01-18_washington_minnesota,Minnesota,25,"Grocholski, Grace",True,39,4,13,0.308,3,7,0.429,0,0,,2,5,7,2,3,3,0,0,11
+2026-01-18_washington_minnesota,Minnesota,52,"Hart, Sophie",True,29,3,6,0.5,0,0,,0,2,0.0,2,4,6,1,0,0,2,1,6
+2026-01-18_washington_minnesota,Minnesota,12,"Glenn, Brylee",True,29,1,7,0.143,0,1,0.0,0,0,,1,3,4,2,1,2,1,0,2
+2026-01-18_washington_minnesota,Minnesota,22,"Klick, Kennedy",False,11,1,2,0.5,0,0,,0,0,,0,0,0,0,2,1,0,0,2
+2026-01-18_washington_minnesota,Minnesota,31,"Tonga, Finau",False,8,1,1,1.0,0,0,,0,1,0.0,1,1,2,3,1,1,0,0,2
+2026-01-18_washington_minnesota,Minnesota,35,"Christian, Makena",False,8,0,2,0.0,0,1,0.0,1,2,0.5,1,1,2,2,0,0,0,0,1
+2026-01-18_washington_minnesota,Minnesota,41,"Holloway, Niamya",False,2,0,0,,0,0,,0,0,,0,0,0,1,0,1,0,0,0
+2026-01-18_washington_minnesota,Minnesota,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,1,1,0,0,1,0,0,0
+2026-01-18_washington_minnesota,Washington,00,"Sellers, Sayvia",True,33,9,14,0.643,3,7,0.429,2,2,1.0,0,1,1,2,4,2,1,2,23
+2026-01-18_washington_minnesota,Washington,1,"Stines, Hannah",True,28,5,11,0.455,0,2,0.0,1,2,0.5,1,6,7,2,1,1,0,0,11
+2026-01-18_washington_minnesota,Washington,24,"Ladine, Elle",True,36,3,10,0.3,1,5,0.2,1,2,0.5,1,5,6,1,2,0,0,3,8
+2026-01-18_washington_minnesota,Washington,55,"Grabovskaia, Yulia",True,21,4,7,0.571,0,0,,0,0,,2,2,4,4,1,3,0,0,8
+2026-01-18_washington_minnesota,Washington,2,"Howell, Avery",True,36,2,7,0.286,0,5,0.0,2,2,1.0,2,10,12,3,4,1,0,1,6
+2026-01-18_washington_minnesota,Washington,21,"McGaughy, Brynn",False,18,3,7,0.429,0,0,,2,3,0.667,0,1,1,2,1,1,1,1,8
+2026-01-18_washington_minnesota,Washington,11,"Briggs, Chloe",False,7,1,2,0.5,0,0,,0,0,,0,2,2,0,0,0,0,0,2
+2026-01-18_washington_minnesota,Washington,3,"Coppinger, Devin",False,9,0,0,,0,0,,1,2,0.5,0,0,0,1,2,1,0,0,1
+2026-01-18_washington_minnesota,Washington,35,"Harvey, Sienna",False,7,0,0,,0,0,,0,0,,0,0,0,1,0,1,0,0,0
+2026-01-18_washington_minnesota,Washington,5,"Brown, Teagan",False,5,0,1,0.0,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-18_washington_minnesota,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,1,4,0,0,3,0,0,0
+2026-01-21_washington_penn_st,Penn St.,44,"Merkle, Gracie",True,27,9,14,0.643,0,0,,1,2,0.5,4,4,8,2,1,2,1,1,19
+2026-01-21_washington_penn_st,Penn St.,23,"McMiller, Kiyomi",True,23,5,17,0.294,1,3,0.333,0,0,,0,2,2,3,1,1,0,1,11
+2026-01-21_washington_penn_st,Penn St.,2,"Steele, Shaelyn",True,34,4,8,0.5,0,1,0.0,0,0,,3,5,8,1,4,2,0,2,8
+2026-01-21_washington_penn_st,Penn St.,8,"McFadden, Nyla",True,28,3,6,0.5,1,2,0.5,0,0,,0,2,2,4,1,1,0,1,7
+2026-01-21_washington_penn_st,Penn St.,3,"Murray, Moriah",True,25,0,3,0.0,0,3,0.0,0,0,,0,0,0,0,2,0,0,1,0
+2026-01-21_washington_penn_st,Penn St.,19,"Cleante, Tea",False,31,4,11,0.364,1,5,0.2,0,3,0.0,0,0,0,1,4,1,0,0,9
+2026-01-21_washington_penn_st,Penn St.,10,"Santana, Vitoria",False,9,2,3,0.667,2,3,0.667,0,0,,0,2,2,3,0,0,0,0,6
+2026-01-21_washington_penn_st,Penn St.,7,"Ranisavljevic, Viktoria",False,14,1,2,0.5,1,2,0.5,2,2,1.0,0,2,2,1,1,0,1,0,5
+2026-01-21_washington_penn_st,Penn St.,4,"Mendelson, Maggie",False,6,0,3,0.0,0,0,,0,0,,3,0,3,1,0,1,1,0,0
+2026-01-21_washington_penn_st,Penn St.,25,"Okokoh, Rachael",False,3,0,0,,0,0,,0,2,0.0,1,0,1,0,0,0,0,0,0
+2026-01-21_washington_penn_st,Penn St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,0,1,0,0,0,0,0,0
+2026-01-21_washington_penn_st,Washington,00,"Sellers, Sayvia",True,34,10,15,0.667,0,2,0.0,4,4,1.0,0,3,3,1,3,2,1,0,24
+2026-01-21_washington_penn_st,Washington,2,"Howell, Avery",True,38,4,9,0.444,3,7,0.429,2,3,0.667,2,10,12,2,2,3,0,3,13
+2026-01-21_washington_penn_st,Washington,24,"Ladine, Elle",True,19,3,11,0.273,0,2,0.0,1,2,0.5,1,3,4,2,0,0,0,0,7
+2026-01-21_washington_penn_st,Washington,1,"Stines, Hannah",True,27,3,8,0.375,0,0,,0,0,,1,2,3,2,2,0,1,1,6
+2026-01-21_washington_penn_st,Washington,55,"Grabovskaia, Yulia",True,16,2,3,0.667,0,0,,2,2,1.0,5,3,8,2,2,4,1,0,6
+2026-01-21_washington_penn_st,Washington,21,"McGaughy, Brynn",False,24,7,12,0.583,0,0,,0,0,,2,7,9,1,0,1,0,0,14
+2026-01-21_washington_penn_st,Washington,3,"Coppinger, Devin",False,20,2,3,0.667,2,2,1.0,3,4,0.75,4,1,5,3,0,1,0,0,9
+2026-01-21_washington_penn_st,Washington,35,"Harvey, Sienna",False,12,1,3,0.333,0,1,0.0,0,0,,1,1,2,0,2,0,0,0,2
+2026-01-21_washington_penn_st,Washington,11,"Briggs, Chloe",False,8,0,1,0.0,0,0,,0,0,,0,1,1,2,0,1,0,0,0
+2026-01-21_washington_penn_st,Washington,5,"Brown, Teagan",False,2,0,1,0.0,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-21_washington_penn_st,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,0,2,0,0,2,0,0,0
+2026-01-26_rutgers_washington,Washington,2,"Howell, Avery",True,28,6,13,0.462,4,10,0.4,0,0,,1,6,7,0,1,1,1,0,16
+2026-01-26_rutgers_washington,Washington,00,"Sellers, Sayvia",True,28,4,6,0.667,3,5,0.6,0,0,,0,0,0,0,6,0,1,0,11
+2026-01-26_rutgers_washington,Washington,1,"Stines, Hannah",True,29,3,9,0.333,1,3,0.333,2,2,1.0,2,6,8,2,2,4,0,2,9
+2026-01-26_rutgers_washington,Washington,55,"Grabovskaia, Yulia",True,17,4,9,0.444,0,0,,1,2,0.5,10,7,17,0,1,0,1,0,9
+2026-01-26_rutgers_washington,Washington,24,"Ladine, Elle",True,15,2,8,0.25,1,4,0.25,0,0,,0,4,4,0,3,1,0,0,5
+2026-01-26_rutgers_washington,Washington,21,"McGaughy, Brynn",False,24,8,9,0.889,0,0,,1,1,1.0,3,4,7,2,1,0,1,0,17
+2026-01-26_rutgers_washington,Washington,11,"Briggs, Chloe",False,18,2,5,0.4,1,3,0.333,2,2,1.0,1,3,4,1,2,1,0,0,7
+2026-01-26_rutgers_washington,Washington,3,"Coppinger, Devin",False,14,1,4,0.25,0,3,0.0,0,0,,0,1,1,3,0,0,0,0,2
+2026-01-26_rutgers_washington,Washington,35,"Harvey, Sienna",False,19,0,3,0.0,0,2,0.0,0,0,,1,1,2,2,2,1,0,0,0
+2026-01-26_rutgers_washington,Washington,5,"Brown, Teagan",False,3,0,2,0.0,0,1,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-26_rutgers_washington,Washington,22,"Gillmer, Shayla",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-26_rutgers_washington,Washington,23,"Anderson, Olivia",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2026-01-26_rutgers_washington,Washington,25,"Cain, Nina",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-01-26_rutgers_washington,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,1,1,0,0,1,0,0,0
+2026-01-26_rutgers_washington,Rutgers,2,"Ivey, Kaylah",True,39,5,13,0.385,2,6,0.333,2,3,0.667,1,3,4,0,4,1,0,1,14
+2026-01-26_rutgers_washington,Rutgers,30,"Lester, Imani",True,18,7,18,0.389,0,1,0.0,0,0,,2,0,2,1,1,0,0,0,14
+2026-01-26_rutgers_washington,Rutgers,1,"Swann, Lauryn",True,33,4,19,0.211,2,9,0.222,1,2,0.5,0,2,2,1,3,2,0,2,11
+2026-01-26_rutgers_washington,Rutgers,12,"Blackstone, Faith",True,17,1,2,0.5,0,1,0.0,2,4,0.5,0,5,5,1,2,1,1,0,4
+2026-01-26_rutgers_washington,Rutgers,4,"Bates, Antonia",True,36,1,1,1.0,0,0,,1,2,0.5,3,4,7,2,1,1,1,1,3
+2026-01-26_rutgers_washington,Rutgers,5,"Young, Deja",False,16,1,1,1.0,0,0,,0,0,,0,1,1,0,0,0,0,1,2
+2026-01-26_rutgers_washington,Rutgers,44,"Walker, Janae",False,20,0,0,,0,0,,0,0,,0,2,2,2,0,1,0,0,0
+2026-01-26_rutgers_washington,Rutgers,33,"Brandt, Kennedy",False,10,0,4,0.0,0,2,0.0,0,0,,1,0,1,0,0,0,0,0,0
+2026-01-26_rutgers_washington,Rutgers,7,"Wheeler, Precious",False,8,0,0,,0,0,,0,2,0.0,1,1,2,1,0,0,0,0,0
+2026-01-26_rutgers_washington,Rutgers,3,"Moore, Makylah",False,3,0,1,0.0,0,0,,0,0,,1,0,1,1,0,0,0,0,0
+2026-01-26_rutgers_washington,Rutgers,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,2,3,0,0,2,0,0,0
+2026-01-28_maryland_washington,Washington,00,"Sellers, Sayvia",True,47,15,32,0.469,5,15,0.333,3,5,0.6,2,2,4,2,6,5,2,2,38
+2026-01-28_maryland_washington,Washington,2,"Howell, Avery",True,46,5,10,0.5,3,6,0.5,4,4,1.0,4,7,11,5,1,0,0,5,17
+2026-01-28_maryland_washington,Washington,24,"Ladine, Elle",True,45,3,12,0.25,2,5,0.4,2,4,0.5,1,2,3,1,1,2,1,1,10
+2026-01-28_maryland_washington,Washington,1,"Stines, Hannah",True,38,3,8,0.375,0,4,0.0,1,1,1.0,1,3,4,2,2,1,0,1,7
+2026-01-28_maryland_washington,Washington,55,"Grabovskaia, Yulia",True,22,2,8,0.25,0,0,,1,2,0.5,4,4,8,2,0,1,0,0,5
+2026-01-28_maryland_washington,Washington,21,"McGaughy, Brynn",False,28,2,10,0.2,0,2,0.0,0,0,,3,8,11,4,2,1,0,0,4
+2026-01-28_maryland_washington,Washington,3,"Coppinger, Devin",False,6,0,0,,0,0,,2,2,1.0,1,1,2,2,0,0,0,0,2
+2026-01-28_maryland_washington,Washington,11,"Briggs, Chloe",False,12,0,0,,0,0,,0,0,,0,2,2,1,0,0,0,0,0
+2026-01-28_maryland_washington,Washington,35,"Harvey, Sienna",False,6,0,2,0.0,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2026-01-28_maryland_washington,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,1,5,0,0,1,0,0,0
+2026-01-28_maryland_washington,Maryland,12,"Garzon, Yarden",True,48,9,19,0.474,4,10,0.4,2,2,1.0,0,7,7,4,2,2,0,0,24
+2026-01-28_maryland_washington,Maryland,3,"Mack, Addi",True,41,7,19,0.368,3,4,0.75,3,3,1.0,1,2,3,2,2,1,0,1,20
+2026-01-28_maryland_washington,Maryland,6,"Poffenbarger, Saylor",True,46,6,19,0.316,0,7,0.0,4,8,0.5,5,9,14,2,4,2,1,1,16
+2026-01-28_maryland_washington,Maryland,9,"Ozzy-momodu, Isimenme",True,39,3,8,0.375,0,0,,1,2,0.5,8,8,16,2,3,2,3,1,7
+2026-01-28_maryland_washington,Maryland,7,"Okananwa, Oluchi",True,40,3,9,0.333,0,1,0.0,0,0,,2,3,5,2,0,1,0,2,6
+2026-01-28_maryland_washington,Maryland,8,"Walker, Kyndal",False,26,2,5,0.4,0,0,,3,4,0.75,0,3,3,4,0,2,0,0,7
+2026-01-28_maryland_washington,Maryland,10,"McLean, Mir",False,6,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2026-01-28_maryland_washington,Maryland,11,"Boiko, Marya",False,4,0,0,,0,0,,0,0,,0,0,0,0,2,3,1,0,0
+2026-01-28_maryland_washington,Maryland,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,2,4,0,0,1,0,0,0
+2026-02-01_washington_illinois,Illinois,30,"Parchment, Cearah",True,38,8,16,0.5,3,6,0.5,4,4,1.0,4,6,10,1,1,1,0,4,23
+2026-02-01_washington_illinois,Illinois,23,"Wallace, Berry",True,38,8,16,0.5,0,3,0.0,6,8,0.75,3,4,7,2,1,2,0,0,22
+2026-02-01_washington_illinois,Illinois,2,"Jackson, Destiny",True,39,3,8,0.375,0,0,,5,9,0.556,1,5,6,4,4,2,2,1,11
+2026-02-01_washington_illinois,Illinois,1,"Guyton, Aaliyah",True,31,2,7,0.286,1,3,0.333,1,2,0.5,1,1,2,3,1,1,0,3,6
+2026-02-01_washington_illinois,Illinois,8,"Brown-hagger, Jasmine",True,21,0,4,0.0,0,1,0.0,0,0,,1,0,1,3,2,0,0,1,0
+2026-02-01_washington_illinois,Illinois,34,"Webber, Maddie",False,26,6,8,0.75,0,2,0.0,1,1,1.0,1,1,2,2,0,1,0,0,13
+2026-02-01_washington_illinois,Illinois,4,"Dolan, Gretchen",False,4,0,1,0.0,0,0,,0,0,,1,0,1,1,0,0,0,0,0
+2026-02-01_washington_illinois,Illinois,35,"Vasconcelos, Lety",False,3,0,0,,0,0,,0,0,,0,1,1,1,0,1,0,0,0
+2026-02-01_washington_illinois,Illinois,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,1,3,0,0,0,0,0,0
+2026-02-01_washington_illinois,Washington,2,"Howell, Avery",True,37,7,10,0.7,2,4,0.5,1,1,1.0,0,7,7,3,0,3,2,1,17
+2026-02-01_washington_illinois,Washington,00,"Sellers, Sayvia",True,36,6,10,0.6,0,1,0.0,5,5,1.0,2,0,2,5,4,4,3,2,17
+2026-02-01_washington_illinois,Washington,24,"Ladine, Elle",True,33,3,8,0.375,1,4,0.25,0,0,,1,2,3,2,1,1,0,0,7
+2026-02-01_washington_illinois,Washington,1,"Stines, Hannah",True,24,0,7,0.0,0,1,0.0,2,2,1.0,1,3,4,2,2,1,1,0,2
+2026-02-01_washington_illinois,Washington,55,"Grabovskaia, Yulia",True,6,1,2,0.5,0,0,,0,0,,1,1,2,1,0,2,1,0,2
+2026-02-01_washington_illinois,Washington,21,"McGaughy, Brynn",False,31,6,8,0.75,0,0,,0,0,,0,4,4,2,1,3,3,0,12
+2026-02-01_washington_illinois,Washington,3,"Coppinger, Devin",False,19,3,3,1.0,0,0,,1,1,1.0,0,0,0,5,1,2,0,3,7
+2026-02-01_washington_illinois,Washington,35,"Harvey, Sienna",False,6,1,2,0.5,0,0,,0,1,0.0,0,2,2,1,0,0,0,0,2
+2026-02-01_washington_illinois,Washington,11,"Briggs, Chloe",False,7,0,0,,0,0,,0,0,,0,0,0,0,1,0,0,0,0
+2026-02-01_washington_illinois,Washington,5,"Brown, Teagan",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-01_washington_illinois,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-05_washington_ohio_st,Ohio St.,22,"Cambridge, Jaloni",True,33,12,21,0.571,0,1,0.0,2,2,1.0,1,6,7,4,2,4,0,1,26
+2026-02-05_washington_ohio_st,Ohio St.,12,"Lemmilä, Elsa",True,36,5,7,0.714,0,0,,3,5,0.6,3,6,9,0,2,0,5,2,13
+2026-02-05_washington_ohio_st,Ohio St.,2,"Gray, Chance",True,38,5,14,0.357,2,6,0.333,0,0,,2,2,4,0,4,1,0,3,12
+2026-02-05_washington_ohio_st,Ohio St.,3,"Cambridge, Kennedy",True,32,4,6,0.667,1,2,0.5,0,0,,0,2,2,3,1,1,1,2,9
+2026-02-05_washington_ohio_st,Ohio St.,5,"Watson, Ava",True,38,2,10,0.2,1,5,0.2,0,0,,0,3,3,3,1,2,1,1,5
+2026-02-05_washington_ohio_st,Ohio St.,8,"Martin, Bryn",False,14,1,1,1.0,1,1,1.0,0,0,,0,0,0,2,1,0,0,0,3
+2026-02-05_washington_ohio_st,Ohio St.,4,"Todd, T'yana",False,5,1,2,0.5,0,1,0.0,0,0,,0,0,0,2,0,0,0,0,2
+2026-02-05_washington_ohio_st,Ohio St.,14,"Hobbs, Ella",False,4,0,1,0.0,0,0,,0,0,,1,0,1,1,0,1,0,0,0
+2026-02-05_washington_ohio_st,Ohio St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,3,4,0,0,2,0,0,0
+2026-02-05_washington_ohio_st,Washington,00,"Sellers, Sayvia",True,37,9,16,0.562,3,6,0.5,5,5,1.0,0,0,0,3,1,5,1,2,26
+2026-02-05_washington_ohio_st,Washington,21,"McGaughy, Brynn",True,30,6,14,0.429,0,0,,0,0,,2,1,3,2,0,0,1,2,12
+2026-02-05_washington_ohio_st,Washington,2,"Howell, Avery",True,35,2,4,0.5,2,3,0.667,1,2,0.5,1,6,7,3,0,2,0,0,7
+2026-02-05_washington_ohio_st,Washington,1,"Stines, Hannah",True,24,2,6,0.333,0,1,0.0,0,0,,2,1,3,2,2,1,0,0,4
+2026-02-05_washington_ohio_st,Washington,24,"Ladine, Elle",True,28,0,5,0.0,0,2,0.0,0,0,,1,7,8,0,4,2,1,0,0
+2026-02-05_washington_ohio_st,Washington,3,"Coppinger, Devin",False,16,2,2,1.0,0,0,,1,1,1.0,2,0,2,1,0,0,0,1,5
+2026-02-05_washington_ohio_st,Washington,11,"Briggs, Chloe",False,21,0,4,0.0,0,2,0.0,4,6,0.667,2,5,7,0,2,4,0,0,4
+2026-02-05_washington_ohio_st,Washington,55,"Grabovskaia, Yulia",False,7,1,3,0.333,0,0,,0,0,,0,1,1,1,0,2,0,0,2
+2026-02-05_washington_ohio_st,Washington,35,"Harvey, Sienna",False,2,0,1,0.0,0,0,,0,0,,0,1,1,0,0,2,0,0,0
+2026-02-05_washington_ohio_st,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,1,3,0,0,1,0,0,0
+2026-02-08_wisconsin_washington,Washington,2,"Howell, Avery",True,41,12,19,0.632,6,13,0.462,4,5,0.8,3,11,14,3,2,3,1,1,34
+2026-02-08_wisconsin_washington,Washington,00,"Sellers, Sayvia",True,41,7,13,0.538,3,8,0.375,6,6,1.0,0,3,3,4,5,5,0,4,23
+2026-02-08_wisconsin_washington,Washington,24,"Ladine, Elle",True,36,6,14,0.429,3,7,0.429,1,2,0.5,0,7,7,1,3,1,0,0,16
+2026-02-08_wisconsin_washington,Washington,21,"McGaughy, Brynn",True,25,2,6,0.333,0,0,,3,3,1.0,1,1,2,3,2,4,1,0,7
+2026-02-08_wisconsin_washington,Washington,1,"Stines, Hannah",True,26,1,3,0.333,0,1,0.0,2,2,1.0,0,3,3,2,1,1,0,0,4
+2026-02-08_wisconsin_washington,Washington,3,"Coppinger, Devin",False,25,2,4,0.5,0,2,0.0,0,0,,1,0,1,3,0,2,0,0,4
+2026-02-08_wisconsin_washington,Washington,11,"Briggs, Chloe",False,13,1,2,0.5,1,2,0.5,0,0,,1,1,2,1,2,1,0,0,3
+2026-02-08_wisconsin_washington,Washington,55,"Grabovskaia, Yulia",False,11,0,1,0.0,0,0,,0,0,,1,1,2,0,1,2,1,0,0
+2026-02-08_wisconsin_washington,Washington,5,"Brown, Teagan",False,7,0,2,0.0,0,0,,0,0,,1,0,1,0,0,0,0,1,0
+2026-02-08_wisconsin_washington,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,3,5,0,0,0,0,0,0
+2026-02-08_wisconsin_washington,Wisconsin,1,"Howell, Destiny",True,40,11,20,0.55,5,10,0.5,1,1,1.0,1,2,3,1,3,5,0,0,28
+2026-02-08_wisconsin_washington,Wisconsin,15,"Uchenna, Gift",True,33,11,16,0.688,0,0,,2,2,1.0,2,10,12,3,2,0,3,3,24
+2026-02-08_wisconsin_washington,Wisconsin,20,"Daniels, Kyrah",True,40,5,13,0.385,3,4,0.75,0,0,,0,2,2,3,1,2,0,2,13
+2026-02-08_wisconsin_washington,Wisconsin,24,"Steele, Laci",True,35,3,11,0.273,2,7,0.286,2,3,0.667,0,2,2,5,1,1,0,2,10
+2026-02-08_wisconsin_washington,Wisconsin,13,"Porter, Ronnie",True,37,3,7,0.429,1,1,1.0,1,2,0.5,0,3,3,3,10,2,0,6,8
+2026-02-08_wisconsin_washington,Wisconsin,4,"Krahn, Lily",False,10,1,1,1.0,0,0,,0,0,,0,0,0,0,1,0,0,1,2
+2026-02-08_wisconsin_washington,Wisconsin,6,"Zaja, Dorja",False,4,0,1,0.0,0,0,,1,2,0.5,0,0,0,0,0,0,0,0,1
+2026-02-08_wisconsin_washington,Wisconsin,22,"Bollin, Shay",False,22,0,1,0.0,0,0,,0,0,,0,3,3,1,4,0,0,1,0
+2026-02-08_wisconsin_washington,Wisconsin,11,"Spasovski, Jovana",False,4,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-08_wisconsin_washington,Wisconsin,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,1,5,0,0,1,0,0,0
+2026-02-11_iowa_washington,Washington,24,"Ladine, Elle",True,35,9,16,0.562,1,6,0.167,0,0,,1,4,5,2,2,6,0,0,19
+2026-02-11_iowa_washington,Washington,00,"Sellers, Sayvia",True,27,6,11,0.545,0,4,0.0,2,2,1.0,0,5,5,3,3,3,0,0,14
+2026-02-11_iowa_washington,Washington,1,"Stines, Hannah",True,36,4,7,0.571,1,2,0.5,0,0,,0,5,5,1,2,1,1,3,9
+2026-02-11_iowa_washington,Washington,2,"Howell, Avery",True,38,3,9,0.333,2,7,0.286,0,0,,2,8,10,3,2,4,1,1,8
+2026-02-11_iowa_washington,Washington,21,"McGaughy, Brynn",True,21,1,4,0.25,0,1,0.0,0,0,,0,0,0,4,0,2,1,1,2
+2026-02-11_iowa_washington,Washington,11,"Briggs, Chloe",False,18,1,3,0.333,0,1,0.0,0,0,,0,2,2,1,0,1,0,0,2
+2026-02-11_iowa_washington,Washington,3,"Coppinger, Devin",False,4,1,1,1.0,0,0,,0,0,,0,0,0,0,0,0,0,0,2
+2026-02-11_iowa_washington,Washington,55,"Grabovskaia, Yulia",False,19,0,3,0.0,0,0,,0,0,,3,2,5,3,1,1,0,0,0
+2026-02-11_iowa_washington,Washington,5,"Brown, Teagan",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-11_iowa_washington,Washington,35,"Harvey, Sienna",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-11_iowa_washington,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,0,3,0,0,1,0,0,0
+2026-02-11_iowa_washington,Iowa,11,"Wright, Chazadi",True,38,6,13,0.462,5,8,0.625,4,5,0.8,0,1,1,0,4,2,0,1,21
+2026-02-11_iowa_washington,Iowa,45,"Stuelke, Hannah",True,36,6,11,0.545,0,0,,2,4,0.5,4,12,16,1,0,2,0,1,14
+2026-02-11_iowa_washington,Iowa,5,"Heiden, Ava",True,28,5,10,0.5,0,0,,1,2,0.5,1,2,3,5,3,1,1,2,11
+2026-02-11_iowa_washington,Iowa,1,"Stremlow, Taylor",True,32,4,6,0.667,0,0,,1,1,1.0,0,0,0,0,2,2,1,0,9
+2026-02-11_iowa_washington,Iowa,4,"Feuerbach, Kylie",True,36,2,4,0.5,1,3,0.333,0,0,,0,1,1,3,1,1,0,2,5
+2026-02-11_iowa_washington,Iowa,7,"Deal, Addison",False,14,2,8,0.25,0,1,0.0,0,0,,0,0,0,0,1,1,0,0,4
+2026-02-11_iowa_washington,Iowa,12,"Hays, Layla",False,2,0,0,,0,0,,1,2,0.5,0,0,0,0,0,0,0,0,1
+2026-02-11_iowa_washington,Iowa,8,"Houston, Journey",False,14,0,2,0.0,0,0,,0,0,,0,2,2,0,1,0,0,0,0
+2026-02-11_iowa_washington,Iowa,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,2,3,0,0,0,0,0,0
+2026-02-15_washington_oregon,Oregon,35,"Etute, Ehis",True,29,2,9,0.222,0,0,,3,4,0.75,3,8,11,3,1,2,2,2,7
+2026-02-15_washington_oregon,Oregon,14,"Long, Ari",True,28,3,4,0.75,1,1,1.0,0,0,,1,4,5,2,1,2,0,2,7
+2026-02-15_washington_oregon,Oregon,1,"Jacobs, Mia",True,24,1,11,0.091,0,4,0.0,3,3,1.0,0,3,3,2,0,3,0,1,5
+2026-02-15_washington_oregon,Oregon,2,"Fiso, Katie",True,36,2,13,0.154,0,0,,0,0,,0,5,5,0,5,4,0,3,4
+2026-02-15_washington_oregon,Oregon,3,"Bell, Sofia",True,38,1,6,0.167,0,5,0.0,0,0,,0,1,1,3,1,0,0,1,2
+2026-02-15_washington_oregon,Oregon,23,"Rambus, Sarah",False,17,5,7,0.714,0,0,,2,3,0.667,1,2,3,3,1,6,2,0,12
+2026-02-15_washington_oregon,Oregon,00,"Tuhina, Astera",False,13,2,4,0.5,0,0,,0,0,,0,1,1,1,0,0,1,0,4
+2026-02-15_washington_oregon,Oregon,5,"Muhammad, Amina",False,11,1,1,1.0,0,0,,0,0,,0,1,1,0,0,0,0,1,2
+2026-02-15_washington_oregon,Oregon,42,"Cain, Avary",False,4,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-15_washington_oregon,Oregon,TM,TEAM,False,0,0,0,,0,0,,0,0,,5,1,6,0,0,1,0,0,0
+2026-02-15_washington_oregon,Washington,00,"Sellers, Sayvia",True,38,6,16,0.375,3,8,0.375,2,4,0.5,0,2,2,2,3,5,0,1,17
+2026-02-15_washington_oregon,Washington,2,"Howell, Avery",True,36,4,6,0.667,1,3,0.333,0,1,0.0,0,9,9,4,0,1,0,2,9
+2026-02-15_washington_oregon,Washington,1,"Stines, Hannah",True,35,3,11,0.273,1,5,0.2,0,0,,1,6,7,1,3,1,1,3,7
+2026-02-15_washington_oregon,Washington,21,"McGaughy, Brynn",True,25,2,4,0.5,0,0,,3,3,1.0,0,1,1,4,1,3,1,0,7
+2026-02-15_washington_oregon,Washington,24,"Ladine, Elle",True,26,2,5,0.4,1,2,0.5,0,0,,0,4,4,1,1,5,1,0,5
+2026-02-15_washington_oregon,Washington,11,"Briggs, Chloe",False,13,1,4,0.25,0,1,0.0,2,2,1.0,0,1,1,1,0,1,0,1,4
+2026-02-15_washington_oregon,Washington,55,"Grabovskaia, Yulia",False,15,0,0,,0,0,,2,2,1.0,2,4,6,2,2,2,1,0,2
+2026-02-15_washington_oregon,Washington,3,"Coppinger, Devin",False,10,0,1,0.0,0,0,,0,0,,0,1,1,0,0,1,0,1,0
+2026-02-15_washington_oregon,Washington,35,"Harvey, Sienna",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-15_washington_oregon,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,2,5,0,0,2,0,0,0
+2026-02-19_ucla_washington,Washington,2,"Howell, Avery",True,40,7,12,0.583,3,6,0.5,0,0,,1,6,7,3,2,2,0,2,17
+2026-02-19_ucla_washington,Washington,00,"Sellers, Sayvia",True,31,5,13,0.385,4,11,0.364,0,0,,0,2,2,4,7,3,0,2,14
+2026-02-19_ucla_washington,Washington,55,"Grabovskaia, Yulia",True,17,3,4,0.75,0,0,,2,2,1.0,0,0,0,1,1,0,0,3,8
+2026-02-19_ucla_washington,Washington,1,"Stines, Hannah",True,27,1,6,0.167,0,1,0.0,1,2,0.5,1,4,5,0,0,1,0,1,3
+2026-02-19_ucla_washington,Washington,24,"Ladine, Elle",True,16,1,6,0.167,0,3,0.0,0,0,,1,0,1,2,2,2,0,0,2
+2026-02-19_ucla_washington,Washington,21,"McGaughy, Brynn",False,23,7,12,0.583,3,4,0.75,2,3,0.667,1,2,3,2,1,1,0,0,19
+2026-02-19_ucla_washington,Washington,11,"Briggs, Chloe",False,25,0,0,,0,0,,2,2,1.0,0,0,0,2,4,5,0,0,2
+2026-02-19_ucla_washington,Washington,5,"Brown, Teagan",False,7,1,1,1.0,0,0,,0,0,,0,0,0,0,0,0,0,0,2
+2026-02-19_ucla_washington,Washington,3,"Coppinger, Devin",False,12,0,2,0.0,0,2,0.0,0,0,,0,0,0,1,0,0,0,0,0
+2026-02-19_ucla_washington,Washington,35,"Harvey, Sienna",False,2,0,1,0.0,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-19_ucla_washington,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,1,2,0,0,1,0,0,0
+2026-02-19_ucla_washington,UCLA,51,"Betts, Lauren",True,25,11,15,0.733,0,0,,1,2,0.5,2,6,8,3,2,3,2,0,23
+2026-02-19_ucla_washington,UCLA,8,"Kneepkens, Gianna",True,31,7,9,0.778,3,4,0.75,0,0,,1,2,3,1,2,1,0,2,17
+2026-02-19_ucla_washington,UCLA,1,"Rice, Kiki",True,29,4,7,0.571,1,4,0.25,4,4,1.0,2,3,5,0,5,1,0,1,13
+2026-02-19_ucla_washington,UCLA,11,"Jaquez, Gabriela",True,31,4,8,0.5,0,1,0.0,2,2,1.0,2,1,3,1,2,4,1,2,10
+2026-02-19_ucla_washington,UCLA,5,"Leger-walker, Charlisse",True,31,2,8,0.25,0,3,0.0,0,0,,1,2,3,0,8,2,0,2,4
+2026-02-19_ucla_washington,UCLA,32,"Dugalić, Angela",False,23,2,6,0.333,0,1,0.0,6,6,1.0,2,4,6,2,4,2,0,1,10
+2026-02-19_ucla_washington,UCLA,16,"Betts, Sienna",False,17,2,6,0.333,0,1,0.0,0,0,,2,2,4,2,1,0,1,0,4
+2026-02-19_ucla_washington,UCLA,33,"Muse, Amanda",False,5,0,0,,0,0,,1,2,0.5,0,0,0,0,0,1,0,0,1
+2026-02-19_ucla_washington,UCLA,9,"Bilic, Lena",False,7,0,1,0.0,0,1,0.0,0,0,,0,2,2,2,0,0,0,0,0
+2026-02-19_ucla_washington,UCLA,3,"Karamouzi Siegel, Christina",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-19_ucla_washington,UCLA,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,2,3,0,0,0,0,0,0
+2026-02-22_washington_nebraska,Nebraska,23,"Prince, Britt",True,38,9,18,0.5,1,3,0.333,3,4,0.75,0,6,6,3,6,1,0,3,22
+2026-02-22_washington_nebraska,Nebraska,33,"Hargrove, Amiah",True,31,6,10,0.6,0,0,,2,2,1.0,2,2,4,1,0,1,2,1,14
+2026-02-22_washington_nebraska,Nebraska,2,"Nissley, Logan",True,24,3,9,0.333,2,6,0.333,0,0,,1,1,2,2,0,3,0,0,8
+2026-02-22_washington_nebraska,Nebraska,4,"Bozan, Petra",True,16,2,5,0.4,0,0,,1,2,0.5,1,1,2,3,1,2,0,0,5
+2026-02-22_washington_nebraska,Nebraska,14,"Hake, Callin",True,31,0,3,0.0,0,1,0.0,0,0,,0,4,4,0,2,1,1,1,0
+2026-02-22_washington_nebraska,Nebraska,12,"Petrie, Jessica",False,24,4,11,0.364,1,3,0.333,2,2,1.0,0,4,4,4,1,2,1,2,11
+2026-02-22_washington_nebraska,Nebraska,15,"Williams, Kennadi",False,18,1,4,0.25,1,3,0.333,0,0,,0,1,1,1,0,1,0,1,3
+2026-02-22_washington_nebraska,Nebraska,5,"Johnson, Claire",False,9,1,1,1.0,0,0,,0,0,,0,0,0,0,1,0,0,0,2
+2026-02-22_washington_nebraska,Nebraska,34,"Fisher, Emily",False,9,0,0,,0,0,,1,2,0.5,0,1,1,0,0,0,0,1,1
+2026-02-22_washington_nebraska,Nebraska,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,3,4,0,0,0,0,0,0
+2026-02-22_washington_nebraska,Washington,00,"Sellers, Sayvia",True,32,6,15,0.4,1,5,0.2,1,2,0.5,2,1,3,4,2,6,1,1,14
+2026-02-22_washington_nebraska,Washington,21,"McGaughy, Brynn",True,30,6,11,0.545,0,1,0.0,2,2,1.0,5,4,9,3,2,3,1,0,14
+2026-02-22_washington_nebraska,Washington,2,"Howell, Avery",True,38,5,11,0.455,3,6,0.5,0,0,,2,8,10,3,1,3,1,1,13
+2026-02-22_washington_nebraska,Washington,24,"Ladine, Elle",True,37,5,15,0.333,0,8,0.0,0,0,,1,6,7,1,2,1,0,1,10
+2026-02-22_washington_nebraska,Washington,1,"Stines, Hannah",True,36,4,10,0.4,1,5,0.2,0,0,,1,7,8,2,7,1,0,0,9
+2026-02-22_washington_nebraska,Washington,55,"Grabovskaia, Yulia",False,10,1,5,0.2,0,0,,2,2,1.0,3,1,4,1,0,1,1,0,4
+2026-02-22_washington_nebraska,Washington,11,"Briggs, Chloe",False,12,0,1,0.0,0,1,0.0,1,2,0.5,1,1,2,0,1,0,0,0,1
+2026-02-22_washington_nebraska,Washington,5,"Brown, Teagan",False,3,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-02-22_washington_nebraska,Washington,3,"Coppinger, Devin",False,2,0,0,,0,0,,0,0,,0,0,0,1,0,2,0,0,0
+2026-02-22_washington_nebraska,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,1,3,0,0,0,0,0,0
+2026-03-01_oregon_washington,Washington,00,"Sellers, Sayvia",True,40,11,19,0.579,4,8,0.5,3,4,0.75,0,5,5,2,5,3,0,1,29
+2026-03-01_oregon_washington,Washington,24,"Ladine, Elle",True,29,4,9,0.444,1,4,0.25,2,2,1.0,3,2,5,2,2,1,0,0,11
+2026-03-01_oregon_washington,Washington,2,"Howell, Avery",True,40,3,8,0.375,1,5,0.2,0,1,0.0,1,7,8,1,3,0,0,3,7
+2026-03-01_oregon_washington,Washington,21,"McGaughy, Brynn",True,19,3,7,0.429,0,1,0.0,1,2,0.5,3,1,4,4,0,0,1,0,7
+2026-03-01_oregon_washington,Washington,1,"Stines, Hannah",True,23,2,7,0.286,1,3,0.333,0,0,,2,1,3,3,0,1,0,1,5
+2026-03-01_oregon_washington,Washington,3,"Coppinger, Devin",False,28,3,7,0.429,2,6,0.333,1,3,0.333,1,1,2,3,0,1,1,1,9
+2026-03-01_oregon_washington,Washington,5,"Brown, Teagan",False,10,1,1,1.0,0,0,,0,0,,0,0,0,0,0,1,0,0,2
+2026-03-01_oregon_washington,Washington,55,"Grabovskaia, Yulia",False,11,0,1,0.0,0,0,,0,0,,0,2,2,2,3,4,0,1,0
+2026-03-01_oregon_washington,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,1,2,0,0,2,0,0,0
+2026-03-01_oregon_washington,Oregon,2,"Fiso, Katie",True,37,12,17,0.706,1,1,1.0,2,2,1.0,0,5,5,2,3,7,0,1,27
+2026-03-01_oregon_washington,Oregon,1,"Jacobs, Mia",True,16,1,6,0.167,0,4,0.0,2,2,1.0,0,1,1,1,1,2,0,1,4
+2026-03-01_oregon_washington,Oregon,3,"Bell, Sofia",True,37,1,4,0.25,1,4,0.25,0,0,,2,1,3,3,4,1,0,1,3
+2026-03-01_oregon_washington,Oregon,00,"Tuhina, Astera",True,15,1,4,0.25,1,3,0.333,0,0,,0,0,0,1,0,1,0,1,3
+2026-03-01_oregon_washington,Oregon,5,"Muhammad, Amina",True,4,0,0,,0,0,,0,0,,1,0,1,0,0,1,0,0,0
+2026-03-01_oregon_washington,Oregon,35,"Etute, Ehis",False,34,8,12,0.667,0,0,,5,7,0.714,6,7,13,4,2,0,1,2,21
+2026-03-01_oregon_washington,Oregon,42,"Cain, Avary",False,17,1,4,0.25,1,3,0.333,2,3,0.667,0,1,1,2,0,0,1,0,5
+2026-03-01_oregon_washington,Oregon,14,"Long, Ari",False,30,2,5,0.4,0,1,0.0,0,0,,0,5,5,1,1,1,0,0,4
+2026-03-01_oregon_washington,Oregon,21,"Tilliander, Filippa",False,2,0,0,,0,0,,2,2,1.0,0,0,0,0,1,0,0,0,2
+2026-03-01_oregon_washington,Oregon,23,"Rambus, Sarah",False,6,0,1,0.0,0,0,,0,0,,0,0,0,2,1,1,0,0,0
+2026-03-01_oregon_washington,Oregon,22,"Williams, Janiyah",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-03-01_oregon_washington,Oregon,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,4,5,0,0,0,0,0,0
+2026-03-05_washington_southern_california,Southern California,3,"Jones, Londynn",True,27,4,15,0.267,3,12,0.25,8,9,0.889,0,2,2,1,2,1,0,0,19
+2026-03-05_washington_southern_california,Southern California,11,"Smith, Kennedy",True,39,5,13,0.385,1,7,0.143,3,6,0.5,0,1,1,3,3,2,0,3,14
+2026-03-05_washington_southern_california,Southern California,6,"Williams, Laura",True,29,3,6,0.5,0,0,,3,4,0.75,7,6,13,3,3,1,2,1,9
+2026-03-05_washington_southern_california,Southern California,9,"Davidson, Jazzy",True,30,2,13,0.154,1,5,0.2,3,5,0.6,1,0,1,3,1,1,0,2,8
+2026-03-05_washington_southern_california,Southern California,25,"Dunn, Kara",True,27,2,4,0.5,1,2,0.5,1,3,0.333,1,2,3,3,1,2,0,0,6
+2026-03-05_washington_southern_california,Southern California,13,"Mendes, Dayana",False,16,2,4,0.5,2,3,0.667,0,0,,1,1,2,2,0,1,1,0,6
+2026-03-05_washington_southern_california,Southern California,10,"Samuels, Malia",False,21,0,2,0.0,0,1,0.0,2,2,1.0,1,0,1,3,2,0,0,1,2
+2026-03-05_washington_southern_california,Southern California,8,"Raulusaityte, Gerda",False,6,0,0,,0,0,,0,0,,0,0,0,1,1,0,0,0,0
+2026-03-05_washington_southern_california,Southern California,00,"Iwuchukwu, Vivian",False,5,0,1,0.0,0,0,,0,0,,1,0,1,0,0,0,0,0,0
+2026-03-05_washington_southern_california,Southern California,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,2,3,0,0,1,0,0,0
+2026-03-05_washington_southern_california,Washington,24,"Ladine, Elle",True,33,10,13,0.769,3,6,0.5,2,2,1.0,3,3,6,4,4,6,0,0,25
+2026-03-05_washington_southern_california,Washington,2,"Howell, Avery",True,36,7,9,0.778,3,5,0.6,1,3,0.333,0,9,9,2,3,3,0,0,18
+2026-03-05_washington_southern_california,Washington,1,"Stines, Hannah",True,36,6,11,0.545,0,2,0.0,0,0,,0,4,4,3,1,4,0,1,12
+2026-03-05_washington_southern_california,Washington,21,"McGaughy, Brynn",True,20,4,12,0.333,0,3,0.0,2,2,1.0,2,1,3,5,0,2,0,0,10
+2026-03-05_washington_southern_california,Washington,00,"Sellers, Sayvia",True,28,0,5,0.0,0,4,0.0,4,6,0.667,1,4,5,4,2,0,0,0,4
+2026-03-05_washington_southern_california,Washington,55,"Grabovskaia, Yulia",False,19,2,7,0.286,0,0,,0,0,,4,6,10,1,2,1,0,0,4
+2026-03-05_washington_southern_california,Washington,3,"Coppinger, Devin",False,26,0,1,0.0,0,0,,3,4,0.75,1,0,1,3,4,1,0,1,3
+2026-03-05_washington_southern_california,Washington,5,"Brown, Teagan",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-03-05_washington_southern_california,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,4,6,0,0,1,0,0,0
+2026-03-06_ucla_washington,Washington,2,"Howell, Avery",True,38,7,11,0.636,1,4,0.25,3,4,0.75,3,1,4,1,0,1,0,1,18
+2026-03-06_ucla_washington,Washington,21,"McGaughy, Brynn",True,26,6,9,0.667,0,0,,0,0,,0,2,2,5,3,3,0,1,12
+2026-03-06_ucla_washington,Washington,00,"Sellers, Sayvia",True,40,3,11,0.273,1,6,0.167,3,4,0.75,0,3,3,4,8,4,2,2,10
+2026-03-06_ucla_washington,Washington,24,"Ladine, Elle",True,34,4,11,0.364,2,7,0.286,0,0,,0,7,7,2,2,1,0,0,10
+2026-03-06_ucla_washington,Washington,1,"Stines, Hannah",True,30,2,6,0.333,1,3,0.333,0,0,,2,3,5,0,3,2,0,0,5
+2026-03-06_ucla_washington,Washington,3,"Coppinger, Devin",False,19,1,4,0.25,1,2,0.5,0,0,,0,0,0,0,0,1,0,0,3
+2026-03-06_ucla_washington,Washington,55,"Grabovskaia, Yulia",False,13,1,1,1.0,0,0,,0,0,,0,2,2,1,0,1,0,0,2
+2026-03-06_ucla_washington,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,2,2,0,0,1,0,0,0
+2026-03-06_ucla_washington,UCLA,51,"Betts, Lauren",True,27,13,20,0.65,0,0,,0,1,0.0,2,6,8,2,2,2,0,1,26
+2026-03-06_ucla_washington,UCLA,1,"Rice, Kiki",True,37,7,14,0.5,1,3,0.333,3,4,0.75,0,2,2,3,6,1,0,1,18
+2026-03-06_ucla_washington,UCLA,8,"Kneepkens, Gianna",True,30,4,11,0.364,0,4,0.0,5,5,1.0,2,2,4,2,2,2,0,1,13
+2026-03-06_ucla_washington,UCLA,5,"Leger-walker, Charlisse",True,32,5,8,0.625,0,2,0.0,0,0,,1,4,5,0,5,1,0,1,10
+2026-03-06_ucla_washington,UCLA,11,"Jaquez, Gabriela",True,28,2,3,0.667,0,0,,1,2,0.5,0,3,3,2,1,4,0,1,5
+2026-03-06_ucla_washington,UCLA,32,"Dugalić, Angela",False,28,3,5,0.6,0,1,0.0,0,0,,4,2,6,1,3,0,0,2,6
+2026-03-06_ucla_washington,UCLA,16,"Betts, Sienna",False,13,0,2,0.0,0,0,,0,0,,1,2,3,1,0,0,0,0,0
+2026-03-06_ucla_washington,UCLA,9,"Bilic, Lena",False,3,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-03-06_ucla_washington,UCLA,33,"Muse, Amanda",False,2,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2026-03-06_ucla_washington,UCLA,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,3,4,0,0,0,0,0,0
+2026-03-20_washington_south_dakota_st,South Dakota St.,31,"Meyer, Brooklyn",True,34,13,20,0.65,0,0,,3,3,1.0,2,5,7,2,0,2,1,1,29
+2026-03-20_washington_south_dakota_st,South Dakota St.,4,"Fox, Emilee",True,31,5,8,0.625,4,5,0.8,0,0,,0,1,1,1,3,3,0,0,14
+2026-03-20_washington_south_dakota_st,South Dakota St.,3,"Mathiowetz, Madison",True,31,3,9,0.333,0,2,0.0,0,0,,0,3,3,0,5,3,0,0,6
+2026-03-20_washington_south_dakota_st,South Dakota St.,11,"Thul, Hadley",True,34,1,8,0.125,1,4,0.25,0,0,,0,1,1,1,0,5,0,2,3
+2026-03-20_washington_south_dakota_st,South Dakota St.,10,"Behrens, Hilary",True,29,0,1,0.0,0,1,0.0,0,0,,0,5,5,1,2,2,1,1,0
+2026-03-20_washington_south_dakota_st,South Dakota St.,15,"Abdouch, Mahli",False,15,1,3,0.333,0,0,,0,0,,1,0,1,1,3,2,0,2,2
+2026-03-20_washington_south_dakota_st,South Dakota St.,5,"Colbeck, Ellie",False,9,0,1,0.0,0,1,0.0,0,0,,0,1,1,1,1,0,0,0,0
+2026-03-20_washington_south_dakota_st,South Dakota St.,24,"Hartwig, Maggie",False,8,0,1,0.0,0,1,0.0,0,0,,0,1,1,1,0,0,0,0,0
+2026-03-20_washington_south_dakota_st,South Dakota St.,34,"Felchle, Brooklynn",False,6,0,1,0.0,0,0,,0,0,,0,0,0,0,1,0,0,0,0
+2026-03-20_washington_south_dakota_st,South Dakota St.,45,"Dunn, Jaidyn",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-03-20_washington_south_dakota_st,South Dakota St.,32,"Sheppard, Claire",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-03-20_washington_south_dakota_st,South Dakota St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,5,5,0,0,1,0,0,0
+2026-03-20_washington_south_dakota_st,Washington,2,"Howell, Avery",True,33,9,16,0.562,7,13,0.538,5,8,0.625,2,7,9,3,1,0,0,2,30
+2026-03-20_washington_south_dakota_st,Washington,21,"McGaughy, Brynn",True,17,5,11,0.455,0,1,0.0,4,4,1.0,0,4,4,4,1,0,0,2,14
+2026-03-20_washington_south_dakota_st,Washington,1,"Stines, Hannah",True,31,2,8,0.25,1,3,0.333,0,0,,2,1,3,0,4,0,1,2,5
+2026-03-20_washington_south_dakota_st,Washington,24,"Ladine, Elle",True,27,2,9,0.222,1,4,0.25,0,0,,2,4,6,0,4,3,0,0,5
+2026-03-20_washington_south_dakota_st,Washington,00,"Sellers, Sayvia",True,34,2,5,0.4,0,2,0.0,0,0,,1,4,5,2,10,2,1,3,4
+2026-03-20_washington_south_dakota_st,Washington,55,"Grabovskaia, Yulia",False,19,4,9,0.444,0,0,,0,0,,2,1,3,2,1,2,0,3,8
+2026-03-20_washington_south_dakota_st,Washington,3,"Coppinger, Devin",False,27,3,7,0.429,0,0,,0,0,,4,2,6,2,0,1,0,0,6
+2026-03-20_washington_south_dakota_st,Washington,5,"Brown, Teagan",False,6,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2026-03-20_washington_south_dakota_st,Washington,11,"Briggs, Chloe",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-03-20_washington_south_dakota_st,Washington,22,"Gillmer, Shayla",False,2,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2026-03-20_washington_south_dakota_st,Washington,23,"Anderson, Olivia",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-03-20_washington_south_dakota_st,Washington,35,"Harvey, Sienna",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-03-20_washington_south_dakota_st,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,2,3,0,0,1,0,0,0
+2026-03-22_tcu_washington,Washington,00,"Sellers, Sayvia",True,38,7,22,0.318,3,9,0.333,1,1,1.0,0,6,6,3,5,4,0,1,18
+2026-03-22_tcu_washington,Washington,2,"Howell, Avery",True,45,4,8,0.5,3,5,0.6,3,3,1.0,0,8,8,1,3,0,0,0,14
+2026-03-22_tcu_washington,Washington,21,"McGaughy, Brynn",True,28,5,9,0.556,0,1,0.0,3,6,0.5,0,3,3,4,1,3,0,1,13
+2026-03-22_tcu_washington,Washington,1,"Stines, Hannah",True,36,4,10,0.4,2,6,0.333,0,0,,0,3,3,0,1,1,0,2,10
+2026-03-22_tcu_washington,Washington,24,"Ladine, Elle",True,30,1,6,0.167,0,2,0.0,0,0,,2,1,3,2,1,0,0,2,2
+2026-03-22_tcu_washington,Washington,55,"Grabovskaia, Yulia",False,16,1,3,0.333,0,0,,0,0,,1,0,1,2,2,0,1,1,2
+2026-03-22_tcu_washington,Washington,3,"Coppinger, Devin",False,32,0,4,0.0,0,2,0.0,0,0,,2,1,3,1,0,1,0,1,0
+2026-03-22_tcu_washington,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,6,8,0,0,1,0,0,0
+2026-03-22_tcu_washington,TCU,5,"Miles, Olivia",True,45,9,24,0.375,0,5,0.0,0,1,0.0,0,10,10,1,8,4,0,1,18
+2026-03-22_tcu_washington,TCU,17,"Silva, Clara",True,39,6,8,0.75,0,0,,4,6,0.667,2,6,8,2,1,0,2,2,16
+2026-03-22_tcu_washington,TCU,1,"Bigby, Taylor",True,40,5,11,0.455,3,8,0.375,2,2,1.0,1,3,4,0,0,0,1,0,15
+2026-03-22_tcu_washington,TCU,7,"Suárez, Marta",True,39,4,12,0.333,1,4,0.25,0,0,,1,7,8,4,1,6,0,0,9
+2026-03-22_tcu_washington,TCU,4,"Hunter, Donovyn",True,42,1,3,0.333,0,2,0.0,0,0,,0,3,3,5,4,2,0,0,2
+2026-03-22_tcu_washington,TCU,2,"Sheffey, Veronica",False,8,1,2,0.5,0,0,,0,0,,0,0,0,0,0,0,0,1,2
+2026-03-22_tcu_washington,TCU,16,"Bielefeld, Clara",False,9,0,0,,0,0,,0,0,,1,3,4,0,1,0,1,0,0
+2026-03-22_tcu_washington,TCU,00,"Basham, Kennedy",False,3,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2026-03-22_tcu_washington,TCU,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,2,4,0,0,0,0,0,0
