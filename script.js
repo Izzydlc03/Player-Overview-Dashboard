@@ -296,6 +296,12 @@ const ROSTER_HEADSHOTS = {
     'mimi moon': 'https://fullertontitans.com/images/2026/9/9/1-Mimi_Moon_HS-CSF_WBB.jpg?width=300&quality=90',
     'talia maxwell': 'https://fullertontitans.com/images/2026/9/9/23-Talia_Maxwell_HS-CSF_WBB.jpg?width=300&quality=90',
   },
+  csulb: {
+    'rosie akot': 'https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Flongbeachstate.com%2Fimages%2F2026%2F8%2F17%2F99266548_KAco_08052026_WBB_Headshots_0001.jpg&width=603&height=803&gravity=north&type=webp',
+  },
+  ucr: {
+    'hannah wickstrom': 'https://images.sidearmdev.com/resize?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgohighlanders.com%2Fimages%2F2026%2F1%2F21%2FHannah.png&height=340&type=webp',
+  },
   lmu: {
     'jess lawson': 'https://d2vhz6gv4pigvw.cloudfront.net/images/2025/10/2/Jess_Lawson.jpg?width=600&quality=90',
     'mari somvichian': 'https://d2vhz6gv4pigvw.cloudfront.net/images/2025/10/2/Mari_Somvichian.jpg?width=600&quality=90',
@@ -316,6 +322,41 @@ const ROSTER_HEADSHOTS = {
     'sarah deng': 'https://d2vhz6gv4pigvw.cloudfront.net/images/2026/7/28/0D3A6472.jpg?width=300&quality=90',
     'shanayka ismar': 'https://d2vhz6gv4pigvw.cloudfront.net/images/2026/7/27/IMG_3718.JPG?width=300&quality=90',
     'shawnee nordstrom': 'https://d2vhz6gv4pigvw.cloudfront.net/images/2026/7/28/0D3A9542.jpg?width=300&quality=90',
+  },
+  washington: {
+    'olivia anderson': 'https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fwashington.sidearmsports.com%2Fimages%2F2025%2F10%2F27%2F25-26-Headshot-Anderson.png&width=603&height=803&gravity=north&type=webp',
+    'chloe briggs': 'https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fwashington.sidearmsports.com%2Fimages%2F2025%2F10%2F27%2F25-25-Headshot-Briggs.png&width=603&height=803&gravity=north&type=webp',
+    'teagan brown': 'https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fwashington.sidearmsports.com%2Fimages%2F2025%2F10%2F11%2F25-26-Headshot-Brown.png&width=603&height=803&gravity=north&type=webp',
+    'nina cain': 'https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fwashington.sidearmsports.com%2Fimages%2F2025%2F10%2F11%2F25-26-Headshot-Cain.png&width=603&height=803&gravity=north&type=webp',
+    'devin coppinger': 'https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fwashington.sidearmsports.com%2Fimages%2F2025%2F10%2F11%2F25-26-Headshot-Coppinger.png&width=603&height=803&gravity=north&type=webp',
+    'shayla gillmer': 'https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fwashington.sidearmsports.com%2Fimages%2F2025%2F10%2F11%2F25-26-Headshot-Gillmer_GaALl.png&width=603&height=803&gravity=north&type=webp',
+    'yulia grabovskaia': 'https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fwashington.sidearmsports.com%2Fimages%2F2025%2F10%2F11%2F25-26-Headshot-Grabovskaia.png&width=603&height=803&gravity=north&type=webp',
+    'sienna harvey': 'https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fwashington.sidearmsports.com%2Fimages%2F2025%2F10%2F11%2F25-26-Headshot-Harvey.png&width=603&height=803&gravity=north&type=webp',
+    'avery howell': 'https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fwashington.sidearmsports.com%2Fimages%2F2025%2F10%2F11%2F25-26-Headshot-Howell_WvxSF.png&width=603&height=803&gravity=north&type=webp',
+    'elle ladine': 'https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fwashington.sidearmsports.com%2Fimages%2F2025%2F10%2F11%2F25-26-Headshot-Ladine.png&width=603&height=803&gravity=north&type=webp',
+    'brynn mcgaughy': 'https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fwashington.sidearmsports.com%2Fimages%2F2025%2F12%2F5%2FBrynn_McGaughy_Headshot_MBbqa.png&width=603&height=803&gravity=north&type=webp',
+    'sayvia sellers': 'https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fwashington.sidearmsports.com%2Fimages%2F2025%2F10%2F11%2F25-26-Headshot-Sellers__2_.png&width=603&height=803&gravity=north&type=webp',
+    'hannah stines': 'https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fwashington.sidearmsports.com%2Fimages%2F2025%2F10%2F11%2F25-26-Headshot-Stines__2_.png&width=603&height=803&gravity=north&type=webp',
+  },
+  usandiego: {
+    'jessica ajayi': 'https://usdtoreros.com/images/2025/10/15/Jessica_Ajayi_Head_Shot.png?width=300&quality=90',
+    'lilly amor': 'https://usdtoreros.com/images/2025/10/15/Lilly_Amor_Head_Shot.png?width=300&quality=90',
+    'kylie ray': 'https://usdtoreros.com/images/2025/10/15/Kylie_Ray_Head_Shot.png?width=300&quality=90',
+    'eva ruse': 'https://usdtoreros.com/images/2025/10/15/Eva_Ruse_Headshot.png?width=300&quality=90',
+    'ayla williams': 'https://usdtoreros.com/images/2025/10/15/Ayla_Williams_Headshot.png?width=300&quality=90',
+  },
+  portlandstate: {
+    'kyleigh brown': 'https://goviks.com/images/2025/10/15/12_-_Kyleigh_Tp50Y.png?width=300&quality=90',
+    'ryme jaekel': 'https://goviks.com/images/2025/10/15/22_-_Ryme_Jaekel_vD2tT.png?width=300&quality=90',
+    'kirstine munk': 'https://goviks.com/images/2025/10/15/10_-_Kirstine_Munk_VRLZN.png?width=300&quality=90',
+    'laynee torres-kahapea': 'https://goviks.com/images/2025/10/15/11_-_Laynee_Torres-Kahapea_YBSYM.png?width=300&quality=90',
+  },
+  usf: {
+    'aina cargol': 'https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fusfca.sidearmsports.com%2Fimages%2F2025%2F10%2F14%2F9_Aina_Cargol_Headshot.jpg&width=603&height=803&gravity=north&type=webp',
+    'candy edokpaigbe': 'https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fusfca.sidearmsports.com%2Fimages%2F2025%2F10%2F14%2F23_Candy_Edkopaigbe_Headshot.jpg&width=603&height=803&gravity=north&type=webp',
+    'noelia mouriño': 'https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fusfca.sidearmsports.com%2Fimages%2F2025%2F10%2F14%2F3_Noelia_Mourino_Headshot.jpg&width=603&height=803&gravity=north&type=webp',
+    'nataša taušová': 'https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fusfca.sidearmsports.com%2Fimages%2F2025%2F10%2F14%2F12_Natasa_Tausova_Headshot.jpg&width=603&height=803&gravity=north&type=webp',
+    'paula tirado': 'https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fusfca.sidearmsports.com%2Fimages%2F2025%2F10%2F14%2F22_Paula_Tirado_Headshot.jpg&width=603&height=803&gravity=north&type=webp',
   },
 };
 /* Returns an <img> tag if a logo exists for this team key, otherwise falls

@@ -479,6 +479,17 @@ tbody tr.selected{ background:var(--accent-soft); }
 }
 .shot-pie{
   width:100%; max-width:250px; margin:0 auto; display:block; overflow:visible;
+  -webkit-tap-highlight-color:transparent;
+}
+.shot-pie,
+.shot-pie *{
+  outline:none;
+}
+.shot-pie:focus,
+.shot-pie:focus-visible,
+.shot-pie-slice:focus,
+.shot-pie-slice:focus-visible{
+  outline:none;
 }
 .shot-pie-slice{
   cursor:pointer; stroke:rgba(255,255,255,.9); stroke-width:2px; transition:opacity .16s ease, transform .16s ease;
@@ -511,6 +522,7 @@ tbody tr.selected{ background:var(--accent-soft); }
 .shot-pie-legend-stat{ font-family:var(--font-mono); text-align:right; }
 .player-radar{
   width:100%; max-width:320px; margin:6px auto 0; display:block; overflow:visible;
+  -webkit-tap-highlight-color:transparent;
 }
 .radar-grid-ring{
   fill:none; stroke:rgba(36,56,94,.18); stroke-width:1;
@@ -525,12 +537,15 @@ tbody tr.selected{ background:var(--accent-soft); }
   fill:#264475; stroke:white; stroke-width:1.4;
 }
 .radar-hit{
-  fill:transparent; cursor:pointer; outline:none;
+  fill:transparent; stroke:transparent; stroke-width:0; cursor:pointer; outline:none;
 }
 .radar-hit.active{
-  fill:rgba(36,56,94,.08);
-  stroke:var(--ink-muted);
-  stroke-width:1.2;
+  fill:transparent;
+  stroke:transparent;
+}
+.radar-hit:focus,
+.radar-hit:focus-visible{
+  outline:none;
 }
 .radar-hit:hover + .radar-axis-label,
 .radar-hit:focus + .radar-axis-label{
