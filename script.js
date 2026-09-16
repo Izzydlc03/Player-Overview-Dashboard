@@ -2780,12 +2780,12 @@ function diffRowsHtml(stats, obj1, obj2){
     const aValue = `${aTag}${s.fmt(v1)}${s.subKey ? `<span class="diffval-sub">${s.subFmt(sub1)}</span>` : ''}`;
     const bValue = `${s.fmt(v2)}${bTag}${s.subKey ? `<span class="diffval-sub">${s.subFmt(sub2)}</span>` : ''}`;
     const label = `${s.label}${s.subKey ? `<span class="stat-label-sub">${s.subLabel}</span>` : ''}`;
-    return `<div class="diffrow ${aBetter?'left-wins':''} ${bBetter?'right-wins':''}">
-      <div class="diffval a" style="text-align:right;">${aValue}</div>
+    return `<div class="diffrow diffrow-mirrored ${aBetter?'left-wins':''} ${bBetter?'right-wins':''}">
       <div class="bar-track left"><div class="bar-fill a" style="width:${w1}%"></div></div>
+      <div class="diffval a">${aValue}</div>
       <div class="stat-label">${label}</div>
-      <div class="bar-track"><div class="bar-fill b" style="width:${w2}%"></div></div>
       <div class="diffval b">${bValue}</div>
+      <div class="bar-track"><div class="bar-fill b" style="width:${w2}%"></div></div>
     </div>`;
   }).join('');
 }
