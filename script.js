@@ -20,7 +20,14 @@ const SEASON_CACHE = {};
 const BART_CACHE = {};
 const BART_PLAYER_CACHE = {};
 const ARCHETYPE_CACHE = {};
-const DATA_VERSION = '20260916z';
+const DATA_VERSION = '20260916aa';
+
+function possessionRatePercent(raw, key = ''){
+  const num = Number(raw || 0);
+  if(!Number.isFinite(num)) return 0;
+  const alreadyPercentThreshold = ['stl_pct', 'blk_pct'].includes(key) ? 0.2 : 0.5;
+  return Math.abs(num) >= alreadyPercentThreshold ? num : num * 100;
+}
 
 function bartSeasonYear(season){
   const end = season.split('-')[1];
@@ -145,12 +152,12 @@ async function loadBartPlayerStats(season){
           usage: Number(row.usg || 0) * 100,
           ts: Number(row.ts || 0) * 100,
           efg: Number(row.efg || 0) * 100,
-          astPct: Number(row.ast_pct || 0) * 100,
-          toPct: Number(row.to_pct || 0) * 100,
-          drbPct: Number(row.drb_pct || 0) * 100,
-          orbPct: Number(row.orb_pct || 0) * 100,
-          stlPct: Number(row.stl_pct || 0) * 100,
-          blkPct: Number(row.blk_pct || 0) * 100,
+          astPct: possessionRatePercent(row.ast_pct, 'ast_pct'),
+          toPct: possessionRatePercent(row.to_pct, 'to_pct'),
+          drbPct: possessionRatePercent(row.drb_pct, 'drb_pct'),
+          orbPct: possessionRatePercent(row.orb_pct, 'orb_pct'),
+          stlPct: possessionRatePercent(row.stl_pct, 'stl_pct'),
+          blkPct: possessionRatePercent(row.blk_pct, 'blk_pct'),
           rimmade: Number(row.rimmade || 0),
           rimatt: Number(row.rimatt || 0),
           rimPct: Number(row.rim_pct || 0) * 100,
@@ -1946,7 +1953,9 @@ function advancedNumber(player, key, fallback = 0){
 }
 
 function advancedPercent(player, key, fallback = 0){
-  return advancedNumber(player, key, fallback) * 100;
+  const possessionRateKeys = new Set(['ast_pct', 'to_pct', 'drb_pct', 'orb_pct', 'stl_pct', 'blk_pct']);
+  const raw = advancedNumber(player, key, fallback);
+  return possessionRateKeys.has(key) ? possessionRatePercent(raw, key) : raw * 100;
 }
 
 function playerPer40(player, key){
