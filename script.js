@@ -591,6 +591,10 @@ function displayClassYear(player){
 function displayListedPosition(player){
   return displayPos(player.advanced?.pos || player.pos) || 'Player';
 }
+function displayPlayerRole(teamKey, team, player){
+  const listed = displayPos(player.advanced?.pos || player.pos);
+  return listed || playerArchetype(teamKey, team, player)?.role || 'Player';
+}
 function playerHeadshot(teamKey, playerName){
   const teamShots = ROSTER_HEADSHOTS[teamKey] || {};
   return teamShots[normalizePlayerName(playerName)]
@@ -1650,10 +1654,11 @@ function rosterPageCards(team){
     ${leaders.map(({player, idx, pg}, rank)=>{
       const headshot = playerHeadshot(state.team, player.name);
       const archetype = playerArchetype(state.team, team, player);
+      const roleLabel = displayPlayerRole(state.team, team, player);
       return `<button class="roster-spotlight-card" data-roster-card="${idx}" style="--card-bg:${palette.bg};--card-border:${palette.border};--card-accent:${palette.accent};--card-accent-soft:${palette.accentSoft};">
         <div class="roster-spotlight-top">
           <span class="roster-spotlight-rank">#${player.num}</span>
-          <span class="roster-spotlight-season">${displayListedPosition(player)}</span>
+          <span class="roster-spotlight-season">${roleLabel}</span>
         </div>
         <div class="roster-spotlight-art">
           <div class="roster-spotlight-logo">${avatarContent(state.team, team.short)}</div>
@@ -2086,6 +2091,7 @@ function rosterSectionCard({title, hint, tableKey, columns, rows, sortState, hea
             const active = state.selectedPlayer && state.selectedPlayer.team===state.team && state.selectedPlayer.idx===i;
             const headshot = playerHeadshot(state.team, p.name);
             const archetype = playerArchetype(state.team, TEAMS[state.team], p);
+            const roleLabel = displayPlayerRole(state.team, TEAMS[state.team], p);
             return `<tr class="clickable ${active?'selected':''}" data-idx="${i}">
               ${columns.map(col=>{
                 if(col.key === 'name'){
@@ -2096,7 +2102,7 @@ function rosterSectionCard({title, hint, tableKey, columns, rows, sortState, hea
                       </span>
                       <span class="roster-identity">
                         <span class="roster-player">${displayPlayerName(p.name)} <span class="roster-inline-num">#${p.num}</span></span>
-                        <span class="roster-meta">${displayListedPosition(p)} · ${displayClassYear(p)}</span>
+                        <span class="roster-meta">${roleLabel} · ${displayClassYear(p)}</span>
                         ${archetype ? `<span class="roster-archetype">${archetypeLabel(archetype)}</span>` : ''}
                       </span>
                     </div>
@@ -2805,7 +2811,7 @@ function playerDetail(team, idx, stateKey = ''){
       <div class="pdetail-avatar">${headshot ? `<img src="${headshot}" alt="${displayName} headshot">` : avatarContent(contextTeam, initials(p.name))}</div>
       <div>
         <h3 class="pdetail-name">${displayName} <span class="muted" style="font-weight:700;">#${p.num}</span></h3>
-        <div class="pdetail-meta">${displayListedPosition(p)} · ${displayClassYear(p)} · ${team.name} · ${p.gp} games</div>
+        <div class="pdetail-meta">${displayPlayerRole(contextTeam, team, p)} · ${displayClassYear(p)} · ${team.name} · ${p.gp} games</div>
         ${archetype ? `<div class="pdetail-archetype">${archetype.code} · ${archetypeLabel(archetype)}</div>${archetypeChips}` : ''}
       </div>
     </div>
