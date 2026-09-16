@@ -17,6 +17,162 @@ const ICONS = {
 let TEAMS = {};
 let TEAM_KEYS = [];
 const SEASON_CACHE = {};
+const BART_CACHE = {};
+const BART_PLAYER_CACHE = {};
+const DATA_VERSION = '20260916d';
+
+function bartSeasonYear(season){
+  const end = season.split('-')[1];
+  return Number(`20${end}`);
+}
+
+function bartTeamName(teamKey, team){
+  const aliases = {
+    ucsd: 'UC San Diego',
+    ucdavis: 'UC Davis',
+    ucirvine: 'UC Irvine',
+    hawaii: 'Hawaii',
+    csub: 'Cal St. Bakersfield',
+    csulb: 'Long Beach St.',
+    ucr: 'UC Riverside',
+    ucsb: 'UC Santa Barbara',
+    csun: 'Cal St. Northridge',
+    calpoly: 'Cal Poly',
+    csuf: 'Cal St. Fullerton',
+    lmu: 'Loyola Marymount',
+  };
+  return aliases[teamKey] || team.name;
+}
+
+function bartOpponentName(name){
+  const aliases = {
+    "Hawai'i": 'Hawaii',
+    'Cal State Northridge': 'Cal St. Northridge',
+    'Long Beach State': 'Long Beach St.',
+    'Cal State Bakersfield': 'Cal St. Bakersfield',
+    'Cal State Fullerton': 'Cal St. Fullerton',
+    'LMU (CA)': 'Loyola Marymount',
+  };
+  return aliases[name] || name;
+}
+
+function normTeamName(name){
+  return bartOpponentName(name).replace(/[.'’]/g, '').replace(/\s+/g, ' ').trim().toLowerCase();
+}
+
+function rankPercentile(rank, count, lowerRankBetter = true){
+  if(!rank || !count || count <= 1) return 0;
+  return lowerRankBetter ? ((count - rank) / (count - 1)) * 100 : ((rank - 1) / (count - 1)) * 100;
+}
+
+function valuePercentile(rows, key, value, higherBetter = true){
+  const vals = rows.map(row => row[key]).filter(Number.isFinite).sort((a,b)=>a-b);
+  if(!Number.isFinite(value) || vals.length <= 1) return 0;
+  const below = vals.filter(v => v < value).length;
+  const equal = vals.filter(v => v === value).length;
+  const pct = ((below + Math.max(equal - 1, 0) / 2) / (vals.length - 1)) * 100;
+  return higherBetter ? pct : 100 - pct;
+}
+
+async function loadBartRatings(season){
+  const year = bartSeasonYear(season);
+  if(!BART_CACHE[year]){
+    try{
+      const res = await fetch(`data/bart_${year}_team_results.csv`);
+      const text = res.ok ? await res.text() : '';
+      if(!text){
+        BART_CACHE[year] = { rows: [], byTeam: {} };
+      } else {
+        const rows = parseCsv(text).map(row => ({
+          team: row.team,
+          conf: row.conf,
+          record: row.record,
+          rank: Number(row.rank || 0),
+          adjoe: Number(row.adjoe || 0),
+          oeRank: Number(row['oe Rank'] || 0),
+          adjde: Number(row.adjde || 0),
+          deRank: Number(row['de Rank'] || 0),
+          barthag: Number(row.barthag || 0),
+          sos: Number(row.sos || 0),
+          ncsos: Number(row.ncsos || 0),
+          wab: Number(row.WAB || 0),
+          wabRank: Number(row['WAB Rk'] || 0),
+          adjt: Number(row.adjt || 0),
+        }));
+        BART_CACHE[year] = {
+          rows,
+          byTeam: Object.fromEntries(rows.map(row => [row.team, row])),
+          teamNames: new Set(rows.map(row => normTeamName(row.team))),
+        };
+      }
+    } catch {
+      BART_CACHE[year] = { rows: [], byTeam: {} };
+    }
+  }
+  return BART_CACHE[year];
+}
+
+function bartPlayerKey(teamName, playerName){
+  return `${normTeamName(teamName)}::${normalizePlayerName(playerName)}`;
+}
+
+async function loadBartPlayerStats(season){
+  const year = bartSeasonYear(season);
+  if(!BART_PLAYER_CACHE[year]){
+    try{
+      const res = await fetch(`data/bart_${year}_player_stats.csv`);
+      const text = res.ok ? await res.text() : '';
+      if(!text){
+        BART_PLAYER_CACHE[year] = { rows: [], byKey: {} };
+      } else {
+        const rows = parseCsv(text).map(row => ({
+          name: row.name,
+          team: row.team,
+          conf: row.conf,
+          pos: row.pos || '',
+          gp: Number(row.gp || 0),
+          mpg: Number(row.mpg || 0),
+          ppg: Number(row.ppg || 0),
+          rpg: Number(row.rpg || 0),
+          apg: Number(row.apg || 0),
+          fgPct: Number(row.fg || 0) * 100,
+          tpPct: Number(row.tp || 0) * 100,
+          porpag: Number(row.porpag || 0),
+          adjoe: Number(row.adjoe || 0),
+          drtg: Number(row.drtg || 0),
+          bpm: Number(row.bpm || 0),
+          usage: Number(row.usg || 0) * 100,
+          ts: Number(row.ts || 0) * 100,
+          efg: Number(row.efg || 0) * 100,
+          astPct: Number(row.ast_pct || 0) * 100,
+          toPct: Number(row.to_pct || 0) * 100,
+          drbPct: Number(row.drb_pct || 0) * 100,
+          orbPct: Number(row.orb_pct || 0) * 100,
+          stlPct: Number(row.stl_pct || 0) * 100,
+          blkPct: Number(row.blk_pct || 0) * 100,
+          rimmade: Number(row.rimmade || 0),
+          rimatt: Number(row.rimatt || 0),
+          rimPct: Number(row.rim_pct || 0) * 100,
+          midmade: Number(row.midmade || 0),
+          midatt: Number(row.midatt || 0),
+          midPct: Number(row.mid_pct || 0) * 100,
+          tpm: Number(row.tpm || 0),
+          tpa: Number(row.tpa || 0),
+          rimShare: Number(row.rim_pct_of_total_attempts || 0) * 100,
+          midShare: Number(row.mid_pct_of_total_attempts || 0) * 100,
+          threeShare: Number(row.three_pct_of_total_attempts || 0) * 100,
+          rimAssistPct: Number(row.pct_rim_made_assisted || 0) * 100,
+          midAssistPct: Number(row.pct_mid_made_assisted || 0) * 100,
+          threeAssistPct: Number(row.pct_three_made_assisted || 0) * 100,
+        })).filter(row => row.name && row.team);
+        BART_PLAYER_CACHE[year] = { rows, byKey: Object.fromEntries(rows.map(row => [bartPlayerKey(row.team, row.name), row])) };
+      }
+    } catch {
+      BART_PLAYER_CACHE[year] = { rows: [], byKey: {} };
+    }
+  }
+  return BART_PLAYER_CACHE[year];
+}
 
 function injectDynamicTeams(){
   for(const key in OPPONENT_TEAMS){
@@ -29,10 +185,12 @@ function injectDynamicTeams(){
 
 async function loadSeason(season){
   if(!SEASON_CACHE[season]){
-    const res = await fetch(`data/${season}.json`);
+    const res = await fetch(`data/${season}.json?v=${DATA_VERSION}`);
     if(!res.ok) throw new Error(`Failed to load data/${season}.json (${res.status})`);
     SEASON_CACHE[season] = await res.json();
   }
+  await loadBartRatings(season);
+  await loadBartPlayerStats(season);
   TEAMS = { ...SEASON_CACHE[season] };
   injectDynamicTeams();
   TEAM_KEYS = Object.keys(TEAMS);
@@ -196,6 +354,18 @@ function playerHeadshot(teamKey, playerName){
     || teamShots[asciiPlayerNameKey(playerName)]
     || teamShots[loosePlayerNameKey(playerName)]
     || '';
+}
+function rotationPhotoHtml(teamKey, player){
+  const name = displayPlayerName(player.name);
+  const headshot = playerHeadshot(teamKey, player.name);
+  const fallback = `<div class="rotation-photo-fallback">
+    ${avatarContent(teamKey, initials(name))}
+    <span>${initials(name)}</span>
+  </div>`;
+  if(headshot){
+    return `${fallback}<img class="rotation-headshot" src="${headshot}" alt="${name} headshot" referrerpolicy="no-referrer" onerror="this.remove()">`;
+  }
+  return fallback;
 }
 function teamColor(key){ return key===state.team ? 'var(--series-a)' : 'var(--series-b)'; }
 
@@ -365,14 +535,39 @@ async function loadOpponentSeason(teamKey, season){
   const analysisRows = csv4.filter(row => row.team === teamName);
 
   const analysisByGame = Object.fromEntries(analysisRows.map(row => [row.game_id, row]));
+  const boxRowsByGameTeam = {};
+  csv2.forEach(row => {
+    const key = `${row.game_id}::${row.team}`;
+    if(!boxRowsByGameTeam[key]) boxRowsByGameTeam[key] = [];
+    boxRowsByGameTeam[key].push(row);
+  });
   const playerRowsByGame = {};
   playerRows.forEach(row => {
     if(!playerRowsByGame[row.game_id]) playerRowsByGame[row.game_id] = [];
     playerRowsByGame[row.game_id].push(row);
   });
+  const totalsFor = (gameId, team) => (boxRowsByGameTeam[`${gameId}::${team}`] || [])
+    .reduce((acc, playerRow) => {
+      acc.fgm += Number(playerRow.fg_m || 0);
+      acc.fga += Number(playerRow.fg_a || 0);
+      acc.tpm += Number(playerRow['3p_m'] || 0);
+      acc.tpa += Number(playerRow['3p_a'] || 0);
+      acc.ftm += Number(playerRow.ft_m || 0);
+      acc.fta += Number(playerRow.ft_a || 0);
+      acc.oreb += Number(playerRow.oreb || 0);
+      acc.dreb += Number(playerRow.dreb || 0);
+      acc.ast += Number(playerRow.ast || 0);
+      acc.to += Number(playerRow.to || 0);
+      acc.stl += Number(playerRow.stl || 0);
+      acc.blk += Number(playerRow.blk || 0);
+      acc.pf += Number(playerRow.pf || 0);
+      acc.pts += Number(playerRow.pts || 0);
+      return acc;
+    }, { fgm:0, fga:0, tpm:0, tpa:0, ftm:0, fta:0, oreb:0, dreb:0, ast:0, to:0, stl:0, blk:0, pf:0, pts:0 });
 
   const games = gameRows.map(row => {
     const teamIsHome = row.home_team === teamName;
+    const oppName = teamIsHome ? row.away_team : row.home_team;
     const teamScore = Number(teamIsHome ? row.home_score : row.away_score);
     const oppScore = Number(teamIsHome ? row.away_score : row.home_score);
     const analysis = analysisByGame[row.game_id];
@@ -387,6 +582,8 @@ async function loadOpponentSeason(teamKey, season){
       }
       return acc;
     }, { reb: 0, ast: 0, to: 0, fouls: 0 });
+    const teamTotals = totalsFor(row.game_id, teamName);
+    const oppTotals = totalsFor(row.game_id, oppName);
     const quarterPoints = analysis ? ['q1', 'q2', 'q3', 'q4'].map(q =>
       pointsFromSplit(analysis[`${q}_fg`], analysis[`${q}_3p`], analysis[`${q}_ft`])
     ) : [0, 0, 0, 0];
@@ -394,16 +591,43 @@ async function loadOpponentSeason(teamKey, season){
     return {
       game_id: row.game_id,
       date: row.date,
-      opp: teamIsHome ? row.away_team : row.home_team,
+      opp: oppName,
       home: row.home_away_neutral === 'home',
       pf: teamScore,
       pa: oppScore,
-      fgm: shooting.made,
-      fga: shooting.att,
+      fgm: shooting.made || teamTotals.fgm,
+      fga: shooting.att || teamTotals.fga,
+      tpm: teamTotals.tpm,
+      tpa: teamTotals.tpa,
+      ftm: teamTotals.ftm,
+      fta: teamTotals.fta,
+      oreb: teamTotals.oreb,
+      dreb: teamTotals.dreb,
       reb: totals.reb,
       ast: totals.ast,
       to: totals.to,
+      stl: teamTotals.stl,
+      blk: teamTotals.blk,
       fouls: totals.fouls,
+      oppFgm: oppTotals.fgm,
+      oppFga: oppTotals.fga,
+      oppTpm: oppTotals.tpm,
+      oppTpa: oppTotals.tpa,
+      oppFtm: oppTotals.ftm,
+      oppFta: oppTotals.fta,
+      oppOreb: oppTotals.oreb,
+      oppDreb: oppTotals.dreb,
+      oppReb: oppTotals.oreb + oppTotals.dreb,
+      oppAst: oppTotals.ast,
+      oppTo: oppTotals.to,
+      oppStl: oppTotals.stl,
+      oppBlk: oppTotals.blk,
+      oppPf: oppTotals.pf,
+      paintPts: Number(analysis?.pts_in_paint || 0),
+      fastBreakPts: Number(analysis?.fast_break_pts || 0),
+      secondChancePts: Number(analysis?.second_chance_pts || 0),
+      ptsOffTurnovers: Number(analysis?.pts_off_turnovers || 0),
+      benchPts: Number(analysis?.bench_pts || 0),
       quarterPoints,
       isD1: !nonD1GameIds.has(row.game_id),
       win: teamScore > oppScore,
@@ -583,30 +807,122 @@ function seasonTotals(team){
     oppPpg:oppPts, fgPct:pct(totals.fgm,totals.fga), tpPct:pct(totals.tpm,totals.tpa), ftPct:pct(totals.ftm,totals.fta)};
 }
 
+function d1GamesOnly(games){
+  const bartData = BART_CACHE[bartSeasonYear(state.season)];
+  const d1Names = bartData?.teamNames;
+  if(!d1Names?.size) return games;
+  return games.filter(game => d1Names.has(normTeamName(game.opp)));
+}
+
 /* Extends seasonTotals with the derived efficiency stats used on the
-   Compare Teams page. Possessions use the standard box-score estimate:
-   POSS ≈ FGA − OREB + TOV + 0.44·FTA. Offensive/Defensive Rating are
-   points scored/allowed per 100 possessions. AST% approximates the share
-   of made field goals that were assisted (AST / FGM). TS% is points per
-   true shooting attempt. DREB%, OREB%, opponent FG%, and forced-TOV% aren't
-   derivable from this schema (we don't track opponent box scores), so —
-   like this dashboard's other illustrative stats (fouls, shot chart,
-   individual +/-) — they're seeded deterministically per team. */
-function teamAdvancedStats(team){
-  const s = seasonTotals(team);
-  const poss = s.gp>0 ? (s.fga - s.oreb + s.to + 0.44*s.fta) / s.gp : 0;
-  const ppp = poss>0 ? s.ppg/poss : 0;
-  const ortg = poss>0 ? (s.ppg/poss)*100 : 0;
-  const drtg = poss>0 ? (s.oppPpg/poss)*100 : 0;
-  const tovPct = poss>0 ? (s.topg/poss)*100 : 0;
-  const astPct = s.fgm>0 ? (s.ast/s.fgm)*100 : 0;
-  const plusMinus = s.ppg - s.oppPpg;
-  const tsPct = (s.fga+0.44*s.fta)>0 ? (s.pts/(2*(s.fga+0.44*s.fta)))*100 : 0;
-  const drebPct = seededVal(team.short+'teamDrebPct', 64, 78);
-  const orebPct = seededVal(team.short+'teamOrebPct', 22, 36);
-  const oppFgPct = seededVal(team.short+'oppFgPct', 36, 46);
-  const forcedTovPct = seededVal(team.short+'forcedTovPct', 14, 23);
-  return {...s, poss, ppp, ortg, drtg, tovPct, astPct, plusMinus, tsPct, drebPct, orebPct, oppFgPct, forcedTovPct};
+   Compare Teams page. When game-level box totals are available, use them so
+   opponent shooting, rebounding rates, and forced-turnover rate are real
+   box-score-derived values. */
+function teamAdvancedStats(team, teamKey){
+  const fallback = seasonTotals(team);
+  const bartData = BART_CACHE[bartSeasonYear(state.season)];
+  const bart = bartData?.byTeam?.[bartTeamName(teamKey, team)];
+  const assistedFgPct = bartTeamAssistedFgPct(teamKey, team);
+  const allGames = team.games || [];
+  const games = d1GamesOnly(allGames);
+  const hasGameBox = games.some(game => game.oppFga !== undefined);
+  if(!hasGameBox){
+    const poss = fallback.gp>0 ? (fallback.fga - fallback.oreb + fallback.to + 0.44*fallback.fta) / fallback.gp : 0;
+    const ppp = poss>0 ? fallback.ppg/poss : 0;
+    const ortg = poss>0 ? (fallback.ppg/poss)*100 : 0;
+    const drtg = poss>0 ? (fallback.oppPpg/poss)*100 : 0;
+    const tovPct = poss>0 ? (fallback.topg/poss)*100 : 0;
+    const astPct = fallback.fgm>0 ? (fallback.ast/fallback.fgm)*100 : 0;
+    const plusMinus = fallback.ppg - fallback.oppPpg;
+    const tsPct = (fallback.fga+0.44*fallback.fta)>0 ? (fallback.pts/(2*(fallback.fga+0.44*fallback.fta)))*100 : 0;
+    const efgPct = fallback.fga>0 ? ((fallback.fgm + 0.5*fallback.tpm)/fallback.fga)*100 : 0;
+    const twoPct = (fallback.fga-fallback.tpa)>0 ? ((fallback.fgm-fallback.tpm)/(fallback.fga-fallback.tpa))*100 : 0;
+    const ftRate = fallback.fga>0 ? fallback.fta/fallback.fga : 0;
+    const raw = {...fallback, poss, ppp, ortg, drtg, tovPct, astPct, assistedFgPct, plusMinus, tsPct, efgPct, twoPct, ftRate, drebPct:0, orebPct:0, oppFgPct:0, oppEfgPct:0, forcedTovPct:0};
+    return addBartContext(raw, bart, bartData);
+  }
+
+  const sum = key => games.reduce((total, game) => total + Number(game[key] || 0), 0);
+  const gp = games.length;
+  const totals = {
+    gp,
+    record: { w: games.filter(game => game.win).length, l: games.filter(game => !game.win).length },
+    pts: sum('pf'), oppPts: sum('pa'),
+    fgm: sum('fgm'), fga: sum('fga'), tpm: sum('tpm'), tpa: sum('tpa'), ftm: sum('ftm'), fta: sum('fta'),
+    oreb: sum('oreb'), dreb: sum('dreb'), ast: sum('ast'), stl: sum('stl'), blk: sum('blk'), to: sum('to'),
+    oppFgm: sum('oppFgm'), oppFga: sum('oppFga'), oppTpm: sum('oppTpm'), oppTpa: sum('oppTpa'),
+    oppFtm: sum('oppFtm'), oppFta: sum('oppFta'), oppOreb: sum('oppOreb'), oppDreb: sum('oppDreb'),
+    oppTo: sum('oppTo'),
+  };
+  totals.reb = totals.oreb + totals.dreb;
+  const ppg = avg(totals.pts, gp);
+  const oppPpg = avg(totals.oppPts, gp);
+  const possTotal = totals.fga - totals.oreb + totals.to + 0.44*totals.fta;
+  const oppPossTotal = totals.oppFga - totals.oppOreb + totals.oppTo + 0.44*totals.oppFta;
+  const poss = avg(possTotal, gp);
+  const oppPoss = avg(oppPossTotal, gp);
+  const ppp = poss>0 ? ppg/poss : 0;
+  const ortg = poss>0 ? (ppg/poss)*100 : 0;
+  const drtg = oppPoss>0 ? (oppPpg/oppPoss)*100 : 0;
+  const tovPct = poss>0 ? (avg(totals.to, gp)/poss)*100 : 0;
+  const astPct = totals.fgm>0 ? (totals.ast/totals.fgm)*100 : 0;
+  const plusMinus = ppg - oppPpg;
+  const tsPct = (totals.fga+0.44*totals.fta)>0 ? (totals.pts/(2*(totals.fga+0.44*totals.fta)))*100 : 0;
+  const efgPct = totals.fga>0 ? ((totals.fgm + 0.5*totals.tpm)/totals.fga)*100 : 0;
+  const oppEfgPct = totals.oppFga>0 ? ((totals.oppFgm + 0.5*totals.oppTpm)/totals.oppFga)*100 : 0;
+  const twoPct = (totals.fga-totals.tpa)>0 ? ((totals.fgm-totals.tpm)/(totals.fga-totals.tpa))*100 : 0;
+  const ftRate = totals.fga>0 ? totals.fta/totals.fga : 0;
+  const drebPct = pct(totals.dreb, totals.dreb + totals.oppOreb);
+  const orebPct = pct(totals.oreb, totals.oreb + totals.oppDreb);
+  const oppFgPct = pct(totals.oppFgm, totals.oppFga);
+  const forcedTovPct = oppPossTotal>0 ? (totals.oppTo/oppPossTotal)*100 : 0;
+  const styleGames = games;
+  const styleGp = styleGames.length;
+  const styleSum = key => styleGames.reduce((total, game) => total + Number(game[key] || 0), 0);
+  return addBartContext({
+    ...totals,
+    gpFromGames: gp,
+    ppg, oppPpg,
+    rpg: avg(totals.reb, gp), apg: avg(totals.ast, gp), topg: avg(totals.to, gp),
+    stlpg: avg(totals.stl, gp), blkpg: avg(totals.blk, gp),
+    fgPct: pct(totals.fgm, totals.fga), tpPct: pct(totals.tpm, totals.tpa), ftPct: pct(totals.ftm, totals.fta),
+    poss, oppPoss, ppp, ortg, drtg, tovPct, astPct, assistedFgPct, plusMinus, tsPct, efgPct, oppEfgPct, twoPct, ftRate, drebPct, orebPct, oppFgPct, forcedTovPct,
+    styleGameCount: styleGp,
+    paintPpg: avg(styleSum('paintPts'), styleGp),
+    fastBreakPpg: avg(styleSum('fastBreakPts'), styleGp),
+    secondChancePpg: avg(styleSum('secondChancePts'), styleGp),
+    ptsOffTurnoversPpg: avg(styleSum('ptsOffTurnovers'), styleGp),
+    benchPpg: avg(styleSum('benchPts'), styleGp),
+  }, bart, bartData);
+}
+
+function addBartContext(stats, bart, bartData){
+  if(!bart) return {...stats, bart:null};
+  const rows = bartData?.rows || [];
+  const count = rows.length;
+  return {
+    ...stats,
+    rawOrtg: stats.ortg,
+    rawDrtg: stats.drtg,
+    rawPoss: stats.poss,
+    ortg: bart.adjoe,
+    drtg: bart.adjde,
+    adjEm: bart.adjoe - bart.adjde,
+    poss: bart.adjt,
+    barthag: bart.barthag,
+    sos: bart.sos,
+    ncsos: bart.ncsos,
+    wab: bart.wab,
+    bart,
+    nationalRank: bart.rank,
+    adjOffPct: rankPercentile(bart.oeRank, count),
+    adjDefPct: rankPercentile(bart.deRank, count),
+    adjTempoPct: valuePercentile(rows, 'adjt', bart.adjt),
+    adjEmPct: valuePercentile(rows.map(row => ({...row, adjEm: row.adjoe - row.adjde})), 'adjEm', bart.adjoe - bart.adjde),
+    barthagPct: rankPercentile(bart.rank, count),
+    sosPct: valuePercentile(rows, 'sos', bart.sos),
+    wabPct: rankPercentile(bart.wabRank, count),
+  };
 }
 
 function playerPerGame(pl){
@@ -687,9 +1003,8 @@ function foulsForGames(games){
 /* ============================= STATE / NAV ============================= */
 const state = { view:'overview', team:'ucsd', season:'2025-26', gameSort:{key:'date',dir:1},
   p1:{team:'ucsd',idx:0}, p2:{team:'ucsb',idx:0}, t1:'ucsd', t2:'ucsb',
-  selectedPlayer:null, rosterCardPlayer:null, leaderTab:'scorers', playerStatKey:'pts', playerTrendWindow:'all', playerGameFocus:null, rosterMode:'pergame', rosterTableView:'main', shootingMode:'basic', rosterScrollLeft:0,
-  rosterSortMain:{key:'ppg',dir:-1}, rosterSortShooting:{key:'tsPct',dir:-1}, rosterSortEfficiency:{key:'tsPct',dir:-1},
-  compareTeamsSection:'overview' };
+  selectedPlayer:null, rosterCardPlayer:null, compareTeamPlayer:null, leaderTab:'scorers', playerStatKey:'pts', playerTrendWindow:'all', playerGameFocus:null, rosterMode:'pergame', rosterTableView:'main', shootingMode:'basic', rosterScrollLeft:0,
+  rosterSortMain:{key:'ppg',dir:-1}, rosterSortShooting:{key:'tsPct',dir:-1}, rosterSortEfficiency:{key:'tsPct',dir:-1} };
 
 const NAV = [
   {id:'overview', label:'Team Overview'},
@@ -1099,7 +1414,7 @@ function rosterPageCards(team){
         <div class="roster-spotlight-art">
           <div class="roster-spotlight-logo">${avatarContent(state.team, team.short)}</div>
           ${headshot
-            ? `<img class="roster-spotlight-photo" src="${headshot}" alt="${displayPlayerName(player.name)} headshot">`
+            ? `<img class="roster-spotlight-photo" src="${headshot}" alt="${displayPlayerName(player.name)} headshot" referrerpolicy="no-referrer" onerror="this.replaceWith(document.createRange().createContextualFragment('<div class=&quot;roster-spotlight-monogram&quot;>${initials(displayPlayerName(player.name))}</div>'))">`
             : `<div class="roster-spotlight-monogram">${initials(displayPlayerName(player.name))}</div>`}
         </div>
         <div class="roster-spotlight-name">${displayPlayerName(player.name)}</div>
@@ -1185,10 +1500,11 @@ function viewOverview(){
         </div>
         <div class="leaderboard-list">
           ${active.list.map((p,i)=>`
-            <div style="display:flex;align-items:center;gap:10px;padding:7px 0;${i<active.list.length-1?'border-bottom:1px solid var(--border);':''}">
-              <span class="muted num" style="width:16px;font-size:11px;">${i+1}</span>
+            <div class="leader-row" style="${i<active.list.length-1?'border-bottom:1px solid var(--border);':''}">
+              <span class="muted num leader-rank">${i+1}</span>
+              <span class="leader-face">${rotationPhotoHtml(state.team, p)}</span>
               <span class="jersey">${p.num}</span>
-              <span class="leader-name">${p.name}</span>
+              <span class="leader-name">${displayPlayerName(p.name)}</span>
               <span class="num leader-stat">${active.fmt(playerPerGame(p)[active.statKey])}</span>
               <span class="stat-unit">${active.statLabel}</span>
             </div>`).join('')}
@@ -1665,12 +1981,11 @@ function rosterGrid(team){
 /* All stats shown as clickable tiles on the player detail card. `val` is the
    season per-game (or ratio/%) value shown on the tile; `decimals`/`min`/`max`
    control how the illustrative game-by-game trend is generated and clamped.
-   Plus/Minus, OREB%, and DREB% aren't derivable from our current box-score
-   fields, so — like the rest of this mock dashboard's illustrative charts
-   (fouls, quarter splits, shot chart) — they're seeded deterministically per
-   player rather than left out. */
+   These are limited to values we have in the player box-score logs so each
+   tile can drive a real game-by-game chart. */
 function playerStatDefs(team, p, pg){
-  const plusMinus = seededVal(team.short+p.name+'pm', -8, 12);
+  const pmLogs = playerLogsFor(team, p).map(game => Number(game.pm)).filter(Number.isFinite);
+  const avgPm = pmLogs.length ? avg(pmLogs.reduce((sum, value) => sum + value, 0), pmLogs.length) : 0;
   return [
     {key:'min', label:'MIN', trendLabel:'Minutes', val:pg.mpg, fmt:fmt1, decimals:1},
     {key:'pts', label:'PTS', trendLabel:'Points', val:pg.ppg, fmt:fmt1, decimals:0},
@@ -1681,7 +1996,7 @@ function playerStatDefs(team, p, pg){
     {key:'fgpct', label:'FG%', trendLabel:'FG%', val:pg.fgPct, fmt:v=>v.toFixed(1), decimals:1, max:100},
     {key:'tppct', label:'3P%', trendLabel:'3P%', val:pg.tpPct, fmt:v=>v.toFixed(1), decimals:1, max:100},
     {key:'ftpct', label:'FT%', trendLabel:'FT%', val:pg.ftPct, fmt:v=>v.toFixed(1), decimals:1, max:100},
-    {key:'pm', label:'+/-', trendLabel:'Plus/Minus', val:plusMinus, fmt:v=>(v>=0?'+':'')+v.toFixed(1), decimals:1, min:-Infinity},
+    {key:'pm', label:'+/-', trendLabel:'Plus/Minus', val:avgPm, fmt:v=>(v>=0?'+':'')+v.toFixed(1), decimals:0, min:-Infinity},
   ];
 }
 
@@ -1690,33 +2005,44 @@ function playerStatDefs(team, p, pg){
    value ticks using the active stat's own formatter) and labeled x-axis
    (game number, sparse-ticked so labels don't collide on long seasons),
    plus a hover crosshair + tooltip on every point (not just the last one). */
-/* Axis bounds are derived from the actual series being plotted (with a
-   per-stat floor so a quiet game/season doesn't zoom the axis in too far),
-   never a bare fixed cap — otherwise any value above that cap renders
-   outside the chart entirely (SVG has overflow:visible so it doesn't even
-   clip, it just draws over whatever is above the card). */
 function trendAxisSpec(active, series){
-  const seriesMax = Math.max(...series, 0);
-  const seriesMin = Math.min(...series, 0);
-
-  // True 0-100 bounds — percentages can't exceed this, so no need to scale.
-  if(active.key==='fgpct' || active.key==='tppct' || active.key==='ftpct'){
-    return { min: 0, max: 100, ticks: [0, 25, 50, 75, 100] };
+  const values = series.filter(Number.isFinite);
+  const seriesMax = Math.max(...values, 0);
+  const seriesMin = Math.min(...values, 0);
+  const step = active.key === 'min' || active.key === 'pts' ? 10 : 5;
+  const niceMax = value => Math.max(step, Math.ceil(value / step) * step);
+  const niceMin = value => Math.min(0, Math.floor(value / step) * step);
+  const makeTicks = (min, max) => {
+    const span = max - min || 1;
+    return [min, min + span * 0.25, min + span * 0.5, min + span * 0.75, max];
+  };
+  const presets = {
+    min: { min: 0, max: 40, ticks: [0, 10, 20, 30, 40] },
+    fgpct: { min: 0, max: 100, ticks: [0, 25, 50, 75, 100] },
+    tppct: { min: 0, max: 100, ticks: [0, 25, 50, 75, 100] },
+    ftpct: { min: 0, max: 100, ticks: [0, 25, 50, 75, 100] },
+    blk: { min: 0, max: 10, ticks: [0, 2.5, 5, 7.5, 10] },
+    stl: { min: 0, max: 10, ticks: [0, 2.5, 5, 7.5, 10] },
+    pts: { min: 0, max: Math.max(40, Math.ceil(seriesMax / 10) * 10), ticks: null },
+    reb: { min: 0, max: 20, ticks: [0, 5, 10, 15, 20] },
+    ast: { min: 0, max: 20, ticks: [0, 5, 10, 15, 20] },
+    pm: { min: -30, max: 30, ticks: [-30, -15, 0, 15, 30] },
+  };
+  const preset = presets[active.key];
+  if(preset){
+    let min = preset.min;
+    let max = preset.max;
+    if(seriesMax > max) max = niceMax(seriesMax * 1.08);
+    if(seriesMin < min) min = niceMin(seriesMin);
+    if(['fgpct','tppct','ftpct'].includes(active.key)){
+      min = 0;
+      max = 100;
+    }
+    const ticks = preset.ticks && min === preset.min && max === preset.max ? preset.ticks : makeTicks(min, max);
+    return { min, max, ticks };
   }
-
-  const stepByKey = { min:10, pts:10, reb:5, ast:5, stl:2, blk:2, pm:5 };
-  const step = stepByKey[active.key] || 5;
-
-  if(active.key==='pm'){
-    // Can go negative — scale symmetrically around 0 to whichever side needs more room.
-    const bound = Math.max(step*2, Math.ceil(Math.max(seriesMax, -seriesMin) / step) * step);
-    return { min: -bound, max: bound, ticks: [-bound, -bound/2, 0, bound/2, bound] };
-  }
-
-  const floorByKey = { min:40, pts:40, reb:20, ast:20, stl:10, blk:10 };
-  const floor = floorByKey[active.key] || step*4;
-  const max = Math.max(floor, Math.ceil(seriesMax / step) * step);
-  return { min: 0, max, ticks: [0, max*0.25, max*0.5, max*0.75, max] };
+  const autoMax = Math.max(5, Math.ceil(seriesMax / 5) * 5);
+  return { min: 0, max: autoMax, ticks: [0, autoMax * 0.25, autoMax * 0.5, autoMax * 0.75, autoMax] };
 }
 
 function statTrendChart(series, active, games, w, h, selectedGameId = null){
@@ -1728,7 +2054,8 @@ function statTrendChart(series, active, games, w, h, selectedGameId = null){
 
   const n = series.length;
   const x = i => pad.l + (n===1?iw/2:(i/(n-1))*iw);
-  const y = v => pad.t + ih - ((v-min)/(max-min))*ih;
+  const axisSpan = max - min || 1;
+  const y = v => pad.t + ih - ((v-min)/axisSpan)*ih;
 
   const yAxis = axis.ticks.map(v=>`<line class="gridline" x1="${pad.l}" x2="${w-pad.r}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}"/><text class="axislabel" x="${pad.l-6}" y="${(y(v)+3).toFixed(1)}" text-anchor="end">${formatTrendAxisValue(v)}</text>`).join('');
 
@@ -1897,10 +2224,10 @@ function shotDistributionChart(rows){
 }
 
 function wireShotDistributionChart(container){
-  const wrap = container.querySelector('[data-shot-distribution]');
-  if(!wrap) return;
+  const wraps = container.querySelectorAll('[data-shot-distribution]');
+  if(!wraps.length) return;
   const tooltip = document.getElementById('tooltip');
-  const showShotTooltip = (target, event)=>{
+  const showShotTooltip = (wrap, target, event)=>{
     tooltip.innerHTML = `<div>${target.dataset.label} <span class="t-sub">${target.dataset.share}% of all FGA · ${target.dataset.fg}% FG · ${target.dataset.assistPct}% assisted</span></div>`;
     tooltip.style.transform = 'translate(-50%,-125%)';
     tooltip.style.left = `${event.pageX}px`;
@@ -1909,31 +2236,33 @@ function wireShotDistributionChart(container){
     const areaKey = target.dataset.areaKey;
     wrap.querySelector(`[data-shot-slice][data-area-key="${areaKey}"]`)?.classList.add('active');
   };
-  const hideShotTooltip = target=>{
+  const hideShotTooltip = (wrap, target)=>{
     tooltip.classList.remove('show');
     const areaKey = target.dataset.areaKey;
     wrap.querySelector(`[data-shot-slice][data-area-key="${areaKey}"]`)?.classList.remove('active');
   };
-  wrap.querySelectorAll('[data-shot-slice]').forEach(slice=>{
-    slice.addEventListener('mouseenter', event=>{
-      showShotTooltip(slice, event);
-    });
-    slice.addEventListener('mousemove', event=>{
-      tooltip.style.left = `${event.pageX}px`;
-      tooltip.style.top = `${event.pageY}px`;
-    });
-    slice.addEventListener('mouseleave', ()=>{
-      hideShotTooltip(slice);
-    });
-    slice.addEventListener('focus', event=>{
-      const rect = slice.getBoundingClientRect();
-      showShotTooltip(slice, {
-        pageX: rect.left + window.scrollX + (rect.width / 2),
-        pageY: rect.top + window.scrollY,
+  wraps.forEach(wrap=>{
+    wrap.querySelectorAll('[data-shot-slice]').forEach(slice=>{
+      slice.addEventListener('mouseenter', event=>{
+        showShotTooltip(wrap, slice, event);
       });
-    });
-    slice.addEventListener('blur', ()=>{
-      hideShotTooltip(slice);
+      slice.addEventListener('mousemove', event=>{
+        tooltip.style.left = `${event.pageX}px`;
+        tooltip.style.top = `${event.pageY}px`;
+      });
+      slice.addEventListener('mouseleave', ()=>{
+        hideShotTooltip(wrap, slice);
+      });
+      slice.addEventListener('focus', event=>{
+        const rect = slice.getBoundingClientRect();
+        showShotTooltip(wrap, slice, {
+          pageX: rect.left + window.scrollX + (rect.width / 2),
+          pageY: rect.top + window.scrollY,
+        });
+      });
+      slice.addEventListener('blur', ()=>{
+        hideShotTooltip(wrap, slice);
+      });
     });
   });
 }
@@ -1943,12 +2272,12 @@ function playerRadarChart(metrics){
   const cy = 126;
   const radius = 86;
   const axes = [
-    { label: 'Scoring', value: Math.min(100, (metrics.ppg / 20) * 100) },
-    { label: 'Shooting', value: Math.min(100, metrics.tsPct) },
-    { label: 'Usage', value: Math.min(100, (metrics.usg / 30) * 100) },
-    { label: 'Defense', value: Math.min(100, (((metrics.stlPct + metrics.blkPct) / 2) / 6) * 100) },
-    { label: 'Rebound', value: Math.min(100, (metrics.rpg / 10) * 100) },
-    { label: 'Passing', value: Math.min(100, (metrics.astPct / 35) * 100) },
+    { label: 'Scoring', value: Math.min(100, (metrics.ppg / 20) * 100), detail: `${fmt1(metrics.ppg)} PPG` },
+    { label: 'Shooting', value: Math.min(100, metrics.tsPct), detail: `${fmt1(metrics.tsPct)} TS%` },
+    { label: 'Usage', value: Math.min(100, (metrics.usg / 30) * 100), detail: `${fmt1(metrics.usg)} usage%` },
+    { label: 'Defense', value: Math.min(100, (((metrics.stlPct + metrics.blkPct) / 2) / 6) * 100), detail: `${fmt1(metrics.stlPct)} STL% · ${fmt1(metrics.blkPct)} BLK%` },
+    { label: 'Rebound', value: Math.min(100, (metrics.rpg / 10) * 100), detail: `${fmt1(metrics.rpg)} RPG` },
+    { label: 'Passing', value: Math.min(100, (metrics.astPct / 35) * 100), detail: `${fmt1(metrics.astPct)} AST%` },
   ];
   const levels = [0.25, 0.5, 0.75, 1];
   const angleStep = (Math.PI * 2) / axes.length;
@@ -1978,24 +2307,139 @@ function playerRadarChart(metrics){
     const pt = pointAt(idx, axis.value / 100);
     return `<circle class="radar-point" cx="${pt.x.toFixed(1)}" cy="${pt.y.toFixed(1)}" r="3.5"></circle>`;
   }).join('');
+  const hitTargets = axes.map((axis, idx) => {
+    const pt = pointAt(idx, Math.max(axis.value / 100, 0.18));
+    return `<circle class="radar-hit" cx="${pt.x.toFixed(1)}" cy="${pt.y.toFixed(1)}" r="18" tabindex="0" role="button" aria-label="${axis.label}: ${axis.detail}" data-radar-label="${axis.label}" data-radar-detail="${axis.detail}" data-radar-score="${Math.round(axis.value)}"></circle>`;
+  }).join('');
   const labels = axes.map((axis, idx) => {
     const pt = pointAt(idx, 1.18);
-    return `<text class="radar-axis-label" x="${pt.x.toFixed(1)}" y="${pt.y.toFixed(1)}" text-anchor="middle" dominant-baseline="middle">${axis.label}</text>`;
+    return `<text class="radar-axis-label" x="${pt.x.toFixed(1)}" y="${pt.y.toFixed(1)}" text-anchor="middle" dominant-baseline="middle" data-radar-axis-label="${axis.label}">${axis.label}</text>`;
   }).join('');
   return `<div class="player-radar-panel">
-    <div class="card-title"><h3>Role Profile</h3><span class="hint">Percent-based radar design</span></div>
-    <svg class="player-radar" viewBox="0 0 264 252" aria-label="Player role radar chart">
+    <div class="card-title"><h3>Role Profile</h3><span class="hint">Hover a point for the stat</span></div>
+    <svg class="player-radar" viewBox="0 0 264 252" aria-label="Player role radar chart" data-player-radar>
       ${rings}
       ${spokes}
       <path class="radar-area" d="${areaPath}"></path>
       ${points}
+      ${hitTargets}
       ${labels}
     </svg>
+    <div class="radar-detail-panel" data-radar-detail-panel>Click a point to pin its stat.</div>
   </div>`;
 }
 
-function playerShotProfileCard(team, player){
-  const metrics = rosterPlayerMetrics(team, player, 0).metrics;
+function wirePlayerRadarChart(container){
+  const radars = container.querySelectorAll('[data-player-radar]');
+  if(!radars.length) return;
+  const tooltip = document.getElementById('tooltip');
+  const showRadarTooltip = (radar, target, event=null)=>{
+    const rect = target.getBoundingClientRect();
+    const x = event?.pageX ?? rect.left + window.scrollX + rect.width / 2;
+    const y = event?.pageY ?? rect.top + window.scrollY + rect.height / 2;
+    const scoreText = target.dataset.radarScore.includes('/')
+      ? target.dataset.radarScore
+      : `${target.dataset.radarScore}/100 profile`;
+    tooltip.innerHTML = target.dataset.playerOneName
+      ? `<div>${target.dataset.radarLabel}
+          <span class="t-sub">${target.dataset.playerOneName}: ${target.dataset.playerOneStat} · grade ${target.dataset.playerOneGrade}/100</span>
+          <span class="t-sub">${target.dataset.playerTwoName}: ${target.dataset.playerTwoStat} · grade ${target.dataset.playerTwoGrade}/100</span>
+        </div>`
+      : `<div>${target.dataset.radarLabel} <span class="t-sub">${target.dataset.radarDetail} · ${scoreText}</span></div>`;
+    tooltip.style.transform = 'translate(-50%,-125%)';
+    tooltip.style.left = `${x}px`;
+    tooltip.style.top = `${y}px`;
+    tooltip.classList.add('show');
+    radar.querySelector(`[data-radar-axis-label="${target.dataset.radarLabel}"]`)?.classList.add('active');
+  };
+  const hideRadarTooltip = (radar, target)=>{
+    tooltip.classList.remove('show');
+    radar.querySelector(`[data-radar-axis-label="${target.dataset.radarLabel}"]`)?.classList.remove('active');
+  };
+  const pinRadarDetail = (radar, target)=>{
+    const panel = radar.closest('.card, .player-radar-panel')?.querySelector('[data-radar-detail-panel]');
+    if(panel){
+      if(target.dataset.playerOneName){
+        panel.innerHTML = `<b>${target.dataset.radarLabel}</b>
+          <span>${target.dataset.playerOneName}: ${target.dataset.playerOneStat} · grade ${target.dataset.playerOneGrade}/100</span>
+          <span>${target.dataset.playerTwoName}: ${target.dataset.playerTwoStat} · grade ${target.dataset.playerTwoGrade}/100</span>`;
+      } else {
+        panel.innerHTML = `<b>${target.dataset.radarLabel}</b><span>${target.dataset.radarDetail}</span><em>${target.dataset.radarScore.includes('/') ? target.dataset.radarScore : `${target.dataset.radarScore}/100 profile`}</em>`;
+      }
+    }
+    radar.querySelectorAll('.radar-hit').forEach(hit=>hit.classList.remove('active'));
+    target.classList.add('active');
+  };
+  radars.forEach(radar=>{
+    radar.querySelectorAll('.radar-hit').forEach(hit=>{
+      hit.addEventListener('mouseenter', event=>showRadarTooltip(radar, hit, event));
+      hit.addEventListener('mousemove', event=>{
+        tooltip.style.left = `${event.pageX}px`;
+        tooltip.style.top = `${event.pageY}px`;
+      });
+      hit.addEventListener('mouseleave', ()=>hideRadarTooltip(radar, hit));
+      hit.addEventListener('focus', event=>showRadarTooltip(radar, hit, event));
+      hit.addEventListener('blur', ()=>hideRadarTooltip(radar, hit));
+      hit.addEventListener('click', ()=>pinRadarDetail(radar, hit));
+      hit.addEventListener('keydown', event=>{
+        if(event.key === 'Enter' || event.key === ' '){
+          event.preventDefault();
+          pinRadarDetail(radar, hit);
+        }
+      });
+    });
+  });
+}
+
+function bartShotProfileMetrics(team, player, teamKey){
+  const bart = teamKey ? bartPlayerFor(teamKey, team, player) : null;
+  if(!bart || (bart.rimShare + bart.midShare + bart.threeShare) <= 0) return null;
+  const gp = Math.max(bart.gp || player.gp || 1, 1);
+  return {
+    rimMakes: avg(bart.rimmade, gp),
+    rimAtt: avg(bart.rimatt, gp),
+    midMakes: avg(bart.midmade, gp),
+    midAtt: avg(bart.midatt, gp),
+    threeMakes: avg(bart.tpm || player.tpm, gp),
+    threeAtt: avg(bart.tpa || player.tpa, gp),
+    rimShare: bart.rimShare,
+    midShare: bart.midShare,
+    threeShare: bart.threeShare,
+    rimAssistPct: bart.rimAssistPct,
+    midAssistPct: bart.midAssistPct,
+    threeAssistPct: bart.threeAssistPct,
+    rimFgPct: bart.rimPct,
+    midFgPct: bart.midPct,
+    tpPct: bart.tpa > 0 ? (bart.tpm / bart.tpa) * 100 : playerPerGame(player).tpPct,
+  };
+}
+
+function bartRoleMetrics(team, player, teamKey){
+  const bart = teamKey ? bartPlayerFor(teamKey, team, player) : null;
+  if(!bart) return null;
+  return {
+    tsPct: bart.ts,
+    usg: bart.usage,
+    astPct: bart.astPct,
+    toPct: bart.toPct,
+    stlPct: bart.stlPct,
+    blkPct: bart.blkPct,
+    drbPct: bart.drbPct,
+    orbPct: bart.orbPct,
+  };
+}
+
+function playerShotProfileUnavailable(){
+  return `<div class="trend-empty trend-empty--compact">
+    <strong>Shot distribution unavailable</strong>
+    <span>No rim, mid-range, or assisted-shot profile is available for this player.</span>
+  </div>`;
+}
+
+function playerShotProfileCard(team, player, teamKey){
+  const baseMetrics = rosterPlayerMetrics(team, player, 0).metrics;
+  const metrics = {...baseMetrics, ...(bartRoleMetrics(team, player, teamKey) || {}), ...(bartShotProfileMetrics(team, player, teamKey) || {})};
+  const hasShotProfile = (metrics.rimShare + metrics.midShare + metrics.threeShare) > 0;
   const rows = [
     {label:'Rim', share:metrics.rimShare, fg:metrics.rimFgPct, assist:metrics.rimAssistPct, assistMakes:metrics.rimMakes * (metrics.rimAssistPct / 100)},
     {label:'Mid', share:metrics.midShare, fg:metrics.midFgPct, assist:metrics.midAssistPct, assistMakes:metrics.midMakes * (metrics.midAssistPct / 100)},
@@ -2005,7 +2449,7 @@ function playerShotProfileCard(team, player){
     <div class="player-visual-grid">
       <div class="player-shot-panel">
         <div class="card-title"><h3>Shot Distribution</h3><span class="hint">Hover an area for share, FG%, and assisted%</span></div>
-        ${shotDistributionChart(rows)}
+        ${hasShotProfile ? shotDistributionChart(rows) : playerShotProfileUnavailable()}
       </div>
       ${playerRadarChart(metrics)}
     </div>
@@ -2030,11 +2474,12 @@ function playerTrendWindowOptions(){
   return options.map(option => `<option value="${option.value}" ${state.playerTrendWindow===option.value?'selected':''}>${option.label}</option>`).join('');
 }
 
+function playerLogsFor(team, player){
+  return team.playerGameLogs?.[normalizePlayerName(player.name)] || [];
+}
+
 function playerTrendGames(team, player){
-  const playerLogs = team.playerGameLogs?.[normalizePlayerName(player.name)];
-  const availableGames = (playerLogs && playerLogs.length)
-    ? playerLogs
-    : team.games.slice(-Math.min(team.games.length, player.gp));
+  const availableGames = playerLogsFor(team, player);
   if(state.playerTrendWindow === 'all') return availableGames;
   const count = Number(state.playerTrendWindow);
   return Number.isFinite(count) && count > 0 ? availableGames.slice(-count) : availableGames;
@@ -2051,13 +2496,19 @@ function playerTrendSeries(team, player, active, entries){
     fgpct: 'fgPct',
     tppct: 'tpPct',
     ftpct: 'ftPct',
+    pm: 'pm',
   }[active.key];
   if(actualSeriesKey && entries.length && entries[0][actualSeriesKey] !== undefined){
     return entries.map(entry => Number(entry[actualSeriesKey] || 0));
   }
-  const spread = Math.max(0.5, Math.abs(active.val)*0.35);
-  const seed = player.num*7 + player.name.length + active.key.length*13;
-  return seededSeries(seed, Math.max(entries.length, 1), active.val, spread, {decimals:active.decimals, min:active.min, max:active.max});
+  return [];
+}
+
+function playerTrendUnavailable(active){
+  return `<div class="trend-empty">
+    <strong>${active.trendLabel} game log unavailable</strong>
+    <span>Season totals are shown on the stat tiles. Add player game logs to plot ${active.label} by game.</span>
+  </div>`;
 }
 
 function playerGameStatDefs(gameLog){
@@ -2071,7 +2522,7 @@ function playerGameStatDefs(gameLog){
     {key:'fgpct', label:'FG', trendLabel:'FG%', val:`${gameLog.fgm}-${gameLog.fga}`, fmt:v => v, decimals:1, max:100},
     {key:'tppct', label:'3PT', trendLabel:'3P%', val:`${gameLog.tpm}-${gameLog.tpa}`, fmt:v => v, decimals:1, max:100},
     {key:'ftpct', label:'FT', trendLabel:'FT%', val:`${gameLog.ftm}-${gameLog.fta}`, fmt:v => v, decimals:1, max:100},
-    {key:'pm', label:'TOV', trendLabel:'Turnovers', val:gameLog.to, fmt:v => `${v}`, decimals:0, min:0},
+    {key:'pm', label:'+/-', trendLabel:'Plus/Minus', val:gameLog.pm, fmt:v => `${v>=0?'+':''}${v}`, decimals:0, min:-Infinity},
   ];
 }
 
@@ -2081,14 +2532,16 @@ function formatTrendAxisValue(value){
 
 function playerDetail(team, idx, stateKey = ''){
   const p = team.players[idx], pg = playerPerGame(p);
+  const contextTeam = stateKey && state[stateKey]?.team ? state[stateKey].team : state.team;
+  const hasTrendLogs = playerLogsFor(team, p).length > 0;
   const trendGames = playerTrendGames(team, p);
-  const activeGame = state.playerGameFocus && state.playerGameFocus.team===state.team && state.playerGameFocus.idx===idx
+  const activeGame = state.playerGameFocus && state.playerGameFocus.team===contextTeam && state.playerGameFocus.idx===idx
     ? trendGames.find(game => game.gameId === state.playerGameFocus.gameId) || null
     : null;
   const defs = activeGame ? playerGameStatDefs(activeGame) : playerStatDefs(team, p, pg);
   const active = defs.find(d=>d.key===state.playerStatKey) || defs[0];
   const displayName = displayPlayerName(p.name);
-  const headshot = playerHeadshot(state.team, p.name);
+  const headshot = playerHeadshot(contextTeam, p.name);
   const series = playerTrendSeries(team, p, active, trendGames);
   const contextLabel = activeGame
     ? `${activeGame.date} ${activeGame.home ? 'vs' : '@'} ${activeGame.opp}`
@@ -2096,7 +2549,7 @@ function playerDetail(team, idx, stateKey = ''){
 
   return `<div class="card" id="player-detail">
     <div class="pdetail-head">
-      <div class="pdetail-avatar">${headshot ? `<img src="${headshot}" alt="${displayName} headshot">` : avatarContent(state.team, initials(p.name))}</div>
+      <div class="pdetail-avatar">${headshot ? `<img src="${headshot}" alt="${displayName} headshot">` : avatarContent(contextTeam, initials(p.name))}</div>
       <div>
         <h3 class="pdetail-name">${displayName} <span class="muted" style="font-weight:700;">#${p.num}</span></h3>
         <div class="pdetail-meta">${displayListedPosition(p)} · ${displayClassYear(p)} · ${team.name} · ${p.gp} games</div>
@@ -2119,7 +2572,7 @@ function playerDetail(team, idx, stateKey = ''){
       </div>
       <div class="pdetail-chart-col">
         <div class="card-title">
-          <h3>${active.trendLabel}, game by game</h3>
+          <h3>${hasTrendLogs ? `${active.trendLabel}, game by game` : 'Player profile'}</h3>
           <div class="player-detail-actions">
             ${stateKey ? `
               <label class="player-detail-picker">
@@ -2128,18 +2581,18 @@ function playerDetail(team, idx, stateKey = ''){
                   ${playerModalOptions(team, idx)}
                 </select>
               </label>
-              <label class="player-detail-picker player-detail-picker--compact">
+              ${hasTrendLogs ? `<label class="player-detail-picker player-detail-picker--compact">
                 <span>Window</span>
                 <select data-player-trend-window="${stateKey}" aria-label="Choose game window">
                   ${playerTrendWindowOptions()}
                 </select>
-              </label>
+              </label>` : ''}
             ` : ''}
-            <span class="hint">${team.playerGameLogs?.[normalizePlayerName(p.name)]?.length ? 'Click a point for game stats' : 'Illustrative trend'}</span>
+            <span class="hint">${hasTrendLogs ? 'Click a point for game stats' : 'Season totals and Bart shot profile'}</span>
           </div>
         </div>
-        ${statTrendChart(series, active, trendGames, 640, 265, activeGame?.gameId || null)}
-        ${playerShotProfileCard(team, p)}
+        ${hasTrendLogs ? statTrendChart(series, active, trendGames, 640, 265, activeGame?.gameId || null) : playerTrendUnavailable(active)}
+        ${playerShotProfileCard(team, p, contextTeam)}
       </div>
     </div>
   </div>`;
@@ -2214,6 +2667,7 @@ function wireRosterCards(container){
 }
 
 function wirePlayerModal(container, team, stateKey, idx){
+  const contextTeam = stateKey && state[stateKey]?.team ? state[stateKey].team : state.team;
   container.querySelectorAll(`[data-player-modal-close="${stateKey}"]`).forEach(backdrop=>backdrop.addEventListener('click', e=>{
     if(e.target.closest('[data-player-modal-shell]') && !e.target.matches(`[data-player-modal-button="${stateKey}"]`)) return;
     state[stateKey] = null;
@@ -2225,7 +2679,7 @@ function wirePlayerModal(container, team, stateKey, idx){
     render();
   });
   container.querySelector(`[data-player-picker="${stateKey}"]`)?.addEventListener('change', e=>{
-    state[stateKey] = { team: state.team, idx: Number(e.target.value) };
+    state[stateKey] = { team: contextTeam, idx: Number(e.target.value) };
     state.playerGameFocus = null;
     render();
   });
@@ -2246,18 +2700,21 @@ function wirePlayerModal(container, team, stateKey, idx){
   const p = team.players[idx];
   const pg = playerPerGame(p);
   const trendGames = playerTrendGames(team, p);
-  const activeGame = state.playerGameFocus && state.playerGameFocus.team===state.team && state.playerGameFocus.idx===idx
+  const activeGame = state.playerGameFocus && state.playerGameFocus.team===contextTeam && state.playerGameFocus.idx===idx
     ? trendGames.find(game => game.gameId === state.playerGameFocus.gameId) || null
     : null;
   const defs = activeGame ? playerGameStatDefs(activeGame) : playerStatDefs(team, p, pg);
   const active = defs.find(d=>d.key===state.playerStatKey) || defs[0];
   const series = playerTrendSeries(team, p, active, trendGames);
-  wireStatTrendChart(container, series, active, trendGames, game=>{
-    const isSame = state.playerGameFocus && state.playerGameFocus.team===state.team && state.playerGameFocus.idx===idx && state.playerGameFocus.gameId===game.gameId;
-    state.playerGameFocus = isSame ? null : { team: state.team, idx, gameId: game.gameId };
-    render();
-  });
+  if(trendGames.length){
+    wireStatTrendChart(container, series, active, trendGames, game=>{
+      const isSame = state.playerGameFocus && state.playerGameFocus.team===contextTeam && state.playerGameFocus.idx===idx && state.playerGameFocus.gameId===game.gameId;
+      state.playerGameFocus = isSame ? null : { team: contextTeam, idx, gameId: game.gameId };
+      render();
+    });
+  }
   wireShotDistributionChart(container);
+  wirePlayerRadarChart(container);
 }
 
 
@@ -2268,68 +2725,186 @@ function wirePlayerModal(container, team, stateKey, idx){
    lets a stat's bar scale start below zero (e.g. Plus/Minus). */
 function diffRowsHtml(stats, obj1, obj2){
   return stats.map(s=>{
-    const v1=obj1[s.key], v2=obj2[s.key];
-    const aBetter = s.lowerBetter ? v1<v2 : v1>v2;
-    const bBetter = s.lowerBetter ? v2<v1 : v2>v1;
+    const v1=Number(obj1[s.key] || 0), v2=Number(obj2[s.key] || 0);
+    const sub1 = s.subKey ? Number(obj1[s.subKey] || 0) : null;
+    const sub2 = s.subKey ? Number(obj2[s.subKey] || 0) : null;
+    const tied = Math.abs(v1 - v2) < 0.000001;
+    const aBetter = tied || (s.lowerBetter ? v1<v2 : v1>v2);
+    const bBetter = tied || (s.lowerBetter ? v2<v1 : v2>v1);
     const lo = s.min||0;
     const w1 = Math.max(0, Math.min(100, (v1-lo)/(s.max-lo)*100));
     const w2 = Math.max(0, Math.min(100, (v2-lo)/(s.max-lo)*100));
-    return `<div class="diffrow ${aBetter?'a-wins':''} ${bBetter?'b-wins':''}">
-      <div class="stat-label has-tip" data-tip="${s.desc||''}">${s.label}</div>
-      <div class="diff-bar-row">
-        <div class="bar-track"><div class="bar-fill a" style="width:${w1}%"></div></div>
-        <div class="diffval a">${s.fmt(v1)}</div>
-      </div>
-      <div class="diff-bar-row">
-        <div class="bar-track"><div class="bar-fill b" style="width:${w2}%"></div></div>
-        <div class="diffval b">${s.fmt(v2)}</div>
-      </div>
+    const aTag = aBetter ? '<span class="edge-tag" aria-label="Better value">✓</span>' : '';
+    const bTag = bBetter ? '<span class="edge-tag" aria-label="Better value">✓</span>' : '';
+    const aValue = `${aTag}${s.fmt(v1)}${s.subKey ? `<span class="diffval-sub">${s.subFmt(sub1)}</span>` : ''}`;
+    const bValue = `${s.fmt(v2)}${bTag}${s.subKey ? `<span class="diffval-sub">${s.subFmt(sub2)}</span>` : ''}`;
+    const label = `${s.label}${s.subKey ? `<span class="stat-label-sub">${s.subLabel}</span>` : ''}`;
+    return `<div class="diffrow ${aBetter?'left-wins':''} ${bBetter?'right-wins':''}">
+      <div class="diffval a" style="text-align:right;">${aValue}</div>
+      <div class="bar-track left"><div class="bar-fill a" style="width:${w1}%"></div></div>
+      <div class="stat-label">${label}</div>
+      <div class="bar-track"><div class="bar-fill b" style="width:${w2}%"></div></div>
+      <div class="diffval b">${bValue}</div>
     </div>`;
   }).join('');
 }
 
-/* Hover a stat's abbreviation to see what it stands for + what it measures,
-   via data-tip set by diffRowsHtml from each stat def's `desc`. */
-function wireStatTooltips(container){
-  container.querySelectorAll('.has-tip[data-tip]').forEach(el=>{
-    if(!el.dataset.tip) return;
-    el.addEventListener('mouseenter', ()=>{
-      const tooltip = document.getElementById('tooltip');
-      const rect = el.getBoundingClientRect();
-      const halfWidth = 115, margin = 8; // matches .tooltip.wide's max-width:220px
-      const left = Math.max(halfWidth+margin, Math.min(window.innerWidth-halfWidth-margin, rect.left+rect.width/2));
-      tooltip.innerHTML = `<div>${el.dataset.tip}</div>`;
-      tooltip.classList.add('wide');
-      tooltip.style.transform = 'translate(-50%,-115%)';
-      tooltip.style.left = (left + window.scrollX) + 'px';
-      tooltip.style.top = (rect.top + window.scrollY) + 'px';
-      tooltip.classList.add('show');
-    });
-    el.addEventListener('mouseleave', ()=>{
-      document.getElementById('tooltip').classList.remove('show', 'wide');
-    });
-  });
+const CP_STATS = [
+  {key:'ppg', label:'PPG', fmt:fmt1, max:30},
+  {key:'rpg', label:'RPG', fmt:fmt1, max:14},
+  {key:'apg', label:'APG', fmt:fmt1, max:9},
+  {key:'stlpg', label:'STL', fmt:fmt1, max:3.5},
+  {key:'blkpg', label:'BLK', fmt:fmt1, max:2.5},
+  {key:'topg', label:'TO', fmt:fmt1, max:4.5, lowerBetter:true},
+  {key:'efgPct', label:'eFG%', fmt:v=>v.toFixed(1), max:65},
+  {key:'fgPct', label:'FG%', fmt:v=>v.toFixed(1), max:65},
+  {key:'tpPct', label:'3P%', fmt:v=>v.toFixed(1), max:50},
+  {key:'ftPct', label:'FT%', fmt:v=>v.toFixed(1), max:100},
+  {key:'plusMinus', label:'+/-', fmt:v=>(v>=0?'+':'')+v.toFixed(1), min:-10, max:15},
+  {key:'usg', label:'USG%', fmt:v=>v.toFixed(1), max:35},
+];
+const CP_ROLE_STATS = [
+  {key:'mpg', label:'MPG', fmt:fmt1, max:40},
+  {key:'tsPct', label:'TS%', fmt:v=>v.toFixed(1), max:75},
+  {key:'usg', label:'USG%', fmt:v=>v.toFixed(1), max:35},
+  {key:'assistedFgPct', label:'Assisted FG%', fmt:v=>v.toFixed(1), max:100},
+  {key:'astPct', label:'AST%', fmt:v=>v.toFixed(1), max:40},
+  {key:'toPct', label:'TO%', fmt:v=>v.toFixed(1), max:35, lowerBetter:true},
+  {key:'astTo', label:'AST/TO', fmt:v=>v.toFixed(1), max:4},
+  {key:'orbPct', label:'ORB%', fmt:v=>v.toFixed(1), max:16},
+  {key:'drbPct', label:'DRB%', fmt:v=>v.toFixed(1), max:30},
+  {key:'stlPct', label:'STL%', fmt:v=>v.toFixed(1), max:6},
+  {key:'blkPct', label:'BLK%', fmt:v=>v.toFixed(1), max:8},
+];
+
+function comparePlayerVisualMetrics(team, player, teamKey){
+  const base = rosterPlayerMetrics(team, player, 0).metrics;
+  const metrics = {...base, ...(bartRoleMetrics(team, player, teamKey) || {}), ...(bartShotProfileMetrics(team, player, teamKey) || {})};
+  const assistedMakes = (metrics.rimMakes * (metrics.rimAssistPct / 100))
+    + (metrics.midMakes * (metrics.midAssistPct / 100))
+    + (metrics.threeMakes * (metrics.threeAssistPct / 100));
+  const totalMakes = metrics.rimMakes + metrics.midMakes + metrics.threeMakes;
+  metrics.assistedFgPct = totalMakes > 0 ? (assistedMakes / totalMakes) * 100 : metrics.totalAssistPct;
+  return metrics;
 }
 
-const CP_STATS = [
-  {key:'ppg', label:'PPG', desc:'Points Per Game — average points scored per game.', fmt:fmt1, max:30},
-  {key:'rpg', label:'RPG', desc:'Rebounds Per Game — average total rebounds per game.', fmt:fmt1, max:14},
-  {key:'apg', label:'APG', desc:'Assists Per Game — average assists per game.', fmt:fmt1, max:9},
-  {key:'stlpg', label:'STL', desc:'Steals Per Game — average steals per game.', fmt:fmt1, max:3.5},
-  {key:'blkpg', label:'BLK', desc:'Blocks Per Game — average blocks per game.', fmt:fmt1, max:2.5},
-  {key:'topg', label:'TO', desc:'Turnovers Per Game — average turnovers committed per game (lower is better).', fmt:fmt1, max:4.5, lowerBetter:true},
-  {key:'efgPct', label:'eFG%', desc:'Effective Field Goal % — field goal % adjusted to give 3-pointers extra credit for being worth more.', fmt:v=>v.toFixed(1), max:65},
-  {key:'fgPct', label:'FG%', desc:'Field Goal % — percentage of field goal attempts made.', fmt:v=>v.toFixed(1), max:65},
-  {key:'tpPct', label:'3P%', desc:'Three-Point % — percentage of three-point attempts made.', fmt:v=>v.toFixed(1), max:50},
-  {key:'ftPct', label:'FT%', desc:'Free Throw % — percentage of free throw attempts made.', fmt:v=>v.toFixed(1), max:100},
-  {key:'plusMinus', label:'+/-', desc:'Plus/Minus — point differential (points scored minus points allowed) while this player is on the floor.', fmt:v=>(v>=0?'+':'')+v.toFixed(1), min:-10, max:15},
-  {key:'usg', label:'USG%', desc:'Usage Rate — estimated share of the team\'s possessions this player uses (shots, free throws, turnovers) while on the floor.', fmt:v=>v.toFixed(1), max:35},
-];
-function playerOptionsForTeam(teamKey, selectedIdx){
-  const team = getTeamData(teamKey, state.season);
-  return team.players.map((p,i)=>
-    `<option value="${i}" ${i===selectedIdx?'selected':''}>#${p.num} ${p.name}</option>`
-  ).join('');
+function comparePlayerRadarAxes(metrics){
+  return [
+    { label: 'Scoring', value: Math.min(100, (metrics.ppg / 20) * 100), detail: `${fmt1(metrics.ppg)} PPG` },
+    { label: 'Shooting', value: Math.min(100, metrics.tsPct), detail: `${fmt1(metrics.tsPct)} TS%` },
+    { label: 'Usage', value: Math.min(100, (metrics.usg / 30) * 100), detail: `${fmt1(metrics.usg)} usage%` },
+    { label: 'Defense', value: Math.min(100, (((metrics.stlPct + metrics.blkPct) / 2) / 6) * 100), detail: `${fmt1(metrics.stlPct)} STL% · ${fmt1(metrics.blkPct)} BLK%` },
+    { label: 'Rebound', value: Math.min(100, (metrics.rpg / 10) * 100), detail: `${fmt1(metrics.rpg)} RPG` },
+    { label: 'Passing', value: Math.min(100, (metrics.astPct / 35) * 100), detail: `${fmt1(metrics.astPct)} AST%` },
+  ];
+}
+
+function comparePlayerRadarChart(m1, m2, p1, p2){
+  const cx = 170;
+  const cy = 150;
+  const radius = 104;
+  const axes1 = comparePlayerRadarAxes(m1);
+  const axes2 = comparePlayerRadarAxes(m2);
+  const levels = [0.25, 0.5, 0.75, 1];
+  const angleStep = (Math.PI * 2) / axes1.length;
+  const pointAt = (axisIdx, scale) => {
+    const angle = -Math.PI / 2 + (axisIdx * angleStep);
+    return {
+      x: cx + Math.cos(angle) * radius * scale,
+      y: cy + Math.sin(angle) * radius * scale,
+    };
+  };
+  const polygon = axes => axes.map((axis, idx) => {
+    const pt = pointAt(idx, axis.value / 100);
+    return `${idx===0?'M':'L'} ${pt.x.toFixed(1)} ${pt.y.toFixed(1)}`;
+  }).join(' ') + ' Z';
+  const rings = levels.map(level => {
+    const path = axes1.map((_, idx) => {
+      const pt = pointAt(idx, level);
+      return `${idx===0?'M':'L'} ${pt.x.toFixed(1)} ${pt.y.toFixed(1)}`;
+    }).join(' ') + ' Z';
+    return `<path class="radar-grid-ring" d="${path}"></path>`;
+  }).join('');
+  const spokes = axes1.map((_, idx) => {
+    const pt = pointAt(idx, 1);
+    return `<line class="radar-grid-spoke" x1="${cx}" y1="${cy}" x2="${pt.x.toFixed(1)}" y2="${pt.y.toFixed(1)}"></line>`;
+  }).join('');
+  const labels = axes1.map((axis, idx) => {
+    const pt = pointAt(idx, 1.18);
+    return `<text class="radar-axis-label" x="${pt.x.toFixed(1)}" y="${pt.y.toFixed(1)}" text-anchor="middle" dominant-baseline="middle">${axis.label}</text>`;
+  }).join('');
+  const points = (axes, className) => axes.map((axis, idx) => {
+    const pt = pointAt(idx, axis.value / 100);
+    return `<circle class="${className}" cx="${pt.x.toFixed(1)}" cy="${pt.y.toFixed(1)}" r="3.8"></circle>`;
+  }).join('');
+  const hitTargets = axes1.map((axis, idx) => {
+    const pt = pointAt(idx, 1);
+    return `<circle class="radar-hit" cx="${pt.x.toFixed(1)}" cy="${pt.y.toFixed(1)}" r="20" tabindex="0" role="button"
+      aria-label="${axis.label}: ${p1.name} ${axes1[idx].detail}; ${p2.name} ${axes2[idx].detail}"
+      data-radar-label="${axis.label}"
+      data-radar-detail="${p1.name}: ${axes1[idx].detail} · ${p2.name}: ${axes2[idx].detail}"
+      data-radar-score="${displayPlayerName(p1.name).split(' ').slice(-1)} ${Math.round(axes1[idx].value)}/100 · ${displayPlayerName(p2.name).split(' ').slice(-1)} ${Math.round(axes2[idx].value)}/100"
+      data-player-one-name="${displayPlayerName(p1.name)}"
+      data-player-one-stat="${axes1[idx].detail}"
+      data-player-one-grade="${Math.round(axes1[idx].value)}"
+      data-player-two-name="${displayPlayerName(p2.name)}"
+      data-player-two-stat="${axes2[idx].detail}"
+      data-player-two-grade="${Math.round(axes2[idx].value)}"></circle>`;
+  }).join('');
+  return `<div class="card compare-player-radar-card">
+    <div class="card-title"><h3>Role radar</h3>
+      <div class="legend">
+        <span class="legend-item"><span class="swatch" style="background:var(--series-a)"></span>${displayPlayerName(p1.name).split(' ').slice(-1)}</span>
+        <span class="legend-item"><span class="swatch" style="background:var(--series-b)"></span>${displayPlayerName(p2.name).split(' ').slice(-1)}</span>
+      </div>
+    </div>
+    <svg class="compare-player-radar player-radar" viewBox="0 0 340 300" aria-label="Overlapping player role radar chart" data-player-radar>
+      ${rings}
+      ${spokes}
+      <path class="radar-area radar-area-a" d="${polygon(axes1)}"></path>
+      <path class="radar-area radar-area-b" d="${polygon(axes2)}"></path>
+      ${points(axes1, 'radar-point radar-point-a')}
+      ${points(axes2, 'radar-point radar-point-b')}
+      ${hitTargets}
+      ${labels}
+    </svg>
+    <div class="radar-detail-panel" data-radar-detail-panel>Click a radar point to pin the comparison.</div>
+  </div>`;
+}
+
+function comparePlayerShotRows(metrics){
+  return [
+    {label:'Rim', share:metrics.rimShare, fg:metrics.rimFgPct, assist:metrics.rimAssistPct, assistMakes:metrics.rimMakes * (metrics.rimAssistPct / 100)},
+    {label:'Mid', share:metrics.midShare, fg:metrics.midFgPct, assist:metrics.midAssistPct, assistMakes:metrics.midMakes * (metrics.midAssistPct / 100)},
+    {label:'3PT', share:metrics.threeShare, fg:metrics.tpPct, assist:metrics.threeAssistPct, assistMakes:metrics.threeMakes * (metrics.threeAssistPct / 100)},
+  ];
+}
+
+function comparePlayerShotPanel(player, metrics, sideClass){
+  const hasShotProfile = (metrics.rimShare + metrics.midShare + metrics.threeShare) > 0;
+  return `<div class="player-shot-panel compare-shot-panel ${sideClass}">
+    <div class="card-title"><h3>${displayPlayerName(player.name)}</h3><span class="hint">Shot distribution</span></div>
+    ${hasShotProfile ? shotDistributionChart(comparePlayerShotRows(metrics)) : playerShotProfileUnavailable()}
+  </div>`;
+}
+
+function comparePlayerShotCard(p1, p2, m1, m2){
+  return `<div class="card">
+    <div class="card-title"><h3>Shot distribution</h3><span class="hint">Hover an area for share, FG%, and assisted%</span></div>
+    <div class="compare-shot-grid">
+      ${comparePlayerShotPanel(p1, m1, 'side-a')}
+      ${comparePlayerShotPanel(p2, m2, 'side-b')}
+    </div>
+  </div>`;
+}
+function playerPickerOptions(){
+  return TEAM_KEYS.map(tk=>{
+    const team = getTeamData(tk, state.season);
+    const options = team.players.map((p,i)=>
+      `<option value="${tk}|${i}">#${p.num} ${p.name}</option>`
+    ).join('');
+    return `<optgroup label="${team.name}">${options}</optgroup>`;
+  }).join('');
 }
 function viewComparePlayers(){
   const team1 = getTeamData(state.p1.team, state.season), team2 = getTeamData(state.p2.team, state.season);
@@ -2340,33 +2915,57 @@ function viewComparePlayers(){
   }
   const p1 = team1.players[state.p1.idx], pg1 = playerPerGame(p1);
   const p2 = team2.players[state.p2.idx], pg2 = playerPerGame(p2);
-  pg1.efgPct = efgPct(p1); pg1.plusMinus = seededVal(team1.short+p1.name+'pm', -8, 12); pg1.usg = usageRate(team1, p1);
-  pg2.efgPct = efgPct(p2); pg2.plusMinus = seededVal(team2.short+p2.name+'pm', -8, 12); pg2.usg = usageRate(team2, p2);
+  const m1 = comparePlayerVisualMetrics(team1, p1, state.p1.team);
+  const m2 = comparePlayerVisualMetrics(team2, p2, state.p2.team);
+  Object.assign(pg1, {
+    efgPct: efgPct(p1),
+    plusMinus: seededVal(team1.short+p1.name+'pm', -8, 12),
+    usg: m1.usg,
+    assistedFgPct: m1.assistedFgPct,
+    tsPct: m1.tsPct,
+    astPct: m1.astPct,
+    toPct: m1.toPct,
+    astTo: m1.astTo,
+    orbPct: m1.orbPct,
+    drbPct: m1.drbPct,
+    stlPct: m1.stlPct,
+    blkPct: m1.blkPct,
+  });
+  Object.assign(pg2, {
+    efgPct: efgPct(p2),
+    plusMinus: seededVal(team2.short+p2.name+'pm', -8, 12),
+    usg: m2.usg,
+    assistedFgPct: m2.assistedFgPct,
+    tsPct: m2.tsPct,
+    astPct: m2.astPct,
+    toPct: m2.toPct,
+    astTo: m2.astTo,
+    orbPct: m2.orbPct,
+    drbPct: m2.drbPct,
+    stlPct: m2.stlPct,
+    blkPct: m2.blkPct,
+  });
   return `
     <div class="compare-picker-row">
-      <div class="compare-picker-group">
-        ${teamSelect('p1-team-pick', state.p1.team)}
-        <select id="p1-player-pick">${playerOptionsForTeam(state.p1.team, state.p1.idx)}</select>
-      </div>
+      <select id="p1-pick">${playerPickerOptions()}</select>
       <span></span>
-      <div class="compare-picker-group right">
-        ${teamSelect('p2-team-pick', state.p2.team, {attrs:'class="picker-right"'})}
-        <select id="p2-player-pick" class="picker-right">${playerOptionsForTeam(state.p2.team, state.p2.idx)}</select>
-      </div>
+      <select id="p2-pick" class="picker-right">${playerPickerOptions()}</select>
     </div>
     <div class="card">
       <div class="compare-heads">
         <div class="compare-side">
-          <div class="compare-avatar" style="background:color-mix(in srgb, var(--series-a) 22%, var(--surface-3));color:var(--series-a)">${avatarContent(state.p1.team, initials(p1.name))}</div>
+          <div class="compare-avatar" style="background:color-mix(in srgb, var(--series-a) 22%, var(--surface-3));color:var(--series-a)">${rotationPhotoHtml(state.p1.team, p1)}</div>
           <div><div class="compare-name">${p1.name}</div><div class="compare-meta">#${p1.num} ${p1.pos} · ${team1.name}</div></div>
         </div>
         <div class="compare-vs">VS</div>
         <div class="compare-side right">
-          <div class="compare-avatar" style="background:color-mix(in srgb, var(--series-b) 22%, var(--surface-3));color:var(--series-b)">${avatarContent(state.p2.team, initials(p2.name))}</div>
+          <div class="compare-avatar" style="background:color-mix(in srgb, var(--series-b) 22%, var(--surface-3));color:var(--series-b)">${rotationPhotoHtml(state.p2.team, p2)}</div>
           <div><div class="compare-name">${p2.name}</div><div class="compare-meta">#${p2.num} ${p2.pos} · ${team2.name}</div></div>
         </div>
       </div>
     </div>
+    ${comparePlayerRadarChart(m1, m2, p1, p2)}
+    ${comparePlayerShotCard(p1, p2, m1, m2)}
     <div class="card">
       <div class="card-title"><h3>Per-game averages</h3>
         <div class="legend">
@@ -2376,49 +2975,74 @@ function viewComparePlayers(){
       </div>
       ${diffRowsHtml(CP_STATS, pg1, pg2)}
     </div>
+    <div class="card">
+      <div class="card-title"><h3>Role and efficiency</h3>
+        <div class="legend">
+          <span class="legend-item"><span class="swatch" style="background:var(--series-a)"></span>${p1.name.split(' ').slice(-1)}</span>
+          <span class="legend-item"><span class="swatch" style="background:var(--series-b)"></span>${p2.name.split(' ').slice(-1)}</span>
+        </div>
+      </div>
+      ${diffRowsHtml(CP_ROLE_STATS, pg1, pg2)}
+    </div>
   `;
 }
 function wireComparePlayers(container){
-  const p1Team = container.querySelector('#p1-team-pick'), p1Player = container.querySelector('#p1-player-pick');
-  const p2Team = container.querySelector('#p2-team-pick'), p2Player = container.querySelector('#p2-player-pick');
-  if(!p1Team || !p1Player || !p2Team || !p2Player) return; // view rendered a loadingCard() while dynamic team data fetches — no pickers to wire yet
-  p1Team.addEventListener('change', e=>{ state.p1={team:e.target.value, idx:0}; render(); });
-  p1Player.addEventListener('change', e=>{ state.p1={team:state.p1.team, idx:+e.target.value}; render(); });
-  p2Team.addEventListener('change', e=>{ state.p2={team:e.target.value, idx:0}; render(); });
-  p2Player.addEventListener('change', e=>{ state.p2={team:state.p2.team, idx:+e.target.value}; render(); });
-  wireStatTooltips(container);
+  const p1 = container.querySelector('#p1-pick'), p2 = container.querySelector('#p2-pick');
+  p1.value = state.p1.team+'|'+state.p1.idx; p2.value = state.p2.team+'|'+state.p2.idx;
+  p1.addEventListener('change', e=>{ const [t,i]=e.target.value.split('|'); state.p1={team:t,idx:+i}; render(); });
+  p2.addEventListener('change', e=>{ const [t,i]=e.target.value.split('|'); state.p2={team:t,idx:+i}; render(); });
+  wirePlayerRadarChart(container);
+  wireShotDistributionChart(container);
 }
 
 /* ============================= VIEW: COMPARE TEAMS ============================= */
 const CT_SEASON_STATS = [
-  {key:'ppg', label:'PPG', desc:'Points Per Game — average points scored per game.', fmt:fmt1, max:90},
-  {key:'oppPpg', label:'Opp PPG', desc:'Opponent Points Per Game — average points allowed per game (lower is better).', fmt:fmt1, max:90, lowerBetter:true},
-  {key:'ortg', label:'ORTG', desc:'Offensive Rating — estimated points produced per 100 possessions.', fmt:fmt1, max:130},
-  {key:'drtg', label:'DRTG', desc:'Defensive Rating — estimated points allowed per 100 possessions (lower is better).', fmt:fmt1, max:130, lowerBetter:true},
-  {key:'rpg', label:'RPG', desc:'Rebounds Per Game — average total rebounds per game.', fmt:fmt1, max:50},
-  {key:'apg', label:'APG', desc:'Assists Per Game — average assists per game.', fmt:fmt1, max:25},
-  {key:'topg', label:'TOPG', desc:'Turnovers Per Game — average turnovers committed per game (lower is better).', fmt:fmt1, max:20, lowerBetter:true},
-  {key:'poss', label:'POSS', desc:'Possessions — estimated number of possessions per game; a measure of pace.', fmt:fmt1, max:80},
-  {key:'ppp', label:'PPP', desc:'Points Per Possession — scoring efficiency: points scored per possession used.', fmt:v=>v.toFixed(2), max:1.3},
-  {key:'tovPct', label:'TOV%', desc:'Turnover % — estimated turnovers per 100 possessions (lower is better).', fmt:v=>v.toFixed(1), max:30, lowerBetter:true},
-  {key:'astPct', label:'AST%', desc:'Assist % — share of made field goals that were set up by an assist.', fmt:v=>v.toFixed(1), max:75},
-  {key:'plusMinus', label:'+/-', desc:'Plus/Minus — average point differential (points scored minus points allowed) per game.', fmt:v=>(v>=0?'+':'')+v.toFixed(1), min:-20, max:20},
+  {key:'ppg', label:'PPG', fmt:fmt1, max:90},
+  {key:'oppPpg', label:'Opp PPG', fmt:fmt1, max:90, lowerBetter:true},
+  {key:'rpg', label:'RPG', fmt:fmt1, max:50},
+  {key:'apg', label:'APG', fmt:fmt1, max:25},
+  {key:'topg', label:'TOPG', fmt:fmt1, max:20, lowerBetter:true},
+  {key:'ppp', label:'PPP', fmt:v=>v.toFixed(2), max:1.3},
+  {key:'tovPct', label:'TOV%', fmt:v=>v.toFixed(1), max:30, lowerBetter:true},
+  {key:'plusMinus', label:'+/-', fmt:v=>(v>=0?'+':'')+v.toFixed(1), min:-20, max:20},
+];
+const fmtPctile = v => `${Math.round(v)}th`;
+const CT_BART_STATS = [
+  {key:'ortg', label:'Adjusted Offense', fmt:fmt1, max:130, subKey:'adjOffPct', subLabel:'Percentile', subFmt:fmtPctile},
+  {key:'drtg', label:'Adjusted Defense', fmt:fmt1, max:130, lowerBetter:true, subKey:'adjDefPct', subLabel:'Percentile', subFmt:fmtPctile},
+  {key:'poss', label:'Adjusted Tempo', fmt:fmt1, max:80, subKey:'adjTempoPct', subLabel:'Percentile', subFmt:fmtPctile},
+];
+const CT_BART_RESUME_STATS = [
+  {key:'adjEm', label:'Adjusted Efficiency Margin', fmt:fmt1, min:-30, max:30},
+  {key:'sos', label:'Strength of Schedule', fmt:fmt1, min:-15, max:15},
+  {key:'wab', label:'Wins Above Bubble', fmt:fmt1, min:-20, max:20},
+];
+const CT_FOUR_FACTOR_STATS = [
+  {key:'efgPct', label:'eFG%', fmt:v=>v.toFixed(1), max:70},
+  {key:'oppEfgPct', label:'Opp eFG%', fmt:v=>v.toFixed(1), max:70, lowerBetter:true},
+  {key:'assistedFgPct', label:'Assisted FG%', fmt:v=>v.toFixed(1), max:75},
+  {key:'tovPct', label:'TOV%', fmt:v=>v.toFixed(1), max:30, lowerBetter:true},
+  {key:'forcedTovPct', label:'Def TOV%', fmt:v=>v.toFixed(1), max:30},
+  {key:'orebPct', label:'ORB%', fmt:v=>v.toFixed(1), max:45},
+  {key:'drebPct', label:'DRB%', fmt:v=>v.toFixed(1), max:85},
+  {key:'ftRate', label:'FT Rate', fmt:v=>v.toFixed(3), max:.6},
+  {key:'twoPct', label:'2P%', fmt:v=>v.toFixed(1), max:70},
+  {key:'tpPct', label:'3P%', fmt:v=>v.toFixed(1), max:50},
 ];
 const CT_SHOOTING_STATS = [
-  {key:'fgPct', label:'FG%', desc:'Field Goal % — percentage of field goal attempts made.', fmt:v=>v.toFixed(1), max:65},
-  {key:'tpPct', label:'3P%', desc:'Three-Point % — percentage of three-point attempts made.', fmt:v=>v.toFixed(1), max:50},
-  {key:'ftPct', label:'FT%', desc:'Free Throw % — percentage of free throw attempts made.', fmt:v=>v.toFixed(1), max:100},
-  {key:'tsPct', label:'TS%', desc:'True Shooting % — overall shooting efficiency, accounting for 2s, 3s, and free throws together.', fmt:v=>v.toFixed(1), max:70},
+  {key:'fgPct', label:'FG%', fmt:v=>v.toFixed(1), max:65},
+  {key:'tpPct', label:'3P%', fmt:v=>v.toFixed(1), max:50},
+  {key:'ftPct', label:'FT%', fmt:v=>v.toFixed(1), max:100},
+  {key:'tsPct', label:'TS%', fmt:v=>v.toFixed(1), max:70},
 ];
 const CT_DEFENSE_STATS = [
-  {key:'drebPct', label:'DREB%', desc:'Defensive Rebound % — share of available defensive rebounds this team grabbed.', fmt:v=>v.toFixed(1), max:100},
-  {key:'orebPct', label:'OREB%', desc:'Offensive Rebound % — share of available offensive rebounds this team grabbed.', fmt:v=>v.toFixed(1), max:100},
-  {key:'stlpg', label:'STL', desc:'Steals Per Game — average steals forced per game.', fmt:fmt1, max:12},
-  {key:'blkpg', label:'BLK', desc:'Blocks Per Game — average shots blocked per game.', fmt:fmt1, max:8},
-  {key:'oppFgPct', label:'Opp FG%', desc:'Opponent Field Goal % — field goal % allowed to opponents (lower is better).', fmt:v=>v.toFixed(1), max:60, lowerBetter:true},
-  {key:'forcedTovPct', label:'Forced TOV%', desc:'Forced Turnover % — share of opponent possessions that end in a turnover.', fmt:v=>v.toFixed(1), max:30},
+  {key:'drebPct', label:'DREB%', fmt:v=>v.toFixed(1), max:100},
+  {key:'orebPct', label:'OREB%', fmt:v=>v.toFixed(1), max:100},
+  {key:'stlpg', label:'STL', fmt:fmt1, max:12},
+  {key:'blkpg', label:'BLK', fmt:fmt1, max:8},
+  {key:'oppFgPct', label:'Opp FG%', fmt:v=>v.toFixed(1), max:60, lowerBetter:true},
+  {key:'forcedTovPct', label:'Forced TOV%', fmt:v=>v.toFixed(1), max:30},
 ];
-
 function ctLegend(t1, t2){
   return `<div class="legend">
     <span class="legend-item"><span class="swatch" style="background:var(--series-a)"></span>${t1.short}</span>
@@ -2426,11 +3050,213 @@ function ctLegend(t1, t2){
   </div>`;
 }
 
-const CT_SECTIONS = [
-  {id:'overview', label:'Overview'},
-  {id:'offense', label:'Offense'},
-  {id:'defense', label:'Defense'},
-];
+function bartRecordLabel(stats){
+  return stats.bart?.record || `${stats.record.w}-${stats.record.l}`;
+}
+
+function percentileFromValues(values, value, higherBetter = true){
+  const sorted = values.filter(Number.isFinite).sort((a,b)=>a-b);
+  if(!Number.isFinite(value) || sorted.length <= 1) return 0;
+  const below = sorted.filter(v => v < value).length;
+  const equal = sorted.filter(v => v === value).length;
+  const pct = ((below + Math.max(equal - 1, 0) / 2) / (sorted.length - 1)) * 100;
+  return higherBetter ? pct : 100 - pct;
+}
+
+function comparePlayerPool(){
+  return TEAM_KEYS.flatMap(teamKey => {
+    const team = analysisTeam(getTeamData(teamKey, state.season));
+    return (team.players || [])
+      .filter(player => player.gp > 0 && player.min >= 8)
+      .map(player => ({ team, player, stats: comparePlayerStats(team, player) }));
+  });
+}
+
+function bartPlayerFor(teamKey, team, player){
+  const playerData = BART_PLAYER_CACHE[bartSeasonYear(state.season)];
+  const teamName = bartTeamName(teamKey, team);
+  return playerData?.byKey?.[bartPlayerKey(teamName, displayPlayerName(player.name))]
+    || playerData?.byKey?.[bartPlayerKey(teamName, player.name)]
+    || null;
+}
+
+function bartTeamAssistedFgPct(teamKey, team){
+  const playerData = BART_PLAYER_CACHE[bartSeasonYear(state.season)];
+  const teamName = normTeamName(bartTeamName(teamKey, team));
+  const rows = (playerData?.rows || []).filter(row => normTeamName(row.team) === teamName);
+  const totals = rows.reduce((acc, row) => {
+    const rimMakes = Number(row.rimmade || 0);
+    const midMakes = Number(row.midmade || 0);
+    const threeMakes = Number(row.tpm || 0);
+    acc.makes += rimMakes + midMakes + threeMakes;
+    acc.assisted += rimMakes * ((row.rimAssistPct || 0) / 100);
+    acc.assisted += midMakes * ((row.midAssistPct || 0) / 100);
+    acc.assisted += threeMakes * ((row.threeAssistPct || 0) / 100);
+    return acc;
+  }, { makes: 0, assisted: 0 });
+  return totals.makes > 0 ? (totals.assisted / totals.makes) * 100 : 0;
+}
+
+function comparePlayerStats(team, player, teamKey){
+  const pg = playerPerGame(player);
+  const bart = teamKey ? bartPlayerFor(teamKey, team, player) : null;
+  return {
+    mpg: bart?.mpg || pg.mpg,
+    ppg: bart?.ppg || pg.ppg,
+    rpg: bart?.rpg || pg.rpg,
+    apg: bart?.apg || pg.apg,
+    fgPct: bart?.fgPct || pg.fgPct,
+    tpPct: bart?.tpPct || pg.tpPct,
+    efgPct: efgPct(player),
+    astTo: astToRatio(player),
+    usage: usageRate(team, player),
+    topg: pg.topg,
+    bart,
+  };
+}
+
+function bartPlayerTraitTags(bart){
+  const playerData = BART_PLAYER_CACHE[bartSeasonYear(state.season)];
+  const pool = (playerData?.rows || []).filter(row => row.gp >= 5 && row.mpg >= 8);
+  if(!bart || !pool.length) return [];
+  const defs = [
+    { key:'adjoe', label:'AdjOE', fmt:fmt1 },
+    { key:'usage', label:'USG%', fmt:v=>`${v.toFixed(1)}%` },
+    { key:'ts', label:'TS%', fmt:v=>`${v.toFixed(1)}%` },
+    { key:'efg', label:'eFG%', fmt:v=>`${v.toFixed(1)}%` },
+    { key:'astPct', label:'AST%', fmt:v=>`${v.toFixed(1)}%` },
+    { key:'toPct', label:'TO%', fmt:v=>`${v.toFixed(1)}%`, lowerBetter:true },
+    { key:'drbPct', label:'DRB%', fmt:v=>`${v.toFixed(1)}%` },
+    { key:'stlPct', label:'STL%', fmt:v=>`${v.toFixed(1)}%` },
+    { key:'blkPct', label:'BLK%', fmt:v=>`${v.toFixed(1)}%` },
+  ];
+  const scored = defs.map(def => {
+    const values = pool.map(item => item[def.key]);
+    return {
+      ...def,
+      pct: percentileFromValues(values, bart[def.key], !def.lowerBetter),
+      value: bart[def.key],
+    };
+  });
+  return scored
+    .filter(item => item.pct >= 85 || item.pct <= 15)
+    .sort((a,b)=>Math.abs(b.pct - 50) - Math.abs(a.pct - 50))
+    .slice(0,3);
+}
+
+function playerTraitTags(stats, pool){
+  const defs = [
+    { key:'ppg', label:'PPG', fmt:fmt1 },
+    { key:'rpg', label:'RPG', fmt:fmt1 },
+    { key:'apg', label:'APG', fmt:fmt1 },
+    { key:'efgPct', label:'eFG%', fmt:v=>`${v.toFixed(1)}%` },
+    { key:'astTo', label:'AST/TO', fmt:v=>v.toFixed(1) },
+    { key:'usage', label:'USG%', fmt:v=>`${v.toFixed(1)}%` },
+    { key:'topg', label:'TO/G', fmt:fmt1, lowerBetter:true },
+  ];
+  const scored = defs.map(def => {
+    const values = pool.map(item => item.stats[def.key]);
+    return {
+      ...def,
+      pct: percentileFromValues(values, stats[def.key], !def.lowerBetter),
+      value: stats[def.key],
+    };
+  });
+  return scored
+    .filter(item => item.pct >= 85 || item.pct <= 15)
+    .sort((a,b)=>Math.abs(b.pct - 50) - Math.abs(a.pct - 50))
+    .slice(0,3);
+}
+
+function topMinutesRows(team, teamKey, pool){
+  return [...team.players]
+    .map((player, idx) => ({ player, idx }))
+    .sort((a,b)=>b.player.min-a.player.min || b.player.pts-a.player.pts)
+    .slice(0,5)
+    .map(({ player, idx }) => {
+      const stats = comparePlayerStats(team, player, teamKey);
+      const tags = stats.bart ? bartPlayerTraitTags(stats.bart) : playerTraitTags(stats, pool);
+      const pos = displayPos(stats.bart?.pos) || displayListedPosition(player);
+      const meta = [
+        pos && pos !== 'Player' ? pos : '',
+        `${fmt1(stats.mpg)} MPG`,
+        `${fmt1(stats.ppg)} PPG`,
+        `${fmt1(stats.rpg)} RPG`,
+        `${fmt1(stats.apg)} APG`,
+        `${stats.fgPct.toFixed(1)} FG%`,
+        `${stats.tpPct.toFixed(1)} 3P%`,
+      ].filter(Boolean).join(' · ');
+      return `<button type="button" class="rotation-row" data-compare-player-team="${teamKey}" data-compare-player-idx="${idx}">
+        <div class="rotation-main">
+          <div class="rotation-photo">
+            ${rotationPhotoHtml(teamKey, player)}
+          </div>
+          <div class="rotation-player">
+            <b>#${player.num} ${displayPlayerName(player.name)}</b>
+            <span>${meta}</span>
+          </div>
+        </div>
+        <div class="rotation-tags">
+          ${tags.map(tag => `<span class="rotation-tag ${tag.pct < 35 ? 'weak' : ''}">
+            ${tag.label}: ${tag.fmt(tag.value)} · ${Math.round(tag.pct)}th
+          </span>`).join('')}
+        </div>
+      </button>`;
+    }).join('');
+}
+
+function topMinutesCard(t1, t2){
+  const pool = comparePlayerPool();
+  return `<div class="card">
+    <div class="card-title"><h3>Top five by minutes</h3><span class="hint">Bart-style national player percentiles when matched</span></div>
+    <div class="rotation-grid">
+      <div>
+        <div class="rotation-team-title">${t1.name}</div>
+        ${topMinutesRows(t1, state.t1, pool)}
+      </div>
+      <div>
+        <div class="rotation-team-title">${t2.name}</div>
+        ${topMinutesRows(t2, state.t2, pool)}
+      </div>
+    </div>
+  </div>`;
+}
+
+function compareTeamTrendChart(games, colorVar){
+  if(!games.length){
+    return `<div class="trend-empty trend-empty--compact"><strong>No D1 games available</strong><span>This team does not have matching D1 game rows for the selected season.</span></div>`;
+  }
+  const w = 520, h = 170;
+  const pad = { l:34, r:14, t:14, b:28 };
+  const iw = w - pad.l - pad.r;
+  const ih = h - pad.t - pad.b;
+  const vals = games.map(game => Number(game.pf || 0));
+  const max = Math.ceil(Math.max(...vals) / 10) * 10 + 5;
+  const min = Math.max(0, Math.floor(Math.min(...vals) / 10) * 10 - 5);
+  const spread = max - min || 1;
+  const x = i => pad.l + (games.length === 1 ? iw / 2 : (i / (games.length - 1)) * iw);
+  const y = v => pad.t + ih - ((v - min) / spread) * ih;
+  const path = vals.map((v, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(' ');
+  const gridY = [0, .5, 1].map(t => min + t * spread);
+  const tickEvery = Math.max(1, Math.ceil(games.length / 5));
+  return `<svg class="chart compare-team-trend" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
+    ${gridY.map(v => `<line class="gridline" x1="${pad.l}" x2="${w - pad.r}" y1="${y(v)}" y2="${y(v)}"/><text class="axislabel" x="2" y="${y(v) + 3}">${Math.round(v)}</text>`).join('')}
+    <path d="${path}" fill="none" stroke="${colorVar}" stroke-width="2.4"/>
+    ${games.map((game, i) => `<circle cx="${x(i).toFixed(1)}" cy="${y(vals[i]).toFixed(1)}" r="3.2" fill="${colorVar}">
+      <title>${game.win ? 'W' : 'L'} ${game.pf}-${game.pa} ${game.home ? 'vs' : '@'} ${game.opp}</title>
+    </circle>`).join('')}
+    ${games.map((game, i) => i % tickEvery === 0 || i === games.length - 1
+      ? `<text class="axislabel" x="${x(i).toFixed(1)}" y="${h - 8}" text-anchor="middle">G${i + 1}</text>`
+      : '').join('')}
+  </svg>`;
+}
+
+function compareTeamPlayerModal(){
+  if(!state.compareTeamPlayer) return '';
+  const team = analysisTeam(getTeamData(state.compareTeamPlayer.team, state.season));
+  if(!team?.players?.[state.compareTeamPlayer.idx]) return '';
+  return playerModal(team, state.compareTeamPlayer.idx, 'compareTeamPlayer');
+}
 
 function viewCompareTeams(){
   const t1 = getTeamData(state.t1, state.season), t2 = getTeamData(state.t2, state.season);
@@ -2439,22 +3265,10 @@ function viewCompareTeams(){
     if(isDynamicTeam(state.t2)) ensureTeamData(state.t2, state.season).then(()=>render());
     return loadingCard(isDynamicTeam(state.t1) ? state.t1 : state.t2, state.season);
   }
-  const s1 = teamAdvancedStats(t1), s2 = teamAdvancedStats(t2);
-  const section = state.compareTeamsSection;
-  const sectionHtml = section==='offense'
-    ? `<div class="card">
-        <div class="card-title"><h3>Shooting splits</h3>${ctLegend(t1,t2)}</div>
-        ${diffRowsHtml(CT_SHOOTING_STATS, s1, s2)}
-      </div>`
-    : section==='defense'
-    ? `<div class="card">
-        <div class="card-title"><h3>Defensive breakdown</h3>${ctLegend(t1,t2)}</div>
-        ${diffRowsHtml(CT_DEFENSE_STATS, s1, s2)}
-      </div>`
-    : `<div class="card">
-        <div class="card-title"><h3>Season averages</h3>${ctLegend(t1,t2)}</div>
-        ${diffRowsHtml(CT_SEASON_STATS, s1, s2)}
-      </div>`;
+  const s1 = teamAdvancedStats(t1, state.t1), s2 = teamAdvancedStats(t2, state.t2);
+  const hasBartPair = s1.bart && s2.bart;
+  const profileTitle = hasBartPair ? 'Adjusted stats' : 'Season averages';
+  const profileStats = hasBartPair ? CT_BART_STATS : CT_SEASON_STATS;
   return `
     <div class="compare-picker-row">
       ${teamSelect('t1-pick', state.t1, {mascot:true})}
@@ -2465,31 +3279,60 @@ function viewCompareTeams(){
       <div class="compare-heads">
         <div class="compare-side">
           <div class="compare-avatar" style="background:color-mix(in srgb, var(--series-a) 22%, var(--surface-3));color:var(--series-a);font-size:11px;">${avatarContent(state.t1, t1.short)}</div>
-          <div><div class="compare-name">${t1.name}</div><div class="compare-meta">${s1.record.w}-${s1.record.l} · ${t1.mascot}</div></div>
+          <div><div class="compare-name">${t1.name}</div><div class="compare-meta">${bartRecordLabel(s1)} · ${t1.mascot}</div></div>
         </div>
         <div class="compare-vs">VS</div>
         <div class="compare-side right">
           <div class="compare-avatar" style="background:color-mix(in srgb, var(--series-b) 22%, var(--surface-3));color:var(--series-b);font-size:11px;">${avatarContent(state.t2, t2.short)}</div>
-          <div><div class="compare-name">${t2.name}</div><div class="compare-meta">${s2.record.w}-${s2.record.l} · ${t2.mascot}</div></div>
+          <div><div class="compare-name">${t2.name}</div><div class="compare-meta">${bartRecordLabel(s2)} · ${t2.mascot}</div></div>
         </div>
       </div>
     </div>
-    <div class="team-section-tabs" role="tablist" aria-label="Compare teams sections">
-      ${CT_SECTIONS.map(sec=>`<button class="team-section-tab ${section===sec.id?'active':''}" data-ct-section="${sec.id}" role="tab" aria-selected="${section===sec.id}">${sec.label}</button>`).join('')}
+    ${topMinutesCard(t1, t2)}
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title"><h3>Box-score context</h3><span class="hint">D1 games only</span>${ctLegend(t1,t2)}</div>
+        ${diffRowsHtml(CT_SEASON_STATS, s1, s2)}
+      </div>
+      <div class="card">
+        <div class="card-title"><h3>Shooting splits</h3><span class="hint">D1 games only</span>${ctLegend(t1,t2)}</div>
+        ${diffRowsHtml(CT_SHOOTING_STATS, s1, s2)}
+      </div>
     </div>
-    ${sectionHtml}
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title"><h3>Defensive breakdown</h3><span class="hint">D1 games only</span>${ctLegend(t1,t2)}</div>
+        ${diffRowsHtml(CT_DEFENSE_STATS, s1, s2)}
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title"><h3>${profileTitle}</h3>${ctLegend(t1,t2)}</div>
+      ${diffRowsHtml(profileStats, s1, s2)}
+    </div>
+    ${hasBartPair ? `<div class="card">
+      <div class="card-title"><h3>Game resume</h3><span class="hint">Schedule and wins above bubble</span>${ctLegend(t1,t2)}</div>
+      ${diffRowsHtml(CT_BART_RESUME_STATS, s1, s2)}
+    </div>` : ''}
+    <div class="card">
+      <div class="card-title"><h3>Four factors</h3><span class="hint">D1 box score plus Bart shot profile</span>${ctLegend(t1,t2)}</div>
+      ${diffRowsHtml(CT_FOUR_FACTOR_STATS, s1, s2)}
+    </div>
+    ${compareTeamPlayerModal()}
   `;
 }
 function wireCompareTeams(container){
-  const t1 = container.querySelector('#t1-pick'), t2 = container.querySelector('#t2-pick');
-  if(!t1 || !t2) return; // view rendered a loadingCard() while dynamic team data fetches — no pickers to wire yet
-  t1.addEventListener('change', e=>{ state.t1=e.target.value; state.season = preferredSeasonForTeam(state.t1, state.season); render(); });
-  t2.addEventListener('change', e=>{ state.t2=e.target.value; state.season = preferredSeasonForTeam(state.t2, state.season); render(); });
-  container.querySelectorAll('[data-ct-section]').forEach(btn=>btn.addEventListener('click', ()=>{
-    state.compareTeamsSection = btn.dataset.ctSection;
+  container.querySelector('#t1-pick').addEventListener('change', e=>{ state.t1=e.target.value; state.season = preferredSeasonForTeam(state.t1, state.season); render(); });
+  container.querySelector('#t2-pick').addEventListener('change', e=>{ state.t2=e.target.value; state.season = preferredSeasonForTeam(state.t2, state.season); render(); });
+  container.querySelectorAll('[data-compare-player-team]').forEach(row=>row.addEventListener('click', ()=>{
+    state.compareTeamPlayer = { team: row.dataset.comparePlayerTeam, idx: Number(row.dataset.comparePlayerIdx) };
+    state.playerStatKey = 'pts';
+    state.playerGameFocus = null;
     render();
   }));
-  wireStatTooltips(container);
+  if(state.compareTeamPlayer){
+    const team = analysisTeam(getTeamData(state.compareTeamPlayer.team, state.season));
+    wirePlayerModal(container, team, 'compareTeamPlayer', state.compareTeamPlayer.idx);
+  }
 }
 
 /* ============================= RENDER DISPATCH ============================= */
