@@ -59,6 +59,10 @@ def opp_display(raw_name):
     return meta["name"] if meta else raw_name
 
 
+def pct(made, attempted):
+    return (made / attempted * 100) if attempted > 0 else 0
+
+
 def build_season(season_dir, season):
     game_index_path = os.path.join(season_dir, "csv1_game_index.csv")
     boxscore_path = os.path.join(season_dir, "csv2_boxscore_players.csv")
@@ -69,12 +73,25 @@ def build_season(season_dir, season):
         game_rows = list(csv.DictReader(fh))
     with open(boxscore_path, newline="", encoding="utf-8") as fh:
         box_rows = list(csv.DictReader(fh))
+    play_analysis_path = os.path.join(season_dir, "csv4_play_analysis.csv")
+    if os.path.exists(play_analysis_path):
+        with open(play_analysis_path, newline="", encoding="utf-8") as fh:
+            play_analysis_rows = list(csv.DictReader(fh))
+    else:
+        play_analysis_rows = []
 
     # game_id -> {home_team, away_team, home_score, away_score}
     games_by_id = {r["game_id"]: r for r in game_rows}
+    analysis_by_team_game = {(r["team"], r["game_id"]): r for r in play_analysis_rows}
 
-    # (team, game_id) -> summed box totals, for per-game team rows in the game log
-    team_game_totals = defaultdict(lambda: {"fgm": 0, "fga": 0, "oreb": 0, "dreb": 0, "ast": 0, "to": 0})
+    # (team, game_id) -> summed box totals, for per-game team rows in the game log.
+    # Include TEAM rows here so team rebounds/turnovers are reflected in team-level
+    # comparisons, while still excluding those rows from individual player totals.
+    team_game_totals = defaultdict(lambda: {
+        "fgm": 0, "fga": 0, "tpm": 0, "tpa": 0, "ftm": 0, "fta": 0,
+        "oreb": 0, "dreb": 0, "ast": 0, "to": 0, "stl": 0, "blk": 0,
+        "pf": 0, "pts": 0,
+    })
     # (team, jersey_norm) -> accumulated season totals + per-game appearance count
     player_agg = defaultdict(lambda: {
         "names": defaultdict(int), "jersey_display": defaultdict(int),
@@ -84,15 +101,21 @@ def build_season(season_dir, season):
     })
 
     for r in box_rows:
-        if r["player"] == "TEAM":
-            continue
-        team, jersey = r["team"], r["jersey"].strip()
-        jersey_norm = str(int(jersey)) if re.fullmatch(r"\d+", jersey) else jersey
-
+        team = r["team"]
         tg = team_game_totals[(team, r["game_id"])]
         tg["fgm"] += num(r["fg_m"], int); tg["fga"] += num(r["fg_a"], int)
+        tg["tpm"] += num(r["3p_m"], int); tg["tpa"] += num(r["3p_a"], int)
+        tg["ftm"] += num(r["ft_m"], int); tg["fta"] += num(r["ft_a"], int)
         tg["oreb"] += num(r["oreb"], int); tg["dreb"] += num(r["dreb"], int)
         tg["ast"] += num(r["ast"], int); tg["to"] += num(r["to"], int)
+        tg["stl"] += num(r["stl"], int); tg["blk"] += num(r["blk"], int)
+        tg["pf"] += num(r["pf"], int); tg["pts"] += num(r["pts"], int)
+
+        if r["player"] == "TEAM":
+            continue
+
+        jersey = r["jersey"].strip()
+        jersey_norm = str(int(jersey)) if re.fullmatch(r"\d+", jersey) else jersey
 
         p = player_agg[(team, jersey_norm)]
         p["names"][r["player"]] += 1
@@ -119,12 +142,30 @@ def build_season(season_dir, season):
             opp_raw = g["away_team"] if is_home else g["home_team"]
             pf = num(g["home_score"] if is_home else g["away_score"], int)
             pa = num(g["away_score"] if is_home else g["home_score"], int)
-            tg = team_game_totals.get((raw_name, g["game_id"]), {"fgm": 0, "fga": 0, "oreb": 0, "dreb": 0, "ast": 0, "to": 0})
+            empty_totals = {
+                "fgm": 0, "fga": 0, "tpm": 0, "tpa": 0, "ftm": 0, "fta": 0,
+                "oreb": 0, "dreb": 0, "ast": 0, "to": 0, "stl": 0, "blk": 0,
+                "pf": 0, "pts": 0,
+            }
+            tg = team_game_totals.get((raw_name, g["game_id"]), empty_totals)
+            og = team_game_totals.get((opp_raw, g["game_id"]), empty_totals)
+            analysis = analysis_by_team_game.get((raw_name, g["game_id"]), {})
             games.append({
                 "date": g["date"], "opp": opp_display(opp_raw), "home": is_home,
                 "pf": pf, "pa": pa, "win": pf > pa,
                 "fgm": tg["fgm"], "fga": tg["fga"],
-                "reb": tg["oreb"] + tg["dreb"], "ast": tg["ast"], "to": tg["to"],
+                "tpm": tg["tpm"], "tpa": tg["tpa"], "ftm": tg["ftm"], "fta": tg["fta"],
+                "oreb": tg["oreb"], "dreb": tg["dreb"], "reb": tg["oreb"] + tg["dreb"],
+                "ast": tg["ast"], "to": tg["to"], "stl": tg["stl"], "blk": tg["blk"], "fouls": tg["pf"],
+                "oppFgm": og["fgm"], "oppFga": og["fga"],
+                "oppTpm": og["tpm"], "oppTpa": og["tpa"], "oppFtm": og["ftm"], "oppFta": og["fta"],
+                "oppOreb": og["oreb"], "oppDreb": og["dreb"], "oppReb": og["oreb"] + og["dreb"],
+                "oppAst": og["ast"], "oppTo": og["to"], "oppStl": og["stl"], "oppBlk": og["blk"], "oppPf": og["pf"],
+                "paintPts": num(analysis.get("pts_in_paint"), int),
+                "fastBreakPts": num(analysis.get("fast_break_pts"), int),
+                "secondChancePts": num(analysis.get("second_chance_pts"), int),
+                "ptsOffTurnovers": num(analysis.get("pts_off_turnovers"), int),
+                "benchPts": num(analysis.get("bench_pts"), int),
             })
 
         players = []
@@ -143,10 +184,51 @@ def build_season(season_dir, season):
                 "ast": p["ast"], "stl": p["stl"], "blk": p["blk"], "to": p["to"], "pts": p["pts"],
             })
         players.sort(key=lambda p: -p["pts"])
+        games_by_game_id = {g["game_id"]: g for g in team_rows}
+        player_game_logs = defaultdict(list)
+        for r in sorted(box_rows, key=lambda row: (games_by_id.get(row["game_id"], {}).get("date", ""), row["game_id"])):
+            if r["team"] != raw_name or r["player"] == "TEAM":
+                continue
+            g = games_by_game_id.get(r["game_id"])
+            if not g:
+                continue
+            is_home = g["home_team"] == raw_name
+            opp_raw = g["away_team"] if is_home else g["home_team"]
+            pf = num(g["home_score"] if is_home else g["away_score"], int)
+            pa = num(g["away_score"] if is_home else g["home_score"], int)
+            margin = pf - pa
+            fgm = num(r["fg_m"], int)
+            fga = num(r["fg_a"], int)
+            tpm = num(r["3p_m"], int)
+            tpa = num(r["3p_a"], int)
+            ftm = num(r["ft_m"], int)
+            fta = num(r["ft_a"], int)
+            oreb = num(r["oreb"], int)
+            dreb = num(r["dreb"], int)
+            player_game_logs[re.sub(r"\s+", " ", display_name(r["player"]).strip()).lower()].append({
+                "gameId": r["game_id"],
+                "date": g["date"],
+                "opp": opp_display(opp_raw),
+                "home": is_home,
+                "win": pf > pa,
+                "pm": margin,
+                "min": num(r["min"], float),
+                "fgm": fgm, "fga": fga, "tpm": tpm, "tpa": tpa, "ftm": ftm, "fta": fta,
+                "oreb": oreb, "dreb": dreb, "reb": oreb + dreb,
+                "ast": num(r["ast"], int),
+                "stl": num(r["stl"], int),
+                "blk": num(r["blk"], int),
+                "to": num(r["to"], int),
+                "pts": num(r["pts"], int),
+                "fgPct": pct(fgm, fga),
+                "tpPct": pct(tpm, tpa),
+                "ftPct": pct(ftm, fta),
+            })
 
         teams[meta["key"]] = {
             "name": meta["name"], "short": meta["short"], "mascot": meta["mascot"],
             "players": players, "games": games,
+            "playerGameLogs": dict(player_game_logs),
         }
 
     return teams
