@@ -3181,7 +3181,6 @@ function compareTableHtml(stats, obj1, obj2, nameA, nameB){
     </tr>`;
   }).join('');
   return `<table class="compare-table">
-    <colgroup><col><col class="val"><col class="val"></colgroup>
     <thead><tr><th>Stat</th><th class="a">${nameA}</th><th class="b">${nameB}</th></tr></thead>
     <tbody>${rows}</tbody>
   </table>`;

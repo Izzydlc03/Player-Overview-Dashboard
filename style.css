@@ -766,29 +766,25 @@ tbody tr.selected{ background:var(--accent-soft); }
 }
 .compare-toggle button:hover{ color:var(--ink); background:var(--surface-2); }
 .compare-toggle button.active{ background:#182B49; color:#fff; }
-/* Fixed-width pair of right-aligned value columns keeps the two sides' numbers close together;
-   larger type and taller rows keep the card itself at a comfortable size. Player/team names in the
-   header share the numbers' right padding so each name lines up with its column. */
-.compare-card{ max-width:780px; }
+/* Full-width table with three equal columns (stat | side A | side B). Names and numbers are both
+   left-aligned with the same padding, so each name sits directly above its column's numbers. */
 .compare-card-head h3{ font-size:19px; }
 .compare-card-sub{ font-size:14px; }
 .compare-badge{ font-size:11px; padding:6px 10px; }
 .compare-toggle button{ font-size:12.5px; padding:9px 15px; }
 .compare-table-wrap{ margin-top:16px; overflow-x:auto; }
 .compare-table{ width:100%; min-width:0; border-collapse:collapse; table-layout:fixed; font-size:16.5px; }
-.compare-table col.val{ width:200px; }
 .compare-table th{ text-align:left; font-weight:600; }
 .compare-table thead th{
   padding:0 20px 12px; font-size:12.5px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-faint);
 }
-.compare-table thead th.a, .compare-table thead th.b{ text-align:right; padding-right:calc(20px - .08em); } /* offset the trailing letter-spacing */
 .compare-table thead th.a{ color:var(--series-a); }
 .compare-table thead th.b{ color:color-mix(in srgb, var(--series-b) 78%, #000); }
 .compare-table tbody th{ padding:0 20px; color:var(--ink); }
 .compare-table tbody tr{ border-top:1px solid var(--border); }
 .compare-table tbody td, .compare-table tbody th{ height:56px; }
 .stat-label-sub{ display:block; margin-top:2px; font-size:11px; letter-spacing:.04em; color:var(--ink-faint); font-weight:700; }
-.cmp-cell{ padding:0 20px; text-align:right; font-family:var(--font-mono); font-weight:600; color:var(--ink); white-space:nowrap; }
+.cmp-cell{ padding:0 20px; text-align:left; font-family:var(--font-mono); font-weight:600; color:var(--ink); white-space:nowrap; }
 .cmp-sub{ display:block; margin-top:2px; color:var(--ink-muted); font-size:12px; font-weight:600; }
 .cmp-cell.better{ font-weight:800; }
 .cmp-cell.a.better{ background:color-mix(in srgb, var(--series-a) 14%, transparent); color:var(--series-a); }
@@ -833,9 +829,7 @@ svg.chart{ display:block; width:100%; height:auto; overflow:visible; }
   .rotation-pair-row::after{ display:none; }
   .rotation-tags{ padding-left:0; }
   .compare-table{ font-size:13.5px; }
-  .compare-table col.val{ width:104px; }
   .compare-table thead th, .compare-table tbody th, .cmp-cell{ padding-left:8px; padding-right:8px; }
-  .compare-table thead th.a, .compare-table thead th.b{ padding-right:calc(8px - .08em); }
   .compare-table thead th{ font-size:11px; }
 }
 .hit{ fill:transparent; }
