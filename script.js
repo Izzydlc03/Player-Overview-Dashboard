@@ -20,7 +20,7 @@ const SEASON_CACHE = {};
 const BART_CACHE = {};
 const BART_PLAYER_CACHE = {};
 const ARCHETYPE_CACHE = {};
-const DATA_VERSION = '20261028a';
+const DATA_VERSION = '20261028b';
 
 function possessionRatePercent(raw, key = ''){
   const num = Number(raw || 0);
@@ -613,7 +613,7 @@ function displayPlayerName(name){
   return parts.length === 2 ? `${parts[1]} ${parts[0]}` : name;
 }
 function displayClassYear(player){
-  const cls = player.advanced?.cls || '';
+  const cls = player.advanced?.cls || player.cls || '';
   const labels = {
     FR: 'Fr.',
     SO: 'So.',
@@ -706,17 +706,20 @@ function availableSeasonsForTeam(teamKey){
   return REMOTE_TEAM_SEASONS[teamKey] || seasonOptions();
 }
 
-function preferredSeasonForTeam(teamKey, currentSeason){
-  const seasons = availableSeasonsForTeam(teamKey);
-  return seasons.includes(currentSeason) ? currentSeason : seasons[0];
-}
-
+/* A team that's normally loaded client-side (opponents) is treated as a plain
+   JSON team for any season whose data/<season>.json already includes it
+   (e.g. the upcoming 2026-27 roster-only season). */
 function hasSeasonData(teamKey, season){
-  return availableSeasonsForTeam(teamKey).includes(season);
+  return !!SEASON_CACHE[season]?.[teamKey] || availableSeasonsForTeam(teamKey).includes(season);
 }
 
-function isDynamicTeam(teamKey){
-  return teamKey in REMOTE_TEAM_SEASONS;
+function preferredSeasonForTeam(teamKey, currentSeason){
+  if(hasSeasonData(teamKey, currentSeason)) return currentSeason;
+  return availableSeasonsForTeam(teamKey)[0];
+}
+
+function isDynamicTeam(teamKey, season = state.season){
+  return teamKey in REMOTE_TEAM_SEASONS && !SEASON_CACHE[season]?.[teamKey];
 }
 
 function getTeamData(teamKey, season){
@@ -1335,7 +1338,7 @@ function teamSelect(id, selected, opts){
 
 function seasonOptions(){
   const seasons = [];
-  for(let startYear=2025; startYear >= 2019; startYear--){
+  for(let startYear=2026; startYear >= 2019; startYear--){
     const end = String(startYear + 1).slice(-2);
     seasons.push(`${startYear}-${end}`);
   }
@@ -1703,7 +1706,9 @@ function viewOverview(){
   const team = analysisTeam(baseTeam);
   const quarters = quarterAverages(team);
   const fouls = foulsForGames(team.games);
-  const avgFouls = fouls.reduce((a,b)=>a+b,0)/fouls.length;
+  const noGames = !team.games.length;
+  const avgFouls = noGames ? 0 : fouls.reduce((a,b)=>a+b,0)/fouls.length;
+  const emptyChart = `<div class="trend-empty trend-empty--compact"><strong>No games played yet</strong><span>This fills in after ${team.short}'s first official game of ${state.season}.</span></div>`;
   const scorers = [...team.players].sort((a,b)=>b.pts-a.pts);
   const rebounders = [...team.players].sort((a,b)=>(b.oreb+b.dreb)-(a.oreb+a.dreb));
   const assisters = [...team.players].sort((a,b)=>b.ast-a.ast);
@@ -1749,15 +1754,15 @@ function viewOverview(){
             <span class="legend-item"><span class="swatch" style="background:var(--series-b);border-radius:0;height:2px;"></span>Opponent</span>
           </div>
         </div>
-        <div id="trend-holder">${lineChart(team.games, 360, 190)}</div>
+        <div id="trend-holder">${noGames ? emptyChart : lineChart(team.games, 360, 190)}</div>
       </div>
       <div class="card">
         <div class="card-title"><h3>Average Points per Quarter</h3><span class="hint">Season</span></div>
-        ${quarterBarChart(quarters, 360, 190)}
+        ${noGames ? emptyChart : quarterBarChart(quarters, 360, 190)}
       </div>
       <div class="card">
-        <div class="card-title"><h3>Team Fouls per Game</h3><span class="hint">Avg ${fmt1(avgFouls)} · dot = W/L</span></div>
-        ${foulsChart(team.games, 360, 190)}
+        <div class="card-title"><h3>Team Fouls per Game</h3><span class="hint">${noGames ? 'No games yet' : `Avg ${fmt1(avgFouls)} · dot = W/L`}</span></div>
+        ${noGames ? emptyChart : foulsChart(team.games, 360, 190)}
       </div>
     </div>
 

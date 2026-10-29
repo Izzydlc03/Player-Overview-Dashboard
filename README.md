@@ -27,3 +27,28 @@ python3 scripts/import_bart_wbb_player_stats.py 2025-26 --source opponents/overa
 ```
 
 The script writes to `data/bart_2026_player_stats.csv`.
+
+## Big West standings
+
+The Team Overview standings card shows the official conference standings scraped
+from bigwest.org (every dashboard season, in the site's tiebreak order):
+
+```sh
+python3 scripts/fetch_bigwest_standings.py
+```
+
+The script writes to `data/standings.json`.
+
+## Upcoming season (2026-27)
+
+Until real games are played, `data/2026-27.json` holds every team on UCSD's
+2026-27 schedule (plus the 2026-27 Big West field) with its current roster from
+the school's athletics site. All stats are zero and every game list is empty.
+
+```sh
+python3 scripts/build_upcoming_season.py
+```
+
+Once games exist, scrape the season with `run_season.py` and build it with
+`build_data.py`; delete the placeholder `data/2026-27.json` first so the two
+don't conflict.

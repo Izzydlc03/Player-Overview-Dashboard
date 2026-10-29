@@ -4,8 +4,8 @@ season the site lists and writes them to data/standings.json, in site order
 
     python3 scripts/fetch_bigwest_standings.py
 
-Only seasons the dashboard has (a data/<season>.json file) are kept, and seasons
-where no conference games have been played yet are skipped.
+Only seasons the dashboard has (a data/<season>.json file) are kept. An
+upcoming season is kept too: the site lists its teams at 0-0.
 """
 import json
 import os
@@ -106,10 +106,6 @@ def parse_table(soup):
     return teams
 
 
-def has_games(teams):
-    return any(t["conf"] and t["conf"] != "0-0" for t in teams)
-
-
 def main():
     seasons = list_seasons(get(BASE_URL))
     out = {}
@@ -123,8 +119,7 @@ def main():
             print(f"skip {season} (id {standings_id}): not a women's basketball table")
             continue
         teams = parse_table(soup)
-        if not has_games(teams):
-            print(f"skip {season}: no conference games played yet")
+        if not teams:
             continue
         out[season] = teams
         print(f"{season}: {len(teams)} teams")
