@@ -194,6 +194,8 @@ select.vs{ }
 }
 .team-section-tab:hover{ color:var(--ink); background:var(--surface-2); }
 .team-section-tab.active{ background:#182B49; color:white; }
+.compare-teams-tabs{ flex-wrap:wrap; border-radius:24px; gap:4px; }
+.compare-teams-tabs .team-section-tab{ padding:9px 13px; }
 .team-summary-tiles{ margin-top:2px; }
 
 .roster-page-grid{
@@ -667,7 +669,18 @@ tbody tr.selected{ background:var(--accent-soft); }
 .rotation-pair-row:last-child{ border-bottom:none; }
 .rotation-pair-row > div{ min-width:0; display:flex; }
 .rotation-pair-row .rotation-row{ border-bottom:none; height:100%; padding:12px 0; }
-.rotation-team-title{ font-size:12px; font-weight:800; color:var(--ink-muted); margin-bottom:8px; text-transform:uppercase; letter-spacing:.04em; }
+.rotation-team-title{ font-size:12px; font-weight:800; color:var(--ink-muted); margin-bottom:8px; text-transform:uppercase; letter-spacing:.04em; text-align:center; }
+/* Split the top-five card down the middle (same center line as the VS in the
+   header card above it) and center each team's players in their own half. */
+.rotation-pair-head,
+.rotation-pair-row{ position:relative; }
+.rotation-pair-head::after,
+.rotation-pair-row::after{
+  content:''; position:absolute; top:0; bottom:0; left:50%; width:1px; background:var(--border); pointer-events:none;
+}
+.rotation-pair-row .rotation-row{ justify-items:center; }
+.rotation-pair-row .rotation-main{ justify-content:center; }
+.rotation-pair-row .rotation-tags{ justify-content:center; padding-left:0; }
 .rotation-row{
   display:grid; grid-template-columns:1fr; gap:8px; align-items:start;
   padding:10px 0; border-bottom:1px solid var(--border);
@@ -770,6 +783,8 @@ svg.chart{ display:block; width:100%; height:auto; overflow:visible; }
   .key-edge-grid{ grid-template-columns:1fr; }
   .rotation-pair-head,
   .rotation-pair-row{ grid-template-columns:1fr; gap:0; }
+  .rotation-pair-head::after,
+  .rotation-pair-row::after{ display:none; }
   .rotation-tags{ padding-left:0; }
   .diffrow{ grid-template-columns:minmax(42px,1fr) 58px 70px 58px minmax(42px,1fr); gap:6px; }
   .edge-tag{ width:14px; height:14px; margin:0 3px; font-size:9px; }
@@ -817,17 +832,6 @@ svg.chart{ display:block; width:100%; height:auto; overflow:visible; }
 .tab-btn:hover{ color:var(--ink); }
 .tab-btn.active{ color:#182B49; border-bottom-color:#182B49; }
 
-/* ---------- Heatmap legend ---------- */
-.heat-legend{
-  display:flex; align-items:center; gap:8px; margin-top:10px;
-  font-size:10.5px; font-weight:700; color:var(--ink-faint);
-  text-transform:uppercase; letter-spacing:.05em;
-}
-.heat-legend-bar{
-  flex:1; height:8px; border-radius:99px;
-  background:linear-gradient(to right, #FFCD00, #FC8900, #C0524A);
-}
-.heat-caption{ margin:8px 0 0; font-size:11px; color:var(--ink-faint); line-height:1.4; }
 .stat-unit{ font-size:10px; font-weight:800; color:var(--ink-faint); text-transform:uppercase; letter-spacing:.04em; margin-left:4px; width:26px; flex:none; }
 
 @media (prefers-reduced-motion: reduce){ *{ transition:none !important; } }

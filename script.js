@@ -1301,7 +1301,7 @@ function foulsForGames(games){
 /* ============================= STATE / NAV ============================= */
 const state = { view:'overview', team:'ucsd', season:'2025-26', gameSort:{key:'date',dir:1},
   p1:{team:'ucsd',idx:0}, p2:{team:'ucsb',idx:0}, t1:'ucsd', t2:'ucsb',
-  selectedPlayer:null, rosterCardPlayer:null, compareTeamPlayer:null, leaderTab:'scorers', playerStatKey:'pts', playerTrendWindow:'all', playerGameFocus:null, rosterMode:'pergame', rosterTableView:'main', shootingMode:'basic', rosterScrollLeft:0,
+  selectedPlayer:null, rosterCardPlayer:null, compareTeamPlayer:null, compareTeamsTab:'top5', leaderTab:'scorers', playerStatKey:'pts', playerTrendWindow:'all', playerGameFocus:null, rosterMode:'pergame', rosterTableView:'main', shootingMode:'basic', rosterScrollLeft:0,
   rosterSortMain:{key:'ppg',dir:-1}, rosterSortShooting:{key:'tsPct',dir:-1}, rosterSortEfficiency:{key:'tsPct',dir:-1} };
 
 const NAV = [
@@ -1539,137 +1539,6 @@ function wireFoulsChart(container, games){
   });
 }
 
-/* Interpolate between two hex colors; t is 0..1 */
-function hexToRgb(hex){
-  const h = hex.replace('#','');
-  return { r: parseInt(h.slice(0,2),16), g: parseInt(h.slice(2,4),16), b: parseInt(h.slice(4,6),16) };
-}
-function mixHex(h1, h2, t){
-  const c1 = hexToRgb(h1), c2 = hexToRgb(h2);
-  const r = Math.round(c1.r + (c2.r-c1.r)*t);
-  const g = Math.round(c1.g + (c2.g-c1.g)*t);
-  const b = Math.round(c1.b + (c2.b-c1.b)*t);
-  return `rgb(${r},${g},${b})`;
-}
-/* Shot-chart heat color: blends across the four Pantone stops (1245 -> 144 -> 116 -> 3945)
-   based on cell intensity 0..1, instead of a single hue at varying opacity. */
-const HEAT_STOPS = ['#FFCD00','#FC8900','#C0524A'];
-function heatColor(val){
-  const scaled = Math.max(0, Math.min(1, val)) * (HEAT_STOPS.length-1);
-  const idx = Math.min(HEAT_STOPS.length-2, Math.floor(scaled));
-  const t = scaled - idx;
-  return mixHex(HEAT_STOPS[idx], HEAT_STOPS[idx+1], t);
-}
-
-/* ============================= SHOT HEATMAP (illustrative) =============================
-   Hexbin-style heatmap: a grid of hexagons is sampled against a set of "hot zone"
-   gaussians (paint, wings, corners, mid-range, top of key) so density fades smoothly
-   the way a real shot chart does, then rendered as discrete hexagons (size + color
-   both track intensity) instead of blurred blobs.
-
-   Court geometry: baseline/hoop sits near the TOP of the box (y small). The
-   three-point line is drawn as actual circular-arc geometry centered on the hoop,
-   with two short straight "corner three" segments running from the baseline down
-   to where they meet the arc — not a single flattened curve. */
-function heatHexPath(cx, cy, r){
-  const pts = [];
-  for(let i=0;i<6;i++){
-    const angle = Math.PI/180*(60*i-30);
-    pts.push(`${(cx+r*Math.cos(angle)).toFixed(1)},${(cy+r*Math.sin(angle)).toFixed(1)}`);
-  }
-  return pts.join(' ');
-}
-function shotHeatmap(team, w, h){
-  const pad = {l:16, r:16, t:16, b:16};
-  const iw = w-pad.l-pad.r, ih = h-pad.t-pad.b;
-
-  // Hot zones as fractions of the court box, converted to pixel space, each with
-  // a gaussian falloff so the density field is continuous (sampled per hexagon).
-  const baseZones = [
-    {cx:.50, cy:.14, sx:.16, sy:.13, base:0.95}, // paint / restricted area
-    {cx:.18, cy:.50, sx:.13, sy:.17, base:0.72}, // left wing three
-    {cx:.82, cy:.50, sx:.13, sy:.17, base:0.72}, // right wing three
-    {cx:.50, cy:.80, sx:.15, sy:.12, base:0.42}, // top of key / above the break
-    {cx:.06, cy:.10, sx:.09, sy:.09, base:0.30}, // left corner three
-    {cx:.94, cy:.10, sx:.09, sy:.09, base:0.30}, // right corner three
-    {cx:.32, cy:.28, sx:.10, sy:.12, base:0.26}, // left mid-range
-    {cx:.68, cy:.28, sx:.10, sy:.12, base:0.26}, // right mid-range
-  ];
-  const zones = baseZones.map((z,i)=>{
-    const intensity = Math.max(.15, Math.min(1, z.base + seededVal(team.short+'zone'+i, -0.12, 0.12)));
-    return { cx: pad.l+z.cx*iw, cy: pad.t+z.cy*ih, sx: z.sx*iw, sy: z.sy*ih, intensity };
-  });
-  const densityAt = (x,y) => {
-    let val = 0;
-    zones.forEach(z=>{
-      const dx = (x-z.cx)/z.sx, dy = (y-z.cy)/z.sy;
-      val += z.intensity * Math.exp(-(dx*dx+dy*dy));
-    });
-    return Math.min(1, val);
-  };
-
-  // Hexagon grid (pointy-top, offset rows).
-  const hexR = Math.max(7, iw/38);
-  const hexW = Math.sqrt(3)*hexR;
-  const vertStep = hexR*1.5;
-  let hexes = '';
-  let row = 0;
-  for(let y = pad.t+hexR; y <= pad.t+ih-hexR*0.3; y += vertStep){
-    const offsetX = (row%2===1) ? hexW/2 : 0;
-    for(let x = pad.l+hexR+offsetX; x <= pad.l+iw-hexR*0.3; x += hexW){
-      const val = densityAt(x,y);
-      if(val > 0.045){
-        const r = hexR*(0.4+0.6*val);
-        hexes += `<polygon points="${heatHexPath(x,y,r)}" fill="${heatColor(val)}" opacity="${(0.5+val*0.5).toFixed(2)}"/>`;
-      }
-    }
-    row++;
-  }
-
-  // Real NCAA three-point arc, verified against the "basketball-court" npm
-  // package's rendered output (Wikipedia-sourced dimensions) to confirm the
-  // correct arc flags and corner-intersection sign:
-  // - Court width = 50ft, so scale = px per foot = iw/50
-  // - Arc center sits 5'3" (63") off the baseline, directly under the rim
-  // - Arc radius = 22'1.75" from that center point
-  // - Straight segment sits 40.125" in from the sideline (25ft half-width minus
-  //   that offset = 21.65625ft from center court)
-  // - The corner segment meets the arc at the FAR circle intersection
-  //   (hoop.y + d), which lands at ~9.88ft from the baseline — matching the
-  //   diagram's measured 9'10.75" straight-segment length almost exactly.
-  const scale = iw/50;
-  const hoop = { x: pad.l+iw*0.5, y: pad.t + 5.25*scale };
-  const R = 22.1458*scale;
-  const cornerHalfW = (25 - 40.125/12)*scale;
-  const yAtCorner = hoop.y + Math.sqrt(Math.max(0, R*R - cornerHalfW*cornerHalfW));
-  const leftX = hoop.x-cornerHalfW, rightX = hoop.x+cornerHalfW;
-  const arcPath = `M ${leftX.toFixed(1)} ${pad.t.toFixed(1)} L ${leftX.toFixed(1)} ${yAtCorner.toFixed(1)} A ${R.toFixed(1)} ${R.toFixed(1)} 0 0 0 ${rightX.toFixed(1)} ${yAtCorner.toFixed(1)} L ${rightX.toFixed(1)} ${pad.t.toFixed(1)}`;
-
-  // Free-throw lane + circle, same real-world scale: lane is 12ft wide, 15ft
-  // long (outside edge), circle radius = half the lane width, centered on
-  // the free-throw line.
-  const laneW = 12*scale, laneH = 15*scale;
-  const laneX = hoop.x-laneW/2;
-  const ftCircleY = pad.t+laneH;
-
-  const courtLines = `
-    <rect x="${pad.l}" y="${pad.t}" width="${iw}" height="${ih}" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="2"/>
-    <rect x="${laneX.toFixed(1)}" y="${pad.t}" width="${laneW.toFixed(1)}" height="${laneH.toFixed(1)}" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="2"/>
-    <circle cx="${hoop.x.toFixed(1)}" cy="${ftCircleY.toFixed(1)}" r="${(laneW/2).toFixed(1)}" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="2"/>
-    <path d="${arcPath}" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="2"/>
-    <line x1="${(hoop.x-3*scale).toFixed(1)}" y1="${(pad.t+4*scale).toFixed(1)}" x2="${(hoop.x+3*scale).toFixed(1)}" y2="${(pad.t+4*scale).toFixed(1)}" stroke="rgba(255,255,255,.7)" stroke-width="2.4"/>
-    <circle cx="${hoop.x.toFixed(1)}" cy="${hoop.y.toFixed(1)}" r="${(0.75*scale).toFixed(1)}" fill="none" stroke="rgba(255,150,70,.8)" stroke-width="1.8"/>
-  `;
-
-  /* preserveAspectRatio="none" lets this fill whatever box its flex container gives it,
-     so the card matches the height of the leaderboard card next to it. */
-  return `<svg class="chart" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
-    <rect x="0" y="0" width="${w}" height="${h}" rx="10" fill="#0F2038"/>
-    ${hexes}
-    ${courtLines}
-  </svg>`;
-}
-
 /* ============================= VIEW: OVERVIEW ============================= */
 function teamSectionTabs(){
   const tabs = [
@@ -1814,7 +1683,6 @@ function viewOverview(){
   };
 
   return `
-    ${teamSectionTabs()}
     ${overviewTiles(team)}
 
     <div class="grid-3">
@@ -1838,15 +1706,7 @@ function viewOverview(){
       </div>
     </div>
 
-    <div class="grid-2-even">
-      <div class="card stretch">
-        <div class="card-title"><h3>Shot Chart</h3><span class="hint">Season frequency</span></div>
-        <div class="chart-fill">${shotHeatmap(team, 600, 460)}</div>
-        <div class="heat-legend"><span>Lower</span><span class="heat-legend-bar"></span><span>Higher</span></div>
-        <p class="heat-caption">Color represents shot frequency — how many shots were made from that area of the court.</p>
-      </div>
-      ${leaderCard(LEADER_TABS, state.leaderTab)}
-    </div>
+    ${leaderCard(LEADER_TABS, state.leaderTab)}
   `;
 }
 
@@ -3702,6 +3562,29 @@ function viewCompareTeams(){
   const hasBartPair = s1.bart && s2.bart;
   const profileTitle = hasBartPair ? 'Adjusted stats' : 'Season averages';
   const profileStats = hasBartPair ? CT_BART_STATS : CT_SEASON_STATS;
+  const statsCard = (title, hint, stats) => `<div class="card">
+      <div class="card-title"><h3>${title}</h3>${hint ? `<span class="hint">${hint}</span>` : ''}${ctLegend(t1,t2)}</div>
+      ${diffRowsHtml(stats, s1, s2)}
+    </div>`;
+  const panels = {
+    top5: topMinutesCard(t1, t2),
+    boxscore: statsCard('Box-score context', 'D1 games only', CT_SEASON_STATS),
+    shooting: statsCard('Shooting splits', 'D1 games only', CT_SHOOTING_STATS),
+    defense: statsCard('Defensive breakdown', 'D1 games only', CT_DEFENSE_STATS),
+    adjusted: statsCard(profileTitle, '', profileStats),
+    ...(hasBartPair ? { resume: statsCard('Game resume', 'Schedule and wins above bubble', CT_BART_RESUME_STATS) } : {}),
+    factors: statsCard('Four factors', 'D1 box score plus Bart shot profile', CT_FOUR_FACTOR_STATS),
+  };
+  const tabs = [
+    {id:'top5', label:'Top five by minutes'},
+    {id:'boxscore', label:'Box-score context'},
+    {id:'shooting', label:'Shooting splits'},
+    {id:'defense', label:'Defensive breakdown'},
+    {id:'adjusted', label:profileTitle},
+    ...(hasBartPair ? [{id:'resume', label:'Game resume'}] : []),
+    {id:'factors', label:'Four factors'},
+  ];
+  const activeTab = panels[state.compareTeamsTab] ? state.compareTeamsTab : 'top5';
   return `
     <div class="compare-picker-row">
       ${teamSelect('t1-pick', state.t1, {mascot:true})}
@@ -3721,41 +3604,20 @@ function viewCompareTeams(){
         </div>
       </div>
     </div>
-    ${topMinutesCard(t1, t2)}
-    <div class="grid-2">
-      <div class="card">
-        <div class="card-title"><h3>Box-score context</h3><span class="hint">D1 games only</span>${ctLegend(t1,t2)}</div>
-        ${diffRowsHtml(CT_SEASON_STATS, s1, s2)}
-      </div>
-      <div class="card">
-        <div class="card-title"><h3>Shooting splits</h3><span class="hint">D1 games only</span>${ctLegend(t1,t2)}</div>
-        ${diffRowsHtml(CT_SHOOTING_STATS, s1, s2)}
-      </div>
+    <div class="team-section-tabs compare-teams-tabs" role="tablist" aria-label="Compare teams sections">
+      ${tabs.map(tab=>`<button class="team-section-tab ${tab.id===activeTab?'active':''}" data-ct-tab="${tab.id}" role="tab" aria-selected="${tab.id===activeTab}">${tab.label}</button>`).join('')}
     </div>
-    <div class="grid-2">
-      <div class="card">
-        <div class="card-title"><h3>Defensive breakdown</h3><span class="hint">D1 games only</span>${ctLegend(t1,t2)}</div>
-        ${diffRowsHtml(CT_DEFENSE_STATS, s1, s2)}
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-title"><h3>${profileTitle}</h3>${ctLegend(t1,t2)}</div>
-      ${diffRowsHtml(profileStats, s1, s2)}
-    </div>
-    ${hasBartPair ? `<div class="card">
-      <div class="card-title"><h3>Game resume</h3><span class="hint">Schedule and wins above bubble</span>${ctLegend(t1,t2)}</div>
-      ${diffRowsHtml(CT_BART_RESUME_STATS, s1, s2)}
-    </div>` : ''}
-    <div class="card">
-      <div class="card-title"><h3>Four factors</h3><span class="hint">D1 box score plus Bart shot profile</span>${ctLegend(t1,t2)}</div>
-      ${diffRowsHtml(CT_FOUR_FACTOR_STATS, s1, s2)}
-    </div>
+    ${panels[activeTab]}
     ${compareTeamPlayerModal()}
   `;
 }
 function wireCompareTeams(container){
   container.querySelector('#t1-pick').addEventListener('change', e=>{ state.t1=e.target.value; state.season = preferredSeasonForTeam(state.t1, state.season); render(); });
   container.querySelector('#t2-pick').addEventListener('change', e=>{ state.t2=e.target.value; state.season = preferredSeasonForTeam(state.t2, state.season); render(); });
+  container.querySelectorAll('[data-ct-tab]').forEach(btn=>btn.addEventListener('click', ()=>{
+    state.compareTeamsTab = btn.dataset.ctTab;
+    render();
+  }));
   container.querySelectorAll('[data-compare-player-team]').forEach(row=>row.addEventListener('click', ()=>{
     state.compareTeamPlayer = { team: row.dataset.comparePlayerTeam, idx: Number(row.dataset.comparePlayerIdx) };
     state.playerStatKey = 'pts';
@@ -3781,7 +3643,6 @@ function render(){
       wireQuarterChart(root, quarterAverages(currentTeam));
       wireFoulsChart(root, currentTeam.games);
     }
-    wireTeamSectionTabs(root);
     wireLeaderboardScroll(root);
     wireLeaderTabs(root);
   }
