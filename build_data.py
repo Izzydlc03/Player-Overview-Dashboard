@@ -151,7 +151,6 @@ def build_season(season_dir, season):
             games.append({
                 "date": g["date"], "opp": opp_display(opp_raw), "home": is_home,
                 "pf": pf, "pa": pa, "win": pf > pa,
-                "conf": g.get("is_conference_game") == "True",
                 "fgm": tg["fgm"], "fga": tg["fga"],
                 "tpm": tg["tpm"], "tpa": tg["tpa"], "ftm": tg["ftm"], "fta": tg["fta"],
                 "oreb": tg["oreb"], "dreb": tg["dreb"], "reb": tg["oreb"] + tg["dreb"],

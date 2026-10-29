@@ -20,7 +20,7 @@ const SEASON_CACHE = {};
 const BART_CACHE = {};
 const BART_PLAYER_CACHE = {};
 const ARCHETYPE_CACHE = {};
-const DATA_VERSION = '20260916aa';
+const DATA_VERSION = '20261028a';
 
 function possessionRatePercent(raw, key = ''){
   const num = Number(raw || 0);
@@ -331,6 +331,7 @@ async function loadSeason(season){
   await loadBartRatings(season);
   await loadBartPlayerStats(season);
   await loadArchetypes();
+  await loadStandings();
   TEAMS = { ...SEASON_CACHE[season] };
   injectDynamicTeams();
   TEAM_KEYS = Object.keys(TEAMS);
@@ -1638,42 +1639,57 @@ function overviewTiles(team){
   </div>`;
 }
 
-/* Big West standings from each team's conference-flagged games. Ranked among
-   the teams on this dashboard, but records count every conference game. */
-function conferenceStandings(){
-  const rows = TEAM_KEYS.filter(key => !isDynamicTeam(key)).map(key => {
-    const team = TEAMS[key];
-    const confGames = (team.games || []).filter(g => g.conf);
-    const cw = confGames.filter(g => g.win).length, cl = confGames.length - cw;
-    const ow = (team.games || []).filter(g => g.win).length, ol = (team.games || []).length - ow;
-    return { key, team, cw, cl, ow, ol, confPct: confGames.length ? cw / confGames.length : 0, overallPct: team.games?.length ? ow / team.games.length : 0 };
-  }).filter(r => r.cw + r.cl > 0);
-  return rows.sort((a, b) => b.confPct - a.confPct || b.overallPct - a.overallPct || a.team.name.localeCompare(b.team.name));
+/* Official Big West standings, scraped from bigwest.org by
+   scripts/fetch_bigwest_standings.py into data/standings.json (site order already
+   applies the conference tiebreakers). Includes former/current members that
+   aren't dashboard teams, so those rows fall back to initials instead of a logo. */
+let STANDINGS = null;
+async function loadStandings(){
+  if(STANDINGS) return STANDINGS;
+  try {
+    const res = await fetch(`data/standings.json?v=${DATA_VERSION}`);
+    STANDINGS = res.ok ? await res.json() : { seasons: {} };
+  } catch(err){
+    STANDINGS = { seasons: {} };
+  }
+  return STANDINGS;
 }
 
+const STANDINGS_TEAM_KEYS = {
+  'UC San Diego':'ucsd', 'UC Irvine':'ucirvine', 'Cal Poly':'calpoly', 'Cal State Bakersfield':'csub',
+  'Cal State Fullerton':'csuf', 'CSUN':'csun', 'Long Beach State':'csulb', 'UC Riverside':'ucr', 'UC Santa Barbara':'ucsb',
+};
+const STANDINGS_SHORT = {
+  'UC Davis':'UCD', "Hawai'i":'HAW', 'California Baptist':'CBU', 'Sacramento State':'SAC', 'Utah Valley':'UVU',
+};
+
 function standingsCard(){
-  const rows = conferenceStandings();
-  if(!rows.length){
+  const rows = STANDINGS?.seasons?.[state.season];
+  if(!rows?.length){
     return `<div class="card stretch"><div class="card-title"><h3>Big West Standings</h3></div><p class="muted">Conference standings aren't available for ${state.season}.</p></div>`;
   }
   return `<div class="card stretch standings-card">
     <div class="card-title"><h3>Big West Standings</h3><span class="hint">${state.season} conference play</span></div>
     <div class="standings-head"><span>#</span><span>Team</span><span>Conf</span><span>Overall</span></div>
     <div class="standings-list">
-      ${rows.map((r, i) => `<div class="standings-row ${r.key === state.team ? 'is-selected' : ''}">
+      ${rows.map((r, i) => {
+        const key = STANDINGS_TEAM_KEYS[r.school];
+        const short = key ? (TEAMS[key]?.short || r.school) : (STANDINGS_SHORT[r.school] || r.school.split(' ').map(w => w[0]).join('').slice(0, 4).toUpperCase());
+        return `<div class="standings-row ${key && key === state.team ? 'is-selected' : ''}">
         <span class="standings-rank num">${i + 1}</span>
         <span class="standings-team">
-          <span class="standings-logo">${avatarContent(r.key, r.team.short)}</span>
+          <span class="standings-logo">${key ? avatarContent(key, short) : short}</span>
           <span class="standings-team-text">
-            <span class="standings-name">${r.team.name}</span>
-            <span class="standings-bar" title="${(r.confPct * 100).toFixed(0)}% of conference games won"><span style="width:${(r.confPct * 100).toFixed(1)}%"></span></span>
+            <span class="standings-name">${r.school}</span>
+            <span class="standings-bar" title="${r.conf} in conference play"><span style="width:${(r.confPct * 100).toFixed(1)}%"></span></span>
           </span>
         </span>
-        <span class="num standings-rec">${r.cw}–${r.cl}</span>
-        <span class="num standings-rec muted">${r.ow}–${r.ol}</span>
-      </div>`).join('')}
+        <span class="num standings-rec">${r.conf.replace('-', '–')}</span>
+        <span class="num standings-rec muted">${r.overall.replace('-', '–')}</span>
+      </div>`;
+      }).join('')}
     </div>
-    <p class="standings-note">Conference records include every Big West opponent; UC Davis and Hawaii aren't listed on this dashboard.</p>
+    <p class="standings-note">Official standings from bigwest.org.</p>
   </div>`;
 }
 
