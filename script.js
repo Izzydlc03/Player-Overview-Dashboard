@@ -20,7 +20,105 @@ const SEASON_CACHE = {};
 const BART_CACHE = {};
 const BART_PLAYER_CACHE = {};
 const ARCHETYPE_CACHE = {};
-const DATA_VERSION = '20260916aa';
+const DATA_VERSION = '20261028-compare-player-charts';
+const CURRENT_ROSTER_SEASON = '2026-27';
+const OFFICIAL_ROSTER_CACHE = {};
+let lastSeasonPlayerRows = null;
+const lastSeasonPlayerIndex = new Map();
+let lastSeasonStatsLoading = false;
+let lastSeasonStatsError = '';
+let lastSeasonTeams = null;
+// Verified 2026–27 roster names -> 2025–26 dataset names, scoped to both schools.
+const LAST_SEASON_PLAYER_ALIASES = [
+  {currentTeam:'UC San Diego', currentName:'Alexandra Cummins', sourceTeam:'San Jose St.', sourceName:'Allie Cummins'},
+  {currentTeam:'UC Santa Barbara', currentName:'Maddie Naro', sourceTeam:'UC Santa Barbara', sourceName:'Madison Naro'},
+  {currentTeam:'UC Riverside', currentName:'Lucia Moreno', sourceTeam:'UC Riverside', sourceName:'Lucia Moreno Tallon'},
+  {currentTeam:'Long Beach State', currentName:'Selene Romero Olvera', sourceTeam:'FIU', sourceName:'Selene Romero'},
+];
+
+async function loadLastSeasonTeamStats(){
+  if(lastSeasonTeams) return;
+  const response = await fetch(`data/2025-26.json?v=${DATA_VERSION}`);
+  if(!response.ok) throw new Error('Could not load 2025–26 team statistics. Please try again.');
+  const teams = await response.json();
+  const opponents = await Promise.all(Object.keys(OPPONENT_TEAMS).map(async key => {
+    const team = await loadOpponentSeason(key, '2025-26');
+    if(!team.games.length) throw new Error(`No 2025–26 team statistics found for ${team.name}.`);
+    return [key, team];
+  }));
+  await Promise.all([loadBartRatings('2025-26'), loadBartPlayerStats('2025-26')]);
+  lastSeasonTeams = Object.fromEntries(Object.entries({...teams, ...Object.fromEntries(opponents)})
+    .map(([key, team]) => [key, {...team, statsSeason:'2025-26'}]));
+}
+
+function teamStatsData(team, teamKey = state.team){
+  if(team.rosterOnly && state.showLastSeasonStats && lastSeasonTeams?.[teamKey]){
+    return analysisTeam(lastSeasonTeams[teamKey]);
+  }
+  return team;
+}
+
+async function loadLastSeasonPlayerStats(){
+  if(lastSeasonPlayerRows) return;
+  const response = await fetch(`data/bart_2026_player_stats.csv?v=${DATA_VERSION}`);
+  if(!response.ok) throw new Error('Could not load 2025–26 player statistics. Please try again.');
+  const rows = parseCsv(await response.text()).filter(row => row.name && row.team && Number(row.gp) > 0);
+  if(!rows.length) throw new Error('No 2025–26 player statistics are available.');
+  for(const row of rows){
+    const key = lastSeasonNameKey(row.name);
+    if(!lastSeasonPlayerIndex.has(key)) lastSeasonPlayerIndex.set(key, []);
+    lastSeasonPlayerIndex.get(key).push(row);
+  }
+  lastSeasonPlayerRows = rows;
+}
+
+function lastSeasonNameKey(name){
+  return loosePlayerNameKey(name).replace(/ /g, '');
+}
+
+function lastSeasonPlayerMatch(team, player){
+  const alias = LAST_SEASON_PLAYER_ALIASES.find(entry =>
+    normTeamName(entry.currentTeam) === normTeamName(team.name)
+    && lastSeasonNameKey(entry.currentName) === lastSeasonNameKey(player.name));
+  if(alias){
+    const matches = (lastSeasonPlayerIndex.get(lastSeasonNameKey(alias.sourceName)) || [])
+      .filter(row => normTeamName(row.team) === normTeamName(alias.sourceTeam));
+    return matches.length === 1 ? matches[0] : null;
+  }
+  const candidates = lastSeasonPlayerIndex.get(lastSeasonNameKey(player.name)) || [];
+  if(candidates.length === 1) return candidates[0];
+  // Resolve duplicate full names by school; never guess between unrelated players.
+  const schools = [team.name, player.previousSchool].filter(Boolean).map(normTeamName);
+  const matches = candidates.filter(row => schools.includes(normTeamName(row.team)));
+  return matches.length === 1 ? matches[0] : null;
+}
+
+function applyLastSeasonPlayerStats(){
+  if(state.season !== CURRENT_ROSTER_SEASON) return;
+  for(const [key, team] of Object.entries(TEAMS)){
+    const officialPlayers = OFFICIAL_ROSTER_CACHE[CURRENT_ROSTER_SEASON].teams[key].players;
+    team.players = officialPlayers.map(player => {
+      const base = {...player, statsUnavailable:true, gp:0, min:0, fgm:0, fga:0,
+        tpm:0, tpa:0, ftm:0, fta:0, oreb:0, dreb:0, ast:0, stl:0, blk:0, to:0, pts:0};
+      const prior = state.showLastSeasonStats ? lastSeasonPlayerMatch(team, player) : null;
+      if(!prior) return base;
+      const n = field => Number(prior[field] || 0);
+      const gp = n('gp');
+      return {...base, statsUnavailable:false, priorStatsSeason:'2025-26', priorStatsTeam:prior.team,
+        advanced:{...prior, pos:player.pos, cls:player.classYear}, gp, min:n('mpg'), fgm:n('twopm') + n('tpm'), fga:n('twopa') + n('tpa'),
+        tpm:n('tpm'), tpa:n('tpa'), ftm:n('ftm'), fta:n('fta'),
+        // Per-game values below retain the source precision; scaled counts support existing rate helpers.
+        pts:n('ppg')*gp, ast:n('apg')*gp, stl:n('spg')*gp, blk:n('bpg')*gp, to:n('tov')*gp,
+        priorPerGame:{ppg:n('ppg'), rpg:n('rpg'), apg:n('apg'), stlpg:n('spg'), blkpg:n('bpg'),
+          topg:n('tov'), mpg:n('mpg'), fgPct:n('fg')*100, tpPct:n('tp')*100, ftPct:n('ft')*100}};
+    });
+  }
+}
+
+function priorStatsLabel(player){
+  if(state.season !== CURRENT_ROSTER_SEASON || !state.showLastSeasonStats) return '';
+  return player.statsUnavailable ? 'No 2025–26 stats found' : `2025–26 · ${player.priorStatsTeam}`;
+}
 
 function possessionRatePercent(raw, key = ''){
   const num = Number(raw || 0);
@@ -264,6 +362,12 @@ async function loadArchetypes(){
 }
 
 function playerArchetype(teamKey, team, player, season = state.season){
+  if(player.priorStatsSeason){
+    season = player.priorStatsSeason;
+    team = {...team, name:player.priorStatsTeam};
+    teamKey = '';
+    player = {...player, name:player.advanced.name};
+  }
   const data = ARCHETYPE_CACHE.allSeasons;
   if(!data) return null;
   const year = seasonEndYear(season);
@@ -323,6 +427,28 @@ function injectDynamicTeams(){
 }
 
 async function loadSeason(season){
+  if(season === CURRENT_ROSTER_SEASON){
+    if(!OFFICIAL_ROSTER_CACHE[season]){
+      const res = await fetch(`data/rosters-${season}.json?v=${DATA_VERSION}`);
+      if(!res.ok) throw new Error(`Failed to load official rosters (${res.status})`);
+      OFFICIAL_ROSTER_CACHE[season] = await res.json();
+    }
+    TEAMS = Object.fromEntries(Object.entries(OFFICIAL_ROSTER_CACHE[season].teams)
+      .map(([key, team]) => [key, {...team, rosterOnly:true, games:[], playerGameLogs:{},
+        players:team.players.map(player => ({...player, statsUnavailable:true,
+          gp:0, min:0, fgm:0, fga:0, tpm:0, tpa:0, ftm:0, fta:0,
+          oreb:0, dreb:0, ast:0, stl:0, blk:0, to:0, pts:0}))}]));
+    TEAM_KEYS = Object.keys(TEAMS);
+    if(!TEAMS[state.team]) state.team = TEAM_KEYS[0];
+    for(const key of ['t1','t2']) if(!TEAMS[state[key]]) state[key] = TEAM_KEYS[0];
+    for(const key of ['p1','p2']){
+      if(!TEAMS[state[key].team]) state[key] = {team:TEAM_KEYS[0], idx:0};
+      if(!TEAMS[state[key].team].players[state[key].idx]) state[key].idx = 0;
+    }
+    state.selectedPlayer = state.rosterCardPlayer = state.compareTeamPlayer = null;
+    applyLastSeasonPlayerStats();
+    return;
+  }
   if(!SEASON_CACHE[season]){
     const res = await fetch(`data/${season}.json?v=${DATA_VERSION}`);
     if(!res.ok) throw new Error(`Failed to load data/${season}.json (${res.status})`);
@@ -612,6 +738,7 @@ function displayPlayerName(name){
   return parts.length === 2 ? `${parts[1]} ${parts[0]}` : name;
 }
 function displayClassYear(player){
+  if(player.classYear) return player.classYear;
   const cls = player.advanced?.cls || '';
   const labels = {
     FR: 'Fr.',
@@ -647,6 +774,9 @@ function displayCompactPlayerRole(teamKey, team, player){
   return compactRoleLabel(displayPlayerRole(teamKey, team, player)) || 'Player';
 }
 function playerHeadshot(teamKey, playerName){
+  if(state.season === CURRENT_ROSTER_SEASON){
+    return TEAMS[teamKey]?.players.find(p => normalizePlayerName(p.name) === normalizePlayerName(playerName))?.headshot || '';
+  }
   const teamShots = ROSTER_HEADSHOTS[teamKey] || {};
   return teamShots[normalizePlayerName(playerName)]
     || teamShots[asciiPlayerNameKey(playerName)]
@@ -702,7 +832,8 @@ function teamCacheKey(teamKey, season){
 }
 
 function availableSeasonsForTeam(teamKey){
-  return REMOTE_TEAM_SEASONS[teamKey] || seasonOptions();
+  const historic = REMOTE_TEAM_SEASONS[teamKey] || seasonOptions().filter(s => s !== CURRENT_ROSTER_SEASON);
+  return [CURRENT_ROSTER_SEASON, ...historic];
 }
 
 function preferredSeasonForTeam(teamKey, currentSeason){
@@ -715,10 +846,11 @@ function hasSeasonData(teamKey, season){
 }
 
 function isDynamicTeam(teamKey){
-  return teamKey in REMOTE_TEAM_SEASONS;
+  return state.season !== CURRENT_ROSTER_SEASON && teamKey in REMOTE_TEAM_SEASONS;
 }
 
 function getTeamData(teamKey, season){
+  if(season === CURRENT_ROSTER_SEASON) return TEAMS[teamKey];
   return teamDataCache[teamCacheKey(teamKey, season)] || TEAMS[teamKey];
 }
 
@@ -1105,8 +1237,8 @@ function seasonTotals(team){
     oppPpg:oppPts, fgPct:pct(totals.fgm,totals.fga), tpPct:pct(totals.tpm,totals.tpa), ftPct:pct(totals.ftm,totals.fta)};
 }
 
-function d1GamesOnly(games){
-  const bartData = BART_CACHE[bartSeasonYear(state.season)];
+function d1GamesOnly(games, season = state.season){
+  const bartData = BART_CACHE[bartSeasonYear(season)];
   const d1Names = bartData?.teamNames;
   if(!d1Names?.size) return games;
   return games.filter(game => d1Names.has(normTeamName(game.opp)));
@@ -1117,12 +1249,14 @@ function d1GamesOnly(games){
    opponent shooting, rebounding rates, and forced-turnover rate are real
    box-score-derived values. */
 function teamAdvancedStats(team, teamKey){
+  team = teamStatsData(team, teamKey);
+  const statsSeason = team.statsSeason || state.season;
   const fallback = seasonTotals(team);
-  const bartData = BART_CACHE[bartSeasonYear(state.season)];
+  const bartData = BART_CACHE[bartSeasonYear(statsSeason)];
   const bart = bartData?.byTeam?.[bartTeamName(teamKey, team)];
-  const assistedFgPct = bartTeamAssistedFgPct(teamKey, team);
+  const assistedFgPct = bartTeamAssistedFgPct(teamKey, team, statsSeason);
   const allGames = team.games || [];
-  const games = d1GamesOnly(allGames);
+  const games = d1GamesOnly(allGames, statsSeason);
   const hasGameBox = games.some(game => game.oppFga !== undefined);
   if(!hasGameBox){
     const poss = fallback.gp>0 ? (fallback.fga - fallback.oreb + fallback.to + 0.44*fallback.fta) / fallback.gp : 0;
@@ -1224,6 +1358,7 @@ function addBartContext(stats, bart, bartData){
 }
 
 function playerPerGame(pl){
+  if(pl.priorPerGame) return {...pl.priorPerGame};
   return {
     ppg:avg(pl.pts,pl.gp), rpg:avg(pl.oreb+pl.dreb,pl.gp), apg:avg(pl.ast,pl.gp),
     stlpg:avg(pl.stl,pl.gp), blkpg:avg(pl.blk,pl.gp), topg:avg(pl.to,pl.gp),
@@ -1299,7 +1434,8 @@ function foulsForGames(games){
 }
 
 /* ============================= STATE / NAV ============================= */
-const state = { view:'overview', team:'ucsd', season:'2025-26', gameSort:{key:'date',dir:1},
+const state = { view:'overview', team:'ucsd', season:CURRENT_ROSTER_SEASON, gameSort:{key:'date',dir:1},
+  showLastSeasonStats:false,
   p1:{team:'ucsd',idx:0}, p2:{team:'ucsb',idx:0}, t1:'ucsd', t2:'ucsb',
   selectedPlayer:null, rosterCardPlayer:null, compareTeamPlayer:null, leaderTab:'scorers', playerStatKey:'pts', playerTrendWindow:'all', playerGameFocus:null, rosterMode:'pergame', rosterTableView:'main', shootingMode:'basic', rosterScrollLeft:0,
   rosterSortMain:{key:'ppg',dir:-1}, rosterSortShooting:{key:'tsPct',dir:-1}, rosterSortEfficiency:{key:'tsPct',dir:-1} };
@@ -1334,7 +1470,7 @@ function teamSelect(id, selected, opts){
 
 function seasonOptions(){
   const seasons = [];
-  for(let startYear=2025; startYear >= 2019; startYear--){
+  for(let startYear=2026; startYear >= 2019; startYear--){
     const end = String(startYear + 1).slice(-2);
     seasons.push(`${startYear}-${end}`);
   }
@@ -1718,12 +1854,13 @@ function rosterPageCards(team){
             : `<div class="roster-spotlight-monogram">${initials(displayPlayerName(player.name))}</div>`}
         </div>
         <div class="roster-spotlight-name">${displayPlayerName(player.name)}</div>
+        ${priorStatsLabel(player) ? `<div class="prior-stats-label">${rosterText(priorStatsLabel(player))}</div>` : ''}
         ${archetypePill(archetype, 'roster-spotlight-archetype')}
         <div class="roster-spotlight-stats">
-          <div class="roster-spotlight-stat"><span>PPG</span><strong>${fmt1(pg.ppg)}</strong></div>
-          <div class="roster-spotlight-stat"><span>RPG</span><strong>${fmt1(pg.rpg)}</strong></div>
-          <div class="roster-spotlight-stat"><span>APG</span><strong>${fmt1(pg.apg)}</strong></div>
-          <div class="roster-spotlight-stat"><span>MPG</span><strong>${fmt1(pg.mpg)}</strong></div>
+          <div class="roster-spotlight-stat"><span>PPG</span><strong>${player.statsUnavailable ? '—' : fmt1(pg.ppg)}</strong></div>
+          <div class="roster-spotlight-stat"><span>RPG</span><strong>${player.statsUnavailable ? '—' : fmt1(pg.rpg)}</strong></div>
+          <div class="roster-spotlight-stat"><span>APG</span><strong>${player.statsUnavailable ? '—' : fmt1(pg.apg)}</strong></div>
+          <div class="roster-spotlight-stat"><span>MPG</span><strong>${player.statsUnavailable ? '—' : fmt1(pg.mpg)}</strong></div>
         </div>
       </button>`;
     }).join('')}
@@ -1755,6 +1892,8 @@ function playerModal(team, idx, stateKey){
 }
 
 function overviewTiles(team){
+  team = teamStatsData(team);
+  if(team.rosterOnly) return `<div class="tiles team-summary-tiles">${['Record','PPG','Opp PPG','Reb / gm','Ast / gm','FG%','3P%','TO / gm'].map(label => `<div class="tile"><div class="eyebrow">${label}</div><div class="val num">—</div></div>`).join('')}</div>`;
   const s = seasonTotals(team);
   const tile = (label,val,unit)=>`<div class="tile"><div class="eyebrow">${label}</div><div class="val num">${val}${unit?`<small>${unit}</small>`:''}</div></div>`;
   return `<div class="tiles team-summary-tiles">
@@ -1772,6 +1911,7 @@ function overviewTiles(team){
 function viewOverview(){
   if(!hasSeasonData(state.team, state.season)) return unavailableCard(state.team, state.season);
   const baseTeam = getTeamData(state.team, state.season);
+  if(baseTeam.rosterOnly) return currentSeasonOverview(baseTeam);
   if(isDynamicTeam(state.team) && !baseTeam.games.length){
     ensureTeamData(state.team, state.season).then(()=>render());
     return loadingCard(state.team, state.season);
@@ -1886,7 +2026,7 @@ const GAME_COLS = [
 ];
 function viewGameLog(){
   if(!hasSeasonData(state.team, state.season)) return unavailableCard(state.team, state.season);
-  const team = getTeamData(state.team, state.season);
+  const team = teamStatsData(getTeamData(state.team, state.season));
   if(isDynamicTeam(state.team) && !team.games.length){
     ensureTeamData(state.team, state.season).then(()=>render());
     return loadingCard(state.team, state.season);
@@ -1903,6 +2043,7 @@ function viewGameLog(){
         <table>
           <thead><tr>${GAME_COLS.map(c=>`<th class="${c.num?'num':''}"><button class="th-sort" data-key="${c.key}">${c.label} ${key===c.key?(dir>0?'↑':'↓'):''}</button></th>`).join('')}</tr></thead>
           <tbody>
+            ${team.rosterOnly ? `<tr><td colspan="${GAME_COLS.length}"><div class="trend-empty"><strong>Game data not yet imported</strong><span>The ${state.season} roster is ready. Game logs will appear here when added.</span></div></td></tr>` : ''}
             ${rows.map(g=>`
               <tr class="clickable" data-date="${g.date}">
                 <td class="muted">${g.date}</td>
@@ -2195,13 +2336,14 @@ function rosterSectionCard({title, hint, tableKey, columns, rows, sortState, hea
                       </span>
                       <span class="roster-identity">
                         <span class="roster-player">${displayPlayerName(p.name)} <span class="roster-inline-num">#${p.num}</span></span>
-                        <span class="roster-meta">${roleLabel} · ${displayClassYear(p)}</span>
+                        <span class="roster-meta">${roleLabel} · ${displayClassYear(p)}${p.height ? ` · ${rosterText(p.height)}` : ''}</span>
+                        ${priorStatsLabel(p) ? `<span class="prior-stats-label">${rosterText(priorStatsLabel(p))}</span>` : ''}
                         ${archetype ? `<span class="roster-archetype">${archetypeLabel(archetype)}</span>` : ''}
                       </span>
                     </div>
                   </td>`;
                 }
-                return `<td class="${col.num?'num':''}">${col.render(metrics)}</td>`;
+                return `<td class="${col.num?'num':''}">${p.statsUnavailable ? '—' : col.render(metrics)}</td>`;
               }).join('')}
             </tr>`;
           }).join('')}
@@ -2614,7 +2756,8 @@ function wireShotDistributionChart(container){
 }
 
 function d1PlayerPercentile(key, value, higherBetter = true){
-  const rows = BART_PLAYER_CACHE[bartSeasonYear(state.season)]?.rows || [];
+  const season = state.season === CURRENT_ROSTER_SEASON && state.showLastSeasonStats ? '2025-26' : state.season;
+  const rows = BART_PLAYER_CACHE[bartSeasonYear(season)]?.rows || [];
   if(!rows.length || !Number.isFinite(value)) return null;
   const eligible = rows.filter(row => row.mpg >= 1);
   if(eligible.length <= 1) return null;
@@ -2866,6 +3009,16 @@ function playerTrendWindowOptions(){
 }
 
 function playerLogsFor(team, player){
+  if(team.rosterOnly){
+    if(!player.priorStatsSeason) return [];
+    const source = Object.entries(lastSeasonTeams || {}).find(([key, priorTeam]) =>
+      normTeamName(bartTeamName(key, priorTeam)) === normTeamName(player.priorStatsTeam));
+    if(!source) return [];
+    // Historical logs can use either the roster name or the dataset's name.
+    const entries = [player.name, player.advanced.name].flatMap(name => playerLogsFor(source[1], {...player, name}));
+    return [...new Map(entries.map(game => [game.gameId, game])).values()]
+      .sort((a,b) => a.date.localeCompare(b.date) || a.gameId.localeCompare(b.gameId));
+  }
   const logs = team.playerGameLogs || {};
   const candidateKeys = [
     normalizePlayerName(player.name),
@@ -2934,8 +3087,11 @@ function formatTrendAxisValue(value){
 }
 
 function playerDetail(team, idx, stateKey = ''){
+  if(team.rosterOnly && team.players[idx].statsUnavailable) return currentSeasonPlayerDetail(team, idx, stateKey);
   const p = team.players[idx], pg = playerPerGame(p);
   const contextTeam = stateKey && state[stateKey]?.team ? state[stateKey].team : state.team;
+  const hasPlusMinus = playerLogsFor(team,p).some(game => Number.isFinite(game.pm));
+  if(p.priorStatsSeason && state.playerStatKey === 'pm' && !hasPlusMinus) state.playerStatKey = 'pts';
   const hasTrendLogs = playerLogsFor(team, p).length > 0;
   const trendGames = playerTrendGames(team, p);
   const activeGame = state.playerGameFocus && state.playerGameFocus.team===contextTeam && state.playerGameFocus.idx===idx
@@ -2950,7 +3106,7 @@ function playerDetail(team, idx, stateKey = ''){
   const series = playerTrendSeries(team, p, active, trendGames);
   const contextLabel = activeGame
     ? `${activeGame.date} ${activeGame.home ? 'vs' : '@'} ${activeGame.opp}`
-    : `${state.playerTrendWindow === 'all' ? 'Season' : `Last ${state.playerTrendWindow}`} view`;
+    : `${p.priorStatsSeason ? '2025–26 · ' : ''}${state.playerTrendWindow === 'all' ? 'Season' : `Last ${state.playerTrendWindow}`} view${p.priorStatsSeason && hasTrendLogs ? ` · ${trendGames.length} saved games` : ''}`;
 
   return `<div class="card" id="player-detail">
     <div class="pdetail-head">
@@ -2958,6 +3114,7 @@ function playerDetail(team, idx, stateKey = ''){
       <div>
         <h3 class="pdetail-name">${displayName} <span class="muted" style="font-weight:700;">#${p.num}</span></h3>
         <div class="pdetail-meta">${displayPlayerRole(contextTeam, team, p)} · ${displayClassYear(p)} · ${team.name} · ${p.gp} games</div>
+        ${p.priorStatsSeason ? `<div class="prior-stats-label">Showing ${rosterText(priorStatsLabel(p))} stats</div>` : ''}
         ${archetype ? `<div class="pdetail-archetype">${archetypeLabel(archetype)}</div>${archetypeChipList}` : ''}
       </div>
     </div>
@@ -2971,8 +3128,8 @@ function playerDetail(team, idx, stateKey = ''){
         </div>
         <div class="stat-tile-grid">
           ${defs.map(d=>`
-            <button class="tile stat-tile ${d.key===active.key?'active':''}" data-stat="${d.key}">
-              <div class="eyebrow">${d.label}</div><div class="val num">${d.fmt(d.val)}</div>
+            <button class="tile stat-tile ${d.key===active.key?'active':''}" data-stat="${d.key}" ${p.priorStatsSeason && d.key === 'pm' && !hasPlusMinus ? 'disabled' : ''}>
+              <div class="eyebrow">${d.label}</div><div class="val num">${p.priorStatsSeason && d.key === 'pm' && !playerLogsFor(team,p).some(game => Number.isFinite(game.pm)) ? '—' : d.fmt(d.val)}</div>
             </button>`).join('')}
         </div>
       </div>
@@ -2997,7 +3154,7 @@ function playerDetail(team, idx, stateKey = ''){
             <span class="hint">${hasTrendLogs ? 'Click a point for game stats' : 'Season totals and Bart shot profile'}</span>
           </div>
         </div>
-        ${hasTrendLogs ? statTrendChart(series, active, trendGames, 640, 265, activeGame?.gameId || null) : playerTrendUnavailable(active)}
+        ${hasTrendLogs ? statTrendChart(series, active, trendGames, 640, 265, activeGame?.gameId || null) : p.priorStatsSeason ? '<div class="trend-empty"><strong>2025–26 game-by-game data unavailable</strong><span>Last season’s averages, shooting distribution, and role profile are shown. Individual game logs are not saved for this player’s prior school.</span></div>' : playerTrendUnavailable(active)}
         ${playerShotProfileCard(team, p, contextTeam)}
       </div>
     </div>
@@ -3130,6 +3287,15 @@ function wirePlayerModal(container, team, stateKey, idx){
    with the higher (or lower, if lowerBetter) value highlighted. `min`
    lets a stat's bar scale start below zero (e.g. Plus/Minus). */
 function diffRowsHtml(stats, obj1, obj2){
+  if(state.season === CURRENT_ROSTER_SEASON){
+    if(!state.showLastSeasonStats) obj1 = obj2 = {};
+    else if(state.view === 'cplayers'){
+      if(getTeamData(state.p1.team,state.season).players[state.p1.idx].statsUnavailable) obj1 = {};
+      if(getTeamData(state.p2.team,state.season).players[state.p2.idx].statsUnavailable) obj2 = {};
+      // Plus/minus requires actual game logs, which this source does not contain.
+      obj1 = {...obj1, plusMinus:null}; obj2 = {...obj2, plusMinus:null};
+    }
+  }
   return stats.map(s=>{
     const raw1 = obj1[s.key];
     const raw2 = obj2[s.key];
@@ -3204,6 +3370,13 @@ function comparePlayerRadarAxes(metrics){
 }
 
 function comparePlayerRadarChart(m1, m2, p1, p2){
+  if(state.season === CURRENT_ROSTER_SEASON){
+    if(!state.showLastSeasonStats) return pendingStatCard('Role profile');
+    if(p1.statsUnavailable || p2.statsUnavailable){
+      const missing = [p1,p2].filter(p => p.statsUnavailable).map(p => rosterText(p.name)).join(' and ');
+      return `<div class="card"><div class="card-title"><h3>Role profile</h3><span class="hint">2025–26</span></div><div class="trend-empty"><strong>Comparison data unavailable</strong><span>No matched 2025–26 stats for ${missing}. Select two players with last-season stats to compare role profiles.</span></div></div>`;
+    }
+  }
   const cx = 170;
   const cy = 150;
   const radius = 104;
@@ -3292,14 +3465,15 @@ function comparePlayerShotRows(metrics){
 }
 
 function comparePlayerShotPanel(player, metrics, sideClass){
-  const hasShotProfile = (metrics.rimShare + metrics.midShare + metrics.threeShare) > 0;
+  const hasShotProfile = !player.statsUnavailable && (metrics.rimShare + metrics.midShare + metrics.threeShare) > 0;
   return `<div class="player-shot-panel compare-shot-panel ${sideClass}">
     <div class="card-title"><h3>${displayPlayerName(player.name)}</h3><span class="hint">Shot distribution</span></div>
-    ${hasShotProfile ? shotDistributionChart(comparePlayerShotRows(metrics)) : playerShotProfileUnavailable()}
+    ${hasShotProfile ? shotDistributionChart(comparePlayerShotRows(metrics)) : player.statsUnavailable ? `<div class="trend-empty"><strong>No 2025–26 stats found</strong><span>Shooting data is unavailable for ${rosterText(player.name)}.</span></div>` : playerShotProfileUnavailable()}
   </div>`;
 }
 
 function comparePlayerShotCard(p1, p2, m1, m2){
+  if(state.season === CURRENT_ROSTER_SEASON && !state.showLastSeasonStats) return pendingStatCard('Shot distribution');
   return `<div class="card">
     <div class="card-title"><h3>Shot distribution</h3><span class="hint">Hover an area for share, FG%, and assisted%</span></div>
     <div class="compare-shot-grid">
@@ -3324,6 +3498,9 @@ function viewComparePlayers(){
     if(isDynamicTeam(state.p2.team)) ensureTeamData(state.p2.team, state.season).then(()=>render());
     return loadingCard(isDynamicTeam(state.p1.team) ? state.p1.team : state.p2.team, state.season);
   }
+  // Roster sizes differ between seasons; keep each picker on an available player.
+  if(!team1.players[state.p1.idx]) state.p1.idx = 0;
+  if(!team2.players[state.p2.idx]) state.p2.idx = 0;
   const p1 = team1.players[state.p1.idx], pg1 = playerPerGame(p1);
   const p2 = team2.players[state.p2.idx], pg2 = playerPerGame(p2);
   const m1 = comparePlayerVisualMetrics(team1, p1, state.p1.team);
@@ -3370,7 +3547,7 @@ function viewComparePlayers(){
           <div class="compare-avatar" style="background:color-mix(in srgb, var(--series-a) 22%, var(--surface-3));color:var(--series-a)">${rotationPhotoHtml(state.p1.team, p1)}</div>
           <div>
             <div class="compare-name">${displayPlayerName(p1.name)}</div>
-            <div class="compare-meta">#${p1.num} ${displayCompactPlayerRole(state.p1.team, team1, p1)} · ${team1.name}</div>
+            <div class="compare-meta">#${p1.num} ${displayCompactPlayerRole(state.p1.team, team1, p1)} · ${team1.name}</div>${priorStatsLabel(p1) ? `<div class="prior-stats-label">${rosterText(priorStatsLabel(p1))}</div>` : ''}
             ${archetypeChips(archetype1, 'compare-archetype-list')}
           </div>
         </div>
@@ -3379,7 +3556,7 @@ function viewComparePlayers(){
           <div class="compare-avatar" style="background:color-mix(in srgb, var(--series-b) 22%, var(--surface-3));color:var(--series-b)">${rotationPhotoHtml(state.p2.team, p2)}</div>
           <div>
             <div class="compare-name">${displayPlayerName(p2.name)}</div>
-            <div class="compare-meta">#${p2.num} ${displayCompactPlayerRole(state.p2.team, team2, p2)} · ${team2.name}</div>
+            <div class="compare-meta">#${p2.num} ${displayCompactPlayerRole(state.p2.team, team2, p2)} · ${team2.name}</div>${priorStatsLabel(p2) ? `<div class="prior-stats-label">${rosterText(priorStatsLabel(p2))}</div>` : ''}
             ${archetypeChips(archetype2, 'compare-archetype-list')}
           </div>
         </div>
@@ -3472,6 +3649,7 @@ function ctLegend(t1, t2){
 }
 
 function bartRecordLabel(stats){
+  if(state.season === CURRENT_ROSTER_SEASON && !state.showLastSeasonStats) return 'Record unavailable';
   return stats.bart?.record || `${stats.record.w}-${stats.record.l}`;
 }
 
@@ -3494,6 +3672,10 @@ function comparePlayerPool(){
 }
 
 function bartPlayerFor(teamKey, team, player){
+  if(player.priorStatsSeason){
+    return BART_PLAYER_CACHE[bartSeasonYear(player.priorStatsSeason)]?.byKey?.[
+      bartPlayerKey(player.priorStatsTeam, player.advanced.name)] || null;
+  }
   const playerData = BART_PLAYER_CACHE[bartSeasonYear(state.season)];
   const teamName = bartTeamName(teamKey, team);
   return playerData?.byKey?.[bartPlayerKey(teamName, displayPlayerName(player.name))]
@@ -3501,8 +3683,8 @@ function bartPlayerFor(teamKey, team, player){
     || null;
 }
 
-function bartTeamAssistedFgPct(teamKey, team){
-  const playerData = BART_PLAYER_CACHE[bartSeasonYear(state.season)];
+function bartTeamAssistedFgPct(teamKey, team, season = state.season){
+  const playerData = BART_PLAYER_CACHE[bartSeasonYear(season)];
   const teamName = normTeamName(bartTeamName(teamKey, team));
   const rows = (playerData?.rows || []).filter(row => normTeamName(row.team) === teamName);
   const totals = rows.reduce((acc, row) => {
@@ -3536,8 +3718,8 @@ function comparePlayerStats(team, player, teamKey){
   };
 }
 
-function bartPlayerTraitTags(bart){
-  const playerData = BART_PLAYER_CACHE[bartSeasonYear(state.season)];
+function bartPlayerTraitTags(bart, season = state.season){
+  const playerData = BART_PLAYER_CACHE[bartSeasonYear(season)];
   const pool = (playerData?.rows || []).filter(row => row.gp >= 5 && row.mpg >= 8);
   if(!bart || !pool.length) return [];
   const defs = [
@@ -3592,6 +3774,7 @@ function playerTraitTags(stats, pool){
 function topMinutesEntries(team){
   return [...team.players]
     .map((player, idx) => ({ player, idx }))
+    .filter(({player}) => !team.rosterOnly || !player.statsUnavailable)
     .sort((a,b)=>b.player.min-a.player.min || b.player.pts-a.player.pts)
     .slice(0,5);
 }
@@ -3600,7 +3783,7 @@ function topMinutesPlayerCard(team, teamKey, pool, entry){
   if(!entry) return '<div class="rotation-row rotation-row-empty" aria-hidden="true"></div>';
   const { player, idx } = entry;
   const stats = comparePlayerStats(team, player, teamKey);
-  const tags = stats.bart ? bartPlayerTraitTags(stats.bart) : playerTraitTags(stats, pool);
+  const tags = stats.bart ? bartPlayerTraitTags(stats.bart, player.priorStatsSeason || state.season) : playerTraitTags(stats, pool);
   const archetype = playerArchetype(teamKey, team, player);
   const pos = displayCompactPlayerRole(teamKey, team, player);
   const meta = [
@@ -3620,6 +3803,7 @@ function topMinutesPlayerCard(team, teamKey, pool, entry){
       <div class="rotation-player">
         <b class="rotation-player-name">#${player.num} ${displayPlayerName(player.name)} ${archetypeChips(archetype, 'rotation-name-archetypes')}</b>
         <span>${meta}</span>
+        ${player.priorStatsSeason ? `<span class="prior-stats-label">${rosterText(priorStatsLabel(player))}</span>` : ''}
       </div>
     </div>
     <div class="rotation-tags">
@@ -3642,9 +3826,10 @@ function topMinutesRows(t1, t2, pool){
 }
 
 function topMinutesCard(t1, t2){
+  if(t1.rosterOnly && !state.showLastSeasonStats) return `<div class="card"><div class="card-title"><h3>Current rosters</h3><span class="hint">Minutes data not yet imported</span></div><div class="grid-2">${[t1,t2].map((team,side) => `<div><h3>${rosterText(team.name)}</h3>${team.players.map((p,idx) => `<button type="button" class="rotation-row" data-compare-player-team="${side ? state.t2 : state.t1}" data-compare-player-idx="${idx}"><div class="rotation-main"><div class="rotation-photo">${rotationPhotoHtml(side ? state.t2 : state.t1,p)}</div><div class="rotation-player"><b>#${p.num} ${rosterText(p.name)}</b><span>${rosterText([p.pos,p.classYear,p.height].filter(Boolean).join(' · '))}</span></div></div></button>`).join('')}</div>`).join('')}</div></div>`;
   const pool = comparePlayerPool();
   return `<div class="card">
-    <div class="card-title"><h3>Top five by minutes</h3><span class="hint">Rows pair each team's rank by minutes</span></div>
+    <div class="card-title"><h3>${t1.rosterOnly ? 'Top five by 2025–26 minutes' : 'Top five by minutes'}</h3><span class="hint">${t1.rosterOnly ? 'Current players ranked by prior-season MPG · players without data excluded' : "Rows pair each team's rank by minutes"}</span></div>
     <div class="rotation-grid">
       <div class="rotation-pair-head">
         <div class="rotation-team-title">${t1.name}</div>
@@ -3769,21 +3954,125 @@ function wireCompareTeams(container){
 }
 
 /* ============================= RENDER DISPATCH ============================= */
+function rosterText(value){
+  return String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function pendingStatCard(title){
+  return `<div class="card"><div class="card-title"><h3>${title}</h3></div><div class="trend-empty"><strong>Statistics not yet imported</strong><span>2026–27 data will appear here when added.</span></div></div>`;
+}
+
+function currentRosterLastSeasonShotCard(teamKey){
+  const team = TEAMS[teamKey];
+  const players = team.players.filter(player => !player.statsUnavailable && player.advanced)
+    .map(player => player.advanced);
+  const zones = [
+    {label:'Rim', made:'rimmade', attempted:'rimatt', assisted:'pct_rim_made_assisted'},
+    {label:'Mid', made:'midmade', attempted:'midatt', assisted:'pct_mid_made_assisted'},
+    {label:'3PT', made:'tpm', attempted:'tpa', assisted:'pct_three_made_assisted'},
+  ].map(zone => {
+    const makes = players.reduce((sum,p) => sum + Number(p[zone.made] || 0),0);
+    const attempts = players.reduce((sum,p) => sum + Number(p[zone.attempted] || 0),0);
+    const assistedMakes = players.reduce((sum,p) => sum + Number(p[zone.made] || 0) * Number(p[zone.assisted] || 0),0);
+    return {label:zone.label, makes, attempts, fg:pct(makes,attempts), assist:pct(assistedMakes,makes), assistMakes:assistedMakes};
+  });
+  const attempts = zones.reduce((sum,zone) => sum + zone.attempts,0);
+  const rows = zones.map(zone => ({...zone, share:pct(zone.attempts,attempts)}));
+  return `<div class="card stretch"><div class="card-title"><h3>Shot Chart</h3><span class="hint">Current roster · 2025–26 shooting</span></div>
+    <p class="heat-caption">Combined 2025–26 shooting for ${players.length} of ${team.players.length} current players, including transfers at their previous schools. Players without data are excluded.</p>
+    ${attempts ? `${shotDistributionChart(rows)}<div class="table-wrap"><table><thead><tr><th>Zone</th><th>Made / Att</th><th>FG%</th><th>Attempt share</th></tr></thead><tbody>${rows.map(zone => `<tr><td>${zone.label}</td><td>${zone.makes} / ${zone.attempts}</td><td>${fmt1(zone.fg)}%</td><td>${fmt1(zone.share)}%</td></tr>`).join('')}</tbody></table></div><p class="heat-caption">Source: saved 2025–26 national player dataset. Exact shot coordinates are not available.</p>` : '<div class="trend-empty"><strong>No 2025–26 shooting-zone data found for the current roster</strong></div>'}
+  </div>`;
+}
+
+function currentSeasonOverview(team){
+  const stats = teamStatsData(team);
+  const hasPriorTeam = stats !== team;
+  const priorCharts = hasPriorTeam ? `<div class="grid-3">
+    <div class="card"><div class="card-title"><h3>Points Scored vs Allowed</h3><span class="hint">2025–26</span></div><div id="trend-holder">${lineChart(stats.games,400,200)}</div></div>
+    <div class="card"><div class="card-title"><h3>Average Points per Quarter</h3><span class="hint">2025–26</span></div>${stats.games.every(g => Array.isArray(g.quarterPoints) && g.quarterPoints.length === 4) ? quarterBarChart(quarterAverages(stats),400,200) : '<div class="trend-empty"><strong>Quarter scoring unavailable</strong><span>Quarter scores are not included in the saved 2025–26 game data.</span></div>'}</div>
+    <div class="card"><div class="card-title"><h3>Team Fouls per Game</h3><span class="hint">2025–26</span></div>${stats.games.every(g => typeof g.fouls === 'number') ? foulsChart(stats.games,400,200) : '<div class="trend-empty"><strong>Foul data unavailable</strong></div>'}</div>
+  </div>` : `<div class="grid-3">${['Points Scored vs Allowed','Average Points per Quarter','Team Fouls per Game'].map(pendingStatCard).join('')}</div>`;
+  return `${teamSectionTabs()}${overviewTiles(team)}
+    ${priorCharts}
+    <div class="grid-2-even">${hasPriorTeam ? currentRosterLastSeasonShotCard(state.team) : pendingStatCard('Shot Chart')}
+      <div class="card stretch"><div class="card-title"><h3>Current Roster</h3><span class="hint">${team.players.length} players · season rankings pending</span></div>
+        <div class="leaderboard-list">${team.players.map(p => `<div class="leader-row"><span class="leader-face">${rotationPhotoHtml(state.team,p)}</span><span class="jersey">${p.num}</span><span class="leader-name">${rosterText(p.name)}</span><span class="muted">${state.showLastSeasonStats ? `${p.statsUnavailable ? '—' : fmt1(playerPerGame(p).ppg)} PPG · ${rosterText(priorStatsLabel(p))}` : `${rosterText(p.pos)} · ${rosterText(p.classYear)}`}</span></div>`).join('')}</div>
+      </div>
+    </div>`;
+}
+
+function currentSeasonPlayerDetail(team, idx, stateKey){
+  const p = team.players[idx], e = rosterText;
+  const teamKey = stateKey && state[stateKey]?.team ? state[stateKey].team : state.team;
+  const photo = playerHeadshot(teamKey,p.name);
+  return `<div class="card" id="player-detail">
+    <div class="pdetail-head"><div class="pdetail-avatar">${photo ? `<img src="${e(photo)}" alt="${e(p.name)} headshot" onerror="this.remove()">` : avatarContent(teamKey,initials(p.name))}</div><div>
+      <h3 class="pdetail-name">${e(p.name)} <span class="muted">#${p.num}</span></h3>
+      <div class="pdetail-meta">${e([p.pos,p.classYear,p.height,team.name].filter(Boolean).join(' · '))}</div>
+      <div class="pdetail-meta">${e([p.hometown,p.highSchool,p.previousSchool].filter(Boolean).join(' · '))}</div>
+      <a href="${e(p.bioUrl)}" target="_blank" rel="noopener noreferrer">Official player bio</a>
+    </div></div>
+    <div class="pdetail-body"><div class="pdetail-stats-col"><div class="pdetail-stats-head"><div class="eyebrow">${state.showLastSeasonStats ? e(priorStatsLabel(p)) : 'Season stats'}</div></div>
+      <div class="stat-tile-grid">${playerStatDefs(team,p,playerPerGame(p)).map(d=>`<div class="tile stat-tile"><div class="eyebrow">${d.label}</div><div class="val num">${p.statsUnavailable || d.key === 'pm' ? '—' : d.fmt(d.val)}</div></div>`).join('')}</div>
+    </div><div class="pdetail-chart-col"><div class="card-title"><h3>Player profile</h3>${stateKey ? `<label class="player-detail-picker"><span>Choose Player</span><select data-player-picker="${stateKey}" aria-label="Choose player">${playerModalOptions(team,idx)}</select></label>` : ''}</div>
+      <div class="trend-empty"><strong>Statistics not yet imported</strong><span>Season trends and role profiles will appear here when 2026–27 stats are added.</span></div>
+    </div></div>
+  </div>`;
+}
+
+function currentRosterNotice(){
+  const team = TEAMS[state.team];
+  const matched = team.players.filter(p => !p.statsUnavailable).length;
+  return `<div class="card current-roster-notice">
+    <div class="prior-stats-controls"><span>2026–27 rosters loaded · statistics not yet imported</span>
+      <button type="button" role="switch" aria-checked="${state.showLastSeasonStats}" aria-label="Show last season's stats" class="prior-stats-toggle" ${lastSeasonStatsLoading ? 'disabled' : ''} id="last-season-stats-toggle">
+        <span>Show last season's stats</span><span class="stats-switch-track" aria-hidden="true"><span class="stats-switch-thumb"></span></span><span class="stats-switch-state" aria-hidden="true">${state.showLastSeasonStats ? 'On' : 'Off'}</span>
+      </button>
+      ${lastSeasonStatsLoading ? '<span role="status">Loading 2025–26 stats…</span>' : ''}
+      ${state.showLastSeasonStats ? `<span class="prior-stats-label">Showing 2025–26 team and player stats · ${matched}/${team.players.length} current players matched · team stats use each team's own 2025–26 season</span>` : ''}
+      ${lastSeasonStatsError ? `<span role="alert">${rosterText(lastSeasonStatsError)}</span>` : ''}
+    </div><a href="${rosterText(team.sourceUrl)}" target="_blank" rel="noopener noreferrer">Official ${rosterText(team.short)} roster</a></div>`;
+}
+
+function wireLastSeasonStatsToggle(root){
+  root.querySelector('#last-season-stats-toggle').addEventListener('click', async () => {
+    if(lastSeasonStatsLoading) return;
+    lastSeasonStatsError = '';
+    if(state.showLastSeasonStats){
+      state.showLastSeasonStats = false;
+      applyLastSeasonPlayerStats(); render(); return;
+    }
+    lastSeasonStatsLoading = true;
+    render();
+    try {
+      await Promise.all([loadLastSeasonPlayerStats(), loadLastSeasonTeamStats(), loadArchetypes()]);
+      state.showLastSeasonStats = true;
+      applyLastSeasonPlayerStats();
+    } catch(error){
+      lastSeasonStatsError = error.message;
+    } finally {
+      lastSeasonStatsLoading = false;
+      render();
+    }
+  });
+}
+
 function render(){
   renderNav();
   renderTopbar();
   const root = document.getElementById('view');
   if(state.view==='overview'){
     root.innerHTML = viewOverview();
-    const currentTeam = analysisTeam(getTeamData(state.team, state.season));
+    const currentTeam = teamStatsData(analysisTeam(getTeamData(state.team, state.season)));
     if(currentTeam.games.length){
       wireTrendChart(root, currentTeam.games);
-      wireQuarterChart(root, quarterAverages(currentTeam));
+      if(!currentTeam.statsSeason || currentTeam.games.every(g => Array.isArray(g.quarterPoints) && g.quarterPoints.length === 4)) wireQuarterChart(root, quarterAverages(currentTeam));
       wireFoulsChart(root, currentTeam.games);
     }
     wireTeamSectionTabs(root);
     wireLeaderboardScroll(root);
     wireLeaderTabs(root);
+    wireShotDistributionChart(root);
   }
   else if(state.view==='gamelog'){ root.innerHTML = viewGameLog(); wireGameLog(root); }
   else if(state.view==='roster'){
@@ -3802,6 +4091,10 @@ function render(){
   }
   else if(state.view==='cplayers'){ root.innerHTML = viewComparePlayers(); wireComparePlayers(root); }
   else if(state.view==='cteams'){ root.innerHTML = viewCompareTeams(); wireCompareTeams(root); }
+  if(state.season === CURRENT_ROSTER_SEASON){
+    root.insertAdjacentHTML('afterbegin', currentRosterNotice());
+    wireLastSeasonStatsToggle(root);
+  }
 }
 
 /* Sidebar collapse/expand — the sidebar shell itself is static markup

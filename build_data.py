@@ -61,6 +61,18 @@ def pct(made, attempted):
     return (made / attempted * 100) if attempted > 0 else 0
 
 
+def quarter_points(analysis):
+    """Recover actual quarter points from FG/3PT/FT makes, never estimate splits."""
+    points = []
+    for quarter in range(1, 5):
+        splits = [analysis.get(f"q{quarter}_{stat}", "") for stat in ("fg", "3p", "ft")]
+        if not all(re.fullmatch(r"\d+-\d+", value.strip()) for value in splits):
+            return None
+        fg, three, ft = [int(value.split("-")[0]) for value in splits]
+        points.append(2 * fg + three + ft)
+    return points
+
+
 def build_season(season_dir, season):
     game_index_path = os.path.join(season_dir, "csv1_game_index.csv")
     boxscore_path = os.path.join(season_dir, "csv2_boxscore_players.csv")
@@ -165,6 +177,9 @@ def build_season(season_dir, season):
                 "ptsOffTurnovers": num(analysis.get("pts_off_turnovers"), int),
                 "benchPts": num(analysis.get("bench_pts"), int),
             })
+            quarters = quarter_points(analysis)
+            if quarters is not None:
+                games[-1]["quarterPoints"] = quarters
 
         players = []
         for (team, jersey_norm), p in player_agg.items():
