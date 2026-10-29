@@ -76,3 +76,41 @@ python3 scripts/import_bart_wbb_player_stats.py 2025-26 --source opponents/overa
 ```
 
 The script writes to `data/bart_2026_player_stats.csv`.
+
+## Big West standings
+
+The Team Overview standings card shows the official conference standings scraped
+from bigwest.org (every dashboard season, in the site's tiebreak order):
+
+```sh
+python3 scripts/fetch_bigwest_standings.py
+```
+
+The script writes to `data/standings.json`.
+
+## Upcoming season (2026-27)
+
+Until real games are played, `data/2026-27.json` holds every team on UCSD's
+2026-27 schedule (plus the 2026-27 Big West field) with its current roster and
+schedule from the school's athletics site. All stats are zero and every game
+list is empty; the Game Log shows each team's scheduled opponents with zeroed stats.
+
+```sh
+python3 scripts/build_upcoming_season.py
+```
+
+The dashboard combines this file's additional schools and schedules with the
+verified rosters in `data/rosters-2026-27.json`. For overlapping schools, the
+verified roster takes precedence. Refresh both importers when updating schedules
+and rosters.
+
+The global **Show last season's stats** switch controls all 2026-27 views,
+including the tabbed player and team comparisons. Player stats use the saved
+2025-26 national player dataset and verified school-scoped aliases; unmatched
+players show dashes. The generated `prior` blocks are retained in the upcoming
+season file but the dashboard uses the shared matching logic for every view.
+Team stats use each school's saved 2025-26 season where available; additional
+schools without saved team data show unavailable values.
+
+When 2026-27 results become available, import the games and update the
+roster-only loading path in `loadSeason` to use the new season statistics.
