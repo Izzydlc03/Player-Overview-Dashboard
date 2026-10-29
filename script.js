@@ -1856,7 +1856,7 @@ function viewRoster(){
     return loadingCard(state.team, state.season);
   }
   const team = analysisTeam(baseTeam);
-  const summary = `${overviewTiles(team)}${rosterGrid(team)}`;
+  const summary = rosterGrid(team);
   if(state.selectedPlayer && state.selectedPlayer.team===state.team){
     return summary + playerModal(team, state.selectedPlayer.idx, 'selectedPlayer');
   }
@@ -2856,12 +2856,28 @@ function playerDetail(team, idx, stateKey = ''){
 
   return `<div class="card" id="player-detail">
     <div class="pdetail-head">
-      <div class="pdetail-avatar">${headshot ? `<img src="${headshot}" alt="${displayName} headshot">` : avatarContent(contextTeam, initials(p.name))}</div>
-      <div>
-        <h3 class="pdetail-name">${displayName} <span class="muted" style="font-weight:700;">#${p.num}</span></h3>
-        <div class="pdetail-meta">${displayPlayerRole(contextTeam, team, p)} · ${displayClassYear(p)} · ${team.name} · ${p.gp} games</div>
-        ${archetype ? `<div class="pdetail-archetype">${archetypeLabel(archetype)}</div>${archetypeChipList}` : ''}
+      <div class="pdetail-head-id">
+        <div class="pdetail-avatar">${headshot ? `<img src="${headshot}" alt="${displayName} headshot">` : avatarContent(contextTeam, initials(p.name))}</div>
+        <div>
+          <h3 class="pdetail-name">${displayName} <span class="muted" style="font-weight:700;">#${p.num}</span></h3>
+          <div class="pdetail-meta">${displayPlayerRole(contextTeam, team, p)} · ${displayClassYear(p)} · ${team.name} · ${p.gp} games</div>
+          ${archetype ? `<div class="pdetail-archetype">${archetypeLabel(archetype)}</div>${archetypeChipList}` : ''}
+        </div>
       </div>
+      ${stateKey ? `<div class="pdetail-head-controls">
+        <label class="player-detail-picker">
+          <span>Choose Player</span>
+          <select data-player-picker="${stateKey}" aria-label="Choose player">
+            ${playerModalOptions(team, idx)}
+          </select>
+        </label>
+        ${hasTrendLogs ? `<label class="player-detail-picker player-detail-picker--compact">
+          <span>Window</span>
+          <select data-player-trend-window="${stateKey}" aria-label="Choose game window">
+            ${playerTrendWindowOptions()}
+          </select>
+        </label>` : ''}
+      </div>` : ''}
     </div>
 
     <div class="pdetail-body">
@@ -2882,20 +2898,6 @@ function playerDetail(team, idx, stateKey = ''){
         <div class="card-title">
           <h3>${hasTrendLogs ? `${active.trendLabel}, game by game` : 'Player profile'}</h3>
           <div class="player-detail-actions">
-            ${stateKey ? `
-              <label class="player-detail-picker">
-                <span>Choose Player</span>
-                <select data-player-picker="${stateKey}" aria-label="Choose player">
-                  ${playerModalOptions(team, idx)}
-                </select>
-              </label>
-              ${hasTrendLogs ? `<label class="player-detail-picker player-detail-picker--compact">
-                <span>Window</span>
-                <select data-player-trend-window="${stateKey}" aria-label="Choose game window">
-                  ${playerTrendWindowOptions()}
-                </select>
-              </label>` : ''}
-            ` : ''}
             <span class="hint">${hasTrendLogs ? 'Click a point for game stats' : 'Season totals and Bart shot profile'}</span>
           </div>
         </div>
