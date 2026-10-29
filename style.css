@@ -766,29 +766,34 @@ tbody tr.selected{ background:var(--accent-soft); }
 }
 .compare-toggle button:hover{ color:var(--ink); background:var(--surface-2); }
 .compare-toggle button.active{ background:#182B49; color:#fff; }
-/* Compact table: a fixed-width pair of value columns, right-aligned, so the two sides' numbers
-   sit close together instead of spreading across the whole page. */
-.compare-card{ max-width:580px; }
-.compare-table-wrap{ margin-top:14px; overflow-x:auto; }
-.compare-table{ width:100%; min-width:0; border-collapse:collapse; table-layout:fixed; font-size:13.5px; }
-.compare-table col.val{ width:140px; }
+/* Fixed-width pair of right-aligned value columns keeps the two sides' numbers close together;
+   larger type and taller rows keep the card itself at a comfortable size. Player/team names in the
+   header share the numbers' right padding so each name lines up with its column. */
+.compare-card{ max-width:780px; }
+.compare-card-head h3{ font-size:19px; }
+.compare-card-sub{ font-size:14px; }
+.compare-badge{ font-size:11px; padding:6px 10px; }
+.compare-toggle button{ font-size:12.5px; padding:9px 15px; }
+.compare-table-wrap{ margin-top:16px; overflow-x:auto; }
+.compare-table{ width:100%; min-width:0; border-collapse:collapse; table-layout:fixed; font-size:16.5px; }
+.compare-table col.val{ width:200px; }
 .compare-table th{ text-align:left; font-weight:600; }
 .compare-table thead th{
-  padding:0 14px 10px; font-size:10.5px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-faint);
+  padding:0 20px 12px; font-size:12.5px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-faint);
 }
-.compare-table thead th.a, .compare-table thead th.b{ text-align:right; }
+.compare-table thead th.a, .compare-table thead th.b{ text-align:right; padding-right:calc(20px - .08em); } /* offset the trailing letter-spacing */
 .compare-table thead th.a{ color:var(--series-a); }
 .compare-table thead th.b{ color:color-mix(in srgb, var(--series-b) 78%, #000); }
-.compare-table tbody th{ padding:0 14px; color:var(--ink); }
+.compare-table tbody th{ padding:0 20px; color:var(--ink); }
 .compare-table tbody tr{ border-top:1px solid var(--border); }
-.compare-table tbody td, .compare-table tbody th{ height:44px; }
-.stat-label-sub{ display:block; margin-top:2px; font-size:9.5px; letter-spacing:.04em; color:var(--ink-faint); font-weight:700; }
-.cmp-cell{ padding:0 14px; text-align:right; font-family:var(--font-mono); font-weight:600; color:var(--ink); white-space:nowrap; }
-.cmp-sub{ display:block; margin-top:2px; color:var(--ink-muted); font-size:10.5px; font-weight:600; }
+.compare-table tbody td, .compare-table tbody th{ height:56px; }
+.stat-label-sub{ display:block; margin-top:2px; font-size:11px; letter-spacing:.04em; color:var(--ink-faint); font-weight:700; }
+.cmp-cell{ padding:0 20px; text-align:right; font-family:var(--font-mono); font-weight:600; color:var(--ink); white-space:nowrap; }
+.cmp-sub{ display:block; margin-top:2px; color:var(--ink-muted); font-size:12px; font-weight:600; }
 .cmp-cell.better{ font-weight:800; }
 .cmp-cell.a.better{ background:color-mix(in srgb, var(--series-a) 14%, transparent); color:var(--series-a); }
 .cmp-cell.b.better{ background:color-mix(in srgb, var(--series-b) 22%, transparent); color:color-mix(in srgb, var(--series-b) 72%, #000); }
-.compare-note{ margin:16px 0 0; padding-top:14px; border-top:1px solid var(--border); color:var(--ink-muted); font-size:12px; line-height:1.5; }
+.compare-note{ margin:18px 0 0; padding-top:16px; border-top:1px solid var(--border); color:var(--ink-muted); font-size:13.5px; line-height:1.55; }
 .compare-note b{ color:var(--ink); }
 .compare-basis-note{
   margin:0; padding:10px 14px; border:1px solid var(--border); border-left:3px solid var(--series-b);
@@ -827,9 +832,11 @@ svg.chart{ display:block; width:100%; height:auto; overflow:visible; }
   .rotation-pair-head::after,
   .rotation-pair-row::after{ display:none; }
   .rotation-tags{ padding-left:0; }
-  .compare-table{ font-size:12.5px; }
-  .compare-table col.val{ width:92px; }
+  .compare-table{ font-size:13.5px; }
+  .compare-table col.val{ width:104px; }
   .compare-table thead th, .compare-table tbody th, .cmp-cell{ padding-left:8px; padding-right:8px; }
+  .compare-table thead th.a, .compare-table thead th.b{ padding-right:calc(8px - .08em); }
+  .compare-table thead th{ font-size:11px; }
 }
 .hit{ fill:transparent; }
 .trend-hit{
