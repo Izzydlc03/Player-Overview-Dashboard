@@ -449,21 +449,24 @@ tbody tr.selected{ background:var(--accent-soft); }
 
 /* ---------- Player detail: stat-picker + axis chart layout ---------- */
 .pdetail-body{ display:flex; gap:22px; margin-top:18px; align-items:stretch; }
-.pdetail-stats-col{ width:186px; flex:none; display:flex; flex-direction:column; }
+.pdetail-stats-col{ width:292px; flex:none; display:flex; flex-direction:column; }
 .pdetail-stats-head{
   display:flex; flex-direction:column; gap:4px; margin-bottom:8px;
 }
 .pdetail-context-label{
   font-size:11.5px; color:var(--ink-muted); font-weight:700;
 }
+/* Tiles stretch to fill the column, so their bottom edge lines up with the
+   bottom of the report cards on the right. */
 .stat-tile-grid{
-  display:grid; grid-template-columns:repeat(2,1fr); grid-auto-rows:150px; gap:6px; flex:none;
+  display:grid; grid-template-columns:repeat(2,1fr); grid-auto-rows:minmax(104px,1fr); gap:8px; flex:1;
 }
 .stat-tile-grid .tile{ padding:7px 9px; display:flex; flex-direction:column; justify-content:center; }
 .stat-tile-grid .eyebrow{ margin-bottom:4px; font-size:9.75px; }
 .stat-tile-grid .val{ font-size:13.5px; }
 .pdetail-chart-col{ flex:1; min-width:0; display:flex; flex-direction:column; }
-.pdetail-chart-col .card-title{ flex:none; }
+.pdetail-chart-col .card-title{ flex:none; flex-wrap:wrap; }
+.pdetail-chart-col .card-title h3{ white-space:nowrap; }
 .player-detail-actions{
   display:flex; align-items:center; gap:12px; margin-left:auto; flex-wrap:wrap; justify-content:flex-end;
 }
@@ -835,3 +838,30 @@ svg.chart{ display:block; width:100%; height:auto; overflow:visible; }
 .stat-unit{ font-size:10px; font-weight:800; color:var(--ink-faint); text-transform:uppercase; letter-spacing:.04em; margin-left:4px; width:26px; flex:none; }
 
 @media (prefers-reduced-motion: reduce){ *{ transition:none !important; } }
+
+/* ---------- Conference standings ---------- */
+.standings-head, .standings-row{
+  display:grid; grid-template-columns:24px minmax(0,1fr) 58px 64px; gap:10px; align-items:center;
+}
+.standings-head{
+  padding:0 0 8px; border-bottom:1px solid var(--border);
+  font-size:10px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-faint);
+}
+.standings-head span:nth-child(n+3), .standings-row .standings-rec{ text-align:right; }
+.standings-list{ display:flex; flex-direction:column; flex:1; }
+.standings-row{ flex:1; padding:9px 6px; border-bottom:1px solid var(--border); border-radius:6px; font-size:13px; }
+.standings-row:last-child{ border-bottom:none; }
+.standings-row.is-selected{ background:var(--accent-soft); box-shadow:inset 3px 0 0 var(--series-a); }
+.standings-rank{ font-weight:800; color:var(--ink-muted); }
+.standings-team{ display:flex; align-items:center; gap:9px; min-width:0; }
+.standings-logo{
+  width:26px; height:26px; flex:none; border-radius:50%; overflow:hidden; display:flex; align-items:center; justify-content:center;
+  background:var(--surface-3); border:1px solid var(--border); font-size:8px; font-weight:800; color:var(--ink-muted);
+}
+.standings-logo img{ width:100%; height:100%; object-fit:cover; display:block; }
+.standings-team-text{ display:flex; flex-direction:column; gap:5px; min-width:0; flex:1; }
+.standings-name{ font-weight:700; color:var(--ink); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.standings-bar{ height:6px; border-radius:99px; background:var(--surface-3); overflow:hidden; }
+.standings-bar span{ display:block; height:100%; border-radius:99px; background:var(--series-a); }
+.standings-rec{ font-weight:800; }
+.standings-note{ margin:10px 0 0; font-size:11px; color:var(--ink-faint); line-height:1.4; }

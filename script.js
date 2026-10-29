@@ -1301,7 +1301,7 @@ function foulsForGames(games){
 /* ============================= STATE / NAV ============================= */
 const state = { view:'overview', team:'ucsd', season:'2025-26', gameSort:{key:'date',dir:1},
   p1:{team:'ucsd',idx:0}, p2:{team:'ucsb',idx:0}, t1:'ucsd', t2:'ucsb',
-  selectedPlayer:null, rosterCardPlayer:null, compareTeamPlayer:null, compareTeamsTab:'top5', leaderTab:'scorers', playerStatKey:'pts', playerTrendWindow:'all', playerGameFocus:null, rosterMode:'pergame', rosterTableView:'main', shootingMode:'basic', rosterScrollLeft:0,
+  selectedPlayer:null, rosterCardPlayer:null, compareTeamPlayer:null, compareTeamsTab:'top5', comparePlayersTab:'radar', leaderTab:'scorers', playerStatKey:'pts', playerTrendWindow:'all', playerGameFocus:null, rosterMode:'pergame', rosterTableView:'main', shootingMode:'basic', rosterScrollLeft:0,
   rosterSortMain:{key:'ppg',dir:-1}, rosterSortShooting:{key:'tsPct',dir:-1}, rosterSortEfficiency:{key:'tsPct',dir:-1} };
 
 const NAV = [
@@ -1412,7 +1412,7 @@ function lineChart(games, w, h){
   const hitW = games.length>1 ? iw/(games.length-1) : iw;
 
   return `<div class="chart-wrap" data-chart="trend">
-    <svg class="chart" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" style="height:${h}px">
+    <svg class="chart" viewBox="0 0 ${w} ${h}">
       ${gridY.map(v=>`<line class="gridline" x1="${pad.l}" x2="${w-pad.r}" y1="${y(v)}" y2="${y(v)}"/><text class="axislabel" x="2" y="${y(v)+3}">${Math.round(v)}</text>`).join('')}
       <path d="${path(games.map(g=>g.pf))}" fill="none" stroke="var(--series-a)" stroke-width="2"/>
       <path d="${path(games.map(g=>g.pa))}" fill="none" stroke="var(--series-b)" stroke-width="2" stroke-dasharray="4 3"/>
@@ -1463,7 +1463,7 @@ function quarterBarChart(quarters, w, h){
       <rect class="hit" x="${x.toFixed(1)}" y="${pad.t}" width="${bw.toFixed(1)}" height="${ih}" data-i="${i}" fill="transparent"/>`;
   }).join('');
   return `<div class="chart-wrap" data-chart="quarters">
-    <svg class="chart" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" style="height:${h}px">
+    <svg class="chart" viewBox="0 0 ${w} ${h}">
       ${gridY.map(v=>`<line class="gridline" x1="${pad.l}" x2="${w-pad.r}" y1="${(pad.t+ih-(v/max)*ih).toFixed(1)}" y2="${(pad.t+ih-(v/max)*ih).toFixed(1)}"/>`).join('')}
       ${bars}
     </svg>
@@ -1505,7 +1505,7 @@ function foulsChart(games, w, h){
   const dots = games.map((g,i)=>`<circle class="foul-pt" cx="${x(i)}" cy="${y(fouls[i])}" r="3.5" fill="${g.win?'var(--good)':'var(--critical)'}" data-i="${i}"/>`).join('');
 
   return `<div class="chart-wrap" data-chart="fouls">
-    <svg class="chart" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" style="height:${h}px">
+    <svg class="chart" viewBox="0 0 ${w} ${h}">
       ${gridY.map(v=>`<line class="gridline" x1="${pad.l}" x2="${w-pad.r}" y1="${y(v)}" y2="${y(v)}"/><text class="axislabel" x="1" y="${y(v)+3}">${Math.round(v)}</text>`).join('')}
       <path d="${path}" fill="none" stroke="var(--series-a)" stroke-width="2"/>
       ${dots}
@@ -1638,6 +1638,45 @@ function overviewTiles(team){
   </div>`;
 }
 
+/* Big West standings from each team's conference-flagged games. Ranked among
+   the teams on this dashboard, but records count every conference game. */
+function conferenceStandings(){
+  const rows = TEAM_KEYS.filter(key => !isDynamicTeam(key)).map(key => {
+    const team = TEAMS[key];
+    const confGames = (team.games || []).filter(g => g.conf);
+    const cw = confGames.filter(g => g.win).length, cl = confGames.length - cw;
+    const ow = (team.games || []).filter(g => g.win).length, ol = (team.games || []).length - ow;
+    return { key, team, cw, cl, ow, ol, confPct: confGames.length ? cw / confGames.length : 0, overallPct: team.games?.length ? ow / team.games.length : 0 };
+  }).filter(r => r.cw + r.cl > 0);
+  return rows.sort((a, b) => b.confPct - a.confPct || b.overallPct - a.overallPct || a.team.name.localeCompare(b.team.name));
+}
+
+function standingsCard(){
+  const rows = conferenceStandings();
+  if(!rows.length){
+    return `<div class="card stretch"><div class="card-title"><h3>Big West Standings</h3></div><p class="muted">Conference standings aren't available for ${state.season}.</p></div>`;
+  }
+  return `<div class="card stretch standings-card">
+    <div class="card-title"><h3>Big West Standings</h3><span class="hint">${state.season} conference play</span></div>
+    <div class="standings-head"><span>#</span><span>Team</span><span>Conf</span><span>Overall</span></div>
+    <div class="standings-list">
+      ${rows.map((r, i) => `<div class="standings-row ${r.key === state.team ? 'is-selected' : ''}">
+        <span class="standings-rank num">${i + 1}</span>
+        <span class="standings-team">
+          <span class="standings-logo">${avatarContent(r.key, r.team.short)}</span>
+          <span class="standings-team-text">
+            <span class="standings-name">${r.team.name}</span>
+            <span class="standings-bar" title="${(r.confPct * 100).toFixed(0)}% of conference games won"><span style="width:${(r.confPct * 100).toFixed(1)}%"></span></span>
+          </span>
+        </span>
+        <span class="num standings-rec">${r.cw}–${r.cl}</span>
+        <span class="num standings-rec muted">${r.ow}–${r.ol}</span>
+      </div>`).join('')}
+    </div>
+    <p class="standings-note">Conference records include every Big West opponent; UC Davis and Hawaii aren't listed on this dashboard.</p>
+  </div>`;
+}
+
 function viewOverview(){
   if(!hasSeasonData(state.team, state.season)) return unavailableCard(state.team, state.season);
   const baseTeam = getTeamData(state.team, state.season);
@@ -1694,19 +1733,22 @@ function viewOverview(){
             <span class="legend-item"><span class="swatch" style="background:var(--series-b);border-radius:0;height:2px;"></span>Opponent</span>
           </div>
         </div>
-        <div id="trend-holder">${lineChart(team.games, 400, 200)}</div>
+        <div id="trend-holder">${lineChart(team.games, 360, 190)}</div>
       </div>
       <div class="card">
         <div class="card-title"><h3>Average Points per Quarter</h3><span class="hint">Season</span></div>
-        ${quarterBarChart(quarters, 400, 200)}
+        ${quarterBarChart(quarters, 360, 190)}
       </div>
       <div class="card">
         <div class="card-title"><h3>Team Fouls per Game</h3><span class="hint">Avg ${fmt1(avgFouls)} · dot = W/L</span></div>
-        ${foulsChart(team.games, 400, 200)}
+        ${foulsChart(team.games, 360, 190)}
       </div>
     </div>
 
-    ${leaderCard(LEADER_TABS, state.leaderTab)}
+    <div class="grid-2-even">
+      ${leaderCard(LEADER_TABS, state.leaderTab)}
+      ${standingsCard()}
+    </div>
   `;
 }
 
@@ -1814,7 +1856,7 @@ function viewRoster(){
     return loadingCard(state.team, state.season);
   }
   const team = analysisTeam(baseTeam);
-  const summary = `${teamSectionTabs()}${overviewTiles(team)}${rosterGrid(team)}`;
+  const summary = `${overviewTiles(team)}${rosterGrid(team)}`;
   if(state.selectedPlayer && state.selectedPlayer.team===state.team){
     return summary + playerModal(team, state.selectedPlayer.idx, 'selectedPlayer');
   }
@@ -3218,6 +3260,25 @@ function viewComparePlayers(){
     stlPct: m2.stlPct,
     blkPct: m2.blkPct,
   });
+  const playerLegend = `<div class="legend">
+          <span class="legend-item"><span class="swatch" style="background:var(--series-a)"></span>${p1.name.split(' ').slice(-1)}</span>
+          <span class="legend-item"><span class="swatch" style="background:var(--series-b)"></span>${p2.name.split(' ').slice(-1)}</span>
+        </div>`;
+  const statsCard = (title, stats) => `<div class="card">
+      <div class="card-title"><h3>${title}</h3>${playerLegend}</div>
+      ${diffRowsHtml(stats, pg1, pg2)}
+    </div>`;
+  const panels = {
+    radar: `${comparePlayerRadarChart(m1, m2, p1, p2)}${comparePlayerShotCard(p1, p2, m1, m2)}`,
+    pergame: statsCard('Per-game averages', CP_STATS),
+    role: statsCard('Role and efficiency', CP_ROLE_STATS),
+  };
+  const tabs = [
+    {id:'radar', label:'Role radar and shot distribution'},
+    {id:'pergame', label:'Per-game averages'},
+    {id:'role', label:'Role and efficiency'},
+  ];
+  const activeTab = panels[state.comparePlayersTab] ? state.comparePlayersTab : 'radar';
   return `
     <div class="compare-picker-row">
       <select id="p1-pick">${playerPickerOptions()}</select>
@@ -3245,26 +3306,10 @@ function viewComparePlayers(){
         </div>
       </div>
     </div>
-    ${comparePlayerRadarChart(m1, m2, p1, p2)}
-    ${comparePlayerShotCard(p1, p2, m1, m2)}
-    <div class="card">
-      <div class="card-title"><h3>Per-game averages</h3>
-        <div class="legend">
-          <span class="legend-item"><span class="swatch" style="background:var(--series-a)"></span>${p1.name.split(' ').slice(-1)}</span>
-          <span class="legend-item"><span class="swatch" style="background:var(--series-b)"></span>${p2.name.split(' ').slice(-1)}</span>
-        </div>
-      </div>
-      ${diffRowsHtml(CP_STATS, pg1, pg2)}
+    <div class="team-section-tabs compare-teams-tabs" role="tablist" aria-label="Compare players sections">
+      ${tabs.map(tab=>`<button class="team-section-tab ${tab.id===activeTab?'active':''}" data-cp-tab="${tab.id}" role="tab" aria-selected="${tab.id===activeTab}">${tab.label}</button>`).join('')}
     </div>
-    <div class="card">
-      <div class="card-title"><h3>Role and efficiency</h3>
-        <div class="legend">
-          <span class="legend-item"><span class="swatch" style="background:var(--series-a)"></span>${p1.name.split(' ').slice(-1)}</span>
-          <span class="legend-item"><span class="swatch" style="background:var(--series-b)"></span>${p2.name.split(' ').slice(-1)}</span>
-        </div>
-      </div>
-      ${diffRowsHtml(CP_ROLE_STATS, pg1, pg2)}
-    </div>
+    ${panels[activeTab]}
   `;
 }
 function wireComparePlayers(container){
@@ -3272,6 +3317,10 @@ function wireComparePlayers(container){
   p1.value = state.p1.team+'|'+state.p1.idx; p2.value = state.p2.team+'|'+state.p2.idx;
   p1.addEventListener('change', e=>{ const [t,i]=e.target.value.split('|'); state.p1={team:t,idx:+i}; render(); });
   p2.addEventListener('change', e=>{ const [t,i]=e.target.value.split('|'); state.p2={team:t,idx:+i}; render(); });
+  container.querySelectorAll('[data-cp-tab]').forEach(btn=>btn.addEventListener('click', ()=>{
+    state.comparePlayersTab = btn.dataset.cpTab;
+    render();
+  }));
   wirePlayerRadarChart(container);
   wireShotDistributionChart(container);
 }
@@ -3649,7 +3698,6 @@ function render(){
   else if(state.view==='gamelog'){ root.innerHTML = viewGameLog(); wireGameLog(root); }
   else if(state.view==='roster'){
     root.innerHTML = viewRoster();
-    wireTeamSectionTabs(root);
     wireRoster(root);
     const wrap = root.querySelector('.roster-table-wrap');
     if(wrap){
