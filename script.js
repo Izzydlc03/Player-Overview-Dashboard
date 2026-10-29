@@ -20,7 +20,13 @@ const SEASON_CACHE = {};
 const BART_CACHE = {};
 const BART_PLAYER_CACHE = {};
 const ARCHETYPE_CACHE = {};
-const DATA_VERSION = '20261028b';
+const DATA_VERSION = '20261028c';
+
+/* The upcoming season has rosters and a schedule but no games yet, so every stat is
+   zero. Compare Players / Compare Teams can show PRIOR_STATS_SEASON numbers instead
+   as a placeholder (see "prior stats" below). */
+const UPCOMING_SEASON = '2026-27';
+const PRIOR_STATS_SEASON = '2025-26';
 
 function possessionRatePercent(raw, key = ''){
   const num = Number(raw || 0);
@@ -48,6 +54,9 @@ function bartTeamName(teamKey, team){
     calpoly: 'Cal Poly',
     csuf: 'Cal St. Fullerton',
     lmu: 'Loyola Marymount',
+    cbu: 'Cal Baptist',
+    sacstate: 'Sacramento St.',
+    portlandstate: 'Portland St.',
   };
   return aliases[teamKey] || team.name;
 }
@@ -269,7 +278,7 @@ function playerArchetype(teamKey, team, player, season = state.season){
   const year = seasonEndYear(season);
   const teamName = archetypeTeamName(teamKey, team);
   const displayName = displayPlayerName(player.name);
-  const teamNames = [...new Set([teamName, team.name].filter(Boolean))];
+  const teamNames = [...new Set([player.priorTeam, teamName, team.name].filter(Boolean))];
   const playerNames = [...new Set([
     displayName,
     player.name,
@@ -322,11 +331,20 @@ function injectDynamicTeams(){
   }
 }
 
-async function loadSeason(season){
+async function fetchSeasonJson(season){
   if(!SEASON_CACHE[season]){
     const res = await fetch(`data/${season}.json?v=${DATA_VERSION}`);
     if(!res.ok) throw new Error(`Failed to load data/${season}.json (${res.status})`);
     SEASON_CACHE[season] = await res.json();
+  }
+}
+
+async function loadSeason(season){
+  await fetchSeasonJson(season);
+  if(season === UPCOMING_SEASON){
+    await fetchSeasonJson(PRIOR_STATS_SEASON);
+    await loadBartRatings(PRIOR_STATS_SEASON);
+    await loadBartPlayerStats(PRIOR_STATS_SEASON);
   }
   await loadBartRatings(season);
   await loadBartPlayerStats(season);
@@ -613,7 +631,7 @@ function displayPlayerName(name){
   return parts.length === 2 ? `${parts[1]} ${parts[0]}` : name;
 }
 function displayClassYear(player){
-  const cls = player.advanced?.cls || player.cls || '';
+  const cls = player.cls || player.advanced?.cls || '';
   const labels = {
     FR: 'Fr.',
     SO: 'So.',
@@ -627,7 +645,7 @@ function displayClassYear(player){
   return labels[cls] || cls || state.season.slice(2);
 }
 function displayListedPosition(player){
-  return displayPos(player.advanced?.pos || player.pos) || 'Player';
+  return displayPos(player.pos || player.advanced?.pos) || 'Player';
 }
 function compactRoleLabel(role){
   const value = (role || '').trim();
@@ -641,7 +659,7 @@ function compactRoleLabel(role){
   return value;
 }
 function displayPlayerRole(teamKey, team, player){
-  const listed = displayPos(player.advanced?.pos || player.pos);
+  const listed = displayPos(player.pos || player.advanced?.pos);
   return listed || playerArchetype(teamKey, team, player)?.role || 'Player';
 }
 function displayCompactPlayerRole(teamKey, team, player){
@@ -723,7 +741,78 @@ function isDynamicTeam(teamKey, season = state.season){
 }
 
 function getTeamData(teamKey, season){
+  if(priorStatsActive) return TEAMS[teamKey]; // always the upcoming season's roster shell while showing placeholder stats
   return teamDataCache[teamCacheKey(teamKey, season)] || TEAMS[teamKey];
+}
+
+/* ---- Prior stats (upcoming season only) ----------------------------------------------
+   Each 2026-27 roster player may carry `prior`: their 2025-26 totals (possibly from another
+   school if they transferred). While a Compare page renders with the "2025-26 stats" option,
+   withPriorStats() flips state.season to PRIOR_STATS_SEASON (so Bart/archetype lookups use
+   last season) and getTeamData() keeps returning the 2026-27 rosters, which
+   rosterWithPrior() then fills with those prior totals. */
+let priorStatsActive = false;
+const PRIOR_ROSTER_CACHE = new WeakMap();
+const PRIOR_TOTAL_KEYS = ['gp','min','fgm','fga','tpm','tpa','ftm','fta','oreb','dreb','ast','stl','blk','to','pts'];
+
+function priorStatsRequested(){
+  return state.season === UPCOMING_SEASON && state.statsBasis === 'prior';
+}
+
+function withPriorStats(fn){
+  if(!priorStatsRequested()) return fn();
+  const realSeason = state.season;
+  state.season = PRIOR_STATS_SEASON;
+  priorStatsActive = true;
+  try { return fn(); }
+  finally { state.season = realSeason; priorStatsActive = false; }
+}
+
+function priorPlayerLogs(){
+  const logs = {};
+  Object.values(SEASON_CACHE[PRIOR_STATS_SEASON] || {}).forEach(team => Object.assign(logs, team.playerGameLogs || {}));
+  return logs;
+}
+
+function rosterWithPrior(team){
+  if(!team?.players) return team;
+  if(PRIOR_ROSTER_CACHE.has(team)) return PRIOR_ROSTER_CACHE.get(team);
+  const players = team.players.map(player => {
+    if(!player.prior) return player;
+    const totals = Object.fromEntries(PRIOR_TOTAL_KEYS.map(key => [key, player.prior[key] ?? 0]));
+    return { ...player, ...totals, priorTeam: player.prior.team };
+  });
+  const merged = { ...team, players, playerGameLogs: priorPlayerLogs() };
+  PRIOR_ROSTER_CACHE.set(team, merged);
+  return merged;
+}
+
+/* Roster used by the Compare pages: the placeholder-filled one while showing prior stats. */
+function compareTeamFor(teamKey, analysis = false){
+  const base = getTeamData(teamKey, state.season);
+  const team = analysis ? analysisTeam(base) : base;
+  return priorStatsActive ? rosterWithPrior(team) : team;
+}
+
+/* Team-level numbers for Compare Teams: last season's team when we have it, otherwise the
+   (all-zero) 2026-27 shell. Returns { loading: true } while an opponent's 2025-26 data loads. */
+function compareStatsTeam(teamKey, shell){
+  if(!priorStatsActive) return { team: shell };
+  const last = SEASON_CACHE[PRIOR_STATS_SEASON]?.[teamKey];
+  if(last) return { team: last };
+  if(teamKey in REMOTE_TEAM_SEASONS){
+    const cacheKey = teamCacheKey(teamKey, PRIOR_STATS_SEASON);
+    if(teamDataCache[cacheKey]) return { team: analysisTeam(teamDataCache[cacheKey]) };
+    if(!teamLoadCache[cacheKey]){
+      teamLoadCache[cacheKey] = loadOpponentSeason(teamKey, PRIOR_STATS_SEASON).then(data => {
+        teamDataCache[cacheKey] = data;
+        return data;
+      });
+    }
+    teamLoadCache[cacheKey].then(()=>render());
+    return { loading: true };
+  }
+  return { team: shell };
 }
 
 function parseCsv(text){
@@ -1305,7 +1394,7 @@ function foulsForGames(games){
 /* ============================= STATE / NAV ============================= */
 const state = { view:'overview', team:'ucsd', season:'2025-26', gameSort:{key:'date',dir:1},
   p1:{team:'ucsd',idx:0}, p2:{team:'ucsb',idx:0}, t1:'ucsd', t2:'ucsb',
-  selectedPlayer:null, rosterCardPlayer:null, compareTeamPlayer:null, compareTeamsTab:'top5', comparePlayersTab:'radar', leaderTab:'scorers', playerStatKey:'pts', playerTrendWindow:'all', playerGameFocus:null, rosterMode:'pergame', rosterTableView:'main', shootingMode:'basic', rosterScrollLeft:0,
+  selectedPlayer:null, rosterCardPlayer:null, compareTeamPlayer:null, compareTeamsTab:'top5', comparePlayersTab:'radar', comparePerMode:'game', statsBasis:'prior', leaderTab:'scorers', playerStatKey:'pts', playerTrendWindow:'all', playerGameFocus:null, rosterMode:'pergame', rosterTableView:'main', shootingMode:'basic', rosterScrollLeft:0,
   rosterSortMain:{key:'ppg',dir:-1}, rosterSortShooting:{key:'tsPct',dir:-1}, rosterSortEfficiency:{key:'tsPct',dir:-1} };
 
 const NAV = [
@@ -1372,9 +1461,15 @@ function renderTopbar(){
         <span class="vslabel">Select Season</span>${seasonSelect('season-picker', state.season)}
       </div>`;
   } else if(['cplayers','cteams'].includes(state.view)){
+    const basisControl = state.season === UPCOMING_SEASON ? `
+        <span class="vslabel">Stats Shown</span>
+        <select id="stats-basis" aria-label="Which stats to show for the upcoming season">
+          <option value="prior" ${state.statsBasis==='prior'?'selected':''}>${PRIOR_STATS_SEASON} stats (placeholder)</option>
+          <option value="current" ${state.statsBasis==='current'?'selected':''}>${UPCOMING_SEASON} (no games yet)</option>
+        </select>` : '';
     controls = `
       <div class="topbar-controls">
-        <span class="vslabel">Select Season</span>${seasonSelect('season-picker', state.season)}
+        <span class="vslabel">Select Season</span>${seasonSelect('season-picker', state.season)}${basisControl}
       </div>`;
   }
 
@@ -1386,6 +1481,12 @@ function renderTopbar(){
     state.season = preferredSeasonForTeam(state.team, state.season);
     state.selectedPlayer = null;
     state.playerGameFocus = null;
+    render();
+  });
+
+  const sb = document.getElementById('stats-basis');
+  if(sb) sb.addEventListener('change', e=>{
+    state.statsBasis = e.target.value;
     render();
   });
 
@@ -1814,30 +1915,40 @@ function viewGameLog(){
     ensureTeamData(state.team, state.season).then(()=>render());
     return loadingCard(state.team, state.season);
   }
-  let rows = team.games.map(g=>({...g, fgpct:pct(g.fgm,g.fga)}));
+  /* Before any games are played, list the scheduled opponents with zeroed stats. */
+  const scheduled = !team.games.length && team.schedule?.length;
+  const sourceGames = scheduled
+    ? team.schedule.map(g=>({
+        date:g.date, opp:g.opp, home:g.home==='home', locCode:g.home==='home' ? 'H' : g.home==='away' ? 'A' : 'N',
+        scheduled:true, time:g.time, conf:g.conf, pf:0, pa:0, win:false, fgm:0, fga:0, reb:0, ast:0, to:0,
+      }))
+    : team.games;
+  let rows = sourceGames.map(g=>({...g, fgpct:pct(g.fgm,g.fga)}));
   const {key,dir} = state.gameSort;
   const sortVal = g => key==='result' ? (g.win?1:0) : key==='loc' ? (g.home?1:0) : key==='opp' ? g.opp : g[key];
   rows = rows.sort((a,b)=>{ const av=sortVal(a), bv=sortVal(b); return av<bv?-1*dir:av>bv?1*dir:0; });
 
   return `
     <div class="card">
-      <div class="card-title"><h3>${team.name} · ${team.games.length} games</h3><span class="hint">Click a row for that game's box score</span></div>
+      <div class="card-title"><h3>${team.name} · ${sourceGames.length} ${scheduled ? 'scheduled games' : 'games'}</h3><span class="hint">${scheduled ? 'Results and box scores fill in as games are played' : "Click a row for that game's box score"}</span></div>
       <div class="table-wrap">
         <table>
           <thead><tr>${GAME_COLS.map(c=>`<th class="${c.num?'num':''}"><button class="th-sort" data-key="${c.key}">${c.label} ${key===c.key?(dir>0?'↑':'↓'):''}</button></th>`).join('')}</tr></thead>
           <tbody>
             ${rows.map(g=>`
-              <tr class="clickable" data-date="${g.date}">
+              <tr class="${g.scheduled ? '' : 'clickable'}" data-date="${g.date}">
                 <td class="muted">${g.date}</td>
-                <td class="rowname">${g.opp}</td>
-                <td class="muted">${g.home?'H':'A'}</td>
-                <td><span class="pill ${g.win?'win':'loss'}">${g.win?'W':'L'}</span> <span class="num">${g.pf}–${g.pa}</span></td>
+                <td class="rowname">${g.opp}${g.conf ? ' <span class="muted">· Conf</span>' : ''}</td>
+                <td class="muted">${g.locCode || (g.home?'H':'A')}</td>
+                <td>${g.scheduled
+                  ? `<span class="muted">${g.time || 'TBD'}</span>`
+                  : `<span class="pill ${g.win?'win':'loss'}">${g.win?'W':'L'}</span> <span class="num">${g.pf}–${g.pa}</span>`}</td>
                 <td class="num">${g.fgpct.toFixed(1)}%</td>
                 <td class="num">${g.reb}</td>
                 <td class="num">${g.ast}</td>
                 <td class="num">${g.to}</td>
               </tr>
-              <tr class="boxrow" data-boxfor="${g.date}" style="display:none;"><td colspan="${GAME_COLS.length}" style="background:var(--surface-2);padding:14px 16px;">
+              ${g.scheduled ? '' : `<tr class="boxrow" data-boxfor="${g.date}" style="display:none;"><td colspan="${GAME_COLS.length}" style="background:var(--surface-2);padding:14px 16px;">
                 <div class="eyebrow" style="margin-bottom:8px;">Team box · ${g.home?'vs':'@'} ${g.opp}</div>
                 <div class="tiles" style="grid-template-columns:repeat(5,1fr)">
                   <div class="tile"><div class="eyebrow">FG</div><div class="val num" style="font-size:16px;">${g.fgm}-${g.fga}</div></div>
@@ -1846,7 +1957,7 @@ function viewGameLog(){
                   <div class="tile"><div class="eyebrow">TO</div><div class="val num" style="font-size:16px;">${g.to}</div></div>
                   <div class="tile"><div class="eyebrow">Final</div><div class="val num" style="font-size:16px;">${g.pf}-${g.pa}</div></div>
                 </div>
-              </td></tr>
+              </td></tr>`}
             `).join('')}
           </tbody>
         </table>
@@ -3050,48 +3161,62 @@ function wirePlayerModal(container, team, stateKey, idx){
 
 
 /* ============================= VIEW: COMPARE PLAYERS ============================= */
-/* Shared "vs" row renderer for the Compare Players / Compare Teams pages:
-   one row per stat, value+bar for each side, colored by --series-a/-b,
-   with the higher (or lower, if lowerBetter) value highlighted. `min`
-   lets a stat's bar scale start below zero (e.g. Plus/Minus). */
-function diffRowsHtml(stats, obj1, obj2){
-  return stats.map(s=>{
-    const raw1 = obj1[s.key];
-    const raw2 = obj2[s.key];
-    const has1 = raw1 !== undefined && raw1 !== null && raw1 !== '' && Number.isFinite(Number(raw1));
-    const has2 = raw2 !== undefined && raw2 !== null && raw2 !== '' && Number.isFinite(Number(raw2));
-    const v1 = has1 ? Number(raw1) : null;
-    const v2 = has2 ? Number(raw2) : null;
-    const sub1 = s.subKey && Number.isFinite(Number(obj1[s.subKey])) ? Number(obj1[s.subKey]) : null;
-    const sub2 = s.subKey && Number.isFinite(Number(obj2[s.subKey])) ? Number(obj2[s.subKey]) : null;
-    const tied = has1 && has2 && Math.abs(v1 - v2) < 0.000001;
-    const aBetter = has1 && (!has2 || tied || (s.lowerBetter ? v1<v2 : v1>v2));
-    const bBetter = has2 && (!has1 || tied || (s.lowerBetter ? v2<v1 : v2>v1));
-    const lo = s.min||0;
-    const w1 = has1 ? Math.max(0, Math.min(100, (v1-lo)/(s.max-lo)*100)) : 0;
-    const w2 = has2 ? Math.max(0, Math.min(100, (v2-lo)/(s.max-lo)*100)) : 0;
-    const aTag = aBetter ? '<span class="edge-tag" aria-label="Better value">✓</span>' : '';
-    const bTag = bBetter ? '<span class="edge-tag" aria-label="Better value">✓</span>' : '';
-    const aValue = has1 ? `${aTag}${s.fmt(v1)}${s.subKey && sub1 !== null ? `<span class="diffval-sub">${s.subFmt(sub1)}</span>` : ''}` : '—';
-    const bValue = has2 ? `${s.fmt(v2)}${bTag}${s.subKey && sub2 !== null ? `<span class="diffval-sub">${s.subFmt(sub2)}</span>` : ''}` : '—';
-    const label = `${s.label}${s.subKey ? `<span class="stat-label-sub">${s.subLabel}</span>` : ''}`;
-    return `<div class="diffrow diffrow-mirrored ${aBetter?'left-wins':''} ${bBetter?'right-wins':''}">
-      <div class="bar-track left"><div class="bar-fill a" style="width:${w1}%"></div></div>
-      <div class="diffval a">${aValue}</div>
-      <div class="stat-label">${label}</div>
-      <div class="diffval b">${bValue}</div>
-      <div class="bar-track"><div class="bar-fill b" style="width:${w2}%"></div></div>
-    </div>`;
+/* Shared "compare and contrast" table for the Compare Players / Compare Teams pages:
+   one row per stat, and in each row the better value is shaded in that side's color
+   (the lower value wins when a stat is marked lowerBetter; ties shade neither). */
+function compareTableHtml(stats, obj1, obj2, nameA, nameB){
+  const has = v => v !== undefined && v !== null && v !== '' && Number.isFinite(Number(v));
+  const rows = stats.map(s=>{
+    const has1 = has(obj1[s.key]), has2 = has(obj2[s.key]);
+    const v1 = has1 ? Number(obj1[s.key]) : null, v2 = has2 ? Number(obj2[s.key]) : null;
+    const diff = has1 && has2 ? v1 - v2 : 0;
+    const decided = has1 && has2 && Math.abs(diff) >= 0.000001;
+    const aBetter = decided && (s.lowerBetter ? diff < 0 : diff > 0);
+    const bBetter = decided && !aBetter;
+    const sub = obj => s.subKey && Number.isFinite(Number(obj[s.subKey])) ? `<span class="cmp-sub">${s.subFmt(Number(obj[s.subKey]))}</span>` : '';
+    const cell = (side, valid, v, obj, better) => `<td class="cmp-cell ${side} ${better ? 'better' : ''}">${valid ? `${s.fmt(v)}${sub(obj)}` : '—'}</td>`;
+    return `<tr>
+      <th scope="row">${s.label}${s.subKey ? `<span class="stat-label-sub">${s.subLabel}</span>` : ''}</th>
+      ${cell('a', has1, v1, obj1, aBetter)}${cell('b', has2, v2, obj2, bBetter)}
+    </tr>`;
   }).join('');
+  return `<table class="compare-table">
+    <thead><tr><th>Stat</th><th class="a">${nameA}</th><th class="b">${nameB}</th></tr></thead>
+    <tbody>${rows}</tbody>
+  </table>`;
+}
+
+function compareCardHtml({ title, subtitle = '', badge = '', toggle = '', table, note = '' }){
+  const how = note || 'the shaded cell is the better number (lower is better for turnovers and other stats marked that way).';
+  return `<div class="card compare-card">
+    <div class="compare-card-head">
+      <div><h3>${title}</h3>${subtitle ? `<p class="compare-card-sub">${subtitle}</p>` : ''}</div>
+      ${badge ? `<span class="compare-badge">${badge}</span>` : ''}
+    </div>
+    ${toggle}
+    <div class="compare-table-wrap">${table}</div>
+    <p class="compare-note"><b>How to read:</b> ${how}</p>
+  </div>`;
+}
+
+/* Shown on the Compare pages while the upcoming season uses last season's numbers. */
+function compareBasisNote(){
+  return `<p class="compare-basis-note"><b>${PRIOR_STATS_SEASON} stats shown as a placeholder.</b> Returning players and transfers use last season's numbers; true freshmen and anyone without college stats show zeros. Switch with “Stats Shown” at the top right.</p>`;
+}
+
+/* Counting stats re-expressed per 40 minutes so starters and bench players compare on equal footing. */
+function perFortyMinutes(pg){
+  const f = pg.mpg > 0 ? 40 / pg.mpg : 0;
+  return { ...pg, ppg:pg.ppg*f, rpg:pg.rpg*f, apg:pg.apg*f, stlpg:pg.stlpg*f, blkpg:pg.blkpg*f, topg:pg.topg*f, mpg:40 };
 }
 
 const CP_STATS = [
-  {key:'ppg', label:'PPG', fmt:fmt1, max:30},
-  {key:'rpg', label:'RPG', fmt:fmt1, max:14},
-  {key:'apg', label:'APG', fmt:fmt1, max:9},
-  {key:'stlpg', label:'STL', fmt:fmt1, max:3.5},
-  {key:'blkpg', label:'BLK', fmt:fmt1, max:2.5},
-  {key:'topg', label:'TO', fmt:fmt1, max:4.5, lowerBetter:true},
+  {key:'ppg', label:'Points', fmt:fmt1, max:30},
+  {key:'rpg', label:'Rebounds', fmt:fmt1, max:14},
+  {key:'apg', label:'Assists', fmt:fmt1, max:9},
+  {key:'stlpg', label:'Steals', fmt:fmt1, max:3.5},
+  {key:'blkpg', label:'Blocks', fmt:fmt1, max:2.5},
+  {key:'topg', label:'Turnovers', fmt:fmt1, max:4.5, lowerBetter:true},
   {key:'efgPct', label:'eFG%', fmt:v=>v.toFixed(1), max:65},
   {key:'fgPct', label:'FG%', fmt:v=>v.toFixed(1), max:65},
   {key:'tpPct', label:'3P%', fmt:v=>v.toFixed(1), max:50},
@@ -3100,7 +3225,7 @@ const CP_STATS = [
   {key:'usg', label:'USG%', fmt:v=>v.toFixed(1), max:35},
 ];
 const CP_ROLE_STATS = [
-  {key:'mpg', label:'MPG', fmt:fmt1, max:40},
+  {key:'mpg', label:'Minutes per game', fmt:fmt1, max:40},
   {key:'tsPct', label:'TS%', fmt:v=>v.toFixed(1), max:75},
   {key:'usg', label:'USG%', fmt:v=>v.toFixed(1), max:35},
   {key:'assistedFgPct', label:'Assisted FG%', fmt:v=>v.toFixed(1), max:100},
@@ -3243,7 +3368,7 @@ function playerPickerOptions(){
   }).join('');
 }
 function viewComparePlayers(){
-  const team1 = getTeamData(state.p1.team, state.season), team2 = getTeamData(state.p2.team, state.season);
+  const team1 = compareTeamFor(state.p1.team), team2 = compareTeamFor(state.p2.team);
   if((isDynamicTeam(state.p1.team) && !team1.players.length) || (isDynamicTeam(state.p2.team) && !team2.players.length)){
     if(isDynamicTeam(state.p1.team)) ensureTeamData(state.p1.team, state.season).then(()=>render());
     if(isDynamicTeam(state.p2.team)) ensureTeamData(state.p2.team, state.season).then(()=>render());
@@ -3283,18 +3408,30 @@ function viewComparePlayers(){
     stlPct: m2.stlPct,
     blkPct: m2.blkPct,
   });
-  const playerLegend = `<div class="legend">
-          <span class="legend-item"><span class="swatch" style="background:var(--series-a)"></span>${p1.name.split(' ').slice(-1)}</span>
-          <span class="legend-item"><span class="swatch" style="background:var(--series-b)"></span>${p2.name.split(' ').slice(-1)}</span>
-        </div>`;
-  const statsCard = (title, stats) => `<div class="card">
-      <div class="card-title"><h3>${title}</h3>${playerLegend}</div>
-      ${diffRowsHtml(stats, pg1, pg2)}
+  const lastName = player => displayPlayerName(player.name).split(' ').slice(-1)[0].toUpperCase();
+  const nameA = lastName(p1), nameB = lastName(p2);
+  const badge = priorStatsActive ? `${PRIOR_STATS_SEASON} stats` : '';
+  const per40 = state.comparePerMode === 'per40';
+  const perGameToggle = `<div class="compare-toggle" role="tablist" aria-label="Per game or per 40 minutes">
+      <button type="button" class="${!per40 ? 'active' : ''}" data-cp-mode="game" role="tab" aria-selected="${!per40}">Per game</button>
+      <button type="button" class="${per40 ? 'active' : ''}" data-cp-mode="per40" role="tab" aria-selected="${per40}">Per 40 minutes</button>
     </div>`;
+  const perGameStats = per40 ? CP_STATS : [...CP_STATS, {key:'mpg', label:'Minutes', fmt:fmt1}];
   const panels = {
     radar: `${comparePlayerRadarChart(m1, m2, p1, p2)}${comparePlayerShotCard(p1, p2, m1, m2)}`,
-    pergame: statsCard('Per-game averages', CP_STATS),
-    role: statsCard('Role and efficiency', CP_ROLE_STATS),
+    pergame: compareCardHtml({
+      title: 'Per-game averages',
+      subtitle: 'Who produces more for the time they play?',
+      badge, toggle: perGameToggle,
+      table: compareTableHtml(perGameStats, per40 ? perFortyMinutes(pg1) : pg1, per40 ? perFortyMinutes(pg2) : pg2, nameA, nameB),
+      note: `the shaded cell is the better number (fewer is better for turnovers). Per 40 puts a starter and a bench player on equal footing.`,
+    }),
+    role: compareCardHtml({
+      title: 'Role and efficiency',
+      subtitle: 'How each player gets their production.',
+      badge,
+      table: compareTableHtml(CP_ROLE_STATS, pg1, pg2, nameA, nameB),
+    }),
   };
   const tabs = [
     {id:'radar', label:'Role radar and shot distribution'},
@@ -3329,6 +3466,7 @@ function viewComparePlayers(){
         </div>
       </div>
     </div>
+    ${priorStatsActive ? compareBasisNote() : ''}
     <div class="team-section-tabs compare-teams-tabs" role="tablist" aria-label="Compare players sections">
       ${tabs.map(tab=>`<button class="team-section-tab ${tab.id===activeTab?'active':''}" data-cp-tab="${tab.id}" role="tab" aria-selected="${tab.id===activeTab}">${tab.label}</button>`).join('')}
     </div>
@@ -3344,20 +3482,24 @@ function wireComparePlayers(container){
     state.comparePlayersTab = btn.dataset.cpTab;
     render();
   }));
+  container.querySelectorAll('[data-cp-mode]').forEach(btn=>btn.addEventListener('click', ()=>{
+    state.comparePerMode = btn.dataset.cpMode;
+    render();
+  }));
   wirePlayerRadarChart(container);
   wireShotDistributionChart(container);
 }
 
 /* ============================= VIEW: COMPARE TEAMS ============================= */
 const CT_SEASON_STATS = [
-  {key:'ppg', label:'PPG', fmt:fmt1, max:90},
-  {key:'oppPpg', label:'Opp PPG', fmt:fmt1, max:90, lowerBetter:true},
-  {key:'rpg', label:'RPG', fmt:fmt1, max:50},
-  {key:'apg', label:'APG', fmt:fmt1, max:25},
-  {key:'topg', label:'TOPG', fmt:fmt1, max:20, lowerBetter:true},
-  {key:'ppp', label:'PPP', fmt:v=>v.toFixed(2), max:1.3},
-  {key:'tovPct', label:'TOV%', fmt:v=>v.toFixed(1), max:30, lowerBetter:true},
-  {key:'plusMinus', label:'+/-', fmt:v=>(v>=0?'+':'')+v.toFixed(1), min:-20, max:20},
+  {key:'ppg', label:'Points per game', fmt:fmt1, max:90},
+  {key:'oppPpg', label:'Opponent points per game', fmt:fmt1, max:90, lowerBetter:true},
+  {key:'rpg', label:'Rebounds per game', fmt:fmt1, max:50},
+  {key:'apg', label:'Assists per game', fmt:fmt1, max:25},
+  {key:'topg', label:'Turnovers per game', fmt:fmt1, max:20, lowerBetter:true},
+  {key:'ppp', label:'Points per possession', fmt:v=>v.toFixed(2), max:1.3},
+  {key:'tovPct', label:'Turnover %', fmt:v=>v.toFixed(1), max:30, lowerBetter:true},
+  {key:'plusMinus', label:'Scoring margin', fmt:v=>(v>=0?'+':'')+v.toFixed(1), min:-20, max:20},
 ];
 const fmtPctile = v => `${Math.round(v)}th`;
 const CT_BART_STATS = [
@@ -3383,26 +3525,19 @@ const CT_FOUR_FACTOR_STATS = [
   {key:'tpPct', label:'3P%', fmt:v=>v.toFixed(1), max:50},
 ];
 const CT_SHOOTING_STATS = [
-  {key:'fgPct', label:'FG%', fmt:v=>v.toFixed(1), max:65},
-  {key:'tpPct', label:'3P%', fmt:v=>v.toFixed(1), max:50},
-  {key:'ftPct', label:'FT%', fmt:v=>v.toFixed(1), max:100},
-  {key:'tsPct', label:'TS%', fmt:v=>v.toFixed(1), max:70},
+  {key:'fgPct', label:'Field goal %', fmt:v=>v.toFixed(1), max:65},
+  {key:'tpPct', label:'3-point %', fmt:v=>v.toFixed(1), max:50},
+  {key:'ftPct', label:'Free throw %', fmt:v=>v.toFixed(1), max:100},
+  {key:'tsPct', label:'True shooting %', fmt:v=>v.toFixed(1), max:70},
 ];
 const CT_DEFENSE_STATS = [
-  {key:'drebPct', label:'DREB%', fmt:v=>v.toFixed(1), max:100},
-  {key:'orebPct', label:'OREB%', fmt:v=>v.toFixed(1), max:100},
-  {key:'stlpg', label:'STL', fmt:fmt1, max:12},
-  {key:'blkpg', label:'BLK', fmt:fmt1, max:8},
-  {key:'oppFgPct', label:'Opp FG%', fmt:v=>v.toFixed(1), max:60, lowerBetter:true},
-  {key:'forcedTovPct', label:'Forced TOV%', fmt:v=>v.toFixed(1), max:30},
+  {key:'drebPct', label:'Defensive rebound %', fmt:v=>v.toFixed(1), max:100},
+  {key:'orebPct', label:'Offensive rebound %', fmt:v=>v.toFixed(1), max:100},
+  {key:'stlpg', label:'Steals per game', fmt:fmt1, max:12},
+  {key:'blkpg', label:'Blocks per game', fmt:fmt1, max:8},
+  {key:'oppFgPct', label:'Opponent field goal %', fmt:v=>v.toFixed(1), max:60, lowerBetter:true},
+  {key:'forcedTovPct', label:'Forced turnover %', fmt:v=>v.toFixed(1), max:30},
 ];
-function ctLegend(t1, t2){
-  return `<div class="legend">
-    <span class="legend-item"><span class="swatch" style="background:var(--series-a)"></span>${t1.short}</span>
-    <span class="legend-item"><span class="swatch" style="background:var(--series-b)"></span>${t2.short}</span>
-  </div>`;
-}
-
 function bartRecordLabel(stats){
   return stats.bart?.record || `${stats.record.w}-${stats.record.l}`;
 }
@@ -3418,7 +3553,7 @@ function percentileFromValues(values, value, higherBetter = true){
 
 function comparePlayerPool(){
   return TEAM_KEYS.flatMap(teamKey => {
-    const team = analysisTeam(getTeamData(teamKey, state.season));
+    const team = compareTeamFor(teamKey, true);
     return (team.players || [])
       .filter(player => player.gp > 0 && player.min >= 8)
       .map(player => ({ team, player, stats: comparePlayerStats(team, player) }));
@@ -3427,7 +3562,7 @@ function comparePlayerPool(){
 
 function bartPlayerFor(teamKey, team, player){
   const playerData = BART_PLAYER_CACHE[bartSeasonYear(state.season)];
-  const teamName = bartTeamName(teamKey, team);
+  const teamName = player.priorTeam || bartTeamName(teamKey, team);
   return playerData?.byKey?.[bartPlayerKey(teamName, displayPlayerName(player.name))]
     || playerData?.byKey?.[bartPlayerKey(teamName, player.name)]
     || null;
@@ -3618,7 +3753,7 @@ function compareTeamTrendChart(games, colorVar){
 
 function compareTeamPlayerModal(){
   if(!state.compareTeamPlayer) return '';
-  const team = analysisTeam(getTeamData(state.compareTeamPlayer.team, state.season));
+  const team = compareTeamFor(state.compareTeamPlayer.team, true);
   if(!team?.players?.[state.compareTeamPlayer.idx]) return '';
   return playerModal(team, state.compareTeamPlayer.idx, 'compareTeamPlayer');
 }
@@ -3630,22 +3765,26 @@ function viewCompareTeams(){
     if(isDynamicTeam(state.t2)) ensureTeamData(state.t2, state.season).then(()=>render());
     return loadingCard(isDynamicTeam(state.t1) ? state.t1 : state.t2, state.season);
   }
-  const s1 = teamAdvancedStats(t1, state.t1), s2 = teamAdvancedStats(t2, state.t2);
+  const stats1 = compareStatsTeam(state.t1, t1), stats2 = compareStatsTeam(state.t2, t2);
+  if(stats1.loading || stats2.loading) return loadingCard(stats1.loading ? state.t1 : state.t2, PRIOR_STATS_SEASON);
+  const s1 = teamAdvancedStats(stats1.team, state.t1), s2 = teamAdvancedStats(stats2.team, state.t2);
+  const rosterTeam1 = priorStatsActive ? rosterWithPrior(t1) : t1, rosterTeam2 = priorStatsActive ? rosterWithPrior(t2) : t2;
   const hasBartPair = s1.bart && s2.bart;
   const profileTitle = hasBartPair ? 'Adjusted stats' : 'Season averages';
   const profileStats = hasBartPair ? CT_BART_STATS : CT_SEASON_STATS;
-  const statsCard = (title, hint, stats) => `<div class="card">
-      <div class="card-title"><h3>${title}</h3>${hint ? `<span class="hint">${hint}</span>` : ''}${ctLegend(t1,t2)}</div>
-      ${diffRowsHtml(stats, s1, s2)}
-    </div>`;
+  const badge = priorStatsActive ? `${PRIOR_STATS_SEASON} stats` : '';
+  const statsCard = (title, subtitle, stats, note) => compareCardHtml({
+    title, subtitle, badge, note,
+    table: compareTableHtml(stats, s1, s2, t1.short, t2.short),
+  });
   const panels = {
-    top5: topMinutesCard(t1, t2),
-    boxscore: statsCard('Box-score context', 'D1 games only', CT_SEASON_STATS),
-    shooting: statsCard('Shooting splits', 'D1 games only', CT_SHOOTING_STATS),
-    defense: statsCard('Defensive breakdown', 'D1 games only', CT_DEFENSE_STATS),
-    adjusted: statsCard(profileTitle, '', profileStats),
-    ...(hasBartPair ? { resume: statsCard('Game resume', 'Schedule and wins above bubble', CT_BART_RESUME_STATS) } : {}),
-    factors: statsCard('Four factors', 'D1 box score plus Bart shot profile', CT_FOUR_FACTOR_STATS),
+    top5: topMinutesCard(rosterTeam1, rosterTeam2),
+    boxscore: statsCard('Box-score context', 'How the two teams compare in D1 games.', CT_SEASON_STATS),
+    shooting: statsCard('Shooting splits', 'Who shoots it better in D1 games?', CT_SHOOTING_STATS),
+    defense: statsCard('Defensive breakdown', 'Who defends and rebounds better in D1 games?', CT_DEFENSE_STATS),
+    adjusted: statsCard(profileTitle, hasBartPair ? 'Opponent-adjusted ratings, with national percentile.' : 'Season-long team averages.', profileStats),
+    ...(hasBartPair ? { resume: statsCard('Game resume', 'Schedule strength and wins above the bubble.', CT_BART_RESUME_STATS) } : {}),
+    factors: statsCard('Four factors', 'The shooting, turnover, rebounding and free-throw factors behind winning.', CT_FOUR_FACTOR_STATS),
   };
   const tabs = [
     {id:'top5', label:'Top five by minutes'},
@@ -3676,6 +3815,7 @@ function viewCompareTeams(){
         </div>
       </div>
     </div>
+    ${priorStatsActive ? compareBasisNote() : ''}
     <div class="team-section-tabs compare-teams-tabs" role="tablist" aria-label="Compare teams sections">
       ${tabs.map(tab=>`<button class="team-section-tab ${tab.id===activeTab?'active':''}" data-ct-tab="${tab.id}" role="tab" aria-selected="${tab.id===activeTab}">${tab.label}</button>`).join('')}
     </div>
@@ -3684,6 +3824,7 @@ function viewCompareTeams(){
   `;
 }
 function wireCompareTeams(container){
+  if(!container.querySelector('#t1-pick')) return; // loading card: pickers aren't rendered yet
   container.querySelector('#t1-pick').addEventListener('change', e=>{ state.t1=e.target.value; state.season = preferredSeasonForTeam(state.t1, state.season); render(); });
   container.querySelector('#t2-pick').addEventListener('change', e=>{ state.t2=e.target.value; state.season = preferredSeasonForTeam(state.t2, state.season); render(); });
   container.querySelectorAll('[data-ct-tab]').forEach(btn=>btn.addEventListener('click', ()=>{
@@ -3697,7 +3838,7 @@ function wireCompareTeams(container){
     render();
   }));
   if(state.compareTeamPlayer){
-    const team = analysisTeam(getTeamData(state.compareTeamPlayer.team, state.season));
+    const team = compareTeamFor(state.compareTeamPlayer.team, true);
     wirePlayerModal(container, team, 'compareTeamPlayer', state.compareTeamPlayer.idx);
   }
 }
@@ -3732,8 +3873,8 @@ function render(){
     wireTeamSectionTabs(root);
     wireRosterCards(root);
   }
-  else if(state.view==='cplayers'){ root.innerHTML = viewComparePlayers(); wireComparePlayers(root); }
-  else if(state.view==='cteams'){ root.innerHTML = viewCompareTeams(); wireCompareTeams(root); }
+  else if(state.view==='cplayers'){ withPriorStats(()=>{ root.innerHTML = viewComparePlayers(); wireComparePlayers(root); }); }
+  else if(state.view==='cteams'){ withPriorStats(()=>{ root.innerHTML = viewCompareTeams(); wireCompareTeams(root); }); }
 }
 
 /* Sidebar collapse/expand — the sidebar shell itself is static markup

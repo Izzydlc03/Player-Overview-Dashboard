@@ -748,26 +748,49 @@ tbody tr.selected{ background:var(--accent-soft); }
 .compare-trend-summary b{ color:var(--ink); font-family:var(--font-mono); }
 .compare-team-trend{ height:170px; }
 
-.diffrow{ display:grid; grid-template-columns:minmax(80px,1fr) 70px 92px 70px minmax(80px,1fr); align-items:center; gap:8px; padding:9px 2px; border-bottom:1px solid var(--border); }
-.diffrow:last-child{ border-bottom:none; }
-.diffrow .stat-label{ text-align:center; font-size:10.5px; font-weight:800; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-muted); }
-.stat-label-sub{ display:block; margin-top:2px; font-size:9.5px; letter-spacing:.04em; color:var(--ink-faint); }
-.diffval{ font-family:var(--font-mono); font-weight:800; font-size:13px; white-space:nowrap; }
-.diffval.a{ text-align:right; }
-.diffval.b{ text-align:left; }
-.diffval-sub{ display:block; margin-top:2px; color:var(--ink-muted); font-size:10.5px; }
-.edge-tag{
-  display:inline-flex; width:16px; height:16px; margin:0 5px; border-radius:50%;
-  align-items:center; justify-content:center; background:var(--surface-3); color:var(--ink);
-  border:1px solid var(--border); font-family:var(--font-body); font-size:10px; font-weight:900;
+/* ---------- Compare tables (Compare Players / Compare Teams) ---------- */
+.compare-card-head{ display:flex; align-items:flex-start; justify-content:space-between; gap:14px; }
+.compare-card-head h3{ font-size:16px; }
+.compare-card-sub{ margin:4px 0 0; color:var(--ink-muted); font-size:12.5px; font-weight:600; }
+.compare-badge{
+  flex:none; padding:5px 9px; border-radius:6px; background:var(--accent-soft); color:var(--accent-ink);
+  font-size:10px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; white-space:nowrap;
 }
-.bar-track{ position:relative; height:8px; border-radius:99px; background:var(--surface-3); overflow:hidden; }
-.bar-fill{ position:absolute; top:0; bottom:0; border-radius:99px; }
-.bar-fill.a{ background:var(--series-a); left:0; }
-.bar-track.left .bar-fill.a{ left:auto; right:0; }
-.bar-fill.b{ background:var(--series-b); left:0; }
-.diffrow.left-wins .diffval.a{ color:var(--series-a); }
-.diffrow.right-wins .diffval.b{ color:var(--series-b); }
+.compare-toggle{
+  display:inline-flex; align-items:center; gap:2px; margin:14px 0 4px; padding:3px;
+  border:1px solid var(--border); border-radius:8px; background:var(--surface);
+}
+.compare-toggle button{
+  border:none; background:transparent; color:var(--ink-muted); cursor:pointer; border-radius:6px;
+  padding:7px 12px; font:inherit; font-size:11px; font-weight:800; letter-spacing:.06em; text-transform:uppercase;
+}
+.compare-toggle button:hover{ color:var(--ink); background:var(--surface-2); }
+.compare-toggle button.active{ background:#182B49; color:#fff; }
+.compare-table-wrap{ margin-top:14px; overflow-x:auto; }
+.compare-table{ width:100%; border-collapse:collapse; table-layout:fixed; font-size:13.5px; }
+.compare-table th{ text-align:left; font-weight:600; }
+.compare-table thead th{
+  padding:0 14px 10px; font-size:10.5px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-faint);
+}
+.compare-table thead th.a, .compare-table thead th.b{ text-align:right; }
+.compare-table thead th.a{ color:var(--series-a); }
+.compare-table thead th.b{ color:color-mix(in srgb, var(--series-b) 78%, #000); }
+.compare-table tbody th{ padding:0 14px; color:var(--ink); }
+.compare-table tbody tr{ border-top:1px solid var(--border); }
+.compare-table tbody td, .compare-table tbody th{ height:44px; }
+.stat-label-sub{ display:block; margin-top:2px; font-size:9.5px; letter-spacing:.04em; color:var(--ink-faint); font-weight:700; }
+.cmp-cell{ padding:0 14px; text-align:right; font-family:var(--font-mono); font-weight:600; color:var(--ink); white-space:nowrap; }
+.cmp-sub{ display:block; margin-top:2px; color:var(--ink-muted); font-size:10.5px; font-weight:600; }
+.cmp-cell.better{ font-weight:800; }
+.cmp-cell.a.better{ background:color-mix(in srgb, var(--series-a) 14%, transparent); color:var(--series-a); }
+.cmp-cell.b.better{ background:color-mix(in srgb, var(--series-b) 22%, transparent); color:color-mix(in srgb, var(--series-b) 72%, #000); }
+.compare-note{ margin:16px 0 0; padding-top:14px; border-top:1px solid var(--border); color:var(--ink-muted); font-size:12px; line-height:1.5; }
+.compare-note b{ color:var(--ink); }
+.compare-basis-note{
+  margin:0; padding:10px 14px; border:1px solid var(--border); border-left:3px solid var(--series-b);
+  border-radius:8px; background:var(--surface); color:var(--ink-muted); font-size:12px; line-height:1.5;
+}
+.compare-basis-note b{ color:var(--ink); }
 
 /* ---------- Charts ---------- */
 .chart-wrap{ position:relative; }
@@ -800,8 +823,8 @@ svg.chart{ display:block; width:100%; height:auto; overflow:visible; }
   .rotation-pair-head::after,
   .rotation-pair-row::after{ display:none; }
   .rotation-tags{ padding-left:0; }
-  .diffrow{ grid-template-columns:minmax(42px,1fr) 58px 70px 58px minmax(42px,1fr); gap:6px; }
-  .edge-tag{ width:14px; height:14px; margin:0 3px; font-size:9px; }
+  .compare-table{ font-size:12.5px; }
+  .compare-table thead th, .compare-table tbody th, .cmp-cell{ padding-left:8px; padding-right:8px; }
 }
 .hit{ fill:transparent; }
 .trend-hit{
