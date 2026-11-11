@@ -44,6 +44,10 @@ TEAMS = {
     "csuf": ("fullertontitans.com", "Cal State Fullerton"),
     "csub": ("gorunners.com", "Cal State Bakersfield"),
     "ucr": ("gohighlanders.com", "UC Riverside"),
+    # Joined the Big West for 2026-27.
+    "cbu": ("cbulancers.com", "California Baptist"),
+    "sacstate": ("hornetsports.com", "Sacramento State"),
+    "utahvalley": ("wolverinegreen.com", "Utah Valley"),
     "lmu": ("lmulions.com", "LMU"),
     "washington": ("gohuskies.com", "Washington"),
     "usandiego": ("usdtoreros.com", "San Diego"),

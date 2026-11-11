@@ -4,13 +4,24 @@ into per-season JSON files under data/<season>.json, shaped for script.js:
   { teamKey: { name, short, mascot, players: [...], games: [...] } }
 
 Run after re-scraping a season:
-    python3 build_data.py
+    python3 build_data.py            # every season folder
+    python3 build_data.py 2026-27    # just the named season(s)
+
+The in-progress 2026-27 season is special: data/2026-27.json starts life as a
+roster-and-schedule shell (scripts/build_upcoming_season.py). When that shell
+is already on disk, the scraped games are MERGED into it - rosters, class
+years, positions, last-season "prior" stats, the schedule and the non-Big-West
+opponents are all kept; only the Big West teams' played games, player totals
+and per-player game logs are filled in from the scraped CSVs.
 """
 import csv
+import difflib
 import glob
 import json
 import os
 import re
+import sys
+import unicodedata
 from collections import defaultdict
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -30,7 +41,16 @@ TEAM_META = {
     "Long Beach St.":   {"key": "csulb",   "name": "Long Beach State", "short": "LBSU", "mascot": "The Beach"},
     "UC Riverside":     {"key": "ucr",     "name": "UC Riverside",     "short": "UCR",  "mascot": "Highlanders"},
     "UC Santa Barbara": {"key": "ucsb",    "name": "UC Santa Barbara", "short": "UCSB", "mascot": "Gauchos"},
+    # Joined for 2026-27. "from" keeps them out of earlier seasons, where they only
+    # appear as the odd non-conference opponent (1-6 games - not a real team season).
+    "California Baptist": {"key": "cbu",      "name": "California Baptist", "short": "CBU", "mascot": "Lancers",     "from": "2026-27"},
+    "Sacramento St.":     {"key": "sacstate", "name": "Sacramento State",   "short": "SAC", "mascot": "Hornets",     "from": "2026-27"},
+    "Utah Valley":        {"key": "utahvalley","name": "Utah Valley",       "short": "UVU", "mascot": "Wolverines",  "from": "2026-27"},
 }
+
+
+def in_season(meta, season):
+    return not meta.get("from") or season >= meta["from"]
 
 
 def num(v, cast=float):
@@ -52,9 +72,9 @@ def display_name(raw):
     return raw.strip()
 
 
-def opp_display(raw_name):
+def opp_display(raw_name, season):
     meta = TEAM_META.get(raw_name)
-    return meta["name"] if meta else raw_name
+    return meta["name"] if meta and in_season(meta, season) else raw_name
 
 
 def pct(made, attempted):
@@ -142,6 +162,8 @@ def build_season(season_dir, season):
 
     teams = {}
     for raw_name, meta in TEAM_META.items():
+        if not in_season(meta, season):
+            continue
         team_rows = [g for g in game_rows if g["home_team"] == raw_name or g["away_team"] == raw_name]
         if not team_rows:
             continue
@@ -161,7 +183,7 @@ def build_season(season_dir, season):
             og = team_game_totals.get((opp_raw, g["game_id"]), empty_totals)
             analysis = analysis_by_team_game.get((raw_name, g["game_id"]), {})
             games.append({
-                "date": g["date"], "opp": opp_display(opp_raw), "home": is_home,
+                "date": g["date"], "opp": opp_display(opp_raw, season), "home": is_home,
                 "pf": pf, "pa": pa, "win": pf > pa,
                 "fgm": tg["fgm"], "fga": tg["fga"],
                 "tpm": tg["tpm"], "tpa": tg["tpa"], "ftm": tg["ftm"], "fta": tg["fta"],
@@ -221,7 +243,7 @@ def build_season(season_dir, season):
             player_game_logs[re.sub(r"\s+", " ", display_name(r["player"]).strip()).lower()].append({
                 "gameId": r["game_id"],
                 "date": g["date"],
-                "opp": opp_display(opp_raw),
+                "opp": opp_display(opp_raw, season),
                 "home": is_home,
                 "win": pf > pa,
                 "pm": margin,
@@ -247,11 +269,92 @@ def build_season(season_dir, season):
     return teams
 
 
+STAT_KEYS = ["gp", "min", "fgm", "fga", "tpm", "tpa", "ftm", "fta",
+             "oreb", "dreb", "ast", "stl", "blk", "to", "pts"]
+
+
+def norm_name(name):
+    name = unicodedata.normalize("NFKD", name or "").encode("ascii", "ignore").decode()
+    name = re.sub(r"[^\w\s-]", "", name.lower())
+    return re.sub(r"[\s-]+", " ", name).strip()
+
+
+def is_roster_shell(existing):
+    """True for a data file from build_upcoming_season.py (rosters + schedule, no stats)."""
+    return any("schedule" in t or any("cls" in p for p in t.get("players", [])) for t in existing.values())
+
+
+def match_roster_player(box_player, roster):
+    """Index of the roster entry for a box-score player, or None.
+
+    Roster pages and box scores spell names differently (nicknames, accents, "Jr."), so after
+    an exact normalised-name match we accept the same jersey number with a similar name.
+    """
+    target = norm_name(box_player["name"])
+    for i, rp in enumerate(roster):
+        if norm_name(rp["name"]) == target:
+            return i, "name"
+    best, best_ratio = None, 0.0
+    for i, rp in enumerate(roster):
+        if rp["num"] != box_player["num"]:
+            continue
+        name = norm_name(rp["name"])
+        ratio = difflib.SequenceMatcher(None, name, target).ratio()
+        same_last = name.split()[-1:] == target.split()[-1:]
+        if (ratio >= 0.75 or same_last) and ratio > best_ratio:
+            best, best_ratio = i, ratio
+    return (best, f"jersey #{box_player['num']} ({best_ratio:.2f})") if best is not None else (None, "")
+
+
+def merge_into_shell(built, existing):
+    """Fill the roster shell's Big West teams with scraped games/stats; keep everything else."""
+    merged = {key: team for key, team in existing.items()}
+    for key, new in built.items():
+        shell = existing.get(key)
+        if shell is None:
+            merged[key] = new
+            continue
+
+        roster = [{**p, **{k: 0 for k in STAT_KEYS}} for p in shell["players"]]  # reset: idempotent re-runs
+        fresh = []          # box-score players with no roster match
+        name_for_logs = {}  # box-score name key -> roster name key
+        for bp in new["players"]:
+            idx, how = match_roster_player(bp, roster)
+            if idx is None:
+                fresh.append(bp)
+                print(f"  [{key}] no roster match: #{bp['num']} {bp['name']} ({bp['gp']} gp) -> added as new player")
+                continue
+            rp = roster[idx]
+            if how != "name":
+                print(f"  [{key}] matched by {how}: box '{bp['name']}' -> roster '{rp['name']}'")
+            total_gp = rp["gp"] + bp["gp"]
+            rp["min"] = round((rp["min"] * rp["gp"] + bp["min"] * bp["gp"]) / total_gp, 1) if total_gp else 0
+            rp["gp"] = total_gp
+            for k in STAT_KEYS:
+                if k not in ("gp", "min"):
+                    rp[k] += bp[k]
+            name_for_logs[re.sub(r"\s+", " ", bp["name"].strip()).lower()] = re.sub(r"\s+", " ", rp["name"].strip()).lower()
+
+        for bp in fresh:
+            roster.append({**bp, "cls": "", "advanced": None})
+
+        logs = defaultdict(list)
+        for log_key, entries in new["playerGameLogs"].items():
+            logs[name_for_logs.get(log_key, log_key)].extend(entries)
+        for entries in logs.values():
+            entries.sort(key=lambda e: e["date"])
+
+        merged[key] = {**shell, "players": roster, "games": new["games"], "playerGameLogs": dict(logs)}
+    return merged
+
+
 def main():
+    wanted = set(sys.argv[1:])
     os.makedirs(OUT_DIR, exist_ok=True)
     season_dirs = sorted(
         d for d in glob.glob(os.path.join(ROOT, "20*-*"))
         if os.path.isdir(d) and re.fullmatch(r"\d{4}-\d{2}", os.path.basename(d))
+        and (not wanted or os.path.basename(d) in wanted)
     )
     for season_dir in season_dirs:
         season = os.path.basename(season_dir)
@@ -260,8 +363,16 @@ def main():
             print(f"skip {season}: missing csv1/csv2")
             continue
         out_path = os.path.join(OUT_DIR, f"{season}.json")
+        ensure_ascii = True  # completed seasons are written with \u escapes; the roster shell uses literal UTF-8
+        if os.path.exists(out_path):
+            with open(out_path, encoding="utf-8") as fh:
+                existing = json.load(fh)
+            if is_roster_shell(existing):
+                print(f"merging {season} games into the roster/schedule shell")
+                teams = merge_into_shell(teams, existing)
+                ensure_ascii = False
         with open(out_path, "w", encoding="utf-8") as fh:
-            json.dump(teams, fh, separators=(",", ":"))
+            json.dump(teams, fh, separators=(",", ":"), ensure_ascii=ensure_ascii)
         print(f"wrote {out_path} ({len(teams)} teams)")
 
 

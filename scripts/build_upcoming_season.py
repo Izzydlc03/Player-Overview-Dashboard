@@ -13,9 +13,13 @@ can't confidently match have no "prior" block (the dashboard shows zeros).
 
     python3 scripts/build_upcoming_season.py
 
-Re-run after rosters change. Once real games exist, scrape the season with
-run_season.py and build it with build_data.py instead (then delete this file's
-output so the two don't fight over data/2026-27.json).
+Re-run after rosters change. This script writes the all-zero shell, so once games
+have been played follow it with `python3 build_data.py 2026-27`, which merges the
+scraped games from the 2026-27/ CSVs back into this file (rosters, schedule and
+prior stats are kept). Refresh those CSVs first with run_season.py:
+
+    python3 run_season.py 2026-27 --out-dir 2026-27 --teams ucsd,ucirvine,calpoly,csub,csuf,csun,lbsu,ucr,ucsb,cbu,sacstate,utahvalley
+    python3 build_data.py 2026-27
 """
 import csv
 import json

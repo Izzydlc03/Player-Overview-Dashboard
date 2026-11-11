@@ -1,0 +1,725 @@
+game_id,team,jersey,player,started,min,fg_m,fg_a,fg_pct,3p_m,3p_a,3p_pct,ft_m,ft_a,ft_pct,oreb,dreb,reb,pf,ast,to,blk,stl,pts
+2026-10-21_cal_poly_cal_st_san_marcos,Cal St. San Marcos,4,"Slover, Kacie",True,21,4,6,0.667,1,2,0.5,1,2,0.5,2,2,4,1,1,2,0,1,10
+2026-10-21_cal_poly_cal_st_san_marcos,Cal St. San Marcos,11,"Tamashiro, Tatum",True,31,2,4,0.5,2,3,0.667,0,0,,0,2,2,0,2,1,0,3,6
+2026-10-21_cal_poly_cal_st_san_marcos,Cal St. San Marcos,25,"Swillie, Emmi",True,26,2,12,0.167,0,4,0.0,0,0,,2,3,5,2,0,3,1,5,4
+2026-10-21_cal_poly_cal_st_san_marcos,Cal St. San Marcos,24,"Polo, Portia",True,28,0,3,0.0,0,2,0.0,1,2,0.5,0,2,2,3,1,9,0,2,1
+2026-10-21_cal_poly_cal_st_san_marcos,Cal St. San Marcos,3,"Lewis, Mylah",True,23,0,3,0.0,0,1,0.0,1,2,0.5,1,1,2,0,1,5,0,2,1
+2026-10-21_cal_poly_cal_st_san_marcos,Cal St. San Marcos,15,"Blake, Dahlia",False,11,3,4,0.75,1,1,1.0,2,4,0.5,0,1,1,2,0,1,0,0,9
+2026-10-21_cal_poly_cal_st_san_marcos,Cal St. San Marcos,10,"Zumstein, Paula",False,3,1,3,0.333,1,1,1.0,0,0,,0,0,0,1,0,1,0,0,3
+2026-10-21_cal_poly_cal_st_san_marcos,Cal St. San Marcos,33,"Griffin, Martina",False,7,1,1,1.0,0,0,,0,0,,0,0,0,3,0,1,0,0,2
+2026-10-21_cal_poly_cal_st_san_marcos,Cal St. San Marcos,1,"Noa, Kat",False,14,0,5,0.0,0,3,0.0,1,2,0.5,1,0,1,1,0,2,0,1,1
+2026-10-21_cal_poly_cal_st_san_marcos,Cal St. San Marcos,20,"James, Abi",False,10,0,0,,0,0,,1,2,0.5,0,2,2,0,0,0,0,0,1
+2026-10-21_cal_poly_cal_st_san_marcos,Cal St. San Marcos,14,"Bacho, Kalea",False,10,0,1,0.0,0,1,0.0,0,0,,0,0,0,0,0,1,0,1,0
+2026-10-21_cal_poly_cal_st_san_marcos,Cal St. San Marcos,21,"Johnson, Jolie",False,9,0,2,0.0,0,0,,0,0,,0,1,1,1,0,1,0,2,0
+2026-10-21_cal_poly_cal_st_san_marcos,Cal St. San Marcos,12,"Alaman, Teanna",False,4,0,0,,0,0,,0,0,,0,0,0,0,1,0,0,0,0
+2026-10-21_cal_poly_cal_st_san_marcos,Cal St. San Marcos,32,"Omishakin, Joy",False,3,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-10-21_cal_poly_cal_st_san_marcos,Cal St. San Marcos,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,5,7,0,0,2,0,0,0
+2026-10-21_cal_poly_cal_st_san_marcos,Cal Poly,4,"Tauro, Maddy",True,24,8,15,0.533,1,5,0.2,0,0,,0,3,3,1,3,1,0,1,17
+2026-10-21_cal_poly_cal_st_san_marcos,Cal Poly,24,"Butcher, Madison",True,25,5,8,0.625,3,4,0.75,3,3,1.0,1,4,5,0,2,0,0,0,16
+2026-10-21_cal_poly_cal_st_san_marcos,Cal Poly,5,"Robinson, Gabby",True,28,4,9,0.444,0,2,0.0,1,2,0.5,1,1,2,2,2,1,0,3,9
+2026-10-21_cal_poly_cal_st_san_marcos,Cal Poly,21,"Vail, Dulci",True,24,4,7,0.571,0,0,,0,0,,0,0,0,1,3,4,2,3,8
+2026-10-21_cal_poly_cal_st_san_marcos,Cal Poly,1,"Lee, Sumer",True,20,3,4,0.75,0,0,,0,0,,1,3,4,2,1,1,0,0,6
+2026-10-21_cal_poly_cal_st_san_marcos,Cal Poly,7,"Billing, Jordan",False,13,2,3,0.667,0,1,0.0,2,2,1.0,1,2,3,3,1,1,0,1,6
+2026-10-21_cal_poly_cal_st_san_marcos,Cal Poly,3,"Skrzyniarz, Ella",False,15,1,2,0.5,0,1,0.0,1,1,1.0,0,1,1,0,0,2,0,0,3
+2026-10-21_cal_poly_cal_st_san_marcos,Cal Poly,13,"Slone, Bianca",False,10,1,2,0.5,1,2,0.5,0,0,,1,2,3,0,1,2,1,0,3
+2026-10-21_cal_poly_cal_st_san_marcos,Cal Poly,23,"Ulmer, Dessi",False,8,0,1,0.0,0,0,,2,4,0.5,0,1,1,4,0,4,0,0,2
+2026-10-21_cal_poly_cal_st_san_marcos,Cal Poly,00,"von Seipler, Ysabella",False,17,0,1,0.0,0,1,0.0,0,0,,1,7,8,1,2,2,1,2,0
+2026-10-21_cal_poly_cal_st_san_marcos,Cal Poly,2,"Alexander, Mecca",False,16,0,1,0.0,0,0,,0,0,,0,1,1,2,1,5,0,3,0
+2026-10-21_cal_poly_cal_st_san_marcos,Cal Poly,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,2,3,0,0,0,0,0,0
+2026-10-28_stanford_uc_santa_barbara,UC Santa Barbara,02,"Borter, Zoe",True,30,6,15,0.4,1,4,0.25,9,9,1.0,0,0,0,2,0,1,1,2,22
+2026-10-28_stanford_uc_santa_barbara,UC Santa Barbara,07,"Flores, Karisma",True,23,6,17,0.353,2,7,0.286,2,2,1.0,2,5,7,4,0,1,1,0,16
+2026-10-28_stanford_uc_santa_barbara,UC Santa Barbara,12,"Naro, Maddie",True,33,4,14,0.286,1,6,0.167,0,0,,1,4,5,1,4,0,0,1,9
+2026-10-28_stanford_uc_santa_barbara,UC Santa Barbara,00,"Steiner, Nicole",True,20,0,0,,0,0,,0,0,,1,1,2,4,0,2,0,1,0
+2026-10-28_stanford_uc_santa_barbara,UC Santa Barbara,32,"Shaw, Zoe",True,20,0,2,0.0,0,1,0.0,0,0,,0,3,3,0,1,1,0,1,0
+2026-10-28_stanford_uc_santa_barbara,UC Santa Barbara,24,"Zonzon-Huyghe, Naomy",False,22,4,4,1.0,0,0,,4,6,0.667,2,3,5,4,0,1,0,3,12
+2026-10-28_stanford_uc_santa_barbara,UC Santa Barbara,15,"Andersen, Chauncey",False,17,3,5,0.6,0,0,,0,0,,0,3,3,4,1,2,0,2,6
+2026-10-28_stanford_uc_santa_barbara,UC Santa Barbara,03,"Hashemian-Orr, Mauriana",False,19,0,1,0.0,0,0,,0,0,,0,3,3,2,1,1,0,1,0
+2026-10-28_stanford_uc_santa_barbara,UC Santa Barbara,10,"Anderson, Olivia",False,16,0,2,0.0,0,1,0.0,0,0,,0,1,1,3,0,2,2,1,0
+2026-10-28_stanford_uc_santa_barbara,UC Santa Barbara,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,6,8,0,0,0,0,0,0
+2026-10-28_stanford_uc_santa_barbara,Stanford,02,"Swain, Hailee",True,40,9,17,0.529,2,7,0.286,3,4,0.75,0,3,3,0,1,3,0,0,23
+2026-10-28_stanford_uc_santa_barbara,Stanford,04,"Eschmeyer, Alexandra",True,18,5,13,0.385,1,2,0.5,2,4,0.5,3,6,9,2,2,2,2,0,13
+2026-10-28_stanford_uc_santa_barbara,Stanford,10,"Sotelo Míguez, Inés",True,38,3,9,0.333,0,3,0.0,1,3,0.333,3,3,6,5,3,5,0,0,7
+2026-10-28_stanford_uc_santa_barbara,Stanford,13,"Tuhy, Charlotte",True,33,2,9,0.222,1,6,0.167,0,0,,2,11,13,3,1,3,3,0,5
+2026-10-28_stanford_uc_santa_barbara,Stanford,06,"Ijiwoye, Shay",True,35,1,4,0.25,0,2,0.0,0,2,0.0,4,1,5,4,2,0,0,0,2
+2026-10-28_stanford_uc_santa_barbara,Stanford,03,"de Vries, Ilse",False,17,1,7,0.143,0,3,0.0,3,4,0.75,1,2,3,0,0,1,0,0,5
+2026-10-28_stanford_uc_santa_barbara,Stanford,45,"Umeh, Kennedy",False,5,0,0,,0,0,,1,2,0.5,0,0,0,2,0,3,0,0,1
+2026-10-28_stanford_uc_santa_barbara,Stanford,25,"Ezike, Nora",False,9,0,0,,0,0,,0,0,,1,2,3,2,0,2,0,0,0
+2026-10-28_stanford_uc_santa_barbara,Stanford,22,"Gilliard, Gracyn",False,3,0,1,0.0,0,1,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2026-10-28_stanford_uc_santa_barbara,Stanford,21,"Ngenda, Elyse",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2026-10-28_stanford_uc_santa_barbara,Stanford,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,1,3,0,0,0,0,0,0
+2026-10-29_cal_poly_cal_st_monterey_bay,Cal St. Monterey Bay,00,"Bouton, Brianna",True,36,6,8,0.75,3,4,0.75,0,1,0.0,1,3,4,0,2,2,0,2,15
+2026-10-29_cal_poly_cal_st_monterey_bay,Cal St. Monterey Bay,2,"Walls, Riley",True,35,3,10,0.3,0,4,0.0,3,4,0.75,1,2,3,3,2,1,0,0,9
+2026-10-29_cal_poly_cal_st_monterey_bay,Cal St. Monterey Bay,22,"Wright, Haley",True,19,4,7,0.571,0,1,0.0,0,0,,2,1,3,5,0,2,0,0,8
+2026-10-29_cal_poly_cal_st_monterey_bay,Cal St. Monterey Bay,10,"Llaveria, Lucia",True,39,2,7,0.286,1,3,0.333,2,2,1.0,1,3,4,2,7,5,0,5,7
+2026-10-29_cal_poly_cal_st_monterey_bay,Cal St. Monterey Bay,12,"Moreno Ortiz, Jennifer",True,26,2,8,0.25,0,2,0.0,0,0,,0,1,1,4,1,3,0,0,4
+2026-10-29_cal_poly_cal_st_monterey_bay,Cal St. Monterey Bay,11,"Sarabia, Leah",False,20,2,4,0.5,1,2,0.5,4,6,0.667,1,2,3,1,2,3,0,0,9
+2026-10-29_cal_poly_cal_st_monterey_bay,Cal St. Monterey Bay,1,"Sanchez, Sophia",False,7,1,3,0.333,0,1,0.0,0,0,,0,0,0,1,0,2,0,0,2
+2026-10-29_cal_poly_cal_st_monterey_bay,Cal St. Monterey Bay,3,"White, Kitty",False,10,0,1,0.0,0,1,0.0,0,0,,0,0,0,2,0,1,0,0,0
+2026-10-29_cal_poly_cal_st_monterey_bay,Cal St. Monterey Bay,21,"Sharvit, Maya",False,8,0,1,0.0,0,0,,0,0,,1,1,2,1,1,0,0,0,0
+2026-10-29_cal_poly_cal_st_monterey_bay,Cal St. Monterey Bay,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,5,7,0,0,1,0,0,0
+2026-10-29_cal_poly_cal_st_monterey_bay,Cal Poly,4,"Tauro, Maddy",True,24,5,12,0.417,1,3,0.333,3,3,1.0,0,2,2,4,1,2,0,4,14
+2026-10-29_cal_poly_cal_st_monterey_bay,Cal Poly,23,"Ulmer, Dessi",True,21,5,8,0.625,1,2,0.5,3,3,1.0,1,1,2,4,1,3,0,1,14
+2026-10-29_cal_poly_cal_st_monterey_bay,Cal Poly,24,"Butcher, Madison",True,38,2,4,0.5,2,4,0.5,6,7,0.857,3,2,5,1,1,0,1,0,12
+2026-10-29_cal_poly_cal_st_monterey_bay,Cal Poly,5,"Robinson, Gabby",True,33,4,5,0.8,2,2,1.0,2,4,0.5,0,4,4,5,2,5,1,1,12
+2026-10-29_cal_poly_cal_st_monterey_bay,Cal Poly,1,"Lee, Sumer",True,33,1,6,0.167,0,2,0.0,3,4,0.75,1,4,5,3,4,2,0,1,5
+2026-10-29_cal_poly_cal_st_monterey_bay,Cal Poly,7,"Billing, Jordan",False,22,1,5,0.2,1,2,0.5,1,2,0.5,2,2,4,2,0,0,1,2,4
+2026-10-29_cal_poly_cal_st_monterey_bay,Cal Poly,00,"von Seipler, Ysabella",False,19,1,3,0.333,0,2,0.0,2,2,1.0,0,3,3,2,2,2,0,0,4
+2026-10-29_cal_poly_cal_st_monterey_bay,Cal Poly,2,"Alexander, Mecca",False,7,0,0,,0,0,,0,0,,0,0,0,2,0,1,0,0,0
+2026-10-29_cal_poly_cal_st_monterey_bay,Cal Poly,3,"Skrzyniarz, Ella",False,3,0,1,0.0,0,1,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2026-10-29_cal_poly_cal_st_monterey_bay,Cal Poly,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,3,4,0,0,2,0,0,0
+2026-11-02_washington_uc_san_diego,UC San Diego,11,"Condron, Erin",True,30,6,10,0.6,2,4,0.5,0,0,,1,5,6,3,2,1,2,3,14
+2026-11-02_washington_uc_san_diego,UC San Diego,10,"Maxie, Dymonique",True,27,3,9,0.333,1,3,0.333,0,0,,0,4,4,2,3,4,1,1,7
+2026-11-02_washington_uc_san_diego,UC San Diego,22,"Cummins, Alexandra",True,22,2,12,0.167,1,8,0.125,0,0,,0,2,2,2,1,2,0,2,5
+2026-11-02_washington_uc_san_diego,UC San Diego,13,"Feiman, Lev",True,18,2,8,0.25,0,0,,0,0,,0,1,1,1,2,2,0,1,4
+2026-11-02_washington_uc_san_diego,UC San Diego,12,"Smith, Rosa",True,12,1,3,0.333,1,2,0.5,0,0,,1,1,2,2,2,2,0,0,3
+2026-11-02_washington_uc_san_diego,UC San Diego,05,"Watts, Coryn",False,38,5,12,0.417,5,8,0.625,0,0,,2,2,4,0,1,0,2,0,15
+2026-11-02_washington_uc_san_diego,UC San Diego,20,"Sin, Sadie",False,26,5,11,0.455,2,7,0.286,0,0,,0,5,5,2,1,0,0,1,12
+2026-11-02_washington_uc_san_diego,UC San Diego,08,"Mulvanny, Noelle",False,8,1,2,0.5,1,1,1.0,0,0,,0,1,1,0,0,0,1,0,3
+2026-11-02_washington_uc_san_diego,UC San Diego,07,"Cook, Emma",False,14,0,3,0.0,0,0,,0,0,,0,0,0,2,1,1,0,1,0
+2026-11-02_washington_uc_san_diego,UC San Diego,21,"Roberts, Megan",False,3,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-11-02_washington_uc_san_diego,UC San Diego,00,"Gbemuotor, Jite",False,2,0,0,,0,0,,0,0,,0,0,0,2,0,2,0,1,0
+2026-11-02_washington_uc_san_diego,UC San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,0,2,0,0,0,0,0,0
+2026-11-02_washington_uc_san_diego,Washington,00,"Sellers, Sayvia",True,32,9,20,0.45,3,8,0.375,4,5,0.8,3,8,11,2,10,4,1,1,25
+2026-11-02_washington_uc_san_diego,Washington,02,"Howell, Avery",True,33,8,16,0.5,5,11,0.455,1,2,0.5,2,5,7,1,2,5,0,0,22
+2026-11-02_washington_uc_san_diego,Washington,21,"McGaughy, Brynn",True,26,6,14,0.429,0,2,0.0,1,2,0.5,6,9,15,1,2,6,0,3,13
+2026-11-02_washington_uc_san_diego,Washington,18,"Trygger, Tilda",True,22,3,6,0.5,0,0,,2,2,1.0,3,10,13,1,1,3,0,0,8
+2026-11-02_washington_uc_san_diego,Washington,03,"Coppinger, Devin",True,22,2,4,0.5,0,2,0.0,0,0,,0,2,2,1,1,0,0,0,4
+2026-11-02_washington_uc_san_diego,Washington,01,"Carlson, Brooke",False,13,2,3,0.667,0,0,,1,1,1.0,1,0,1,0,0,0,0,0,5
+2026-11-02_washington_uc_san_diego,Washington,25,"Garcia, Amayah",False,23,1,5,0.2,0,2,0.0,0,0,,1,1,2,0,1,1,0,0,2
+2026-11-02_washington_uc_san_diego,Washington,20,"Carroll, Kaelyn",False,24,0,3,0.0,0,1,0.0,0,0,,0,1,1,1,1,1,4,3,0
+2026-11-02_washington_uc_san_diego,Washington,24,"Huard, Macey",False,3,0,0,,0,0,,0,0,,0,2,2,0,0,0,0,0,0
+2026-11-02_washington_uc_san_diego,Washington,08,"McLean, Daniella",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-11-02_washington_uc_san_diego,Washington,42,"Toman, Petra",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-11-02_washington_uc_san_diego,Washington,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2026-11-02_cal_poly_uc_merced,UC Merced,35,"Lukito, Nicole",True,37,4,9,0.444,1,1,1.0,2,2,1.0,3,10,13,2,1,5,1,0,11
+2026-11-02_cal_poly_uc_merced,UC Merced,11,"Smith, Olivia",True,25,3,17,0.176,0,3,0.0,3,4,0.75,2,2,4,2,2,2,0,0,9
+2026-11-02_cal_poly_uc_merced,UC Merced,2,"Beltran, Jazzy",True,32,1,8,0.125,1,3,0.333,2,2,1.0,2,0,2,1,0,2,0,1,5
+2026-11-02_cal_poly_uc_merced,UC Merced,12,"Lundquist, Stevie",True,18,0,4,0.0,0,2,0.0,1,2,0.5,1,1,2,0,0,3,0,0,1
+2026-11-02_cal_poly_uc_merced,UC Merced,1,"Palpallatoc, Kyla",True,22,0,5,0.0,0,4,0.0,0,0,,0,2,2,2,2,3,0,1,0
+2026-11-02_cal_poly_uc_merced,UC Merced,24,"Gill, Olivia",False,23,1,6,0.167,0,0,,4,4,1.0,3,1,4,0,1,0,0,0,6
+2026-11-02_cal_poly_uc_merced,UC Merced,3,"Boyd, Sydney",False,6,2,2,1.0,0,0,,1,2,0.5,0,0,0,0,1,0,0,0,5
+2026-11-02_cal_poly_uc_merced,UC Merced,23,"Singley, Danielle",False,5,0,1,0.0,0,0,,1,2,0.5,1,0,1,1,0,1,0,0,1
+2026-11-02_cal_poly_uc_merced,UC Merced,4,"Pines, India",False,9,0,1,0.0,0,1,0.0,0,0,,1,0,1,1,1,0,0,0,0
+2026-11-02_cal_poly_uc_merced,UC Merced,5,"McGillivray, Jillian",False,9,0,0,,0,0,,0,0,,0,2,2,3,0,4,0,1,0
+2026-11-02_cal_poly_uc_merced,UC Merced,10,"Yan, Chloe",False,7,0,3,0.0,0,1,0.0,0,0,,1,0,1,2,1,0,0,0,0
+2026-11-02_cal_poly_uc_merced,UC Merced,21,"Azzolino, Isabella",False,7,0,0,,0,0,,0,0,,1,1,2,1,0,1,0,0,0
+2026-11-02_cal_poly_uc_merced,UC Merced,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,8,9,0,0,0,0,0,0
+2026-11-02_cal_poly_uc_merced,Cal Poly,1,"Lee, Sumer",True,30,6,12,0.5,0,1,0.0,5,5,1.0,2,2,4,2,2,1,0,2,17
+2026-11-02_cal_poly_uc_merced,Cal Poly,23,"Ulmer, Dessi",True,24,7,13,0.538,1,2,0.5,2,4,0.5,2,12,14,4,0,3,0,1,17
+2026-11-02_cal_poly_uc_merced,Cal Poly,5,"Robinson, Gabby",True,27,5,7,0.714,2,3,0.667,0,0,,1,2,3,3,3,0,0,0,12
+2026-11-02_cal_poly_uc_merced,Cal Poly,24,"Butcher, Madison",True,29,3,8,0.375,2,5,0.4,0,0,,2,3,5,2,2,0,0,0,8
+2026-11-02_cal_poly_uc_merced,Cal Poly,4,"Tauro, Maddy",True,26,3,12,0.25,1,4,0.25,0,1,0.0,0,5,5,2,4,1,0,3,7
+2026-11-02_cal_poly_uc_merced,Cal Poly,00,"von Seipler, Ysabella",False,23,2,6,0.333,0,2,0.0,2,2,1.0,3,3,6,3,2,1,0,2,6
+2026-11-02_cal_poly_uc_merced,Cal Poly,3,"Skrzyniarz, Ella",False,19,2,5,0.4,1,3,0.333,0,0,,0,2,2,2,0,2,0,1,5
+2026-11-02_cal_poly_uc_merced,Cal Poly,2,"Alexander, Mecca",False,15,1,2,0.5,1,2,0.5,2,2,1.0,0,1,1,1,1,0,0,1,5
+2026-11-02_cal_poly_uc_merced,Cal Poly,7,"Billing, Jordan",False,7,1,1,1.0,0,0,,0,0,,0,1,1,1,0,1,0,1,2
+2026-11-02_cal_poly_uc_merced,Cal Poly,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-11-02_san_diego_st_cal_st_fullerton,Cal St. Fullerton,10,"Swindle, Dylan",True,36,8,22,0.364,4,14,0.286,6,6,1.0,2,1,3,2,0,2,0,1,26
+2026-11-02_san_diego_st_cal_st_fullerton,Cal St. Fullerton,04,"Falsdottir, Jana",True,32,2,9,0.222,1,4,0.25,0,0,,0,4,4,0,0,3,0,1,5
+2026-11-02_san_diego_st_cal_st_fullerton,Cal St. Fullerton,24,"Aragon, Juliana",True,32,1,5,0.2,1,3,0.333,2,2,1.0,0,2,2,2,6,0,0,1,5
+2026-11-02_san_diego_st_cal_st_fullerton,Cal St. Fullerton,23,"Maxwell, Talia",True,21,1,4,0.25,0,0,,2,3,0.667,1,2,3,0,0,1,0,1,4
+2026-11-02_san_diego_st_cal_st_fullerton,Cal St. Fullerton,01,"Moon, Mimi",True,19,0,3,0.0,0,1,0.0,0,2,0.0,0,1,1,2,1,2,0,2,0
+2026-11-02_san_diego_st_cal_st_fullerton,Cal St. Fullerton,02,"Cassell, Ashari",False,31,1,9,0.111,0,3,0.0,5,6,0.833,0,0,0,2,1,1,0,1,7
+2026-11-02_san_diego_st_cal_st_fullerton,Cal St. Fullerton,22,"Carranza, Bernadette",False,18,1,2,0.5,1,2,0.5,1,2,0.5,0,1,1,0,1,0,0,0,4
+2026-11-02_san_diego_st_cal_st_fullerton,Cal St. Fullerton,03,"Ffrench, Shadel",False,11,0,1,0.0,0,0,,0,0,,0,7,7,1,0,0,1,0,0
+2026-11-02_san_diego_st_cal_st_fullerton,Cal St. Fullerton,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,4,6,0,0,2,0,0,0
+2026-11-02_san_diego_st_cal_st_fullerton,San Diego St.,20,"Barnhard, Bailey",True,17,4,9,0.444,0,0,,1,2,0.5,6,3,9,1,2,2,2,0,9
+2026-11-02_san_diego_st_cal_st_fullerton,San Diego St.,21,"DeChent, Eva",True,19,3,6,0.5,1,3,0.333,1,2,0.5,0,0,0,0,2,1,1,0,8
+2026-11-02_san_diego_st_cal_st_fullerton,San Diego St.,10,"Martinez, Natalia",True,20,2,6,0.333,1,5,0.2,0,0,,0,2,2,1,2,0,0,0,5
+2026-11-02_san_diego_st_cal_st_fullerton,San Diego St.,00,"Lee, Kennedy",True,15,2,4,0.5,0,1,0.0,0,1,0.0,0,7,7,1,1,1,0,0,4
+2026-11-02_san_diego_st_cal_st_fullerton,San Diego St.,03,"Jackson, Alyssa",True,21,1,7,0.143,0,1,0.0,0,0,,1,2,3,1,2,0,1,1,2
+2026-11-02_san_diego_st_cal_st_fullerton,San Diego St.,54,"Akpan, Mayenabasi",False,10,6,8,0.75,0,0,,1,1,1.0,1,1,2,1,1,1,0,1,13
+2026-11-02_san_diego_st_cal_st_fullerton,San Diego St.,01,"Kraus, Alayna",False,21,5,7,0.714,0,1,0.0,0,0,,0,0,0,0,1,0,0,1,10
+2026-11-02_san_diego_st_cal_st_fullerton,San Diego St.,32,"Madjo, Dionne",False,17,5,7,0.714,0,0,,0,0,,0,2,2,2,0,0,1,2,10
+2026-11-02_san_diego_st_cal_st_fullerton,San Diego St.,77,"Padilla, Nayli",False,19,3,5,0.6,0,1,0.0,0,0,,0,4,4,0,4,1,1,1,6
+2026-11-02_san_diego_st_cal_st_fullerton,San Diego St.,04,"Navarro, Izzy",False,20,2,5,0.4,1,2,0.5,0,0,,0,7,7,3,5,1,0,1,5
+2026-11-02_san_diego_st_cal_st_fullerton,San Diego St.,15,"Hearty, Mairead",False,8,1,3,0.333,0,2,0.0,1,2,0.5,1,2,3,3,0,1,0,0,3
+2026-11-02_san_diego_st_cal_st_fullerton,San Diego St.,13,"Konstantinidou, Maria",False,10,1,2,0.5,0,0,,0,0,,1,2,3,3,1,2,0,1,2
+2026-11-02_san_diego_st_cal_st_fullerton,San Diego St.,02,"Chen, Ellie",False,3,0,0,,0,0,,0,0,,0,1,1,0,1,0,0,0,0
+2026-11-02_san_diego_st_cal_st_fullerton,San Diego St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,4,4,0,0,0,0,0,0
+2026-11-03_csu_bakersfield_stanislaus_st,Stanislaus St.,23,"Gardner, Eryn",True,31,6,19,0.316,0,0,,2,4,0.5,5,3,8,2,1,5,0,3,14
+2026-11-03_csu_bakersfield_stanislaus_st,Stanislaus St.,12,"Henderson, Serenity",True,31,2,7,0.286,2,6,0.333,0,0,,0,1,1,0,2,2,1,1,6
+2026-11-03_csu_bakersfield_stanislaus_st,Stanislaus St.,31,"Gibson, Cameron",True,25,3,4,0.75,0,0,,0,0,,3,5,8,0,0,0,2,0,6
+2026-11-03_csu_bakersfield_stanislaus_st,Stanislaus St.,21,"Vangkham-Griffin, Amya",True,22,1,4,0.25,0,0,,4,5,0.8,0,1,1,4,0,4,0,0,6
+2026-11-03_csu_bakersfield_stanislaus_st,Stanislaus St.,02,"Garrett, Quinn",True,32,0,4,0.0,0,3,0.0,0,0,,0,0,0,2,2,1,0,1,0
+2026-11-03_csu_bakersfield_stanislaus_st,Stanislaus St.,24,"Harris, Kalyn",False,21,3,7,0.429,1,3,0.333,3,6,0.5,0,1,1,4,1,5,0,1,10
+2026-11-03_csu_bakersfield_stanislaus_st,Stanislaus St.,14,"Cadena Hernandez, Frida",False,20,0,2,0.0,0,0,,2,2,1.0,0,0,0,3,1,2,0,0,2
+2026-11-03_csu_bakersfield_stanislaus_st,Stanislaus St.,22,"Davis, Sara",False,3,1,1,1.0,0,0,,0,0,,0,1,1,0,0,2,0,1,2
+2026-11-03_csu_bakersfield_stanislaus_st,Stanislaus St.,01,"Mosley, Moriah",False,15,0,2,0.0,0,2,0.0,0,0,,0,1,1,4,0,4,0,0,0
+2026-11-03_csu_bakersfield_stanislaus_st,Stanislaus St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,2,3,0,0,0,0,0,0
+2026-11-03_csu_bakersfield_stanislaus_st,CSU Bakersfield,02,"Moore, Mydrea",True,22,6,10,0.6,0,0,,1,1,1.0,0,2,2,0,2,4,0,2,13
+2026-11-03_csu_bakersfield_stanislaus_st,CSU Bakersfield,01,"Moore, Dresha",True,20,4,10,0.4,0,0,,3,4,0.75,3,1,4,5,0,3,0,2,11
+2026-11-03_csu_bakersfield_stanislaus_st,CSU Bakersfield,23,"Johnson, Madison",True,30,3,5,0.6,1,2,0.5,3,4,0.75,0,2,2,3,3,3,1,2,10
+2026-11-03_csu_bakersfield_stanislaus_st,CSU Bakersfield,00,"Oliver, Aloni",True,24,2,5,0.4,0,3,0.0,3,3,1.0,1,3,4,1,0,0,0,0,7
+2026-11-03_csu_bakersfield_stanislaus_st,CSU Bakersfield,04,"Ortiz, Nseije",True,25,2,5,0.4,1,3,0.333,0,0,,0,2,2,4,2,2,0,5,5
+2026-11-03_csu_bakersfield_stanislaus_st,CSU Bakersfield,13,"Johnson, Elizabeth",False,17,6,11,0.545,0,0,,2,4,0.5,8,7,15,1,3,4,0,3,14
+2026-11-03_csu_bakersfield_stanislaus_st,CSU Bakersfield,03,"Mitchell, Elyse",False,26,2,5,0.4,1,4,0.25,2,2,1.0,1,3,4,1,1,1,0,1,7
+2026-11-03_csu_bakersfield_stanislaus_st,CSU Bakersfield,15,"Curry, Faith",False,13,2,2,1.0,1,1,1.0,0,0,,1,3,4,3,1,2,0,0,5
+2026-11-03_csu_bakersfield_stanislaus_st,CSU Bakersfield,11,"Ahmed, Sofia",False,12,1,3,0.333,0,0,,1,2,0.5,0,3,3,0,1,0,1,1,3
+2026-11-03_csu_bakersfield_stanislaus_st,CSU Bakersfield,10,"Ghio, Gianna",False,7,0,3,0.0,0,1,0.0,0,0,,1,0,1,0,0,0,0,0,0
+2026-11-03_csu_bakersfield_stanislaus_st,CSU Bakersfield,22,"Kendrick, DJ",False,4,0,1,0.0,0,0,,0,0,,0,2,2,0,0,1,0,0,0
+2026-11-03_csu_bakersfield_stanislaus_st,CSU Bakersfield,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,0,1,0,0,1,0,0,0
+2026-11-03_csun_la_sierra,La Sierra,8,"Garrett, Yasmine",True,31,3,11,0.273,1,3,0.333,5,5,1.0,1,9,10,1,3,2,0,0,12
+2026-11-03_csun_la_sierra,La Sierra,4,"Turner, Isabella",True,31,5,7,0.714,0,1,0.0,0,0,,0,3,3,3,0,5,0,0,10
+2026-11-03_csun_la_sierra,La Sierra,5,"Ortiz, Melanie",True,23,2,7,0.286,1,4,0.25,0,0,,2,3,5,2,2,5,1,0,5
+2026-11-03_csun_la_sierra,La Sierra,6,"Watson, Akilah",True,23,1,8,0.125,1,6,0.167,0,0,,0,2,2,2,1,2,0,0,3
+2026-11-03_csun_la_sierra,La Sierra,3,"Gilchrist, Hasanah",True,22,1,2,0.5,0,0,,0,2,0.0,1,1,2,0,0,2,0,0,2
+2026-11-03_csun_la_sierra,La Sierra,11,"Guzman, Nicole",False,18,1,5,0.2,1,4,0.25,0,0,,0,2,2,0,2,5,1,1,3
+2026-11-03_csun_la_sierra,La Sierra,14,"Gonzalez, Alexis",False,16,1,7,0.143,1,5,0.2,0,0,,0,4,4,1,1,4,0,1,3
+2026-11-03_csun_la_sierra,La Sierra,2,"Valdivia, Angeline",False,26,1,8,0.125,0,3,0.0,0,0,,0,2,2,3,3,1,0,1,2
+2026-11-03_csun_la_sierra,La Sierra,00,"Sagarra, Haylie",False,10,0,1,0.0,0,1,0.0,0,0,,0,0,0,1,0,0,0,0,0
+2026-11-03_csun_la_sierra,La Sierra,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,3,6,0,0,0,0,0,0
+2026-11-03_csun_la_sierra,CSUN,8,"Filemu, Kira-may",True,14,7,12,0.583,3,8,0.375,1,2,0.5,1,3,4,1,3,1,1,1,18
+2026-11-03_csun_la_sierra,CSUN,2,"White, Saray",True,16,2,6,0.333,0,0,,5,6,0.833,1,1,2,0,1,0,2,2,9
+2026-11-03_csun_la_sierra,CSUN,15,"Okafor Nweze, Princess",True,14,4,7,0.571,0,0,,1,2,0.5,5,3,8,0,0,0,0,4,9
+2026-11-03_csun_la_sierra,CSUN,33,"Nazário, Rita",True,18,3,7,0.429,2,6,0.333,0,0,,1,1,2,2,2,1,1,2,8
+2026-11-03_csun_la_sierra,CSUN,12,"Dignadice, Sophia",True,19,3,10,0.3,1,4,0.25,0,0,,1,2,3,1,9,2,0,4,7
+2026-11-03_csun_la_sierra,CSUN,1,"Moody, Amya",False,22,4,7,0.571,3,4,0.75,0,0,,1,4,5,1,0,1,1,2,11
+2026-11-03_csun_la_sierra,CSUN,21,"Canadell, Jana",False,21,3,11,0.273,1,7,0.143,2,2,1.0,0,7,7,0,4,0,1,0,9
+2026-11-03_csun_la_sierra,CSUN,34,"Bernard, Nadia",False,12,3,5,0.6,0,0,,2,2,1.0,3,3,6,2,0,1,1,0,8
+2026-11-03_csun_la_sierra,CSUN,3,"Zambie, Sibelle",False,14,2,5,0.4,2,5,0.4,0,0,,0,3,3,0,0,0,0,0,6
+2026-11-03_csun_la_sierra,CSUN,16,"Cocuzza, Carlotta",False,18,1,1,1.0,1,1,1.0,0,0,,1,2,3,1,5,0,0,3,3
+2026-11-03_csun_la_sierra,CSUN,6,"Kabada, Hodaya",False,23,1,7,0.143,0,4,0.0,0,0,,1,4,5,1,4,0,1,0,2
+2026-11-03_csun_la_sierra,CSUN,23,"Contreras, Maya",False,9,1,2,0.5,0,0,,0,0,,0,1,1,1,0,2,0,1,2
+2026-11-03_csun_la_sierra,CSUN,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,1,4,0,0,0,0,0,0
+2026-11-03_uc_riverside_occidental,Occidental,35,"Godfrey, Quinn",True,22,6,8,0.75,0,0,,1,1,1.0,1,3,4,2,0,3,3,0,13
+2026-11-03_uc_riverside_occidental,Occidental,25,"Woods, Joniya",True,21,1,4,0.25,0,0,,3,3,1.0,1,7,8,3,1,3,2,0,5
+2026-11-03_uc_riverside_occidental,Occidental,3,"Elegores, Micah",True,24,0,2,0.0,0,0,,2,2,1.0,0,1,1,1,2,6,0,0,2
+2026-11-03_uc_riverside_occidental,Occidental,13,"Velasquez, Samantha",True,23,0,1,0.0,0,0,,0,2,0.0,0,1,1,3,0,3,0,0,0
+2026-11-03_uc_riverside_occidental,Occidental,10,"Lee, Chelsea",True,13,0,3,0.0,0,2,0.0,0,0,,0,0,0,1,2,4,0,1,0
+2026-11-03_uc_riverside_occidental,Occidental,21,"London, Lexi",False,19,2,8,0.25,1,5,0.2,1,2,0.5,0,3,3,1,0,5,0,1,6
+2026-11-03_uc_riverside_occidental,Occidental,5,"Vanegas, Nicole",False,12,1,2,0.5,0,0,,1,1,1.0,0,0,0,0,0,1,0,1,3
+2026-11-03_uc_riverside_occidental,Occidental,30,"Berhe-lumax, Joie",False,12,1,2,0.5,0,0,,1,4,0.25,2,4,6,2,0,1,0,0,3
+2026-11-03_uc_riverside_occidental,Occidental,2,"Seshiki, Morgan",False,7,0,1,0.0,0,1,0.0,2,4,0.5,0,0,0,2,0,1,0,0,2
+2026-11-03_uc_riverside_occidental,Occidental,17,"Peiffer, Madelyn",False,7,0,2,0.0,0,2,0.0,2,2,1.0,0,0,0,0,0,1,0,0,2
+2026-11-03_uc_riverside_occidental,Occidental,4,"Lacap, Lauryn",False,6,0,1,0.0,0,0,,2,2,1.0,0,1,1,2,0,1,0,0,2
+2026-11-03_uc_riverside_occidental,Occidental,33,"Dover, Beverly",False,5,1,2,0.5,0,1,0.0,0,0,,0,1,1,1,1,3,0,0,2
+2026-11-03_uc_riverside_occidental,Occidental,11,"Giblin, Ila",False,19,0,0,,0,0,,0,0,,0,8,8,2,2,3,1,1,0
+2026-11-03_uc_riverside_occidental,Occidental,7,"Arce, Lauren",False,6,0,2,0.0,0,0,,0,0,,0,0,0,0,1,0,0,0,0
+2026-11-03_uc_riverside_occidental,Occidental,34,"Benavidez, Natalia",False,4,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-11-03_uc_riverside_occidental,Occidental,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,3,6,0,0,4,0,0,0
+2026-11-03_uc_riverside_occidental,UC Riverside,7,"Parahi, Graecyn",True,25,7,10,0.7,5,7,0.714,0,0,,0,2,2,1,0,2,0,1,19
+2026-11-03_uc_riverside_occidental,UC Riverside,1,"Polk, Kaylani",True,27,5,10,0.5,0,2,0.0,2,4,0.5,2,2,4,1,3,1,0,3,12
+2026-11-03_uc_riverside_occidental,UC Riverside,3,"Gamble, London",True,25,3,12,0.25,2,5,0.4,0,0,,5,3,8,2,2,1,0,3,8
+2026-11-03_uc_riverside_occidental,UC Riverside,22,"Swanson, Taylor",True,24,1,14,0.071,0,2,0.0,3,4,0.75,0,5,5,2,2,1,3,3,5
+2026-11-03_uc_riverside_occidental,UC Riverside,10,"Mehmedovic, Harisa",True,14,1,3,0.333,0,1,0.0,0,3,0.0,0,2,2,2,0,0,0,1,2
+2026-11-03_uc_riverside_occidental,UC Riverside,24,"Lloyd, Kyori",False,15,3,8,0.375,0,3,0.0,2,2,1.0,1,2,3,1,1,1,1,1,8
+2026-11-03_uc_riverside_occidental,UC Riverside,5,"Pateman, Amy",False,13,3,5,0.6,0,2,0.0,2,3,0.667,0,0,0,2,5,2,0,4,8
+2026-11-03_uc_riverside_occidental,UC Riverside,11,"Mejia, Maria",False,15,2,3,0.667,0,1,0.0,2,4,0.5,1,0,1,3,3,0,1,1,6
+2026-11-03_uc_riverside_occidental,UC Riverside,32,"Mack, Morgan",False,7,2,2,1.0,1,1,1.0,0,0,,0,1,1,2,0,1,0,0,5
+2026-11-03_uc_riverside_occidental,UC Riverside,20,"Tse, Dylan",False,9,0,2,0.0,0,2,0.0,4,4,1.0,0,2,2,0,0,0,0,1,4
+2026-11-03_uc_riverside_occidental,UC Riverside,35,"White, Alana",False,14,1,4,0.25,0,1,0.0,1,2,0.5,2,0,2,2,2,2,0,5,3
+2026-11-03_uc_riverside_occidental,UC Riverside,21,"Moreno, Lucia",False,12,1,1,1.0,0,0,,1,2,0.5,2,1,3,2,0,0,1,0,3
+2026-11-03_uc_riverside_occidental,UC Riverside,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,1,5,0,0,0,0,0,0
+2026-11-03_uc_santa_barbara_uc_santa_cruz,UC Santa Cruz,02,"Jackson, Alyssa",True,24,2,6,0.333,2,6,0.333,0,0,,1,1,2,3,0,3,0,1,6
+2026-11-03_uc_santa_barbara_uc_santa_cruz,UC Santa Cruz,03,"Ngo, Emilie",True,13,2,5,0.4,0,0,,1,2,0.5,0,0,0,1,2,3,0,0,5
+2026-11-03_uc_santa_barbara_uc_santa_cruz,UC Santa Cruz,08,"Tate, Bria",True,22,2,12,0.167,0,2,0.0,0,0,,1,2,3,1,0,1,0,1,4
+2026-11-03_uc_santa_barbara_uc_santa_cruz,UC Santa Cruz,05,"Busch, Katie",True,20,1,4,0.25,1,3,0.333,0,0,,0,1,1,3,0,2,0,0,3
+2026-11-03_uc_santa_barbara_uc_santa_cruz,UC Santa Cruz,11,"Papador, Lia",True,26,0,4,0.0,0,0,,2,2,1.0,0,0,0,1,0,1,0,1,2
+2026-11-03_uc_santa_barbara_uc_santa_cruz,UC Santa Cruz,12,"Clement, Gabriela",False,19,2,5,0.4,0,0,,1,2,0.5,0,0,0,2,0,2,0,0,5
+2026-11-03_uc_santa_barbara_uc_santa_cruz,UC Santa Cruz,31,"Co, Allison",False,9,0,1,0.0,0,1,0.0,1,2,0.5,1,0,1,0,0,1,0,0,1
+2026-11-03_uc_santa_barbara_uc_santa_cruz,UC Santa Cruz,04,"Fernandez, Sofia",False,24,0,7,0.0,0,5,0.0,0,0,,0,3,3,1,1,3,0,0,0
+2026-11-03_uc_santa_barbara_uc_santa_cruz,UC Santa Cruz,01,"Patel, Sabina",False,22,0,4,0.0,0,3,0.0,0,0,,1,0,1,1,2,1,0,0,0
+2026-11-03_uc_santa_barbara_uc_santa_cruz,UC Santa Cruz,24,"Sanchez, Evelyn",False,21,0,3,0.0,0,1,0.0,0,0,,0,0,0,1,0,5,0,2,0
+2026-11-03_uc_santa_barbara_uc_santa_cruz,UC Santa Cruz,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,2,6,0,0,1,0,0,0
+2026-11-03_uc_santa_barbara_uc_santa_cruz,UC Santa Barbara,24,"Zonzon-Huyghe, Naomy",True,21,6,8,0.75,0,2,0.0,3,4,0.75,3,3,6,3,3,2,0,2,15
+2026-11-03_uc_santa_barbara_uc_santa_cruz,UC Santa Barbara,07,"Flores, Karisma",True,21,6,11,0.545,2,5,0.4,0,0,,1,2,3,0,0,1,0,1,14
+2026-11-03_uc_santa_barbara_uc_santa_cruz,UC Santa Barbara,02,"Borter, Zoe",True,17,4,4,1.0,3,3,1.0,2,2,1.0,0,2,2,0,0,1,0,0,13
+2026-11-03_uc_santa_barbara_uc_santa_cruz,UC Santa Barbara,12,"Naro, Maddie",True,18,4,8,0.5,1,3,0.333,2,2,1.0,0,1,1,1,6,3,0,4,11
+2026-11-03_uc_santa_barbara_uc_santa_cruz,UC Santa Barbara,00,"Steiner, Nicole",True,12,0,0,,0,0,,0,0,,2,5,7,0,0,1,1,1,0
+2026-11-03_uc_santa_barbara_uc_santa_cruz,UC Santa Barbara,11,"Heyn, Sarah",False,25,6,8,0.75,4,6,0.667,1,2,0.5,1,1,2,2,4,1,0,1,17
+2026-11-03_uc_santa_barbara_uc_santa_cruz,UC Santa Barbara,10,"Anderson, Olivia",False,15,4,6,0.667,2,2,1.0,3,4,0.75,1,3,4,2,1,1,2,0,13
+2026-11-03_uc_santa_barbara_uc_santa_cruz,UC Santa Barbara,03,"Hashemian-Orr, Mauriana",False,19,3,4,0.75,1,1,1.0,1,2,0.5,1,3,4,0,4,3,0,2,8
+2026-11-03_uc_santa_barbara_uc_santa_cruz,UC Santa Barbara,15,"Andersen, Chauncey",False,20,3,7,0.429,0,1,0.0,0,0,,2,5,7,4,1,3,3,0,6
+2026-11-03_uc_santa_barbara_uc_santa_cruz,UC Santa Barbara,25,"Lipkin, Charlotte",False,19,1,2,0.5,1,2,0.5,0,0,,2,3,5,2,2,0,0,4,3
+2026-11-03_uc_santa_barbara_uc_santa_cruz,UC Santa Barbara,21,"Albanese, Ava",False,13,0,2,0.0,0,0,,1,2,0.5,1,4,5,3,2,0,1,0,1
+2026-11-03_uc_santa_barbara_uc_santa_cruz,UC Santa Barbara,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,3,3,0,0,0,0,0,0
+2026-11-03_ut_arlington_sacramento_st,Sacramento St.,23,"Akridge, Koko",True,38,4,11,0.364,0,4,0.0,6,6,1.0,2,1,3,2,2,3,0,0,14
+2026-11-03_ut_arlington_sacramento_st,Sacramento St.,02,"Picton, Natalie",True,39,2,9,0.222,0,3,0.0,5,7,0.714,1,5,6,3,3,6,0,2,9
+2026-11-03_ut_arlington_sacramento_st,Sacramento St.,05,"Abiara, Elizabeth",True,26,1,3,0.333,0,0,,6,8,0.75,2,5,7,0,0,2,2,2,8
+2026-11-03_ut_arlington_sacramento_st,Sacramento St.,24,"Cotton, Jenessa",True,15,1,2,0.5,0,0,,5,6,0.833,1,2,3,4,0,2,0,0,7
+2026-11-03_ut_arlington_sacramento_st,Sacramento St.,31,"Savic, Jelena",True,25,0,4,0.0,0,3,0.0,0,0,,0,5,5,1,1,3,0,0,0
+2026-11-03_ut_arlington_sacramento_st,Sacramento St.,35,"Hess, Alexis",False,22,6,10,0.6,3,6,0.5,0,0,,1,3,4,5,5,0,0,2,15
+2026-11-03_ut_arlington_sacramento_st,Sacramento St.,20,"Magot, Achol",False,7,4,4,1.0,0,0,,0,0,,0,1,1,2,0,3,0,0,8
+2026-11-03_ut_arlington_sacramento_st,Sacramento St.,12,"Lual, Ajong",False,5,2,2,1.0,0,0,,0,0,,0,0,0,3,0,1,1,0,4
+2026-11-03_ut_arlington_sacramento_st,Sacramento St.,14,"Fa'i, Tali",False,22,1,2,0.5,0,1,0.0,0,0,,2,0,2,3,0,1,1,2,2
+2026-11-03_ut_arlington_sacramento_st,Sacramento St.,11,"Barlow, Jordan",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-11-03_ut_arlington_sacramento_st,Sacramento St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,4,7,0,0,1,0,0,0
+2026-11-03_ut_arlington_sacramento_st,UT Arlington,23,"Brown, Jalyn",True,21,5,13,0.385,2,5,0.4,1,1,1.0,0,2,2,4,0,3,0,2,13
+2026-11-03_ut_arlington_sacramento_st,UT Arlington,11,"Bishop, Chelsea",True,31,2,3,0.667,0,1,0.0,6,10,0.6,0,3,3,3,4,2,1,0,10
+2026-11-03_ut_arlington_sacramento_st,UT Arlington,04,"Dossou, Morane",True,20,0,4,0.0,0,0,,3,4,0.75,2,3,5,3,1,2,0,2,3
+2026-11-03_ut_arlington_sacramento_st,UT Arlington,05,"Muhammad, Nisaa",True,21,0,1,0.0,0,0,,2,4,0.5,0,1,1,4,1,3,0,2,2
+2026-11-03_ut_arlington_sacramento_st,UT Arlington,01,"Reynolds, Amiyah",True,21,0,5,0.0,0,1,0.0,0,0,,2,1,3,4,3,1,1,0,0
+2026-11-03_ut_arlington_sacramento_st,UT Arlington,12,"Hampton, Journee",False,24,5,10,0.5,3,5,0.6,0,0,,1,0,1,1,0,2,0,1,13
+2026-11-03_ut_arlington_sacramento_st,UT Arlington,03,"Raymond, Ava",False,25,4,11,0.364,0,1,0.0,3,4,0.75,4,2,6,3,0,1,0,3,11
+2026-11-03_ut_arlington_sacramento_st,UT Arlington,54,"Carson, Faith",False,9,3,5,0.6,0,1,0.0,0,0,,0,1,1,4,0,0,0,0,6
+2026-11-03_ut_arlington_sacramento_st,UT Arlington,31,"Murphy, Liz",False,4,1,3,0.333,1,2,0.5,0,0,,0,0,0,1,0,0,0,0,3
+2026-11-03_ut_arlington_sacramento_st,UT Arlington,02,"Williams, Amaya",False,24,0,5,0.0,0,0,,0,2,0.0,2,3,5,1,2,2,0,3,0
+2026-11-03_ut_arlington_sacramento_st,UT Arlington,TM,TEAM,False,0,0,0,,0,0,,0,0,,6,1,7,0,0,0,0,0,0
+2026-11-03_utah_valley_park_az,Park (AZ),21,"Cummings, Allie",True,16,2,9,0.222,2,8,0.25,0,2,0.0,2,4,6,0,1,5,0,1,6
+2026-11-03_utah_valley_park_az,Park (AZ),20,"Vargas, Brooke",True,20,1,4,0.25,1,2,0.5,0,0,,0,0,0,0,0,7,1,0,3
+2026-11-03_utah_valley_park_az,Park (AZ),30,"Coolidge, Cassie",True,24,1,4,0.25,0,2,0.0,0,0,,0,5,5,3,3,1,2,0,2
+2026-11-03_utah_valley_park_az,Park (AZ),02,"Robertson, Ellie",True,14,1,4,0.25,0,1,0.0,0,0,,1,2,3,1,0,5,0,0,2
+2026-11-03_utah_valley_park_az,Park (AZ),44,"Julmist, Jelissa",True,2,1,2,0.5,0,0,,0,0,,0,0,0,0,0,0,0,1,2
+2026-11-03_utah_valley_park_az,Park (AZ),13,"Montoya, Angelina",False,20,2,13,0.154,1,10,0.1,0,0,,1,2,3,3,0,4,0,3,5
+2026-11-03_utah_valley_park_az,Park (AZ),40,"Bush, Kiley",False,17,2,7,0.286,0,0,,0,1,0.0,2,4,6,0,0,3,1,2,4
+2026-11-03_utah_valley_park_az,Park (AZ),22,"Jenkins, Madeline",False,12,0,1,0.0,0,1,0.0,3,4,0.75,0,0,0,1,1,0,0,0,3
+2026-11-03_utah_valley_park_az,Park (AZ),00,"Hoar, Rylee",False,18,0,1,0.0,0,0,,2,2,1.0,0,2,2,1,0,5,0,2,2
+2026-11-03_utah_valley_park_az,Park (AZ),34,"Dennis, Sanaa",False,17,1,3,0.333,0,0,,0,0,,2,3,5,4,1,3,0,3,2
+2026-11-03_utah_valley_park_az,Park (AZ),24,"Pilarski, Addison",False,14,0,3,0.0,0,1,0.0,1,2,0.5,0,3,3,3,1,3,2,0,1
+2026-11-03_utah_valley_park_az,Park (AZ),03,"Mask, Hannah",False,13,0,1,0.0,0,1,0.0,0,2,0.0,1,4,5,2,2,1,0,0,0
+2026-11-03_utah_valley_park_az,Park (AZ),15,"Begay, Eriana",False,13,0,0,,0,0,,0,0,,0,0,0,2,1,5,0,0,0
+2026-11-03_utah_valley_park_az,Park (AZ),TM,TEAM,False,0,0,0,,0,0,,0,0,,2,3,5,0,0,1,0,0,0
+2026-11-03_utah_valley_park_az,Utah Valley,30,"Gentry, Elizabeth",True,17,5,8,0.625,0,0,,4,4,1.0,3,5,8,3,3,2,0,3,14
+2026-11-03_utah_valley_park_az,Utah Valley,24,"Johnson, Lauren",True,22,5,11,0.455,1,1,1.0,1,2,0.5,2,3,5,0,1,2,3,2,12
+2026-11-03_utah_valley_park_az,Utah Valley,21,"Tanuvasa, Naia",True,19,4,7,0.571,0,3,0.0,3,4,0.75,0,2,2,2,2,0,0,5,11
+2026-11-03_utah_valley_park_az,Utah Valley,02,"Shreeve, Anna",True,20,4,8,0.5,0,3,0.0,2,3,0.667,0,2,2,2,1,2,1,4,10
+2026-11-03_utah_valley_park_az,Utah Valley,05,"Blackham, Cambree",True,22,2,2,1.0,1,1,1.0,0,0,,0,2,2,2,7,4,0,4,5
+2026-11-03_utah_valley_park_az,Utah Valley,08,"Clark, Tabi",False,19,4,9,0.444,2,5,0.4,0,0,,1,3,4,0,2,1,0,2,10
+2026-11-03_utah_valley_park_az,Utah Valley,00,"Stephens, Olivia",False,19,2,4,0.5,1,2,0.5,3,4,0.75,0,0,0,2,4,0,0,4,8
+2026-11-03_utah_valley_park_az,Utah Valley,07,"Kitchen, Kendra",False,16,2,4,0.5,0,1,0.0,2,4,0.5,2,2,4,1,0,1,1,5,6
+2026-11-03_utah_valley_park_az,Utah Valley,31,"Moultrie, Gabi",False,9,2,10,0.2,2,7,0.286,0,0,,1,1,2,3,1,1,0,2,6
+2026-11-03_utah_valley_park_az,Utah Valley,20,"Johnson, Gracie",False,13,0,9,0.0,0,1,0.0,3,4,0.75,7,5,12,1,1,2,4,0,3
+2026-11-03_utah_valley_park_az,Utah Valley,12,"McKenna, Maren",False,14,0,5,0.0,0,2,0.0,0,0,,2,4,6,1,0,4,0,2,0
+2026-11-03_utah_valley_park_az,Utah Valley,15,"Leeson, Evie",False,6,0,1,0.0,0,0,,0,0,,1,0,1,1,0,0,0,1,0
+2026-11-03_utah_valley_park_az,Utah Valley,06,"Stedman, Heather",False,4,0,2,0.0,0,2,0.0,0,0,,0,1,1,0,0,0,0,0,0
+2026-11-03_utah_valley_park_az,Utah Valley,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,4,5,0,0,0,0,0,0
+2026-11-04_cal_st_fullerton_hope_intl,Hope Int'l,25,"Austin, Amira",True,28,5,13,0.385,0,0,,6,6,1.0,4,5,9,2,2,3,1,4,16
+2026-11-04_cal_st_fullerton_hope_intl,Hope Int'l,24,"Chuang, Nicole",True,29,4,12,0.333,2,6,0.333,0,0,,0,2,2,4,3,2,0,0,10
+2026-11-04_cal_st_fullerton_hope_intl,Hope Int'l,55,"Javier, Dre",True,32,2,6,0.333,2,4,0.5,3,4,0.75,0,4,4,3,4,1,0,0,9
+2026-11-04_cal_st_fullerton_hope_intl,Hope Int'l,33,"Parks, N'Dya",True,25,1,9,0.111,0,1,0.0,5,6,0.833,2,3,5,0,1,2,0,0,7
+2026-11-04_cal_st_fullerton_hope_intl,Hope Int'l,00,"Brinkman, Faith",True,24,2,6,0.333,1,5,0.2,0,0,,1,3,4,1,2,3,0,0,5
+2026-11-04_cal_st_fullerton_hope_intl,Hope Int'l,23,"Arreola, Jordan",False,11,2,5,0.4,0,2,0.0,0,0,,1,0,1,0,0,1,0,0,4
+2026-11-04_cal_st_fullerton_hope_intl,Hope Int'l,02,"Flournoy, Kailani",False,16,1,4,0.25,0,0,,0,0,,0,3,3,2,0,1,1,0,2
+2026-11-04_cal_st_fullerton_hope_intl,Hope Int'l,10,"Perez-Sandi, Aaliyah",False,15,1,2,0.5,0,0,,0,0,,0,0,0,0,1,0,0,0,2
+2026-11-04_cal_st_fullerton_hope_intl,Hope Int'l,01,"Scott, Mo",False,11,0,2,0.0,0,1,0.0,2,2,1.0,0,0,0,0,0,0,0,0,2
+2026-11-04_cal_st_fullerton_hope_intl,Hope Int'l,04,"Villagrana, Caylie",False,6,1,1,1.0,0,0,,0,0,,0,0,0,0,1,0,0,0,2
+2026-11-04_cal_st_fullerton_hope_intl,Hope Int'l,11,"Coleman, Jamelia",False,3,0,0,,0,0,,0,0,,0,2,2,0,0,1,0,0,0
+2026-11-04_cal_st_fullerton_hope_intl,Hope Int'l,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,4,5,0,0,0,0,0,0
+2026-11-04_cal_st_fullerton_hope_intl,Cal St. Fullerton,10,"Swindle, Dylan",True,31,8,16,0.5,4,8,0.5,0,0,,0,4,4,3,3,1,2,2,20
+2026-11-04_cal_st_fullerton_hope_intl,Cal St. Fullerton,24,"Aragon, Juliana",True,33,7,13,0.538,2,6,0.333,0,0,,0,4,4,0,6,0,1,2,16
+2026-11-04_cal_st_fullerton_hope_intl,Cal St. Fullerton,04,"Falsdottir, Jana",True,31,6,14,0.429,2,5,0.4,0,0,,4,4,8,4,5,0,0,3,14
+2026-11-04_cal_st_fullerton_hope_intl,Cal St. Fullerton,23,"Maxwell, Talia",True,17,3,8,0.375,0,0,,4,6,0.667,4,5,9,1,1,1,1,0,10
+2026-11-04_cal_st_fullerton_hope_intl,Cal St. Fullerton,01,"Moon, Mimi",True,24,3,9,0.333,0,2,0.0,1,1,1.0,0,0,0,3,0,2,0,3,7
+2026-11-04_cal_st_fullerton_hope_intl,Cal St. Fullerton,03,"Ffrench, Shadel",False,12,6,7,0.857,0,0,,0,0,,3,9,12,2,0,0,0,0,12
+2026-11-04_cal_st_fullerton_hope_intl,Cal St. Fullerton,22,"Carranza, Bernadette",False,21,3,5,0.6,2,4,0.5,0,0,,1,0,1,0,2,1,0,0,8
+2026-11-04_cal_st_fullerton_hope_intl,Cal St. Fullerton,02,"Cassell, Ashari",False,24,1,8,0.125,0,2,0.0,1,2,0.5,3,2,5,1,1,1,0,1,3
+2026-11-04_cal_st_fullerton_hope_intl,Cal St. Fullerton,33,"Wilcox, Anasia",False,5,0,0,,0,0,,0,0,,1,1,2,1,1,0,1,0,0
+2026-11-04_cal_st_fullerton_hope_intl,Cal St. Fullerton,00,"Hawkins, Jennifer",False,2,0,0,,0,0,,0,0,,0,0,0,2,0,0,0,0,0
+2026-11-04_cal_st_fullerton_hope_intl,Cal St. Fullerton,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,2,3,0,0,0,0,0,0
+2026-11-04_oregon_st_california_baptist,California Baptist,13,"Olsen, Lauren",True,38,10,21,0.476,2,3,0.667,2,4,0.5,2,3,5,3,2,1,0,1,24
+2026-11-04_oregon_st_california_baptist,California Baptist,25,"Brecelj, Spela",True,17,7,13,0.538,3,4,0.75,0,1,0.0,4,2,6,3,1,0,1,0,17
+2026-11-04_oregon_st_california_baptist,California Baptist,24,"Briggs, Chloe",True,39,4,12,0.333,0,2,0.0,1,6,0.167,2,8,10,1,2,2,0,3,9
+2026-11-04_oregon_st_california_baptist,California Baptist,11,"Alonso , Sofia",True,36,3,10,0.3,1,5,0.2,1,2,0.5,1,3,4,3,11,1,1,3,8
+2026-11-04_oregon_st_california_baptist,California Baptist,4,"Hess, Reyleigh",True,18,1,4,0.25,1,2,0.5,0,0,,0,2,2,3,0,2,0,0,3
+2026-11-04_oregon_st_california_baptist,California Baptist,15,"Willardson, McKinley",False,23,6,14,0.429,2,7,0.286,1,2,0.5,4,2,6,3,0,0,0,0,15
+2026-11-04_oregon_st_california_baptist,California Baptist,3,"Agnew, Josie",False,24,1,3,0.333,0,2,0.0,1,2,0.5,0,1,1,4,0,1,0,0,3
+2026-11-04_oregon_st_california_baptist,California Baptist,12,"Grieger, Sienna",False,5,0,1,0.0,0,1,0.0,0,0,,0,0,0,1,0,0,0,0,0
+2026-11-04_oregon_st_california_baptist,California Baptist,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,2,4,0,0,0,0,0,0
+2026-11-04_oregon_st_california_baptist,Oregon St.,53,"Young, Taylor",True,36,10,18,0.556,0,3,0.0,2,4,0.5,0,2,2,2,2,1,0,1,22
+2026-11-04_oregon_st_california_baptist,Oregon St.,3,"Villa, Jenna",True,29,6,15,0.4,1,6,0.167,8,8,1.0,1,6,7,4,2,7,0,0,21
+2026-11-04_oregon_st_california_baptist,Oregon St.,1,"Shuler, Kennedie",True,36,4,8,0.5,0,0,,2,3,0.667,0,5,5,3,7,3,2,1,10
+2026-11-04_oregon_st_california_baptist,Oregon St.,22,"Alonso, Lara",True,33,2,3,0.667,0,0,,3,3,1.0,1,10,11,4,2,2,0,0,7
+2026-11-04_oregon_st_california_baptist,Oregon St.,2,"Field, Katelyn",True,24,1,2,0.5,1,2,0.5,0,0,,0,5,5,1,1,0,1,2,3
+2026-11-04_oregon_st_california_baptist,Oregon St.,11,"Smith, Evelini",False,7,3,3,1.0,0,0,,2,2,1.0,1,3,4,1,1,1,0,0,8
+2026-11-04_oregon_st_california_baptist,Oregon St.,10,"Uusitalo, Ashley",False,20,1,3,0.333,1,1,1.0,1,2,0.5,0,0,0,0,0,1,0,0,4
+2026-11-04_oregon_st_california_baptist,Oregon St.,5,"Warpus, Maggie",False,8,1,2,0.5,0,1,0.0,0,0,,1,0,1,1,0,1,0,0,2
+2026-11-04_oregon_st_california_baptist,Oregon St.,25,"Lindemans, Keira",False,6,0,2,0.0,0,1,0.0,0,0,,0,0,0,0,0,1,1,0,0
+2026-11-04_oregon_st_california_baptist,Oregon St.,12,"Shivers, Mackenzie",False,1,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-11-04_oregon_st_california_baptist,Oregon St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,5,6,0,0,1,0,0,0
+2026-11-05_ucla_uc_irvine,UC Irvine,2,"Young, Ahrray",True,29,3,11,0.273,1,3,0.333,3,3,1.0,4,6,10,4,2,3,0,1,10
+2026-11-05_ucla_uc_irvine,UC Irvine,12,"Nahum, Shirel",True,15,3,5,0.6,1,1,1.0,2,2,1.0,0,1,1,1,0,5,0,1,9
+2026-11-05_ucla_uc_irvine,UC Irvine,9,"Falcon Hernandez, Daniela",True,13,1,3,0.333,0,0,,0,0,,0,0,0,2,1,1,0,1,2
+2026-11-05_ucla_uc_irvine,UC Irvine,7,"Gallegos, Gracie",True,27,0,3,0.0,0,1,0.0,0,0,,1,0,1,1,0,3,1,1,0
+2026-11-05_ucla_uc_irvine,UC Irvine,10,"Madsen, Lauryn",True,26,0,4,0.0,0,4,0.0,0,0,,1,2,3,2,4,0,1,1,0
+2026-11-05_ucla_uc_irvine,UC Irvine,23,"White, Delaney",False,26,5,14,0.357,0,4,0.0,2,2,1.0,1,4,5,3,0,0,0,3,12
+2026-11-05_ucla_uc_irvine,UC Irvine,8,"Miller, Sarah",False,23,1,5,0.2,1,5,0.2,1,2,0.5,1,4,5,0,1,0,0,1,4
+2026-11-05_ucla_uc_irvine,UC Irvine,14,"Hanson, Summah",False,13,0,5,0.0,0,2,0.0,3,4,0.75,0,4,4,3,1,1,0,1,3
+2026-11-05_ucla_uc_irvine,UC Irvine,21,"Asidanya, Makiah",False,18,1,6,0.167,0,2,0.0,0,0,,1,0,1,0,0,3,0,0,2
+2026-11-05_ucla_uc_irvine,UC Irvine,11,"Hernandez, Haley",False,4,0,2,0.0,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2026-11-05_ucla_uc_irvine,UC Irvine,13,"Stores, Nohe'alani",False,4,0,1,0.0,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2026-11-05_ucla_uc_irvine,UC Irvine,1,"Grant, Ameerah",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-11-05_ucla_uc_irvine,UC Irvine,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,1,3,0,0,4,0,0,0
+2026-11-05_ucla_uc_irvine,UCLA,16,"Betts, Sienna",True,21,8,10,0.8,0,1,0.0,1,2,0.5,1,3,4,4,2,1,1,0,17
+2026-11-05_ucla_uc_irvine,UCLA,7,"Aarnisalo, Elina",True,26,5,12,0.417,2,5,0.4,2,2,1.0,2,3,5,2,5,6,0,1,14
+2026-11-05_ucla_uc_irvine,UCLA,30,"Gardiner, Timea",True,23,5,12,0.417,2,5,0.4,0,0,,1,4,5,0,0,2,1,1,12
+2026-11-05_ucla_uc_irvine,UCLA,14,"Bransford, Kk",True,24,3,10,0.3,1,3,0.333,3,5,0.6,2,2,4,2,2,2,0,4,10
+2026-11-05_ucla_uc_irvine,UCLA,4,"Hunter, Donovyn",True,23,3,6,0.5,0,1,0.0,0,0,,1,4,5,1,5,0,0,1,6
+2026-11-05_ucla_uc_irvine,UCLA,11,"Okafor, Somto",False,23,2,6,0.333,0,3,0.0,2,4,0.5,2,3,5,0,1,1,0,3,6
+2026-11-05_ucla_uc_irvine,UCLA,24,"Brown, Addy",False,23,3,5,0.6,0,1,0.0,0,0,,2,6,8,1,5,3,0,0,6
+2026-11-05_ucla_uc_irvine,UCLA,22,"Deas, Bonnie",False,16,1,5,0.2,1,4,0.25,2,2,1.0,3,4,7,4,2,1,1,0,5
+2026-11-05_ucla_uc_irvine,UCLA,33,"Muse, Amanda",False,14,1,1,1.0,0,0,,0,0,,1,2,3,3,2,1,1,1,2
+2026-11-05_ucla_uc_irvine,UCLA,8,"Jerković, Lina",False,7,0,1,0.0,0,1,0.0,0,0,,0,0,0,0,1,0,0,0,0
+2026-11-05_ucla_uc_irvine,UCLA,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,3,4,0,0,0,0,0,0
+2026-11-05_cal_poly_whittier,Whittier,3,"Krikorian, Shushan",True,19,2,10,0.2,0,2,0.0,5,6,0.833,1,3,4,1,1,2,0,1,9
+2026-11-05_cal_poly_whittier,Whittier,23,"Rosales Beltran, Yaneli",True,25,1,5,0.2,1,2,0.5,0,0,,1,3,4,1,0,2,0,0,3
+2026-11-05_cal_poly_whittier,Whittier,15,"Perkins, Kennedy",True,21,1,5,0.2,0,1,0.0,1,2,0.5,0,1,1,1,0,5,1,1,3
+2026-11-05_cal_poly_whittier,Whittier,20,"Owens, Armani",True,22,1,4,0.25,0,1,0.0,0,0,,1,2,3,5,1,7,0,1,2
+2026-11-05_cal_poly_whittier,Whittier,12,"Castagna, Delaney",True,18,0,0,,0,0,,0,0,,1,2,3,1,0,1,2,0,0
+2026-11-05_cal_poly_whittier,Whittier,10,"Afu, Lesina",False,27,4,13,0.308,0,1,0.0,0,0,,1,6,7,0,2,3,0,2,8
+2026-11-05_cal_poly_whittier,Whittier,5,"Borgna, Jayden",False,12,0,0,,0,0,,2,2,1.0,0,1,1,2,0,2,0,1,2
+2026-11-05_cal_poly_whittier,Whittier,7,"Valencia, Alexia",False,9,0,2,0.0,0,1,0.0,2,4,0.5,0,0,0,1,0,0,0,0,2
+2026-11-05_cal_poly_whittier,Whittier,21,"Nitta, Lanakila",False,8,1,1,1.0,0,0,,0,0,,1,0,1,0,0,0,0,0,2
+2026-11-05_cal_poly_whittier,Whittier,22,"Latif, Aliya",False,8,1,2,0.5,0,1,0.0,0,0,,0,0,0,0,0,0,0,0,2
+2026-11-05_cal_poly_whittier,Whittier,2,"Rosales Beltran, Helen",False,10,0,2,0.0,0,2,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2026-11-05_cal_poly_whittier,Whittier,44,"Butler, Arianna",False,9,0,0,,0,0,,0,0,,0,1,1,2,0,0,0,0,0
+2026-11-05_cal_poly_whittier,Whittier,24,"Blum, Bella",False,8,0,1,0.0,0,1,0.0,0,0,,1,1,2,0,0,1,0,0,0
+2026-11-05_cal_poly_whittier,Whittier,25,"Lopez, Aliyah",False,4,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2026-11-05_cal_poly_whittier,Whittier,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,4,7,0,0,1,0,0,0
+2026-11-05_cal_poly_whittier,Cal Poly,23,"Ulmer, Dessi",True,25,5,8,0.625,0,0,,3,6,0.5,3,5,8,2,1,3,2,2,13
+2026-11-05_cal_poly_whittier,Cal Poly,4,"Tauro, Maddy",True,24,6,17,0.353,0,5,0.0,0,0,,0,1,1,0,5,3,1,4,12
+2026-11-05_cal_poly_whittier,Cal Poly,24,"Butcher, Madison",True,29,3,7,0.429,2,3,0.667,0,0,,2,3,5,3,0,1,0,1,8
+2026-11-05_cal_poly_whittier,Cal Poly,1,"Lee, Sumer",True,31,2,7,0.286,0,2,0.0,2,4,0.5,0,3,3,2,1,0,0,3,6
+2026-11-05_cal_poly_whittier,Cal Poly,5,"Robinson, Gabby",True,19,2,4,0.5,0,1,0.0,0,1,0.0,0,2,2,4,0,1,0,1,4
+2026-11-05_cal_poly_whittier,Cal Poly,47,"Knapp, Avery",False,18,4,9,0.444,0,2,0.0,2,2,1.0,6,3,9,1,1,2,1,1,10
+2026-11-05_cal_poly_whittier,Cal Poly,2,"Alexander, Mecca",False,21,2,2,1.0,0,0,,1,2,0.5,1,2,3,2,0,2,0,4,5
+2026-11-05_cal_poly_whittier,Cal Poly,3,"Skrzyniarz, Ella",False,13,1,4,0.25,1,4,0.25,0,0,,0,0,0,1,1,0,0,0,3
+2026-11-05_cal_poly_whittier,Cal Poly,00,"von Seipler, Ysabella",False,20,0,3,0.0,0,1,0.0,0,0,,1,2,3,2,1,0,0,1,0
+2026-11-05_cal_poly_whittier,Cal Poly,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,5,8,0,0,0,0,0,0
+2026-11-05_california_long_beach_st,Long Beach St.,23,"Arvai, Noemi",True,28,4,9,0.444,1,5,0.2,0,0,,1,2,3,2,2,1,0,0,9
+2026-11-05_california_long_beach_st,Long Beach St.,21,"Berry, Kailyn",True,23,3,15,0.2,0,3,0.0,3,4,0.75,1,4,5,1,0,2,0,2,9
+2026-11-05_california_long_beach_st,Long Beach St.,2,"Akot, Rosie",True,26,3,10,0.3,0,3,0.0,0,0,,2,4,6,2,1,4,3,1,6
+2026-11-05_california_long_beach_st,Long Beach St.,14,"Chico Fernandez, Lucia",True,26,2,2,1.0,0,0,,0,0,,0,0,0,2,0,1,0,0,4
+2026-11-05_california_long_beach_st,Long Beach St.,00,"Furch, Amber",True,26,1,5,0.2,0,0,,1,2,0.5,0,2,2,4,2,2,0,0,3
+2026-11-05_california_long_beach_st,Long Beach St.,10,"Taylor-smith, Ebony",False,17,3,10,0.3,3,9,0.333,0,0,,0,1,1,0,0,0,0,0,9
+2026-11-05_california_long_beach_st,Long Beach St.,15,"Kujovic, Danijela",False,20,1,4,0.25,1,4,0.25,0,0,,1,0,1,2,1,2,0,1,3
+2026-11-05_california_long_beach_st,Long Beach St.,30,"Reyes, Aryanna",False,3,1,1,1.0,1,1,1.0,0,0,,0,0,0,0,0,0,0,0,3
+2026-11-05_california_long_beach_st,Long Beach St.,4,"Dias, Ashanti",False,21,0,4,0.0,0,0,,0,0,,1,1,2,0,4,2,0,0,0
+2026-11-05_california_long_beach_st,Long Beach St.,3,"Proctor, Fia",False,7,0,1,0.0,0,1,0.0,0,0,,0,1,1,1,0,0,0,0,0
+2026-11-05_california_long_beach_st,Long Beach St.,12,"Taulani, Malia",False,3,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-11-05_california_long_beach_st,Long Beach St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,5,9,0,0,2,0,0,0
+2026-11-05_california_long_beach_st,California,10,"Twidale, Lulu",True,26,6,13,0.462,3,5,0.6,0,0,,0,4,4,2,3,1,0,1,15
+2026-11-05_california_long_beach_st,California,3,"Barnes, Taylor",True,24,6,8,0.75,2,4,0.5,0,0,,0,2,2,0,2,0,0,1,14
+2026-11-05_california_long_beach_st,California,21,"Maul, Gisella",True,22,5,10,0.5,1,3,0.333,1,2,0.5,2,2,4,1,2,2,0,0,12
+2026-11-05_california_long_beach_st,California,22,"Perkins, Ruby",True,21,2,6,0.333,2,3,0.667,0,0,,2,2,4,3,5,2,0,0,6
+2026-11-05_california_long_beach_st,California,12,"Syla, Albina",True,12,2,2,1.0,0,0,,0,0,,0,4,4,0,0,0,1,0,4
+2026-11-05_california_long_beach_st,California,14,"Jevtovic, Jovana",False,17,5,6,0.833,1,1,1.0,3,4,0.75,2,1,3,0,1,0,0,0,14
+2026-11-05_california_long_beach_st,California,00,"Dowell, Shannon",False,27,4,8,0.5,0,2,0.0,4,4,1.0,1,9,10,2,8,1,0,0,12
+2026-11-05_california_long_beach_st,California,7,"Ojukwu, Naya",False,10,3,9,0.333,0,0,,0,0,,4,1,5,1,0,0,0,2,6
+2026-11-05_california_long_beach_st,California,2,"Lagonikaki, Anna",False,4,3,3,1.0,0,0,,0,0,,0,1,1,0,0,0,0,0,6
+2026-11-05_california_long_beach_st,California,8,"Russell, Zara",False,21,2,3,0.667,0,0,,1,1,1.0,0,4,4,0,1,2,1,0,5
+2026-11-05_california_long_beach_st,California,11,"Amborn, Carly",False,8,1,4,0.25,1,4,0.25,0,0,,0,0,0,0,2,0,0,0,3
+2026-11-05_california_long_beach_st,California,42,"Bowes, Sofia",False,4,1,2,0.5,1,2,0.5,0,0,,1,0,1,0,2,0,0,0,3
+2026-11-05_california_long_beach_st,California,23,"Drosouni, Anastasia",False,4,0,0,,0,0,,0,0,,0,1,1,0,1,0,0,0,0
+2026-11-05_california_long_beach_st,California,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,2,5,0,0,0,0,0,0
+2026-11-05_pepperdine_uc_santa_barbara,UC Santa Barbara,07,"Flores, Karisma",True,23,6,12,0.5,4,7,0.571,0,0,,0,2,2,3,0,1,0,3,16
+2026-11-05_pepperdine_uc_santa_barbara,UC Santa Barbara,12,"Naro, Maddie",True,37,3,15,0.2,0,4,0.0,0,0,,1,1,2,2,8,3,0,2,6
+2026-11-05_pepperdine_uc_santa_barbara,UC Santa Barbara,24,"Zonzon-Huyghe, Naomy",True,31,2,6,0.333,1,1,1.0,1,2,0.5,2,3,5,2,0,2,0,4,6
+2026-11-05_pepperdine_uc_santa_barbara,UC Santa Barbara,02,"Borter, Zoe",True,38,2,9,0.222,0,1,0.0,0,0,,2,1,3,4,3,1,0,2,4
+2026-11-05_pepperdine_uc_santa_barbara,UC Santa Barbara,00,"Steiner, Nicole",True,14,1,4,0.25,0,0,,2,2,1.0,1,1,2,2,0,2,1,1,4
+2026-11-05_pepperdine_uc_santa_barbara,UC Santa Barbara,10,"Anderson, Olivia",False,20,5,7,0.714,2,2,1.0,1,2,0.5,3,1,4,3,0,0,1,1,13
+2026-11-05_pepperdine_uc_santa_barbara,UC Santa Barbara,15,"Andersen, Chauncey",False,21,3,6,0.5,2,2,1.0,1,1,1.0,0,6,6,3,1,4,0,0,9
+2026-11-05_pepperdine_uc_santa_barbara,UC Santa Barbara,03,"Hashemian-Orr, Mauriana",False,7,0,2,0.0,0,0,,0,0,,1,0,1,1,0,2,0,0,0
+2026-11-05_pepperdine_uc_santa_barbara,UC Santa Barbara,11,"Heyn, Sarah",False,7,0,1,0.0,0,1,0.0,0,0,,0,1,1,1,0,0,0,0,0
+2026-11-05_pepperdine_uc_santa_barbara,UC Santa Barbara,25,"Lipkin, Charlotte",False,2,0,1,0.0,0,1,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2026-11-05_pepperdine_uc_santa_barbara,UC Santa Barbara,TM,TEAM,False,0,0,0,,0,0,,0,0,,5,4,9,0,0,0,0,0,0
+2026-11-05_pepperdine_uc_santa_barbara,Pepperdine,02,"Guiney, Elli",True,40,7,11,0.636,2,5,0.4,3,4,0.75,0,7,7,2,4,3,2,1,19
+2026-11-05_pepperdine_uc_santa_barbara,Pepperdine,44,"Mendelson, Maggie",True,29,4,10,0.4,0,0,,0,0,,6,8,14,3,0,4,2,1,8
+2026-11-05_pepperdine_uc_santa_barbara,Pepperdine,22,"Falk, Lina",True,34,1,5,0.2,0,2,0.0,3,4,0.75,0,1,1,3,1,3,1,1,5
+2026-11-05_pepperdine_uc_santa_barbara,Pepperdine,15,"Koorits, Keandra",True,7,1,2,0.5,1,2,0.5,0,0,,0,0,0,1,0,1,0,0,3
+2026-11-05_pepperdine_uc_santa_barbara,Pepperdine,01,"Sta. Maria, Taija",True,40,1,7,0.143,0,2,0.0,0,0,,1,5,6,1,3,2,0,0,2
+2026-11-05_pepperdine_uc_santa_barbara,Pepperdine,30,"Harmon, Seleh",False,32,3,10,0.3,2,6,0.333,2,2,1.0,0,1,1,1,1,4,0,0,10
+2026-11-05_pepperdine_uc_santa_barbara,Pepperdine,04,"Martyn, Evelyn",False,10,0,0,,0,0,,4,8,0.5,1,0,1,2,1,2,1,1,4
+2026-11-05_pepperdine_uc_santa_barbara,Pepperdine,17,"Shanahan, Zoe",False,8,1,2,0.5,1,2,0.5,0,0,,0,1,1,1,0,1,0,0,3
+2026-11-05_pepperdine_uc_santa_barbara,Pepperdine,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,3,7,0,0,2,0,0,0
+2026-11-06_seattle_u_uc_riverside,UC Riverside,1,"Polk, Kaylani",True,28,4,7,0.571,0,2,0.0,5,5,1.0,0,3,3,2,3,5,2,1,13
+2026-11-06_seattle_u_uc_riverside,UC Riverside,22,"Swanson, Taylor",True,26,6,11,0.545,1,1,1.0,0,1,0.0,0,5,5,5,0,5,2,0,13
+2026-11-06_seattle_u_uc_riverside,UC Riverside,10,"Mehmedovic, Harisa",True,27,2,6,0.333,0,1,0.0,4,4,1.0,1,2,3,3,1,1,0,0,8
+2026-11-06_seattle_u_uc_riverside,UC Riverside,3,"Gamble, London",True,22,2,7,0.286,0,2,0.0,2,2,1.0,1,4,5,0,0,2,0,1,6
+2026-11-06_seattle_u_uc_riverside,UC Riverside,7,"Parahi, Graecyn",True,19,1,3,0.333,0,1,0.0,0,0,,1,4,5,1,2,2,0,0,2
+2026-11-06_seattle_u_uc_riverside,UC Riverside,5,"Pateman, Amy",False,23,1,5,0.2,1,5,0.2,5,6,0.833,1,1,2,3,0,3,0,1,8
+2026-11-06_seattle_u_uc_riverside,UC Riverside,24,"Lloyd, Kyori",False,25,1,6,0.167,0,2,0.0,3,4,0.75,0,2,2,3,2,0,1,2,5
+2026-11-06_seattle_u_uc_riverside,UC Riverside,20,"Tse, Dylan",False,11,0,1,0.0,0,0,,0,0,,0,0,0,5,0,1,0,1,0
+2026-11-06_seattle_u_uc_riverside,UC Riverside,21,"Moreno, Lucia",False,7,0,1,0.0,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2026-11-06_seattle_u_uc_riverside,UC Riverside,11,"Mejia, Maria",False,6,0,1,0.0,0,1,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2026-11-06_seattle_u_uc_riverside,UC Riverside,32,"Mack, Morgan",False,4,0,1,0.0,0,1,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2026-11-06_seattle_u_uc_riverside,UC Riverside,35,"White, Alana",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2026-11-06_seattle_u_uc_riverside,UC Riverside,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,3,4,0,0,2,0,0,0
+2026-11-06_seattle_u_uc_riverside,Seattle U,55,"Jones, Cristina",True,36,10,19,0.526,0,0,,2,7,0.286,3,6,9,2,3,2,1,4,22
+2026-11-06_seattle_u_uc_riverside,Seattle U,22,"Neale, Alanna",True,31,7,15,0.467,1,4,0.25,5,8,0.625,3,4,7,4,1,7,0,2,20
+2026-11-06_seattle_u_uc_riverside,Seattle U,4,"Buzzard, Sophie",True,31,4,10,0.4,3,5,0.6,1,3,0.333,4,1,5,2,0,0,0,2,12
+2026-11-06_seattle_u_uc_riverside,Seattle U,10,"Fraser, Claire",True,25,1,9,0.111,0,4,0.0,2,2,1.0,4,2,6,2,3,2,0,0,4
+2026-11-06_seattle_u_uc_riverside,Seattle U,3,"Sellers, Erin",True,14,1,3,0.333,1,2,0.5,0,0,,1,1,2,3,4,0,0,1,3
+2026-11-06_seattle_u_uc_riverside,Seattle U,00,"Duchemin, Shelley",False,16,2,6,0.333,2,3,0.667,0,0,,2,4,6,3,0,1,1,0,6
+2026-11-06_seattle_u_uc_riverside,Seattle U,6,"Escorial Ferrero, Gabriela",False,15,2,5,0.4,1,1,1.0,0,0,,2,3,5,2,3,0,0,3,5
+2026-11-06_seattle_u_uc_riverside,Seattle U,5,"Mogel, Dylan",False,17,1,1,1.0,0,0,,1,2,0.5,2,1,3,1,2,2,0,0,3
+2026-11-06_seattle_u_uc_riverside,Seattle U,2,"Biddle, Lindsay",False,4,1,2,0.5,1,2,0.5,0,0,,0,1,1,1,0,1,0,0,3
+2026-11-06_seattle_u_uc_riverside,Seattle U,12,"Jackson, Ayanna",False,3,1,1,1.0,0,0,,0,0,,0,0,0,1,0,0,0,0,2
+2026-11-06_seattle_u_uc_riverside,Seattle U,21,"Nenadic, Milana",False,8,0,2,0.0,0,1,0.0,0,0,,0,0,0,1,0,0,0,1,0
+2026-11-06_seattle_u_uc_riverside,Seattle U,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,2,4,0,0,2,0,0,0
+2026-11-06_utah_tech_california_baptist,California Baptist,25,"Brecelj, Spela",True,15,5,9,0.556,0,0,,2,3,0.667,4,4,8,2,0,1,2,0,12
+2026-11-06_utah_tech_california_baptist,California Baptist,24,"Briggs, Chloe",True,18,4,7,0.571,1,2,0.5,2,2,1.0,2,1,3,1,4,0,0,0,11
+2026-11-06_utah_tech_california_baptist,California Baptist,4,"Hess, Reyleigh",True,21,4,7,0.571,0,1,0.0,0,0,,3,8,11,1,3,1,1,3,8
+2026-11-06_utah_tech_california_baptist,California Baptist,11,"Alonso , Sofia",True,21,3,5,0.6,1,3,0.333,0,0,,2,3,5,1,3,4,1,1,7
+2026-11-06_utah_tech_california_baptist,California Baptist,13,"Olsen, Lauren",True,20,2,7,0.286,1,3,0.333,0,0,,0,3,3,2,3,1,1,0,5
+2026-11-06_utah_tech_california_baptist,California Baptist,12,"Grieger, Sienna",False,17,4,10,0.4,4,10,0.4,0,0,,0,0,0,1,2,2,0,1,12
+2026-11-06_utah_tech_california_baptist,California Baptist,15,"Willardson, McKinley",False,11,4,4,1.0,0,0,,0,0,,3,4,7,1,0,0,1,0,8
+2026-11-06_utah_tech_california_baptist,California Baptist,3,"Agnew, Josie",False,22,3,7,0.429,0,3,0.0,1,1,1.0,2,2,4,0,4,4,0,0,7
+2026-11-06_utah_tech_california_baptist,California Baptist,1,"McQuiston, Novelle",False,11,3,5,0.6,1,3,0.333,0,0,,1,1,2,1,1,4,1,0,7
+2026-11-06_utah_tech_california_baptist,California Baptist,21,"Haw, Paula",False,14,1,5,0.2,0,0,,2,4,0.5,5,6,11,1,1,1,2,0,4
+2026-11-06_utah_tech_california_baptist,California Baptist,22,"Klages, Bella",False,14,1,4,0.25,0,2,0.0,1,2,0.5,0,0,0,1,0,0,1,1,3
+2026-11-06_utah_tech_california_baptist,California Baptist,32,"de la Fuente, Marta",False,10,1,5,0.2,1,2,0.5,0,0,,1,2,3,3,1,1,0,0,3
+2026-11-06_utah_tech_california_baptist,California Baptist,7,"Linder, Ella",False,6,0,1,0.0,0,1,0.0,0,0,,0,1,1,1,0,0,1,0,0
+2026-11-06_utah_tech_california_baptist,California Baptist,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,4,6,0,0,0,0,0,0
+2026-11-06_utah_tech_california_baptist,Utah Tech,21,"Stoker, Savannah",True,29,10,22,0.455,2,9,0.222,0,0,,4,3,7,4,3,2,3,1,22
+2026-11-06_utah_tech_california_baptist,Utah Tech,9,"Bowen, Alyssa",True,37,6,18,0.333,4,11,0.364,4,8,0.5,1,3,4,2,0,1,1,0,20
+2026-11-06_utah_tech_california_baptist,Utah Tech,4,"Zufelt, Sophia",True,32,2,7,0.286,1,5,0.2,1,2,0.5,2,5,7,1,3,3,0,2,6
+2026-11-06_utah_tech_california_baptist,Utah Tech,35,"Dykstra, Kendall",True,30,1,8,0.125,1,4,0.25,2,2,1.0,2,1,3,2,1,3,0,2,5
+2026-11-06_utah_tech_california_baptist,Utah Tech,3,"Smith, Ava",True,28,0,10,0.0,0,5,0.0,0,0,,4,4,8,0,4,1,0,0,0
+2026-11-06_utah_tech_california_baptist,Utah Tech,15,"Rhay, Maia",False,16,1,5,0.2,0,1,0.0,1,2,0.5,0,0,0,2,0,1,0,5,3
+2026-11-06_utah_tech_california_baptist,Utah Tech,22,"Hess, Maci",False,6,1,2,0.5,1,1,1.0,0,0,,0,0,0,1,0,0,0,0,3
+2026-11-06_utah_tech_california_baptist,Utah Tech,33,"Gomez, Gabby",False,6,0,1,0.0,0,0,,1,2,0.5,0,1,1,0,0,0,0,1,1
+2026-11-06_utah_tech_california_baptist,Utah Tech,7,"Woodward, Eva",False,16,0,1,0.0,0,0,,0,2,0.0,0,1,1,2,2,2,0,0,0
+2026-11-06_utah_tech_california_baptist,Utah Tech,TM,TEAM,False,0,0,0,,0,0,,0,0,,6,1,7,0,0,1,0,0,0
+2026-11-07_uc_san_diego_san_diego,San Diego,15,"Ruse, Eva",True,34,6,9,0.667,1,2,0.5,7,10,0.7,6,7,13,0,1,4,3,1,20
+2026-11-07_uc_san_diego_san_diego,San Diego,24,"Owens, Olivia",True,28,6,11,0.545,2,5,0.4,1,1,1.0,0,5,5,1,5,1,0,1,15
+2026-11-07_uc_san_diego_san_diego,San Diego,06,"Ray, Kylie",True,35,5,10,0.5,1,1,1.0,3,3,1.0,1,8,9,5,5,5,0,0,14
+2026-11-07_uc_san_diego_san_diego,San Diego,11,"Wagner, Sammie",True,29,4,11,0.364,2,4,0.5,1,2,0.5,1,1,2,1,1,1,1,2,11
+2026-11-07_uc_san_diego_san_diego,San Diego,09,"Pemberton, Kiera",True,11,0,3,0.0,0,0,,1,2,0.5,2,0,2,3,0,3,0,0,1
+2026-11-07_uc_san_diego_san_diego,San Diego,04,"Ajayi, Jessica",False,37,6,10,0.6,4,7,0.571,2,2,1.0,1,0,1,1,1,3,0,0,18
+2026-11-07_uc_san_diego_san_diego,San Diego,20,"Barnett, Braelynn",False,7,1,4,0.25,0,1,0.0,2,2,1.0,0,0,0,0,0,0,0,0,4
+2026-11-07_uc_san_diego_san_diego,San Diego,03,"Amor, Lilly",False,31,1,4,0.25,1,4,0.25,0,0,,0,1,1,1,2,1,0,3,3
+2026-11-07_uc_san_diego_san_diego,San Diego,22,"Williams, Ayla",False,9,1,3,0.333,0,0,,0,0,,3,3,6,3,0,0,0,0,2
+2026-11-07_uc_san_diego_san_diego,San Diego,05,"McCall, Lauren",False,4,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2026-11-07_uc_san_diego_san_diego,San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,4,5,0,0,1,0,0,0
+2026-11-07_uc_san_diego_san_diego,UC San Diego,13,"Feiman, Lev",True,37,9,16,0.562,0,2,0.0,3,5,0.6,1,4,5,5,4,1,1,0,21
+2026-11-07_uc_san_diego_san_diego,UC San Diego,11,"Condron, Erin",True,45,9,23,0.391,1,3,0.333,0,0,,3,5,8,2,3,3,2,4,19
+2026-11-07_uc_san_diego_san_diego,UC San Diego,20,"Sin, Sadie",True,37,4,11,0.364,3,5,0.6,2,2,1.0,0,3,3,5,3,0,0,2,13
+2026-11-07_uc_san_diego_san_diego,UC San Diego,12,"Smith, Rosa",True,37,2,8,0.25,0,5,0.0,2,2,1.0,1,3,4,2,1,3,0,1,6
+2026-11-07_uc_san_diego_san_diego,UC San Diego,07,"Cook, Emma",True,15,2,3,0.667,0,1,0.0,1,2,0.5,0,2,2,1,1,1,0,1,5
+2026-11-07_uc_san_diego_san_diego,UC San Diego,02,"Fairwell, Michaela",False,22,7,9,0.778,1,1,1.0,2,2,1.0,1,1,2,4,2,3,0,3,17
+2026-11-07_uc_san_diego_san_diego,UC San Diego,22,"Cummins, Alexandra",False,29,3,5,0.6,3,5,0.6,0,0,,1,1,2,1,4,1,1,2,9
+2026-11-07_uc_san_diego_san_diego,UC San Diego,08,"Mulvanny, Noelle",False,3,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-11-07_uc_san_diego_san_diego,UC San Diego,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,3,6,0,0,1,0,0,0
+2026-11-07_cal_st_fullerton_westcliff,Westcliff,03,"Ziska, Christen",True,35,8,13,0.615,3,3,1.0,3,3,1.0,0,1,1,4,1,2,0,0,22
+2026-11-07_cal_st_fullerton_westcliff,Westcliff,21,"Interiano, Marina",True,40,4,11,0.364,1,4,0.25,0,0,,0,5,5,0,2,2,0,2,9
+2026-11-07_cal_st_fullerton_westcliff,Westcliff,04,"Cota-Gaxiola, Elizabeth",True,26,1,11,0.091,1,9,0.111,2,2,1.0,1,1,2,4,0,2,1,0,5
+2026-11-07_cal_st_fullerton_westcliff,Westcliff,30,"Serrano, Maria",True,31,2,10,0.2,0,3,0.0,0,4,0.0,0,0,0,2,1,6,0,0,4
+2026-11-07_cal_st_fullerton_westcliff,Westcliff,12,"Interiano, Honesty",True,14,0,0,,0,0,,0,0,,2,2,4,4,1,2,0,0,0
+2026-11-07_cal_st_fullerton_westcliff,Westcliff,01,"Duque, Stasia",False,17,1,4,0.25,0,0,,1,2,0.5,0,1,1,1,1,2,0,0,3
+2026-11-07_cal_st_fullerton_westcliff,Westcliff,23,"rogers, Sherrice",False,27,0,0,,0,0,,0,0,,1,4,5,3,1,0,0,1,0
+2026-11-07_cal_st_fullerton_westcliff,Westcliff,14,"Johnson, Jordyn",False,10,0,1,0.0,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2026-11-07_cal_st_fullerton_westcliff,Westcliff,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,0,3,0,0,1,0,0,0
+2026-11-07_cal_st_fullerton_westcliff,Cal St. Fullerton,10,"Swindle, Dylan",True,27,4,11,0.364,2,6,0.333,2,4,0.5,0,4,4,2,0,1,0,1,12
+2026-11-07_cal_st_fullerton_westcliff,Cal St. Fullerton,04,"Falsdottir, Jana",True,25,4,8,0.5,1,3,0.333,0,0,,0,3,3,1,0,0,0,2,9
+2026-11-07_cal_st_fullerton_westcliff,Cal St. Fullerton,23,"Maxwell, Talia",True,19,4,6,0.667,0,0,,1,2,0.5,3,1,4,0,1,1,1,1,9
+2026-11-07_cal_st_fullerton_westcliff,Cal St. Fullerton,01,"Moon, Mimi",True,28,3,7,0.429,0,2,0.0,1,1,1.0,1,1,2,3,2,1,1,2,7
+2026-11-07_cal_st_fullerton_westcliff,Cal St. Fullerton,24,"Aragon, Juliana",True,12,0,3,0.0,0,1,0.0,0,0,,1,1,2,3,4,0,0,0,0
+2026-11-07_cal_st_fullerton_westcliff,Cal St. Fullerton,02,"Cassell, Ashari",False,32,4,7,0.571,0,3,0.0,6,7,0.857,2,1,3,1,2,4,0,2,14
+2026-11-07_cal_st_fullerton_westcliff,Cal St. Fullerton,05,"Sutisna, Maxine",False,16,5,7,0.714,2,2,1.0,1,1,1.0,1,4,5,1,2,2,2,1,13
+2026-11-07_cal_st_fullerton_westcliff,Cal St. Fullerton,33,"Wilcox, Anasia",False,12,2,3,0.667,0,0,,0,0,,0,2,2,2,0,3,0,1,4
+2026-11-07_cal_st_fullerton_westcliff,Cal St. Fullerton,22,"Carranza, Bernadette",False,20,1,3,0.333,0,2,0.0,1,2,0.5,1,2,3,2,2,0,0,1,3
+2026-11-07_cal_st_fullerton_westcliff,Cal St. Fullerton,03,"Ffrench, Shadel",False,9,1,3,0.333,0,0,,0,0,,2,2,4,1,0,1,1,0,2
+2026-11-07_cal_st_fullerton_westcliff,Cal St. Fullerton,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2026-11-07_nevada_sacramento_st,Sacramento St.,23,"Akridge, Koko",True,34,7,18,0.389,5,12,0.417,4,4,1.0,0,1,1,0,2,3,0,0,23
+2026-11-07_nevada_sacramento_st,Sacramento St.,02,"Picton, Natalie",True,35,6,17,0.353,1,5,0.2,4,6,0.667,0,4,4,1,4,1,0,2,17
+2026-11-07_nevada_sacramento_st,Sacramento St.,31,"Savic, Jelena",True,29,2,6,0.333,1,4,0.25,3,4,0.75,2,5,7,0,2,0,0,2,8
+2026-11-07_nevada_sacramento_st,Sacramento St.,24,"Cotton, Jenessa",True,16,1,7,0.143,0,2,0.0,1,2,0.5,1,2,3,4,0,1,0,1,3
+2026-11-07_nevada_sacramento_st,Sacramento St.,05,"Abiara, Elizabeth",True,17,1,2,0.5,0,0,,0,0,,1,1,2,3,0,1,0,0,2
+2026-11-07_nevada_sacramento_st,Sacramento St.,20,"Magot, Achol",False,7,4,4,1.0,0,0,,0,0,,0,1,1,0,1,0,0,0,8
+2026-11-07_nevada_sacramento_st,Sacramento St.,35,"Hess, Alexis",False,18,2,5,0.4,1,4,0.25,0,0,,2,1,3,1,2,1,0,0,5
+2026-11-07_nevada_sacramento_st,Sacramento St.,14,"Fa'i, Tali",False,19,1,3,0.333,0,1,0.0,0,0,,0,4,4,5,1,2,0,1,2
+2026-11-07_nevada_sacramento_st,Sacramento St.,12,"Lual, Ajong",False,12,1,1,1.0,0,0,,0,0,,0,2,2,1,0,0,0,0,2
+2026-11-07_nevada_sacramento_st,Sacramento St.,08,"Mandaquit, Jaety",False,9,0,0,,0,0,,0,0,,1,0,1,0,0,0,0,0,0
+2026-11-07_nevada_sacramento_st,Sacramento St.,11,"Barlow, Jordan",False,4,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-11-07_nevada_sacramento_st,Sacramento St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,7,11,0,0,0,0,0,0
+2026-11-07_nevada_sacramento_st,Nevada,07,"Harrison, Mahaila",True,25,6,11,0.545,1,3,0.333,3,3,1.0,0,5,5,4,2,2,0,2,16
+2026-11-07_nevada_sacramento_st,Nevada,10,"Swillis, Alexis",True,27,5,9,0.556,0,0,,4,5,0.8,1,3,4,3,0,2,1,0,14
+2026-11-07_nevada_sacramento_st,Nevada,32,"Tanke, Aili",True,33,3,8,0.375,1,6,0.167,2,2,1.0,0,7,7,3,1,2,0,1,9
+2026-11-07_nevada_sacramento_st,Nevada,05,"Chambers, Sierra",True,33,2,5,0.4,1,2,0.5,0,0,,0,1,1,0,2,3,0,0,5
+2026-11-07_nevada_sacramento_st,Nevada,08,"Poulivaati, Olivia",True,19,1,2,0.5,0,1,0.0,2,3,0.667,0,3,3,1,2,2,1,0,4
+2026-11-07_nevada_sacramento_st,Nevada,02,"Sullivan, Izzy",False,12,2,4,0.5,1,3,0.333,0,0,,0,1,1,0,0,0,0,0,5
+2026-11-07_nevada_sacramento_st,Nevada,25,"Arredondo, Delaney",False,8,1,7,0.143,1,4,0.25,0,0,,0,0,0,2,0,0,0,0,3
+2026-11-07_nevada_sacramento_st,Nevada,13,"Raidaveta, Amelia",False,12,1,1,1.0,0,0,,0,0,,1,0,1,2,1,0,0,0,2
+2026-11-07_nevada_sacramento_st,Nevada,09,"Jolinder, Hanna",False,9,1,2,0.5,0,0,,0,0,,1,0,1,1,0,1,0,0,2
+2026-11-07_nevada_sacramento_st,Nevada,11,"Backus, Britain",False,11,0,2,0.0,0,2,0.0,0,2,0.0,0,0,0,4,0,0,0,0,0
+2026-11-07_nevada_sacramento_st,Nevada,06,"Puloka, Fa’anaetaua",False,4,0,0,,0,0,,0,0,,0,0,0,1,0,2,0,0,0
+2026-11-07_nevada_sacramento_st,Nevada,22,"Howell, Dyllyn",False,4,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-11-07_nevada_sacramento_st,Nevada,03,"Jones, Imbie",False,3,0,1,0.0,0,0,,0,0,,0,1,1,1,1,1,0,0,0
+2026-11-07_nevada_sacramento_st,Nevada,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,6,8,0,0,1,0,0,0
+2026-11-07_utah_valley_santa_clara,Santa Clara,12,"Glancey, Sophie",True,28,8,16,0.5,1,3,0.333,3,3,1.0,3,6,9,4,4,4,1,2,20
+2026-11-07_utah_valley_santa_clara,Santa Clara,13,"Schmidt, Ava",True,31,3,10,0.3,0,7,0.0,3,4,0.75,2,5,7,2,2,4,4,0,9
+2026-11-07_utah_valley_santa_clara,Santa Clara,30,"Fox, Kylee",True,30,3,9,0.333,3,6,0.5,0,0,,1,4,5,1,1,0,0,3,9
+2026-11-07_utah_valley_santa_clara,Santa Clara,02,"Hooker, Aniya",True,30,1,9,0.111,1,6,0.167,5,6,0.833,1,4,5,3,5,2,0,4,8
+2026-11-07_utah_valley_santa_clara,Santa Clara,09,"Jones, Maia",True,30,2,4,0.5,2,4,0.5,2,2,1.0,1,2,3,3,4,3,0,1,8
+2026-11-07_utah_valley_santa_clara,Santa Clara,20,"Miller, Delainey",False,20,2,10,0.2,0,2,0.0,3,4,0.75,1,6,7,3,1,7,0,2,7
+2026-11-07_utah_valley_santa_clara,Santa Clara,03,"Schat, Kate",False,18,1,2,0.5,1,2,0.5,0,0,,0,0,0,1,1,0,0,1,3
+2026-11-07_utah_valley_santa_clara,Santa Clara,23,"Najjuma, Emma",False,11,0,0,,0,0,,0,0,,0,2,2,1,1,1,1,1,0
+2026-11-07_utah_valley_santa_clara,Santa Clara,05,"Schmerbach, Sara",False,2,0,0,,0,0,,0,0,,0,0,0,2,0,0,0,0,0
+2026-11-07_utah_valley_santa_clara,Santa Clara,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,2,3,0,0,0,0,0,0
+2026-11-07_utah_valley_santa_clara,Utah Valley,30,"Gentry, Elizabeth",True,38,6,13,0.462,1,4,0.25,5,6,0.833,3,5,8,3,2,1,0,2,18
+2026-11-07_utah_valley_santa_clara,Utah Valley,05,"Blackham, Cambree",True,39,4,7,0.571,0,2,0.0,5,6,0.833,0,5,5,2,7,4,0,3,13
+2026-11-07_utah_valley_santa_clara,Utah Valley,21,"Tanuvasa, Naia",True,32,2,6,0.333,2,5,0.4,0,0,,0,4,4,1,2,1,0,1,6
+2026-11-07_utah_valley_santa_clara,Utah Valley,24,"Johnson, Lauren",True,20,2,7,0.286,0,0,,0,0,,1,4,5,4,1,0,1,0,4
+2026-11-07_utah_valley_santa_clara,Utah Valley,02,"Shreeve, Anna",True,14,1,4,0.25,0,0,,1,2,0.5,0,1,1,3,1,2,0,0,3
+2026-11-07_utah_valley_santa_clara,Utah Valley,08,"Clark, Tabi",False,26,4,13,0.308,2,6,0.333,1,2,0.5,1,2,3,0,2,2,0,1,11
+2026-11-07_utah_valley_santa_clara,Utah Valley,12,"McKenna, Maren",False,23,1,7,0.143,0,2,0.0,1,2,0.5,0,7,7,2,1,2,0,3,3
+2026-11-07_utah_valley_santa_clara,Utah Valley,07,"Kitchen, Kendra",False,4,1,2,0.5,0,0,,0,0,,0,1,1,0,0,1,0,0,2
+2026-11-07_utah_valley_santa_clara,Utah Valley,20,"Johnson, Gracie",False,2,1,1,1.0,0,0,,0,0,,0,0,0,0,0,2,0,0,2
+2026-11-07_utah_valley_santa_clara,Utah Valley,00,"Stephens, Olivia",False,2,0,1,0.0,0,0,,0,0,,0,1,1,2,0,1,0,0,0
+2026-11-07_utah_valley_santa_clara,Utah Valley,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,0,4,0,0,1,0,0,0
+2026-11-08_gonzaga_uc_riverside,UC Riverside,3,"Gamble, London",True,27,5,13,0.385,2,7,0.286,0,0,,3,3,6,0,2,3,1,3,12
+2026-11-08_gonzaga_uc_riverside,UC Riverside,22,"Swanson, Taylor",True,31,3,13,0.231,0,3,0.0,5,6,0.833,1,4,5,4,4,6,2,1,11
+2026-11-08_gonzaga_uc_riverside,UC Riverside,7,"Parahi, Graecyn",True,31,3,6,0.5,2,4,0.5,1,1,1.0,2,1,3,4,0,0,0,1,9
+2026-11-08_gonzaga_uc_riverside,UC Riverside,35,"White, Alana",True,15,2,2,1.0,0,0,,1,2,0.5,3,1,4,4,1,2,0,0,5
+2026-11-08_gonzaga_uc_riverside,UC Riverside,1,"Polk, Kaylani",True,33,1,11,0.091,1,2,0.5,0,0,,1,4,5,5,3,5,0,2,3
+2026-11-08_gonzaga_uc_riverside,UC Riverside,5,"Pateman, Amy",False,20,2,6,0.333,2,3,0.667,2,2,1.0,0,1,1,0,3,3,0,3,8
+2026-11-08_gonzaga_uc_riverside,UC Riverside,24,"Lloyd, Kyori",False,22,2,5,0.4,2,2,1.0,0,0,,0,2,2,3,0,1,0,0,6
+2026-11-08_gonzaga_uc_riverside,UC Riverside,11,"Mejia, Maria",False,7,1,2,0.5,1,2,0.5,0,0,,0,0,0,0,0,1,0,0,3
+2026-11-08_gonzaga_uc_riverside,UC Riverside,21,"Moreno, Lucia",False,12,0,2,0.0,0,1,0.0,1,2,0.5,1,1,2,1,0,1,2,0,1
+2026-11-08_gonzaga_uc_riverside,UC Riverside,20,"Tse, Dylan",False,2,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2026-11-08_gonzaga_uc_riverside,UC Riverside,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,1,2,0,0,0,0,0,0
+2026-11-08_gonzaga_uc_riverside,Gonzaga,11,"Turner, Allie",True,27,5,9,0.556,2,5,0.4,2,2,1.0,0,2,2,1,3,3,0,0,14
+2026-11-08_gonzaga_uc_riverside,Gonzaga,33,"Whittaker, Lauren",True,24,5,10,0.5,0,2,0.0,4,4,1.0,4,10,14,2,5,4,0,4,14
+2026-11-08_gonzaga_uc_riverside,Gonzaga,20,"Smith, Taylor",True,26,3,6,0.5,0,0,,6,8,0.75,4,3,7,2,4,2,0,2,12
+2026-11-08_gonzaga_uc_riverside,Gonzaga,55,"Aokuso, Zeryhia",True,23,2,5,0.4,0,2,0.0,1,1,1.0,1,5,6,4,2,2,0,3,5
+2026-11-08_gonzaga_uc_riverside,Gonzaga,00,"Bettencourt, Ines",True,20,2,6,0.333,0,1,0.0,1,1,1.0,0,3,3,2,2,2,1,2,5
+2026-11-08_gonzaga_uc_riverside,Gonzaga,24,"Gardner, Teryn",False,21,4,10,0.4,3,7,0.429,0,0,,1,2,3,2,1,1,0,5,11
+2026-11-08_gonzaga_uc_riverside,Gonzaga,22,"Dalan, McKynnlie",False,17,3,6,0.5,0,1,0.0,2,3,0.667,3,1,4,2,1,0,0,0,8
+2026-11-08_gonzaga_uc_riverside,Gonzaga,3,"Wilson, Julia",False,17,2,7,0.286,1,2,0.5,0,0,,0,0,0,1,1,0,0,0,5
+2026-11-08_gonzaga_uc_riverside,Gonzaga,12,"Osarobo, Christabel",False,6,2,2,1.0,1,1,1.0,0,0,,1,0,1,0,0,0,0,0,5
+2026-11-08_gonzaga_uc_riverside,Gonzaga,13,"Lusk, Abby",False,6,2,3,0.667,0,1,0.0,0,0,,0,2,2,0,1,1,0,0,4
+2026-11-08_gonzaga_uc_riverside,Gonzaga,4,"Roach, Emmy",False,7,0,1,0.0,0,0,,2,2,1.0,0,0,0,0,1,1,0,0,2
+2026-11-08_gonzaga_uc_riverside,Gonzaga,8,"Medina, Jocelyn",False,6,0,0,,0,0,,0,0,,1,2,3,1,0,2,0,1,0
+2026-11-08_gonzaga_uc_riverside,Gonzaga,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,1,4,0,0,2,0,0,0
+2026-11-09_idaho_st_cal_poly,Cal Poly,1,"Lee, Sumer",True,32,4,8,0.5,1,2,0.5,3,4,0.75,1,4,5,4,2,4,0,0,12
+2026-11-09_idaho_st_cal_poly,Cal Poly,5,"Robinson, Gabby",True,39,3,6,0.5,1,2,0.5,0,0,,2,3,5,2,4,2,1,2,7
+2026-11-09_idaho_st_cal_poly,Cal Poly,23,"Ulmer, Dessi",True,17,2,5,0.4,0,0,,0,0,,1,0,1,5,0,3,0,1,4
+2026-11-09_idaho_st_cal_poly,Cal Poly,4,"Tauro, Maddy",True,13,1,10,0.1,0,1,0.0,2,2,1.0,1,3,4,3,0,2,0,0,4
+2026-11-09_idaho_st_cal_poly,Cal Poly,24,"Butcher, Madison",True,21,1,5,0.2,0,4,0.0,0,0,,1,2,3,3,1,2,0,0,2
+2026-11-09_idaho_st_cal_poly,Cal Poly,47,"Knapp, Avery",False,13,1,2,0.5,0,0,,6,6,1.0,0,0,0,5,0,0,1,0,8
+2026-11-09_idaho_st_cal_poly,Cal Poly,00,"von Seipler, Ysabella",False,29,3,6,0.5,1,4,0.25,0,1,0.0,0,2,2,3,2,0,0,2,7
+2026-11-09_idaho_st_cal_poly,Cal Poly,2,"Alexander, Mecca",False,26,1,4,0.25,0,1,0.0,5,6,0.833,0,0,0,2,1,0,0,3,7
+2026-11-09_idaho_st_cal_poly,Cal Poly,3,"Skrzyniarz, Ella",False,10,0,4,0.0,0,2,0.0,0,0,,0,0,0,2,0,1,1,1,0
+2026-11-09_idaho_st_cal_poly,Cal Poly,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,0,0,0,0,2,0,0,0
+2026-11-09_idaho_st_cal_poly,Idaho St.,2,"Caldwell, Aspen",True,36,6,14,0.429,1,5,0.2,5,6,0.833,0,0,0,2,1,3,0,0,18
+2026-11-09_idaho_st_cal_poly,Idaho St.,24,"Hutka, Maggie",True,24,6,7,0.857,0,0,,0,2,0.0,2,6,8,3,0,4,2,1,12
+2026-11-09_idaho_st_cal_poly,Idaho St.,21,"Valentine, Clare",True,31,3,7,0.429,1,4,0.25,3,7,0.429,2,4,6,3,1,1,1,0,10
+2026-11-09_idaho_st_cal_poly,Idaho St.,4,"Radnjic, Bojana",True,24,2,2,1.0,0,0,,1,2,0.5,2,2,4,3,4,2,0,1,5
+2026-11-09_idaho_st_cal_poly,Idaho St.,22,"Wilkerson, Jazzy",True,14,1,7,0.143,1,6,0.167,0,0,,0,0,0,1,0,0,0,0,3
+2026-11-09_idaho_st_cal_poly,Idaho St.,13,"Wolfram, Asa",False,12,1,2,0.5,0,0,,6,6,1.0,1,1,2,4,0,2,0,0,8
+2026-11-09_idaho_st_cal_poly,Idaho St.,10,"Arnason, Krystal",False,26,2,4,0.5,0,2,0.0,1,1,1.0,2,9,11,2,2,3,3,1,5
+2026-11-09_idaho_st_cal_poly,Idaho St.,23,"Bryant, Emma",False,23,0,2,0.0,0,1,0.0,3,5,0.6,3,2,5,3,1,1,0,1,3
+2026-11-09_idaho_st_cal_poly,Idaho St.,7,"Vukona, Gia",False,10,0,3,0.0,0,3,0.0,0,0,,0,0,0,3,0,1,0,1,0
+2026-11-09_idaho_st_cal_poly,Idaho St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,0,0,0,0,1,0,0,0
+2026-11-09_long_beach_st_santa_clara,Santa Clara,9,"Jones, Maia",True,27,7,14,0.5,5,7,0.714,5,5,1.0,0,0,0,1,1,2,0,2,24
+2026-11-09_long_beach_st_santa_clara,Santa Clara,12,"Glancey, Sophie",True,27,6,20,0.3,1,3,0.333,1,2,0.5,4,4,8,0,2,1,1,1,14
+2026-11-09_long_beach_st_santa_clara,Santa Clara,13,"Schmidt, Ava",True,30,5,12,0.417,3,8,0.375,0,0,,1,6,7,1,0,0,0,1,13
+2026-11-09_long_beach_st_santa_clara,Santa Clara,2,"Hooker, Aniya",True,26,2,6,0.333,1,3,0.333,4,4,1.0,1,0,1,2,9,1,1,2,9
+2026-11-09_long_beach_st_santa_clara,Santa Clara,30,"Fox, Kylee",True,24,1,5,0.2,0,3,0.0,0,0,,3,4,7,1,4,0,0,1,2
+2026-11-09_long_beach_st_santa_clara,Santa Clara,20,"Miller, Delainey",False,19,5,9,0.556,1,3,0.333,2,2,1.0,1,3,4,2,1,1,0,0,13
+2026-11-09_long_beach_st_santa_clara,Santa Clara,23,"Najjuma, Emma",False,16,5,10,0.5,0,1,0.0,1,2,0.5,8,5,13,4,1,0,5,0,11
+2026-11-09_long_beach_st_santa_clara,Santa Clara,3,"Schat, Kate",False,17,1,5,0.2,1,4,0.25,0,0,,1,0,1,0,1,0,0,0,3
+2026-11-09_long_beach_st_santa_clara,Santa Clara,5,"Schmerbach, Sara",False,12,0,2,0.0,0,1,0.0,0,0,,5,1,6,0,2,0,0,0,0
+2026-11-09_long_beach_st_santa_clara,Santa Clara,11,"Blachly, Brooke",False,2,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2026-11-09_long_beach_st_santa_clara,Santa Clara,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,2,3,0,0,0,0,0,0
+2026-11-09_long_beach_st_santa_clara,Long Beach St.,23,"Arvai, Noemi",True,37,8,13,0.615,3,5,0.6,3,4,0.75,2,7,9,3,2,2,0,1,22
+2026-11-09_long_beach_st_santa_clara,Long Beach St.,21,"Berry, Kailyn",True,27,6,13,0.462,2,7,0.286,0,0,,2,6,8,2,3,1,0,0,14
+2026-11-09_long_beach_st_santa_clara,Long Beach St.,00,"Furch, Amber",True,27,5,12,0.417,1,3,0.333,2,2,1.0,1,2,3,4,8,4,0,0,13
+2026-11-09_long_beach_st_santa_clara,Long Beach St.,14,"Chico Fernandez, Lucia",True,23,1,4,0.25,1,2,0.5,0,0,,0,2,2,1,0,2,0,0,3
+2026-11-09_long_beach_st_santa_clara,Long Beach St.,2,"Akot, Rosie",True,12,0,6,0.0,0,0,,0,0,,0,2,2,0,1,1,2,0,0
+2026-11-09_long_beach_st_santa_clara,Long Beach St.,15,"Kujovic, Danijela",False,26,3,8,0.375,1,4,0.25,0,2,0.0,2,5,7,2,2,1,6,0,7
+2026-11-09_long_beach_st_santa_clara,Long Beach St.,10,"Taylor-smith, Ebony",False,30,2,5,0.4,2,5,0.4,0,0,,0,0,0,3,2,2,0,0,6
+2026-11-09_long_beach_st_santa_clara,Long Beach St.,3,"Proctor, Fia",False,15,2,2,1.0,1,1,1.0,0,0,,0,0,0,0,1,1,0,0,5
+2026-11-09_long_beach_st_santa_clara,Long Beach St.,30,"Reyes, Aryanna",False,3,0,0,,0,0,,0,0,,0,0,0,0,1,1,0,0,0
+2026-11-09_long_beach_st_santa_clara,Long Beach St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,4,2,6,0,0,0,0,0,0
+2026-11-09_uc_santa_barbara_seattle_u,Seattle U,55,"Jones, Cristina",True,37,8,14,0.571,0,0,,4,10,0.4,1,2,3,1,1,2,1,3,20
+2026-11-09_uc_santa_barbara_seattle_u,Seattle U,22,"Neale, Alanna",True,31,3,11,0.273,3,6,0.5,4,6,0.667,1,5,6,1,3,4,0,0,13
+2026-11-09_uc_santa_barbara_seattle_u,Seattle U,10,"Fraser, Claire",True,18,1,3,0.333,1,3,0.333,2,2,1.0,0,1,1,1,0,3,0,0,5
+2026-11-09_uc_santa_barbara_seattle_u,Seattle U,04,"Buzzard, Sophie",True,29,2,4,0.5,0,1,0.0,0,0,,0,0,0,4,2,0,0,0,4
+2026-11-09_uc_santa_barbara_seattle_u,Seattle U,00,"Duchemin, Shelley",True,11,0,1,0.0,0,0,,0,0,,1,0,1,1,0,1,0,0,0
+2026-11-09_uc_santa_barbara_seattle_u,Seattle U,06,"Escorial Ferrero, Gabriela",False,21,1,8,0.125,0,0,,0,0,,4,1,5,4,0,2,0,1,2
+2026-11-09_uc_santa_barbara_seattle_u,Seattle U,08,"Powers, Nari",False,9,1,2,0.5,0,1,0.0,0,0,,0,1,1,1,0,0,0,0,2
+2026-11-09_uc_santa_barbara_seattle_u,Seattle U,12,"Jackson, Ayanna",False,6,0,1,0.0,0,0,,2,2,1.0,1,1,2,0,0,1,0,0,2
+2026-11-09_uc_santa_barbara_seattle_u,Seattle U,03,"Sellers, Erin",False,19,0,4,0.0,0,2,0.0,0,2,0.0,2,3,5,1,2,4,0,0,0
+2026-11-09_uc_santa_barbara_seattle_u,Seattle U,05,"Mogel, Dylan",False,9,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2026-11-09_uc_santa_barbara_seattle_u,Seattle U,21,"Nenadic, Milana",False,7,0,2,0.0,0,1,0.0,0,0,,0,0,0,0,1,0,0,0,0
+2026-11-09_uc_santa_barbara_seattle_u,Seattle U,02,"Biddle, Lindsay",False,3,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-11-09_uc_santa_barbara_seattle_u,Seattle U,TM,TEAM,False,0,0,0,,0,0,,0,0,,2,1,3,0,0,0,0,0,0
+2026-11-09_uc_santa_barbara_seattle_u,UC Santa Barbara,02,"Borter, Zoe",True,26,8,10,0.8,6,6,1.0,0,0,,1,0,1,2,3,0,0,1,22
+2026-11-09_uc_santa_barbara_seattle_u,UC Santa Barbara,24,"Zonzon-Huyghe, Naomy",True,29,5,7,0.714,1,3,0.333,5,6,0.833,0,4,4,3,5,2,1,3,16
+2026-11-09_uc_santa_barbara_seattle_u,UC Santa Barbara,00,"Steiner, Nicole",True,26,7,10,0.7,0,0,,1,1,1.0,4,2,6,1,1,1,1,1,15
+2026-11-09_uc_santa_barbara_seattle_u,UC Santa Barbara,12,"Naro, Maddie",True,24,4,8,0.5,1,3,0.333,2,2,1.0,0,3,3,1,6,2,0,1,11
+2026-11-09_uc_santa_barbara_seattle_u,UC Santa Barbara,07,"Flores, Karisma",True,17,3,6,0.5,2,5,0.4,2,2,1.0,1,3,4,3,0,2,0,0,10
+2026-11-09_uc_santa_barbara_seattle_u,UC Santa Barbara,15,"Andersen, Chauncey",False,16,4,6,0.667,0,2,0.0,0,0,,0,2,2,2,2,1,0,1,8
+2026-11-09_uc_santa_barbara_seattle_u,UC Santa Barbara,25,"Lipkin, Charlotte",False,18,2,3,0.667,2,3,0.667,0,0,,1,3,4,1,1,1,1,0,6
+2026-11-09_uc_santa_barbara_seattle_u,UC Santa Barbara,10,"Anderson, Olivia",False,13,2,5,0.4,0,2,0.0,0,0,,2,1,3,4,0,0,2,0,4
+2026-11-09_uc_santa_barbara_seattle_u,UC Santa Barbara,03,"Hashemian-Orr, Mauriana",False,23,0,2,0.0,0,1,0.0,0,0,,0,3,3,1,3,1,0,1,0
+2026-11-09_uc_santa_barbara_seattle_u,UC Santa Barbara,11,"Heyn, Sarah",False,5,0,2,0.0,0,1,0.0,0,0,,0,0,0,2,0,0,0,0,0
+2026-11-09_uc_santa_barbara_seattle_u,UC Santa Barbara,21,"Albanese, Ava",False,3,0,0,,0,0,,0,0,,0,0,0,1,0,0,0,0,0
+2026-11-09_uc_santa_barbara_seattle_u,UC Santa Barbara,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,5,6,0,0,0,0,0,0
+2026-11-09_sacramento_st_cal_st_east_bay,Cal St. East Bay,15,"Morris, Sierra",True,28,4,10,0.4,0,1,0.0,1,2,0.5,2,5,7,1,1,3,0,2,9
+2026-11-09_sacramento_st_cal_st_east_bay,Cal St. East Bay,04,"Estrada, Hailey",True,24,4,7,0.571,1,2,0.5,0,0,,2,1,3,2,1,5,0,0,9
+2026-11-09_sacramento_st_cal_st_east_bay,Cal St. East Bay,03,"Akaka, Aloha",True,24,4,14,0.286,0,2,0.0,0,0,,0,2,2,2,5,3,1,4,8
+2026-11-09_sacramento_st_cal_st_east_bay,Cal St. East Bay,02,"Carey, Lailah",True,21,1,5,0.2,1,3,0.333,1,2,0.5,2,2,4,1,1,4,0,0,4
+2026-11-09_sacramento_st_cal_st_east_bay,Cal St. East Bay,00,"Anderson, Monroe",True,22,0,2,0.0,0,1,0.0,0,0,,2,3,5,3,0,2,0,2,0
+2026-11-09_sacramento_st_cal_st_east_bay,Cal St. East Bay,14,"Lendsey, Sydnie",False,12,2,4,0.5,1,1,1.0,3,6,0.5,0,0,0,2,0,3,0,0,8
+2026-11-09_sacramento_st_cal_st_east_bay,Cal St. East Bay,08,"Alexandre, Fernanda",False,17,2,10,0.2,2,5,0.4,1,2,0.5,1,1,2,0,0,1,0,0,7
+2026-11-09_sacramento_st_cal_st_east_bay,Cal St. East Bay,21,"Wright, Gabby",False,17,2,2,1.0,0,0,,0,0,,3,1,4,5,2,0,0,0,4
+2026-11-09_sacramento_st_cal_st_east_bay,Cal St. East Bay,05,"Martinez, Josline",False,17,1,2,0.5,0,1,0.0,0,2,0.0,0,4,4,2,1,1,0,0,2
+2026-11-09_sacramento_st_cal_st_east_bay,Cal St. East Bay,24,"Byrd, Synise",False,12,0,4,0.0,0,2,0.0,1,2,0.5,0,0,0,1,0,1,0,0,1
+2026-11-09_sacramento_st_cal_st_east_bay,Cal St. East Bay,20,"Shipman, Kylin",False,6,0,0,,0,0,,0,0,,0,1,1,1,0,0,0,0,0
+2026-11-09_sacramento_st_cal_st_east_bay,Cal St. East Bay,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,3,6,0,0,0,0,0,0
+2026-11-09_sacramento_st_cal_st_east_bay,Sacramento St.,02,"Picton, Natalie",True,28,8,17,0.471,2,8,0.25,4,4,1.0,0,0,0,0,5,3,0,4,22
+2026-11-09_sacramento_st_cal_st_east_bay,Sacramento St.,23,"Akridge, Koko",True,29,7,10,0.7,3,4,0.75,1,2,0.5,0,3,3,1,3,2,1,3,18
+2026-11-09_sacramento_st_cal_st_east_bay,Sacramento St.,05,"Abiara, Elizabeth",True,17,3,5,0.6,0,0,,1,2,0.5,4,3,7,2,1,0,0,0,7
+2026-11-09_sacramento_st_cal_st_east_bay,Sacramento St.,31,"Savic, Jelena",True,26,2,8,0.25,0,5,0.0,1,1,1.0,0,1,1,0,2,0,0,0,5
+2026-11-09_sacramento_st_cal_st_east_bay,Sacramento St.,24,"Cotton, Jenessa",True,19,2,4,0.5,0,0,,0,0,,2,8,10,3,0,2,0,0,4
+2026-11-09_sacramento_st_cal_st_east_bay,Sacramento St.,20,"Magot, Achol",False,11,3,5,0.6,0,0,,5,6,0.833,4,5,9,0,0,2,2,1,11
+2026-11-09_sacramento_st_cal_st_east_bay,Sacramento St.,35,"Hess, Alexis",False,13,2,2,1.0,1,1,1.0,3,4,0.75,0,0,0,2,2,1,1,3,8
+2026-11-09_sacramento_st_cal_st_east_bay,Sacramento St.,14,"Fa'i, Tali",False,16,1,4,0.25,0,1,0.0,2,2,1.0,0,1,1,1,2,1,0,6,4
+2026-11-09_sacramento_st_cal_st_east_bay,Sacramento St.,11,"Barlow, Jordan",False,10,1,5,0.2,0,0,,0,0,,0,1,1,1,2,0,1,0,2
+2026-11-09_sacramento_st_cal_st_east_bay,Sacramento St.,08,"Mandaquit, Jaety",False,14,0,1,0.0,0,0,,1,2,0.5,1,3,4,1,0,0,0,0,1
+2026-11-09_sacramento_st_cal_st_east_bay,Sacramento St.,12,"Lual, Ajong",False,11,0,1,0.0,0,0,,0,0,,0,2,2,2,0,2,0,0,0
+2026-11-09_sacramento_st_cal_st_east_bay,Sacramento St.,00,"Harmon, Jeniece",False,6,0,1,0.0,0,0,,0,0,,0,1,1,2,0,0,0,0,0
+2026-11-09_sacramento_st_cal_st_east_bay,Sacramento St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,0,1,0,0,2,0,0,0
+2026-11-10_northern_ariz_uc_irvine,UC Irvine,2,"Young, Ahrray",True,28,8,15,0.533,3,4,0.75,4,5,0.8,2,4,6,4,2,1,0,0,23
+2026-11-10_northern_ariz_uc_irvine,UC Irvine,7,"Gallegos, Gracie",True,38,8,18,0.444,0,3,0.0,1,3,0.333,1,10,11,2,2,6,0,1,17
+2026-11-10_northern_ariz_uc_irvine,UC Irvine,10,"Madsen, Lauryn",True,31,1,3,0.333,1,2,0.5,2,2,1.0,3,2,5,2,0,1,1,1,5
+2026-11-10_northern_ariz_uc_irvine,UC Irvine,12,"Nahum, Shirel",True,22,0,3,0.0,0,1,0.0,3,6,0.5,0,4,4,5,4,3,0,2,3
+2026-11-10_northern_ariz_uc_irvine,UC Irvine,9,"Falcon Hernandez, Daniela",True,9,0,0,,0,0,,0,0,,0,1,1,2,0,0,1,0,0
+2026-11-10_northern_ariz_uc_irvine,UC Irvine,13,"Stores, Nohe'alani",False,18,5,8,0.625,0,0,,4,7,0.571,2,3,5,2,0,1,1,1,14
+2026-11-10_northern_ariz_uc_irvine,UC Irvine,21,"Asidanya, Makiah",False,13,2,4,0.5,0,2,0.0,1,2,0.5,1,0,1,1,2,1,0,1,5
+2026-11-10_northern_ariz_uc_irvine,UC Irvine,23,"White, Delaney",False,13,2,7,0.286,1,4,0.25,0,0,,1,1,2,4,1,2,0,2,5
+2026-11-10_northern_ariz_uc_irvine,UC Irvine,14,"Hanson, Summah",False,16,1,3,0.333,0,2,0.0,0,0,,1,0,1,3,0,0,0,0,2
+2026-11-10_northern_ariz_uc_irvine,UC Irvine,8,"Miller, Sarah",False,7,0,2,0.0,0,2,0.0,2,2,1.0,0,0,0,3,0,0,0,0,2
+2026-11-10_northern_ariz_uc_irvine,UC Irvine,11,"Hernandez, Haley",False,5,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2026-11-10_northern_ariz_uc_irvine,UC Irvine,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,1,2,0,0,0,0,0,0
+2026-11-10_northern_ariz_uc_irvine,Northern Ariz.,14,"Hawkins, Morgan",True,38,3,9,0.333,1,4,0.25,2,2,1.0,0,1,1,2,3,3,0,1,9
+2026-11-10_northern_ariz_uc_irvine,Northern Ariz.,7,"Davis, Layla",True,19,3,8,0.375,1,2,0.5,2,3,0.667,2,3,5,4,1,1,0,1,9
+2026-11-10_northern_ariz_uc_irvine,Northern Ariz.,3,"Watts, Madison",True,17,2,7,0.286,0,0,,3,3,1.0,1,2,3,3,1,2,0,0,7
+2026-11-10_northern_ariz_uc_irvine,Northern Ariz.,12,"Bullard, Leah",True,13,1,1,1.0,1,1,1.0,2,4,0.5,0,3,3,2,1,2,0,0,5
+2026-11-10_northern_ariz_uc_irvine,Northern Ariz.,22,"Knighton, Tianna",True,18,1,4,0.25,1,3,0.333,0,0,,0,1,1,1,1,1,0,1,3
+2026-11-10_northern_ariz_uc_irvine,Northern Ariz.,11,"Smith, Aaliyah",False,31,4,10,0.4,4,6,0.667,7,8,0.875,0,3,3,4,6,4,0,2,19
+2026-11-10_northern_ariz_uc_irvine,Northern Ariz.,2,"Moore, Olivia",False,26,3,7,0.429,3,5,0.6,3,4,0.75,1,3,4,5,1,0,0,1,12
+2026-11-10_northern_ariz_uc_irvine,Northern Ariz.,00,"Dasovich, Emma",False,25,3,6,0.5,1,4,0.25,3,4,0.75,2,7,9,4,1,3,0,1,10
+2026-11-10_northern_ariz_uc_irvine,Northern Ariz.,24,"Silas, Micayla",False,8,0,2,0.0,0,1,0.0,0,0,,0,2,2,1,0,0,0,0,0
+2026-11-10_northern_ariz_uc_irvine,Northern Ariz.,23,"Lizama, Alondra",False,5,0,0,,0,0,,0,0,,0,0,0,2,0,2,0,0,0
+2026-11-10_northern_ariz_uc_irvine,Northern Ariz.,TM,TEAM,False,0,0,0,,0,0,,0,0,,3,3,6,0,0,0,0,0,0
+2026-11-10_boise_st_csun,CSUN,2,"White, Saray",True,29,4,10,0.4,0,2,0.0,5,8,0.625,0,4,4,1,1,1,0,2,13
+2026-11-10_boise_st_csun,CSUN,8,"Filemu, Kira-may",True,30,3,9,0.333,3,8,0.375,0,0,,0,8,8,1,0,5,0,2,9
+2026-11-10_boise_st_csun,CSUN,12,"Dignadice, Sophia",True,29,3,10,0.3,0,0,,3,5,0.6,2,1,3,1,0,3,0,0,9
+2026-11-10_boise_st_csun,CSUN,33,"Nazário, Rita",True,22,2,6,0.333,2,5,0.4,2,2,1.0,0,1,1,1,2,1,0,0,8
+2026-11-10_boise_st_csun,CSUN,15,"Okafor Nweze, Princess",True,13,0,0,,0,0,,0,2,0.0,1,2,3,3,0,1,0,1,0
+2026-11-10_boise_st_csun,CSUN,1,"Moody, Amya",False,18,4,8,0.5,1,2,0.5,2,2,1.0,0,1,1,0,1,0,1,0,11
+2026-11-10_boise_st_csun,CSUN,16,"Cocuzza, Carlotta",False,26,1,3,0.333,0,0,,2,2,1.0,0,3,3,4,1,1,0,0,4
+2026-11-10_boise_st_csun,CSUN,23,"Contreras, Maya",False,5,1,2,0.5,0,0,,1,2,0.5,3,0,3,1,0,0,0,0,3
+2026-11-10_boise_st_csun,CSUN,34,"Bernard, Nadia",False,17,1,5,0.2,0,1,0.0,0,0,,1,0,1,3,0,0,2,0,2
+2026-11-10_boise_st_csun,CSUN,6,"Kabada, Hodaya",False,9,0,3,0.0,0,2,0.0,0,0,,0,0,0,0,0,0,0,0,0
+2026-11-10_boise_st_csun,CSUN,21,"Canadell, Jana",False,2,0,0,,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-11-10_boise_st_csun,CSUN,TM,TEAM,False,0,0,0,,0,0,,0,0,,0,1,1,0,0,0,0,0,0
+2026-11-10_boise_st_csun,Boise St.,2,"Foster, Grace",True,21,4,8,0.5,2,6,0.333,1,2,0.5,2,4,6,1,1,0,1,0,11
+2026-11-10_boise_st_csun,Boise St.,11,"Anderson, Zia-daye",True,27,5,12,0.417,0,3,0.0,0,0,,1,8,9,2,7,2,0,1,10
+2026-11-10_boise_st_csun,Boise St.,3,"Maldonado, Morgan",True,21,1,6,0.167,0,0,,5,6,0.833,2,1,3,0,2,0,0,0,7
+2026-11-10_boise_st_csun,Boise St.,9,"Hutton, Libby",True,13,2,5,0.4,0,0,,2,4,0.5,1,2,3,3,1,3,0,0,6
+2026-11-10_boise_st_csun,Boise St.,13,"Quinn, Mason",True,17,1,4,0.25,0,0,,0,0,,1,6,7,3,1,1,0,0,2
+2026-11-10_boise_st_csun,Boise St.,7,"Harms, Izzie",False,22,5,8,0.625,2,3,0.667,4,4,1.0,1,1,2,2,0,3,1,0,16
+2026-11-10_boise_st_csun,Boise St.,6,"Sharp, Milly",False,19,3,4,0.75,1,2,0.5,0,0,,3,4,7,2,0,0,0,1,7
+2026-11-10_boise_st_csun,Boise St.,00,"Latta, Cj",False,18,2,5,0.4,2,4,0.5,0,0,,0,0,0,0,2,0,0,0,6
+2026-11-10_boise_st_csun,Boise St.,21,"Borcherding, Mason",False,17,3,5,0.6,0,0,,0,0,,0,1,1,3,1,2,0,1,6
+2026-11-10_boise_st_csun,Boise St.,35,"Thompson, Keirra",False,6,2,5,0.4,2,5,0.4,0,0,,0,1,1,0,1,0,0,0,6
+2026-11-10_boise_st_csun,Boise St.,22,"Garza, Kenna",False,9,2,2,1.0,1,1,1.0,0,0,,1,1,2,0,1,1,0,0,5
+2026-11-10_boise_st_csun,Boise St.,24,"Lewis, Jayda",False,4,0,0,,0,0,,0,0,,0,0,0,0,2,0,0,0,0
+2026-11-10_boise_st_csun,Boise St.,5,"Gilpatrick, Paige",False,3,0,1,0.0,0,0,,0,0,,0,0,0,0,0,0,0,0,0
+2026-11-10_boise_st_csun,Boise St.,15,"McCrea, Emerson",False,3,0,0,,0,0,,0,0,,0,0,0,0,1,0,0,0,0
+2026-11-10_boise_st_csun,Boise St.,TM,TEAM,False,0,0,0,,0,0,,0,0,,1,2,3,0,0,1,0,0,0

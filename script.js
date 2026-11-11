@@ -20,7 +20,7 @@ const SEASON_CACHE = {};
 const BART_CACHE = {};
 const BART_PLAYER_CACHE = {};
 const ARCHETYPE_CACHE = {};
-const DATA_VERSION = '20261028-merged-rosters';
+const DATA_VERSION = '20261111-played-games';
 const CURRENT_ROSTER_SEASON = '2026-27';
 const OFFICIAL_ROSTER_CACHE = {};
 let lastSeasonPlayerRows = null;
@@ -96,6 +96,7 @@ function lastSeasonPlayerMatch(team, player){
 function applyLastSeasonPlayerStats(){
   if(state.season !== CURRENT_ROSTER_SEASON) return;
   for(const [key, team] of Object.entries(TEAMS)){
+    if(!team.rosterOnly) continue; // teams with played games keep their real 2026–27 stats
     const officialPlayers = OFFICIAL_ROSTER_CACHE[CURRENT_ROSTER_SEASON].teams[key].players;
     team.players = officialPlayers.map(player => {
       const base = {...player, statsUnavailable:true, gp:0, min:0, fgm:0, fga:0,
@@ -117,7 +118,56 @@ function applyLastSeasonPlayerStats(){
 
 function priorStatsLabel(player){
   if(state.season !== CURRENT_ROSTER_SEASON || !state.showLastSeasonStats) return '';
+  if(!player.statsUnavailable && !player.priorStatsSeason) return ''; // real 2026–27 stats, not a last-season placeholder
   return player.statsUnavailable ? 'No 2025–26 stats found' : `2025–26 · ${player.priorStatsTeam}`;
+}
+
+/* ---- Played 2026–27 games -----------------------------------------------------------------
+   Overlays the scraped season totals (data/2026-27.json) on a team's official roster so players
+   keep their photos, heights and class years. Box-score players the official roster doesn't list
+   are appended so team totals still add up. */
+const PLAYED_STAT_KEYS = ['gp','min','fgm','fga','tpm','tpa','ftm','fta','oreb','dreb','ast','stl','blk','to','pts'];
+
+function matchPlayedPlayer(player, playedPlayers, used){
+  const key = lastSeasonNameKey(player.name);
+  let idx = playedPlayers.findIndex((p, i) => !used.has(i) && lastSeasonNameKey(p.name) === key);
+  if(idx >= 0) return idx;
+  // Same jersey and same last name covers nickname / spelling differences between the two sources.
+  const last = name => loosePlayerNameKey(name).split(' ').slice(-1)[0];
+  idx = playedPlayers.findIndex((p, i) => !used.has(i) && String(p.num) === String(player.num) && last(p.name) === last(player.name));
+  return idx;
+}
+
+function withPlayedGames(team, played){
+  const used = new Set();
+  const zero = Object.fromEntries(PLAYED_STAT_KEYS.map(k => [k, 0]));
+  const players = team.players.map(player => {
+    const idx = matchPlayedPlayer(player, played.players, used);
+    if(idx >= 0) used.add(idx);
+    const stats = idx >= 0 ? Object.fromEntries(PLAYED_STAT_KEYS.map(k => [k, played.players[idx][k] ?? 0])) : zero;
+    return {...player, ...stats, statsUnavailable:false};
+  });
+  played.players.forEach((p, i) => {
+    if(!used.has(i) && p.gp > 0) players.push({...p, classYear:p.classYear || p.cls || '', statsUnavailable:false});
+  });
+  return {...team, players, games:played.games, playerGameLogs:played.playerGameLogs || {}, rosterOnly:false};
+}
+
+/* A 2026–27 team still counts as "roster only" until it has a played game. Compare pages look at
+   the teams actually on screen so one side with stats isn't blanked by the other's placeholder. */
+function comparedTeamKeys(){
+  if(state.view === 'cplayers') return [state.p1.team, state.p2.team];
+  if(state.view === 'cteams') return [state.t1, state.t2];
+  return [state.team];
+}
+function placeholderTeamKeys(){
+  return state.season === CURRENT_ROSTER_SEASON ? comparedTeamKeys().filter(key => TEAMS[key]?.rosterOnly) : [];
+}
+function comparePlaceholderActive(){ return placeholderTeamKeys().length > 0; }
+function comparePriorBadge(){
+  const placeholders = placeholderTeamKeys().length;
+  if(!placeholders || !state.showLastSeasonStats) return '';
+  return placeholders === comparedTeamKeys().length ? `${PRIOR_STATS_SEASON} stats` : `${PRIOR_STATS_SEASON} stats for roster-only teams`;
 }
 const UPCOMING_SEASON = CURRENT_ROSTER_SEASON;
 const PRIOR_STATS_SEASON = '2025-26';
@@ -453,8 +503,13 @@ async function loadSeason(season){
       OFFICIAL_ROSTER_CACHE[season] = official;
     }
     await Promise.all([loadStandings(), loadArchetypes()]);
+    /* data/<season>.json carries the games scraped so far (build_data.py). A team with at least
+       one played game becomes a regular stats team; every other team stays roster-only. */
+    const played = SEASON_CACHE[season] || {};
     TEAMS = Object.fromEntries(Object.entries(OFFICIAL_ROSTER_CACHE[season].teams)
-      .map(([key, team]) => [key, {...team, rosterOnly:true, games:[], playerGameLogs:{}}]));
+      .map(([key, team]) => [key, played[key]?.games?.length
+        ? withPlayedGames(team, played[key])
+        : {...team, rosterOnly:true, games:[], playerGameLogs:{}}]));
     TEAM_KEYS = Object.keys(TEAMS);
     if(!TEAMS[state.team]) state.team = TEAM_KEYS[0];
     for(const key of ['t1','t2']) if(!TEAMS[state[key]]) state[key] = TEAM_KEYS[0];
@@ -1975,14 +2030,17 @@ function viewGameLog(){
     ensureTeamData(state.team, state.season).then(()=>render());
     return loadingCard(state.team, state.season);
   }
-  /* Before any games are played, list the scheduled opponents with zeroed stats. */
-  const scheduled = !team.games.length && team.schedule?.length;
-  const sourceGames = scheduled
-    ? team.schedule.map(g=>({
-        date:g.date, opp:g.opp, home:g.home==='home', locCode:g.home==='home' ? 'H' : g.home==='away' ? 'A' : 'N',
-        scheduled:true, time:g.time, conf:g.conf, pf:0, pa:0, win:false, fgm:0, fga:0, reb:0, ast:0, to:0,
-      }))
-    : team.games;
+  /* A season in progress lists the played games (with box scores) and then the rest of the
+     schedule: every scheduled date with no played game yet. Before the first game that is just
+     the schedule; completed seasons have no schedule, so they list only played games. */
+  const playedDates = new Set(team.games.map(g=>g.date));
+  const upcoming = (team.schedule || []).filter(g=>!playedDates.has(g.date)).map(g=>({
+    date:g.date, opp:g.opp, home:g.home==='home', locCode:g.home==='home' ? 'H' : g.home==='away' ? 'A' : 'N',
+    scheduled:true, time:g.time, conf:g.conf, pf:0, pa:0, win:false, fgm:0, fga:0, reb:0, ast:0, to:0,
+  }));
+  const scheduled = !team.games.length && upcoming.length > 0;   // nothing played yet
+  const inProgress = team.games.length > 0 && upcoming.length > 0;
+  const sourceGames = [...team.games, ...upcoming];
   let rows = sourceGames.map(g=>({...g, fgpct:pct(g.fgm,g.fga)}));
   const {key,dir} = state.gameSort;
   const sortVal = g => key==='result' ? (g.win?1:0) : key==='loc' ? (g.home?1:0) : key==='opp' ? g.opp : g[key];
@@ -1990,7 +2048,7 @@ function viewGameLog(){
 
   return `
     <div class="card">
-      <div class="card-title"><h3>${team.name} · ${sourceGames.length} ${scheduled ? 'scheduled games' : 'games'}</h3><span class="hint">${scheduled ? 'Results and box scores fill in as games are played' : "Click a row for that game's box score"}</span></div>
+      <div class="card-title"><h3>${team.name} · ${inProgress ? `${team.games.length} played · ${upcoming.length} upcoming` : `${sourceGames.length} ${scheduled ? 'scheduled games' : 'games'}`}</h3><span class="hint">${scheduled ? 'Results and box scores fill in as games are played' : inProgress ? "Click a played game for its box score" : "Click a row for that game's box score"}</span></div>
       <div class="table-wrap">
         <table>
           <thead><tr>${GAME_COLS.map(c=>`<th class="${c.num?'num':''}"><button class="th-sort" data-key="${c.key}">${c.label} ${key===c.key?(dir>0?'↑':'↓'):''}</button></th>`).join('')}</tr></thead>
@@ -2004,10 +2062,10 @@ function viewGameLog(){
                 <td>${g.scheduled
                   ? `<span class="muted">${g.time || 'TBD'}</span>`
                   : `<span class="pill ${g.win?'win':'loss'}">${g.win?'W':'L'}</span> <span class="num">${g.pf}–${g.pa}</span>`}</td>
-                <td class="num">${g.fgpct.toFixed(1)}%</td>
-                <td class="num">${g.reb}</td>
-                <td class="num">${g.ast}</td>
-                <td class="num">${g.to}</td>
+                <td class="num">${g.scheduled ? '—' : g.fgpct.toFixed(1)+'%'}</td>
+                <td class="num">${g.scheduled ? '—' : g.reb}</td>
+                <td class="num">${g.scheduled ? '—' : g.ast}</td>
+                <td class="num">${g.scheduled ? '—' : g.to}</td>
               </tr>
               ${g.scheduled ? '' : `<tr class="boxrow" data-boxfor="${g.date}" style="display:none;"><td colspan="${GAME_COLS.length}" style="background:var(--surface-2);padding:14px 16px;">
                 <div class="eyebrow" style="margin-bottom:8px;">Team box · ${g.home?'vs':'@'} ${g.opp}</div>
@@ -3243,15 +3301,26 @@ function wirePlayerModal(container, team, stateKey, idx){
    (the lower value wins when a stat is marked lowerBetter; ties shade neither). */
 function compareTableHtml(stats, obj1, obj2, nameA, nameB){
   if(state.season === CURRENT_ROSTER_SEASON){
-    if(!state.showLastSeasonStats) obj1 = obj2 = {};
-    else if(state.view === 'cplayers'){
-      if(getTeamData(state.p1.team,state.season).players[state.p1.idx].statsUnavailable) obj1 = {};
-      if(getTeamData(state.p2.team,state.season).players[state.p2.idx].statsUnavailable) obj2 = {};
-      // Plus/minus requires actual game logs, which this source does not contain.
-      obj1 = {...obj1, plusMinus:null}; obj2 = {...obj2, plusMinus:null};
+    /* Placeholder handling applies per side: a team with played games keeps its real numbers
+       even when the team it is compared with is still roster-only. */
+    const [key1, key2] = comparedTeamKeys();
+    const pending1 = !!TEAMS[key1]?.rosterOnly, pending2 = !!TEAMS[key2]?.rosterOnly;
+    if(!state.showLastSeasonStats){
+      if(pending1) obj1 = {};
+      if(pending2) obj2 = {};
+    } else if(state.view === 'cplayers'){
+      if(pending1){
+        if(getTeamData(key1,state.season).players[state.p1.idx].statsUnavailable) obj1 = {};
+        // Plus/minus requires actual game logs, which this source does not contain.
+        obj1 = {...obj1, plusMinus:null};
+      }
+      if(pending2){
+        if(getTeamData(key2,state.season).players[state.p2.idx].statsUnavailable) obj2 = {};
+        obj2 = {...obj2, plusMinus:null};
+      }
     } else if(state.view === 'cteams'){
-      if(!lastSeasonTeams?.[state.t1]) obj1 = {};
-      if(!lastSeasonTeams?.[state.t2]) obj2 = {};
+      if(pending1 && !lastSeasonTeams?.[key1]) obj1 = {};
+      if(pending2 && !lastSeasonTeams?.[key2]) obj2 = {};
     }
   }
   const has = v => v !== undefined && v !== null && v !== '' && Number.isFinite(Number(v));
@@ -3338,7 +3407,7 @@ function comparePlayerRadarAxes(metrics){
 }
 
 function comparePlayerRadarChart(m1, m2, p1, p2){
-  if(state.season === CURRENT_ROSTER_SEASON){
+  if(comparePlaceholderActive()){
     if(!state.showLastSeasonStats) return pendingStatCard('Role profile');
     if(p1.statsUnavailable || p2.statsUnavailable){
       const missing = [p1,p2].filter(p => p.statsUnavailable).map(p => rosterText(p.name)).join(' and ');
@@ -3441,7 +3510,7 @@ function comparePlayerShotPanel(player, metrics, sideClass){
 }
 
 function comparePlayerShotCard(p1, p2, m1, m2){
-  if(state.season === CURRENT_ROSTER_SEASON && !state.showLastSeasonStats) return pendingStatCard('Shot distribution');
+  if(comparePlaceholderActive() && !state.showLastSeasonStats) return pendingStatCard('Shot distribution');
   return `<div class="card">
     <div class="card-title"><h3>Shot distribution</h3><span class="hint">Hover an area for share, FG%, and assisted%</span></div>
     <div class="compare-shot-grid">
@@ -3505,7 +3574,7 @@ function viewComparePlayers(){
   });
   const lastName = player => displayPlayerName(player.name).split(' ').slice(-1)[0].toUpperCase();
   const nameA = lastName(p1), nameB = lastName(p2);
-  const badge = state.season === CURRENT_ROSTER_SEASON && state.showLastSeasonStats ? `${PRIOR_STATS_SEASON} stats` : '';
+  const badge = comparePriorBadge();
   const per40 = state.comparePerMode === 'per40';
   const perGameToggle = `<div class="compare-toggle" role="tablist" aria-label="Per game or per 40 minutes">
       <button type="button" class="${!per40 ? 'active' : ''}" data-cp-mode="game" role="tab" aria-selected="${!per40}">Per game</button>
@@ -3633,8 +3702,8 @@ const CT_DEFENSE_STATS = [
   {key:'oppFgPct', label:'Opponent field goal %', fmt:v=>v.toFixed(1), max:60, lowerBetter:true},
   {key:'forcedTovPct', label:'Forced turnover %', fmt:v=>v.toFixed(1), max:30},
 ];
-function bartRecordLabel(stats){
-  if(state.season === CURRENT_ROSTER_SEASON && !state.showLastSeasonStats) return 'Record unavailable';
+function bartRecordLabel(stats, teamKey){
+  if(state.season === CURRENT_ROSTER_SEASON && TEAMS[teamKey]?.rosterOnly && !state.showLastSeasonStats) return 'Record unavailable';
   return stats.bart?.record || `${stats.record.w}-${stats.record.l}`;
 }
 
@@ -3811,10 +3880,11 @@ function topMinutesRows(t1, t2, pool){
 }
 
 function topMinutesCard(t1, t2){
-  if(t1.rosterOnly && !state.showLastSeasonStats) return `<div class="card"><div class="card-title"><h3>Current rosters</h3><span class="hint">Minutes data not yet imported</span></div><div class="grid-2">${[t1,t2].map((team,side) => `<div><h3>${rosterText(team.name)}</h3>${team.players.map((p,idx) => `<button type="button" class="rotation-row" data-compare-player-team="${side ? state.t2 : state.t1}" data-compare-player-idx="${idx}"><div class="rotation-main"><div class="rotation-photo">${rotationPhotoHtml(side ? state.t2 : state.t1,p)}</div><div class="rotation-player"><b>#${p.num} ${rosterText(p.name)}</b><span>${rosterText([p.pos,p.classYear,p.height].filter(Boolean).join(' · '))}</span></div></div></button>`).join('')}</div>`).join('')}</div></div>`;
+  const anyRosterOnly = t1.rosterOnly || t2.rosterOnly, allRosterOnly = t1.rosterOnly && t2.rosterOnly;
+  if(anyRosterOnly && !state.showLastSeasonStats) return `<div class="card"><div class="card-title"><h3>Current rosters</h3><span class="hint">Minutes data not yet imported</span></div><div class="grid-2">${[t1,t2].map((team,side) => `<div><h3>${rosterText(team.name)}</h3>${team.players.map((p,idx) => `<button type="button" class="rotation-row" data-compare-player-team="${side ? state.t2 : state.t1}" data-compare-player-idx="${idx}"><div class="rotation-main"><div class="rotation-photo">${rotationPhotoHtml(side ? state.t2 : state.t1,p)}</div><div class="rotation-player"><b>#${p.num} ${rosterText(p.name)}</b><span>${rosterText([p.pos,p.classYear,p.height].filter(Boolean).join(' · '))}</span></div></div></button>`).join('')}</div>`).join('')}</div></div>`;
   const pool = comparePlayerPool();
   return `<div class="card">
-    <div class="card-title"><h3>${t1.rosterOnly ? 'Top five by 2025–26 minutes' : 'Top five by minutes'}</h3><span class="hint">${t1.rosterOnly ? 'Current players ranked by prior-season MPG · players without data excluded' : "Rows pair each team's rank by minutes"}</span></div>
+    <div class="card-title"><h3>${allRosterOnly ? 'Top five by 2025–26 minutes' : 'Top five by minutes'}</h3><span class="hint">${allRosterOnly ? 'Current players ranked by prior-season MPG · players without data excluded' : anyRosterOnly ? 'Roster-only teams use 2025–26 MPG · teams with games use 2026–27 MPG' : "Rows pair each team's rank by minutes"}</span></div>
     <div class="rotation-grid">
       <div class="rotation-pair-head">
         <div class="rotation-team-title">${t1.name}</div>
@@ -3875,7 +3945,7 @@ function viewCompareTeams(){
   const hasBartPair = s1.bart && s2.bart;
   const profileTitle = hasBartPair ? 'Adjusted stats' : 'Season averages';
   const profileStats = hasBartPair ? CT_BART_STATS : CT_SEASON_STATS;
-  const badge = state.season === CURRENT_ROSTER_SEASON && state.showLastSeasonStats ? `${PRIOR_STATS_SEASON} stats` : '';
+  const badge = comparePriorBadge();
   const statsCard = (title, subtitle, stats, note) => compareCardHtml({
     title, subtitle, badge, note,
     table: compareTableHtml(stats, s1, s2, t1.short, t2.short),
@@ -3909,12 +3979,12 @@ function viewCompareTeams(){
       <div class="compare-heads">
         <div class="compare-side">
           <div class="compare-avatar" style="background:color-mix(in srgb, var(--series-a) 22%, var(--surface-3));color:var(--series-a);font-size:11px;">${avatarContent(state.t1, t1.short)}</div>
-          <div><div class="compare-name">${t1.name}</div><div class="compare-meta">${bartRecordLabel(s1)} · ${t1.mascot}</div></div>
+          <div><div class="compare-name">${t1.name}</div><div class="compare-meta">${bartRecordLabel(s1, state.t1)} · ${t1.mascot}</div></div>
         </div>
         <div class="compare-vs">VS</div>
         <div class="compare-side right">
           <div class="compare-avatar" style="background:color-mix(in srgb, var(--series-b) 22%, var(--surface-3));color:var(--series-b);font-size:11px;">${avatarContent(state.t2, t2.short)}</div>
-          <div><div class="compare-name">${t2.name}</div><div class="compare-meta">${bartRecordLabel(s2)} · ${t2.mascot}</div></div>
+          <div><div class="compare-name">${t2.name}</div><div class="compare-meta">${bartRecordLabel(s2, state.t2)} · ${t2.mascot}</div></div>
         </div>
       </div>
     </div>
@@ -4028,8 +4098,25 @@ function currentRosterNotice(){
     </div>${team.sourceUrl ? `<a href="${rosterText(team.sourceUrl)}" target="_blank" rel="noopener noreferrer">Official ${rosterText(team.short)} roster</a>` : ''}</div>`;
 }
 
+/* Banner shown above every 2026–27 view: the roster-only notice (with the last-season toggle)
+   when a team without games is on screen, otherwise a note that stats cover games played so far. */
+function currentSeasonNotice(){
+  return comparePlaceholderActive() ? currentRosterNotice() : inProgressNotice();
+}
+
+function inProgressNotice(){
+  const fmtDate = d => new Date(`${d}T12:00:00`).toLocaleDateString('en-US', {month:'short', day:'numeric'});
+  const summary = comparedTeamKeys().map(key => {
+    const team = TEAMS[key], last = team.games[team.games.length - 1];
+    return `${rosterText(team.short)}: ${team.games.length} ${team.games.length === 1 ? 'game' : 'games'} through ${fmtDate(last.date)}`;
+  }).join(' · ');
+  return `<div class="card current-roster-notice">
+    <div class="prior-stats-controls"><span>2026–27 season in progress · stats cover games played so far · ${summary}</span></div>
+  </div>`;
+}
+
 function wireLastSeasonStatsToggle(root){
-  root.querySelector('#last-season-stats-toggle').addEventListener('click', async () => {
+  root.querySelector('#last-season-stats-toggle')?.addEventListener('click', async () => {
     if(lastSeasonStatsLoading) return;
     lastSeasonStatsError = '';
     if(state.showLastSeasonStats){
@@ -4084,7 +4171,7 @@ function render(){
   else if(state.view==='cplayers'){ root.innerHTML = viewComparePlayers(); wireComparePlayers(root); }
   else if(state.view==='cteams'){ root.innerHTML = viewCompareTeams(); wireCompareTeams(root); }
   if(state.season === CURRENT_ROSTER_SEASON){
-    root.insertAdjacentHTML('afterbegin', currentRosterNotice());
+    root.insertAdjacentHTML('afterbegin', currentSeasonNotice());
     wireLastSeasonStatsToggle(root);
   }
 }
